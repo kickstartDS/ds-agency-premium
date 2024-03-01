@@ -1,3 +1,16 @@
+# v1.2.19 (Fri Mar 01 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: remove import on now deleted file ([@julrich](https://github.com/julrich))
+- fix: modularization of features component, fix testimonials ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
 # v1.2.18 (Fri Mar 01 2024)
 
 #### ⚠️ Pushed to `main`
