@@ -1,3 +1,15 @@
+# v1.3.4 (Thu Apr 18 2024)
+
+#### 🐛 Bug Fix
+
+- feat(section): update section [#10](https://github.com/kickstartDS/ds-agency-premium/pull/10) ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
 # v1.3.3 (Thu Apr 18 2024)
 
 #### 🐛 Bug Fix
