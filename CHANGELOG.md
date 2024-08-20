@@ -1,3 +1,15 @@
+# v1.3.49 (Tue Aug 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(class prefix): change outdated prefix to "dsa" ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
 # v1.3.48 (Mon Aug 19 2024)
 
 #### ⚠️ Pushed to `main`
