@@ -1,3 +1,16 @@
+# v1.5.5 (Wed Sep 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: providers / context ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
 # v1.5.4 (Wed Sep 04 2024)
 
 #### ⚠️ Pushed to `main`
