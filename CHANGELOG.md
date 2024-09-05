@@ -1,3 +1,16 @@
+# v1.5.12 (Thu Sep 05 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(nav-flyout): make active state selector more specific ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
 # v1.5.11 (Wed Sep 04 2024)
 
 #### ⚠️ Pushed to `main`
