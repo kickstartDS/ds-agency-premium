@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.kickstartds.com/base/html.schema.json",
+  "$id": "http://schema.mydesignsystem.com/html.schema.json",
   "title": "HTML",
   "description": "Display raw HTML.",
   "type": "object",
@@ -8,7 +8,34 @@
     "html": {
       "title": "HTML string",
       "type": "string",
-      "examples": ["<p>Hello world!</p>"]
+      "examples": [
+        "<p style=\"color: var(--ks-text-color-default);\">Hello World</p>"
+      ]
+    },
+    "consent": {
+      "title": "Show HTML after consent",
+      "type": "boolean",
+      "default": false
+    },
+    "consentText": {
+      "type": "string"
+    },
+    "consentButtonLabel": {
+      "type": "string"
+    },
+    "consentBackgroundImage": {
+      "type": "string",
+      "format": "image"
+    },
+    "consentAspectRatio": {
+      "type": "string",
+      "enum": [
+        "16:9",
+        "16:10",
+        "4:3",
+        "1:1"
+      ],
+      "default": "16:9"
     },
     "className": {
       "title": "Additional Classes",

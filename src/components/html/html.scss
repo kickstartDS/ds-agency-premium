@@ -1,0 +1,27 @@
+.c-html {
+  &__consent {
+    color: var(--ks-text-color-default);
+    font: var(--ks-font-interface-m);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    &--sixteen-to-nine {
+      aspect-ratio: 16 / 9;
+    }
+
+    &--sixteen-to-ten {
+      aspect-ratio: 16 / 10;
+    }
+
+    &--four-to-three {
+      aspect-ratio: 4 / 3;
+    }
+
+    &--square {
+      aspect-ratio: 1;
+    }
+  }
+}
