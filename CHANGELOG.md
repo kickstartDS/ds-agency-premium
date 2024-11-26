@@ -1,3 +1,15 @@
+# v1.6.25 (Tue Nov 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(contact): add token for vertical link padding ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
 # v1.6.24 (Tue Nov 26 2024)
 
 #### ⚠️ Pushed to `main`
