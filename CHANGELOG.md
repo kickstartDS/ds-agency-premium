@@ -1,3 +1,16 @@
+# v1.6.36 (Tue Dec 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(token): reduce scaling on tv-bp token ([@fleven-kds](https://github.com/fleven-kds))
+- feat(cta): roll back previous changes + adjust flex layout ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
 # v1.6.35 (Tue Dec 03 2024)
 
 #### ⚠️ Pushed to `main`
