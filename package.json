@@ -1,6 +1,6 @@
 {
   "name": "@kickstartds/ds-agency-premium",
-  "version": "1.6.40",
+  "version": "1.6.38",
   "description": "",
   "homepage": "https://github.com/kickstartDS/ds-agency-premium#readme",
   "bugs": {
@@ -79,7 +79,7 @@
   "devDependencies": {
     "@auto-it/npm": "^11.0.1",
     "@auto-it/released": "^11.0.1",
-    "@kickstartds/base": "^4.1.0",
+    "@kickstartds/base": "^4.2.0-canary.1708.7098.0",
     "@kickstartds/blog": "^4.1.0",
     "@kickstartds/content": "^4.0.0",
     "@kickstartds/core": "^4.1.0",

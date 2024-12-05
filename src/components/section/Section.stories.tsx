@@ -8,7 +8,7 @@ import { Section } from "./SectionComponent";
 import schema from "./section.schema.dereffed.json";
 import customProperties from "./section-tokens.json";
 
-const meta: Meta<typeof Section> = {
+const meta: Meta = {
   ...sectionStories,
   title: "Layout/Section",
   component: Section,
