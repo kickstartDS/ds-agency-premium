@@ -123,8 +123,7 @@
     .c-storytelling__box:only-child {
       width: 100%;
       max-width: calc(
-        var(--l-section--content-width-default) -
-          calc(var(--dsa-content--spacing) * var(--c-storytelling--padding-ratio))
+        var(--dsa-content--width_default) - calc(var(--dsa-content--spacing) * var(--c-storytelling--padding-ratio))
       );
     }
 
@@ -144,7 +143,7 @@
 
     > .c-storytelling__image,
     > .c-storytelling__box {
-      max-width: calc(calc(var(--l-section--content-width-wide) / 2));
+      max-width: calc(calc(var(--dsa-content--width_wide) / 2));
     }
 
     &.dsa-cta--full-width {

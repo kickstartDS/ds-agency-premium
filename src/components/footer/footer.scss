@@ -10,7 +10,7 @@
   &__content {
     padding: var(--l-section--space-small) var(--dsa-content--spacing);
     border-top: var(--dsa-footer--border-top, 1px solid var(--ks-border-color-default));
-    max-width: var(--dsa-footer--max-width, var(--l-section--content-width-wide));
+    max-width: var(--dsa-footer--max-width, var(--dsa-content--width_wide));
     width: 100%;
     margin: auto;
     display: flex;

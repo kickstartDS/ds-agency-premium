@@ -2149,20 +2149,20 @@
   resolved "https://registry.npmjs.org/@jsdevtools/ono/-/ono-7.1.3.tgz"
   integrity sha512-4JQNk+3mVzK3xh2rqd6RB4J46qUR19azEHBneZyTZM+c456qOrbbM/5xcR8huNCCcbVt7+UmizG6GuUvPvKUYg==
 
-"@kickstartds/base@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@kickstartds/base/-/base-4.1.0.tgz#56f41816774c82a32caa4c7ee00c5633089290ca"
-  integrity sha512-yxxpbc/cn8YB5l1umigzyda1pLybX/W6XM4SeAPSwiMNGEu/aYJL/C5U8y83S9QbcJwKN037d1l4hceYqceZqQ==
+"@kickstartds/base@4.2.0-canary.1708.7098.0":
+  version "4.2.0-canary.1708.7098.0"
+  resolved "https://registry.yarnpkg.com/@kickstartds/base/-/base-4.2.0-canary.1708.7098.0.tgz#94445f5de0847d32d139c5d2c875135f84911e8f"
+  integrity sha512-FVr2fuI8n+AlK+fEYVerqhqy7I+2DZMIssCdsxkH6F9k2uyz0dCjflUNILqUOEY922wSP+5TIXdJipLSIvbHvg==
   dependencies:
     "@babel/runtime" "^7.21.5"
     classnames "^2.5.1"
     markdown-to-jsx "^7.4.0"
     photoswipe "^5.3.7"
 
-"@kickstartds/blog@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@kickstartds/blog/-/blog-4.1.0.tgz#c55d65783e22f13f21615ef656b53ea09c89a11e"
-  integrity sha512-XKRatDrFRGj1l2FETBNa3qXetJ+0D1sO4+nvd9K4+xR+OG0IXHkTcfkQb81+WOLhdg7fF9jyaUZsSGroKQbaww==
+"@kickstartds/blog@4.2.0-canary.1708.7098.0":
+  version "4.2.0-canary.1708.7098.0"
+  resolved "https://registry.yarnpkg.com/@kickstartds/blog/-/blog-4.2.0-canary.1708.7098.0.tgz#7d6503de6391f0daabba30179cdf760d76451cbf"
+  integrity sha512-xrqemlgZLMryj4ShYyyEine9ghzbi80byOaPd1yOzJd1BHj3UE8pC7X26s+zcIMN4d28da/XNoiinsaoH0faAg==
   dependencies:
     "@babel/runtime" "^7.21.5"
     classnames "^2.5.1"
@@ -2178,7 +2178,7 @@
     classnames "^2.3.2"
     countup.js "^2.6.2"
 
-"@kickstartds/core@^4.1.0":
+"@kickstartds/core@^4.0.2":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@kickstartds/core/-/core-4.1.0.tgz#9d5f103fe3c8808665146ab652d8096195bc9c85"
   integrity sha512-QvL1LORgI61CdLKX5wCZ/+/D61ywbIfmUqrNHp1QrqnnTQ8hHKW1qSBUKLsolctCjDCj5xJ0H/vvKE/YKxwjkA==
@@ -2196,10 +2196,10 @@
     pubsub-js "^1.9.4"
     sass "^1.62.1"
 
-"@kickstartds/form@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@kickstartds/form/-/form-4.1.0.tgz#b08a79f0c478fe087e2269d2d498ecbb835b13cc"
-  integrity sha512-Tq84BwlOc701s1kaxiRGt5XZPWyTYh1ubtWAxoInU63HaPTOtedj/WBIn9cIVEbO8dLASPeKbh+8dUf/m1XbGg==
+"@kickstartds/form@4.2.0-canary.1708.7098.0":
+  version "4.2.0-canary.1708.7098.0"
+  resolved "https://registry.yarnpkg.com/@kickstartds/form/-/form-4.2.0-canary.1708.7098.0.tgz#a082798f3b5a537da64fc931d2620e66dfaede5f"
+  integrity sha512-z3zrE6fhfXXQajaSIe6AgKkYMgUYZvvJSSDmh+E1+2UD69KGqw4w/PAAv+MAmEnI48OSf17zLfNimnxCF1Pk6Q==
   dependencies:
     "@babel/runtime" "^7.21.5"
     classnames "^2.5.1"

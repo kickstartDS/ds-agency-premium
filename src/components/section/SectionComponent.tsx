@@ -33,6 +33,7 @@ export const SectionContextDefault = forwardRef<
       style = "default",
       spotlight = false,
       backgroundColor = "default",
+      backgroundImage,
       spaceBefore = "default",
       spaceAfter = "default",
       className,
@@ -78,6 +79,7 @@ export const SectionContextDefault = forwardRef<
           className
         )}
         background={backgroundColor}
+        backgroundImage={backgroundImage}
         content={content}
         headline={{
           ...headlineRest,

@@ -12,7 +12,7 @@
 }
 
 .dsa-header {
-  --dsa-header--max-width: var(--l-section--content-width-max);
+  --dsa-header--max-width: var(--dsa-content--width_max);
   --dsa-header--background: var(--ks-background-color-default);
   --dsa-header_floating--background: linear-gradient(var(--ks-color-bg), transparent);
   --dsa-header__logo--height: var(--dsa-logo--height);

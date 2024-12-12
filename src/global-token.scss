@@ -1,32 +1,47 @@
 @use "./selectors" as *;
 
 #{$selectors} {
+  // Text color on primary backgrounds (e.g., buttons)
   --dsa-text-color-on-primary-base: var(--ks-color-fg);
   --dsa-text-color-on-primary-inverted-base: var(--ks-color-fg-inverted);
 
+  // Topic font styles
   --dsa-topic--font: var(--ks-font-display-m);
   --dsa-topic--font-weight: var(--ks-font-weight-medium);
   --dsa-topic--color: var(--ks-text-color-display);
   --dsa-topic--font-family: var(--ks-font-family-display);
 
+  // Link styles
   --dsa-link--font-weight: var(--ks-font-weight-semi-bold);
   --dsa-link--color: var(--ks-text-color-default-interactive);
   --dsa-link--color_hover: var(--ks-text-color-default-interactive-hover);
   --dsa-link--text-decoration: underline;
   --dsa-link--text-decoration_hover: underline;
 
-  --dsa-header--height: calc(var(--dsa-logo--height) + var(--ks-spacing-stack-m) + var(--ks-spacing-stack-m));
+  // Highlight gradient for text (e.g., headlines)
+  --dsa-gradient--highlight: linear-gradient(135deg, var(--ks-color-primary) 0%, var(--ks-color-secondary) 100%);
 
-  --dsa-gradient--higlight: linear-gradient(135deg, var(--ks-color-primary) 0%, var(--ks-color-secondary) 100%);
-
+  // Outer padding for content
   --dsa-content--spacing: var(--ks-spacing-inset-l);
 
   @media (min-width: 48em) {
     --dsa-content--spacing: var(--ks-spacing-inset-xl);
   }
 
-  --dsa-section__content_wide--width: 1440px;
+  // Content width options
+  --dsa-content--width_narrow: 46.5rem;
+  --dsa-content--width_default: 62rem;
+  --dsa-content--width_wide: 75rem;
+  --dsa-content--width_max: 100vw;
+  --dsa-content--width_full: 100vw;
 
+  @media (min-width: 122em) {
+    --dsa-content--width_narrow: 55.8rem;
+    --dsa-content--width_default: 74.4rem;
+    --dsa-content--width_wide: 90rem;
+  }
+
+  // Logo height
   --dsa-logo--height: 2.25rem;
 
   @media (min-width: 48em) {
@@ -36,4 +51,7 @@
   @media (min-width: 62em) {
     --dsa-logo--height: 3rem;
   }
+
+  // Header height calculation
+  --dsa-header--height: calc(var(--dsa-logo--height) + var(--ks-spacing-stack-m) + var(--ks-spacing-stack-m));
 }

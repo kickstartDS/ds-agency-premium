@@ -6,15 +6,15 @@
   gap: var(--dsa-split--gap-horizontal) var(--dsa-split--gap-horizontal);
 
   &--narrow {
-    --split__main--flex-basis: var(--l-section--content-width-narrow);
+    --split__main--flex-basis: var(--dsa-content--width_narrow);
   }
 
   &--medium {
-    --split__main--flex-basis: var(--l-section--content-width-default);
+    --split__main--flex-basis: var(--dsa-content--width_default);
   }
 
   &--wide {
-    --split__main--flex-basis: var(--l-section--content-width-wide);
+    --split__main--flex-basis: var(--dsa-content--width_wide);
   }
 
   @media (min-width: 48em) {

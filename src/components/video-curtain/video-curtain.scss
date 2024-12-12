@@ -25,7 +25,7 @@
 
   @container visual (min-width: 640px) {
     .c-visual__box {
-      --c-visual_box--max-width: 50rem;
+      --c-visual_box--max-width: var(--dsa-video-curtain__textbox--max-width, 50rem);
     }
   }
 }

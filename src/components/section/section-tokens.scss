@@ -1,4 +1,6 @@
+@use "@kickstartds/core/source/core/container";
 @import "../../selectors";
+@include container.wrapper("section");
 
 .dsa-section {
   //Columns
@@ -13,9 +15,9 @@
   //Tile Width
   --dsa-section__tile--width_smallest: 14rem;
   --dsa-section__tile--width_default: 18rem;
-  --dsa-section__tile--width_medium: var(--l-section--content-width-narrow);
-  --dsa-section__tile--width_large: var(--l-section--content-width-default);
-  --dsa-section__tile--width_largest: var(--l-section--content-width-wide);
+  --dsa-section__tile--width_medium: var(--dsa-content--width_narrow);
+  --dsa-section__tile--width_large: var(--dsa-content--width_default);
+  --dsa-section__tile--width_largest: var(--dsa-content--width_wide);
 
   //Gutter
   --dsa-section--gutter_small: var(--ks-spacing-xs);
@@ -26,9 +28,9 @@
   --dsa-section__buttons--space-before: var(--ks-spacing-stack-m);
 
   //Content Width
-  --dsa-section__content--width_narrow: 46.5rem;
-  --dsa-section__content--width_default: 62rem;
-  --dsa-section__content--width_wide: 75rem;
+  --dsa-section__content--width_narrow: var(--dsa-content--width_narrow);
+  --dsa-section__content--width_default: var(--dsa-content--width_default);
+  --dsa-section__content--width_wide: var(--dsa-content--width_wide);
   --dsa-section__content--width_max: 100vw;
   --dsa-section__content--width_full: 100vw;
   --dsa-section__content--padding: var(--dsa-content--spacing);
@@ -40,7 +42,6 @@
 
   //Slider Arrows
   --dsa-section__slider-arrow--color: var(--ks-text-color-interface-interactive);
-  --dsa-section__slider-arrow--background-color: transparent;
   --dsa-section__slider-arrow--size: 2rem;
   --dsa-section__slider-arrow--padding: 0.5em;
   --dsa-section__slider-arrow--opacity: 0.6;

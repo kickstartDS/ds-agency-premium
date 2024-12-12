@@ -47,7 +47,7 @@
     }
 
     .c-visual__box {
-      --c-visual_box--max-width: 50rem;
+      --c-visual_box--max-width: var(--dsa-hero__textbox--max-width, var(--dsa-content--width_narrow));
     }
   }
 }
@@ -77,7 +77,7 @@
   }
 
   .c-visual__content--indent {
-    max-width: var(--l-section--content-width-wide);
+    max-width: var(--dsa-content--width_wide);
   }
 
   @include container.size("≥", 640px, "visual") {
@@ -96,7 +96,7 @@
         position: relative;
 
         .c-visual__box {
-          --c-visual_box--max-width: var(--l-section--content-width-default);
+          --c-visual_box--max-width: var(--dsa-content--width_default);
         }
       }
     }

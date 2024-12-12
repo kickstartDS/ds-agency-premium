@@ -44,17 +44,6 @@ hr.c-divider {
   --g-link--background: var(--dsa-link--background, transparent);
   --g-link--border-radius: var(--dsa-link--border-radius, 0);
 
-  --l-section_col--min-width: var(--dsa-section__col--min-width, var(--l-section_tile-width--default));
-  --l-section_col--max-width: var(--dsa-section__col--max-width, 1fr);
-  --l-section_col--repeat: var(--dsa-section__col--repeat, auto-fit);
-  --l-section_tile-width--smallest: var(--dsa-section__tile-width--smallest, 14rem);
-  --l-section_tile-width--default: var(--dsa-section__tile-width--default, 18rem);
-  --l-section_tile-width--medium: var(--dsa-section__tile-width--medium, var(--l-section--content-width-narrow));
-  --l-section_tile-width--large: var(--dsa-section__tile-width--large, var(--l-section--content-width-default));
-  --l-section_tile-width--largest: var(--dsa-section__tile-width--largest, var(--l-section--content-width-wide));
-  --l-section_buttons--space-before: var(--dsa-section__buttons--space-before, var(--l-section--gutter));
-  --l-section--content-width: var(--dsa-section__content--width, var(--l-section--container-width));
-
   --g-topic--color: var(--dsa-topic--color, var(--ks-text-color-default));
   --g-topic--font: var(--dsa-topic--font, var(--ks-font-display-l));
   --g-topic--font-weight: var(--dsa-topic--font-weight, var(--ks-font-weight-bold));
