@@ -1,6 +1,9 @@
 .dsa-cta {
-  --dsa-cta--vertical-padding: var(--l-section--space-default);
-  --dsa-cta--horizontal-padding: var(--dsa-content--spacing);
+  --dsa-cta--gap: var(--ks-spacing-stack-l) var(--ks-spacing-inline-l);
+
+  --dsa-cta__content--vertical-padding: var(--dsa-content--vertical-spacing);
+  --dsa-cta__content--horizontal-padding: var(--dsa-content--horizontal-spacing);
+  --dsa-cta__content--max-width: var(--dsa-content--width_narrow);
 
   --dsa-cta__copy--font: var(--dsa-rich-text--font);
   --dsa-cta__copy--color: var(--ks-text-color-default);
@@ -10,6 +13,8 @@
 
   --dsa-cta__subheadline--color: var(--dsa-headline__subheadline--color);
   --dsa-cta__subheadline--font: var(--dsa-headline_h2__subheadline--font);
+
+  --dsa-cta__image--padding: var(--ks-spacing-inset-m);
 
   --dsa-cta_color-neutral__headline--color: var(--ks-text-color-default);
   --dsa-cta_color-neutral__subheadline--color: var(--ks-text-color-default);
