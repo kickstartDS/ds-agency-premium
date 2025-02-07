@@ -13,7 +13,7 @@
   --dsa-section__col--min-width_largest: var(--dsa-tile--width_largest);
 
   //Vertical Space After & Before
-  --dsa-section--space_default: var(--ks-spacing-xxl);
+  --dsa-section--space_default: var(--dsa-content--vertical-spacing);
   --dsa-section--space_small: calc(var(--ks-spacing-xxl) / 2);
 
   //Gutter
@@ -30,7 +30,7 @@
   --dsa-section__content--width_wide: var(--dsa-content--width_wide);
   --dsa-section__content--width_max: 100vw;
   --dsa-section__content--width_full: 100vw;
-  --dsa-section__content--padding: var(--dsa-content--spacing);
+  --dsa-section__content--padding: var(--dsa-content--horizontal-spacing);
 
   //Background Color
   --dsa-section--background-color_default: var(--ks-background-color-default);

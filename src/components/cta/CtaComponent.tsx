@@ -23,9 +23,9 @@ export const CtaContextDefault = forwardRef<
       backgroundImage,
       backgroundColor,
       colorNeutral,
-      contentAlign,
+      align,
+      padding,
       order,
-      fullWidth = false,
       buttons = [],
       ...rest
     },
@@ -43,25 +43,24 @@ export const CtaContextDefault = forwardRef<
           ref={ref}
           className={classnames(
             "dsa-cta",
-            fullWidth ? `dsa-cta--full-width` : "",
             highlightText ? `dsa-cta--highlight-text` : "",
             colorNeutral ? `dsa-cta--color-neutral` : "",
-            contentAlign && contentAlign !== "center"
-              ? `dsa-cta--align-${contentAlign}`
-              : ""
+            image?.padding ? `dsa-cta--image-padding` : "",
+            !padding ? `dsa-cta--no-padding` : "",
+            align && align !== "center" ? `dsa-cta--align-${align}` : ""
           )}
           backgroundImage={backgroundImage}
           backgroundColor={backgroundColor}
-          full={image?.padding === false}
+          full
           image={{
             source: image?.src,
             order: order,
-            vAlign: contentAlign,
+            vAlign: image?.align,
           }}
           box={{
             text: text,
             textAlign: textAlign,
-            vAlign: contentAlign,
+            vAlign: align,
             link: {
               buttons,
               colorNeutral: colorNeutral,
