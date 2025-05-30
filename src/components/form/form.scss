@@ -31,6 +31,8 @@
 
     --c-form-check_box-focus--shadow: var(--dsa-check--shadow_focus, 0 0 4px 0);
 
+    --c-form-check_checkmark--size: var(--dsa-check_radio__checkmark--size, calc(var(--swo-check--size) * 0.5));
+
     font: var(--dsa-check__label--font, var(--ks-font-interface-s));
     font-weight: var(--dsa-check__label--font-weight, var(--ks-font-weight-regular));
     color: var(--dsa-check__label--color, var(--ks-text-color-interface-interactive-default));
@@ -48,41 +50,55 @@
   }
 
   .c-form-field {
-    --c-form-field--border: var(--dsa-form-field--border, var(--ks-border-width-default) solid);
-    --c-form-field--border-color: var(--dsa-form-field--border-color, var(--ks-border-color-interface-interactive));
+    --c-form-field--border: var(--dsa-input--border, var(--ks-border-width-default) solid);
+    --c-form-field--border-color: var(--dsa-input--border-color, var(--ks-border-color-interface-interactive));
     --c-form-field-hover--border-color: var(
-      --dsa-form-field--border-color_hover,
+      --dsa-input--border-color_hover,
       var(--ks-border-color-interface-interactive-hover)
     );
     --c-form-field-focus--border-color: var(
-      --dsa-form-field--border-color_focus,
+      --dsa-input--border-color_focus,
       var(--ks-border-color-interface-interactive-active)
     );
 
-    --c-form-field--background: var(--dsa-form-field--background, var(--ks-background-color-interface-interactive));
+    --c-form-field--background: var(--dsa-input--background, var(--ks-background-color-interface-interactive));
 
-    --c-form-field_focus--shadow: var(--dsa-form-field--shadow_focus, 0 0 4px 0);
+    --c-form-field_focus--shadow: var(--dsa-input--shadow_focus, 0 0 4px 0);
 
     --c-form-field--background-disabled: var(
       --ks-background-color-interface-interactive-disabled,
       var(--ks-background-color-interface-interactive-disabled)
     );
-    --c-form-field--color: var(--dsa-form-field--color, var(--ks-text-color-interface));
+    --c-form-field--color: var(--dsa-input--color, var(--ks-text-color-interface));
     --c-form-field_hover--border-color: var(
-      --dsa-form-field--border-color_hover,
+      --dsa-input--border-color_hover,
       var(--ks-border-color-interface-interactive-hover)
     );
     --c-form-field_focus--border-color: var(
-      --dsa-form-field--border-color_active,
+      --dsa-input--border-color_active,
       var(--ks-border-color-interface-interactive-active)
     );
     --c-form-field_icon--size: calc(var(--ks-line-height-interface-m) * 0.75em);
     --c-form-field_icon--color: var(--ks-color-fg-alpha-3);
 
+    --c-form-field_label--color: var(--dsa-input__label--color, var(--ks-text-color-interface));
+
     &__input {
+      font: var(--dsa-input--font, var(--ks-font-interface-m));
+      padding: var(--dsa-input--padding, 0.4rem 0.75rem 0.35rem);
+
       &::placeholder {
-        color: var(--dsa-form-field__placeholder--color, var(--ks-color-fg-alpha-5));
+        color: var(--dsa-input__placeholder--color, var(--ks-color-fg-alpha-5));
       }
+
+      &:focus {
+        background-color: var(--dsa-input--background_focus, var(--ks-background-color-interface-interactive-active));
+      }
+    }
+
+    &__label {
+      font: var(--dsa-input__label--font, var(--ks-font-interface-s));
+      font-weight: var(--dsa-input__label--font-weight, var(--ks-font-weight-regular));
     }
   }
 }
