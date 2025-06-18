@@ -1,0 +1,59 @@
+@import "event-tokens.scss";
+
+.dsa-event {
+  max-width: var(--dsa-content--width_default);
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--ks-spacing-stack-m);
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: var(--ks-spacing-stack-xs);
+  }
+
+  &__appointments {
+    background-color: var(--ks-background-color-accent);
+    padding: var(--ks-spacing-inset-m);
+    border-radius: var(--ks-border-radius-surface);
+    display: flex;
+    gap: var(--ks-spacing-stack-m);
+    flex-direction: column;
+  }
+
+  .dsa-event-appointment {
+    --dsa-event-appointment__icon--size: calc(var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m));
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
+
+    .l-container {
+      container-type: unset;
+    }
+
+    &__row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ks-spacing-stack-xs);
+    }
+
+    &__item {
+      display: flex;
+      gap: var(--ks-spacing-stack-xs) var(--ks-spacing-inline-xs);
+    }
+
+    &__icon {
+      color: var(--ks-text-color-primary);
+      width: var(--dsa-event-appointment__icon--size);
+      height: var(--dsa-event-appointment__icon--size);
+    }
+
+    &__cta {
+      align-self: flex-start;
+    }
+  }
+}

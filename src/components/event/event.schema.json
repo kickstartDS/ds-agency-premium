@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/event.schema.json",
+  "title": "Event",
+  "type": "object",
+  "properties": {
+    "title": {
+      "title": "Event Title",
+      "description": "Title of the event",
+      "type": "string"
+    },
+    "categories": {
+      "title": "Categories",
+      "description": "Categories to which the event belongs",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "Label of the category"
+          }
+        }
+      }
+    },
+    "intro": {
+      "title": "Intro",
+      "description": "Short intro text for the event",
+      "type": "string"
+    },
+    "appointments": {
+      "title": "Appointments",
+      "description": "List of appointments for the event",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "title": "Date",
+            "description": "Date of the appointment",
+            "type": "string",
+            "format": "date"
+          },
+          "time": {
+            "title": "Time",
+            "description": "Time of the appointment",
+            "type": "string"
+          },
+          "address": {
+            "title": "Address",
+            "description": "Address of the appointment",
+            "type": "string"
+          },
+          "cta": {
+            "type": "object",
+            "title": "Call to Action",
+            "description": "Call to action for the appointment",
+            "properties": {
+              "label": {
+                "title": "CTA Label",
+                "description": "Label for the call to action button",
+                "type": "string"
+              },
+              "target": {
+                "title": "CTA Target",
+                "description": "URL or action for the call to action button",
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": ["label", "target"]
+          },
+          "mapsLink": {
+            "title": "Maps Link",
+            "description": "Link to the location on a map",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": ["date", "time", "address"]
+      }
+    },
+    "description": {
+      "title": "Description",
+      "description": "Description of the event",
+      "type": "string",
+      "format": "markdown"
+    },
+    "images": {
+      "title": "Images",
+      "description": "Images displayed below the text content",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "title": "Image source",
+            "description": "Image source to use",
+            "type": "string",
+            "format": "image"
+          },
+          "alt": {
+            "title": "Alt text",
+            "description": "Image description",
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
