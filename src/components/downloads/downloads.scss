@@ -1,0 +1,109 @@
+@import "downloads-tokens.scss";
+
+.dsa-downloads {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--dsa-content--width_narrow);
+  margin: auto;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: var(--ks-spacing-stack-xs);
+  }
+
+  .dsa-downloads-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--ks-spacing-inline-s);
+
+    &::after {
+      content: "";
+      transition: var(--ks-transition-hover);
+      opacity: 0;
+      position: absolute;
+      top: calc(var(--ks-spacing-xxs) * -0.5);
+      left: calc(var(--ks-spacing-xxs) * -1);
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--ks-background-color-accent);
+      border-radius: var(--ks-border-radius-control);
+      padding: calc(var(--ks-spacing-xxs) * 0.5) calc(var(--ks-spacing-xxs) * 2);
+      box-sizing: content-box;
+      z-index: -1;
+    }
+
+    &:hover {
+      cursor: pointer;
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 140px;
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+
+    &__name {
+      font: var(--ks-font-copy-s);
+      font-weight: var(--ks-font-weight-bold);
+    }
+
+    &__description {
+      font: var(--ks-font-copy-s);
+    }
+
+    &__infos {
+      display: flex;
+      gap: var(--ks-spacing-xxs);
+      flex-wrap: wrap;
+    }
+
+    &__info {
+      color: var(--ks-text-color-default);
+      font: var(--ks-font-copy-s);
+      padding-right: var(--ks-spacing-xxs);
+
+      &:not(:last-child) {
+        border-right: 1px solid var(--ks-border-color-default);
+      }
+    }
+
+    .l-container {
+      container-type: unset;
+    }
+
+    &__image {
+      width: 2.5rem;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: var(--ks-color-fg-to-bg-7);
+      aspect-ratio: 1;
+      background-color: var(--ks-color-fg-alpha-9);
+      border-radius: var(--ks-border-radius-control);
+      padding: 0.25em;
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+
+    &__button {
+      --dsa-button--padding: 0;
+      --dsa-button_secondary--background-color: transparent;
+      --dsa-button_secondary--background-color_hover: transparent;
+      // --dsa-button_secondary--color_hover: var(--ks-text-color-primary);
+      --c-button--icon-size: 1.5rem;
+    }
+  }
+}
