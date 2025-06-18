@@ -22,32 +22,55 @@
   --dsa-teaser-card__label--border-radius: var(--ks-border-radius-pill);
   --dsa-teaser-card__label--border: 1px solid var(--ks-border-color-interface);
 
-  //Scaling for Mobile Breakpoint
-  --dsa-teaser-card__topic--font: var(--ks-font-display-l);
+  --dsa-teaser-card__button--font: var(--ks-font-interface-m);
+
+  // Scaling for Mobile Breakpoint
+  --dsa-teaser-card--padding: var(--ks-spacing-inset-m);
+
+  --dsa-teaser-card__topic--font: var(--ks-font-display-m);
   --dsa-teaser-card__topic--font-weight: var(--dsa-topic--font-weight);
 
-  --dsa-teaser-card__copy--font: var(--dsa-rich-text--font);
+  --dsa-teaser-card__copy--font: var(--ks-font-copy-s);
   --dsa-teaser-card__copy--color: var(--ks-text-color-default);
 
-  --dsa-teaser-card--padding: var(--ks-spacing-inset-l);
+  --dsa-teaser-card__button--font: var(--ks-font-interface-s);
+
+  // Scaling for Mobile Breakpoint MediumTiles
+  @include container.size("≥", 400px, "teaser-card") {
+    --dsa-teaser-card--padding: var(--ks-spacing-inset-l);
+
+    --dsa-teaser-card__topic--font: var(--ks-font-display-l);
+
+    --dsa-teaser-card__copy--font: var(--ks-font-copy-m);
+
+    --dsa-teaser-card__button--font: var(--ks-font-interface-m);
+  }
 
   @media (min-width: 48em) {
     //Scaling for Desktop Breakpoint SmallTiles
     --dsa-teaser-card__topic--font: var(--ks-font-display-s);
     --dsa-teaser-card__copy--font: var(--ks-font-copy-s);
-    --dsa-teaser-card--padding: var(--ks-spacing-inset-s);
 
-    //Scaling for Desktop Breakpoint MediumTiles
-    @include container.size("≥", 300px, "teaser-card") {
+    --dsa-teaser-card--padding: var(--ks-spacing-inset-m);
+
+    --dsa-teaser-card__button--font: var(--ks-font-interface-s);
+
+    // Scaling for Desktop Breakpoint MediumTiles
+    @include container.size("≥", 400px, "teaser-card") {
       --dsa-teaser-card__copy--font: var(--ks-font-copy-m);
+
       --dsa-teaser-card__topic--font: var(--ks-font-display-m);
+
+      --dsa-teaser-card__button--font: var(--ks-font-interface-m);
     }
 
     // Scaling for Desktop Breakpoint LargeTiles
     @include container.size("≥", 820px, "teaser-card") {
-      --dsa-teaser-card__topic--font: var(--ks-font-display-l);
-      --dsa-teaser-card__copy--font: var(--ks-font-copy-l);
       --dsa-teaser-card--padding: var(--ks-spacing-inset-l);
+
+      --dsa-teaser-card__topic--font: var(--ks-font-display-l);
+
+      --dsa-teaser-card__copy--font: var(--ks-font-copy-l);
     }
   }
 }

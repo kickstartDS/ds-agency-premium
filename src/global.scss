@@ -1,5 +1,6 @@
 @use "@kickstartds/base/lib/global/base.css";
 @use "./global-token";
+@use "./token/spacing-token";
 @use "./components/blog-teaser/blog-teaser";
 @use "./components/form/form";
 @use "./components/lightbox/lightbox";

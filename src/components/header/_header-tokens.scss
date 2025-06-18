@@ -9,9 +9,7 @@
   --dsa-header_open--shadow: 0 0 0 100px var(--ks-color-fg-alpha-3);
 
   @media (min-width: 62em) {
-    --dsa-header--spacing-vertical: var(--ks-spacing-stack-s);
     --dsa-header--spacing-horizontal: var(--dsa-content--horizontal-spacing);
-    --dsa-header_floating--spacing-horizontal: var(--ks-spacing-inset-m);
   }
 }
 
