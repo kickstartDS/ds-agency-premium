@@ -82,6 +82,13 @@
     background-color: var(--dsa-teaser-card__label--background-color);
   }
 
+  .c-teaser__link {
+    .dsa-button {
+      font: var(--dsa-teaser-card__button--font, var(--dsa-button_medium--font));
+      padding: var(--dsa-teaser-card__button--padding, var(--dsa-button--padding));
+    }
+  }
+
   @include container.size("≥", 640px, "teaser-card") {
     &--unset {
       img {
