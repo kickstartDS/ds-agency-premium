@@ -32,3 +32,6 @@ src/token-*/storybook/icons.svg
 static/*.css
 static/*.css.map
 dist
+
+#src/pages/generated
+src/pages/StoryUI/

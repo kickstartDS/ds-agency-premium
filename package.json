@@ -68,7 +68,9 @@
     "token": "node scripts/customPropertyExtract.js",
     "watch:schema": "yarn schema && chokidar \"src/**/*.schema.json\" -c \"yarn schema\"",
     "watch:token": "yarn token && chokidar \"src/**/*-tokens.scss\" -c \"yarn token {path}\"",
-    "watch:dictionary": "yarn build-tokens && chokidar \"src/token/dictionary/*.json\" -c \"yarn build-tokens\""
+    "watch:dictionary": "yarn build-tokens && chokidar \"src/token/dictionary/*.json\" -c \"yarn build-tokens\"",
+    "story-ui": "story-ui start",
+    "storybook-with-ui": "concurrently \"npm run storybook\" \"npm run story-ui\""
   },
   "dependencies": {
     "@bedrock-layout/primitives": "^3.0.23",
@@ -98,6 +100,7 @@
     "@storybook/react-vite": "^8.0.5",
     "@storybook/test-runner": "^0.17.0",
     "@testing-library/react": "^14.1.2",
+    "@tpitre/story-ui": "^1.7.0",
     "@types/jest": "^29.5.11",
     "@types/jest-image-snapshot": "^6.4.0",
     "@types/react": "^18.2.21",
