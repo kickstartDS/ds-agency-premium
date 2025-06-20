@@ -19,7 +19,6 @@ import schemaTraverse from "json-schema-traverse";
 import merge from "deepmerge";
 
 import { Section } from "../components/section/SectionComponent";
-import { Html } from "../components/html/HtmlComponent";
 import { Button } from "../components/button/ButtonComponent";
 import { Faq } from "../components/faq/FaqComponent";
 
@@ -42,7 +41,7 @@ import headerSchema from "../components/header/header.schema.dereffed.json";
 import footerSchema from "../components/footer/footer.schema.dereffed.json";
 import { VideoCurtain } from "../components/video-curtain/VideoCurtainComponent";
 
-const { Tab, Divider, AddButton } = Chrome;
+const { Tab, AddButton } = Chrome;
 
 const { args: headerArgs } = getArgsShared(headerSchema as JSONSchema7);
 const headerProps = {
@@ -55,229 +54,8 @@ const footerProps = {
   logo: themes.dsa.logo,
 };
 
-// import { Gallery } from "../components/gallery/GalleryComponent";
-// import { ImageStory } from "../components/image-story/ImageStoryComponent";
-// import { ImageText } from "../components/image-text/ImageTextComponent";
-// import { Logos } from "../components/logos/LogosComponent";
-// import { Mosaic } from "../components/mosaic/MosaicComponent";
-// import { Slider } from "../components/slider/SliderComponent";
-// import { VideoCurtain } from "../components/video-curtain/VideoCurtainComponent";
-
 const systemPrompt =
   "You are a Design System marketing specialist. You excel in creating engaging and informative content for your audience. You are using a page schema to generate content for your website. You answer with a page containing at least 4 sections, which themselves should have an average of 2 components (1-3) added to them.";
-
-const demoResponse = `
-{
-  "type__page": "page",
-  "section": [
-    {
-      "type__section": "section",
-      "style": "horizontalGradient",
-      "headline": {
-        "text": "Consistency Across Platforms",
-        "large": true,
-        "sub": "Ensure uniform design across all your products"
-      },
-      "components": [
-        {
-          "type__text": "text",
-          "text": "A design system provides a single source of truth for your brand’s design language. By utilizing consistent styles, components, and patterns, you can guarantee that your product delivers a cohesive experience across different devices and platforms.",
-          "layout": "singleColumn"
-        },
-        {
-          "type__cta": "cta",
-          "headline": "Want to learn more about maintaining consistency?",
-          "sub": "Reach out to explore how a design system can unify your brand vision.",
-          "text": "Consistency breeds familiarity with users, enhancing user experience and satisfaction.",
-          "buttons": [{ "label": "Contact Us" }]
-        }
-      ],
-      "buttons": []
-    },
-    {
-      "type__section": "section",
-      "style": "accentTransition",
-      "headline": {
-        "text": "Efficiency Improvements",
-        "large": true,
-        "sub": "Streamline workflows with reusable components"
-      },
-      "components": [
-        {
-          "type__text": "text",
-          "text": "A well-defined design system allows teams to work faster by reusing components rather than creating them from scratch for each project. This not only speeds up development but also reduces errors and ensures high-quality standards are met consistently.",
-          "layout": "singleColumn"
-        },
-        {
-          "type__features": "features",
-          "layout": "largeTiles",
-          "style": "centered",
-          "ctas": { "toggle": true, "style": "button" },
-          "feature": [
-            {
-              "type__feature": "feature",
-              "title": "Save Time",
-              "text": "Cut design time by up to 50% through reusability.",
-              "style": "centered",
-              "cta": { "label": "Learn More", "toggle": true, "style": "link" }
-            },
-            {
-              "type__feature": "feature",
-              "title": "Reduce Toil",
-              "text": "Focus on innovation instead of repetitive design tasks.",
-              "style": "centered",
-              "cta": {
-                "label": "Explore Case Studies",
-                "toggle": true,
-                "style": "link"
-              }
-            }
-          ]
-        }
-      ],
-      "buttons": [
-        {
-          "type__button": "button",
-          "label": "Read More",
-          "variant": "secondary",
-          "size": "medium",
-          "disabled": false
-        }
-      ]
-    },
-    {
-      "type__section": "section",
-      "style": "boldTransition",
-      "headline": {
-        "text": "Facilitating Collaboration",
-        "large": false,
-        "sub": "Enhance team communication with a shared language"
-      },
-      "components": [
-        {
-          "type__faq": "faq",
-          "questions": [
-            {
-              "question": "How does a design system support cross-functional teams?",
-              "answer": "By offering a shared language that aligns design and development teams, fostering smoother handoffs and reducing miscommunications."
-            },
-            {
-              "question": "What tools can streamline this process?",
-              "answer": "Tools like Figma and Storybook integrate well with design systems to ease this collaborative effort."
-            }
-          ]
-        },
-        {
-          "type__text": "text",
-          "text": "Adopting a design system invites seamless collaboration between designers, developers, and product managers. By establishing a common design language, it breaks down silos and promotes efficiency.",
-          "layout": "multiColumn"
-        }
-      ],
-      "buttons": [
-        {
-          "type__button": "button",
-          "label": "Join Our Webinar",
-          "variant": "primary",
-          "size": "large",
-          "disabled": false
-        }
-      ]
-    },
-    {
-      "type__section": "section",
-      "style": "symmetricGlow",
-      "headline": {
-        "text": "Scalability",
-        "large": false,
-        "sub": "Support growth without losing quality or consistency"
-      },
-      "components": [
-        {
-          "type__stats": "stats",
-          "stat": [
-            {
-              "type__stat": "stat",
-              "number": 70,
-              "description": "of companies see improved scalability with design systems",
-              "title": "Scalable Design"
-            },
-            {
-              "type__stat": "stat",
-              "number": 85,
-              "description": "agree that scalability is crucial for long-term success",
-              "title": "Long-term Benefits"
-            }
-          ]
-        },
-        {
-          "type__cta": "cta",
-          "headline": "Scale with Confidence",
-          "sub": "Design systems allow you to maintain brand integrity, whether you're creating a single landing page or launching a multisite platform.",
-          "text": "Talk to our experts about scaling your business efficiently without compromising on quality.",
-          "buttons": [{ "label": "Contact Sales" }]
-        }
-      ],
-      "buttons": []
-    },
-    {
-      "type__section": "section",
-      "style": "symmetricGlow",
-      "headline": {
-        "text": "Accessibility and Inclusivity",
-        "large": false,
-        "sub": "Build products that everyone can use"
-      },
-      "components": [
-        {
-          "type__features": "features",
-          "layout": "list",
-          "style": "stack",
-          "ctas": { "toggle": true, "style": "link" },
-          "feature": [
-            {
-              "type__feature": "feature",
-              "title": "Predefined Accessibility",
-              "text": "Design systems come equipped with accessible components, which helps further inclusivity in design.",
-              "style": "intext",
-              "cta": {
-                "label": "More About Inclusive Design",
-                "toggle": true,
-                "style": "link"
-              }
-            },
-            {
-              "type__feature": "feature",
-              "title": "Regulatory Compliance",
-              "text": "Have confidence that your product meets necessary accessibility standards and regulations.",
-              "style": "stack",
-              "cta": {
-                "label": "Start a Conversation",
-                "toggle": true,
-                "style": "link"
-              }
-            }
-          ]
-        }
-      ],
-      "buttons": [
-        {
-          "type__button": "button",
-          "label": "Get Started",
-          "variant": "primary",
-          "size": "medium",
-          "disabled": false
-        }
-      ]
-    }
-  ],
-  "seo": {
-    "type__seo": "seo",
-    "title": "5 Key Reasons to Adopt a Design System",
-    "description": "Explore the essential benefits of using a design system to enhance consistency, efficiency, collaboration, scalability, and accessibility.",
-    "keywords": "Design System, Consistency, Efficiency, Collaboration, Scalability, Accessibility"
-  }
-}
-`;
 
 const unsupportedKeywords = [
   "format",
@@ -720,7 +498,7 @@ const PrompterFrame = () => {
   };
 
   useEffect(() => {
-    fetch("https://deploy-preview-8--ruhmesmeile.netlify.app/api/ideas")
+    fetch("https://www.ruhmesmeile.com/api/ideas")
       .then((response) => {
         response.json().then((json) => {
           console.log(json.response.data.ideas);
@@ -759,16 +537,10 @@ const PrompterFrame = () => {
         });
       })
       .catch((error) => console.error(error));
-
-    // const pageProps = processResponse(JSON.parse(demoResponse));
-    // setGeneratedContent(pageProps);
-
-    // const storyblokProps = processPage(structuredClone(pageProps));
-    // setStoryblokContent(storyblokProps);
   };
 
   const submitStory = async () => {
-    fetch("https://deploy-preview-8--ruhmesmeile.netlify.app/api/import", {
+    fetch("https://www.ruhmesmeile.com/api/import", {
       method: "POST",
       body: JSON.stringify({
         name: "Import",
