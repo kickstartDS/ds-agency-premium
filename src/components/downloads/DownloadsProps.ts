@@ -6,14 +6,6 @@
  */
 
 export interface DownloadsProps {
-  /**
-   * The headline for the downloads section
-   */
-  headline?: string;
-  /**
-   * The subheadline for the downloads section
-   */
-  subheadline?: string;
   downloads?: {
     /**
      * The name of the file

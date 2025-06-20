@@ -3,76 +3,72 @@
 .dsa-downloads {
   display: flex;
   flex-direction: column;
-  max-width: var(--dsa-content--width_narrow);
-  margin: auto;
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    gap: var(--ks-spacing-stack-xs);
-  }
+  justify-content: stretch;
+  gap: var(--dsa-downloads--gap, var(--ks-spacing-stack-xs));
 
   .dsa-downloads-item {
     position: relative;
     display: flex;
-    align-items: center;
-    gap: var(--ks-spacing-inline-s);
-
-    &::after {
-      content: "";
-      transition: var(--ks-transition-hover);
-      opacity: 0;
-      position: absolute;
-      top: calc(var(--ks-spacing-xxs) * -0.5);
-      left: calc(var(--ks-spacing-xxs) * -1);
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background-color: var(--ks-background-color-accent);
-      border-radius: var(--ks-border-radius-control);
-      padding: calc(var(--ks-spacing-xxs) * 0.5) calc(var(--ks-spacing-xxs) * 2);
-      box-sizing: content-box;
-      z-index: -1;
-    }
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-end;
+    gap: var(--dsa-downloads-item__gap, var(--ks-spacing-inline-s));
+    border-radius: var(--dsa-downloads-item--border-radius, var(--ks-border-radius-control));
+    padding: var(--dsa-downloads-item--padding, var(--ks-spacing-xxs));
+    transition: var(--dsa-downloads-item--transition, var(--ks-transition-hover));
 
     &:hover {
       cursor: pointer;
-      &::after {
-        opacity: 1;
+      background-color: var(--dsa-downloads-item--background-color_hover, var(--ks-background-color-accent));
+
+      @media (min-width: 992px) {
+        .dsa-downloads-item__button {
+          span {
+            background: linear-gradient(
+              270deg,
+              var(--dsa-downloads-item--background-color_hover, var(--ks-background-color-accent)) 80%,
+              transparent
+            );
+            opacity: 1;
+            transform: translateX(0%);
+          }
+        }
       }
     }
 
     &__header {
       display: flex;
       flex-direction: column;
-      flex-basis: 140px;
+      align-self: center;
       flex-shrink: 0;
       flex-grow: 1;
+      flex-basis: var(--dsa-downloads-item__header-flex-basis, 120px);
     }
 
     &__name {
-      font: var(--ks-font-copy-s);
-      font-weight: var(--ks-font-weight-bold);
+      font: var(--dsa-downloads-item__name--font, var(--ks-font-interface-s));
+      font-weight: var(--dsa-downloads-item__name--font-weight, var(--ks-font-weight-semi-bold));
+      color: var(--dsa-downloads-item__name--color, var(--ks-text-color-display));
     }
 
     &__description {
-      font: var(--ks-font-copy-s);
+      font: var(--dsa-downloads-item__description--font, var(--ks-font-interface-s));
+      color: var(--dsa-downloads-item__description--color, var(--ks-text-color-interface));
     }
 
     &__infos {
       display: flex;
-      gap: var(--ks-spacing-xxs);
       flex-wrap: wrap;
+      gap: var(--dsa-downloads-item__infos--gap, var(--ks-spacing-xxs));
     }
 
     &__info {
-      color: var(--ks-text-color-default);
-      font: var(--ks-font-copy-s);
-      padding-right: var(--ks-spacing-xxs);
+      color: var(--dsa-downloads-item__infos--color, var(--ks-text-color-interface));
+      font: var(--dsa-downloads-item__infos--font, var(--ks-font-interface-s));
+      padding-right: var(--dsa-downloads-item__infos--gap, var(--ks-spacing-xxs));
 
       &:not(:last-child) {
-        border-right: 1px solid var(--ks-border-color-default);
+        border-right: var(--dsa-downloads-item__infos--border, 1px solid var(--ks-border-color-default));
       }
     }
 
@@ -81,29 +77,69 @@
     }
 
     &__image {
-      width: 2.5rem;
       aspect-ratio: 1;
       object-fit: contain;
+      width: var(--dsa-downloads-item__placeholder-icon--size, 2.65rem);
+      height: var(--dsa-downloads-item__placeholder-icon--size, 2.65rem);
     }
 
-    &__icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      color: var(--ks-color-fg-to-bg-7);
+    &__placeholder-icon {
       aspect-ratio: 1;
-      background-color: var(--ks-color-fg-alpha-9);
-      border-radius: var(--ks-border-radius-control);
-      padding: 0.25em;
       flex-shrink: 0;
-      align-self: flex-start;
+      width: var(--dsa-downloads-item__placeholder-icon--size, 2.65rem);
+      height: var(--dsa-downloads-item__placeholder-icon--size, 2.65rem);
+      color: var(--dsa-downloads-item__placeholder-icon--color, var(--ks-color-fg-to-bg-3));
+      background-color: var(--dsa-downloads-item__placeholder-icon--background-color, var(--ks-color-fg-alpha-2));
+      border-radius: var(--dsa-downloads-item__placeholder-icon--border-radius, var(--ks-border-radius-control));
+      padding: var(--dsa-downloads-item__placeholder-icon--padding, var(--ks-spacing-xxs));
     }
 
     &__button {
-      --dsa-button--padding: 0;
-      --dsa-button_secondary--background-color: transparent;
-      --dsa-button_secondary--background-color_hover: transparent;
-      // --dsa-button_secondary--color_hover: var(--ks-text-color-primary);
-      --c-button--icon-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      text-decoration: none;
+      z-index: 2;
+      color: var(--dsa-downloads-item__button--color, var(--ks-text-color-interface-interactive));
+      font: var(--dsa-downloads-item__button--font, var(--ks-font-interface-s));
+      font-weight: var(--dsa-downloads-item__button--font-weight, var(--ks-font-weight-semi-bold));
+      transition: var(--dsa-downloads-item--transition, var(--ks-transition-hover));
+      border-radius: 0 var(--ks-border-radius-control) var(--ks-border-radius-control) 0;
+
+      .icon {
+        width: var(--dsa-downloads-item__download-icon--size, 1.5rem);
+        height: var(--dsa-downloads-item__download-icon--size, 1.5rem);
+        margin-left: var(--dsa-downloads-item__download-icon--gap, var(--ks-spacing-xxs));
+        transform: translateY(-1px);
+      }
+
+      &:hover {
+        color: var(--dsa-downloads-item__button--color_hover, var(--ks-text-color-interface-interactive-hover));
+      }
+
+      &:active,
+      &:visited,
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      @media (min-width: 992px) {
+        span {
+          position: absolute;
+          padding-left: 3em;
+          display: block;
+          display: flex;
+          align-items: center;
+          transform: translateX(5%);
+          height: 100%;
+          background: transparent;
+          transition: var(--dsa-downloads-item--transition, var(--ks-transition-hover));
+          transition-property: transform opacity;
+          right: 100%;
+          opacity: 0;
+        }
+      }
     }
   }
 }

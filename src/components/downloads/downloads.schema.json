@@ -4,14 +4,6 @@
   "title": "Downloads",
   "type": "object",
   "properties": {
-    "headline": {
-      "type": "string",
-      "description": "The headline for the downloads section"
-    },
-    "subheadline": {
-      "type": "string",
-      "description": "The subheadline for the downloads section"
-    },
     "downloads": {
       "type": "array",
       "items": {

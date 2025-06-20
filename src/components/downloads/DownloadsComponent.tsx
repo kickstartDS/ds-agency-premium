@@ -1,10 +1,8 @@
 import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
 import { DownloadsProps } from "./DownloadsProps";
 import "./downloads.scss";
-import { Headline } from "../headline/HeadlineComponent";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Icon } from "@kickstartds/base/lib/icon";
-import { Button } from "../button/ButtonComponent";
 import { Picture } from "@kickstartds/base/lib/picture";
 
 export type { DownloadsProps };
@@ -12,29 +10,26 @@ export type { DownloadsProps };
 export const DownloadsContextDefault = forwardRef<
   HTMLDivElement,
   DownloadsProps & HTMLAttributes<HTMLDivElement>
->(({ headline, subheadline, downloads }, ref) => {
+>(({ downloads }, ref) => {
   return (
     <div className="dsa-downloads" ref={ref}>
-      <Headline
-        text={headline}
-        sub={subheadline}
-        className="dsa-downloads__title"
-        level={"h2"}
-        style={"h3"}
-      />
-      <div className="dsa-downloads__list">
-        {downloads.map((item, index) => (
-          <div className="dsa-downloads-item" key={index}>
-            {item?.previewImage ? (
-              <Picture
-                className="dsa-downloads-item__image"
-                src={item.previewImage}
-              />
-            ) : (
-              <Icon className="dsa-downloads-item__icon" icon="file" />
-            )}
-            <div className="dsa-downloads-item__header">
-              <span className="dsa-downloads-item__name">{item.name}</span>
+      {downloads.map((item, index) => (
+        <div className="dsa-downloads-item" key={index}>
+          {item?.previewImage ? (
+            <Picture
+              className="dsa-downloads-item__image"
+              src={item.previewImage}
+              alt=""
+            />
+          ) : (
+            <Icon
+              className="dsa-downloads-item__placeholder-icon"
+              icon="file"
+            />
+          )}
+          <div className="dsa-downloads-item__header">
+            <span className="dsa-downloads-item__name">{item.name}</span>
+            {(item?.format || item?.size || item?.description) && (
               <div className="dsa-downloads-item__infos">
                 {item?.format && (
                   <span className="dsa-downloads-item__info dsa-downloads-item__format">
@@ -55,18 +50,20 @@ export const DownloadsContextDefault = forwardRef<
                   />
                 )}
               </div>
-            </div>
-
-            <Button
-              className="dsa-downloads-item__button"
-              aria-label="Download file"
-              icon="download"
-              size="small"
-              label={""}
-            />
+            )}
           </div>
-        ))}
-      </div>
+
+          <a
+            className="dsa-downloads-item__button"
+            aria-label="Download file"
+            href={item?.url}
+            target="_blank"
+          >
+            <span>Download</span>
+            <Icon icon="download" />
+          </a>
+        </div>
+      ))}
     </div>
   );
 });
