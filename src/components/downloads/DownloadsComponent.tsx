@@ -1,9 +1,9 @@
 import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
-import { DownloadsProps } from "./DownloadsProps";
-import "./downloads.scss";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Icon } from "@kickstartds/base/lib/icon";
 import { Picture } from "@kickstartds/base/lib/picture";
+import { DownloadsProps } from "./DownloadsProps";
+import "./downloads.scss";
 
 export type { DownloadsProps };
 
@@ -14,15 +14,23 @@ export const DownloadsContextDefault = forwardRef<
   return (
     <div className="dsa-downloads" ref={ref}>
       {downloads.map((item, index) => (
-        <div className="dsa-downloads-item" key={index}>
+        <a
+          href={item?.url}
+          target="_blank"
+          className="dsa-downloads-item"
+          aria-label="Download file"
+          key={index}
+        >
           {item?.previewImage ? (
             <Picture
+              aria-hidden
               className="dsa-downloads-item__image"
               src={item.previewImage}
               alt=""
             />
           ) : (
             <Icon
+              aria-hidden
               className="dsa-downloads-item__placeholder-icon"
               icon="file"
             />
@@ -53,16 +61,11 @@ export const DownloadsContextDefault = forwardRef<
             )}
           </div>
 
-          <a
-            className="dsa-downloads-item__button"
-            aria-label="Download file"
-            href={item?.url}
-            target="_blank"
-          >
-            <span>Download</span>
-            <Icon icon="download" />
-          </a>
-        </div>
+          <span aria-hidden className="dsa-downloads-item__button">
+            Download
+            <Icon aria-hidden icon="download" />
+          </span>
+        </a>
       ))}
     </div>
   );
