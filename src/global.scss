@@ -36,6 +36,18 @@ hr.c-divider {
   --c-divider--background: var(--ks-border-color-accent);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 #{$selectors} {
   --g-link--font-weight: var(--dsa-link--font-weight, var(--ks-font-weight-semi-bold));
   --g-link--text-decoration: var(--dsa-link--text-decoration, underline);

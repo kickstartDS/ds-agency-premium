@@ -33,10 +33,15 @@ export const EventDetail: Story = {
       "A full-day event for design system professionals and enthusiasts. Join us to learn, share, and connect with like-minded individuals.",
     locations: [
       {
-        address: `Berlin Congress Center<br />
-      Alexanderplatz 1<br />
+        locationName: `Berlin Congress Center`,
+        address: `Alexanderplatz 1<br />
       10178 Berlin`,
-        mapsLink: "https://maps.google.com/?q=Berlin+Congress+Center",
+        links: [
+          {
+            href: "https://maps.google.com/?q=Berlin+Congress+Center",
+            label: "Open in Google Maps",
+          },
+        ],
         dates: [
           {
             date: "2025-09-18",
@@ -57,10 +62,9 @@ export const EventDetail: Story = {
         ],
       },
       {
-        address: `Köln Messe<br />
-      Messeplatz 1<br />
+        locationName: `Köln Messe`,
+        address: `Messeplatz 1<br />
       50679 Köln`,
-        mapsLink: "https://maps.google.com/?q=Köln+Messe",
         dates: [
           {
             date: "2025-09-18",
@@ -69,6 +73,16 @@ export const EventDetail: Story = {
             href: "#",
             ariaLabel:
               "Register for the event on 18th September 2025 from 09:00 to 17:00",
+          },
+        ],
+        links: [
+          {
+            href: "https://maps.google.com/?q=Berlin+Congress+Center",
+            label: "Open in Google Maps",
+          },
+          {
+            href: "https://www.berlincongresscenter.com",
+            label: "Location Website",
           },
         ],
       },

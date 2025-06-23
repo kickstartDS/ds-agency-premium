@@ -6,6 +6,7 @@ import { Section } from "../../section/SectionComponent";
 import { EventHeader } from "../../event-header/EventHeaderComponent";
 import { Gallery } from "../../gallery/GalleryComponent";
 import { Downloads } from "../../downloads/DownloadsComponent";
+import { Headline } from "../../headline/HeadlineComponent";
 
 export type { EventDetailProps };
 
@@ -23,7 +24,13 @@ export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
       <EventHeader title={title} categories={categories} intro={intro} />
     </Section>
     {locations && locations.length > 0 && (
-      <Section width="narrow" content={{ mode: "list" }}>
+      <Section width="narrow" content={{ mode: "list", gutter: "none" }}>
+        <Headline
+          text="Locations"
+          level="h3"
+          style="h3"
+          className="dsa-event__locations-headline"
+        />
         {locations.map((appointment, index) => (
           <EventListLocation key={index} {...appointment} />
         ))}

@@ -12,6 +12,12 @@
         "$ref": "http://schema.mydesignsystem.com/event-list-appointment.schema.json"
       }
     },
+    "locationName": {
+      "title": "Location Name",
+      "description": "Name of the event location",
+      "type": "string",
+      "examples": ["Berlin Congress Center"]
+    },
     "address": {
       "title": "Address",
       "description": "Address of the appointment",
@@ -20,12 +26,28 @@
         "Berlin Congress Center<br />Alexanderplatz 1<br />10178 Berlin"
       ]
     },
-    "mapsLink": {
-      "title": "Maps Link",
-      "description": "Link to the location on a map",
-      "type": "string",
-      "format": "uri",
-      "examples": ["https://maps.google.com/?q=Berlin+Congress+Center"]
+    "links": {
+      "title": "Links",
+      "description": "Links related to the event location",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "label": {
+            "type": "string"
+          },
+          "newTab": {
+            "type": "boolean",
+            "default": true,
+            "description": "Open link in a new tab"
+          }
+        },
+        "required": ["href", "label"]
+      }
     }
   },
   "additionalProperties": false

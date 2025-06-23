@@ -21,7 +21,7 @@ export const EventListAppointmentContextDefault = forwardRef<
         <span className="dsa-event-list-appointment__info">
           <Icon
             className="dsa-event-list-appointment__icon"
-            aria-label="Date"
+            aria-hidden
             icon={"date"}
           />
           {date}
@@ -31,7 +31,7 @@ export const EventListAppointmentContextDefault = forwardRef<
         <span className="dsa-event-list-appointment__info">
           <Icon
             className="dsa-event-list-appointment__icon"
-            aria-label="Time"
+            aria-hidden
             icon={"time"}
           />
           {time}

@@ -1,6 +1,4 @@
 .dsa-event-list-appointment {
-  --g-link--text-decoration: none;
-  --g-link--text-decoration-hover: none;
   --g-link--color: var(--ks-text-color-interface-interactive);
   --g-link--color-hover: var(--ks-text-color-interface-interactive);
   --g-link--border-radius: var(--ks-border-radius-control);
@@ -37,10 +35,16 @@
   &__label {
     display: flex;
     align-items: center;
-    color: var(--ks-text-color-primary);
+    color: var(--dsa-link--color);
     font: var(--ks-font-interface-s);
     align-self: flex-end;
     font-weight: var(--ks-font-weight-semi-bold);
+    transition: var(--ks-transition-hover);
+    transition-property: color;
+
+    &:hover {
+      color: var(--dsa-link--color_hover);
+    }
 
     .icon {
       width: 1.75em;

@@ -26,10 +26,9 @@ export const Default: Story = {
     },
   },
   args: pack({
-    address: `Berlin Congress Center<br />
-  Alexanderplatz 1<br />
+    locationName: "Berlin Congress Center",
+    address: `Alexanderplatz 1<br />
   10178 Berlin`,
-    mapsLink: "https://maps.google.com/?q=Berlin+Congress+Center",
     dates: [
       {
         date: "2025-09-18",
@@ -46,6 +45,16 @@ export const Default: Story = {
         href: "#",
         ariaLabel:
           "Register for the event on 18th September 2025 from 09:00 to 17:00",
+      },
+    ],
+    links: [
+      {
+        href: "https://maps.google.com/?q=Berlin+Congress+Center",
+        label: "Open in Google Maps",
+      },
+      {
+        href: "https://maps.google.com/?q=Berlin+Congress+Center",
+        label: "Location Website",
       },
     ],
   }),

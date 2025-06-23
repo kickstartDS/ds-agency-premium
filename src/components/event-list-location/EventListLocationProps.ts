@@ -12,16 +12,28 @@ import type {EventListAppointmentProps} from "../event-list-appointment/EventLis
  */
 export type Dates = EventListAppointmentProps[];
 /**
+ * Name of the event location
+ */
+export type LocationName = string;
+/**
  * Address of the appointment
  */
 export type Address = string;
 /**
- * Link to the location on a map
+ * Links related to the event location
  */
-export type MapsLink = string;
+export type Links = {
+  href: string;
+  label: string;
+  /**
+   * Open link in a new tab
+   */
+  newTab?: boolean;
+}[];
 
 export interface EventListLocationProps {
   dates?: Dates;
+  locationName?: LocationName;
   address?: Address;
-  mapsLink?: MapsLink;
+  links?: Links;
 }

@@ -1,7 +1,5 @@
 .dsa-event-list-location {
-  --dsa-event-list-location__icon--size: calc(
-    var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m)
-  );
+  --dsa-event-list-location__icon--size: calc(var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m));
 
   flex-wrap: wrap;
   display: flex;
@@ -11,6 +9,35 @@
   background-color: var(--ks-background-color-accent);
   padding: var(--ks-spacing-inset-m);
   border-radius: var(--ks-border-radius-surface);
+
+  & + .dsa-event-list-location {
+    margin-top: var(--ks-spacing-stack-m);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ks-spacing-stack-s);
+    flex-grow: 0;
+    flex-grow: 0;
+  }
+
+  &__name {
+    font: var(--ks-font-interface-m);
+    color: var(--dsa-topic--color);
+    font-weight: var(--dsa-topic--font-weight);
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: var(--ks-spacing-xxs);
+  }
+
+  &__link {
+    font: var(--ks-font-interface-s);
+  }
 
   &__icon {
     width: 2rem;
