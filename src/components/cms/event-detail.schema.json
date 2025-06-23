@@ -37,6 +37,9 @@
         "$ref": "http://schema.mydesignsystem.com/event-list-appointment.schema.json"
       }
     },
+    "downloads": {
+      "$ref": "http://schema.mydesignsystem.com/downloads.schema.json#/properties/downloads"
+    },
     "description": {
       "title": "Description",
       "description": "Description of the event",
@@ -44,26 +47,26 @@
       "format": "markdown"
     },
     "images": {
-      "title": "Images",
-      "description": "Images displayed below the text content",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "src": {
-            "title": "Image source",
-            "description": "Image source to use",
-            "type": "string",
-            "format": "image"
-          },
-          "alt": {
-            "title": "Alt text",
-            "description": "Image description",
-            "type": "string"
-          }
+      "$ref": "http://schema.mydesignsystem.com/gallery.schema.json#/properties/images"
+    },
+    "button": {
+      "title": "Button",
+      "description": "Button at the bottom of the event detail",
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label",
+          "description": "Label of the button",
+          "examples": ["See all Events"]
+        },
+        "target": {
+          "type": "string",
+          "title": "Target",
+          "description": "URL the button links to",
+          "format": "uri"
         }
-      },
-      "additionalProperties": false
+      }
     }
   },
   "additionalProperties": false

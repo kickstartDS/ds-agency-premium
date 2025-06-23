@@ -34,26 +34,367 @@ export type Appointments = EventListAppointmentProps[];
  */
 export type Description = string;
 /**
- * Image source to use
+ * The images to display in the gallery
+ *
+ * @minItems 1
+ * @maxItems 10
  */
-export type ImageSource = string;
+export type Images =
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ]
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ]
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ]
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ]
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ]
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ]
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ]
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ]
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ]
+  | [
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      },
+      {
+        src: Src;
+        alt?: AltText;
+        caption?: Caption;
+      }
+    ];
 /**
- * Image description
+ * The source of the image
+ */
+export type Src = string;
+/**
+ * Alt text of the image
  */
 export type AltText = string;
 /**
- * Images displayed below the text content
+ * The caption of the image
  */
-export type Images = {
-  src?: ImageSource;
-  alt?: AltText;
-}[];
+export type Caption = string;
+/**
+ * Label of the button
+ */
+export type Label1 = string;
+/**
+ * URL the button links to
+ */
+export type Target = string;
 
 export interface EventDetailProps {
   title?: EventTitle;
   categories?: Categories;
   intro?: Intro;
   appointments?: Appointments;
+  downloads?: {
+    /**
+     * The name of the file
+     */
+    name: string;
+    /**
+     * A brief description of the file
+     */
+    description?: string;
+    /**
+     * A URL to an image that previews the file.
+     */
+    previewImage?: string;
+    /**
+     * The URL to download the file from.
+     */
+    url: string;
+    /**
+     * The size of the download file
+     */
+    size?: string;
+    /**
+     * The format of the download file
+     */
+    format?: string;
+  }[];
   description?: Description;
   images?: Images;
+  button?: Button;
+}
+/**
+ * Button at the bottom of the event detail
+ */
+export interface Button {
+  label?: Label1;
+  target?: Target;
 }

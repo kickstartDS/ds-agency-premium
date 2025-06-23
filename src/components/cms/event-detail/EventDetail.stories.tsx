@@ -22,8 +22,8 @@ type Story = StoryObj<typeof EventDetailComponent>;
 export const EventDetail: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 472,
+      width: 1440,
+      height: 850,
     },
   },
   args: pack({
@@ -42,11 +42,17 @@ export const EventDetail: Story = {
             date: "2025-09-18",
             time: "09:00 – 17:00",
             label: "Register",
+            href: "#",
+            ariaLabel:
+              "Register for the event on 18th September 2025 from 09:00 to 17:00",
           },
           {
             date: "2025-09-18",
             time: "09:00 – 17:00",
             label: "Register",
+            href: "#",
+            ariaLabel:
+              "Register for the event on 18th September 2025 from 09:00 to 17:00",
           },
         ],
       },
@@ -60,6 +66,9 @@ export const EventDetail: Story = {
             date: "2025-09-18",
             time: "09:00 – 17:00",
             label: "Register",
+            href: "#",
+            ariaLabel:
+              "Register for the event on 18th September 2025 from 09:00 to 17:00",
           },
         ],
       },
@@ -74,13 +83,57 @@ Join us for a day of inspiring talks, hands-on workshops, and networking with de
   `,
     images: [
       {
-        src: "/img/events/design-conference.jpg",
-        alt: "Attendees at the Systemics Design Conference",
+        alt: "Alt text Image 1",
+        caption: "Caption Image 1",
+        src: "img/close-up-young-business-team-working.png",
       },
       {
-        src: "/img/events/speaker.jpg",
-        alt: "Keynote speaker on stage",
+        alt: "Alt text Image 2",
+        caption: "Caption Image 2",
+        src: "img/low-angle-tall-building-with-many-windows_23-2148230392.png",
+      },
+      {
+        src: "img/full-shot-different-people-working-together.png",
+        caption: "Caption Image 3",
+        alt: "Alt text Image 3",
+      },
+      {
+        src: "img/top-view-desk-with-keyboard-drawing-pad.png",
+        caption: "Caption Image 4",
+        alt: "Alt text Image 4",
       },
     ],
+    downloads: [
+      {
+        name: "Product Brochure",
+        format: "PDF",
+        size: "2.5 MB",
+        previewImage: "img/offset-image.png",
+        url: "img/offset-image.png",
+      },
+      {
+        name: "Company Brochure",
+        previewImage: "assets/figma-cover.png",
+        format: "PDF",
+        size: "3.2 MB",
+        url: "assets/figma-cover.png",
+      },
+      {
+        name: "User Guide",
+        format: "DOC",
+        size: "20 KB",
+        url: "assets/user-guide.doc",
+      },
+      {
+        name: "Technical Specifications",
+        format: "TXT",
+        size: "12 KB",
+        url: "assets/technical-specifications.txt",
+      },
+    ],
+    button: {
+      label: "See all Events",
+      target: "/#",
+    },
   }),
 };

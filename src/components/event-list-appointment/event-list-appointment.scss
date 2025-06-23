@@ -1,37 +1,60 @@
-@import "event-list-appointment-tokens.scss";
-
 .dsa-event-list-appointment {
+  --g-link--text-decoration: none;
+  --g-link--text-decoration-hover: none;
+  --g-link--color: var(--ks-text-color-interface-interactive);
+  --g-link--color-hover: var(--ks-text-color-interface-interactive);
+  --g-link--border-radius: var(--ks-border-radius-control);
+  --g-link--background: var(--ks-background-color-default);
+  --g-link--background-hover: var(--ks-background-color-default);
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--ks-spacing-inline-m);
+  gap: var(--ks-spacing-inline-s);
   padding: var(--ks-spacing-inset-s);
-  border: var(--ks-border-width-default) solid var(--ks-border-color-default);
-  background-color: var(--ks-background-color-default);
-  border-radius: var(--ks-border-radius-control);
+  border: var(--ks-border-width-default) solid var(--ks-border-color-interface-interactive);
   flex-grow: 0;
 
-  &__item {
-    display: flex;
-    gap: var(--ks-spacing-stack-xs);
+  &:hover {
+    border-color: var(--ks-border-color-interface-interactive-hover);
   }
 
-  &__dates {
+  &__info {
+    display: flex;
+    gap: var(--ks-spacing-xxs);
+    font: var(--ks-font-interface-s);
+    text-decoration: none;
+    align-items: center;
+  }
+
+  &__infos {
     flex-direction: column;
     display: flex;
     gap: var(--ks-spacing-stack-xs);
   }
 
-  &__icon {
+  &__label {
+    display: flex;
+    align-items: center;
     color: var(--ks-text-color-primary);
-    width: var(--dsa-event-list-entry__icon--size);
-    height: var(--dsa-event-list-entry__icon--size);
+    font: var(--ks-font-interface-s);
+    align-self: flex-end;
+    font-weight: var(--ks-font-weight-semi-bold);
+
+    .icon {
+      width: 1.75em;
+      height: 1.75em;
+    }
   }
 
-  &__cta.c-button {
-    background-color: transparent;
-    padding: 0;
+  &__icon {
     color: var(--ks-text-color-primary);
+    width: 1.75em;
+    height: 1.75em;
+  }
+
+  .l-container--rich-text {
+    container-type: normal;
   }
 }

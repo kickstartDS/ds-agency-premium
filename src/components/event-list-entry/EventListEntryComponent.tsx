@@ -1,6 +1,6 @@
 import { createContext, forwardRef, useContext } from "react";
 import { EventListEntryProps } from "./EventListEntryProps";
-// import "./event.scss";
+import "./event-list-entry.scss";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Icon } from "@kickstartds/base/lib/icon";
 import { EventListAppointment } from "../event-list-appointment/EventListAppointmentComponent";
@@ -23,9 +23,7 @@ export const EventListEntryContextDefault = forwardRef<
     {dates && dates.length > 0 && (
       <div className="dsa-event-list-entry__appointments">
         {dates.map((item, index) => (
-          <button key={index} className="dsa-event-list-appointment">
-            <EventListAppointment {...item} />
-          </button>
+          <EventListAppointment {...item} key={index} />
         ))}
       </div>
     )}

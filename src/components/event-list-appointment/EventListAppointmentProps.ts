@@ -17,9 +17,24 @@ export type Time = string;
  * Label for the call to action button
  */
 export type CTALabel = string;
+/**
+ * URL for the call to action button
+ */
+export type Href = string;
+/**
+ * Whether the link should open in a new tab
+ */
+export type OpenInNewTab = boolean;
+/**
+ * Aria label for the link
+ */
+export type AriaLabel = string;
 
 export interface EventListAppointmentProps {
   date?: Date;
   time?: Time;
   label?: CTALabel;
+  href?: Href;
+  newTab?: OpenInNewTab;
+  ariaLabel?: AriaLabel;
 }

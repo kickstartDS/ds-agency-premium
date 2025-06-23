@@ -1,48 +1,63 @@
 import { FC, PropsWithChildren } from "react";
 import { EventDetailProps } from "../EventDetailProps";
-import "./event-detail.scss";
-import { Headline } from "../../headline/HeadlineComponent";
-import { Text } from "../../text/TextComponent";
 import { RichText } from "@kickstartds/base/lib/rich-text";
-import { TagLabel } from "@kickstartds/base/lib/tag-label";
 import { EventListEntry } from "../../event-list-entry/EventListEntryComponent";
+import { Section } from "../../section/SectionComponent";
+import { EventHeader } from "../../event-header/EventHeaderComponent";
+import { Gallery } from "../../gallery/GalleryComponent";
+import { Downloads } from "../../downloads/DownloadsComponent";
 
 export type { EventDetailProps };
 
 export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
   title,
   categories,
-  intro,
   appointments,
   description,
+  intro,
+  images,
+  downloads,
 }) => (
-  <div className="dsa-event">
-    <div className="dsa-event__header">
-      {categories && categories.length > 0 && (
-        <div className="dsa-event__categories">
-          {categories.map((category, index) => (
-            <TagLabel
-              className="dsa-event__category"
-              label={category?.label}
-              key={index}
-            />
-          ))}
-        </div>
-      )}
-      <Headline text={title} level={"h1"} />
-      <Text highlightText text={intro} />
-    </div>
-
+  <>
+    <Section width="narrow" spaceAfter="none">
+      <EventHeader title={title} categories={categories} intro={intro} />
+    </Section>
     {appointments && appointments.length > 0 && (
-      <div className="dsa-event__list">
+      <Section width="narrow" content={{ mode: "list" }}>
         {appointments.map((appointment, index) => (
           <EventListEntry key={index} {...appointment} />
         ))}
-      </div>
+      </Section>
     )}
     {description && (
-      <RichText className="dsa-event__description" text={description} />
+      <Section width="narrow" spaceBefore="none">
+        <RichText className="dsa-event__description" text={description} />
+      </Section>
     )}
-  </div>
+    <Section spaceBefore="none">
+      <Gallery
+        images={images}
+        aspectRatio="wide"
+        layout="smallTiles"
+        lightbox
+      />
+    </Section>
+    {downloads && downloads.length > 0 && (
+      <Section width="narrow" spaceBefore="none" spaceAfter="none">
+        <Downloads downloads={downloads} />
+      </Section>
+    )}
+    {
+      <Section
+        width="narrow"
+        buttons={[
+          {
+            label: "See all Events",
+            target: "/#",
+          },
+        ]}
+      ></Section>
+    }
+  </>
 );
 EventDetail.displayName = "EventDetail";

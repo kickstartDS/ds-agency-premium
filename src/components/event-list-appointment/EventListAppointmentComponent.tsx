@@ -1,46 +1,55 @@
 import { createContext, forwardRef, useContext } from "react";
 import { EventListAppointmentProps } from "./EventListAppointmentProps";
-// import "./event.scss";
-import { RichText } from "@kickstartds/base/lib/rich-text";
+import "./event-list-appointment.scss";
 import { Icon } from "@kickstartds/base/lib/icon";
-import { Button } from "../button/ButtonComponent";
 
 export type { EventListAppointmentProps };
 
 export const EventListAppointmentContextDefault = forwardRef<
-  HTMLDivElement,
+  HTMLAnchorElement,
   EventListAppointmentProps
->(({ date, time, label, ...rest }, ref) => (
-  <div {...rest} ref={ref}>
-    <div className="dsa-event-list-appointment__dates">
+>(({ date, time, label, href, newTab, ariaLabel }, ref) => (
+  <a
+    className="dsa-event-list-appointment"
+    target={newTab ? "_blank" : "_self"}
+    aria-label={ariaLabel}
+    href={href}
+    ref={ref}
+  >
+    <span className="dsa-event-list-appointment__infos">
       {date && (
-        <div className="dsa-event-list-appointment__item dsa-event-list-appointment__date">
-          <Icon className="dsa-event-list-appointment__icon" icon={"date"} />
-          <RichText text={date} />
-        </div>
+        <span className="dsa-event-list-appointment__info">
+          <Icon
+            className="dsa-event-list-appointment__icon"
+            aria-label="Date"
+            icon={"date"}
+          />
+          {date}
+        </span>
       )}
       {time && (
-        <div className="dsa-event-list-appointment__item dsa-event-list-appointment__time">
-          <Icon className="dsa-event-list-appointment__icon" icon={"time"} />
-          <RichText text={time} />
-        </div>
+        <span className="dsa-event-list-appointment__info">
+          <Icon
+            className="dsa-event-list-appointment__icon"
+            aria-label="Time"
+            icon={"time"}
+          />
+          {time}
+        </span>
       )}
-    </div>
-    <Button
-      className="dsa-event-list-appointment__cta"
-      label={label}
-      icon={"chevron-right"}
-      variant="primary"
-      size="small"
-    />
-  </div>
+    </span>
+    <span className="dsa-event-list-appointment__label">
+      {label}
+      <Icon icon={"chevron-right"} />
+    </span>
+  </a>
 ));
 
 export const EventListAppointmentContext = createContext(
   EventListAppointmentContextDefault
 );
 export const EventListAppointment = forwardRef<
-  HTMLDivElement,
+  HTMLAnchorElement,
   EventListAppointmentProps
 >((props, ref) => {
   const Component = useContext(EventListAppointmentContext);

@@ -1,9 +1,5 @@
-@import "event-list-entry-tokens.scss";
-
 .dsa-event-list-entry {
-  --dsa-event-list-entry__icon--size: calc(
-    var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m)
-  );
+  --dsa-event-list-entry__icon--size: calc(var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m));
 
   flex-wrap: wrap;
   display: flex;
@@ -14,8 +10,9 @@
   padding: var(--ks-spacing-inset-m);
   border-radius: var(--ks-border-radius-surface);
 
-  .l-container {
-    container-type: unset;
+  &__icon {
+    width: 2rem;
+    height: 2rem;
   }
 
   &__row {
@@ -44,5 +41,9 @@
     flex-direction: column;
     gap: var(--ks-spacing-stack-s);
     flex-grow: 1;
+  }
+
+  .l-container--rich-text {
+    container-type: normal;
   }
 }

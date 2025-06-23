@@ -19,6 +19,25 @@
       "title": "CTA Label",
       "description": "Label for the call to action button",
       "type": "string"
+    },
+    "href": {
+      "title": "Href",
+      "description": "URL for the call to action button",
+      "type": "string",
+      "format": "uri",
+      "default": "#"
+    },
+    "newTab": {
+      "title": "Open in New Tab",
+      "description": "Whether the link should open in a new tab",
+      "type": "boolean",
+      "default": true
+    },
+    "ariaLabel": {
+      "title": "Aria Label",
+      "description": "Aria label for the link",
+      "type": "string",
+      "default": "Event Appointment"
     }
   },
   "additionalProperties": false

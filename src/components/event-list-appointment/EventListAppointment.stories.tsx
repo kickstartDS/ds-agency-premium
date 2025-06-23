@@ -4,14 +4,12 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { EventListAppointment } from "./EventListAppointmentComponent";
 import schema from "./event-list-appointment.schema.dereffed.json";
-import customProperties from "./event-list-appointment-tokens.json";
 
 const meta: Meta<typeof EventListAppointment> = {
   title: "Event/ Event List Appointment",
   component: EventListAppointment,
   parameters: {
     jsonschema: { schema },
-    cssprops: { customProperties },
   },
   ...getArgsShared(schema as JSONSchema7),
 };
@@ -31,5 +29,8 @@ export const Default: Story = {
     date: "2025-09-18",
     time: "09:00 – 17:00",
     label: "Register",
+    href: "#",
+    ariaLabel:
+      "Register for the event on 18th September 2025 from 09:00 to 17:00",
   }),
 };

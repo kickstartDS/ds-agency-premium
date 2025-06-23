@@ -19,7 +19,7 @@ export const GalleryContextDefault = forwardRef<
   (
     {
       lightbox = false,
-      layout = "tiles",
+      layout = "smallTiles",
       aspectRatio = "square",
       images = [],
       ...rest
