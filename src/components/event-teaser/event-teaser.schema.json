@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/event-teaser.schema.json",
+  "title": "Event Teaser",
+  "description": "Display an event teaser with date, headline and location",
+  "type": "object",
+  "properties": {
+    "date": {
+      "title": "Date",
+      "description": "The date of the event",
+      "type": "string",
+      "format": "date",
+      "examples": ["12/30/2022"]
+    },
+    "headline": {
+      "title": "Headline",
+      "description": "Title of the event",
+      "type": "string",
+      "format": "markdown",
+      "examples": ["This is a blog post headline"]
+    },
+    "location": {
+      "title": "Location",
+      "description": "Location of the event",
+      "type": "string",
+      "format": "markdown",
+      "examples": ["This is a teaser text for the blog post"]
+    },
+    "link": {
+      "type": "object",
+      "title": "Link",
+      "description": "URL and label for the event linked",
+      "properties": {
+        "url": {
+          "title": "URL",
+          "description": "The event entry URL to link",
+          "type": "string",
+          "format": "uri",
+          "examples": ["https://example.com"]
+        },
+        "text": {
+          "title": "Text",
+          "description": "The text for the link",
+          "type": "string",
+          "default": "Show event",
+          "examples": ["Show event"]
+        }
+      },
+      "additionalProperties": false,
+      "required": ["url"]
+    },
+    "className": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["headline", "date", "location"]
+}
