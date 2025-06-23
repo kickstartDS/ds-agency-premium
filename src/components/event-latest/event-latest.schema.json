@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/event-latest.schema.json",
+  "title": "Event Latest",
+  "description": "Display a list of latest events, ordered chronologically",
+  "type": "object",
+  "properties": {
+    "headline": {
+      "title": "Headline",
+      "description": "Headline for the listing",
+      "type": "string",
+      "format": "markdown",
+      "examples": ["Latest Events"]
+    },
+    "text": {
+      "title": "Text",
+      "description": "Additional text shown below the headline",
+      "type": "string",
+      "format": "markdown",
+      "examples": ["Our next upcoming events"]
+    },
+    "events": {
+      "title": "Events",
+      "description": "List of events to display",
+      "type": "array",
+      "items": {
+        "$ref": "http://schema.mydesignsystem.com/event-teaser.schema.json"
+      },
+      "minItems": 1,
+      "examples": [
+        [
+          {
+            "date": "12/30/2022",
+            "headline": "Event 1",
+            "location": "Location 1",
+            "link": {
+              "url": "https://example.com/event1",
+              "text": "Show event 1"
+            }
+          },
+          {
+            "date": "01/15/2023",
+            "headline": "Event 2",
+            "location": "Location 2",
+            "link": {
+              "url": "https://example.com/event2",
+              "text": "Show event 2"
+            }
+          }
+        ]
+      ]
+    },
+    "link": {
+      "type": "object",
+      "title": "Link",
+      "description": "Link shown below the listing",
+      "properties": {
+        "url": {
+          "title": "URL",
+          "description": "The to link",
+          "type": "string",
+          "format": "uri",
+          "examples": ["https://example.com"]
+        },
+        "text": {
+          "title": "Text",
+          "description": "The text for the link",
+          "type": "string",
+          "default": "Show all events",
+          "examples": ["Show all events"]
+        }
+      },
+      "additionalProperties": false,
+      "required": ["url"]
+    },
+    "className": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": []
+}
