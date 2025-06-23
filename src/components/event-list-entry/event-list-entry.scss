@@ -1,0 +1,48 @@
+@import "event-list-entry-tokens.scss";
+
+.dsa-event-list-entry {
+  --dsa-event-list-entry__icon--size: calc(
+    var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m)
+  );
+
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
+  background-color: var(--ks-background-color-accent);
+  padding: var(--ks-spacing-inset-m);
+  border-radius: var(--ks-border-radius-surface);
+
+  .l-container {
+    container-type: unset;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    gap: var(--ks-spacing-inline-m);
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 200px;
+  }
+
+  &__icon {
+    color: var(--ks-text-color-primary);
+    width: var(--dsa-event-list-entry__icon--size);
+    height: var(--dsa-event-list-entry__icon--size);
+  }
+
+  &__item {
+    display: flex;
+    gap: var(--ks-spacing-stack-xs);
+  }
+
+  &__appointments {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ks-spacing-stack-s);
+    flex-grow: 1;
+  }
+}

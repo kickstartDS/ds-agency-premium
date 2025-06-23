@@ -5,6 +5,8 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {EventListAppointmentProps} from "../event-list-appointment/EventListAppointmentProps";
+
 /**
  * Title of the event
  */
@@ -24,42 +26,9 @@ export type Categories = {
  */
 export type Intro = string;
 /**
- * Date of the appointment
- */
-export type Date = string;
-/**
- * Time of the appointment
- */
-export type Time = string;
-/**
- * Label for the call to action button
- */
-export type CTALabel = string;
-/**
- * List of dates of the event
- */
-export type Dates = {
-  date?: Date;
-  time?: Time;
-  label?: CTALabel;
-  [k: string]: unknown;
-}[];
-/**
- * Address of the appointment
- */
-export type Address = string;
-/**
- * Link to the location on a map
- */
-export type MapsLink = string;
-/**
  * List of attendable appointments
  */
-export type Appointments = {
-  dates?: Dates;
-  address: Address;
-  mapsLink?: MapsLink;
-}[];
+export type Appointments = EventListAppointmentProps[];
 /**
  * Description of the event
  */
@@ -80,7 +49,7 @@ export type Images = {
   alt?: AltText;
 }[];
 
-export interface EventProps {
+export interface EventDetailProps {
   title?: EventTitle;
   categories?: Categories;
   intro?: Intro;

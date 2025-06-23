@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.mydesignsystem.com/event.schema.json",
-  "title": "Event",
+  "$id": "http://schema.mydesignsystem.com/cms/event-detail.schema.json",
+  "title": "Event Detail",
   "type": "object",
   "properties": {
     "title": {
@@ -34,46 +34,7 @@
       "description": "List of attendable appointments",
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "dates": {
-            "title": "Dates",
-            "description": "List of dates of the event",
-            "type": "array",
-            "items": {
-              "properties": {
-                "date": {
-                  "title": "Date",
-                  "description": "Date of the appointment",
-                  "type": "string",
-                  "format": "date"
-                },
-                "time": {
-                  "title": "Time",
-                  "description": "Time of the appointment",
-                  "type": "string"
-                },
-                "label": {
-                  "title": "CTA Label",
-                  "description": "Label for the call to action button",
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "address": {
-            "title": "Address",
-            "description": "Address of the appointment",
-            "type": "string"
-          },
-          "mapsLink": {
-            "title": "Maps Link",
-            "description": "Link to the location on a map",
-            "type": "string",
-            "format": "uri"
-          }
-        },
-        "required": ["date", "time", "address"]
+        "$ref": "http://schema.mydesignsystem.com/event-list-appointment.schema.json"
       }
     },
     "description": {

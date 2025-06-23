@@ -1,24 +1,17 @@
-import { FC } from "react";
-import { EventProps } from "./EventProps";
-import "./event.scss";
+import { createContext, forwardRef, useContext } from "react";
+import { EventListAppointmentProps } from "./EventListAppointmentProps";
+// import "./event.scss";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Icon } from "@kickstartds/base/lib/icon";
 import { Button } from "../button/ButtonComponent";
 
-export type { EventProps };
+export type { EventListAppointmentProps };
 
-export interface EventListAppointmentProps {
-  date?: string;
-  time?: string;
-  label?: string;
-}
-
-export const EventListAppointment: FC<EventListAppointmentProps> = ({
-  date,
-  time,
-  label,
-}) => (
-  <>
+export const EventListAppointmentContextDefault = forwardRef<
+  HTMLDivElement,
+  EventListAppointmentProps
+>(({ date, time, label, ...rest }, ref) => (
+  <div {...rest} ref={ref}>
     <div className="dsa-event-list-appointment__dates">
       {date && (
         <div className="dsa-event-list-appointment__item dsa-event-list-appointment__date">
@@ -40,5 +33,17 @@ export const EventListAppointment: FC<EventListAppointmentProps> = ({
       variant="primary"
       size="small"
     />
-  </>
+  </div>
+));
+
+export const EventListAppointmentContext = createContext(
+  EventListAppointmentContextDefault
 );
+export const EventListAppointment = forwardRef<
+  HTMLDivElement,
+  EventListAppointmentProps
+>((props, ref) => {
+  const Component = useContext(EventListAppointmentContext);
+  return <Component {...props} ref={ref} />;
+});
+EventListAppointment.displayName = "EventListAppointment";

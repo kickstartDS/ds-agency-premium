@@ -2,25 +2,24 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { Event } from "./EventComponent";
-import customProperties from "./event-tokens.json";
-import schema from "./event.schema.dereffed.json";
+import { EventDetail as EventDetailComponent } from "./EventDetailComponent";
+import schema from "../event-detail.schema.dereffed.json";
 
-const meta: Meta = {
-  title: "Industry/Event",
-  component: Event,
+const meta: Meta<typeof EventDetailComponent> = {
+  component: EventDetailComponent,
+  title: "Page Archetypes/Event Detail",
   parameters: {
     jsonschema: { schema },
-    cssprops: { customProperties },
+    layout: "fullscreen",
   },
   ...getArgsShared(schema as JSONSchema7),
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Event>;
+type Story = StoryObj<typeof EventDetailComponent>;
 
-export const Default: Story = {
+export const EventDetail: Story = {
   parameters: {
     viewport: {
       width: 1000,

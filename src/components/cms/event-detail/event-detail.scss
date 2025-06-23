@@ -1,0 +1,21 @@
+.dsa-event {
+  max-width: var(--dsa-content--width_narrow);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ks-spacing-stack-m);
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: var(--ks-spacing-stack-xs);
+  }
+
+  &__list {
+    display: flex;
+    gap: var(--ks-spacing-stack-m);
+    flex-direction: column;
+    padding: var(--ks-spacing-inset-m) 0;
+  }
+}

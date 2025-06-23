@@ -1,0 +1,37 @@
+@import "event-list-appointment-tokens.scss";
+
+.dsa-event-list-appointment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--ks-spacing-inline-m);
+  padding: var(--ks-spacing-inset-s);
+  border: var(--ks-border-width-default) solid var(--ks-border-color-default);
+  background-color: var(--ks-background-color-default);
+  border-radius: var(--ks-border-radius-control);
+  flex-grow: 0;
+
+  &__item {
+    display: flex;
+    gap: var(--ks-spacing-stack-xs);
+  }
+
+  &__dates {
+    flex-direction: column;
+    display: flex;
+    gap: var(--ks-spacing-stack-xs);
+  }
+
+  &__icon {
+    color: var(--ks-text-color-primary);
+    width: var(--dsa-event-list-entry__icon--size);
+    height: var(--dsa-event-list-entry__icon--size);
+  }
+
+  &__cta.c-button {
+    background-color: transparent;
+    padding: 0;
+    color: var(--ks-text-color-primary);
+  }
+}
