@@ -26,27 +26,9 @@ export const Default: Story = {
     },
   },
   args: pack({
-    address: `Berlin Congress Center<br />
-  Alexanderplatz 1<br />
-  10178 Berlin`,
-    mapsLink: "https://maps.google.com/?q=Berlin+Congress+Center",
-    dates: [
-      {
-        date: "2025-09-18",
-        time: "09:00 – 17:00",
-        label: "Register",
-        href: "#",
-        ariaLabel:
-          "Register for the event on 18th September 2025 from 09:00 to 17:00",
-      },
-      {
-        date: "2025-09-18",
-        time: "09:00 – 17:00",
-        label: "Register",
-        href: "#",
-        ariaLabel:
-          "Register for the event on 18th September 2025 from 09:00 to 17:00",
-      },
-    ],
+    title: "Systemics Design Conference 2025",
+    categories: [{ label: "Conference" }, { label: "Design Systems" }],
+    intro:
+      "A full-day event for design system professionals and enthusiasts. Join us to learn, share, and connect with like-minded individuals.",
   }),
 };
