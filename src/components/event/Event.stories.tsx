@@ -34,40 +34,35 @@ export const Default: Story = {
       "A full-day event for design system professionals and enthusiasts. Join us to learn, share, and connect with like-minded individuals.",
     appointments: [
       {
-        date: "2025-09-18",
-        time: "09:00 – 17:00",
         address: `Berlin Congress Center<br />
-Alexanderplatz 1<br />
-10178 Berlin`,
-        cta: {
-          label: "Register now",
-          target: "https://systemics.events/register",
-        },
+      Alexanderplatz 1<br />
+      10178 Berlin`,
         mapsLink: "https://maps.google.com/?q=Berlin+Congress+Center",
+        dates: [
+          {
+            date: "2025-09-18",
+            time: "09:00 – 17:00",
+            label: "Register",
+          },
+          {
+            date: "2025-09-18",
+            time: "09:00 – 17:00",
+            label: "Register",
+          },
+        ],
       },
       {
-        date: "2025-09-18",
-        time: "09:00 – 17:00",
-        address: `Berlin Congress Center<br />
-Alexanderplatz 1<br />
-10178 Berlin`,
-        cta: {
-          label: "Register now",
-          target: "https://systemics.events/register",
-        },
-        mapsLink: "https://maps.google.com/?q=Berlin+Congress+Center",
-      },
-      {
-        date: "2025-09-18",
-        time: "09:00 – 17:00",
-        address: `Berlin Congress Center<br />
-Alexanderplatz 1<br />
-10178 Berlin`,
-        cta: {
-          label: "Register now",
-          target: "https://systemics.events/register",
-        },
-        mapsLink: "https://maps.google.com/?q=Berlin+Congress+Center",
+        address: `Köln Messe<br />
+      Messeplatz 1<br />
+      50679 Köln`,
+        mapsLink: "https://maps.google.com/?q=Köln+Messe",
+        dates: [
+          {
+            date: "2025-09-18",
+            time: "09:00 – 17:00",
+            label: "Register",
+          },
+        ],
       },
     ],
     description: `

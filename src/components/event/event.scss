@@ -1,9 +1,8 @@
 @import "event-tokens.scss";
 
 .dsa-event {
-  max-width: var(--dsa-content--width_default);
+  max-width: var(--dsa-content--width_narrow);
   margin: auto;
-
   display: flex;
   flex-direction: column;
   gap: var(--ks-spacing-stack-m);
@@ -15,21 +14,24 @@
     margin-bottom: var(--ks-spacing-stack-xs);
   }
 
-  &__appointments {
-    background-color: var(--ks-background-color-accent);
-    padding: var(--ks-spacing-inset-m);
-    border-radius: var(--ks-border-radius-surface);
+  &__list {
     display: flex;
     gap: var(--ks-spacing-stack-m);
     flex-direction: column;
+    padding: var(--ks-spacing-inset-m) 0;
   }
 
-  .dsa-event-appointment {
-    --dsa-event-appointment__icon--size: calc(var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m));
+  .dsa-event-list-entry {
+    --dsa-event-list-entry__icon--size: calc(var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m));
 
-    display: flex;
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
+    background-color: var(--ks-background-color-accent);
+    padding: var(--ks-spacing-inset-m);
+    border-radius: var(--ks-border-radius-surface);
 
     .l-container {
       container-type: unset;
@@ -37,23 +39,66 @@
 
     &__row {
       display: flex;
-      flex-direction: column;
-      gap: var(--ks-spacing-stack-xs);
-    }
-
-    &__item {
-      display: flex;
-      gap: var(--ks-spacing-stack-xs) var(--ks-spacing-inline-xs);
+      flex-direction: row;
+      gap: var(--ks-spacing-inline-m);
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      flex-grow: 1;
+      flex-basis: 200px;
     }
 
     &__icon {
       color: var(--ks-text-color-primary);
-      width: var(--dsa-event-appointment__icon--size);
-      height: var(--dsa-event-appointment__icon--size);
+      width: var(--dsa-event-list-entry__icon--size);
+      height: var(--dsa-event-list-entry__icon--size);
     }
 
-    &__cta {
-      align-self: flex-start;
+    &__item {
+      display: flex;
+      gap: var(--ks-spacing-stack-xs);
+    }
+
+    &__appointments {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ks-spacing-stack-s);
+      flex-grow: 1;
+    }
+
+    .dsa-event-list-appointment {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--ks-spacing-inline-m);
+      padding: var(--ks-spacing-inset-s);
+      border: var(--ks-border-width-default) solid var(--ks-border-color-default);
+      background-color: var(--ks-background-color-default);
+      border-radius: var(--ks-border-radius-control);
+      flex-grow: 0;
+
+      &__item {
+        display: flex;
+        gap: var(--ks-spacing-stack-xs);
+      }
+
+      &__dates {
+        flex-direction: column;
+        display: flex;
+        gap: var(--ks-spacing-stack-xs);
+      }
+
+      &__icon {
+        color: var(--ks-text-color-primary);
+        width: var(--dsa-event-list-entry__icon--size);
+        height: var(--dsa-event-list-entry__icon--size);
+      }
+
+      &__cta.c-button {
+        background-color: transparent;
+        padding: 0;
+        color: var(--ks-text-color-primary);
+      }
     }
   }
 }

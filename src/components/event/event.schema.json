@@ -31,45 +31,40 @@
     },
     "appointments": {
       "title": "Appointments",
-      "description": "List of appointments for the event",
+      "description": "List of attendable appointments",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "date": {
-            "title": "Date",
-            "description": "Date of the appointment",
-            "type": "string",
-            "format": "date"
-          },
-          "time": {
-            "title": "Time",
-            "description": "Time of the appointment",
-            "type": "string"
+          "dates": {
+            "title": "Dates",
+            "description": "List of dates of the event",
+            "type": "array",
+            "items": {
+              "properties": {
+                "date": {
+                  "title": "Date",
+                  "description": "Date of the appointment",
+                  "type": "string",
+                  "format": "date"
+                },
+                "time": {
+                  "title": "Time",
+                  "description": "Time of the appointment",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "CTA Label",
+                  "description": "Label for the call to action button",
+                  "type": "string"
+                }
+              }
+            }
           },
           "address": {
             "title": "Address",
             "description": "Address of the appointment",
             "type": "string"
-          },
-          "cta": {
-            "type": "object",
-            "title": "Call to Action",
-            "description": "Call to action for the appointment",
-            "properties": {
-              "label": {
-                "title": "CTA Label",
-                "description": "Label for the call to action button",
-                "type": "string"
-              },
-              "target": {
-                "title": "CTA Target",
-                "description": "URL or action for the call to action button",
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": ["label", "target"]
           },
           "mapsLink": {
             "title": "Maps Link",

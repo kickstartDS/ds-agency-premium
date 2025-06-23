@@ -32,29 +32,32 @@ export type Date = string;
  */
 export type Time = string;
 /**
- * Address of the appointment
- */
-export type Address = string;
-/**
  * Label for the call to action button
  */
 export type CTALabel = string;
 /**
- * URL or action for the call to action button
+ * List of dates of the event
  */
-export type CTATarget = string;
+export type Dates = {
+  date?: Date;
+  time?: Time;
+  label?: CTALabel;
+  [k: string]: unknown;
+}[];
+/**
+ * Address of the appointment
+ */
+export type Address = string;
 /**
  * Link to the location on a map
  */
 export type MapsLink = string;
 /**
- * List of appointments for the event
+ * List of attendable appointments
  */
 export type Appointments = {
-  date: Date;
-  time: Time;
+  dates?: Dates;
   address: Address;
-  cta?: CallToAction;
   mapsLink?: MapsLink;
 }[];
 /**
@@ -84,11 +87,4 @@ export interface EventProps {
   appointments?: Appointments;
   description?: Description;
   images?: Images;
-}
-/**
- * Call to action for the appointment
- */
-export interface CallToAction {
-  label: CTALabel;
-  target: CTATarget;
 }

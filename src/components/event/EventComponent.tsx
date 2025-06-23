@@ -5,8 +5,7 @@ import { Headline } from "../headline/HeadlineComponent";
 import { Text } from "../text/TextComponent";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { TagLabel } from "@kickstartds/base/lib/tag-label";
-import { Icon } from "@kickstartds/base/lib/icon";
-import { Button } from "../button/ButtonComponent";
+import { EventListEntry } from "./EventListEntryComponent";
 
 export type { EventProps };
 
@@ -33,52 +32,9 @@ export const EventContextDefault = forwardRef<
       </div>
 
       {appointments && appointments.length > 0 && (
-        <div className="dsa-event__appointments">
+        <div className="dsa-event__list">
           {appointments.map((appointment, index) => (
-            <div className="dsa-event-appointment" key={index}>
-              {appointment?.address && (
-                <div className="dsa-event-appointment__row">
-                  <address
-                    key={index}
-                    className="dsa-event-appointment__item dsa-event-appointment__address"
-                  >
-                    <Icon
-                      className="dsa-event-appointment__icon"
-                      icon={"map-pin"}
-                    />
-                    <RichText text={appointment?.address} />
-                  </address>
-                </div>
-              )}
-              {appointment?.date && appointment?.time && (
-                <div className="dsa-event-appointment__row">
-                  {appointment?.date && (
-                    <div className="dsa-event-appointment__item dsa-event-appointment__date">
-                      <Icon
-                        className="dsa-event-appointment__icon"
-                        icon={"date"}
-                      />
-                      <RichText text={appointment?.date} />
-                    </div>
-                  )}
-                  {appointment?.time && (
-                    <div className="dsa-event-appointment__item dsa-event-appointment__time">
-                      <Icon
-                        className="dsa-event-appointment__icon"
-                        icon={"time"}
-                      />
-                      <RichText text={appointment?.time} />
-                    </div>
-                  )}
-                </div>
-              )}
-              <Button
-                className="dsa-event-appointment__cta"
-                label={appointment?.cta.label}
-                target={appointment?.cta.target}
-                size="small"
-              />
-            </div>
+            <EventListEntry key={index} {...appointment} />
           ))}
         </div>
       )}
