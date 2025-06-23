@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from "react";
 import { EventDetailProps } from "../EventDetailProps";
 import { RichText } from "@kickstartds/base/lib/rich-text";
-import { EventListEntry } from "../../event-list-entry/EventListEntryComponent";
+import { EventListLocation } from "../../event-list-location/EventListLocationComponent";
 import { Section } from "../../section/SectionComponent";
 import { EventHeader } from "../../event-header/EventHeaderComponent";
 import { Gallery } from "../../gallery/GalleryComponent";
@@ -12,7 +12,7 @@ export type { EventDetailProps };
 export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
   title,
   categories,
-  appointments,
+  locations,
   description,
   intro,
   images,
@@ -22,10 +22,10 @@ export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
     <Section width="narrow" spaceAfter="none">
       <EventHeader title={title} categories={categories} intro={intro} />
     </Section>
-    {appointments && appointments.length > 0 && (
+    {locations && locations.length > 0 && (
       <Section width="narrow" content={{ mode: "list" }}>
-        {appointments.map((appointment, index) => (
-          <EventListEntry key={index} {...appointment} />
+        {locations.map((appointment, index) => (
+          <EventListLocation key={index} {...appointment} />
         ))}
       </Section>
     )}

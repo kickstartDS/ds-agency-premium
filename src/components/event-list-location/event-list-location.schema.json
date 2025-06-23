@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.mydesignsystem.com/event-list-entry.schema.json",
-  "title": "Event List Entry",
+  "$id": "http://schema.mydesignsystem.com/event-list-location.schema.json",
+  "title": "Event List Location",
   "type": "object",
   "properties": {
     "dates": {
@@ -15,13 +15,17 @@
     "address": {
       "title": "Address",
       "description": "Address of the appointment",
-      "type": "string"
+      "type": "string",
+      "examples": [
+        "Berlin Congress Center<br />Alexanderplatz 1<br />10178 Berlin"
+      ]
     },
     "mapsLink": {
       "title": "Maps Link",
       "description": "Link to the location on a map",
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "examples": ["https://maps.google.com/?q=Berlin+Congress+Center"]
     }
   },
   "additionalProperties": false

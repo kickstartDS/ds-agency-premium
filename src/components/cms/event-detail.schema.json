@@ -19,7 +19,8 @@
           "label": {
             "type": "string",
             "title": "Label",
-            "description": "Label of the category"
+            "description": "Label of the category",
+            "examples": ["Web Development", "Design", "Marketing"]
           }
         }
       }
@@ -29,12 +30,12 @@
       "description": "Short intro text for the event",
       "type": "string"
     },
-    "appointments": {
-      "title": "Appointments",
-      "description": "List of attendable appointments",
+    "locations": {
+      "title": "Locations",
+      "description": "List of locations with attendable appointments",
       "type": "array",
       "items": {
-        "$ref": "http://schema.mydesignsystem.com/event-list-appointment.schema.json"
+        "$ref": "http://schema.mydesignsystem.com/event-list-location.schema.json"
       }
     },
     "downloads": {

@@ -31,7 +31,7 @@ export const EventDetail: Story = {
     categories: [{ label: "Conference" }, { label: "Design Systems" }],
     intro:
       "A full-day event for design system professionals and enthusiasts. Join us to learn, share, and connect with like-minded individuals.",
-    appointments: [
+    locations: [
       {
         address: `Berlin Congress Center<br />
       Alexanderplatz 1<br />
