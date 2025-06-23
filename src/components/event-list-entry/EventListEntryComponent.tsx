@@ -15,7 +15,11 @@ export const EventListEntryContextDefault = forwardRef<
     {address && (
       <div className="dsa-event-list-entry__row">
         <address className="dsa-event-list-entry__item dsa-event-list-entry__address">
-          <Icon className="dsa-event-list-entry__icon" icon={"map-pin"} />
+          <Icon
+            aria-label="Address"
+            className="dsa-event-list-entry__icon"
+            icon={"map-pin"}
+          />
           <RichText text={address} />
         </address>
       </div>
