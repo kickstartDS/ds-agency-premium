@@ -20,7 +20,7 @@ export type Address = string;
  */
 export type MapsLink = string;
 
-export interface EventListEntryProps {
+export interface EventListLocationProps {
   dates?: Dates;
   address?: Address;
   mapsLink?: MapsLink;

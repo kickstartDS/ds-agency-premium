@@ -8,17 +8,20 @@
       "title": "Date",
       "description": "Date of the appointment",
       "type": "string",
-      "format": "date"
+      "format": "date",
+      "examples": ["2025-09-18"]
     },
     "time": {
       "title": "Time",
       "description": "Time of the appointment",
-      "type": "string"
+      "type": "string",
+      "examples": ["09:00 – 17:00"]
     },
     "label": {
       "title": "CTA Label",
       "description": "Label for the call to action button",
-      "type": "string"
+      "type": "string",
+      "examples": ["Register"]
     },
     "href": {
       "title": "Href",

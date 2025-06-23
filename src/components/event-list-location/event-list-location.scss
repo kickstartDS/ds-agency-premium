@@ -1,5 +1,7 @@
-.dsa-event-list-entry {
-  --dsa-event-list-entry__icon--size: calc(var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m));
+.dsa-event-list-location {
+  --dsa-event-list-location__icon--size: calc(
+    var(--ks-font-size-copy-m) * var(--ks-line-height-copy-m)
+  );
 
   flex-wrap: wrap;
   display: flex;
@@ -27,8 +29,8 @@
 
   &__icon {
     color: var(--ks-text-color-primary);
-    width: var(--dsa-event-list-entry__icon--size);
-    height: var(--dsa-event-list-entry__icon--size);
+    width: var(--dsa-event-list-location__icon--size);
+    height: var(--dsa-event-list-location__icon--size);
   }
 
   &__item {

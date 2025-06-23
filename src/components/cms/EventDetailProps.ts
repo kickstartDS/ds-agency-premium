@@ -5,7 +5,7 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-import type {EventListAppointmentProps} from "../event-list-appointment/EventListAppointmentProps";
+import type {EventListLocationProps} from "../event-list-location/EventListLocationProps";
 
 /**
  * Title of the event
@@ -26,9 +26,9 @@ export type Categories = {
  */
 export type Intro = string;
 /**
- * List of attendable appointments
+ * List of locations with attendable appointments
  */
-export type Appointments = EventListAppointmentProps[];
+export type Locations = EventListLocationProps[];
 /**
  * Description of the event
  */
@@ -360,7 +360,7 @@ export interface EventDetailProps {
   title?: EventTitle;
   categories?: Categories;
   intro?: Intro;
-  appointments?: Appointments;
+  locations?: Locations;
   downloads?: {
     /**
      * The name of the file
