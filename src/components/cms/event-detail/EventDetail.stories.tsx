@@ -127,10 +127,10 @@ Join us for a day of inspiring talks, hands-on workshops, and networking with de
       },
       {
         name: "Company Brochure",
-        previewImage: "assets/figma-cover.png",
+        previewImage: "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
         format: "PDF",
         size: "3.2 MB",
-        url: "assets/figma-cover.png",
+        url: "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
       },
       {
         name: "User Guide",

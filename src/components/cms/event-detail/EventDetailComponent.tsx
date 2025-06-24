@@ -50,7 +50,16 @@ export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
       />
     </Section>
     {downloads && downloads.length > 0 && (
-      <Section width="narrow" spaceBefore="none" spaceAfter="none">
+      <Section
+        width="narrow"
+        spaceBefore="none"
+        content={{
+          mode: "list",
+          gutter: "none",
+        }}
+        spaceAfter="none"
+      >
+        <Headline text="Downloads" level="h3" style="h3" />
         <Downloads downloads={downloads} />
       </Section>
     )}

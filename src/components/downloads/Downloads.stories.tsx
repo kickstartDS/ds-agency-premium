@@ -38,10 +38,10 @@ export const TechnicalDetailsOnly: Story = {
       },
       {
         name: "Company Brochure",
-        previewImage: "assets/figma-cover.png",
+        previewImage: "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
         format: "PDF",
         size: "3.2 MB",
-        url: "assets/figma-cover.png",
+        url: "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
       },
       {
         name: "User Guide",
@@ -78,7 +78,7 @@ export const DescriptionOnly: Story = {
         name: "Technical Specifications",
         description:
           "In-depth technical details and requirements. Recommended for technical users.",
-        previewImage: "assets/figma-cover.png",
+        previewImage: "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
       },
       {
         name: "User Guide",
@@ -114,7 +114,7 @@ export const Complete: Story = {
       {
         name: "Company Brochure",
         description: "Overview of our company and services.",
-        previewImage: "assets/figma-cover.png",
+        previewImage: "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
         format: "PDF",
         size: "3.2 MB",
       },
@@ -160,7 +160,7 @@ export const Mixed: Story = {
       },
       {
         name: "Company Brochure",
-        previewImage: "assets/figma-cover.png",
+        previewImage: "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
       },
       {
         name: "Technical Specifications",
