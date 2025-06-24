@@ -62,7 +62,7 @@ export const DownloadsContextDefault = forwardRef<
           </div>
 
           <span aria-hidden className="dsa-downloads-item__button">
-            Download
+            <span>Download</span>
             <Icon aria-hidden icon="download" />
           </span>
         </a>
