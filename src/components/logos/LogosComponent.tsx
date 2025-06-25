@@ -33,21 +33,17 @@ export const LogosContextDefault = forwardRef<
             <div className="dsa-logos__cta">
               <div className="dsa-logos__cta__text">
                 {cta?.text}
-                {cta?.style === "text" ? (
+                {cta?.style === "text" && (
                   <>
                     &#32;
                     <Link className="dsa-logos__cta__link" href={cta.link}>
                       {cta.label}
                     </Link>
                   </>
-                ) : (
-                  ""
                 )}
               </div>
-              {cta?.style === "button" ? (
+              {cta?.style === "button" && (
                 <Button href={cta.link} label={cta.label} />
-              ) : (
-                ""
               )}
             </div>
           ) : (

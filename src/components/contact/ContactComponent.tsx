@@ -53,12 +53,12 @@ export const ContactContextDefault = forwardRef<
 
         {links && links.length && (
           <ul className="dsa-contact__links">
-            {links.map(({ icon, href, label, ariaLabel, newTab }, i) => (
+            {links.map(({ icon, url, label, ariaLabel, newTab }, i) => (
               <li key={i}>
                 <Link
                   className="dsa-contact__link"
                   aria-label={ariaLabel}
-                  href={href}
+                  href={url}
                   {...(newTab && { target: "_blank", rel: "noopener" })}
                 >
                   <Icon

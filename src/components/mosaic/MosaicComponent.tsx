@@ -27,7 +27,7 @@ export const MosaicContextDefault = forwardRef<
           textColor: tile?.textColor,
           ...(tile?.button?.toggle && {
             link: {
-              target: tile?.button?.target,
+              url: tile?.button?.url,
               label: tile?.button?.label,
               icon: tile?.button?.icon,
             },

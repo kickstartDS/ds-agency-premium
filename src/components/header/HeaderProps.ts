@@ -52,11 +52,11 @@ export interface HeaderProps {
   floating?: Floating;
   inverted?: Inverted;
   navItems?: {
-    href: string;
+    url: string;
     label: string;
     active?: boolean;
     items?: {
-      href?: string;
+      url?: string;
       label?: string;
       active?: boolean;
     }[];

@@ -69,7 +69,7 @@ export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
         buttons={[
           {
             label: "See all Events",
-            target: "/#",
+            url: "/#",
           },
         ]}
       ></Section>

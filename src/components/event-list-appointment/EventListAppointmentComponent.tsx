@@ -8,12 +8,12 @@ export type { EventListAppointmentProps };
 export const EventListAppointmentContextDefault = forwardRef<
   HTMLAnchorElement,
   EventListAppointmentProps
->(({ date, time, label, href, newTab, ariaLabel }, ref) => (
+>(({ date, time, label, url, newTab, ariaLabel }, ref) => (
   <a
     className="dsa-event-list-appointment"
     target={newTab ? "_blank" : "_self"}
     aria-label={ariaLabel}
-    href={href}
+    href={url}
     ref={ref}
   >
     <span className="dsa-event-list-appointment__infos">

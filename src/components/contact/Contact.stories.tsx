@@ -37,12 +37,12 @@ export const WideImage: Story = {
     links: [
       {
         icon: "twitter",
-        href: "#",
+        url: "#",
         label: "@Isabella_Doe",
         ariaLabel: "Isabella Doe on Twitter",
       },
       {
-        href: "mailto:mail@example.com",
+        url: "mailto:mail@example.com",
         icon: "linkedin",
         label: "Isabella.Doe",
         ariaLabel: "Isabella Doe on LinkedIn",
@@ -68,11 +68,11 @@ export const CircularAvatar: Story = {
     links: [
       {
         icon: "twitter",
-        href: "#",
+        url: "#",
         label: "@jane_smith",
       },
       {
-        href: "mailto:mail@example.com",
+        url: "mailto:mail@example.com",
         icon: "linkedin",
         label: "jane.smith",
         newTab: false,
@@ -98,14 +98,14 @@ export const VerticalImageWithParagraph: Story = {
     copy: "Leads with a vision for innovative, user-centric web designs, ensuring each project merges creativity with functionality to deliver outstanding digital experiences.",
     links: [
       {
-        href: "mailto:mail@example.com",
+        url: "mailto:mail@example.com",
         icon: "xing",
         label: "john.smith",
         newTab: false,
       },
       {
         icon: "twitter",
-        href: "#",
+        url: "#",
         label: "@john_smith",
       },
     ],
@@ -130,14 +130,14 @@ export const FullImageWidth: Story = {
     copy: "Blends artistic flair with technical expertise, creating visually stunning and intuitive websites that captivate users and drive engagement.",
     links: [
       {
-        href: "mailto:mail@example.com",
+        url: "mailto:mail@example.com",
         icon: "email",
         label: "jim.johnsson@mail.com",
         newTab: false,
       },
       {
         icon: "facebook",
-        href: "#",
+        url: "#",
         label: "@jim_johnsson",
       },
     ],

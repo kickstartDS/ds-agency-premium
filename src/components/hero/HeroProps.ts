@@ -39,9 +39,9 @@ export type Label = string;
  */
 export type Icon = string;
 /**
- * Target that should be linked, makes the button behave like a link semantically
+ * The URL to link to when the button is clicked
  */
-export type Target = string;
+export type URL = string;
 /**
  * Enable grid layer
  */
@@ -96,7 +96,7 @@ export interface HeroProps {
 export interface Button {
   label?: Label;
   icon?: Icon;
-  target?: Target;
+  url?: URL;
 }
 /**
  * Sources of background images for different screen sizes

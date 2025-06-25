@@ -21,7 +21,7 @@ const Page = () => (
           {
             icon: "chevron-down",
             label: "What can we do for you?",
-            target: "#startit",
+            url: "#startit",
           },
         ]}
         headline="Simplify the process of building your Design System"
@@ -78,7 +78,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
           {
             label: "Reach out today!",
             icon: "chevron-right",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
           },
         ]}
       />
@@ -139,7 +139,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       }}
     >
       <TeaserCard
-        target="/showcase-techfusion_paid"
+        url="/showcase-techfusion_paid"
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
@@ -149,7 +149,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         }}
       />
       <TeaserCard
-        target="/showcase-launchpad_paid"
+        url="/showcase-launchpad_paid"
         headline="Speed and Scale"
         label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
@@ -160,7 +160,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         }}
       />
       <TeaserCard
-        target="/showcase-eco_paid"
+        url="/showcase-eco_paid"
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
@@ -182,12 +182,12 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}
@@ -302,12 +302,12 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}

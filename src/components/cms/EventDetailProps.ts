@@ -354,7 +354,7 @@ export type Label1 = string;
 /**
  * URL the button links to
  */
-export type Target = string;
+export type Url = string;
 
 export interface EventDetailProps {
   title?: EventTitle;
@@ -396,5 +396,5 @@ export interface EventDetailProps {
  */
 export interface Button {
   label?: Label1;
-  target?: Target;
+  url?: Url;
 }

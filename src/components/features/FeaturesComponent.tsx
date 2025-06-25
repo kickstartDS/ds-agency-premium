@@ -49,7 +49,7 @@ export const FeaturesContextDefault = forwardRef<
             text={text}
             cta={{
               label: cta?.label,
-              target: cta?.target,
+              url: cta?.url,
               style: ctas.style,
               toggle: ctas.toggle,
               icon: cta?.icon,

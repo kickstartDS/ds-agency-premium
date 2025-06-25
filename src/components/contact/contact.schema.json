@@ -60,7 +60,7 @@
           "label": {
             "type": "string"
           },
-          "href": {
+          "url": {
             "type": "string",
             "format": "uri"
           },
@@ -84,12 +84,12 @@
           {
             "icon": "phone",
             "label": "0228 / 688 966 20",
-            "href": "tel:+4922868896620"
+            "url": "tel:+4922868896620"
           },
           {
             "icon": "email",
             "label": "mail@example.com",
-            "href": "mailto:mail@example.com"
+            "url": "mailto:mail@example.com"
           }
         ]
       ]

@@ -48,8 +48,8 @@
           "icon": {
             "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/icon"
           },
-          "target": {
-            "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/target"
+          "url": {
+            "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/url"
           }
         }
       }

@@ -54,8 +54,8 @@
           "cta": {
             "type": "object",
             "properties": {
-              "target": {
-                "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/cta/properties/target"
+              "url": {
+                "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/cta/properties/url"
               },
               "label": {
                 "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/cta/properties/label"

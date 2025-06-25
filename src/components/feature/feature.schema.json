@@ -35,10 +35,10 @@
       "title": "Call to Action",
       "description": "The call to action",
       "properties": {
-        "target": {
+        "url": {
           "type": "string",
-          "title": "Call to Action target",
-          "description": "The CTA target",
+          "title": "Call to Action url",
+          "description": "The CTA url",
           "default": "#",
           "format": "uri"
         },

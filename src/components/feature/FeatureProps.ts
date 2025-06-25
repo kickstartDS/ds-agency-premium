@@ -18,9 +18,9 @@ export type Title = string;
  */
 export type Text = string;
 /**
- * The CTA target
+ * The CTA url
  */
-export type CallToActionTarget = string;
+export type CallToActionUrl = string;
 /**
  * The text label displayed on the link
  */
@@ -48,7 +48,7 @@ export interface FeatureProps {
  * The call to action
  */
 export interface CallToAction {
-  target?: CallToActionTarget;
+  url?: CallToActionUrl;
   label?: LinkLabel;
   icon?: Icon1;
   toggle?: CallToActionToggle;

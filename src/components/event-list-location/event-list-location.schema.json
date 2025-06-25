@@ -33,7 +33,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "href": {
+          "url": {
             "type": "string",
             "format": "uri"
           },
@@ -46,7 +46,7 @@
             "description": "Open link in a new tab"
           }
         },
-        "required": ["href", "label"]
+        "required": ["url", "label"]
       }
     }
   },

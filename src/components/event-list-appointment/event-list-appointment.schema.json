@@ -23,8 +23,8 @@
       "type": "string",
       "examples": ["Register"]
     },
-    "href": {
-      "title": "Href",
+    "url": {
+      "title": "URL",
       "description": "URL for the call to action button",
       "type": "string",
       "format": "uri",

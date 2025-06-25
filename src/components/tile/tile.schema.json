@@ -51,8 +51,8 @@
         "label": {
           "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/label"
         },
-        "target": {
-          "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/target"
+        "url": {
+          "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/url"
         },
         "icon": {
           "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/icon"

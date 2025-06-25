@@ -36,7 +36,7 @@ export const IconCentered: Story = {
         title: "Scalable Architecture",
         text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Learn more",
         },
       },
@@ -45,7 +45,7 @@ export const IconCentered: Story = {
         title: "Efficient Development",
         text: "Experience efficient development like never before. Our design system streamlines the development process, saving you time and resources.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Get started",
         },
       },
@@ -54,7 +54,7 @@ export const IconCentered: Story = {
         title: "Consistent UI",
         text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Explore",
         },
       },
@@ -63,7 +63,7 @@ export const IconCentered: Story = {
         title: "Customizable Design",
         text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Customize",
         },
       },
@@ -72,7 +72,7 @@ export const IconCentered: Story = {
         title: "Cloud Ready",
         text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Deploy",
         },
       },
@@ -81,7 +81,7 @@ export const IconCentered: Story = {
         title: "Secure",
         text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Secure",
         },
       },
@@ -108,7 +108,7 @@ export const StackWithButton: Story = {
         title: "Consistent UI",
         text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Explore",
         },
       },
@@ -117,7 +117,7 @@ export const StackWithButton: Story = {
         title: "Customizable Design",
         text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Customize",
         },
       },
@@ -126,7 +126,7 @@ export const StackWithButton: Story = {
         title: "Cloud Ready",
         text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Deploy",
         },
       },
@@ -135,7 +135,7 @@ export const StackWithButton: Story = {
         title: "Secure",
         text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Secure",
         },
       },
@@ -163,7 +163,7 @@ export const ListView: Story = {
         title: "Customizable Design",
         text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Customize",
         },
       },
@@ -172,7 +172,7 @@ export const ListView: Story = {
         title: "Efficient Development",
         text: "Experience efficient development like never before. Our design system streamlines the development process, saving you time and resources.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Get started",
         },
       },
@@ -181,7 +181,7 @@ export const ListView: Story = {
         title: "Consistent UI",
         text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Explore",
         },
       },
@@ -191,7 +191,7 @@ export const ListView: Story = {
         title: "Scalable Architecture",
         text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Learn more",
         },
       },
@@ -200,7 +200,7 @@ export const ListView: Story = {
         title: "Cloud Ready",
         text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Deploy",
         },
       },
@@ -209,7 +209,7 @@ export const ListView: Story = {
         title: "Secure",
         text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Secure",
         },
       },
@@ -236,7 +236,7 @@ export const IconBesideWithLinkInText: Story = {
         title: "Scalable Architecture",
         text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Learn more",
         },
       },
@@ -245,7 +245,7 @@ export const IconBesideWithLinkInText: Story = {
         title: "Efficient Development",
         text: "Experience efficient development like never before. Our design system streamlines the development process, saving you time and resources.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Get started",
         },
       },
@@ -254,7 +254,7 @@ export const IconBesideWithLinkInText: Story = {
         title: "Consistent UI",
         text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Explore",
         },
       },
@@ -263,7 +263,7 @@ export const IconBesideWithLinkInText: Story = {
         title: "Customizable Design",
         text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Customize",
         },
       },
@@ -272,7 +272,7 @@ export const IconBesideWithLinkInText: Story = {
         title: "Cloud Ready",
         text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Deploy",
         },
       },
@@ -281,7 +281,7 @@ export const IconBesideWithLinkInText: Story = {
         title: "Secure",
         text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Secure",
         },
       },
@@ -307,7 +307,7 @@ export const IconIntextWithLink: Story = {
         title: "Customizable Design",
         text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Customize",
         },
       },
@@ -316,7 +316,7 @@ export const IconIntextWithLink: Story = {
         title: "Efficient Development",
         text: "Experience efficient development like never before. Our design system streamlines the development process, saving you time and resources.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Get started",
         },
       },
@@ -325,7 +325,7 @@ export const IconIntextWithLink: Story = {
         title: "Consistent UI",
         text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Explore",
         },
       },
@@ -335,7 +335,7 @@ export const IconIntextWithLink: Story = {
         title: "Cloud Ready",
         text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Deploy",
         },
       },
@@ -344,7 +344,7 @@ export const IconIntextWithLink: Story = {
         title: "Secure",
         text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
         cta: {
-          target: "#",
+          url: "#",
           label: "Secure",
         },
       },

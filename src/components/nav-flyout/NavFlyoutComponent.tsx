@@ -19,38 +19,38 @@ export const NavFlyoutContextDefault = forwardRef<
       ref={ref}
     >
       <ul className="dsa-nav-flyout__list">
-        {items.map(({ label, href, active, items: subItems }) => {
+        {items.map(({ label, url, active, items: subItems }) => {
           return (
             <li
               className={classnames(
                 "dsa-nav-flyout__item",
                 active && "dsa-nav-flyout__item--active"
               )}
-              key={href}
+              key={url}
             >
               {subItems?.length ? (
                 <span className="dsa-nav-flyout__label">{label}</span>
               ) : (
                 <Link
-                  href={href}
+                  href={url}
                   className={`dsa-nav-flyout__label dsa-nav-flyout__link`}
                 >
                   {label}
                 </Link>
               )}
-              {subItems?.length ? (
+              {subItems?.length && (
                 <ul className="dsa-nav-flyout__sublist">
-                  {subItems.map(({ label, href, active }) => {
+                  {subItems.map(({ label, url, active }) => {
                     return (
                       <li
                         className={classnames(
                           "dsa-nav-flyout__item",
                           active && "dsa-nav-flyout__item--active"
                         )}
-                        key={href}
+                        key={url}
                       >
                         <Link
-                          href={href}
+                          href={url}
                           className={`dsa-nav-flyout__label dsa-nav-flyout__link`}
                         >
                           {label}
@@ -59,7 +59,7 @@ export const NavFlyoutContextDefault = forwardRef<
                     );
                   })}
                 </ul>
-              ) : null}
+              )}
             </li>
           );
         })}

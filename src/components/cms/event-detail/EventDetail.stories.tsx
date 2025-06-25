@@ -38,7 +38,7 @@ export const EventDetail: Story = {
       10178 Berlin`,
         links: [
           {
-            href: "https://maps.google.com/?q=Berlin+Congress+Center",
+            url: "https://maps.google.com/?q=Berlin+Congress+Center",
             label: "Open in Google Maps",
           },
         ],
@@ -47,7 +47,7 @@ export const EventDetail: Story = {
             date: "2025-09-18",
             time: "09:00 – 17:00",
             label: "Register",
-            href: "#",
+            url: "#",
             ariaLabel:
               "Register for the event on 18th September 2025 from 09:00 to 17:00",
           },
@@ -55,7 +55,7 @@ export const EventDetail: Story = {
             date: "2025-09-18",
             time: "09:00 – 17:00",
             label: "Register",
-            href: "#",
+            url: "#",
             ariaLabel:
               "Register for the event on 18th September 2025 from 09:00 to 17:00",
           },
@@ -70,18 +70,18 @@ export const EventDetail: Story = {
             date: "2025-09-18",
             time: "09:00 – 17:00",
             label: "Register",
-            href: "#",
+            url: "#",
             ariaLabel:
               "Register for the event on 18th September 2025 from 09:00 to 17:00",
           },
         ],
         links: [
           {
-            href: "https://maps.google.com/?q=Berlin+Congress+Center",
+            url: "https://maps.google.com/?q=Berlin+Congress+Center",
             label: "Open in Google Maps",
           },
           {
-            href: "https://www.berlincongresscenter.com",
+            url: "https://www.berlincongresscenter.com",
             label: "Location Website",
           },
         ],
@@ -147,7 +147,7 @@ Join us for a day of inspiring talks, hands-on workshops, and networking with de
     ],
     button: {
       label: "See all Events",
-      target: "/#",
+      url: "/#",
     },
   }),
 };

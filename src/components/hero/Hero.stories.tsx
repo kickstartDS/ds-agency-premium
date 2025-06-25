@@ -45,7 +45,7 @@ export const TextBelowImage: Story = {
       {
         label: "Explore further",
         icon: "arrow-down",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -76,12 +76,12 @@ export const TextOnImageWithOverlay: Story = {
       {
         label: "Meet Us",
         icon: "person",
-        target: "#",
+        url: "#",
       },
       {
         label: "Schedule a Meeting",
         icon: "date",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -111,12 +111,12 @@ export const TextBoxOnFullScreen: Story = {
       {
         label: "Discover More",
         icon: "arrow-right",
-        target: "#",
+        url: "#",
       },
       {
         label: "Reach Out",
         icon: "phone",
-        target: "#",
+        url: "#",
       },
     ],
   }),

@@ -62,7 +62,7 @@ export interface ContactProps {
   links?: {
     icon?: string;
     label?: string;
-    href?: string;
+    url?: string;
     newTab?: OpenLinkInNewTab;
     ariaLabel?: AriaLabel;
   }[];

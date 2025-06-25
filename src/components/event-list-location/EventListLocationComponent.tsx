@@ -34,7 +34,7 @@ export const EventListLocationContextDefault = forwardRef<
               <div className="dsa-event-list-location__links">
                 {links.map((link, index) => (
                   <a
-                    href={link.href}
+                    href={link.url}
                     target={link.newTab ? "_blank" : "_self"}
                     className="dsa-event-list-location__link"
                     key={index}

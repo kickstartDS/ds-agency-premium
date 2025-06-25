@@ -48,7 +48,7 @@ export const FeatureContextDefault = forwardRef<
         {cta.style === "intext" && cta.toggle ? (
           <>
             &#32;{" "}
-            <Link href={cta.target}>{cta.label ? cta.label : "See more"}</Link>
+            <Link href={cta.url}>{cta.label ? cta.label : "See more"}</Link>
           </>
         ) : (
           ""
@@ -61,7 +61,7 @@ export const FeatureContextDefault = forwardRef<
     {cta.toggle && (cta.style === "link" || cta.style === "button") && (
       <div className="dsa-feature__cta">
         {cta.style === "link" ? (
-          <Link className="dsa-feature__link" href={cta.target}>
+          <Link className="dsa-feature__link" href={cta.url}>
             {cta.label ? cta.label : "See more"}
             <Icon
               aria-hidden
@@ -74,7 +74,7 @@ export const FeatureContextDefault = forwardRef<
           <Button
             className="dsa-feature__button"
             size="small"
-            target={cta.target}
+            url={cta.url}
             label={cta.label ? cta.label : "See more"}
           />
         ) : (

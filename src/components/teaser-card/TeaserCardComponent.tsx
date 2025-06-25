@@ -27,7 +27,7 @@ export const TeaserCardContextDefault = forwardRef<
       headline,
       text,
       button,
-      target,
+      url,
       image,
       imageRatio = "wide",
       label,
@@ -55,7 +55,7 @@ export const TeaserCardContextDefault = forwardRef<
             hidden: button?.hidden,
             label: button.label,
             variant: "primary",
-            target: target,
+            url: url,
             icon: button?.chevron ? "chevron-right" : undefined,
           }}
           image={image}

@@ -17,7 +17,7 @@ export const Button = forwardRef<
   (
     {
       label,
-      target,
+      url,
       size = "medium",
       variant = "secondary",
       icon,
@@ -30,7 +30,7 @@ export const Button = forwardRef<
     <ButtonContextDefault
       {...props}
       className={classnames("dsa-button", className)}
-      href={target}
+      href={url}
       label={label}
       size={size}
       variant={

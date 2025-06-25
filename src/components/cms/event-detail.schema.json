@@ -61,9 +61,9 @@
           "description": "Label of the button",
           "examples": ["See all Events"]
         },
-        "target": {
+        "url": {
           "type": "string",
-          "title": "Target",
+          "title": "Url",
           "description": "URL the button links to",
           "format": "uri"
         }

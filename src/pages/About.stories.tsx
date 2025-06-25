@@ -31,7 +31,7 @@ const Page = () => (
         buttons={[
           {
             label: "Start here",
-            target: "#starthere",
+            url: "#starthere",
           },
         ]}
         video={{
@@ -71,7 +71,7 @@ We bring you [CMS starter](/starter) to help setup your next professional websit
           {
             icon: "chevron-right",
             label: "Go with a starter",
-            target: "/starter",
+            url: "/starter",
           },
         ]}
       />
@@ -188,7 +188,7 @@ For a more enhanced experience, check out the Premium Experience Demo. It demons
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
         ]}
@@ -209,7 +209,7 @@ For a more enhanced experience, check out the Premium Experience Demo. It demons
       <TeaserCard
         headline="Basic Agency Website Demo"
         text="Compare what the free version, using Open Source components only, can already offer"
-        target={"https://basic.design-system.agency/"}
+        url={"https://basic.design-system.agency/"}
         button={{
           label: "Browse basic Demo",
         }}
@@ -217,7 +217,7 @@ For a more enhanced experience, check out the Premium Experience Demo. It demons
       <TeaserCard
         headline="Premium Content Experience"
         text="Which is enriched with more complex components, based on the kickstartDS Content Module."
-        target={"https://design-system.agency/"}
+        url={"https://design-system.agency/"}
         button={{
           label: "Browse premium Demo",
         }}
@@ -225,7 +225,7 @@ For a more enhanced experience, check out the Premium Experience Demo. It demons
       <TeaserCard
         headline="65+ Examples build on top of 18 components"
         text="Flick through our component collection, switching themes or toggling inverted styles"
-        target={"/components"}
+        url={"/components"}
         button={{
           label: "Browse all Components",
         }}
@@ -233,7 +233,7 @@ For a more enhanced experience, check out the Premium Experience Demo. It demons
       <TeaserCard
         headline="Check out the Storybook"
         text="Browsing our Storybook will allow a look behind the scenes on what the kickstartDS Design System starter has to offer"
-        target={"https://main--64f08cbba622af835d382b4f.chromatic.com/"}
+        url={"https://main--64f08cbba622af835d382b4f.chromatic.com/"}
         button={{
           label: "Explore Storybook",
         }}
@@ -283,12 +283,12 @@ While we've strived to provide a comprehensive demonstration, please bear in min
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}

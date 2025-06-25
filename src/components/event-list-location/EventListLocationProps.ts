@@ -23,7 +23,7 @@ export type Address = string;
  * Links related to the event location
  */
 export type Links = {
-  href: string;
+  url: string;
   label: string;
   /**
    * Open link in a new tab

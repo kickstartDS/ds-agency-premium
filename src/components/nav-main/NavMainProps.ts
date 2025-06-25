@@ -24,9 +24,9 @@ export type ToggleCTA = boolean;
  */
 export type Label = string;
 /**
- * Target that should be linked, makes the button behave like a link semantically
+ * The URL to link to when the button is clicked
  */
-export type Target = string;
+export type URL = string;
 
 export interface NavMainProps {
   /**
@@ -36,11 +36,11 @@ export interface NavMainProps {
   flyoutInverted?: FlyoutInverted;
   dropdownInverted?: DropdownInverted;
   items?: {
-    href: string;
+    url: string;
     label: string;
     active?: boolean;
     items?: {
-      href?: string;
+      url?: string;
       label?: string;
       active?: boolean;
     }[];
@@ -53,5 +53,5 @@ export interface NavMainProps {
 export interface CTA {
   toggle?: ToggleCTA;
   label?: Label;
-  target?: Target;
+  url?: URL;
 }

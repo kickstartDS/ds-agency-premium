@@ -20,7 +20,7 @@ export const NavTopbarContextDefault = forwardRef<
       ref={ref}
     >
       <ul className="dsa-nav-topbar__list">
-        {items.map(({ label, href, active, items: subItems }) => {
+        {items.map(({ label, url, active, items: subItems }) => {
           return (
             <li
               className={classnames(
@@ -28,7 +28,7 @@ export const NavTopbarContextDefault = forwardRef<
                 active && "dsa-nav-topbar__item--active",
                 subItems?.length && "dsa-nav-topbar__item--dropdown"
               )}
-              key={href}
+              key={url}
             >
               {subItems?.length ? (
                 <span className="dsa-nav-topbar__label">
@@ -47,7 +47,7 @@ export const NavTopbarContextDefault = forwardRef<
                 </span>
               ) : (
                 <Link
-                  href={href}
+                  href={url}
                   className={`dsa-nav-topbar__label dsa-nav-topbar__link`}
                 >
                   {label}

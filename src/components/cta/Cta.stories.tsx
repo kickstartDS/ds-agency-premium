@@ -35,12 +35,12 @@ export const Banner: Story = {
     buttons: [
       {
         label: "Contact Us",
-        target: "#",
+        url: "#",
         icon: "person",
       },
       {
         label: "Learn More",
-        target: "#",
+        url: "#",
         icon: "date",
       },
     ],
@@ -63,7 +63,7 @@ export const Highlighted: Story = {
     buttons: [
       {
         label: "Get Started",
-        target: "#",
+        url: "#",
         icon: "person",
       },
     ],
@@ -84,7 +84,7 @@ export const LeftAligned: Story = {
     buttons: [
       {
         label: "Learn More",
-        target: "#",
+        url: "#",
         icon: "person",
       },
     ],
@@ -116,12 +116,12 @@ export const ProductAdvertisement: Story = {
     buttons: [
       {
         label: "Shop Now",
-        target: "/shop",
+        url: "/shop",
         icon: "chevron-right",
       },
       {
         label: "Learn More",
-        target: "/product-info",
+        url: "/product-info",
       },
     ],
   }),
@@ -150,12 +150,12 @@ export const ContactBanner: Story = {
       {
         label: "Contact us",
         icon: "person",
-        target: "#",
+        url: "#",
       },
       {
         label: "Book a meeting",
         icon: "date",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -185,7 +185,7 @@ export const SplitBanner: Story = {
       {
         label: "What can we do for you?",
         icon: "person",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -215,12 +215,12 @@ This tool accelerates our development, saving you valuable time and helping us d
       {
         label: "Contact us",
         icon: "person",
-        target: "#",
+        url: "#",
       },
       {
         label: "Book a meeting",
         icon: "date",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -243,11 +243,11 @@ export const ColoredBanner: Story = {
     buttons: [
       {
         label: "Learn More",
-        target: "#",
+        url: "#",
       },
       {
         label: "Contact Us",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -277,9 +277,9 @@ We understand that every business is different, and that's why we offer custom s
       {
         label: "Contact us",
         icon: "person",
-        target: "#",
+        url: "#",
       },
-      { label: "Book a meeting", icon: "date", target: "#" },
+      { label: "Book a meeting", icon: "date", url: "#" },
     ],
   }),
 };

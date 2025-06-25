@@ -26,7 +26,7 @@ export const FooterContextDefault = forwardRef<
               <Link
                 {...linkProps}
                 className="dsa-footer__link"
-                key={linkProps.href + label}
+                key={linkProps.url + label}
               >
                 {label}
               </Link>

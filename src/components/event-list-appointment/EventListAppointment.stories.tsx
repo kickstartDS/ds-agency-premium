@@ -29,7 +29,7 @@ export const Default: Story = {
     date: "2025-09-18",
     time: "09:00 – 17:00",
     label: "Register",
-    href: "#",
+    url: "#",
     ariaLabel:
       "Register for the event on 18th September 2025 from 09:00 to 17:00",
   }),

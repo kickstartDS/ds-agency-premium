@@ -53,7 +53,7 @@ export interface BlogAuthorProps {
   links?: {
     icon?: string;
     label?: string;
-    href?: string;
+    url?: string;
     newTab?: OpenLinkInNewTab;
     ariaLabel?: AriaLabel;
   }[];
