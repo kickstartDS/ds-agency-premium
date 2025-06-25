@@ -30,7 +30,7 @@ export type OpenInNewTab = boolean;
  */
 export type AriaLabel = string;
 
-export interface EventListAppointmentProps {
+export interface EventAppointmentProps {
   date?: Date;
   time?: Time;
   label?: CTALabel;

@@ -2,12 +2,12 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { EventListAppointment } from "./EventListAppointmentComponent";
-import schema from "./event-list-appointment.schema.dereffed.json";
+import { EventAppointment } from "./EventAppointmentComponent";
+import schema from "./event-appointment.schema.dereffed.json";
 
-const meta: Meta<typeof EventListAppointment> = {
-  title: "Event/ Event List Appointment",
-  component: EventListAppointment,
+const meta: Meta<typeof EventAppointment> = {
+  title: "Event/ Event Appointment",
+  component: EventAppointment,
   parameters: {
     jsonschema: { schema },
   },
@@ -16,7 +16,7 @@ const meta: Meta<typeof EventListAppointment> = {
 
 export default meta;
 
-type Story = StoryObj<typeof EventListAppointment>;
+type Story = StoryObj<typeof EventAppointment>;
 
 export const Default: Story = {
   parameters: {

@@ -41,7 +41,7 @@ export type ARIALabel = string;
 /**
  * Display an event teaser with date, title and location
  */
-export interface EventTeaserProps {
+export interface EventLatestTeaserProps {
   date: Date;
   calendar?: Calendar;
   title: Headline;

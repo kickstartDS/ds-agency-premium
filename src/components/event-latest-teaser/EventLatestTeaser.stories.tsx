@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { EventTeaser } from "./EventTeaserComponent";
-import schema from "./event-teaser.schema.dereffed.json";
-import customProperties from "./event-teaser-tokens.json";
+import { EventLatestTeaser } from "./EventLatestTeaserComponent";
+import schema from "./event-latest-teaser.schema.dereffed.json";
+import customProperties from "./event-latest-teaser-tokens.json";
 
-const meta: Meta<typeof EventTeaser> = {
-  title: "Event/ Event Teaser",
-  component: EventTeaser,
+const meta: Meta<typeof EventLatestTeaser> = {
+  title: "Event/ Event Latest Teaser",
+  component: EventLatestTeaser,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -18,7 +18,7 @@ const meta: Meta<typeof EventTeaser> = {
 
 export default meta;
 
-type Story = StoryObj<typeof EventTeaser>;
+type Story = StoryObj<typeof EventLatestTeaser>;
 
 export const Default: Story = {
   parameters: {

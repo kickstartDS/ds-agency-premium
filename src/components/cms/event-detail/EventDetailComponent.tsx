@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from "react";
 import { EventDetailProps } from "../EventDetailProps";
 import { RichText } from "@kickstartds/base/lib/rich-text";
-import { EventListLocation } from "../../event-list-location/EventListLocationComponent";
+import { EventLocation } from "../../event-location/EventLocationComponent";
 import { Section } from "../../section/SectionComponent";
 import { EventHeader } from "../../event-header/EventHeaderComponent";
 import { Gallery } from "../../gallery/GalleryComponent";
@@ -32,7 +32,7 @@ export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
           className="dsa-event__locations-headline"
         />
         {locations.map((appointment, index) => (
-          <EventListLocation key={index} {...appointment} />
+          <EventLocation key={index} {...appointment} />
         ))}
       </Section>
     )}

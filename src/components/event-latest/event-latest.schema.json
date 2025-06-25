@@ -24,7 +24,7 @@
       "description": "List of events to display",
       "type": "array",
       "items": {
-        "$ref": "http://schema.mydesignsystem.com/event-teaser.schema.json"
+        "$ref": "http://schema.mydesignsystem.com/event-latest-teaser.schema.json"
       },
       "minItems": 1,
       "examples": [

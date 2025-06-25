@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.mydesignsystem.com/event-teaser.schema.json",
-  "title": "Event Teaser",
+  "$id": "http://schema.mydesignsystem.com/event-latest-teaser.schema.json",
+  "title": "Event Latest Teaser",
   "description": "Display an event teaser with date, title and location",
   "type": "object",
   "properties": {

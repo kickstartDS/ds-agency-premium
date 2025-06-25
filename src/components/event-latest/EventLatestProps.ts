@@ -5,7 +5,7 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-import type {EventTeaserProps} from "../event-teaser/EventTeaserProps";
+import type {EventLatestTeaserProps} from "../event-latest-teaser/EventLatestTeaserProps";
 
 /**
  * Headline for the listing
@@ -20,7 +20,7 @@ export type Text = string;
  *
  * @minItems 1
  */
-export type Events = [EventTeaserProps, ...EventTeaserProps[]];
+export type Events = [EventLatestTeaserProps, ...EventLatestTeaserProps[]];
 /**
  * The to link
  */

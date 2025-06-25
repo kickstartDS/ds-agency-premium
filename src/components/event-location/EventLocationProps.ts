@@ -5,12 +5,12 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-import type {EventListAppointmentProps} from "../event-list-appointment/EventListAppointmentProps";
+import type {EventAppointmentProps} from "../event-appointment/EventAppointmentProps";
 
 /**
  * List of dates of the event
  */
-export type Dates = EventListAppointmentProps[];
+export type Dates = EventAppointmentProps[];
 /**
  * Name of the event location
  */
@@ -31,7 +31,7 @@ export type Links = {
   newTab?: boolean;
 }[];
 
-export interface EventListLocationProps {
+export interface EventLocationProps {
   dates?: Dates;
   locationName?: LocationName;
   address?: Address;

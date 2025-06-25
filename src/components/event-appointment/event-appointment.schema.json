@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.mydesignsystem.com/event-list-appointment.schema.json",
-  "title": "Event List Appointment",
+  "$id": "http://schema.mydesignsystem.com/event-appointment.schema.json",
+  "title": "Event Appointment",
   "type": "object",
   "properties": {
     "date": {

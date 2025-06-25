@@ -35,7 +35,7 @@
       "description": "List of locations with attendable appointments",
       "type": "array",
       "items": {
-        "$ref": "http://schema.mydesignsystem.com/event-list-location.schema.json"
+        "$ref": "http://schema.mydesignsystem.com/event-location.schema.json"
       }
     },
     "downloads": {
