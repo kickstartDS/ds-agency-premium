@@ -10,6 +10,14 @@
  */
 export type Date = string;
 /**
+ * The month of the event
+ */
+export type Month = string;
+/**
+ * The day of the event
+ */
+export type Day = string;
+/**
  * Title of the event
  */
 export type Headline = string;
@@ -22,24 +30,31 @@ export type Location = string;
  */
 export type URL = string;
 /**
- * The text for the link
+ * Text for the call to action
  */
-export type Text = string;
+export type CallToAction = string;
+/**
+ * ARIA label for accessibility
+ */
+export type ARIALabel = string;
 
 /**
- * Display an event teaser with date, headline and location
+ * Display an event teaser with date, title and location
  */
 export interface EventTeaserProps {
   date: Date;
-  headline: Headline;
+  calendar?: Calendar;
+  title: Headline;
   location: Location;
-  link?: Link;
+  url?: URL;
+  cta?: CallToAction;
+  ariaLabel?: ARIALabel;
   className?: string;
 }
 /**
- * URL and label for the event linked
+ * Calendar icon to display the date
  */
-export interface Link {
-  url: URL;
-  text?: Text;
+export interface Calendar {
+  month?: Month;
+  day?: Day;
 }

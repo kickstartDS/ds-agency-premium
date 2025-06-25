@@ -28,9 +28,9 @@ export const Default: Story = {
     },
   },
   args: pack({
-    date: "12/30/2022",
+    date: "12/30/2025",
     location: "Berlin, Germany",
-    headline: "The Future of AI",
+    title: "The Future of AI",
     link: {
       url: "#",
       text: "Show event",
