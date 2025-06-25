@@ -8,42 +8,16 @@
 import type {EventLatestTeaserProps} from "../event-latest-teaser/EventLatestTeaserProps";
 
 /**
- * Headline for the listing
- */
-export type Headline = string;
-/**
- * Additional text shown below the headline
- */
-export type Text = string;
-/**
  * List of events to display
  *
  * @minItems 1
  */
 export type Events = [EventLatestTeaserProps, ...EventLatestTeaserProps[]];
-/**
- * The to link
- */
-export type URL = string;
-/**
- * The text for the link
- */
-export type Text1 = string;
 
 /**
  * Display a list of latest events, ordered chronologically
  */
 export interface EventLatestProps {
-  headline?: Headline;
-  text?: Text;
   events?: Events;
-  link?: Link;
   className?: string;
-}
-/**
- * Link shown below the listing
- */
-export interface Link {
-  url: URL;
-  text?: Text1;
 }

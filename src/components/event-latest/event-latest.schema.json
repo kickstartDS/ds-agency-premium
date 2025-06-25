@@ -5,20 +5,6 @@
   "description": "Display a list of latest events, ordered chronologically",
   "type": "object",
   "properties": {
-    "headline": {
-      "title": "Headline",
-      "description": "Headline for the listing",
-      "type": "string",
-      "format": "markdown",
-      "examples": ["Latest Events"]
-    },
-    "text": {
-      "title": "Text",
-      "description": "Additional text shown below the headline",
-      "type": "string",
-      "format": "markdown",
-      "examples": ["Our next upcoming events"]
-    },
     "events": {
       "title": "Events",
       "description": "List of events to display",
@@ -50,29 +36,7 @@
         ]
       ]
     },
-    "link": {
-      "type": "object",
-      "title": "Link",
-      "description": "Link shown below the listing",
-      "properties": {
-        "url": {
-          "title": "URL",
-          "description": "The to link",
-          "type": "string",
-          "format": "uri",
-          "examples": ["https://example.com"]
-        },
-        "text": {
-          "title": "Text",
-          "description": "The text for the link",
-          "type": "string",
-          "default": "Show all events",
-          "examples": ["Show all events"]
-        }
-      },
-      "additionalProperties": false,
-      "required": ["url"]
-    },
+
     "className": {
       "type": "string"
     }

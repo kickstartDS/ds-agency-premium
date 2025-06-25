@@ -28,31 +28,57 @@ export const Default: Story = {
     },
   },
   args: pack({
-    headline: "Latest events",
-    text: "Check out our upcoming events and mark your calendar!",
     events: [
       {
-        date: "12/30/2022",
-        headline: "Event 1",
-        location: "Location 1",
-        link: {
-          url: "https://example.com/event1",
-          text: "Show event 1",
+        date: "09/18/2025",
+        title: "Systemics Design Conference",
+        location: "Berlin Congress Center, Berlin",
+        url: "https://systemics.events/conference-berlin",
+        cta: "View event",
+        calendar: {
+          day: "18",
+          month: "Sep",
         },
+        ariaLabel:
+          "Systemics Design Conference on September 18, 2025 in Berlin",
       },
       {
-        date: "01/15/2023",
-        headline: "Event 2",
-        location: "Location 2",
-        link: {
-          url: "https://example.com/event2",
-          text: "Show event 2",
+        date: "10/05/2025",
+        title: "UX Leadership Summit",
+        location: "Köln Messe, Cologne",
+        url: "https://uxsummit.de/koeln-2025",
+        cta: "View event",
+        calendar: {
+          day: "05",
+          month: "Oct",
         },
+        ariaLabel: "UX Leadership Summit on October 5, 2025 in Cologne",
+      },
+      {
+        date: "11/12/2025",
+        title: "Frontend Future Days",
+        location: "Hamburg Digital Campus, Hamburg",
+        url: "https://frontendfuture.de/hamburg",
+        cta: "View event",
+        calendar: {
+          day: "12",
+          month: "Nov",
+        },
+        ariaLabel: "Frontend Future Days on November 12, 2025 in Hamburg",
+      },
+      {
+        date: "12/01/2025",
+        title: "Accessibility in Practice Workshop",
+        location: "Online",
+        url: "https://a11yworkshop.com/dec-2025",
+        cta: "View event",
+        calendar: {
+          day: "01",
+          month: "Dec",
+        },
+        ariaLabel:
+          "Accessibility in Practice Workshop on December 1, 2025 online",
       },
     ],
-    link: {
-      url: "#",
-      text: "Show event",
-    },
   }),
 };

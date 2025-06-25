@@ -1,21 +1,19 @@
-import classnames from "classnames";
 import { forwardRef, createContext, useContext, HTMLAttributes } from "react";
 import { EventLatestProps } from "./EventLatestProps";
 import "./event-latest.scss";
+import { EventLatestTeaser } from "../event-latest-teaser/EventLatestTeaserComponent";
 
 export type { EventLatestProps };
 
 export const EventLatestContextDefault = forwardRef<
   HTMLDivElement,
   EventLatestProps & HTMLAttributes<HTMLDivElement>
->(({ headline, text, link, events, className, ...rest }, ref) => {
+>(({ events }, ref) => {
   return (
-    <div
-      className={classnames(className, "dsa-event-latest")}
-      {...rest}
-      ref={ref}
-    >
-      {JSON.stringify({ headline, text, link, events, rest })}
+    <div className="dsa-event-latest" ref={ref}>
+      {events.map((event, index) => (
+        <EventLatestTeaser key={index} {...event} />
+      ))}
     </div>
   );
 });
