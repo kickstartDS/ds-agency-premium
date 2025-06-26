@@ -4,6 +4,7 @@ import { Icon } from "@kickstartds/base/lib/icon";
 import { Button } from "../button/ButtonComponent";
 import { FeatureProps } from "./FeatureProps";
 import { Link } from "@kickstartds/base/lib/link";
+import { RichText } from "@kickstartds/base/lib/rich-text";
 
 export type { FeatureProps };
 
@@ -51,8 +52,8 @@ export const FeatureContextDefault = forwardRef<
         <span className="dsa-feature__title">{title}</span>
       </div>
       {text || ctaStyle === "intext" ? (
-        <p className="dsa-feature__text">
-          {text}
+        <div className="dsa-feature__text">
+          <RichText text={text} />
           {ctaStyle === "intext" && toggle ? (
             <>
               &#32; <Link href={target}>{label ? label : "See more"}</Link>
@@ -60,7 +61,7 @@ export const FeatureContextDefault = forwardRef<
           ) : (
             ""
           )}
-        </p>
+        </div>
       ) : (
         ""
       )}
