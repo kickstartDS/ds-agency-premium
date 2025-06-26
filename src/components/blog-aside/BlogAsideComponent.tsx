@@ -17,7 +17,7 @@ export const BlogAsideContextDefault = forwardRef<
   const socialLinks = socialSharing?.map((link) => {
     return {
       icon: link.icon,
-      href: link.href,
+      url: link.url,
       title: link.title,
     };
   });

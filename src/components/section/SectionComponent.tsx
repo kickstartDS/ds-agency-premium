@@ -33,6 +33,7 @@ export const SectionContextDefault = forwardRef<
       style = "default",
       spotlight = false,
       backgroundColor = "default",
+      transition,
       backgroundImage,
       spaceBefore = "default",
       spaceAfter = "default",
@@ -74,11 +75,22 @@ export const SectionContextDefault = forwardRef<
                 ? "anchor-glow"
                 : style
             }`,
+          transition &&
+            transition !== "none" &&
+            `dsa-section--transition-${transition}`,
           headerSpacing && "dsa-section--header-spacing",
           spotlight && "dsa-section--spotlight",
           className
         )}
-        background={backgroundColor}
+        background={
+          backgroundColor === "default"
+            ? "default"
+            : backgroundColor === "accent"
+            ? "accent"
+            : backgroundColor === "bold"
+            ? "bold"
+            : undefined
+        }
         backgroundImage={backgroundImage}
         content={content}
         headline={{
@@ -97,7 +109,7 @@ export const SectionContextDefault = forwardRef<
         width={width}
         spaceBefore={spaceBefore}
         spaceAfter={spaceAfter}
-        inverted={inverted}
+        inverted={style === "colorful" ? true : inverted}
         ref={ref}
       >
         {props.children}

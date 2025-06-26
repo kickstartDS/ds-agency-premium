@@ -1,4 +1,4 @@
-@import "./features-tokens.scss";
+@import "features-tokens.scss";
 
 .dsa-features {
   gap: var(--dsa-features--gap-vertical, var(--ks-spacing-stack-l))
@@ -31,6 +31,10 @@
   }
 
   .dsa-feature {
+    --dsa-feature_large__icon--size: calc(
+      var(--dsa-feature_small__icon--size) * var(--dsa-feature_large__icon--size-multiplier)
+    );
+
     display: flex;
     position: relative;
     flex-direction: column;
@@ -59,6 +63,10 @@
         top: 0;
         left: 0;
       }
+    }
+
+    &--beside.dsa-feature--large {
+      padding-top: calc((var(--dsa-feature__icon--size) / 2) - (var(--dsa-feature_small__icon--size) / 2));
     }
 
     &--stack {

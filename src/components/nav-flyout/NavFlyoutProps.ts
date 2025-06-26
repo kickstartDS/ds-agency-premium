@@ -14,11 +14,11 @@ export type FlyoutInverted = boolean;
 
 export interface NavFlyoutProps {
   items?: {
-    href: string;
+    url: string;
     label: string;
     active?: boolean;
     items?: {
-      href?: string;
+      url?: string;
       label?: string;
       active?: boolean;
     }[];

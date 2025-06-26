@@ -22,27 +22,27 @@ export const HeaderContextDefault = forwardRef<
     },
     ref
   ) => (
-    <header
-      className={classnames(
-        "dsa-header",
-        floating ? `dsa-header--floating` : ""
-      )}
-      ks-inverted={inverted.toString()}
-      ref={ref}
-    >
-      <div className="dsa-header__content">
-        <Logo {...logo} className="dsa-header__logo" inverted={inverted} />
-        <NavMain
-          flyoutInverted={flyoutInverted}
-          dropdownInverted={dropdownInverted}
-          items={navItems}
-          logo={{
-            ...logo,
-            inverted: flyoutInverted,
-          }}
-        />
-      </div>
-    </header>
+    <>
+      <header
+        className={classnames("dsa-header", floating && `dsa-header--floating`)}
+        ks-inverted={inverted.toString()}
+        ref={ref}
+      >
+        <div className="dsa-header__content">
+          <Logo {...logo} className="dsa-header__logo" inverted={inverted} />
+          <NavMain
+            flyoutInverted={flyoutInverted}
+            dropdownInverted={dropdownInverted}
+            items={navItems}
+            logo={{
+              ...logo,
+              inverted: flyoutInverted,
+            }}
+          />
+        </div>
+      </header>
+      {floating && <div className="dsa-header--overlay" />}
+    </>
   )
 );
 

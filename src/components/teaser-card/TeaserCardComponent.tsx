@@ -27,7 +27,7 @@ export const TeaserCardContextDefault = forwardRef<
       headline,
       text,
       button,
-      target,
+      url,
       image,
       imageRatio = "wide",
       label,
@@ -37,37 +37,31 @@ export const TeaserCardContextDefault = forwardRef<
     ref
   ) => (
     <Container name="teaser-card">
-      <TeaserBoxContextDefault
-        {...rest}
+      <div
         className={classnames(
           `dsa-teaser-card`,
-          label && `dsa-teaser-card--label`,
           `dsa-teaser-card--${layout}`,
           `dsa-teaser-card--${imageRatio}`
         )}
-        topic={headline}
-        text={text}
-        // @ts-expect-error
-        renderTopic={() => (
-          <>
-            {label ? (
-              <span className="dsa-teaser-card__label">{label}</span>
-            ) : (
-              ""
-            )}
-            {compiler(headline)}
-          </>
-        )}
-        link={{
-          hidden: button?.hidden,
-          label: button.label,
-          variant: "secondary",
-          target: target,
-          icon: button?.chevron ? "chevron-right" : undefined,
-        }}
-        image={image}
-        ref={ref}
-      />
+      >
+        {label && <span className="dsa-teaser-card__label">{label}</span>}
+        <TeaserBoxContextDefault
+          {...rest}
+          topic={headline}
+          text={text}
+          // @ts-expect-error
+          renderTopic={() => <>{compiler(headline)}</>}
+          link={{
+            hidden: button?.hidden,
+            label: button.label,
+            variant: "primary",
+            url: url,
+            icon: button?.chevron ? "chevron-right" : undefined,
+          }}
+          image={image}
+          ref={ref}
+        />
+      </div>
     </Container>
   )
 );

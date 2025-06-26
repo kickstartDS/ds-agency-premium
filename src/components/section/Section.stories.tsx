@@ -24,7 +24,7 @@ const meta: Meta = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -35,7 +35,7 @@ const meta: Meta = {
         headline="Speed and Scale"
         label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -47,7 +47,7 @@ const meta: Meta = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -100,7 +100,7 @@ export const Slider: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -111,7 +111,7 @@ export const Slider: Story = {
         headline="Speed and Scale"
         label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -123,7 +123,7 @@ export const Slider: Story = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -134,7 +134,7 @@ export const Slider: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -145,7 +145,7 @@ export const Slider: Story = {
         headline="Speed and Scale"
         label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -157,7 +157,7 @@ export const Slider: Story = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -168,7 +168,7 @@ export const Slider: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -179,7 +179,7 @@ export const Slider: Story = {
         headline="Speed and Scale"
         label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -191,7 +191,7 @@ export const Slider: Story = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -202,7 +202,7 @@ export const Slider: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -213,7 +213,7 @@ export const Slider: Story = {
         headline="Speed and Scale"
         label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -225,7 +225,7 @@ export const Slider: Story = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -440,7 +440,7 @@ export const TileLayout: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -451,7 +451,7 @@ export const TileLayout: Story = {
         headline="Speed and Scale"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
         image="/img/showcases/comp_audio01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -487,7 +487,7 @@ export const FlexLayout: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -498,7 +498,7 @@ export const FlexLayout: Story = {
         headline="Speed and Scale"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
         image="/img/showcases/comp_audio01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,

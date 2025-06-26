@@ -157,12 +157,12 @@ export const BlogOverview: Story = {
         {
           label: "Contact us",
           icon: "person",
-          target: "#",
+          url: "#",
         },
         {
           label: "Book a meeting",
           icon: "date",
-          target: "#",
+          url: "#",
         },
       ],
       image: {

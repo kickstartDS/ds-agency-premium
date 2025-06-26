@@ -22,7 +22,7 @@ const meta: Meta = {
         layout="row"
         headline="Transformation Love Story"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "View page",
           hidden: true,
@@ -34,7 +34,7 @@ const meta: Meta = {
         layout="row"
         headline="Speed and Scale"
         image="/img/showcases/comp_audio01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "View page",
           hidden: true,
@@ -46,7 +46,7 @@ const meta: Meta = {
         layout="row"
         headline="Saving Time and Money"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "View page",
           hidden: true,

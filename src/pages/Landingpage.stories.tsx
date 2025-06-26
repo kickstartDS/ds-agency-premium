@@ -13,22 +13,22 @@ import { ImageText } from "../components/image-text/ImageTextComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating flyoutInverted />
+    <Header {...headerProps} floating />
 
-    <Section spaceBefore="none" spaceAfter="none" width="full">
+    <Section inverted spaceBefore="none" spaceAfter="none" width="full">
       <VideoCurtain
         buttons={[
           {
             icon: "chevron-down",
             label: "What can we do for you?",
-            target: "#startit",
+            url: "#startit",
           },
         ]}
         headline="Simplify the process of building your Design System"
         overlay
         sub="With your headless experts"
         text="Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture."
-        textPosition="center"
+        textPosition="corner"
         video={{
           srcDesktop: "/img/videos/video-agency.mp4",
           srcMobile: "/img/videos/video-agency.mp4",
@@ -78,14 +78,14 @@ We empower your digital teams with the knowledge and skills to manage and evolve
           {
             label: "Reach out today!",
             icon: "chevron-right",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
           },
         ]}
       />
     </Section>
 
     <Section
-      style="accentTransition"
+      transition="to-accent"
       headline={{
         text: "No Agency site without some shiny happy Customer",
         sub: "AI-generated smiles, as you see them everywhere nowadays",
@@ -131,7 +131,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
 
     <Section
       backgroundColor="accent"
-      style="boldTransition"
+      transition="to-bold"
       width="wide"
       headline={{
         text: "Happy Customers Showcases",
@@ -139,7 +139,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       }}
     >
       <TeaserCard
-        target="/showcase-techfusion_paid"
+        url="/showcase-techfusion_paid"
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
@@ -149,7 +149,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         }}
       />
       <TeaserCard
-        target="/showcase-launchpad_paid"
+        url="/showcase-launchpad_paid"
         headline="Speed and Scale"
         label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
@@ -160,7 +160,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         }}
       />
       <TeaserCard
-        target="/showcase-eco_paid"
+        url="/showcase-eco_paid"
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
@@ -174,7 +174,6 @@ We empower your digital teams with the knowledge and skills to manage and evolve
     <Section backgroundColor="bold" width="full">
       <Cta
         headline="Get in touch and chat with us about getting your product or platform to market faster"
-        fullWidth
         backgroundImage="/img/bg/bg_dot-carpet-blue.svg"
         image={{
           src: "/img/contact-person.png",
@@ -183,12 +182,12 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}
@@ -294,9 +293,8 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       />
     </Section>
 
-    <Section style="anchorGlow" width="wide">
+    <Section width="wide">
       <Cta
-        fullWidth
         highlightText
         textAlign="center"
         headline="Ready to embark on a transformative digital journey?"
@@ -304,12 +302,12 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}

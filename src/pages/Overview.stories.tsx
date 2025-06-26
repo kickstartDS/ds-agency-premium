@@ -36,7 +36,7 @@ const Page = () => (
     </Section>
 
     <Section
-      style="accentTransition"
+      transition="to-accent"
       spaceBefore="small"
       spaceAfter="none"
       width="max"
@@ -57,7 +57,7 @@ const Page = () => (
               label: "See showcase",
               icon: "chevron-right",
               toggle: true,
-              target: "/showcase-techfusion",
+              url: "/showcase-techfusion",
             },
           },
           {
@@ -73,7 +73,7 @@ const Page = () => (
               label: "See showcase",
               icon: "chevron-right",
               toggle: true,
-              target: "/showcase-launchpad",
+              url: "/showcase-launchpad",
             },
           },
           {
@@ -86,7 +86,7 @@ const Page = () => (
             backgroundColor: "#21331E",
             backgroundImage: "img/showcases/eco_bg.png",
             button: {
-              target: "/showcase-eco",
+              url: "/showcase-eco",
               label: "See showcase",
               icon: "chevron-right",
               toggle: true,
@@ -100,11 +100,9 @@ const Page = () => (
       spaceBefore="small"
       spaceAfter="none"
       backgroundColor="accent"
-      style="anchorGlow"
       width="wide"
     >
       <Cta
-        fullWidth
         textAlign="center"
         highlightText
         headline="Ready to embark on a transformative digital journey?"
@@ -112,12 +110,12 @@ const Page = () => (
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}

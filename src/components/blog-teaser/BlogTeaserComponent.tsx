@@ -58,15 +58,11 @@ export const BlogTeaserContextDefault = forwardRef<
               : undefined,
             items: teaserMetaItems,
           }}
-          link={
-            link
-              ? {
-                  // @ts-expect-error
-                  target: link.url,
-                  label: link.text || "Read article",
-                }
-              : undefined
-          }
+          link={{
+            //@ts-expect-error
+            url: link.url,
+            label: link?.text || "Read article",
+          }}
           title={headline}
           body={teaserText}
           categories={tags.map((tag) => {
