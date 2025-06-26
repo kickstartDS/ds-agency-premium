@@ -1,3 +1,15 @@
+# v1.6.68 (Thu Jun 26 2025)
+
+#### ⚠️ Pushed to `main`
+
+- fix: mixed string and integer content in stats ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
 # v1.6.67 (Wed Feb 05 2025)
 
 #### ⚠️ Pushed to `main`
