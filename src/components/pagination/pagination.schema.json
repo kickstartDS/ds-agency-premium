@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/pagination.schema.json",
+  "title": "Pagination",
+  "type": "object",
+  "properties": {
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The URL to the page"
+          },
+          "active": {
+            "type": "boolean",
+            "description": "Indicates if the page is currently active",
+            "default": false
+          }
+        },
+        "required": ["url"]
+      }
+    }
+  },
+  "additionalProperties": false
+}
