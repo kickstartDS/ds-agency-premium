@@ -24,7 +24,7 @@ export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
       <EventHeader title={title} categories={categories} intro={intro} />
     </Section>
     {locations && locations.length > 0 && (
-      <Section width="narrow" content={{ mode: "list", gutter: "none" }}>
+      <Section width="default" content={{ mode: "list", gutter: "none" }}>
         <Headline
           text="Locations"
           level="h3"

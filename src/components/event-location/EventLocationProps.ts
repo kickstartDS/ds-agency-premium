@@ -16,6 +16,10 @@ export type Dates = EventAppointmentProps[];
  */
 export type LocationName = string;
 /**
+ * Spacious is recommended for 1-2 appointments, Compact for more than 2.
+ */
+export type DisplayMode = "spacious" | "compact";
+/**
  * Address of the appointment
  */
 export type Address = string;
@@ -34,6 +38,7 @@ export type Links = {
 export interface EventLocationProps {
   dates?: Dates;
   locationName?: LocationName;
+  displayMode?: DisplayMode;
   address?: Address;
   links?: Links;
 }

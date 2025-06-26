@@ -1,26 +1,35 @@
+import classnames from "classnames";
 import { createContext, forwardRef, useContext } from "react";
 import { EventLocationProps } from "./EventLocationProps";
 import "./event-location.scss";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Icon } from "@kickstartds/base/lib/icon";
 import { EventAppointment } from "../event-appointment/EventAppointmentComponent";
+import { Container } from "@kickstartds/core/lib/container";
 
 export type { EventLocationProps };
 
 export const EventLocationContextDefault = forwardRef<
   HTMLDivElement,
   EventLocationProps
->(({ locationName, address, dates, links, ...rest }, ref) => (
-  <div className="dsa-event-location" {...rest} ref={ref}>
-    {address && (
-      <div className="dsa-event-location__row">
-        <div className="dsa-event-location__item ">
+>(({ locationName, address, dates, links, displayMode, ...rest }, ref) => (
+  <Container name="event-location">
+    <div
+      className={classnames(
+        "dsa-event-location",
+        displayMode === "spacious" && `dsa-event-location--spacious`
+      )}
+      {...rest}
+      ref={ref}
+    >
+      {address && (
+        <div className="dsa-event-location__info ">
           <Icon
             className="dsa-event-location__icon"
             icon={"map-pin"}
             aria-hidden
           />
-          <div className="dsa-event-location__content">
+          <div className="dsa-event-location__text">
             <span className="sr-only">Address:</span>
             <address className="dsa-event-location__address">
               {locationName && (
@@ -44,17 +53,17 @@ export const EventLocationContextDefault = forwardRef<
             )}
           </div>
         </div>
-      </div>
-    )}
-    {dates && dates.length > 0 && (
-      <div className="dsa-event-location__appointments">
-        <span className="sr-only">Appointments:</span>
-        {dates.map((item, index) => (
-          <EventAppointment {...item} key={index} />
-        ))}
-      </div>
-    )}
-  </div>
+      )}
+      {dates && dates.length > 0 && (
+        <div className="dsa-event-location__appointments">
+          <span className="sr-only">Appointments:</span>
+          {dates.map((item, index) => (
+            <EventAppointment {...item} key={index} />
+          ))}
+        </div>
+      )}
+    </div>
+  </Container>
 ));
 
 export const EventLocationContext = createContext(EventLocationContextDefault);

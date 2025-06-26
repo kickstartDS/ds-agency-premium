@@ -12,7 +12,10 @@
   gap: var(--ks-spacing-inline-s);
   padding: var(--ks-spacing-inset-s);
   border: var(--ks-border-width-default) solid var(--ks-border-color-interface-interactive);
-  flex-grow: 0;
+  height: fit-content;
+
+  // Inherit font size from parent to allow grid column sizing in em units
+  font: inherit;
 
   &:hover {
     border-color: var(--ks-border-color-interface-interactive-hover);
@@ -21,9 +24,17 @@
   &__info {
     display: flex;
     gap: var(--ks-spacing-xxs);
-    font: var(--ks-font-interface-s);
     text-decoration: none;
     align-items: center;
+
+    &--date {
+      font-weight: var(--ks-font-weight-semi-bold);
+      color: var(--ks-text-color-display);
+    }
+
+    &--time {
+      font-weight: var(--ks-font-weight-regular);
+    }
   }
 
   &__infos {

@@ -33,9 +33,10 @@ export const EventDetail: Story = {
       "A full-day event for design system professionals and enthusiasts. Join us to learn, share, and connect with like-minded individuals.",
     locations: [
       {
-        locationName: `Berlin Congress Center`,
-        address: `Alexanderplatz 1<br />
-      10178 Berlin`,
+        displayMode: "compact",
+        locationName: `Köln Messe`,
+        address: `Messeplatz 1<br />
+      50679 Köln`,
         links: [
           {
             url: "https://maps.google.com/?q=Berlin+Congress+Center",
@@ -59,13 +60,30 @@ export const EventDetail: Story = {
             ariaLabel:
               "Register for the event on 18th September 2025 from 09:00 to 17:00",
           },
+          {
+            date: "2025-09-18",
+            time: "09:00 – 17:00",
+            label: "Register",
+            url: "#",
+            ariaLabel:
+              "Register for the event on 18th September 2025 from 09:00 to 17:00",
+          },
         ],
       },
       {
-        locationName: `Köln Messe`,
-        address: `Messeplatz 1<br />
-      50679 Köln`,
+        displayMode: "compact",
+        locationName: `Berlin Congress Center (BCC) Redaktion & Event GmbH & Co. KG`,
+        address: `Alexanderplatz 1<br />
+      10178 Berlin`,
         dates: [
+          {
+            date: "2025-09-18",
+            time: "09:00 – 17:00",
+            label: "Register",
+            url: "#",
+            ariaLabel:
+              "Register for the event on 18th September 2025 from 09:00 to 17:00",
+          },
           {
             date: "2025-09-18",
             time: "09:00 – 17:00",

@@ -18,7 +18,7 @@ export const EventAppointmentContextDefault = forwardRef<
   >
     <span className="dsa-event-appointment__infos">
       {date && (
-        <span className="dsa-event-appointment__info">
+        <span className="dsa-event-appointment__info dsa-event-appointment__info--date">
           <Icon
             className="dsa-event-appointment__icon"
             aria-hidden
@@ -28,7 +28,7 @@ export const EventAppointmentContextDefault = forwardRef<
         </span>
       )}
       {time && (
-        <span className="dsa-event-appointment__info">
+        <span className="dsa-event-appointment__info dsa-event-appointment__info--time">
           <Icon
             className="dsa-event-appointment__icon"
             aria-hidden

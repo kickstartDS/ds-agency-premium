@@ -18,6 +18,13 @@
       "type": "string",
       "examples": ["Berlin Congress Center"]
     },
+    "displayMode": {
+      "title": "Display Mode",
+      "description": "Spacious is recommended for 1-2 appointments, Compact for more than 2.",
+      "type": "string",
+      "enum": ["spacious", "compact"],
+      "default": "spacious"
+    },
     "address": {
       "title": "Address",
       "description": "Address of the appointment",
