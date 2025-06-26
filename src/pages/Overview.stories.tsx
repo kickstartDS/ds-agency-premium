@@ -36,7 +36,7 @@ const Page = () => (
     </Section>
 
     <Section
-      style="accentTransition"
+      transition="to-accent"
       spaceBefore="small"
       spaceAfter="none"
       width="max"
@@ -100,11 +100,9 @@ const Page = () => (
       spaceBefore="small"
       spaceAfter="none"
       backgroundColor="accent"
-      style="anchorGlow"
       width="wide"
     >
       <Cta
-        fullWidth
         textAlign="center"
         highlightText
         headline="Ready to embark on a transformative digital journey?"

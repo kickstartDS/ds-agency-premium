@@ -26,6 +26,10 @@ export type CallToActionTarget = string;
  */
 export type LinkLabel = string;
 /**
+ * Icon for the link style of the cta
+ */
+export type Icon1 = string;
+/**
  * Activate/disable the CTAs
  */
 export type CallToActionToggle = boolean;
@@ -46,6 +50,7 @@ export interface FeatureProps {
 export interface CallToAction {
   target?: CallToActionTarget;
   label?: LinkLabel;
+  icon?: Icon1;
   toggle?: CallToActionToggle;
   /**
    * Choose the style of the CTA

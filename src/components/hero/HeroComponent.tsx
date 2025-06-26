@@ -22,6 +22,7 @@ export const HeroContextDefault = forwardRef<
       highlightText,
       textPosition = "center",
       colorNeutral,
+      inverted,
       image,
       overlay,
       textbox,
@@ -38,63 +39,67 @@ export const HeroContextDefault = forwardRef<
         // @ts-expect-error
         value={ButtonGroup}
       >
-        <Container name="visual">
-          <VisualContextDefault
-            {...rest}
-            ref={ref}
-            className={classnames(
-              `dsa-hero dsa-hero--content-${textPosition}`,
-              highlightText ? `dsa-hero--highlight-text` : "",
-              colorNeutral ? `dsa-hero--color-neutral` : "",
-              className
-            )}
-            height={height}
-            overlay={overlay}
-            box={{
-              background: textbox === true ? "solid" : "transparent",
-              enabled: true,
-              vertical:
-                textPosition === "below" || textPosition === "corner"
-                  ? "bottom"
-                  : "center",
-              horizontal:
-                textPosition === "left" || textPosition === "corner"
-                  ? "left"
-                  : textPosition === "right"
-                  ? "right"
-                  : "center",
-              link: {
-                // @ts-expect-error
-                buttons,
-                colorNeutral,
-                enabled: buttons.length > 0,
-                arrangement:
-                  textPosition === "below" || textPosition === "center"
-                    ? "center"
-                    : "left",
-              },
-              headline: {
-                align:
-                  textPosition === "below" || textPosition === "center"
-                    ? "center"
-                    : "left",
-                text: headline,
-                sub: sub,
-                level: "h3",
-                style: highlightText ? "h1" : undefined,
-              },
-              text: text,
-            }}
-            media={{
-              mode: "image",
-              image: {
-                srcMobile: image.srcMobile,
-                srcTablet: image.srcTablet,
-                srcDesktop: image.srcDesktop,
-                src: image.src,
-              },
-            }}
-          />
+        <Container name="hero">
+          <Container name="visual">
+            <VisualContextDefault
+              {...rest}
+              ref={ref}
+              className={classnames(
+                `dsa-hero dsa-hero--content-${textPosition}`,
+                highlightText ? `dsa-hero--highlight-text` : "",
+                colorNeutral ? `dsa-hero--color-neutral` : "",
+                className
+              )}
+              height={height}
+              overlay={overlay}
+              skipButton={height === "fullScreen" ? true : false}
+              inverted
+              box={{
+                background: textbox === true ? "solid" : "transparent",
+                enabled: true,
+                vertical:
+                  textPosition === "below" || textPosition === "corner"
+                    ? "bottom"
+                    : "center",
+                horizontal:
+                  textPosition === "left" || textPosition === "corner"
+                    ? "left"
+                    : textPosition === "right"
+                    ? "right"
+                    : "center",
+                link: {
+                  // @ts-expect-error
+                  buttons,
+                  colorNeutral,
+                  enabled: buttons.length > 0,
+                  arrangement:
+                    textPosition === "below" || textPosition === "center"
+                      ? "center"
+                      : "left",
+                },
+                headline: {
+                  align:
+                    textPosition === "below" || textPosition === "center"
+                      ? "center"
+                      : "left",
+                  text: headline,
+                  sub: sub,
+                  level: "h3",
+                  style: highlightText ? "h1" : undefined,
+                },
+                text: text,
+              }}
+              media={{
+                mode: "image",
+                image: {
+                  srcMobile: image.srcMobile,
+                  srcTablet: image.srcTablet,
+                  srcDesktop: image.srcDesktop,
+                  src: image.src,
+                },
+              }}
+            />
+          </Container>
         </Container>
       </ButtonContext.Provider>
     );

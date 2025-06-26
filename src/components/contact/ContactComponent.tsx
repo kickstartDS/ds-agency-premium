@@ -33,7 +33,7 @@ export const ContactContextDefault = forwardRef<
       ref={ref}
       {...props}
     >
-      {image && image.src ? (
+      {image && image.src && (
         <div className="dsa-contact__image-wrap">
           <Picture
             src={image?.src}
@@ -41,8 +41,6 @@ export const ContactContextDefault = forwardRef<
             className="dsa-contact__image"
           />
         </div>
-      ) : (
-        ""
       )}
       <div className="dsa-contact__body">
         {title && (
@@ -53,23 +51,27 @@ export const ContactContextDefault = forwardRef<
         )}
         {copy && <RichText text={copy} className="dsa-contact__copy" />}
 
-        {links && links.length ? (
+        {links && links.length && (
           <ul className="dsa-contact__links">
-            {links.map(({ icon, href, label, newTab }, i) => (
+            {links.map(({ icon, href, label, ariaLabel, newTab }, i) => (
               <li key={i}>
                 <Link
                   className="dsa-contact__link"
+                  aria-label={ariaLabel}
                   href={href}
-                  {...(newTab ? { target: "_blank", rel: "noopener" } : {})}
+                  {...(newTab && { target: "_blank", rel: "noopener" })}
                 >
-                  <Icon icon={icon} />
+                  <Icon
+                    role="presentation"
+                    focusable="false"
+                    aria-hidden
+                    icon={icon}
+                  />
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
-        ) : (
-          ""
         )}
       </div>
     </address>

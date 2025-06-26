@@ -15,8 +15,8 @@ export const NavTopbarContextDefault = forwardRef<
   items && items.length > 0 ? (
     <nav
       className="dsa-nav-topbar"
-      id="dsa-nav-main"
-      aria-label="Hauptnavigation"
+      id="dsa-nav-topbar"
+      aria-label="Main Navigation"
       ref={ref}
     >
       <ul className="dsa-nav-topbar__list">
@@ -31,12 +31,15 @@ export const NavTopbarContextDefault = forwardRef<
               key={href}
             >
               {subItems?.length ? (
-                <span tabIndex={0} className="dsa-nav-topbar__label">
+                <span className="dsa-nav-topbar__label">
                   {label}
                   {subItems?.length ? (
                     <Icon
                       className="dsa-nav-topbar__label__icon"
                       icon="chevron-down"
+                      role="presentation"
+                      aria-hidden
+                      focusable={false}
                     />
                   ) : (
                     ""

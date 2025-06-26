@@ -1,14 +1,17 @@
 @use "hero-tokens.scss";
 @use "@kickstartds/core/source/core/container";
-@include container.wrapper("visual");
+@include container.wrapper("hero");
 
 .c-visual.dsa-hero {
   --c-visual_overlay--background-size: 100%;
 
   .c-visual__box {
-    --c-visual_box--background: var(--dsa-hero__textbox--background-color, var(--ks-color-bg-alpha-2));
+    --c-visual_box--background: var(
+      --dsa-hero__textbox--background-color,
+      var(--dsa-overlay-box_transparent--background-color)
+    );
     --c-visual_box--color: var(--dsa-hero__copy--color, var(--ks-text-color-default));
-    --c-visual_box--border-radius: var(--dsa-hero__textbox--border-radius, var(--ks-border-radius-surface));
+    --c-visual_box--border-radius: var(--dsa-hero__textbox--border-radius, var(--ks-border-radius-card));
     --c-visual_box--padding: var(--dsa-hero__textbox--padding, var(--ks-spacing-inset-squish-xl));
 
     --c-visual_text--font: var(--dsa-hero__copy--font, var(--dsa-rich-text--font));
@@ -32,22 +35,33 @@
     min-height: var(--dsa-hero--min-height_small);
   }
 
-  @include container.size("≥", 640px, "visual") {
-    --c-visual_overlay--background: radial-gradient(
-      50% 125% at 100% 0%,
-      var(--ks-color-primary-alpha-5) 0%,
-      var(--ks-color-bg-alpha-5) 100%
+  @include container.size("≥", 640px, "hero") {
+    --c-visual_overlay--background: var(
+      --dsa-hero__overlay--background,
+      radial-gradient(50% 125% at 100% 0%, var(--ks-color-primary-alpha-5) 0%, var(--ks-color-bg-alpha-4) 100%)
     );
 
     &.dsa-hero--content-below {
       --c-visual_overlay--background: var(
-        --dsa-hero__overlay--background,
+        --dsa-hero--below__overlay--background,
+        linear-gradient(0deg, var(--ks-background-color-default) 15%, transparent 50%)
+      );
+    }
+
+    &.dsa-hero--content-left {
+      --c-visual_overlay--background: var(
+        --dsa-hero--left__overlay--background,
         linear-gradient(0deg, var(--ks-background-color-default) 15%, transparent 50%)
       );
     }
 
     .c-visual__box {
       --c-visual_box--max-width: var(--dsa-hero__textbox--max-width, var(--dsa-content--width_narrow));
+
+      &:not(.c-visual__box--transparent) {
+        backdrop-filter: var(--dsa-hero__textbox--backdrop-filter, var(--dsa-overlay-box_transparent--backdrop-filter));
+        box-shadow: var(--dsa-hero__textbox--box-shadow, var(--ks-box-shadow-card));
+      }
     }
   }
 }
@@ -80,7 +94,12 @@
     max-width: var(--dsa-content--width_wide);
   }
 
-  @include container.size("≥", 640px, "visual") {
+  .c-visual__continue-btn {
+    color: var(--dsa-overlay-text--text-color, var(--ks-color-fg));
+    filter: drop-shadow(var(--dsa-overlay-text--shadow, 0 0 10px var(--ks-color-bg-inverted-alpha-3-base)));
+  }
+
+  @include container.size("≥", 640px, "hero") {
     &.dsa-hero--content-below {
       .c-visual__media {
         position: relative;
@@ -91,12 +110,12 @@
       }
 
       .c-visual__content {
-        padding: 0 var(--dsa-content--spacing);
+        padding: 0 var(--dsa-content--horizontal-spacing);
         margin-top: -10%;
         position: relative;
 
         .c-visual__box {
-          --c-visual_box--max-width: var(--dsa-content--width_default);
+          --c-visual_box--max-width: var(--dsa-hero_below__textbox--max-width, var(--dsa-content--width_default));
         }
       }
     }
@@ -106,7 +125,7 @@
     &.dsa-hero--content-below.c-visual--no-crop {
       .c-visual__media {
         .c-visual__image {
-          @include container.size("≥", 640px, "visual") {
+          @include container.size("≥", 640px, "hero") {
             height: fit-content;
             img {
               object-fit: contain;
@@ -120,7 +139,7 @@
       height: fit-content;
       .c-visual__media {
         .c-visual__image {
-          @include container.size("≥", 640px, "visual") {
+          @include container.size("≥", 640px, "hero") {
             height: fit-content;
 
             img {

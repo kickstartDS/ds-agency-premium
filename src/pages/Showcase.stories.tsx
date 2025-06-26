@@ -52,7 +52,7 @@ const Page = () => (
         text="EcoTech Solutions, a forward-thinking company in the sustainable PV and wind power industry, sought a way to streamline their development process and enhance their brand consistency across platforms."
       />
     </Section>
-    <Section style="boldTransition" width="full">
+    <Section width="full">
       <Mosaic
         layout="alternate"
         tile={[
@@ -106,15 +106,9 @@ The implementation of the new **Design System** and migration to **Storyblok** t
         ]}
       />
     </Section>
-    <Section
-      width="wide"
-      inverted
-      style="boldTransition"
-      spaceBefore="small"
-      spaceAfter="small"
-    >
+    <Section width="wide" inverted>
       <Cta
-        fullWidth
+        inverted
         highlightText
         textAlign="center"
         headline="Ready to **power up your**  Digital Transformation with a tailored **Design System** and Headless **CMS**? "

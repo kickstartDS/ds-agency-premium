@@ -49,6 +49,14 @@
           "default": "See more",
           "examples": ["See all our partners"]
         },
+        "icon": {
+          "type": "string",
+          "format": "icon",
+          "title": "Icon",
+          "description": "Icon for the link style of the cta",
+          "examples": ["arrow-right"],
+          "default": "arrow-right"
+        },
         "toggle": {
           "type": "boolean",
           "title": "Call to Action Toggle",

@@ -6,8 +6,8 @@ const pxToNumber = (px: string) => Number(px.replace("px", ""));
 export const dark = create({
   base: "dark",
 
-  colorPrimary: tokens.KsColorSecondaryBase,
-  colorSecondary: tokens.KsColorSecondaryBase,
+  colorPrimary: tokens.KsColorPrimaryBase,
+  colorSecondary: tokens.KsColorPrimaryBase,
 
   // UI
   appBg: tokens.KsColorPrimaryToBg9Base,
@@ -25,7 +25,7 @@ export const dark = create({
 
   // Toolbar default and active colors
   barTextColor: tokens.KsColorFgAlpha3Base,
-  barSelectedColor: tokens.KsColorSecondaryBase,
+  barSelectedColor: tokens.KsColorPrimaryBase,
   barBg: tokens.KsBackgroundColorDefaultBase,
 
   // Form colors
@@ -59,8 +59,8 @@ export const docsTheme = create({
   textInverseColor: tokens.KsTextColorDefaultInvertedBase,
 
   // Toolbar default and active colors
-  barTextColor: tokens.KsColorSecondaryAlpha6Base,
-  barSelectedColor: tokens.KsColorSecondaryBase,
+  barTextColor: tokens.KsColorPrimaryAlpha6Base,
+  barSelectedColor: tokens.KsColorPrimaryBase,
   barBg: tokens.KsBackgroundColorDefaultBase,
 
   // Form colors

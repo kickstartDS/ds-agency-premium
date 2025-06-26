@@ -48,6 +48,10 @@ export type CallToActionTarget = string;
  * The text label displayed on the link
  */
 export type LinkLabel = string;
+/**
+ * Icon for the link style of the cta
+ */
+export type Icon1 = string;
 
 /**
  * Component used to display a set of features
@@ -68,5 +72,6 @@ export interface Feature {
   cta?: {
     target?: CallToActionTarget;
     label?: LinkLabel;
+    icon?: Icon1;
   };
 }

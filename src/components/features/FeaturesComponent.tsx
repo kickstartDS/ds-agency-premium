@@ -52,6 +52,7 @@ export const FeaturesContextDefault = forwardRef<
               target: cta?.target,
               style: ctas.style,
               toggle: ctas.toggle,
+              icon: cta?.icon,
             }}
           />
         );

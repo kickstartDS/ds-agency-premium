@@ -59,6 +59,9 @@
               },
               "label": {
                 "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/cta/properties/label"
+              },
+              "icon": {
+                "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/cta/properties/icon"
               }
             }
           }

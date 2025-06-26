@@ -16,22 +16,20 @@
       "type": "string",
       "title": "Style",
       "description": "Style of background",
-      "enum": [
-        "stagelights",
-        "horizontalGradient",
-        "verticalGradient",
-        "accentTransition",
-        "boldTransition",
-        "symmetricGlow",
-        "anchorGlow"
-      ],
-      "default": "default"
+      "enum": ["framed", "deko", "colorful"]
     },
     "backgroundColor": {
       "type": "string",
       "title": "Style",
       "description": "Color of background",
       "enum": ["default", "accent", "bold"],
+      "default": "default"
+    },
+    "transition": {
+      "type": "string",
+      "title": "Style",
+      "description": "Color of background",
+      "enum": ["none", "to-default", "to-accent", "to-bold", "to-inverted"],
       "default": "default"
     },
     "backgroundImage": {
