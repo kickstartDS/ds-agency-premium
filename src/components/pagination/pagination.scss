@@ -4,7 +4,8 @@
   display: flex;
   gap: var(--dsa-pagination--gap, var(--ks-spacing-stack-xs));
 
-  &__link {
+  &__link,
+  &__placeholder {
     --g-link--background: transparent;
     --g-link--background-hover: var(--ks-color-fg-alpha-8);
     --g-link--color: var(--ks-text-color-interface-interactive);
@@ -34,5 +35,12 @@
       --g-link--color: var(--dsa-text-color-on-primary);
       --g-link--color-hover: var(--dsa-text-color-on-primary);
     }
+  }
+
+  &__placeholder {
+    span {
+      transform: translateY(-0.15em);
+    }
+    line-height: 0.25;
   }
 }

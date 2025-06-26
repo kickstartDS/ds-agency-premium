@@ -33,18 +33,58 @@ export const PaginationContextDefault = forwardRef<
           </Link>
         </>
       )}
-      {pages.map((page, index) => (
-        <Link
-          className={classNames(
-            "dsa-pagination__link",
-            page.active && "dsa-pagination__link--active"
-          )}
-          key={index}
-          href={page.url}
-        >
-          {(index + 1).toString()}
-        </Link>
-      ))}
+      {(() => {
+        const activeIndex = pages.findIndex((page) => page.active);
+        let lastRenderedIndex = -1;
+        const result: React.ReactNode[] = [];
+
+        pages.forEach((page, index) => {
+          const isFirst = index === 0;
+          const isLast = index === pages.length - 1;
+          const isActive = page.active;
+          const isBeforeActive = index === activeIndex - 1;
+          const isAfterActive = index === activeIndex + 1;
+
+          const shouldRender =
+            isFirst || isLast || isActive || isBeforeActive || isAfterActive;
+
+          if (!shouldRender) {
+            if (
+              index - lastRenderedIndex > 1 &&
+              (result.length === 0 ||
+                (result[result.length - 1] as any)?.type !== "div" ||
+                (result[result.length - 1] as any)?.props?.className !==
+                  "dsa-pagination__placeholder")
+            ) {
+              result.push(
+                <div
+                  className="dsa-pagination__placeholder"
+                  key={`dsa-pagination__placeholder-${index}`}
+                >
+                  <span>…</span>
+                </div>
+              );
+            }
+            return;
+          }
+
+          result.push(
+            <Link
+              className={classNames(
+                "dsa-pagination__link",
+                page.active && "dsa-pagination__link--active"
+              )}
+              key={index}
+              href={page.url}
+            >
+              {(index + 1).toString()}
+            </Link>
+          );
+          lastRenderedIndex = index;
+        });
+
+        return result;
+      })()}
 
       {pages.findIndex((page) => page.active) !== pages.length - 1 && (
         <>

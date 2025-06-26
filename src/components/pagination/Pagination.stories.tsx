@@ -46,10 +46,25 @@ export const Default: Story = {
       },
       {
         url: "https://example.com/page6",
+        active: true,
       },
       {
         url: "https://example.com/page7",
-        active: true,
+      },
+      {
+        url: "https://example.com/page8",
+      },
+      {
+        url: "https://example.com/page9",
+      },
+      {
+        url: "https://example.com/page10",
+      },
+      {
+        url: "https://example.com/page11",
+      },
+      {
+        url: "https://example.com/page12",
       },
     ],
   }),
