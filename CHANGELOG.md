@@ -1,3 +1,17 @@
+# v1.6.70 (Fri Jun 27 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: update added screenshots ([@julrich](https://github.com/julrich))
+- fix: add correct component screenshots ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
 # v1.6.69 (Thu Jun 26 2025)
 
 #### ⚠️ Pushed to `main`
