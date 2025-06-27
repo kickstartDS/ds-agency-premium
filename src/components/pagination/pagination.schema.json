@@ -32,13 +32,7 @@
           "description": "Aria label for the link to go to a specific page (will be placed before the page number)",
           "default": "Go to page"
         }
-      },
-      "required": [
-        "previousPage",
-        "nextPage",
-        "skipToFirstPage",
-        "skipToLastPage"
-      ]
+      }
     },
     "pages": {
       "type": "array",
