@@ -9,7 +9,7 @@
       "title": "Number",
       "description": "The number of the stat",
       "type": "string",
-      "examples": [1, "5x", 2, "40%", "bis zu 100"]
+      "examples": ["1", "5x", "2", "40%", "bis zu 100"]
     },
     "description": {
       "title": "Description",
