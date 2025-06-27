@@ -6,6 +6,28 @@
  */
 
 export interface PaginationProps {
+  ariaLabels?: {
+    /**
+     * Aria label for the previous page link
+     */
+    previousPage: string;
+    /**
+     * Aria label for the next page link
+     */
+    nextPage: string;
+    /**
+     * Aria label for the link to skip to the first page
+     */
+    skipToFirstPage: string;
+    /**
+     * Aria label for the link to skip to the last page
+     */
+    skipToLastPage: string;
+    /**
+     * Aria label for the link to go to a specific page (will be placed before the page number)
+     */
+    goToPage?: string;
+  };
   pages?: {
     /**
      * The URL to the page
