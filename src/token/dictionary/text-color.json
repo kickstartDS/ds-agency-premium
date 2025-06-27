@@ -363,7 +363,7 @@
       },
       "interface": {
         "base": {
-          "value": "{ks.color.fg.alpha.4.base}",
+          "value": "{ks.color.fg.alpha.2.base}",
           "attributes": {
             "category": "color"
           },
@@ -374,7 +374,7 @@
         },
         "interactive": {
           "base": {
-            "value": "{ks.color.fg.alpha.3.base}",
+            "value": "{ks.color.fg.alpha.4.base}",
             "attributes": {
               "category": "color"
             },

@@ -31,11 +31,11 @@
 
     --c-form-check_box-focus--shadow: var(--dsa-check--shadow_focus, 0 0 4px 0);
 
-    --c-form-check_checkmark--size: var(--dsa-check_radio__checkmark--size, calc(var(--swo-check--size) * 0.5));
+    --c-form-check_checkmark--size: var(--dsa-check_radio__checkmark--size, calc(var(--dsa-check--size) * 0.5));
 
     font: var(--dsa-check__label--font, var(--ks-font-interface-s));
     font-weight: var(--dsa-check__label--font-weight, var(--ks-font-weight-regular));
-    color: var(--dsa-check__label--color, var(--ks-text-color-interface-interactive-default));
+    color: var(--dsa-check__label--color, var(--ks-text-color-interface-interactive));
 
     &--checkbox {
       --c-form-check_box--border-radius: var(
