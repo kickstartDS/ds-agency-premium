@@ -91,12 +91,12 @@
       }
 
       .c-visual__content {
-        padding: 0 var(--dsa-content--spacing);
+        padding: 0 var(--dsa-content--horizontal-spacing);
         margin-top: -10%;
         position: relative;
 
         .c-visual__box {
-          --c-visual_box--max-width: var(--dsa-content--width_default);
+          --c-visual_box--max-width: var(--dsa-hero_below__textbox--max-width, var(--dsa-content--width_default));
         }
       }
     }
