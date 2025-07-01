@@ -135,43 +135,43 @@ const Page = () => (
         logo={[
           {
             alt: "Logo 1",
-            src: "img/logos/logoipsum-212.svg",
+            src: "img/logos/logoipsum-344.svg",
           },
           {
             alt: "Logo 2",
-            src: "img/logos/logoipsum-217.svg",
+            src: "img/logos/logoipsum-347.svg",
           },
           {
             alt: "Logo 3",
-            src: "img/logos/logoipsum-239.svg",
+            src: "img/logos/logoipsum-352.svg",
           },
           {
             alt: "Logo 4",
-            src: "img/logos/logoipsum-244.svg",
+            src: "img/logos/logoipsum-356.svg",
           },
           {
             alt: "Logo 5",
-            src: "img/logos/logoipsum-250.svg",
+            src: "img/logos/logoipsum-358.svg",
           },
           {
             alt: "Logo 6",
-            src: "img/logos/logoipsum-286.svg",
+            src: "img/logos/logoipsum-369.svg",
           },
           {
             alt: "Logo 7",
-            src: "img/logos/logoipsum-212.svg",
+            src: "img/logos/logoipsum-373.svg",
           },
           {
             alt: "Logo 8",
-            src: "img/logos/logoipsum-217.svg",
+            src: "img/logos/logoipsum-344.svg",
           },
           {
             alt: "Logo 9",
-            src: "img/logos/logoipsum-239.svg",
+            src: "img/logos/logoipsum-347.svg",
           },
           {
             alt: "Logo 10",
-            src: "img/logos/logoipsum-244.svg",
+            src: "img/logos/logoipsum-352.svg",
           },
         ]}
         logosPerRow={4}

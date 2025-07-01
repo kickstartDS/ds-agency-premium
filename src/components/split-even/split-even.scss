@@ -7,20 +7,20 @@
 
   &--width {
     &-narrow {
-      --dsa-split-even__section--flex-basis: var(
-        --dsa-split-even__section--flex-basis_narrow,
+      --dsa-split-even__content--flex-basis: var(
+        --dsa-split-even__content--flex-basis_narrow,
         var(--dsa-tile--width_small)
       );
     }
     &-medium {
-      --dsa-split-even__section--flex-basis: var(
-        --dsa-split-even__section--flex-basis_medium,
+      --dsa-split-even__content--flex-basis: var(
+        --dsa-split-even__content--flex-basis_medium,
         var(--dsa-tile--width_medium)
       );
     }
     &-wide {
-      --dsa-split-even__section--flex-basis: var(
-        --dsa-split-even__section--flex-basis_wide,
+      --dsa-split-even__content--flex-basis: var(
+        --dsa-split-even__content--flex-basis_wide,
         var(--dsa-tile--width_large)
       );
     }
@@ -48,8 +48,26 @@
     &-large {
       --dsa-split-even--gutter: var(
         --dsa-split-even--gutter_large,
-        var(--ks-spacing-stack-l) var(--ks-spacing-inline-l)
+        var(--ks-spacing-stack-xl) var(--ks-spacing-inline-xl)
       );
+    }
+  }
+
+  &--content-gutter {
+    &-none {
+      --dsa-split-even__content--gutter: 0;
+    }
+
+    &-medium {
+      --dsa-split-even__content--gutter: var(--dsa-split-even__content--gutter_default, var(--ks-spacing-stack-m));
+    }
+
+    &-small {
+      --dsa-split-even__content--gutter: var(--dsa-split-even__content--gutter_small, var(--ks-spacing-stack-s));
+    }
+
+    &-large {
+      --dsa-split-even__content--gutter: var(--dsa-split-even__content--gutter_large, var(--ks-spacing-stack-xl));
     }
   }
 
@@ -67,17 +85,6 @@
     }
   }
 
-  &--sticky {
-    position: relative;
-    overflow: visible;
-
-    .l-split-even__section {
-      height: fit-content;
-      position: sticky;
-      top: 0;
-    }
-  }
-
   &--mobile_stack-reverse {
     flex-wrap: wrap-reverse;
 
@@ -90,7 +97,14 @@
     }
   }
 
-  &__section {
-    flex: 1 1 var(--dsa-split-even__section--flex-basis);
+  &__content {
+    flex: 1 1 var(--dsa-split-even__content--flex-basis);
+    display: flex;
+    flex-direction: column;
+    gap: var(--dsa-split-even__content--gutter);
+
+    .c-button {
+      width: fit-content;
+    }
   }
 }
