@@ -38,7 +38,7 @@ export type MobileLayout = "stack" | "stackReverse";
 /**
  * Aligns the content vertically within the sections
  */
-export type VerticalAlignment = "top" | "center" | "bottom";
+export type VerticalAlignment = "top" | "center" | "bottom" | "sticky";
 /**
  * Sets the vertical space between the content of the split layout
  */

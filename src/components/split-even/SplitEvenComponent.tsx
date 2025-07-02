@@ -37,7 +37,11 @@ export const SplitEven: FC<SplitEvenComponentProps> = ({
         contentGutter && `l-split-even__content--gutter-${contentGutter}`
       )}
     >
-      {first}
+      {verticalAlign === "sticky" ? (
+        <div className="l-split-even__sticky-container">{first}</div>
+      ) : (
+        first
+      )}
     </div>
     <div
       className={classnames(
@@ -45,7 +49,11 @@ export const SplitEven: FC<SplitEvenComponentProps> = ({
         contentGutter && `l-split-even__content--gutter-${contentGutter}`
       )}
     >
-      {second}
+      {verticalAlign === "sticky" ? (
+        <div className="l-split-even__sticky-container">{second}</div>
+      ) : (
+        second
+      )}
     </div>
   </div>
 );

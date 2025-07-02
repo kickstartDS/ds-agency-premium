@@ -29,7 +29,7 @@
       "title": "Vertical Alignment",
       "type": "string",
       "description": "Aligns the content vertically within the sections",
-      "enum": ["top", "center", "bottom"],
+      "enum": ["top", "center", "bottom", "sticky"],
       "default": "top"
     },
     "verticalGutter": {

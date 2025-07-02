@@ -3,7 +3,6 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { SplitEven } from "./SplitEvenComponent";
-import { Text } from "../text/TextComponent";
 import schema from "./split-even.schema.dereffed.json";
 import customProperties from "./split-even-tokens.json";
 import { Logos } from "../logos/LogosComponent";
@@ -11,7 +10,6 @@ import { Headline } from "../headline/HeadlineComponent";
 import { Faq } from "../faq/FaqComponent";
 import { TextArea } from "@kickstartds/form/lib/text-area";
 import { Button } from "../button/ButtonComponent";
-import { TeaserCard } from "../teaser-card/TeaserCardComponent";
 import { Cta } from "../cta/CtaComponent";
 
 const meta: Meta = {
@@ -37,11 +35,36 @@ export const TextWithLogos: Story = {
   },
   args: pack({
     contentGutter: "small",
-    verticalAlign: "center",
+    verticalAlign: "sticky",
     sectionMinWidth: "wide",
     first: (
       <>
         <Cta
+          highlightText
+          headline="Discover our solutions for Industry 4.0"
+          text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
+
+Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
+          buttons={[{ label: "Learn more" }]}
+        />
+        <Cta
+          highlightText
+          headline="Discover our solutions for Industry 4.0"
+          text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
+
+Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
+          buttons={[{ label: "Learn more" }]}
+        />
+        <Cta
+          highlightText
+          headline="Discover our solutions for Industry 4.0"
+          text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
+
+Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
+          buttons={[{ label: "Learn more" }]}
+        />
+        <Cta
+          highlightText
           headline="Discover our solutions for Industry 4.0"
           text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
 

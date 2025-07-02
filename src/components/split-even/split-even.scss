@@ -69,6 +69,16 @@
     &-bottom {
       align-items: flex-end;
     }
+
+    &-sticky {
+      position: relative;
+
+      .l-split-even__sticky-container {
+        position: sticky;
+        top: var(--dsa-split-even--sticky-margin, var(--ks-spacing-stack-xl));
+        height: fit-content;
+      }
+    }
   }
 
   &--mobile_stack-reverse {

@@ -20,6 +20,7 @@ export const BlogPost: FC<PropsWithChildren<BlogPostProps>> = ({
     <Section width="wide">
       <SplitWeighted
         sticky
+        horizontalGutter="large"
         mainLayout={{
           minWidth: "narrow",
         }}

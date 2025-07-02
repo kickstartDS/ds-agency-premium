@@ -13,7 +13,7 @@
 
     .l-split-weighted__sticky-container {
       position: sticky;
-      top: var(--dsa-split-weighted--sticky-margin, var(--ks-spacing-stack-l));
+      top: var(--dsa-split-weighted--sticky-margin, var(--ks-spacing-stack-xl));
       height: fit-content;
     }
   }
