@@ -1,0 +1,25 @@
+.l-split-weighted {
+  --dsa-split-weighted--sticky-margin: var(--ks-spacing-stack-l);
+
+  --dsa-split-weighted--v-gap_default: var(--ks-spacing-stack-m);
+  --dsa-split-weighted--v-gap_small: var(--ks-spacing-stack-l);
+  --dsa-split-weighted--v-gap_large: var(--dsa-content--vertical-spacing);
+
+  --dsa-split-weighted--h-gap_default: var(--ks-spacing-inline-l);
+  --dsa-split-weighted--h-gap_small: var(--ks-spacing-inline-m);
+  --dsa-split-weighted--h-gap_large: var(--ks-spacing-xxl);
+
+  --dsa-split-weighted__main--flex-basis_narrow: var(--dsa-content--width_narrow);
+  --dsa-split-weighted__main--flex-basis_default: var(--dsa-content--width_default);
+
+  --dsa-split-weighted__main--gap_default: var(--ks-spacing-stack-l);
+  --dsa-split-weighted__main--gap_small: var(--ks-spacing-stack-s);
+  --dsa-split-weighted__main--gap_large: var(--dsa-content--vertical-spacing);
+
+  --dsa-split-weighted__context--flex-basis_narrow: var(--dsa-tile--width_small);
+  --dsa-split-weighted__context--flex-basis_default: var(--dsa-tile--width_medium);
+
+  --dsa-split-weighted__context--gap_default: var(--ks-spacing-stack-s);
+  --dsa-split-weighted__context--gap_small: var(--ks-spacing-stack-xs);
+  --dsa-split-weighted__context--gap_large: var(--ks-spacing-stack-m);
+}

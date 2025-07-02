@@ -15,7 +15,14 @@ export const LogosContextDefault = forwardRef<
   LogosProps & HTMLAttributes<HTMLDivElement>
 >(
   (
-    { logo: logos = [], tagline, align, cta, logosPerRow = "6", ...rest },
+    {
+      logo: logos = [],
+      tagline,
+      align = "center",
+      cta,
+      logosPerRow = "6",
+      ...rest
+    },
     ref
   ) => (
     <div {...rest} ref={ref}>

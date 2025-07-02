@@ -57,7 +57,11 @@ The future of AI is exciting and full of potential. However, it's important that
       author: {
         name: "Jane Doe",
         byline: "Senior Developer",
-        image: "img/people/author-emily.png",
+        image: {
+          src: "img/people/contact-isabella.png",
+          alt: "Picture of Jane Doe",
+          aspectRatio: "square",
+        },
         twitter: "Janedoe",
         email: "Jane.doe@example.com",
       },

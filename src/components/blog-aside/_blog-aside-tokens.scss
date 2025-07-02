@@ -2,14 +2,14 @@
 @include container.wrapper("blog-aside");
 
 .dsa-blog-aside {
-  --dsa-blog-aside--gap: var(--ks-spacing-stack-xs);
+  --dsa-blog-aside--gap: var(--ks-spacing-stack-s);
 
   --dsa-blog-aside__author__title--font: var(--ks-font-copy-m);
   --dsa-blog-aside__author__subtitle--font: var(--ks-font-copy-s);
   --dsa-blog-aside__author__image--flex-basis: 120px;
-  --dsa-blog-aside__author__body--flex-basis: 240px;
+  --dsa-blog-aside__author__body--flex-basis: 100px;
   --dsa-blog-aside__author__link--font: var(--ks-font-interface-s);
-  --dsa-blog-aside__author--gap-horizontal: var(--ks-spacing-inline-xs);
+  --dsa-blog-aside__author--gap-horizontal: var(--ks-spacing-inline-s);
   --dsa-blog-aside__author--gap-vertical: var(--ks-spacing-stack-xs);
 
   --dsa-blog-aside__meta__item--font: var(--ks-font-interface-s);
@@ -20,7 +20,7 @@
   --dsa-blog-aside__sharebar__link--color: var(--dsa-link--color);
   --dsa-blog-aside__sharebar__link--color_hover: var(--dsa-link--color_hover);
 
-  @include container.size("≥", 500px, "blog-aside") {
+  @include container.size("≥", 370px, "blog-aside") {
     --dsa-blog-aside__author__image--flex-basis: 180px;
     --dsa-blog-aside__author__title--font: var(--ks-font-copy-l);
     --dsa-blog-aside__author__subtitle--font: var(--ks-font-copy-m);

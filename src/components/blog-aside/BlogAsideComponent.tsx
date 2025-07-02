@@ -17,7 +17,7 @@ export const BlogAsideContextDefault = forwardRef<
   const socialLinks = socialSharing?.map((link) => {
     return {
       icon: link.icon,
-      url: link.url,
+      href: link.url,
       title: link.title,
     };
   });
@@ -44,9 +44,7 @@ export const BlogAsideContextDefault = forwardRef<
       >
         <BlogAuthor {...author} />
         {metaItems && (
-          <>
-            <PostMeta className="dsa-blog-aside__meta" items={metaItems} />
-          </>
+          <PostMeta className="dsa-blog-aside__meta" items={metaItems} />
         )}
         {socialLinks && (
           <div>

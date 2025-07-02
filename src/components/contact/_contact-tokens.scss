@@ -2,16 +2,16 @@
 @include container.wrapper("contact");
 
 .dsa-contact {
-  --dsa-contact--gap-horizontal: var(--ks-spacing-inline-m);
-  --dsa-contact--gap-vertical: var(--ks-spacing-stack-m);
+  --dsa-contact--gap-horizontal: var(--ks-spacing-inline-s);
+  --dsa-contact--gap-vertical: var(--ks-spacing-stack-s);
 
   --dsa-contact__header--gap: 0;
 
-  --dsa-contact__image--flex-basis: 200px;
+  --dsa-contact__image--flex-basis: var(--dsa-tile--width_smallest);
   --dsa-contact__image--border-radius: var(--ks-border-radius-card);
 
   --dsa-contact__body--gap: var(--ks-spacing-stack-xs);
-  --dsa-contact__body--flex-basis: 300px;
+  --dsa-contact__body--flex-basis: var(--dsa-tile--width_small);
 
   --dsa-contact__copy--font: var(--dsa-rich-text--font);
   --dsa-contact__copy--color: var(--dsa-rich-text--color);

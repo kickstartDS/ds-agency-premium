@@ -1,4 +1,4 @@
-import { Split } from "../../split/SplitComponent";
+import { SplitWeighted } from "../../split-weighted/SplitWeightedComponent";
 import { BlogHead } from "../../blog-head/BlogHeadComponent";
 import { Section } from "../../section/SectionComponent";
 import { BlogAside } from "../../blog-aside/BlogAsideComponent";
@@ -18,21 +18,23 @@ export const BlogPost: FC<PropsWithChildren<BlogPostProps>> = ({
 }) => (
   <>
     <Section width="wide">
-      <Split mainSectionWidth="narrow" layout="sidebarRight">
-        <div>
-          {head && <BlogHead {...head} />}
-          {content ? <Text text={content} /> : children}
-        </div>
-        <BlogAside {...aside} />
-      </Split>
+      <SplitWeighted
+        sticky
+        mainLayout={{
+          minWidth: "narrow",
+        }}
+        main={
+          <>
+            {head && <BlogHead {...head} />}
+            {content ? <Text text={content} /> : children}
+          </>
+        }
+        context={aside && <BlogAside {...aside} />}
+      />
     </Section>
     {cta && (
       <>
-        <Section
-          spaceAfter="none"
-          spaceBefore="none"
-          content={{ mode: "list" }}
-        >
+        <Section backgroundColor="accent" content={{ mode: "list" }}>
           <Cta {...cta} />
         </Section>
       </>
