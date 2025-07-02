@@ -39,7 +39,7 @@
           "title": "Minimum Width",
           "description": "Sets the minimum width of the main section",
           "type": "string",
-          "enum": ["narrow", "wide"],
+          "enum": ["narrow", "default", "wide"],
           "default": "wide"
         }
       }
@@ -59,8 +59,8 @@
           "title": "Minimum Width",
           "description": "Sets the minimum width of the main section",
           "type": "string",
-          "enum": ["narrow", "wide"],
-          "default": "wide"
+          "enum": ["narrow", "default", "wide"],
+          "default": "default"
         }
       }
     },

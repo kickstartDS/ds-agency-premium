@@ -15,8 +15,8 @@
       "title": "Content Gutter",
       "description": "Sets the space between the content inside the two halves of the split layout",
       "type": "string",
-      "enum": ["narrow", "medium", "wide", "none"],
-      "default": "medium"
+      "enum": ["narrow", "default", "wide", "none"],
+      "default": "default"
     },
     "mobileLayout": {
       "title": "Mobile Layout",
@@ -32,10 +32,17 @@
       "enum": ["top", "center", "bottom"],
       "default": "top"
     },
-    "gutter": {
-      "title": "Gutter",
+    "verticalGutter": {
+      "title": "Vertical Gutter",
+      "description": "Sets the vertical space between the content of the split layout",
       "type": "string",
-      "description": "Sets the space between the two halves of the split layout",
+      "enum": ["large", "default", "small", "none"],
+      "default": "default"
+    },
+    "horizontalGutter": {
+      "title": "Horizontal Gutter",
+      "description": "Sets the horizontal space between the content of the split layout",
+      "type": "string",
       "enum": ["large", "default", "small", "none"],
       "default": "default"
     },

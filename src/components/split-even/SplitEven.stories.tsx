@@ -12,6 +12,7 @@ import { Faq } from "../faq/FaqComponent";
 import { TextArea } from "@kickstartds/form/lib/text-area";
 import { Button } from "../button/ButtonComponent";
 import { TeaserCard } from "../teaser-card/TeaserCardComponent";
+import { Cta } from "../cta/CtaComponent";
 
 const meta: Meta = {
   title: "Layout/Split Even",
@@ -38,21 +39,15 @@ export const TextWithLogos: Story = {
     contentGutter: "small",
     verticalAlign: "center",
     sectionMinWidth: "wide",
-    gutter: "large",
     first: (
       <>
-        <Headline
-          text={"Innovative solutions for Industry 4.0"}
-          level={"h2"}
-          spaceAfter="minimum"
-        />
-        <Text
-          highlightText
+        <Cta
+          headline="Discover our solutions for Industry 4.0"
           text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
 
 Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
+          buttons={[{ label: "Learn more" }]}
         />
-        <Button label={"Learn more"} variant="primary" />
       </>
     ),
     second: (
@@ -102,7 +97,8 @@ export const FAQWithForm: Story = {
     contentGutter: "small",
     verticalAlign: "top",
     sectionMinWidth: "medium",
-    gutter: "large",
+    horizontalGutter: "large",
+    verticalGutter: "large",
     first: (
       <>
         <Headline text={"Frequently Asked Questions"} level={"h2"} />
@@ -139,53 +135,6 @@ export const FAQWithForm: Story = {
         />
         <TextArea label="Ask us directly!" />
         <Button label={"Submit"} />
-      </>
-    ),
-  }),
-};
-
-export const TextWithTeaser: Story = {
-  parameters: {
-    viewport: {
-      width: 1010,
-      height: 1520,
-    },
-  },
-  args: pack({
-    contentGutter: "small",
-    verticalAlign: "top",
-    sectionMinWidth: "medium",
-    gutter: "default",
-    first: (
-      <>
-        <Headline
-          text={"Innovative solutions for Industry 4.0"}
-          level={"h2"}
-          spaceAfter="minimum"
-        />
-        <Text
-          highlightText
-          text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
-
-Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
-        />
-      </>
-    ),
-    second: (
-      <>
-        <TeaserCard
-          layout="row"
-          button={{
-            chevron: false,
-            hidden: false,
-            label: "Read more",
-          }}
-          imageRatio="landscape"
-          headline="Transforming Industry"
-          text="with Smart Solutions"
-          image="img/logos/castaway.svg"
-          url="#"
-        />
       </>
     ),
   }),

@@ -15,7 +15,8 @@ export const SplitEven: FC<SplitEvenComponentProps> = ({
   mobileLayout = "stack",
   contentMinWidth = "medium",
   verticalAlign = "top",
-  gutter = "default",
+  horizontalGutter = "default",
+  verticalGutter = "default",
   contentGutter = "default",
   first,
   second,
@@ -24,16 +25,26 @@ export const SplitEven: FC<SplitEvenComponentProps> = ({
     className={classnames(
       "l-split-even",
       mobileLayout === "stackReverse" && "l-split-even--mobile_stack-reverse",
-      gutter && `l-split-even--gutter-${gutter}`,
-      contentGutter && `l-split-even--content-gutter-${contentGutter}`,
+      horizontalGutter && `l-split-even--h-gutter-${horizontalGutter}`,
+      verticalGutter && `l-split-even--v-gutter-${verticalGutter}`,
       contentMinWidth && `l-split-even--width-${contentMinWidth}`,
       verticalAlign && `l-split-even--align-${verticalAlign}`
     )}
   >
-    <div className="l-split-even__content l-split-even__content--first">
+    <div
+      className={classnames(
+        "l-split-even__content l-split-even__content--first",
+        contentGutter && `l-split-even__content--gutter-${contentGutter}`
+      )}
+    >
       {first}
     </div>
-    <div className="l-split-even__content l-split-even__content--second">
+    <div
+      className={classnames(
+        "l-split-even__content l-split-even__content--second",
+        contentGutter && `l-split-even__content--gutter-${contentGutter}`
+      )}
+    >
       {second}
     </div>
   </div>

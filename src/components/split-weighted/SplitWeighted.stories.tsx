@@ -7,8 +7,9 @@ import { Text } from "../text/TextComponent";
 import schema from "./split-weighted.schema.dereffed.json";
 import customProperties from "./split-weighted-tokens.json";
 import { Headline } from "../headline/HeadlineComponent";
-import { Button } from "../button/ButtonComponent";
 import { Contact } from "../contact/ContactComponent";
+import { TeaserCard } from "../teaser-card/TeaserCardComponent";
+import { Cta } from "../cta/CtaComponent";
 
 const meta: Meta = {
   title: "Layout/Split Weighted",
@@ -32,28 +33,22 @@ export const TextWithContact: Story = {
     },
   },
   args: pack({
-    horizontalGutter: "large",
+    verticalGutter: "large",
     mainLayout: {
-      minWidth: "narrow",
-      gutter: "small",
+      minWidth: "wide",
     },
     contextLayout: {
-      minWidth: "narrow",
+      minWidth: "wide",
     },
     main: (
       <>
-        <Headline
-          text={"Innovative solutions for Industry 4.0"}
-          level={"h2"}
-          spaceAfter="minimum"
-        />
-        <Text
-          highlightText
+        <Cta
+          headline="Discover our solutions for Industry 4.0"
           text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
 
 Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
+          buttons={[{ label: "Learn more" }]}
         />
-        <Button label={"Learn more"} variant="primary" />
       </>
     ),
     context: (
@@ -82,6 +77,53 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
           ]}
         />
       </>
+    ),
+  }),
+};
+
+export const TextWithTeaser: Story = {
+  parameters: {
+    viewport: {
+      width: 1010,
+      height: 1520,
+    },
+  },
+  args: pack({
+    mainLayout: {
+      gutter: "small",
+    },
+    contextLayout: {
+      minWidth: "narrow",
+    },
+    main: (
+      <>
+        <Headline
+          text={"Innovative solutions for Industry 4.0"}
+          level={"h2"}
+          spaceAfter="minimum"
+        />
+        <Text
+          highlightText
+          text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
+
+Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
+        />
+      </>
+    ),
+    context: (
+      <TeaserCard
+        layout="row"
+        button={{
+          chevron: false,
+          hidden: false,
+          label: "Read more",
+        }}
+        imageRatio="landscape"
+        headline="Transforming Industry"
+        text="with Smart Solutions"
+        image="img/logos/castaway.svg"
+        url="#"
+      />
     ),
   }),
 };

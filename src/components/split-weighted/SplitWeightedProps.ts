@@ -42,7 +42,7 @@ export type ContentGutter = "large" | "default" | "small" | "none";
 /**
  * Sets the minimum width of the main section
  */
-export type MinimumWidth = "narrow" | "wide";
+export type MinimumWidth = "narrow" | "default" | "wide";
 /**
  * Size of gutter to use
  */
@@ -50,7 +50,7 @@ export type Gutter = "large" | "default" | "small" | "none";
 /**
  * Sets the minimum width of the main section
  */
-export type MinimumWidth1 = "narrow" | "wide";
+export type MinimumWidth1 = "narrow" | "default" | "wide";
 /**
  * Determines the order of sections on mobile devices
  */

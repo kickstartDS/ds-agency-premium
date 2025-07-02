@@ -30,7 +30,7 @@ export type ContentMinimumWidth = "narrow" | "medium" | "wide";
 /**
  * Sets the space between the content inside the two halves of the split layout
  */
-export type ContentGutter = "narrow" | "medium" | "wide" | "none";
+export type ContentGutter = "narrow" | "default" | "wide" | "none";
 /**
  * Determines the layout of the sections on mobile devices
  */
@@ -40,9 +40,13 @@ export type MobileLayout = "stack" | "stackReverse";
  */
 export type VerticalAlignment = "top" | "center" | "bottom";
 /**
- * Sets the space between the two halves of the split layout
+ * Sets the vertical space between the content of the split layout
  */
-export type Gutter = "large" | "default" | "small" | "none";
+export type VerticalGutter = "large" | "default" | "small" | "none";
+/**
+ * Sets the horizontal space between the content of the split layout
+ */
+export type HorizontalGutter = "large" | "default" | "small" | "none";
 /**
  * Allowed components for the first half of the split layout
  */
@@ -93,7 +97,8 @@ export interface SplitEvenProps {
   contentGutter?: ContentGutter;
   mobileLayout?: MobileLayout;
   verticalAlign?: VerticalAlignment;
-  gutter?: Gutter;
+  verticalGutter?: VerticalGutter;
+  horizontalGutter?: HorizontalGutter;
   firstComponents?: First;
   secondComponents?: Second;
 }
