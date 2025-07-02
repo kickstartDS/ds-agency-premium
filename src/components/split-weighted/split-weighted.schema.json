@@ -4,15 +4,15 @@
   "title": "Split Weighted",
   "type": "object",
   "properties": {
-    "verticalGap": {
-      "title": "Vertical Gap",
+    "verticalGutter": {
+      "title": "Vertical Gutter",
       "description": "Sets the vertical space between the content of the split layout",
       "type": "string",
       "enum": ["large", "default", "small", "none"],
       "default": "default"
     },
-    "horizontalGap": {
-      "title": "Horizontal Gap",
+    "horizontalGutter": {
+      "title": "Horizontal Gutter",
       "description": "Sets the horizontal space between the content of the split layout",
       "type": "string",
       "enum": ["large", "default", "small", "none"],
@@ -28,8 +28,8 @@
       "title": "Main Layout",
       "type": "object",
       "properties": {
-        "gap": {
-          "title": "Content Gap",
+        "gutter": {
+          "title": "Content Gutter",
           "description": "Sets the space between the content of the split layout",
           "type": "string",
           "enum": ["large", "default", "small", "none"],
@@ -48,10 +48,10 @@
       "title": "Context Layout",
       "type": "object",
       "properties": {
-        "gap": {
+        "gutter": {
           "type": "string",
-          "title": "Gap",
-          "description": "Size of gap to use",
+          "title": "Gutter",
+          "description": "Size of gutter to use",
           "enum": ["large", "default", "small", "none"],
           "default": "default"
         },

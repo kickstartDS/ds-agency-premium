@@ -26,11 +26,11 @@ import type {VideoCurtainProps} from "../video-curtain/VideoCurtainProps";
 /**
  * Sets the vertical space between the content of the split layout
  */
-export type VerticalGap = "large" | "default" | "small" | "none";
+export type VerticalGutter = "large" | "default" | "small" | "none";
 /**
  * Sets the horizontal space between the content of the split layout
  */
-export type HorizontalGap = "large" | "default" | "small" | "none";
+export type HorizontalGutter = "large" | "default" | "small" | "none";
 /**
  * Makes the side part sticky on scroll
  */
@@ -38,15 +38,15 @@ export type Sticky = boolean;
 /**
  * Sets the space between the content of the split layout
  */
-export type ContentGap = "large" | "default" | "small" | "none";
+export type ContentGutter = "large" | "default" | "small" | "none";
 /**
  * Sets the minimum width of the main section
  */
 export type MinimumWidth = "narrow" | "wide";
 /**
- * Size of gap to use
+ * Size of gutter to use
  */
-export type Gap = "large" | "default" | "small" | "none";
+export type Gutter = "large" | "default" | "small" | "none";
 /**
  * Sets the minimum width of the main section
  */
@@ -105,8 +105,8 @@ export type Context = (
 )[];
 
 export interface SplitWeightedProps {
-  verticalGap?: VerticalGap;
-  horizontalGap?: HorizontalGap;
+  verticalGutter?: VerticalGutter;
+  horizontalGutter?: HorizontalGutter;
   sticky?: Sticky;
   mainLayout?: MainLayout;
   contextLayout?: ContextLayout;
@@ -115,11 +115,11 @@ export interface SplitWeightedProps {
   contextComponents?: Context;
 }
 export interface MainLayout {
-  gap?: ContentGap;
+  gutter?: ContentGutter;
   minWidth?: MinimumWidth;
 }
 export interface ContextLayout {
-  gap?: Gap;
+  gutter?: Gutter;
   minWidth?: MinimumWidth1;
 }
 /**

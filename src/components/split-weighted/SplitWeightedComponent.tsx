@@ -15,8 +15,8 @@ export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
   order,
   mainLayout,
   contextLayout,
-  horizontalGap = "default",
-  verticalGap = "default",
+  horizontalGutter = "default",
+  verticalGutter = "default",
   main,
   context,
   sticky = false,
@@ -28,15 +28,16 @@ export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
         "l-split-weighted--desktop-context-first",
       order?.mobile === "contextFirst" &&
         "l-split-weighted--mobile-context-first",
-      horizontalGap && `l-split-weighted--h-gap-${horizontalGap}`,
-      verticalGap && `l-split-weighted--v-gap-${verticalGap}`,
+      horizontalGutter && `l-split-weighted--h-gutter-${horizontalGutter}`,
+      verticalGutter && `l-split-weighted--v-gutter-${verticalGutter}`,
       sticky && `l-split-weighted--sticky`
     )}
   >
     <div
       className={classnames(
         "l-split-weighted__main l-split-weighted__content",
-        mainLayout?.gap && `l-split-weighted__main--gap-${mainLayout.gap}`,
+        mainLayout?.gutter &&
+          `l-split-weighted__main--gutter-${mainLayout.gutter}`,
         mainLayout?.minWidth &&
           `l-split-weighted__main--width-${mainLayout.minWidth}`
       )}
@@ -50,8 +51,10 @@ export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
     <div
       className={classnames(
         "l-split-weighted__context l-split-weighted__content",
-        contextLayout?.gap &&
-          `l-split-weighted__context--gap-${contextLayout.gap || "large"}`,
+        contextLayout?.gutter &&
+          `l-split-weighted__context--gutter-${
+            contextLayout.gutter || "large"
+          }`,
         contextLayout?.minWidth &&
           `l-split-weighted__context--width-${contextLayout.minWidth}`
       )}

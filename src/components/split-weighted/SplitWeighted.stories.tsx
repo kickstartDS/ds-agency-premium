@@ -32,10 +32,10 @@ export const TextWithContact: Story = {
     },
   },
   args: pack({
-    horizontalGap: "large",
+    horizontalGutter: "large",
     mainLayout: {
       minWidth: "narrow",
-      gap: "small",
+      gutter: "small",
     },
     contextLayout: {
       minWidth: "narrow",
