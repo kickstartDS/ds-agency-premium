@@ -11,7 +11,7 @@
   --dsa-check--border-color_focus: var(--ks-border-color-interface-interactive-active);
   --dsa-check--border-color_checked: var(--ks-border-color-interface-interactive-selected);
 
-  --dsa-check--size: 1.125em;
+  --dsa-check--size: 1.5em;
 
   --dsa-check--shadow_focus: 0 0 0 var(--ks-border-width-emphasized);
 
@@ -25,6 +25,7 @@
   --dsa-check__label--font: var(--ks-font-interface-s);
   --dsa-check__label--font-weight: var(--ks-font-weight-regular);
   --dsa-check__label--color: var(--ks-text-color-interface);
+  --dsa-check__label--margin-left: 0.5em;
 }
 
 .c-form-field {

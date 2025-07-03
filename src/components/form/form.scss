@@ -37,6 +37,10 @@
     font-weight: var(--dsa-check__label--font-weight, var(--ks-font-weight-regular));
     color: var(--dsa-check__label--color, var(--ks-text-color-interface-interactive));
 
+    &__label {
+      margin-left: var(--dsa-check__label--margin-left, 0.5em);
+    }
+
     &--checkbox {
       --c-form-check_box--border-radius: var(
         --dsa-check_box--border-radius,

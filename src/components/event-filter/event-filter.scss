@@ -1,0 +1,31 @@
+.dsa-event-filter {
+  border-radius: var(--ks-border-radius-card);
+  border: var(--ks-border-width-default) solid var(--ks-border-color-card);
+  padding: var(--ks-spacing-inset-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ks-spacing-stack-m);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ks-spacing-stack-xs);
+  }
+
+  &__topic {
+    font: var(--dsa-topic--font);
+    font-weight: var(--dsa-topic--font-weight);
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ks-spacing-stack-xs);
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ks-spacing-stack-s);
+  }
+}
