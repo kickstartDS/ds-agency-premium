@@ -19,7 +19,7 @@ export const BlogPost: FC<PropsWithChildren<BlogPostProps>> = ({
   <>
     <Section width="wide">
       <SplitWeighted
-        sticky
+        verticalAlign="sticky"
         horizontalGutter="large"
         mainLayout={{
           minWidth: "narrow",
@@ -30,7 +30,7 @@ export const BlogPost: FC<PropsWithChildren<BlogPostProps>> = ({
             {content ? <Text text={content} /> : children}
           </>
         }
-        context={aside && <BlogAside {...aside} />}
+        aside={aside && <BlogAside {...aside} />}
       />
     </Section>
     {cta && (

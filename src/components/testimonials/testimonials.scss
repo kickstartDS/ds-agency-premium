@@ -37,6 +37,8 @@
   }
 
   .c-quote {
+    gap: var(--dsa-testimonials--gap, var(--ks-spacing-stack-s) var(--ks-spacing-inline-m));
+
     &__source {
       color: var(--dsa-testimonials__source--color, var(--ks-text-color-default));
     }

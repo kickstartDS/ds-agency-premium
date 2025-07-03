@@ -30,11 +30,11 @@ export type ContentMinimumWidth = "narrow" | "medium" | "wide";
 /**
  * Sets the space between the content inside the two halves of the split layout
  */
-export type ContentGutter = "narrow" | "default" | "wide" | "none";
+export type ContentGutter = "small" | "default" | "large" | "none";
 /**
- * Determines the layout of the sections on mobile devices
+ * Reverses the order of the sections on mobile devices
  */
-export type MobileLayout = "stack" | "stackReverse";
+export type MobileReverse = boolean;
 /**
  * Aligns the content vertically within the sections
  */
@@ -95,7 +95,7 @@ export type Second = (
 export interface SplitEvenProps {
   contentMinWidth?: ContentMinimumWidth;
   contentGutter?: ContentGutter;
-  mobileLayout?: MobileLayout;
+  mobileReverse?: MobileReverse;
   verticalAlign?: VerticalAlignment;
   verticalGutter?: VerticalGutter;
   horizontalGutter?: HorizontalGutter;

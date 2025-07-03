@@ -34,7 +34,7 @@ export const TextWithContact: Story = {
   },
   args: pack({
     verticalGutter: "large",
-    contextLayout: {
+    asideLayout: {
       minWidth: "wide",
     },
     main: (
@@ -48,7 +48,7 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
         />
       </>
     ),
-    context: (
+    aside: (
       <>
         <Contact
           title={"Isabella Doe"}
@@ -87,8 +87,11 @@ export const TextWithTeaser: Story = {
   args: pack({
     mainLayout: {
       gutter: "small",
+      minWidth: "narrow",
     },
-    contextLayout: {},
+    asideLayout: {
+      minWidth: "wide",
+    },
     main: (
       <>
         <Headline
@@ -104,7 +107,7 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
         />
       </>
     ),
-    context: (
+    aside: (
       <TeaserCard
         layout="row"
         button={{

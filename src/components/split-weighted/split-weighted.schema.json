@@ -18,11 +18,12 @@
       "enum": ["large", "default", "small", "none"],
       "default": "default"
     },
-    "sticky": {
-      "title": "Sticky",
-      "description": "Makes the side part sticky on scroll",
-      "type": "boolean",
-      "default": false
+    "verticalAlign": {
+      "title": "Vertical Alignment",
+      "type": "string",
+      "description": "Aligns the content vertically within the sections",
+      "enum": ["top", "center", "bottom", "sticky"],
+      "default": "top"
     },
     "mainLayout": {
       "title": "Main Layout",
@@ -44,8 +45,9 @@
         }
       }
     },
-    "contextLayout": {
-      "title": "Context Layout",
+    "asideLayout": {
+      "title": "Aside Layout",
+      "description": "Layout settings for the aside section of the split layout",
       "type": "object",
       "properties": {
         "gutter": {
@@ -67,19 +69,19 @@
     "order": {
       "type": "object",
       "title": "Order",
-      "description": "Sets the order of the main and context sections in the split layout",
+      "description": "Sets the order of the main and aside sections in the split layout",
       "properties": {
         "mobile": {
           "title": "Mobile Order",
           "type": "string",
-          "enum": ["mainFirst", "contextFirst"],
+          "enum": ["mainFirst", "asideFirst"],
           "default": "mainFirst",
           "description": "Determines the order of sections on mobile devices"
         },
         "desktop": {
           "title": "Desktop Order",
           "type": "string",
-          "enum": ["mainFirst", "contextFirst"],
+          "enum": ["mainFirst", "asideFirst"],
           "default": "mainFirst",
           "description": "Determines the order of sections on desktop devices"
         }
@@ -145,10 +147,10 @@
         ]
       }
     },
-    "contextComponents": {
+    "asideComponents": {
       "type": "array",
-      "title": "Context",
-      "description": "Allowed components for the context half of the split layout",
+      "title": "Aside",
+      "description": "Allowed components for the aside half of the split layout",
       "items": {
         "anyOf": [
           {

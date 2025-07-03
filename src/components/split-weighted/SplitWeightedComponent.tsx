@@ -5,7 +5,7 @@ import "./split-weighted.scss";
 
 export interface ComponentProps {
   main?: React.ReactNode;
-  context?: React.ReactNode;
+  aside?: React.ReactNode;
 }
 
 // Merge SplitWeightedProps and ComponentProps for full prop support
@@ -14,23 +14,22 @@ export type SplitWeightedComponentProps = SplitWeightedProps & ComponentProps;
 export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
   order,
   mainLayout,
-  contextLayout,
+  asideLayout,
   horizontalGutter = "default",
   verticalGutter = "default",
   main,
-  context,
-  sticky = false,
+  aside,
+  verticalAlign = "top",
 }) => (
   <div
     className={classnames(
       "l-split-weighted",
-      order?.desktop === "contextFirst" &&
-        "l-split-weighted--desktop-context-first",
-      order?.mobile === "contextFirst" &&
-        "l-split-weighted--mobile-context-first",
+      order?.desktop === "asideFirst" &&
+        "l-split-weighted--desktop-aside-first",
+      order?.mobile === "asideFirst" && "l-split-weighted--mobile-aside-first",
       horizontalGutter && `l-split-weighted--h-gutter-${horizontalGutter}`,
       verticalGutter && `l-split-weighted--v-gutter-${verticalGutter}`,
-      sticky && `l-split-weighted--sticky`
+      verticalAlign && `l-split-weighted--align-${verticalAlign}`
     )}
   >
     <div
@@ -42,7 +41,7 @@ export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
           `l-split-weighted__main--width-${mainLayout.minWidth}`
       )}
     >
-      {sticky ? (
+      {verticalAlign === "sticky" ? (
         <div className="l-split-weighted__sticky-container">{main}</div>
       ) : (
         main
@@ -50,19 +49,17 @@ export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
     </div>
     <div
       className={classnames(
-        "l-split-weighted__context l-split-weighted__content",
-        contextLayout?.gutter &&
-          `l-split-weighted__context--gutter-${
-            contextLayout.gutter || "large"
-          }`,
-        contextLayout?.minWidth &&
-          `l-split-weighted__context--width-${contextLayout.minWidth}`
+        "l-split-weighted__aside l-split-weighted__content",
+        asideLayout?.gutter &&
+          `l-split-weighted__aside--gutter-${asideLayout.gutter || "large"}`,
+        asideLayout?.minWidth &&
+          `l-split-weighted__aside--width-${asideLayout.minWidth}`
       )}
     >
-      {sticky ? (
-        <div className="l-split-weighted__sticky-container">{context}</div>
+      {verticalAlign === "sticky" ? (
+        <div className="l-split-weighted__sticky-container">{aside}</div>
       ) : (
-        context
+        aside
       )}
     </div>
   </div>

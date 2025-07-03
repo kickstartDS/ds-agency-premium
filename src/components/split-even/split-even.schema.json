@@ -15,15 +15,14 @@
       "title": "Content Gutter",
       "description": "Sets the space between the content inside the two halves of the split layout",
       "type": "string",
-      "enum": ["narrow", "default", "wide", "none"],
+      "enum": ["small", "default", "large", "none"],
       "default": "default"
     },
-    "mobileLayout": {
-      "title": "Mobile Layout",
-      "description": "Determines the layout of the sections on mobile devices",
-      "type": "string",
-      "enum": ["stack", "stackReverse"],
-      "default": "stack"
+    "mobileReverse": {
+      "title": "Mobile Reverse",
+      "description": "Reverses the order of the sections on mobile devices",
+      "type": "boolean",
+      "default": false
     },
     "verticalAlign": {
       "title": "Vertical Alignment",

@@ -36,7 +36,7 @@ export const TextWithLogos: Story = {
   args: pack({
     contentGutter: "small",
     verticalAlign: "center",
-    sectionMinWidth: "wide",
+    contentMinWidth: "wide",
     first: (
       <>
         <Cta

@@ -12,7 +12,7 @@ export interface ComponentProps {
 export type SplitEvenComponentProps = SplitEvenProps & ComponentProps;
 
 export const SplitEven: FC<SplitEvenComponentProps> = ({
-  mobileLayout = "stack",
+  mobileReverse = false,
   contentMinWidth = "medium",
   verticalAlign = "top",
   horizontalGutter = "default",
@@ -24,7 +24,7 @@ export const SplitEven: FC<SplitEvenComponentProps> = ({
   <div
     className={classnames(
       "l-split-even",
-      mobileLayout === "stackReverse" && "l-split-even--mobile_stack-reverse",
+      mobileReverse && "l-split-even--mobile-reverse",
       horizontalGutter && `l-split-even--h-gutter-${horizontalGutter}`,
       verticalGutter && `l-split-even--v-gutter-${verticalGutter}`,
       contentMinWidth && `l-split-even--width-${contentMinWidth}`,

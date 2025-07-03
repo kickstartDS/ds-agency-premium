@@ -32,9 +32,9 @@ export type VerticalGutter = "large" | "default" | "small" | "none";
  */
 export type HorizontalGutter = "large" | "default" | "small" | "none";
 /**
- * Makes the side part sticky on scroll
+ * Aligns the content vertically within the sections
  */
-export type Sticky = boolean;
+export type VerticalAlignment = "top" | "center" | "bottom" | "sticky";
 /**
  * Sets the space between the content of the split layout
  */
@@ -54,11 +54,11 @@ export type MinimumWidth1 = "narrow" | "default" | "wide";
 /**
  * Determines the order of sections on mobile devices
  */
-export type MobileOrder = "mainFirst" | "contextFirst";
+export type MobileOrder = "mainFirst" | "asideFirst";
 /**
  * Determines the order of sections on desktop devices
  */
-export type DesktopOrder = "mainFirst" | "contextFirst";
+export type DesktopOrder = "mainFirst" | "asideFirst";
 /**
  * Allowed components for the main half of the split layout
  */
@@ -82,9 +82,9 @@ export type Main = (
   | VideoCurtainProps
 )[];
 /**
- * Allowed components for the context half of the split layout
+ * Allowed components for the aside half of the split layout
  */
-export type Context = (
+export type Aside = (
   | CtaProps
   | DividerProps
   | FaqProps
@@ -107,23 +107,26 @@ export type Context = (
 export interface SplitWeightedProps {
   verticalGutter?: VerticalGutter;
   horizontalGutter?: HorizontalGutter;
-  sticky?: Sticky;
+  verticalAlign?: VerticalAlignment;
   mainLayout?: MainLayout;
-  contextLayout?: ContextLayout;
+  asideLayout?: AsideLayout;
   order?: Order;
   mainComponents?: Main;
-  contextComponents?: Context;
+  asideComponents?: Aside;
 }
 export interface MainLayout {
   gutter?: ContentGutter;
   minWidth?: MinimumWidth;
 }
-export interface ContextLayout {
+/**
+ * Layout settings for the aside section of the split layout
+ */
+export interface AsideLayout {
   gutter?: Gutter;
   minWidth?: MinimumWidth1;
 }
 /**
- * Sets the order of the main and context sections in the split layout
+ * Sets the order of the main and aside sections in the split layout
  */
 export interface Order {
   mobile?: MobileOrder;

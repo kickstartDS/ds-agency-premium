@@ -8,21 +8,34 @@
   flex-wrap: wrap;
   gap: var(--dsa-split-weighted--v-gutter) var(--dsa-split-weighted--h-gutter);
 
-  &--sticky {
-    position: relative;
+  &--align {
+    &-top {
+      align-items: flex-start;
+    }
 
-    .l-split-weighted__sticky-container {
-      position: sticky;
-      top: var(--dsa-split-weighted--sticky-margin, var(--ks-spacing-stack-xl));
-      height: fit-content;
+    &-center {
+      align-items: center;
+    }
+
+    &-bottom {
+      align-items: flex-end;
+    }
+
+    &-sticky {
+      position: relative;
+
+      .l-split-weighted__sticky-container {
+        position: sticky;
+        top: var(--dsa-split-weighted--sticky-margin, var(--ks-spacing-stack-xl));
+        height: fit-content;
+      }
     }
   }
-
-  &--desktop-context-first {
+  &--desktop-aside-first {
     flex-direction: row-reverse;
   }
 
-  &--mobile-context-first {
+  &--mobile-aside-first {
     flex-wrap: wrap-reverse;
   }
 
@@ -92,26 +105,26 @@
     }
   }
 
-  &__context {
-    flex-basis: var(--dsa-split-weighted__context--flex-basis_default, var(--dsa-tile--width_medium));
+  &__aside {
+    flex-basis: var(--dsa-split-weighted__aside--flex-basis_default, var(--dsa-tile--width_medium));
     flex-grow: 1;
-    gap: var(--dsa-split-weighted__context--gutter_default, var(--ks-spacing-stack-s));
+    gap: var(--dsa-split-weighted__aside--gutter_default, var(--ks-spacing-stack-s));
 
     &--width-narrow {
-      flex-basis: var(--dsa-split-weighted__context--flex-basis_narrow, var(--dsa-tile--width_small));
+      flex-basis: var(--dsa-split-weighted__aside--flex-basis_narrow, var(--dsa-tile--width_small));
     }
 
     &--width-wide {
-      flex-basis: var(--dsa-split-weighted__context--flex-basis_wide, var(--dsa-tile--width_large));
+      flex-basis: var(--dsa-split-weighted__aside--flex-basis_wide, var(--dsa-tile--width_large));
     }
 
     &--gutter {
       &-small {
-        gap: var(--dsa-split-weighted__context--gutter_small, var(--ks-spacing-stack-xs));
+        gap: var(--dsa-split-weighted__aside--gutter_small, var(--ks-spacing-stack-xs));
       }
 
       &-large {
-        gap: var(--dsa-split-weighted__context--gutter_large, var(--ks-spacing-stack-m));
+        gap: var(--dsa-split-weighted__aside--gutter_large, var(--ks-spacing-stack-m));
       }
 
       &-none {
