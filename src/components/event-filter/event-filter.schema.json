@@ -51,7 +51,6 @@
     },
     "categories": {
       "type": "object",
-
       "properties": {
         "title": {
           "type": "string",
@@ -64,7 +63,8 @@
           "description": "List of categories to filter appointments",
           "items": {
             "type": "string",
-            "description": "Category name"
+            "description": "Category name",
+            "examples": ["Category Filter"]
           }
         },
         "toggle": {

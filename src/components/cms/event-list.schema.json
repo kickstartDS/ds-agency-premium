@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/cms/event-list.schema.json",
+  "title": "Event List",
+  "type": "object",
+  "properties": {
+    "filter": {
+      "$ref": "http://schema.mydesignsystem.com/event-filter.schema.json"
+    }
+  },
+  "additionalProperties": false
+}

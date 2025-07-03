@@ -52,7 +52,7 @@ export const EventFilterContextDefault = forwardRef<
           </div>
         </div>
       )}
-      {categories?.toggle && (
+      {categories && categories?.toggle && (
         <div className="dsa-event-filter__item">
           <span className="dsa-event-filter__topic">
             {categories?.title || "Categories"}
