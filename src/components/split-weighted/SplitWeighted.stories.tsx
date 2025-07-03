@@ -34,9 +34,6 @@ export const TextWithContact: Story = {
   },
   args: pack({
     verticalGutter: "large",
-    mainLayout: {
-      minWidth: "wide",
-    },
     contextLayout: {
       minWidth: "wide",
     },
@@ -59,7 +56,6 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
           image={{
             src: "img/people/contact-isabella.png",
             aspectRatio: "wide",
-            fullWidth: true,
           }}
           links={[
             {
@@ -92,9 +88,7 @@ export const TextWithTeaser: Story = {
     mainLayout: {
       gutter: "small",
     },
-    contextLayout: {
-      minWidth: "narrow",
-    },
+    contextLayout: {},
     main: (
       <>
         <Headline

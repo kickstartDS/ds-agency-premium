@@ -35,34 +35,10 @@ export const TextWithLogos: Story = {
   },
   args: pack({
     contentGutter: "small",
-    verticalAlign: "sticky",
+    verticalAlign: "center",
     sectionMinWidth: "wide",
     first: (
       <>
-        <Cta
-          highlightText
-          headline="Discover our solutions for Industry 4.0"
-          text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
-
-Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
-          buttons={[{ label: "Learn more" }]}
-        />
-        <Cta
-          highlightText
-          headline="Discover our solutions for Industry 4.0"
-          text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
-
-Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
-          buttons={[{ label: "Learn more" }]}
-        />
-        <Cta
-          highlightText
-          headline="Discover our solutions for Industry 4.0"
-          text={`We help companies make their production processes more efficient and future-proof through digitalization, automation, and smart technologies. Rely on our many years of experience in the industrial sector.
-
-Revolutionize your manufacturing with our tailored solutions designed to meet the specific needs of your industry.`}
-          buttons={[{ label: "Learn more" }]}
-        />
         <Cta
           highlightText
           headline="Discover our solutions for Industry 4.0"
