@@ -41,11 +41,15 @@ export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
           `l-split-weighted__main--width-${mainLayout.minWidth}`
       )}
     >
-      {verticalAlign === "sticky" ? (
-        <div className="l-split-weighted__sticky-container">{main}</div>
-      ) : (
-        main
-      )}
+      <div
+        className={classnames(
+          "l-split-weighted__content-container",
+          mainLayout?.gutter &&
+            `l-split-weighted__content-container--gutter-${mainLayout.gutter}`
+        )}
+      >
+        {main}
+      </div>
     </div>
     <div
       className={classnames(
@@ -56,11 +60,15 @@ export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
           `l-split-weighted__aside--width-${asideLayout.minWidth}`
       )}
     >
-      {verticalAlign === "sticky" ? (
-        <div className="l-split-weighted__sticky-container">{aside}</div>
-      ) : (
-        aside
-      )}
+      <div
+        className={classnames(
+          "l-split-weighted__content-container",
+          mainLayout?.gutter &&
+            `l-split-weighted__content-container--gutter-${mainLayout.gutter}`
+        )}
+      >
+        {aside}
+      </div>
     </div>
   </div>
 );

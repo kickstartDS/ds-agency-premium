@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/event-list-teaser.schema.json",
+  "title": "Event List Teaser",
+  "description": "Display an event teaser with date, title and location",
+  "type": "object",
+  "properties": {
+    "title": {
+      "title": "Headline",
+      "description": "Title of the event",
+      "type": "string",
+      "format": "markdown",
+      "examples": ["This is a event teaser title"]
+    },
+    "teaserText": {
+      "title": "Teaser Text",
+      "description": "Short teaser text for the event",
+      "type": "string",
+      "format": "markdown",
+      "examples": ["This is a short teaser text for the event"]
+    },
+    "date": {
+      "title": "Date",
+      "description": "The date of the event",
+      "type": "string",
+      "format": "date",
+      "examples": ["12.30.2022"]
+    },
+    "time": {
+      "title": "Time",
+      "description": "The time of the event",
+      "type": "string",
+      "examples": ["10:00"]
+    },
+    "location": {
+      "title": "Location",
+      "description": "Location of the event",
+      "type": "string",
+      "format": "markdown",
+      "examples": ["This is a location"]
+    },
+    "image": {
+      "title": "Image",
+      "description": "Image to display in the teaser",
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "format": "image",
+          "title": "Image Source",
+          "description": "URL of the image to display",
+          "examples": ["https://picsum.photos/seed/flower/800/600"]
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt Text",
+          "description": "Alt text of the image",
+          "examples": ["This is an image of a flower"]
+        }
+      }
+    },
+    "url": {
+      "title": "URL",
+      "description": "The event entry URL to link",
+      "type": "string",
+      "format": "uri",
+      "examples": ["https://example.com"]
+    },
+    "cta": {
+      "title": "Call to Action",
+      "description": "Text for the call to action",
+      "type": "string",
+      "examples": ["Show event"]
+    },
+    "ariaLabel": {
+      "title": "ARIA Label",
+      "description": "ARIA label for accessibility",
+      "type": "string",
+      "examples": ["Event teaser for "]
+    },
+    "className": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["title", "date", "location"]
+}

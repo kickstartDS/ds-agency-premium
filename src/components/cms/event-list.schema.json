@@ -6,6 +6,12 @@
   "properties": {
     "filter": {
       "$ref": "http://schema.mydesignsystem.com/event-filter.schema.json"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "http://schema.mydesignsystem.com/event-list-teaser.schema.json"
+      }
     }
   },
   "additionalProperties": false

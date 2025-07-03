@@ -6,10 +6,12 @@
  */
 
 import type {EventFilterProps} from "../event-filter/EventFilterProps";
+import type {EventListTeaserProps} from "../event-list-teaser/EventListTeaserProps";
 
 export interface EventListProps {
   /**
    * Referenced component EventFilterProps
    */
   filter?: EventFilterProps;
+  events?: EventListTeaserProps[];
 }
