@@ -40,17 +40,17 @@ export const EventListTeaserContextDefault = forwardRef<
           ref={ref}
           aria-label={ariaLabel}
         >
-          <div className="dsa-event-list-teaser__header">
-            <span className="dsa-event-list-teaser__title">{title}</span>
-          </div>
           <div className="dsa-event-list-teaser__content">
             <div className="dsa-event-list-teaser__text">
+              <div className="dsa-event-list-teaser__header">
+                <span className="dsa-event-list-teaser__title">{title}</span>
+              </div>
+              <div className="dsa-event-list-teaser__categories">
+                {categories.map((category) => (
+                  <TagLabel key={category} label={category} size="s" />
+                ))}
+              </div>
               <div className="dsa-event-list-teaser__infos">
-                <div className="dsa-event-list-teaser__categories">
-                  {categories.map((category) => (
-                    <TagLabel key={category} label={category} size="s" />
-                  ))}
-                </div>
                 <div className="dsa-event-list-teaser__details">
                   <div className="dsa-event-list-teaser__date">
                     <span className="dsa-event-list-teaser__info">

@@ -8,8 +8,8 @@
   border: var(--ks-border-width-default) solid var(--ks-border-color-card-interactive);
   display: flex;
   flex-direction: column;
-  padding: var(--ks-spacing-inset-stretch-m);
-  gap: var(--ks-spacing-stack-m) var(--ks-spacing-inline-m);
+  padding: var(--ks-spacing-inset-l);
+  gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
   position: relative;
   flex-wrap: wrap;
 
@@ -31,7 +31,7 @@
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
-    gap: var(--ks-spacing-stack-s);
+    gap: var(--ks-spacing-stack-m) var(--ks-spacing-inline-m);
   }
 
   &__text {
@@ -101,9 +101,11 @@
     display: flex;
     flex-direction: column;
     gap: var(--ks-spacing-stack-s);
-    background-color: var(--ks-background-color-accent);
-    padding: var(--ks-spacing-inset-s);
-    border-radius: var(--ks-border-radius-card);
+    border-top: 1px solid var(--ks-border-color-interface-interactive);
+    border-bottom: 1px solid var(--ks-border-color-interface-interactive);
+    padding-top: var(--ks-spacing-inset-s);
+    padding-bottom: var(--ks-spacing-inset-s);
+    width: fit-content;
   }
 
   &__location {
