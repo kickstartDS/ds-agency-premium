@@ -26,7 +26,7 @@ export const Default: Story = {
     },
   },
   args: pack({
-    date: "2025-09-18",
+    date: "18.09.2025",
     time: "09:00 – 17:00",
     label: "Register",
     url: "#",

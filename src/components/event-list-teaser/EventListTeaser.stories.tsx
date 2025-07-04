@@ -30,7 +30,7 @@ export const Default: Story = {
   args: pack({
     teaserText:
       "The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence.",
-    date: "12/30/2025",
+    date: "30.12.2025",
     location: "Berlin, Germany",
     title: "The Future of AI",
     image: {

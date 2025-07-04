@@ -9,7 +9,7 @@
       "description": "Date of the appointment",
       "type": "string",
       "format": "date",
-      "examples": ["2025-09-18"]
+      "examples": ["18.09.2025"]
     },
     "time": {
       "title": "Time",

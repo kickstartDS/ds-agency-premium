@@ -55,14 +55,14 @@
   --dsa-tile--width_largest: calc(var(--ks-font-size-copy-m) * 38);
 
   // Logo height
-  --dsa-logo--height: 2.25rem;
+  --dsa-logo--height: 2rem;
 
   @media (min-width: 48em) {
-    --dsa-logo--height: 2.5rem;
+    --dsa-logo--height: 2.25rem;
   }
 
   @media (min-width: 62em) {
-    --dsa-logo--height: 3rem;
+    --dsa-logo--height: 2.5rem;
   }
 
   // Header height calculation

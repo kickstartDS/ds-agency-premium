@@ -61,6 +61,10 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    @media (min-width: "62rem") {
+      align-items: center;
+    }
+
     .dsa-header--floating & {
       max-width: calc(var(--dsa-header--max-width) + var(--dsa-header_floating--spacing-horizontal) * 2);
       padding: 0 var(--dsa-header_floating--spacing-horizontal);

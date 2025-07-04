@@ -31,7 +31,7 @@ export const Default: Story = {
   10178 Berlin`,
     dates: [
       {
-        date: "2025-09-18",
+        date: "18.09.2025",
         time: "09:00 – 17:00",
         label: "Register",
         url: "#",
@@ -39,7 +39,7 @@ export const Default: Story = {
           "Register for the event on 18th September 2025 from 09:00 to 17:00",
       },
       {
-        date: "2025-09-18",
+        date: "18.09.2025",
         time: "09:00 – 17:00",
         label: "Register",
         url: "#",

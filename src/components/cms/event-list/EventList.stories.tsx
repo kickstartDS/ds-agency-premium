@@ -82,7 +82,7 @@ export const EventList: Story = {
           "Global Innovations Summit 2025: Advancing Sustainable Technologies",
         date: "20/30/2025",
         text: "Welcome to the Global Innovations Summit 2025, where we will explore the latest advancements in sustainable technologies. Join us for a day of insightful discussions and networking opportunities with industry leaders.",
-        time: "FROM 17:00",
+        time: "from 17:00",
         location: {
           name: "Cologne Exhibition Center",
           address: `123 Main St<br/>
