@@ -32,39 +32,43 @@ export const EventFilterContextDefault = forwardRef<
   ) => (
     <div className="dsa-event-filter" ref={ref}>
       {datePicker?.toggle && (
-        <div className="dsa-event-filter__item">
+        <>
           <span className="dsa-event-filter__topic">
             {datePicker.title || "Find Appointment"}
           </span>
-          <div className="dsa-event-filter__date-picker">
-            <TextField
-              label={datePicker.dateFromInput.label || "From"}
-              placeholder={
-                datePicker.dateFromInput.placeholder || "Select a date"
-              }
-            />
-            <TextField
-              label={datePicker.dateToInput.label || "To"}
-              placeholder={
-                datePicker.dateToInput.placeholder || "Select a date"
-              }
-            />
+          <div className="dsa-event-filter__item">
+            <div className="dsa-event-filter__date-picker">
+              <TextField
+                label={datePicker.dateFromInput.label || "From"}
+                placeholder={
+                  datePicker.dateFromInput.placeholder || "Select a date"
+                }
+              />
+              <TextField
+                label={datePicker.dateToInput.label || "To"}
+                placeholder={
+                  datePicker.dateToInput.placeholder || "Select a date"
+                }
+              />
+            </div>
           </div>
-        </div>
+        </>
       )}
       {categories && categories?.toggle && (
-        <div className="dsa-event-filter__item">
+        <>
           <span className="dsa-event-filter__topic">
             {categories?.title || "Categories"}
           </span>
-          <div className="dsa-event-filter__categories">
-            {categories &&
-              categories.categoryCheckboxes.length > 0 &&
-              categories.categoryCheckboxes.map((category, index) => (
-                <Checkbox key={index} label={category} />
-              ))}
+          <div className="dsa-event-filter__item">
+            <div className="dsa-event-filter__categories">
+              {categories &&
+                categories.categoryCheckboxes.length > 0 &&
+                categories.categoryCheckboxes.map((category, index) => (
+                  <Checkbox key={index} label={category} />
+                ))}
+            </div>
           </div>
-        </div>
+        </>
       )}
 
       <div className="dsa-event-filter__buttons">

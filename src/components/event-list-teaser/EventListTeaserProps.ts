@@ -12,7 +12,7 @@ export type Headline = string;
 /**
  * Short teaser text for the event
  */
-export type TeaserText = string;
+export type Text = string;
 /**
  * The date of the event
  */
@@ -22,9 +22,17 @@ export type Date = string;
  */
 export type Time = string;
 /**
- * Location of the event
+ * Name of the location
  */
-export type Location = string;
+export type LocationName = string;
+/**
+ * Address of the location
+ */
+export type Address = string;
+/**
+ * Categories of the event
+ */
+export type Categories = string[];
 /**
  * URL of the image to display
  */
@@ -51,15 +59,23 @@ export type ARIALabel = string;
  */
 export interface EventListTeaserProps {
   title: Headline;
-  teaserText?: TeaserText;
+  text?: Text;
   date: Date;
   time?: Time;
   location: Location;
+  categories?: Categories;
   image?: Image;
   url?: URL;
   cta?: CallToAction;
   ariaLabel?: ARIALabel;
   className?: string;
+}
+/**
+ * Location of the event
+ */
+export interface Location {
+  name?: LocationName;
+  address?: Address;
 }
 /**
  * Image to display in the teaser

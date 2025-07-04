@@ -12,19 +12,21 @@
       "format": "markdown",
       "examples": ["This is a event teaser title"]
     },
-    "teaserText": {
-      "title": "Teaser Text",
+    "text": {
+      "title": "Text",
       "description": "Short teaser text for the event",
       "type": "string",
       "format": "markdown",
-      "examples": ["This is a short teaser text for the event"]
+      "examples": [
+        "The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence. The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence."
+      ]
     },
     "date": {
       "title": "Date",
       "description": "The date of the event",
       "type": "string",
       "format": "date",
-      "examples": ["12.30.2022"]
+      "examples": ["FRI, JAN 16"]
     },
     "time": {
       "title": "Time",
@@ -35,9 +37,31 @@
     "location": {
       "title": "Location",
       "description": "Location of the event",
-      "type": "string",
-      "format": "markdown",
-      "examples": ["This is a location"]
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Location Name",
+          "description": "Name of the location",
+          "examples": ["Stadthalle"]
+        },
+        "address": {
+          "type": "string",
+          "title": "Address",
+          "description": "Address of the location",
+          "examples": ["Schaafenstraße 25 12345 Köln"]
+        }
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "description": "Categories of the event",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": ["AI", "Technology", "Innovation"]
+      },
+      "default": ["AI"]
     },
     "image": {
       "title": "Image",

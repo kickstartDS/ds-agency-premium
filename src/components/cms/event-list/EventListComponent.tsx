@@ -16,6 +16,9 @@ export const EventList: FC<PropsWithChildren<EventListProps>> = ({
     <Section width="wide">
       <SplitWeighted
         verticalAlign="sticky"
+        mainLayout={{
+          minWidth: "narrow",
+        }}
         order={{
           desktop: "asideFirst",
           mobile: "asideFirst",
