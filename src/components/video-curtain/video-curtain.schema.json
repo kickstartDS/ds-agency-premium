@@ -63,7 +63,7 @@
       "description": "Choose the alginment of the module content",
       "enum": ["center", "left", "right"],
       "type": "string",
-      "default": "bottom"
+      "default": "center"
     }
   },
   "additionalProperties": false
