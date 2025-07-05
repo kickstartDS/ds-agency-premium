@@ -4,6 +4,8 @@ import { Link } from "@kickstartds/base/lib/link";
 import { Logo } from "../logo/LogoComponent";
 import "./nav-flyout.scss";
 import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./NavFlyoutDefaults";
 
 export type { NavFlyoutProps };
 
@@ -79,6 +81,6 @@ export const NavFlyout = forwardRef<
   NavFlyoutProps & HTMLAttributes<HTMLElement>
 >((props, ref) => {
   const Component = useContext(NavFlyoutContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 NavFlyout.displayName = "NavFlyout";

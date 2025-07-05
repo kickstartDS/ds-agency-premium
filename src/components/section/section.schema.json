@@ -24,8 +24,7 @@
         "boldTransition",
         "symmetricGlow",
         "anchorGlow"
-      ],
-      "default": "default"
+      ]
     },
     "backgroundColor": {
       "type": "string",
