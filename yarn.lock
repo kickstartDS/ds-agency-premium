@@ -2233,10 +2233,10 @@
     mkdirp "^1.0.4"
     prettier "^2.6.2"
 
-"@kickstartds/jsonschema-utils@3.5.0", "@kickstartds/jsonschema-utils@^3.5.0":
-  version "3.5.0"
-  resolved "https://registry.npmjs.org/@kickstartds/jsonschema-utils/-/jsonschema-utils-3.5.0.tgz#01791974464bb9b19e6b412c8c7dee24121e8ac4"
-  integrity sha512-iVAvqiRlYyM5df1/fcVTBEDRArJW9TFsHo4vp+3Btx4RALwVvkivCFudhkbNYuE2qkpp6sCPAnhVg5Df6Em9VQ==
+"@kickstartds/jsonschema-utils@3.6.1", "@kickstartds/jsonschema-utils@^3.6.1":
+  version "3.6.1"
+  resolved "https://registry.npmjs.org/@kickstartds/jsonschema-utils/-/jsonschema-utils-3.6.1.tgz#b692e56bfeae8c8bf8961ba3f86e358a811da198"
+  integrity sha512-Ke5adEzH0s5XXYJmBLGIIGBXAl0rWHaiOoFE0LmZUD1S8rTgS7VN5hoW6OWj35uXcWRVwC0sdkPFnKsVCxM+rQ==
   dependencies:
     "@bcherny/json-schema-ref-parser" "10.0.5-fork"
     "@kickstartds/cambria" "1.0.5"
@@ -2248,13 +2248,13 @@
     json-schema-traverse "^1.0.0"
     jsonpointer "~5.0.1"
 
-"@kickstartds/jsonschema2types@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@kickstartds/jsonschema2types/-/jsonschema2types-1.2.1.tgz#b464ef10d0b3e7cf39cef04daf024db2cf39f849"
-  integrity sha512-FvRRKBsMzpOAyYuaVhMh6T8X4KcMKDfJYIC4dqrIkPgUMTOjMyjCCoJld1frI9gV8L1tAcGCGX78ITmXWRbK6w==
+"@kickstartds/jsonschema2types@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/@kickstartds/jsonschema2types/-/jsonschema2types-1.2.3.tgz#a4580b772648682d1c07c37af5be7aabf38ee891"
+  integrity sha512-Dp41eGa4jkyahkB0NPYroixStSP/+f/01r5FuDIxdJK3ljU7FWTJGuYPNcToPN0gZxSHgaWASirFrAKUD5TgUg==
   dependencies:
     "@kickstartds/json-schema-to-typescript" "~13.1.20"
-    "@kickstartds/jsonschema-utils" "3.5.0"
+    "@kickstartds/jsonschema-utils" "3.6.1"
     ajv "^8.12.0"
     object-traversal "^1.0.1"
 
