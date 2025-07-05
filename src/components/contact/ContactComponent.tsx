@@ -15,6 +15,8 @@ import { Link } from "@kickstartds/base/lib/link";
 import { Icon } from "@kickstartds/base/lib/icon";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./ContactDefaults";
 
 export type { ContactProps };
 
@@ -80,7 +82,7 @@ export const ContactContext = createContext(ContactContextDefault);
 export const Contact = forwardRef<HTMLDivElement, ContactProps>(
   (props, ref) => {
     const Component = useContext(ContactContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 Contact.displayName = "Contact";

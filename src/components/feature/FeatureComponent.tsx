@@ -5,6 +5,8 @@ import { Button } from "../button/ButtonComponent";
 import { FeatureProps } from "./FeatureProps";
 import { Link } from "@kickstartds/base/lib/link";
 import { RichText } from "@kickstartds/base/lib/rich-text";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./FeatureDefaults";
 
 export type { FeatureProps };
 
@@ -95,6 +97,6 @@ export const Feature = forwardRef<
   FeatureProps & Omit<HTMLAttributes<HTMLDivElement>, "style">
 >((props, ref) => {
   const Component = useContext(FeatureContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Feature.displayName = "Feature";

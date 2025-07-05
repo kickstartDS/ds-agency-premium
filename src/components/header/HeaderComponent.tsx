@@ -4,6 +4,8 @@ import { HeaderProps } from "./HeaderProps";
 import { NavMain } from "../nav-main/NavMainComponent";
 import { Logo } from "../logo/LogoComponent";
 import "./header.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./HeaderDefaults";
 
 export type { HeaderProps };
 
@@ -52,6 +54,6 @@ export const Header = forwardRef<
   HeaderProps & HTMLAttributes<HTMLElement>
 >((props, ref) => {
   const Component = useContext(HeaderContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Header.displayName = "Header";
