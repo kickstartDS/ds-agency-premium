@@ -6,12 +6,11 @@
   --g-link--border-radius: var(--ks-border-radius-card);
   display: block;
   border: var(--ks-border-width-default) solid var(--ks-border-color-card-interactive);
-  display: flex;
-  flex-direction: column;
   padding: var(--ks-spacing-inset-l);
-  gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
-  position: relative;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--ks-spacing-stack-m) var(--ks-spacing-inline-m);
 
   &:hover {
     border-color: var(--ks-border-color-card-interactive-hover);
@@ -28,13 +27,6 @@
   }
 
   &__content {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    gap: var(--ks-spacing-stack-m) var(--ks-spacing-inline-m);
-  }
-
-  &__text {
     display: flex;
     flex-direction: column;
     gap: var(--ks-spacing-stack-s);
@@ -44,10 +36,7 @@
   }
 
   &__image {
-    flex-shrink: 1;
-    flex-grow: 5;
-    flex-basis: var(--dsa-tile--width_smallest);
-    aspect-ratio: 4/3;
+    flex-basis: var(--dsa-tile--width_small);
 
     img {
       object-fit: cover;
@@ -68,10 +57,6 @@
     font: var(--ks-font-display-m);
     font-weight: var(--ks-font-weight-semi-bold);
     color: var(--ks-text-color-display);
-  }
-
-  &__address {
-    margin: 0;
   }
 
   &__details {
@@ -105,25 +90,33 @@
     border-bottom: 1px solid var(--ks-border-color-interface-interactive);
     padding-top: var(--ks-spacing-inset-s);
     padding-bottom: var(--ks-spacing-inset-s);
-    width: fit-content;
   }
 
   &__location {
     flex-basis: var(--dsa-tile--width_small);
-  }
+    flex-grow: 1;
 
-  &__name {
-    font-weight: var(--ks-font-weight-semi-bold);
-    color: var(--dsa-topic--color);
+    &-name {
+      font-weight: var(--ks-font-weight-semi-bold);
+      color: var(--dsa-topic--color);
+      display: block;
+    }
+
+    &-address {
+      margin: 0;
+    }
   }
 
   &__info {
     display: flex;
     gap: calc(var(--ks-spacing-xxs) * 0.75);
     font: var(--ks-font-interface-s);
-    align-items: center;
     justify-content: flex-start;
     color: var(--ks-text-color-interface);
+
+    address {
+      font-style: normal;
+    }
 
     &--location {
       flex-basis: 100%;
@@ -146,11 +139,16 @@
     align-items: center;
     text-wrap: nowrap;
     width: fit-content;
+    transition: var(--ks-transition-hover);
+
+    &:hover {
+      color: var(--ks-text-color-primary-hover);
+    }
 
     .icon {
       width: calc(var(--ks-font-size-interface-s) * var(--ks-line-height-interface-s));
       height: calc(var(--ks-font-size-interface-s) * var(--ks-line-height-interface-s));
-      color: var(--ks-text-color-primary);
+      color: inherit;
       flex-shrink: 0;
       flex-grow: 1;
     }

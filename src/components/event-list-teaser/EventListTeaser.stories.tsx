@@ -28,18 +28,20 @@ export const Default: Story = {
     },
   },
   args: pack({
-    teaserText:
-      "The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence.",
+    text: "The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence.",
     date: "30.12.2025",
-    location: "Berlin, Germany",
+    location: {
+      name: "Tech Conference Center",
+      address: `123 Innovation Drive
+
+Tech City`,
+    },
     title: "The Future of AI",
     image: {
-      src: "https://picsum.photos/seed/flower/800/600",
+      src: "img/close-up-young-business-team-working.png",
       alt: "A futuristic AI concept image",
     },
-    link: {
-      url: "#",
-      text: "Show event",
-    },
+    url: "#",
+    cta: "Show event",
   }),
 };

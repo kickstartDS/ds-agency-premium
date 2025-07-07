@@ -66,7 +66,7 @@ export interface EventListTeaserProps {
   categories?: Categories;
   image?: Image;
   url?: URL;
-  cta?: CallToAction;
+  ctaText?: CallToAction;
   ariaLabel?: ARIALabel;
   className?: string;
 }

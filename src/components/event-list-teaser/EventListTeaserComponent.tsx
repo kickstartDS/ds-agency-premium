@@ -23,7 +23,7 @@ export const EventListTeaserContextDefault = forwardRef<
       categories,
       location,
       image,
-      cta,
+      ctaText,
       url,
       ariaLabel,
       className,
@@ -41,56 +41,58 @@ export const EventListTeaserContextDefault = forwardRef<
           aria-label={ariaLabel}
         >
           <div className="dsa-event-list-teaser__content">
-            <div className="dsa-event-list-teaser__text">
-              <div className="dsa-event-list-teaser__header">
-                <span className="dsa-event-list-teaser__title">{title}</span>
-              </div>
+            <div className="dsa-event-list-teaser__header">
+              <span className="dsa-event-list-teaser__title">{title}</span>
+            </div>
+            {categories && categories.length > 0 && (
               <div className="dsa-event-list-teaser__categories">
                 {categories.map((category) => (
                   <TagLabel key={category} label={category} size="s" />
                 ))}
               </div>
-              <div className="dsa-event-list-teaser__infos">
-                <div className="dsa-event-list-teaser__details">
-                  <div className="dsa-event-list-teaser__date">
-                    <span className="dsa-event-list-teaser__info">
-                      <Icon aria-hidden icon={"date"} />
-                      {date}
-                    </span>
-                    <span className="dsa-event-list-teaser__info">
-                      <Icon aria-hidden icon={"time"} />
-                      {time}
-                    </span>
-                  </div>
-                  <div className="dsa-event-list-teaser__location">
-                    <span className="dsa-event-list-teaser__info">
-                      <Icon aria-hidden icon={"map-pin"} />
-                      <span className="dsa-event-list-teaser__location-text">
-                        {location?.name && (
-                          <span className="dsa-event-list-teaser__name">
-                            {location.name}
-                          </span>
-                        )}
-                        <Markdown className="dsa-event-list-teaser__address">
-                          {location?.address}
-                        </Markdown>
+            )}
+            <div className="dsa-event-list-teaser__infos">
+              <div className="dsa-event-list-teaser__details">
+                <div className="dsa-event-list-teaser__date">
+                  <span className="dsa-event-list-teaser__info">
+                    <Icon aria-hidden icon={"date"} />
+                    {date}
+                  </span>
+                  <span className="dsa-event-list-teaser__info">
+                    <Icon aria-hidden icon={"time"} />
+                    {time}
+                  </span>
+                </div>
+
+                <div className="dsa-event-list-teaser__location dsa-event-list-teaser__info">
+                  <Icon aria-hidden icon={"map-pin"} />
+                  <address>
+                    {location?.name && (
+                      <span className="dsa-event-list-teaser__location-name">
+                        {location.name}
                       </span>
-                    </span>
-                  </div>
+                    )}
+                    <Markdown className="dsa-event-list-teaser__location-address">
+                      {location?.address}
+                    </Markdown>
+                  </address>
                 </div>
               </div>
-              <p className="dsa-event-list-teaser__teaser-text">{text}</p>
-              <div className="dsa-event-list-teaser__cta">
-                <span>{cta}</span>
-                <Icon aria-hidden icon={"chevron-right"} />
-              </div>
             </div>
-            {image && image.src && (
-              <div className="dsa-event-list-teaser__image">
-                <Picture src={image?.src} alt={image?.alt} />
-              </div>
+            {text && (
+              <p className="dsa-event-list-teaser__teaser-text">{text}</p>
             )}
+
+            <div className="dsa-event-list-teaser__cta">
+              <span>{ctaText}</span>
+              <Icon aria-hidden icon={"chevron-right"} />
+            </div>
           </div>
+          {image && image.src && (
+            <div className="dsa-event-list-teaser__image">
+              <Picture src={image?.src} alt={image?.alt} />
+            </div>
+          )}
         </a>
       </Container>
     );

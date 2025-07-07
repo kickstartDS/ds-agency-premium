@@ -53,7 +53,7 @@ export const EventList: Story = {
         },
         image: {
           alt: "A futuristic AI concept image",
-          src: "https://picsum.photos/seed/flower/800/600",
+          src: "img/close-up-young-business-team-working.png",
         },
         cta: "Show appointment",
         url: "https://example.com",
@@ -71,7 +71,7 @@ export const EventList: Story = {
         },
         image: {
           alt: "A futuristic AI concept image",
-          src: "https://picsum.photos/seed/flower/800/600",
+          src: "img/close-up-young-business-team-working.png",
         },
         cta: "Show appointment",
         url: "https://example.com",
@@ -90,7 +90,7 @@ export const EventList: Story = {
         },
         image: {
           alt: "A futuristic AI concept image",
-          src: "https://picsum.photos/seed/flower/800/600",
+          src: "img/close-up-young-business-team-working.png",
         },
         cta: "Show appointment",
         url: "https://example.com",

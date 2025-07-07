@@ -90,7 +90,7 @@
       "format": "uri",
       "examples": ["https://example.com"]
     },
-    "cta": {
+    "ctaText": {
       "title": "Call to Action",
       "description": "Text for the call to action",
       "type": "string",
