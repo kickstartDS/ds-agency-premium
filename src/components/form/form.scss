@@ -54,6 +54,7 @@
   }
 
   .c-form-field {
+    --c-form-field_label--padding: 0 0 var(--dsa-input__label--padding-bottom, 0.25em) 0;
     --c-form-field--border: var(--dsa-input--border, var(--ks-border-width-default) solid);
     --c-form-field--border-color: var(--dsa-input--border-color, var(--ks-border-color-interface-interactive));
     --c-form-field-hover--border-color: var(
