@@ -29,6 +29,7 @@ export const EventLoginContextDefault = forwardRef<
           />
 
           <TextField
+            type="password"
             label={passwordInput.label}
             placeholder={passwordInput?.placeholder}
           />

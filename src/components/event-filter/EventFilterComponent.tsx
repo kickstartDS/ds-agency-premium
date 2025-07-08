@@ -39,12 +39,14 @@ export const EventFilterContextDefault = forwardRef<
           <div className="dsa-event-filter__item">
             <div className="dsa-event-filter__date-picker">
               <TextField
+                type="date"
                 label={datePicker.dateFromInput.label || "From"}
                 placeholder={
                   datePicker.dateFromInput.placeholder || "Select a date"
                 }
               />
               <TextField
+                type="date"
                 label={datePicker.dateToInput.label || "To"}
                 placeholder={
                   datePicker.dateToInput.placeholder || "Select a date"

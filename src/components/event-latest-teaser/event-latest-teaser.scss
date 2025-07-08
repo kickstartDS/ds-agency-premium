@@ -126,11 +126,15 @@
     align-items: center;
     text-wrap: nowrap;
     margin-left: auto;
+    transition: var(--ks-transition-hover);
+
+    &:hover {
+      color: var(--ks-text-color-primary-hover);
+    }
 
     .icon {
       width: calc(var(--ks-font-size-interface-s) * var(--ks-line-height-interface-s));
       height: calc(var(--ks-font-size-interface-s) * var(--ks-line-height-interface-s));
-      color: var(--ks-text-color-primary);
       flex-shrink: 0;
       flex-grow: 1;
     }

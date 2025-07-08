@@ -77,6 +77,7 @@ export const EventRegistrationContextDefault = forwardRef<
           placeholder={nameInput?.placeholder}
         />
         <TextField
+          type="email"
           label={emailInput.label}
           placeholder={emailInput?.placeholder}
         />
