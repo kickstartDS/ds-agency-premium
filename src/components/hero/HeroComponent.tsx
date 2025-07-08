@@ -6,6 +6,8 @@ import "./hero.scss";
 import { Container } from "@kickstartds/core/lib/container";
 import { ButtonContext } from "@kickstartds/base/lib/button";
 import { useButtonGroup } from "../button-group/ButtonGroupComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./HeroDefaults";
 
 export type { HeroProps };
 
@@ -107,6 +109,6 @@ export const Hero = forwardRef<
   HeroProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(HeroContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Hero.displayName = "Hero";

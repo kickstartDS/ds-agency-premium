@@ -2,6 +2,8 @@ import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
 import { MosaicProps } from "./MosaicProps";
 import "./mosaic.scss";
 import { Storytelling } from "@kickstartds/content/lib/storytelling";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./MosaicDefaults";
 
 export type { MosaicProps };
 
@@ -56,6 +58,6 @@ export const Mosaic = forwardRef<
   MosaicProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(MosaicContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Mosaic.displayName = "Mosaic";

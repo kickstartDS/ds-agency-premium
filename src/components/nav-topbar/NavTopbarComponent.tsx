@@ -5,6 +5,8 @@ import { NavDropdown } from "../nav-dropdown/NavDropdownComponent";
 import "./nav-topbar.scss";
 import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
 import { NavTopbarProps } from "./NavTopbarProps";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./NavTopbarDefaults";
 
 export type { NavTopbarProps };
 
@@ -68,6 +70,6 @@ export const NavTopbar = forwardRef<
   NavTopbarProps & HTMLAttributes<HTMLElement>
 >((props, ref) => {
   const Component = useContext(NavTopbarContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 NavTopbar.displayName = "NavTopbar";
