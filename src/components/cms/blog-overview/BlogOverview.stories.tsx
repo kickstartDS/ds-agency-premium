@@ -167,7 +167,7 @@ export const BlogOverview: Story = {
       ],
       image: {
         padding: false,
-        src: "img/contact-person.png",
+        src: "img/people/contact-person.png",
       },
       order: {
         mobileImageLast: false,

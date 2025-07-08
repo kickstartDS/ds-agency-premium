@@ -45,7 +45,7 @@
 
   .c-storytelling__box {
     &__content {
-      max-width: var(--dsa-cta__content--max-width, var(--dsa-content--width_narrow));
+      max-width: var(--dsa-cta__content--max-width, var(--dsa-tile--width_largest));
     }
 
     &:only-child {

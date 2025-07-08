@@ -140,7 +140,7 @@ export const ContactBanner: Story = {
     text: "Our modular design approach allows for flexibility and scalability in your application's architecture.",
     padding: true,
     image: {
-      src: "img/contact-person.png",
+      src: "img/people/contact-person.png",
       padding: false,
     },
     order: {

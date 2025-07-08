@@ -11,8 +11,14 @@ import { Cta } from "../components/cta/CtaComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
-    <Section spaceBefore="none" width="full">
+    <Header
+      {...headerProps}
+      floating
+      inverted
+      dropdownInverted
+      flyoutInverted
+    />
+    <Section spaceBefore="none" width="full" inverted>
       <Hero
         height="fullScreen"
         image={{
@@ -35,13 +41,9 @@ const Page = () => (
       />
     </Section>
 
-    <Section
-      transition="to-accent"
-      spaceBefore="small"
-      spaceAfter="none"
-      width="max"
-    >
+    <Section width="wide" content={{ mode: "list", gutter: "large" }} inverted>
       <Mosaic
+        layout="textLeft"
         tile={[
           {
             headline: "A Digital Transformation Love Story",
@@ -60,6 +62,11 @@ const Page = () => (
               url: "/showcase-techfusion",
             },
           },
+        ]}
+      />
+      <Mosaic
+        layout="textRight"
+        tile={[
           {
             headline: "Speed and Scale",
             sub: "LaunchPad Audio Innovations",
@@ -76,6 +83,11 @@ const Page = () => (
               url: "/showcase-launchpad",
             },
           },
+        ]}
+      />
+      <Mosaic
+        layout="textLeft"
+        tile={[
           {
             headline: "Navigating the Headless Frontier for Brand Consistency",
             sub: "EcoTech Solutions",
@@ -96,12 +108,7 @@ const Page = () => (
       />
     </Section>
 
-    <Section
-      spaceBefore="small"
-      spaceAfter="none"
-      backgroundColor="accent"
-      width="wide"
-    >
+    <Section backgroundColor="accent" width="wide">
       <Cta
         textAlign="center"
         highlightText

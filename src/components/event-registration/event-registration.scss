@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--ks-spacing-stack-s);
+  max-width: 500px;
+  margin: auto;
+  margin-top: 200px;
 
   &__link {
     width: fit-content;
@@ -75,17 +78,31 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: var(--ks-spacing-stack-xs);
+    gap: var(--ks-spacing-stack-s);
 
     .c-button {
       align-self: flex-end;
     }
   }
 
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ks-spacing-stack-s);
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--ks-spacing-stack-xs) var(--ks-spacing-inline-m);
+  }
+
   &__mandatory-text {
     font: var(--ks-font-interface-xs);
     color: var(--ks-color-fg-alpha-4);
-    margin-top: var(--ks-spacing-xxs);
     font-style: italic;
+    flex-basis: var(--dsa-tile--width_small);
   }
 }

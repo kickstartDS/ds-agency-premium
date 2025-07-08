@@ -51,7 +51,6 @@ const Page = () => (
       width="wide"
     >
       <ImageStory
-        padding
         layout="imageLeft"
         text={`
 Here at Systemics, we bring a range of design system services that can make a difference:
@@ -132,7 +131,6 @@ We empower your digital teams with the knowledge and skills to manage and evolve
 
     <Section
       backgroundColor="accent"
-      transition="to-bold"
       width="wide"
       headline={{
         text: "Happy Customers Showcases",
@@ -172,12 +170,12 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       />
     </Section>
 
-    <Section backgroundColor="bold" width="full">
+    <Section width="wide">
       <Cta
         headline="Get in touch and chat with us about getting your product or platform to market faster"
         backgroundImage="/img/bg/bg_dot-carpet-blue.svg"
         image={{
-          src: "/img/contact-person.png",
+          src: "/img/people/contact-person.png",
           padding: false,
         }}
         buttons={[
@@ -196,13 +194,11 @@ We empower your digital teams with the knowledge and skills to manage and evolve
     </Section>
 
     <Section
-      width="wide"
       headline={{
         text: "Design Systems, all you need to know",
         sub: "Why Design Systems have gained popularity in digital product development.",
         large: true,
         align: "left",
-        width: "default",
       }}
     >
       <Faq
@@ -263,7 +259,6 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       headline={{
         text: "Headless CMS for the modern web",
         sub: "Frequently asked questions",
-        align: "right",
       }}
     >
       <Faq

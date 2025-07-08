@@ -108,6 +108,7 @@ The implementation of the new **Design System** and migration to **Storyblok** t
     </Section>
     <Section width="wide" inverted>
       <Cta
+        padding
         inverted
         highlightText
         textAlign="center"
@@ -128,7 +129,6 @@ The implementation of the new **Design System** and migration to **Storyblok** t
       />
     </Section>
     <Section
-      width="wide"
       headline={{
         text: "More of our Demo Customer Showcases",
         textAlign: "center",

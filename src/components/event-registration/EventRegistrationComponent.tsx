@@ -72,30 +72,34 @@ export const EventRegistrationContextDefault = forwardRef<
         </Link>
       </div>
       <form className="dsa-event-registration__form">
-        <TextField
-          label={nameInput.label}
-          placeholder={nameInput?.placeholder}
-        />
-        <TextField
-          type="email"
-          label={emailInput.label}
-          placeholder={emailInput?.placeholder}
-        />
-        <Checkbox
-          label={confirmationCheckboxLabel}
-          name="confirmation-checkbox"
-          id="confirmation-checkbox"
-        />
-        <Markdown className="dsa-event-registration__mandatory-text">
-          {mandatoryText}
-        </Markdown>
-        <Button
-          label={cta.label}
-          url={cta.url}
-          aria-label={cta?.ariaLabel}
-          variant="primary"
-          size="small"
-        />
+        <div className="dsa-event-registration__inputs">
+          <TextField
+            label={nameInput.label}
+            placeholder={nameInput?.placeholder}
+          />
+          <TextField
+            type="email"
+            label={emailInput.label}
+            placeholder={emailInput?.placeholder}
+          />
+          <Checkbox
+            label={confirmationCheckboxLabel}
+            name="confirmation-checkbox"
+            id="confirmation-checkbox"
+          />
+        </div>
+        <div className="dsa-event-registration__footer">
+          <Markdown className="dsa-event-registration__mandatory-text">
+            {mandatoryText}
+          </Markdown>
+          <Button
+            label={cta.label}
+            url={cta.url}
+            aria-label={cta?.ariaLabel}
+            variant="primary"
+            size="small"
+          />
+        </div>
       </form>
     </div>
   )
