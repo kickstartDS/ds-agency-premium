@@ -38,8 +38,8 @@
   }
 
   .c-rich-text {
-    font: var(--dsa-image-story__copy--font, var(--dsa-rich-text--font));
-    color: var(--dsa-image-story__copy--color, var(--dsa-rich-text--color));
+    font: var(--dsa-image-story__copy--font, var(--ks-font-copy-m));
+    color: var(--dsa-image-story__copy--color, var(--ks-text-color-copy));
   }
 
   .c-storytelling__box,

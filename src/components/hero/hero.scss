@@ -14,7 +14,7 @@
     --c-visual_box--border-radius: var(--dsa-hero__textbox--border-radius, var(--ks-border-radius-card));
     --c-visual_box--padding: var(--dsa-hero__textbox--padding, var(--ks-spacing-inset-squish-xl));
 
-    --c-visual_text--font: var(--dsa-hero__copy--font, var(--dsa-rich-text--font));
+    --c-visual_text--font: var(--dsa-hero__copy--font, var(--ks-font-copy-m));
   }
 
   &--highlight-text.c-visual {

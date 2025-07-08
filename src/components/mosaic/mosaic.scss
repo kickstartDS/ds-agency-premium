@@ -16,8 +16,8 @@
   }
 
   .c-rich-text {
-    font: var(--dsa-mosaic__copy--font, var(--dsa-rich-text--font, var(--ks-font-copy-m)));
-    color: var(--dsa-mosaic__copy--color, var(--dsa-rich-text--color, var(--ks-text-color-copy)));
+    font: var(--dsa-mosaic__copy--font, var(--ks-font-copy-m));
+    color: var(--dsa-mosaic__copy--color, var(--ks-text-color-copy));
   }
 
   .c-storytelling__box__content {

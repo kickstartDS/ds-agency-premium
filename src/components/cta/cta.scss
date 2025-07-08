@@ -77,8 +77,8 @@
     }
 
     .c-rich-text {
-      font: var(--dsa-cta__copy--font, var(--dsa-rich-text--font, var(--ks-font-copy-m)));
-      color: var(--dsa-cta__copy--color, var(--dsa-rich-text--color, var(--ks-text-color-copy)));
+      font: var(--dsa-cta__copy--font, var(--ks-font-copy-m));
+      color: var(--dsa-cta__copy--color, var(--ks-text-color-copy));
     }
   }
 
