@@ -3,10 +3,6 @@
   flex-direction: column;
   gap: var(--ks-spacing-stack-s);
 
-  &__label {
-    font: var(--dsa-headline_h2__subheadline--font);
-  }
-
   &__link {
     width: fit-content;
     font: var(--ks-font-interface-s);

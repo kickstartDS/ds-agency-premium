@@ -48,13 +48,13 @@ const Page = () => (
         textAlign: "center",
         large: true,
       }}
-      width="full"
+      width="wide"
     >
       <ImageStory
         padding
         layout="imageLeft"
         text={`
-**Here at Systemics, we bring a range of design system services that can make a difference:**
+Here at Systemics, we bring a range of design system services that can make a difference:
 
 ### 1. Design System **Consulting**
 Let's work side by side to shape a design system strategy that aligns perfectly with your goals. It's not just about tools; it's about guiding principles, stakeholder management und making the right decisions at the right time.
@@ -72,7 +72,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         image={{
           src: "/img/full-shot-different-people-working-together.png",
           alt: "Just a decorative illustration",
-          vAlign: "center",
+          vAlign: "top",
         }}
         buttons={[
           {
@@ -85,6 +85,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
     </Section>
 
     <Section
+      style="framed"
       transition="to-accent"
       headline={{
         text: "No Agency site without some shiny happy Customer",
@@ -198,7 +199,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       width="wide"
       headline={{
         text: "Design Systems, all you need to know",
-        sub: "Design Systems have gained popularity due to the growing need for consistency, efficiency, and scalability in digital product development.",
+        sub: "Why Design Systems have gained popularity in digital product development.",
         large: true,
         align: "left",
         width: "default",

@@ -172,7 +172,7 @@ export const SplitBanner: Story = {
     headline: "Design System Services",
     text: "Here at Systemics, we bring a range of design system services that can make a difference.",
     colorNeutral: true,
-    backgroundColor: "#001856",
+    backgroundColor: "#d9e4ff",
     padding: true,
     order: {
       desktopImageLast: false,
@@ -238,7 +238,7 @@ export const ColoredBanner: Story = {
     text: "Leverage our expertise in creating scalable and robust applications using modern technologies.",
     highlightText: true,
     colorNeutral: true,
-    backgroundColor: "#a30051",
+    backgroundColor: "#ffd4ea",
     padding: true,
     buttons: [
       {
