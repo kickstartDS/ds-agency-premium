@@ -3,7 +3,7 @@
     "text-color": {
       "default": {
         "base": {
-          "value": "{ks.color.fg.alpha.3.base}",
+          "value": "{ks.color.fg.alpha.2.base}",
           "attributes": {
             "category": "color"
           },
@@ -63,7 +63,7 @@
       },
       "default-inverted": {
         "base": {
-          "value": "{ks.color.fg-inverted.base}",
+          "value": "{ks.color.fg-inverted.alpha.2.base}",
           "attributes": {
             "category": "color"
           },
