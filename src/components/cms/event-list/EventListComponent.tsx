@@ -5,6 +5,7 @@ import { Section } from "../../section/SectionComponent";
 import { SplitWeighted } from "../../split-weighted/SplitWeightedComponent";
 import { EventFilter } from "../../event-filter/EventFilterComponent";
 import { EventListTeaser } from "../../event-list-teaser/EventListTeaserComponent";
+import { RichText } from "@kickstartds/base/lib/rich-text";
 
 export type { EventListProps };
 
@@ -26,6 +27,7 @@ export const EventList: FC<PropsWithChildren<EventListProps>> = ({
         aside={<EventFilter {...filter} />}
         main={
           <>
+            <RichText text={"425 Veranstaltungen"} />
             {events.map((event, index) => (
               <EventListTeaser key={index} {...event} />
             ))}

@@ -32,9 +32,8 @@ export const Default: Story = {
     date: "30.12.2025",
     location: {
       name: "Tech Conference Center",
-      address: `123 Innovation Drive
-
-Tech City`,
+      address: `Alexanderplatz 1<br />
+10178 Berlin`,
     },
     title: "The Future of AI",
     image: {
