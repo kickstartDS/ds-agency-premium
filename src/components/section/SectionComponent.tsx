@@ -58,23 +58,7 @@ export const SectionContextDefault = forwardRef<
         {...componentProps}
         className={classnames(
           "dsa-section",
-          style &&
-            style !== "default" &&
-            `dsa-section-style--${
-              style === "verticalGradient"
-                ? "vertical-gradient"
-                : style === "horizontalGradient"
-                ? "horizontal-gradient"
-                : style === "accentTransition"
-                ? "accent-transition"
-                : style === "boldTransition"
-                ? "bold-transition"
-                : style === "symmetricGlow"
-                ? "symmetric-glow"
-                : style === "anchorGlow"
-                ? "anchor-glow"
-                : style
-            }`,
+          style && style !== "default" && `dsa-section-style--${style}`,
           transition &&
             transition !== "none" &&
             `dsa-section--transition-${transition}`,
@@ -109,7 +93,7 @@ export const SectionContextDefault = forwardRef<
         width={width}
         spaceBefore={spaceBefore}
         spaceAfter={spaceAfter}
-        inverted={style === "colorful" ? true : inverted}
+        inverted={inverted}
         ref={ref}
       >
         {props.children}
