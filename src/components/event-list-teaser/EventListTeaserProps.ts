@@ -6,6 +6,10 @@
  */
 
 /**
+ * Category of the event teaser
+ */
+export type Category = string;
+/**
  * Title of the event
  */
 export type Headline = string;
@@ -30,9 +34,9 @@ export type LocationName = string;
  */
 export type Address = string;
 /**
- * Categories of the event
+ * Tags associated with the event
  */
-export type Categories = string[];
+export type Tags = string[];
 /**
  * URL of the image to display
  */
@@ -58,12 +62,13 @@ export type ARIALabel = string;
  * Display an event teaser with date, title and location
  */
 export interface EventListTeaserProps {
+  category?: Category;
   title: Headline;
   text?: Text;
   date: Date;
   time?: Time;
   location: Location;
-  categories?: Categories;
+  tags?: Tags;
   image?: Image;
   url?: URL;
   ctaText?: CallToAction;

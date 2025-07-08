@@ -41,6 +41,6 @@ export const Default: Story = {
       alt: "A futuristic AI concept image",
     },
     url: "#",
-    cta: "Show event",
+    ctaText: "Show event",
   }),
 };

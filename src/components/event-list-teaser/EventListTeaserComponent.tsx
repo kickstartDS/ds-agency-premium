@@ -16,11 +16,12 @@ export const EventListTeaserContextDefault = forwardRef<
 >(
   (
     {
+      category,
       title,
       text,
       date,
       time,
-      categories,
+      tags,
       location,
       image,
       ctaText,
@@ -42,11 +43,16 @@ export const EventListTeaserContextDefault = forwardRef<
         >
           <div className="dsa-event-list-teaser__content">
             <div className="dsa-event-list-teaser__header">
+              {category && (
+                <span className="dsa-event-list-teaser__category">
+                  {category}
+                </span>
+              )}
               <span className="dsa-event-list-teaser__title">{title}</span>
             </div>
-            {categories && categories.length > 0 && (
-              <div className="dsa-event-list-teaser__categories">
-                {categories.map((category) => (
+            {tags && tags.length > 0 && (
+              <div className="dsa-event-list-teaser__tags">
+                {tags.map((category) => (
                   <TagLabel key={category} label={category} size="s" />
                 ))}
               </div>

@@ -54,8 +54,6 @@ export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
     <div
       className={classnames(
         "l-split-weighted__aside l-split-weighted__content",
-        asideLayout?.gutter &&
-          `l-split-weighted__aside--gutter-${asideLayout.gutter || "large"}`,
         asideLayout?.minWidth &&
           `l-split-weighted__aside--width-${asideLayout.minWidth}`
       )}
@@ -63,8 +61,8 @@ export const SplitWeighted: FC<SplitWeightedComponentProps> = ({
       <div
         className={classnames(
           "l-split-weighted__content-container",
-          mainLayout?.gutter &&
-            `l-split-weighted__content-container--gutter-${mainLayout.gutter}`
+          asideLayout?.gutter &&
+            `l-split-weighted__content-container--gutter-${asideLayout.gutter}`
         )}
       >
         {aside}

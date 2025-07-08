@@ -41,7 +41,8 @@ export const EventList: Story = {
     },
     events: [
       {
-        categories: ["Buyers", "Sellers", "Renters"],
+        category: "Real Estate",
+        tags: ["Buyers", "Sellers", "Renters"],
         title: "Real Estate Expo 2025",
         date: "FRI, JAN 16",
         text: "Join us for the Real Estate Expo 2025, where industry leaders will discuss the future of real estate.",
@@ -59,7 +60,8 @@ export const EventList: Story = {
         url: "https://example.com",
       },
       {
-        categories: ["AI"],
+        category: "Technology",
+        tags: ["AI"],
         title: "The Future of AI",
         date: "14.01.2025",
         text: "The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence. AI is transforming industries and shaping the future. Don't miss out on this opportunity to learn from experts and network with peers.",
@@ -77,7 +79,8 @@ export const EventList: Story = {
         url: "https://example.com",
       },
       {
-        categories: ["Sustainability", "Technology"],
+        category: "Sustainability",
+        tags: ["Sustainability", "Technology"],
         title:
           "Global Innovations Summit 2025: Advancing Sustainable Technologies",
         date: "20/30/2025",

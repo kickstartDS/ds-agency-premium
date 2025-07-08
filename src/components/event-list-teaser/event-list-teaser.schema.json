@@ -5,6 +5,12 @@
   "description": "Display an event teaser with date, title and location",
   "type": "object",
   "properties": {
+    "category": {
+      "title": "Category",
+      "description": "Category of the event teaser",
+      "type": "string",
+      "examples": ["Buyers"]
+    },
     "title": {
       "title": "Headline",
       "description": "Title of the event",
@@ -53,9 +59,9 @@
         }
       }
     },
-    "categories": {
-      "title": "Categories",
-      "description": "Categories of the event",
+    "tags": {
+      "title": "Tags",
+      "description": "Tags associated with the event",
       "type": "array",
       "items": {
         "type": "string",

@@ -16,14 +16,14 @@ export const PaginationContextDefault = forwardRef<
       {pages.findIndex((page) => page.active) !== 0 && (
         <>
           <Link
-            aria-label={ariaLabels.skipToFirstPage || "Skip to first page"}
+            aria-label={ariaLabels?.skipToFirstPage || "Skip to first page"}
             className="dsa-pagination__link dsa-pagination__link--icon dsa-pagination__link--skip-back"
             href={pages[0]?.url}
           >
             <Icon icon="skip-back" />
           </Link>
           <Link
-            aria-label={ariaLabels.previousPage || "Go to previous page"}
+            aria-label={ariaLabels?.previousPage || "Go to previous page"}
             className="dsa-pagination__link dsa-pagination__link--icon dsa-pagination__link--prev"
             href={(() => {
               const activeIndex = pages.findIndex((page) => page.active);
@@ -77,7 +77,7 @@ export const PaginationContextDefault = forwardRef<
                 page.active && "dsa-pagination__link--active"
               )}
               aria-label={
-                `${ariaLabels.goToPage} ${index + 1}` ||
+                `${ariaLabels?.goToPage} ${index + 1}` ||
                 `Go to page ${index + 1}`
               }
               key={index}
@@ -96,7 +96,7 @@ export const PaginationContextDefault = forwardRef<
         <>
           <Link
             className="dsa-pagination__link dsa-pagination__link--icon dsa-pagination__link--next"
-            aria-label={ariaLabels.nextPage || "Go to next page"}
+            aria-label={ariaLabels?.nextPage || "Go to next page"}
             href={(() => {
               const activeIndex = pages.findIndex((page) => page.active);
               // Use the url of the next item after the active one, or "#" if at the end
@@ -107,7 +107,7 @@ export const PaginationContextDefault = forwardRef<
           </Link>
 
           <Link
-            aria-label={ariaLabels.skipToLastPage || "Skip to last page"}
+            aria-label={ariaLabels?.skipToLastPage || "Skip to last page"}
             className="dsa-pagination__link dsa-pagination__link--icon dsa-pagination__link--skip-forward"
             href={pages[pages.length - 1]?.url}
           >

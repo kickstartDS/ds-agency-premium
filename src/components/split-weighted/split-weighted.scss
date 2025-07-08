@@ -107,6 +107,10 @@
       gap: var(--dsa-split-weighted__main--gutter_default, var(--dsa-content--width_narrow));
 
       &--gutter {
+        &-none {
+          gap: 0;
+        }
+
         &-small {
           gap: var(--dsa-split-weighted__main--gutter_small, var(--ks-spacing-stack-s));
         }
@@ -135,6 +139,10 @@
       gap: var(--dsa-split-weighted__main--gutter_default, var(--dsa-content--width_narrow));
 
       &--gutter {
+        &-none {
+          gap: 0;
+        }
+
         &-small {
           gap: var(--dsa-split-weighted__main--gutter_small, var(--ks-spacing-stack-s));
         }
