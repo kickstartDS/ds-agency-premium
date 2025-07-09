@@ -39,7 +39,7 @@ export const ContentNavContextDefault = forwardRef<
               <span className="dsa-content-nav__toggle-label--less">
                 Show less
               </span>
-              <Icon icon={"chevron-down"} />
+              <Icon aria-hidden icon={"chevron-down"} />
             </summary>
             <div className="dsa-content-nav__more-content">
               <div className="dsa-content-nav__links dsa-content-nav__links--more">
