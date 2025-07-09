@@ -107,7 +107,7 @@
 
     &__title {
       font: var(--dsa-feature__title--font, var(--ks-font-interface-m));
-      color: var(--dsa-feature__title--color, var(--ks-topic-color));
+      color: var(--dsa-feature__title--color, var(--dsa-topic--color));
       font-family: var(--dsa-feature__title--font-family, var(--ks-font-family-display));
       font-weight: var(--dsa-feature__title--font-weight, var(--ks-font-weight-semi-bold));
     }
