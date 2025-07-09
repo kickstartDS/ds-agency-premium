@@ -1,10 +1,6 @@
 @import "content-nav-tokens.scss";
 
 .dsa-content-nav {
-  max-width: 500px;
-  margin: auto;
-  margin-top: 50px;
-
   border-radius: var(--ks-border-radius-card);
   padding: var(--dsa-content-nav--padding, var(--ks-spacing-inset-m));
   display: flex;
