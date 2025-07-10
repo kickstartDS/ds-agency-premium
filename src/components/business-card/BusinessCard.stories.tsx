@@ -6,7 +6,7 @@ import { BusinessCard } from "./BusinessCardComponent";
 import schema from "./business-card.schema.dereffed.json";
 
 const meta: Meta<typeof BusinessCard> = {
-  title: "Industry / Business Card",
+  title: "Corporate / Business Card",
   component: BusinessCard,
   parameters: {
     jsonschema: { schema },

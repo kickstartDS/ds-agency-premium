@@ -7,7 +7,7 @@ import customProperties from "./downloads-tokens.json";
 import schema from "./downloads.schema.dereffed.json";
 
 const meta: Meta = {
-  title: "Industry/Downloads",
+  title: "Corporate/Downloads",
   component: Downloads,
   parameters: {
     jsonschema: { schema },

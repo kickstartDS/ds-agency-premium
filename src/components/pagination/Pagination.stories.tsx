@@ -7,7 +7,7 @@ import customProperties from "./pagination-tokens.json";
 import schema from "./pagination.schema.dereffed.json";
 
 const meta: Meta = {
-  title: "Industry/Pagination",
+  title: "Corporate/Pagination",
   component: Pagination,
   parameters: {
     jsonschema: { schema },

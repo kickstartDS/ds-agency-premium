@@ -7,7 +7,7 @@ import customProperties from "./breadcrumb-tokens.json";
 import schema from "./breadcrumb.schema.dereffed.json";
 
 const meta: Meta = {
-  title: "Industry/Breadcrumb",
+  title: "Corporate/Breadcrumb",
   component: Breadcrumb,
   parameters: {
     jsonschema: { schema },

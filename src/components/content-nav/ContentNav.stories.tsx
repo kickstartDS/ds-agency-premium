@@ -6,7 +6,7 @@ import { ContentNav } from "./ContentNavComponent";
 import schema from "./content-nav.schema.dereffed.json";
 
 const meta: Meta<typeof ContentNav> = {
-  title: "Industry / Content Nav",
+  title: "Corporate / Content Nav",
   component: ContentNav,
   parameters: {
     jsonschema: { schema },

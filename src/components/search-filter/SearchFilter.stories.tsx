@@ -6,7 +6,7 @@ import { SearchFilter } from "./SearchFilterComponent";
 import schema from "./search-filter.schema.dereffed.json";
 
 const meta: Meta<typeof SearchFilter> = {
-  title: "Industry / Search Filter",
+  title: "Corporate / Search Filter",
   component: SearchFilter,
   parameters: {
     jsonschema: { schema },

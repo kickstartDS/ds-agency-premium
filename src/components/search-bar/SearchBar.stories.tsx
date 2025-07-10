@@ -6,7 +6,7 @@ import { SearchBar } from "./SearchBarComponent";
 import schema from "./search-bar.schema.dereffed.json";
 
 const meta: Meta<typeof SearchBar> = {
-  title: "Industry / Search Bar",
+  title: "Corporate / Search Bar",
   component: SearchBar,
   parameters: {
     jsonschema: { schema },

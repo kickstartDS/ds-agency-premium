@@ -6,7 +6,7 @@ import { SearchResult } from "./SearchResultComponent";
 import schema from "./search-result.schema.dereffed.json";
 
 const meta: Meta<typeof SearchResult> = {
-  title: "Industry / Search Result",
+  title: "Corporate / Search Result",
   component: SearchResult,
   parameters: {
     jsonschema: { schema },
