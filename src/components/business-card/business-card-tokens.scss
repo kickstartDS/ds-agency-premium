@@ -1,0 +1,31 @@
+.dsa-business-card {
+  --dsa-business-card--border-radius: var(--ks-border-radius-card);
+  --dsa-business-card--padding: var(--ks-spacing-inset-m);
+  --dsa-business-card--background-color: var(--ks-background-color-card);
+  --dsa-business-card--gap: var(--ks-spacing-stack-l);
+
+  --dsa-business-card__image--aspect-ratio: 16 / 9;
+  --dsa-business-card__image--border-radius: var(--ks-border-radius-card);
+
+  --dsa-business-card__topic--font: var(--dsa-topic--font);
+  --dsa-business-card__topic--font-weight: var(--dsa-topic--font-weight);
+  --dsa-business-card__topic--color: var(--dsa-topic--color);
+  --dsa-business-card__topic--margin-top: var(--ks-spacing-stack-m);
+
+  --dsa-business-card__logo--max-width: var(--dsa-tile--width_small);
+
+  --dsa-business-card__infos--gap: var(--ks-spacing-stack-s);
+
+  --dsa-business-card__address--font: var(--ks-font-interface-m);
+  --dsa-business-card__address--color: var(--ks-text-color-interface);
+
+  --dsa-business-card__avatar--border-radius: var(--ks-border-radius-circle);
+  --dsa-business-card__avatar--size: calc(var(--dsa-tile--width_smallest) / 2);
+
+  --dsa-business-card__contact--gap: var(--ks-spacing-xxs);
+  --dsa-business-card__contact--icon-size: 1.25em;
+  --dsa-business-card__contact--font: var(--ks-font-interface-m);
+  --dsa-business-card__contact--font-weight: var(--ks-font-weight-semi-bold);
+  --dsa-business-card__contact--color: var(--ks-text-color-interface-interactive);
+  --dsa-business-card__contact--color_hover: var(--ks-text-color-interface-interactive-hover);
+}

@@ -1,0 +1,97 @@
+@import "business-card-tokens.scss";
+
+.dsa-business-card {
+  // Temporary Development Styles
+  max-width: var(--dsa-tile--width_medium);
+  margin: auto;
+  margin-top: 30px;
+
+  border-radius: var(--dsa-business-card--border-radius, var(--ks-border-radius-card));
+  padding: var(--dsa-business-card--padding, var(--ks-spacing-inset-m));
+  display: flex;
+  flex-direction: column;
+  gap: var(--dsa-business-card--gap, var(--ks-spacing-stack-l));
+  align-items: center;
+  background-color: var(--dsa-business-card--background-color, var(--ks-background-color-card));
+
+  &__topic {
+    font: var(--dsa-business-card__topic--font, var(--dsa-topic--font));
+    color: var(--dsa-business-card__topic--color, var(--dsa-topic--color));
+    font-weight: var(--dsa-business-card__topic--font-weight, var(--dsa-topic--font-weight));
+    text-align: center;
+  }
+
+  &__image {
+    img {
+      aspect-ratio: var(--dsa-business-card__image--aspect-ratio, 16 / 9);
+      object-fit: cover;
+      border-radius: var(--dsa-business-card__image--border-radius, var(--ks-border-radius-card));
+    }
+  }
+
+  &__logo {
+    flex-grow: 1;
+    max-width: var(--dsa-business-card__logo--max-width, var(--dsa-tile--width_small));
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dsa-business-card__infos--gap, var(--ks-spacing-stack-s));
+    align-items: center;
+  }
+
+  &__address {
+    font: var(--dsa-business-card__address--font, var(--ks-font-interface-m));
+    color: var(--dsa-business-card__address--color, var(--ks-text-color-interface));
+    text-align: center;
+  }
+
+  &__avatar {
+    width: var(--dsa-business-card__avatar--size, 6em);
+    height: var(--dsa-business-card__avatar--size, 6em);
+    aspect-ratio: 1;
+    border-radius: var(--dsa-business-card__avatar--border-radius, var(--ks-border-radius-circle));
+    object-fit: cover;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--dsa-business-card__contact--gap, var(--ks-spacing-xxs));
+    width: 100%;
+  }
+
+  &__contact-item {
+    display: flex;
+    align-items: center;
+    font: var(--dsa-business-card__contact--font, var(--ks-font-interface-m));
+    --g-link--color: var(--dsa-business-card__contact--color, var(--dsa-link--color));
+    --g-link--color-hover: var(--dsa-business-card__contact--color_hover, var(--dsa-link--color_hover));
+    --g-link--font-weight: var(--dsa-business-card__contact--font-weight, var(--ks-font-weight-semi-bold));
+    text-align: center;
+
+    .icon {
+      width: var(--dsa-business-card__contact--icon-size, 1.25em);
+      height: var(--dsa-business-card__contact--icon-size, 1.25em);
+      margin-right: 0.35em;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: var(--ks-spacing-stack-s);
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .c-button {
+      width: fit-content;
+    }
+  }
+}
