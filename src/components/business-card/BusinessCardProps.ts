@@ -6,6 +6,10 @@
  */
 
 /**
+ * Whether the business card content is centered.
+ */
+export type Centered = boolean;
+/**
  * A headline or main topic for the business card, such as a job title or department.
  */
 export type Topic = string;
@@ -45,6 +49,7 @@ export type Buttons = {
 }[];
 
 export interface BusinessCardProps {
+  centered?: Centered;
   image?: BackgroundImage;
   logo?: CompanyLogo;
   topic?: Topic;

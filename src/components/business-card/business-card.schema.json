@@ -4,6 +4,12 @@
   "title": "Business Card",
   "type": "object",
   "properties": {
+    "centered": {
+      "type": "boolean",
+      "title": "Centered",
+      "description": "Whether the business card content is centered.",
+      "default": false
+    },
     "image": {
       "type": "object",
       "title": "Background Image",
