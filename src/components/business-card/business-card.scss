@@ -38,10 +38,6 @@
     gap: var(--dsa-business-card--gap, var(--ks-spacing-stack-l));
     flex-grow: 1;
 
-    @include container.size("≥", 640px, "business-card-content") {
-      flex-direction: row;
-    }
-
     @include container.size("≥", 640px, "business-card") {
       flex-basis: var(--dsa-tile--width_medium);
     }
