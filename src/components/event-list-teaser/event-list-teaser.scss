@@ -3,7 +3,10 @@
 @include container.wrapper("event-list-teaser");
 
 .dsa-event-list-teaser {
+  --g-link--text-decoration: none;
+  --g-link--text-decoration-hover: none;
   --g-link--border-radius: var(--ks-border-radius-card);
+
   display: block;
   border: var(--ks-border-width-default) solid var(--ks-border-color-card-interactive);
   padding: var(--ks-spacing-inset-l);

@@ -17,6 +17,9 @@
   }
 
   &__category {
+    --g-link--text-decoration: none;
+    --g-link--text-decoration-hover: none;
+
     font: var(--ks-font-interface-m);
     color: var(--ks-text-color-interface);
   }

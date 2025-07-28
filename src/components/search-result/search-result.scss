@@ -1,5 +1,7 @@
 .dsa-search-result {
   --g-link--border-radius: var(--ks-border-radius-card);
+  --g-link--text-decoration: none;
+  --g-link--text-decoration-hover: none;
 
   display: flex;
   flex-direction: column;
