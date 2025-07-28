@@ -5,166 +5,204 @@ import { footerProps } from "../components/footer/Footer.stories";
 import { Section } from "../components/section/SectionComponent";
 import { Faq } from "../components/faq/FaqComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
-import { VideoCurtain } from "../components/video-curtain/VideoCurtainComponent";
 import { Testimonials } from "../components/testimonials/TestimonialsComponent";
 import { Cta } from "../components/cta/CtaComponent";
 import { ImageStory } from "../components/image-story/ImageStoryComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
+import { Hero } from "../components/hero/HeroComponent";
+import { Stats } from "../components/stats/StatsComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
-
-    <Section inverted spaceBefore="none" spaceAfter="none" width="full">
-      <VideoCurtain
+    <Header {...headerProps} inverted />
+    <Section inverted spaceBefore="none" width="full">
+      <Hero
+        inverted
         buttons={[
           {
-            icon: "chevron-down",
-            label: "What can we do for you?",
+            label: "Erfahren Sie mehr",
             url: "#startit",
+            icon: "chevron-down",
           },
         ]}
-        headline="Simplify the process of building your Design System"
         overlay
-        sub="With your headless experts"
-        text="Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture."
-        textPosition="corner"
-        video={{
-          srcDesktop: "/img/videos/video-agency.mp4",
-          srcMobile: "/img/videos/video-agency.mp4",
-          srcTablet: "/img/videos/video-agency.mp4",
+        height="fullImage"
+        headline="Willkommen bei Autohaus Günther - Ihr Fahrzeugexperte seit 1967!"
+        sub="Bei uns stehen Sie und Ihr Fahrzeug im Mittelpunkt."
+        text="Mit persönlichem Service und Fachexpertise sind wir Ihr offizieller Vertragspartner für die Marken Nissan, Kia, Maserati, Corvette, Cadillac, Subaru, microlino, Isuzu, MSG-Stablehopper, Infiniti-Service und SAAB.
+
+Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen eine vielfältige Auswahl für jeden Bedarf. Finden Sie gemeinsam mit uns Ihr Wunschfahrzeug und erleben unseren erstklassigen Service. Von markenspezifischen Wartungsarbeiten, über fachgerechte Reparaturen in unserer Meisterwerkstatt, bis hin zu originalen Ersatzteilen und Zubehör – wir sind für Sie da."
+        textPosition="below"
+        image={{
+          srcDesktop: "/guenther/header.png",
+          srcMobile: "/guenther/header.png",
+          srcTablet: "/guenther/header.png",
         }}
       />
     </Section>
 
-    <Section
-      id="startit"
-      headline={{
-        text: "Design System Services",
-        sub: "Crafting Consistency, Fostering Growth",
-        switchOrder: true,
-        width: "default",
-        align: "center",
-        textAlign: "center",
-        large: true,
-      }}
-      width="wide"
-    >
-      <ImageStory
-        layout="imageLeft"
-        text={`
-Here at Systemics, we bring a range of design system services that can make a difference:
-
-### 1. Design System **Consulting**
-Let's work side by side to shape a design system strategy that aligns perfectly with your goals. It's not just about tools; it's about guiding principles, stakeholder management und making the right decisions at the right time.
-
-### 2. Design System **Creation & Development**
-We'll bring your design system from concept to production, giving you consistent and engaging user experiences across different platforms. We will work together with your digital teams to transfer all complex Figma ideas into code using kickstartDS.
-
-### 3. Headless **CMS & Websites**
-We leverage the power of headless CMSs to provide scalable, flexible, and versatile websites that drive your online presence.
-
-### 4. Design System **Training**
-We empower your digital teams with the knowledge and skills to manage and evolve your design system effectively.
-
-**Ready to make your digital journey exceptional?**`}
-        image={{
-          src: "/img/full-shot-different-people-working-together.png",
-          alt: "Just a decorative illustration",
-          vAlign: "top",
-        }}
-        buttons={[
+    <Section id="startit" width="wide">
+      <Stats
+        stat={[
           {
-            label: "Reach out today!",
-            icon: "chevron-right",
-            url: "https://app.lemcal.com/@daniel-ley",
+            title: "Marken",
+            number: 10,
+            icon: "star",
+            description: `Nissan, Kia, Maserati, Corvette, Cadillac, Subaru, Micro, Isuzu, MSG-Stablehopper, Infiniti-Service, Saab`,
+          },
+          {
+            title: "Standorte",
+            number: 9,
+            icon: "map-pin",
+            description: "Hamburg, Berlin, Frankfurt, Ahrensburg, Halstenbek",
+          },
+          {
+            title: "Leidenschaft",
+            number: 1,
+            icon: "heart",
+            description: "Seit über 57 Jahren aus Liebe zum Automobil",
           },
         ]}
       />
     </Section>
 
     <Section
-      style="framed"
+      width="wide"
+      backgroundColor="accent"
       transition="to-accent"
+      content={{
+        tileWidth: "smallest",
+      }}
       headline={{
-        text: "No Agency site without some shiny happy Customer",
-        sub: "AI-generated smiles, as you see them everywhere nowadays",
+        text: "Unsere Marken",
+        sub: "Entdecken Sie unsere Fahrzeugvielfalt",
         textAlign: "left",
       }}
     >
-      <Testimonials
-        layout="slider"
-        testimonial={[
-          {
-            image: {
-              src: "/img/people/author-emily.png",
-              alt: "Fake Testimonial Portrait",
-            },
-            name: "- Emily Johnson",
-            quote:
-              "Systemics's Design System transformed our development process. The consistency it introduced across our platforms not only saved us time but also boosted our brand's credibility. It's a partnership that continues to pay dividends.",
-            title: "Director of Digital Strategy at EcoTech Solutions",
-          },
-          {
-            image: {
-              src: "/img/people/author-john.png",
-              alt: "Fake Testimonial Portrait",
-            },
-            name: "- John Smith",
-            quote:
-              "Working with Systemics technology has been a game-changer for our brand. Their design system expertise brought harmony to our user experiences, making our digital platforms not just functional, but truly captivating.",
-            title: "Chief Marketing Officer at TechFusion Enterprises",
-          },
-          {
-            image: {
-              src: "/img/people/author-alex.png",
-              alt: "Fake Testimonial Portrait",
-            },
-            name: "- Alex Chen",
-            quote:
-              "As a startup, we needed to hit the ground running. Systemics's approach streamlined our dev and design process, allowing us to scale faster and focus on what truly matters - building a product that stands out in the market.",
-            title: "CEO of LaunchPad Innovations",
-          },
-        ]}
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/nissan.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/maserati.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/kia.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/corvette.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/cadillac.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/subaru.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/micro.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/isuzu.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/msg.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/infiniti.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        url="/bewertungen"
+        image="/guenther/brands/saab.png"
+        button={{
+          label: "Show brand",
+          hidden: true,
+        }}
       />
     </Section>
 
     <Section
-      backgroundColor="accent"
       width="wide"
       headline={{
-        text: "Happy Customers Showcases",
-        sub: "We can create something shining for you too!",
+        text: "Aktuelle Beiträge & News",
       }}
     >
       <TeaserCard
-        url="/showcase-techfusion_paid"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
+        url="/angebote-neuwagen"
+        headline="Neuwagen-Angebote"
+        text="Topaktuelle Modelle zu attraktiven Konditionen – jetzt entdecken!"
         image="/img/showcases/comp_tfe01.jpg"
         button={{
-          label: "View showcase",
+          label: "Zu den Neuwagen",
           chevron: true,
         }}
       />
       <TeaserCard
-        url="/showcase-launchpad_paid"
-        headline="Speed and Scale"
-        label="Freshest Fruit"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
+        url="/angebote-gebrauchtwagen"
+        headline="Gebrauchtwagen-Auswahl"
+        label="Geprüfte Qualität"
+        text="Unsere geprüften Gebrauchtwagen – sicher, zuverlässig und preiswert."
         image="/img/showcases/comp_audio01.jpg"
         button={{
-          label: "View showcase",
+          label: "Zu den Gebrauchtwagen",
           chevron: true,
         }}
       />
       <TeaserCard
-        url="/showcase-eco_paid"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
+        url="/werkstatt-service"
+        headline="Werkstatt & Service"
+        text="Inspektion, Reparatur, Reifenwechsel – unser Service für Ihre Mobilität."
         image="/img/showcases/comp_eco01.jpg"
         button={{
-          label: "View showcase",
+          label: "Mehr erfahren",
           chevron: true,
         }}
       />
@@ -172,21 +210,20 @@ We empower your digital teams with the knowledge and skills to manage and evolve
 
     <Section width="wide">
       <Cta
-        headline="Get in touch and chat with us about getting your product or platform to market faster"
-        backgroundImage="/img/bg/bg_dot-carpet-blue.svg"
+        headline="Jetzt Kontakt aufnehmen und Probefahrt vereinbaren!"
         image={{
-          src: "/img/people/contact-person.png",
+          src: "/guenther/contact.jpg",
           padding: false,
         }}
         buttons={[
           {
-            label: "Contact us",
-            url: "https://app.lemcal.com/@daniel-ley",
+            label: "Kontakt aufnehmen",
+            url: "https://guenther-gruppe.de/kontakt",
             icon: "person",
           },
           {
-            label: "Book a meeting",
-            url: "https://app.lemcal.com/@daniel-ley",
+            label: "Probefahrt buchen",
+            url: "https://guenther-gruppe.de/probefahrt",
             icon: "date",
           },
         ]}
@@ -195,8 +232,8 @@ We empower your digital teams with the knowledge and skills to manage and evolve
 
     <Section
       headline={{
-        text: "Design Systems, all you need to know",
-        sub: "Why Design Systems have gained popularity in digital product development.",
+        text: "Häufige Fragen rund ums Autohaus Günther",
+        sub: "Antworten auf Ihre wichtigsten Fragen",
         large: true,
         align: "left",
       }}
@@ -204,41 +241,29 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       <Faq
         questions={[
           {
-            question: "What is a Design System?",
+            question: "Welche Marken bietet das Autohaus Günther an?",
             answer:
-              "A Design System is a comprehensive set of guidelines, components, and tools that facilitate the consistent creation and maintenance of digital products. It serves as a single source of truth for designers, developers, and content creators, ensuring a cohesive brand identity and user experience across all platforms and devices.",
+              "Wir führen eine große Auswahl an Marken und Modellen – von Volkswagen über Audi bis hin zu Skoda und Seat. Sprechen Sie uns gerne an!",
           },
           {
-            question: "What are the benefits of investing in a Design System?",
+            question: "Kann ich online einen Servicetermin buchen?",
             answer:
-              "Investing in a Design System offers numerous benefits, including increased efficiency, improved collaboration, enhanced consistency, and streamlined workflows. It ensures a unified brand voice, facilitates faster product development, and enables teams to create scalable, maintainable, and adaptable digital experiences.",
+              "Ja, über unsere Website können Sie bequem und schnell einen Servicetermin vereinbaren.",
           },
           {
-            question:
-              "How does it help enterprise companies with complex SaaS products?",
+            question: "Bietet die Günther Gruppe auch Finanzierungen an?",
             answer:
-              "We assist enterprise companies by creating tailored Design Systems that cater to the unique requirements of their complex SaaS products. Our approach involves understanding the product's goals, user needs, and brand identity, and then crafting a comprehensive Design System that streamlines workflows, enhances collaboration, and ensures a consistent user experience.",
+              "Selbstverständlich! Wir beraten Sie zu individuellen Finanzierungs- und Leasingmöglichkeiten, die zu Ihren Bedürfnissen passen.",
           },
           {
-            question: "Is a Design System not too expensive for a Startup?",
+            question: "Wie finde ich das passende Zubehör für mein Fahrzeug?",
             answer:
-              "While Design Systems may initially seem expensive, they are a long-term investment that can save startups time, resources, and money in the long run. By establishing a solid foundation for design and development, startups can reduce inconsistencies, minimize rework, and improve overall product quality, which ultimately leads to a more successful and sustainable business.",
+              "Unser Team berät Sie gerne zu Originalteilen und passendem Zubehör für Ihr Fahrzeug. Sprechen Sie uns einfach an oder besuchen Sie unseren Zubehörshop.",
           },
           {
-            question: "How long does a Design System take to build?",
+            question: "Wo finde ich die Standorte der Günther Gruppe?",
             answer:
-              "The time required to build a Design System varies depending on the project's complexity, scope, and specific requirements. On average, a Design System can take anywhere from a few weeks to several months to develop. However, it is essential to remember that a Design System is an evolving entity that requires ongoing maintenance and updates.",
-          },
-          {
-            question:
-              "What's the difference between a Design System and a Style Guide?",
-            answer:
-              "A Style Guide is a subset of a Design System, focusing primarily on the visual aspects of a brand, such as colors, typography, and iconography. A Design System, on the other hand, is a more comprehensive framework that encompasses not only visual elements but also components, patterns, guidelines, and tools for design, development, and content creation.",
-          },
-          {
-            question: "How much does a Design System cost?",
-            answer:
-              "The cost of a Design System varies depending on factors such as project scope, complexity, and specific requirements. It is essential to view a Design System as a long-term investment that yields significant returns in terms of improved efficiency, reduced rework, and enhanced brand consistency. If you start at zero and the design system should serve at least 5 digital touchpoints, it could take months to years to develop all the code base. We believe in tailored solutions, so get in touch with us to discuss your specific requirements. As we work with kickstartDS, you can save lots of money because all the main concepts and aspects are already covered. Invest in its paid modules is really low in comparison to the development time you normally need to spend. For the rest, we'll provide you with a transparent, customized quote that aligns with your goals.",
+              "Alle Standorte und Kontaktdaten finden Sie auf unserer Website unter 'Standorte'. Wir sind in Hamburg, Lübeck, Lüneburg und Umgebung für Sie da.",
           },
         ]}
       />
@@ -248,7 +273,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       <ImageText
         image={{
           src: "/img/office-divider-image.png",
-          alt: "Photorealistic image Super wide scale of a view into a hyper modern design & web development agency, glass walls, no people, wide angle, blade runner movie like aesthetics, neon-light, lens-flare, pink, blue, and cyan color tonality, wide angle, sharp, ",
+          alt: "Modernes Autohaus Günther – Innenansicht",
         }}
         text={""}
         layout={"above"}
@@ -257,33 +282,31 @@ We empower your digital teams with the knowledge and skills to manage and evolve
 
     <Section
       headline={{
-        text: "Headless CMS for the modern web",
-        sub: "Frequently asked questions",
+        text: "Autohaus Günther – Mobilität, die begeistert",
+        sub: "Ihr Partner für Fahrzeuge, Service und Beratung",
       }}
     >
       <Faq
         questions={[
           {
-            question: "How do Headless CMSs fit into the picture?",
+            question: "Warum Autohaus Günther?",
             answer:
-              "A Headless CMS fits perfectly into the picture by offering a content-first approach that complements a Design System. It decouples the back-end content repository from the front-end presentation layer, allowing for seamless integration with any design system. The result is a flexible, scalable, and platform-agnostic system that ensures content consistency across all platforms and devices.",
+              "Weil wir seit über 60 Jahren für Kompetenz, Zuverlässigkeit und Kundennähe stehen. Ihre Zufriedenheit ist unser Antrieb.",
           },
           {
-            question:
-              "How does the combination of Headless CMS and Design System create value?",
+            question: "Welche Vorteile bietet mir die Günther Gruppe?",
             answer:
-              "The combination of a Headless CMS and a Design System creates value by enhancing efficiency, consistency, and scalability. A Headless CMS allows for seamless content management across various platforms, while a Design System ensures a consistent user experience and brand identity. Together, they enable teams to create and manage digital experiences more effectively, resulting in improved user engagement and business growth.",
+              "Große Auswahl, persönliche Beratung, umfassender Service und attraktive Angebote – alles aus einer Hand.",
           },
           {
-            question: "Is transitioning to a Headless Web complicated?",
+            question: "Wie kann ich Kontakt aufnehmen?",
             answer:
-              "Transitioning to a Headless Web can be a significant change, but it doesn't have to be complicated. With the right planning, tools, and expertise, the transition can be smooth and beneficial. It's about understanding your specific needs and goals, choosing the right Headless CMS, and effectively integrating it with your Design System.",
+              "Nutzen Sie unser Kontaktformular, rufen Sie uns an oder besuchen Sie uns direkt vor Ort. Wir freuen uns auf Sie!",
           },
           {
-            question:
-              "How can I ensure a consistent design across various channels with a Headless Web setup? ",
+            question: "Kann ich mein Fahrzeug bei Günther in Zahlung geben?",
             answer:
-              "Ensuring a consistent design across various channels with a Headless Web setup is achieved through the integration of a Design System. The Design System serves as a single source of truth for design elements and guidelines, ensuring a unified brand identity and user experience across all platforms and devices. Combined with the platform-agnostic nature of a Headless CMS, you can deliver a consistent and engaging user experience across all channels.",
+              "Ja, wir nehmen Ihr aktuelles Fahrzeug gerne in Zahlung und beraten Sie zu einem fairen Angebot.",
           },
         ]}
       />
@@ -293,17 +316,17 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       <Cta
         highlightText
         textAlign="center"
-        headline="Ready to embark on a transformative digital journey?"
-        sub="Reach out to us for insights and solutions that seamlessly merge design systems and headless web architecture."
+        headline="Bereit für Ihr neues Auto? Wir sind für Sie da!"
+        sub="Kontaktieren Sie uns und lassen Sie sich individuell beraten – Ihr Team der Günther Gruppe."
         buttons={[
           {
-            label: "Contact us",
-            url: "https://app.lemcal.com/@daniel-ley",
+            label: "Kontakt aufnehmen",
+            url: "https://guenther-gruppe.de/kontakt",
             icon: "person",
           },
           {
-            label: "Book a meeting",
-            url: "https://app.lemcal.com/@daniel-ley",
+            label: "Probefahrt buchen",
+            url: "https://guenther-gruppe.de/probefahrt",
             icon: "date",
           },
         ]}
