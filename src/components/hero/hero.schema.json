@@ -75,7 +75,7 @@
       "description": "Choose the alginment of the module content",
       "enum": ["center", "below", "left", "right", "corner"],
       "type": "string",
-      "default": "bottom"
+      "default": "below"
     }
   },
   "additionalProperties": false

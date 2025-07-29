@@ -15,6 +15,8 @@ import { TeaserCardProps } from "./TeaserCardProps";
 import "./teaser-card.scss";
 import { Container } from "@kickstartds/core/lib/container";
 import { compiler } from "markdown-to-jsx";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./TeaserCardDefaults";
 
 export type { TeaserCardProps };
 
@@ -78,7 +80,7 @@ export const TeaserCard = forwardRef<
   TeaserCardProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(TeaserCardContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 TeaserCard.displayName = "TeaserCard";
 

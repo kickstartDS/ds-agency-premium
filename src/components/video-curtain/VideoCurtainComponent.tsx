@@ -6,6 +6,8 @@ import "./video-curtain.scss";
 import { Container } from "@kickstartds/core/lib/container";
 import { ButtonContext } from "@kickstartds/base/lib/button";
 import { useButtonGroup } from "../button-group/ButtonGroupComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./VideoCurtainDefaults";
 
 export type { VideoCurtainProps };
 
@@ -92,6 +94,6 @@ export const VideoCurtain = forwardRef<
   VideoCurtainProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(VideoCurtainContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 VideoCurtain.displayName = "VideoCurtain";
