@@ -73,11 +73,7 @@ export type AltText = string;
 /**
  * Choose the alginment of the module content
  */
-export type ModuleAligment = "center" | "below" | "left" | "right" | "corner";
-/**
- * Inverted color scheme for the box
- */
-export type Inverted = boolean;
+export type ModuleAligment = "center" | "below" | "offset" | "left" | "right" | "corner" | "bottom";
 
 export interface HeroProps {
   headline?: Headline;
@@ -91,7 +87,6 @@ export interface HeroProps {
   overlay?: GridLayer;
   image?: BackgroundImage;
   textPosition?: ModuleAligment;
-  inverted?: Inverted;
 }
 export interface Button {
   label?: Label;

@@ -22,7 +22,6 @@ export const HeroContextDefault = forwardRef<
       highlightText,
       textPosition = "center",
       colorNeutral,
-      inverted,
       image,
       overlay,
       textbox,
@@ -46,8 +45,9 @@ export const HeroContextDefault = forwardRef<
               ref={ref}
               className={classnames(
                 `dsa-hero dsa-hero--content-${textPosition}`,
-                highlightText ? `dsa-hero--highlight-text` : "",
-                colorNeutral ? `dsa-hero--color-neutral` : "",
+                highlightText && `dsa-hero--highlight-text`,
+                colorNeutral && `dsa-hero--color-neutral`,
+                overlay && `dsa-hero--overlay`,
                 className
               )}
               height={height}
@@ -55,10 +55,18 @@ export const HeroContextDefault = forwardRef<
               skipButton={height === "fullScreen" ? true : false}
               inverted
               box={{
-                background: textbox === true ? "solid" : "transparent",
+                background:
+                  textPosition === "below"
+                    ? "transparent"
+                    : textbox === true
+                    ? "solid"
+                    : "transparent",
                 enabled: true,
                 vertical:
-                  textPosition === "below" || textPosition === "corner"
+                  textPosition === "below" ||
+                  textPosition === "offset" ||
+                  textPosition === "corner" ||
+                  textPosition === "bottom"
                     ? "bottom"
                     : "center",
                 horizontal:
@@ -73,7 +81,10 @@ export const HeroContextDefault = forwardRef<
                   colorNeutral,
                   enabled: buttons.length > 0,
                   arrangement:
-                    textPosition === "below" || textPosition === "center"
+                    textPosition === "below" ||
+                    textPosition === "offset" ||
+                    textPosition === "center" ||
+                    textPosition === "bottom"
                       ? "center"
                       : "left",
                 },
