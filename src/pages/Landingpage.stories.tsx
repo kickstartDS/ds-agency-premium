@@ -12,8 +12,8 @@ import { Stats } from "../components/stats/StatsComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} inverted floating />
-    <Section inverted spaceBefore="none" spaceAfter="none" width="full">
+    <Header {...headerProps} />
+    <Section spaceBefore="none" spaceAfter="none" width="full">
       <Hero
         buttons={[
           {
@@ -23,7 +23,6 @@ const Page = () => (
           },
         ]}
         textbox
-        height="fullScreen"
         headline="Willkommen bei Autohaus Günther - Ihr Fahrzeugexperte seit 1967!"
         sub="Bei uns stehen Sie und Ihr Fahrzeug im Mittelpunkt."
         text="Mit persönlichem Service und Fachexpertise sind wir Ihr offizieller Vertragspartner für die Marken Nissan, Kia, Maserati, Corvette, Cadillac, Subaru, microlino, Isuzu, MSG-Stablehopper, Infiniti-Service und SAAB.

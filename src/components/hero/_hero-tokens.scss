@@ -20,7 +20,7 @@
     }
 
     @include container.size("≥", 1024px, "hero") {
-      --dsa-hero--min-height: 42rem;
+      --dsa-hero--min-height: 34rem;
       --dsa-hero--min-height_small: 20rem;
       --dsa-hero__textbox--max-width: var(--dsa-content--width_narrow);
     }
