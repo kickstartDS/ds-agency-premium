@@ -12,7 +12,7 @@ import { Stats } from "../components/stats/StatsComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} />
+    <Header {...headerProps} inverted />
     <Section inverted spaceBefore="none" width="full">
       <Hero
         buttons={[
@@ -67,9 +67,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
       width="wide"
       backgroundColor="accent"
       transition="to-accent"
-      content={{
-        tileWidth: "smallest",
-      }}
+      content={{}}
       headline={{
         text: "Unsere Marken",
         sub: "Entdecken Sie unsere Fahrzeugvielfalt",

@@ -90,13 +90,7 @@
           },
           {
             "label": "Kontakt",
-            "url": "#",
-            "items": [
-              {
-                "label": "Unternehmen",
-                "url": "#"
-              }
-            ]
+            "url": "#"
           }
         ]
       ]
