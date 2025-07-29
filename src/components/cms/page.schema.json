@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.mydesignsystem.com/cms/page.schema.json",
+  "$id": "http://cms.mydesignsystem.com/page.schema.json",
   "title": "Page",
   "description": "Abstracts a page concept into JSON schema",
   "type": "object",
@@ -47,7 +47,7 @@
       }
     },
     "seo": {
-      "$ref": "http://schema.mydesignsystem.com/cms/seo.schema.json"
+      "$ref": "http://cms.mydesignsystem.com/seo.schema.json"
     }
   }
 }

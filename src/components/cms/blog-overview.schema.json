@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.mydesignsystem.com/cms/blog-overview.schema.json",
+  "$id": "http://cms.mydesignsystem.com/blog-overview.schema.json",
   "title": "Blog Overview",
   "description": "Abstracts a blog overview concept into JSON schema",
   "type": "object",
@@ -55,7 +55,7 @@
       "$ref": "http://schema.mydesignsystem.com/cta.schema.json"
     },
     "seo": {
-      "$ref": "http://schema.mydesignsystem.com/cms/seo.schema.json"
+      "$ref": "http://cms.mydesignsystem.com/seo.schema.json"
     }
   }
 }
