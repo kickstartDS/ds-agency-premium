@@ -151,15 +151,16 @@
 
     &.dsa-hero--content-below.c-visual--full,
     &.dsa-hero--content-offset.c-visual--full {
-      height: fit-content;
+      height: 100vh;
+      --c-visual--min-height: 0 !important;
       .c-visual__media {
         .c-visual__image {
           @include container.size("≥", 640px, "hero") {
-            height: fit-content;
+            height: 100%;
 
             img {
               object-fit: cover;
-              height: 100vh;
+              height: 100%;
             }
           }
         }
