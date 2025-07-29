@@ -28,7 +28,6 @@ export const CtaContextDefault = forwardRef<
       padding,
       order,
       buttons = [],
-      inverted = false,
       ...rest
     },
     ref

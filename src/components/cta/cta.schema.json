@@ -131,12 +131,6 @@
       "description": "Toggle padding of the content",
       "type": "boolean",
       "default": false
-    },
-    "inverted": {
-      "title": "Inverted",
-      "description": "Toggle inversion of the component",
-      "type": "boolean",
-      "default": false
     }
   },
   "additionalProperties": false

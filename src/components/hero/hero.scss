@@ -41,16 +41,9 @@
       radial-gradient(50% 125% at 100% 0%, var(--ks-color-primary-alpha-5) 0%, var(--ks-color-bg-alpha-4) 100%)
     );
 
-    &.dsa-hero--content-below {
+    &.dsa-hero--content-offset {
       --c-visual_overlay--background: var(
-        --dsa-hero--below__overlay--background,
-        linear-gradient(0deg, var(--ks-background-color-default) 15%, transparent 50%)
-      );
-    }
-
-    &.dsa-hero--content-left {
-      --c-visual_overlay--background: var(
-        --dsa-hero--left__overlay--background,
+        --dsa-hero--offset__overlay--background,
         linear-gradient(0deg, var(--ks-background-color-default) 15%, transparent 50%)
       );
     }
@@ -100,7 +93,8 @@
   }
 
   @include container.size("≥", 640px, "hero") {
-    &.dsa-hero--content-below {
+    &.dsa-hero--content-below,
+    &.dsa-hero--content-offset {
       .c-visual__media {
         position: relative;
 
@@ -110,8 +104,6 @@
       }
 
       .c-visual__content {
-        padding: 0 var(--dsa-content--horizontal-spacing);
-        margin-top: var(--dsa-hero_below__textbox--offset, -10%);
         position: relative;
 
         .c-visual__box {
@@ -120,11 +112,30 @@
       }
     }
 
+    &.dsa-hero--content-below {
+      .c-visual__content {
+        .c-visual__box {
+          --c-visual_box--max-width: var(--dsa-hero_below__textbox--max-width, var(--dsa-content--width_default));
+        }
+      }
+    }
+
+    &.dsa-hero--content-offset {
+      .c-visual__content {
+        margin-top: var(--dsa-hero_offset__textbox--offset, -10%);
+
+        .c-visual__box {
+          --c-visual_box--max-width: var(--dsa-hero_offset__textbox--max-width, var(--dsa-content--width_default));
+        }
+      }
+    }
+
     &.c-visual--no-crop {
       --c-visual--min-height: 0;
     }
 
-    &.dsa-hero--content-below.c-visual--no-crop {
+    &.dsa-hero--content-below.c-visual--no-crop,
+    &.dsa-hero--content-offset.c-visual--no-crop {
       .c-visual__media {
         .c-visual__image {
           @include container.size("≥", 640px, "hero") {
@@ -137,7 +148,9 @@
         }
       }
     }
-    &.dsa-hero--content-below.c-visual--full {
+
+    &.dsa-hero--content-below.c-visual--full,
+    &.dsa-hero--content-offset.c-visual--full {
       height: fit-content;
       .c-visual__media {
         .c-visual__image {

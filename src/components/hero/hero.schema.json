@@ -73,15 +73,17 @@
     "textPosition": {
       "title": "Module aligment",
       "description": "Choose the alginment of the module content",
-      "enum": ["center", "below", "left", "right", "corner"],
+      "enum": [
+        "center",
+        "below",
+        "offset",
+        "left",
+        "right",
+        "corner",
+        "bottom"
+      ],
       "type": "string",
       "default": "bottom"
-    },
-    "inverted": {
-      "type": "boolean",
-      "title": "Inverted",
-      "description": "Inverted color scheme for the box",
-      "default": false
     }
   },
   "additionalProperties": false

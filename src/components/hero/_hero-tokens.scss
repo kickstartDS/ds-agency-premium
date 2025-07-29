@@ -40,25 +40,19 @@
   --dsa-hero__textbox--max-width: var(--dsa-content--width_narrow);
   --dsa-hero__textbox--padding: var(--ks-spacing-inset-squish-xl);
 
-  --dsa-hero_below__textbox--max-width: var(--dsa-content--width_default);
-  --dsa-hero_below__textbox--offset: -10%;
-
   --dsa-hero__overlay--background: radial-gradient(
     50% 125% at 100% 0%,
     var(--ks-color-primary-alpha-5) 0%,
     var(--ks-color-fg-inverted-alpha-5) 100%
   );
 
-  --dsa-hero--below__overlay--background: linear-gradient(
+  --dsa-hero_offset__textbox--max-width: var(--dsa-content--width_default);
+  --dsa-hero_offset__textbox--offset: -10%;
+  --dsa-hero_offset__overlay--background: linear-gradient(
     0deg,
     var(--ks-background-color-default) 15%,
     transparent 50%
   );
 
-  --dsa-hero--left__overlay--background: radial-gradient(
-    var(--dsa-hero__textbox--max-width) var(--dsa-hero__textbox--max-width) at
-      calc(var(--dsa-section__content--padding) * 2) 50%,
-    var(--ks-color-bg) 100%,
-    var(--ks-color-primary-alpha-5) 100%
-  );
+  --dsa-hero_below__textbox--max-width: var(--dsa-content--width_default);
 }
