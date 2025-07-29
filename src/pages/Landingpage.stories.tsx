@@ -13,7 +13,7 @@ import { Hero } from "../components/hero/HeroComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} />
+    <Header {...headerProps} floating />
 
     <Section width="full" spaceAfter="none" spaceBefore="none">
       <Hero
@@ -27,7 +27,7 @@ const Page = () => (
         headline="Welcome to Our Dynamic Workplace"
         textbox
         textPosition="left"
-        height="fullImage"
+        height="fullScreen"
         highlightText
         image={{
           indent: "none",
