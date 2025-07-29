@@ -12,7 +12,10 @@
   --dsa-teaser-card--shadow: none;
   --dsa-teaser-card--shadow_hover: none;
 
-  --dsa-teaser__topic--color: var(--dsa-topic--color);
+  --dsa-teaser-card__image--transform_hover: scale(1.05);
+  --dsa-teaser-card__image--transition: transform var(--ks-transition-hover);
+
+  --dsa-teaser-card__topic--color: var(--dsa-topic--color);
 
   --dsa-teaser-card__label--font: var(--ks-font-interface-s);
   --dsa-teaser-card__label--font-weight: var(--ks-font-weight-semi-bold);

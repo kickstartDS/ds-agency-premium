@@ -27,30 +27,39 @@
     transition-property: border-color, background-color, box-shadow;
     box-shadow: var(--dsa-teaser-card--shadow, var(--ks-box-shadow-card));
 
+    > :first-child:not(.c-teaser__body) {
+      overflow: hidden;
+    }
+
     &:hover {
       --c-teaser--border: var(--dsa-teaser-card--border-color_hover, var(--ks-background-color-card-interactive))
         var(--dsa-teaser-card--border-width) solid;
+
+      .c-teaser__image {
+        transform: var(--dsa-teaser-card__image--transform_hover, scale(1.05));
+      }
     }
 
-    img {
+    .c-teaser__image {
       object-fit: cover;
+      transition: var(--dsa-teaser-card__image--transition, transform var(--ks-transition-hover));
     }
   }
 
   &--wide {
-    img {
+    .c-teaser__image {
       aspect-ratio: 4/3;
     }
   }
 
   &--landscape {
-    img {
+    .c-teaser__image {
       aspect-ratio: 16/9;
     }
   }
 
   &--square {
-    img {
+    .c-teaser__image {
       aspect-ratio: 1/1;
     }
   }
@@ -91,7 +100,7 @@
 
   @include container.size("≥", 640px, "teaser-card") {
     &--unset {
-      img {
+      .c-teaser__image {
         height: 100%;
       }
     }
