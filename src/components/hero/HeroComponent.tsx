@@ -25,8 +25,10 @@ export const HeroContextDefault = forwardRef<
       image,
       overlay,
       textbox,
+      invertText = false,
       className,
       buttons = [],
+      skipButton = false,
       ...rest
     },
     ref
@@ -52,9 +54,9 @@ export const HeroContextDefault = forwardRef<
               )}
               height={height}
               overlay={overlay}
-              skipButton={height === "fullScreen" ? true : false}
-              inverted
+              skipButton={skipButton}
               box={{
+                inverted: invertText,
                 background:
                   textPosition === "below"
                     ? "transparent"

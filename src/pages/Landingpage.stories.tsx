@@ -5,38 +5,44 @@ import { footerProps } from "../components/footer/Footer.stories";
 import { Section } from "../components/section/SectionComponent";
 import { Faq } from "../components/faq/FaqComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
-import { VideoCurtain } from "../components/video-curtain/VideoCurtainComponent";
 import { Testimonials } from "../components/testimonials/TestimonialsComponent";
 import { Cta } from "../components/cta/CtaComponent";
 import { ImageStory } from "../components/image-story/ImageStoryComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
+import { Hero } from "../components/hero/HeroComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
+    <Header {...headerProps} />
 
-    <Section inverted spaceBefore="none" spaceAfter="none" width="full">
-      <VideoCurtain
+    <Section width="full" spaceAfter="none" spaceBefore="none">
+      <Hero
         buttons={[
           {
-            icon: "chevron-down",
-            label: "What can we do for you?",
+            icon: "arrow-down",
+            label: "Explore further",
             url: "#startit",
           },
         ]}
-        headline="Simplify the process of building your Design System"
-        overlay
-        sub="With your headless experts"
-        text="Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture."
-        textPosition="corner"
-        video={{
-          srcDesktop: "/img/videos/video-agency.mp4",
-          srcMobile: "/img/videos/video-agency.mp4",
-          srcTablet: "/img/videos/video-agency.mp4",
+        headline="Welcome to Our Dynamic Workplace"
+        textbox
+        textPosition="left"
+        height="fullImage"
+        highlightText
+        image={{
+          indent: "none",
+          src: "https://picsum.photos/seed/kdsvisual/640/270",
+          srcDesktop:
+            "img/colleagues-work-office-using-computers-looking-aside.png",
+          srcMobile:
+            "img/colleagues-work-office-using-computers-looking-aside.png",
+          srcTablet:
+            "img/colleagues-work-office-using-computers-looking-aside.png",
         }}
+        sub="Where Creativity Meets Innovation"
+        text="Experience the perfect blend of creativity, innovation, and productivity in our modern office environment."
       />
     </Section>
-
     <Section
       id="startit"
       headline={{
