@@ -1,10 +1,10 @@
 @import "../../selectors";
 
 .dsa-button {
-  --dsa-button--padding: 0.75em 1.5em;
+  --dsa-button--padding: 0.65em 1.5em;
   --dsa-button--border-width: var(--ks-border-width-default);
   --dsa-button--border-radius: var(--ks-border-radius-control);
-  --dsa-button--font-weight: var(--ks-font-weight-semi-bold);
+  --dsa-button--font-weight: var(--ks-font-weight-regular);
   --dsa-button--text-transform: default;
 
   // Sizes
@@ -25,13 +25,13 @@
 
   //SECONDARY
 
-  --dsa-button_secondary--color: var(--ks-text-color-default);
-  --dsa-button_secondary--color_hover: var(--ks-text-color-default);
-  --dsa-button_secondary--color_active: var(--ks-text-color-default);
+  --dsa-button_secondary--color: var(--ks-text-color-display-inverted);
+  --dsa-button_secondary--color_hover: var(--ks-text-color-display-inverted);
+  --dsa-button_secondary--color_active: var(--ks-text-color-display-inverted);
 
-  --dsa-button_secondary--background-color: var(--ks-background-color-interface-interactive);
-  --dsa-button_secondary--background-color_hover: var(--ks-background-color-interface-interactive-hover);
-  --dsa-button_secondary--background-color_active: var(--ks-background-color-interface-interactive-active);
+  --dsa-button_secondary--background-color: var(--ks-color-fg-alpha-2);
+  --dsa-button_secondary--background-color_hover: var(--ks-color-fg-alpha-3);
+  --dsa-button_secondary--background-color_active: var(--ks-color-fg-alpha-3);
 
   //TERCIARY
 

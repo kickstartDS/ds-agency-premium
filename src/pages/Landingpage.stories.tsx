@@ -5,19 +5,16 @@ import { footerProps } from "../components/footer/Footer.stories";
 import { Section } from "../components/section/SectionComponent";
 import { Faq } from "../components/faq/FaqComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
-import { Testimonials } from "../components/testimonials/TestimonialsComponent";
 import { Cta } from "../components/cta/CtaComponent";
-import { ImageStory } from "../components/image-story/ImageStoryComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
 import { Hero } from "../components/hero/HeroComponent";
 import { Stats } from "../components/stats/StatsComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} inverted />
+    <Header {...headerProps} />
     <Section inverted spaceBefore="none" width="full">
       <Hero
-        inverted
         buttons={[
           {
             label: "Erfahren Sie mehr",
@@ -26,7 +23,7 @@ const Page = () => (
           },
         ]}
         overlay
-        height="fullImage"
+        height="default"
         headline="Willkommen bei Autohaus Günther - Ihr Fahrzeugexperte seit 1967!"
         sub="Bei uns stehen Sie und Ihr Fahrzeug im Mittelpunkt."
         text="Mit persönlichem Service und Fachexpertise sind wir Ihr offizieller Vertragspartner für die Marken Nissan, Kia, Maserati, Corvette, Cadillac, Subaru, microlino, Isuzu, MSG-Stablehopper, Infiniti-Service und SAAB.
@@ -80,7 +77,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
       }}
     >
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/nissan.png"
         button={{
           label: "Show brand",
@@ -88,7 +85,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/maserati.png"
         button={{
           label: "Show brand",
@@ -96,7 +93,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/kia.png"
         button={{
           label: "Show brand",
@@ -104,7 +101,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/corvette.png"
         button={{
           label: "Show brand",
@@ -112,7 +109,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/cadillac.png"
         button={{
           label: "Show brand",
@@ -120,7 +117,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/subaru.png"
         button={{
           label: "Show brand",
@@ -128,7 +125,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/micro.png"
         button={{
           label: "Show brand",
@@ -136,7 +133,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/isuzu.png"
         button={{
           label: "Show brand",
@@ -144,7 +141,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/msg.png"
         button={{
           label: "Show brand",
@@ -152,7 +149,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/infiniti.png"
         button={{
           label: "Show brand",
@@ -160,7 +157,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
       <TeaserCard
-        url="/bewertungen"
+        url="#"
         image="/guenther/brands/saab.png"
         button={{
           label: "Show brand",
