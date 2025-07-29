@@ -76,8 +76,8 @@
 
   .dsa-nav-topbar__label {
     display: flex;
-    font: var(--dsa-nav-topbar__label--font);
     font-family: var(--dsa-nav-topbar__label--font-family);
+    font-size: var(--dsa-nav-topbar__label--font-size);
     font-weight: var(--dsa-nav-topbar__label--font-weight);
     color: var(--dsa-nav-topbar__label--color);
     background-color: var(--dsa-nav-topbar__label--background-color);
