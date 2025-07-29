@@ -38,8 +38,10 @@
   --dsa-hero__textbox--box-shadow: none;
   --dsa-hero__textbox--border-radius: var(--ks-border-radius-card);
   --dsa-hero__textbox--max-width: var(--dsa-content--width_narrow);
-  --dsa-hero_below__textbox--max-width: var(--dsa-content--width_default);
   --dsa-hero__textbox--padding: var(--ks-spacing-inset-squish-xl);
+
+  --dsa-hero_below__textbox--max-width: var(--dsa-content--width_default);
+  --dsa-hero_below__textbox--offset: -10%;
 
   --dsa-hero__overlay--background: radial-gradient(
     50% 125% at 100% 0%,

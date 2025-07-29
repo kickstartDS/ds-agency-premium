@@ -111,7 +111,7 @@
 
       .c-visual__content {
         padding: 0 var(--dsa-content--horizontal-spacing);
-        margin-top: -10%;
+        margin-top: var(--dsa-hero_below__textbox--offset, -10%);
         position: relative;
 
         .c-visual__box {
@@ -119,9 +119,11 @@
         }
       }
     }
+
     &.c-visual--no-crop {
       --c-visual--min-height: 0;
     }
+
     &.dsa-hero--content-below.c-visual--no-crop {
       .c-visual__media {
         .c-visual__image {
