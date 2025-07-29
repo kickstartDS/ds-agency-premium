@@ -12,8 +12,8 @@ import { Stats } from "../components/stats/StatsComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} inverted />
-    <Section inverted spaceBefore="none" width="full">
+    <Header {...headerProps} inverted floating />
+    <Section inverted spaceBefore="none" spaceAfter="none" width="full">
       <Hero
         buttons={[
           {
@@ -22,8 +22,8 @@ const Page = () => (
             icon: "chevron-down",
           },
         ]}
-        overlay
-        height="default"
+        textbox
+        height="fullScreen"
         headline="Willkommen bei Autohaus Günther - Ihr Fahrzeugexperte seit 1967!"
         sub="Bei uns stehen Sie und Ihr Fahrzeug im Mittelpunkt."
         text="Mit persönlichem Service und Fachexpertise sind wir Ihr offizieller Vertragspartner für die Marken Nissan, Kia, Maserati, Corvette, Cadillac, Subaru, microlino, Isuzu, MSG-Stablehopper, Infiniti-Service und SAAB.
@@ -66,8 +66,6 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
     <Section
       width="wide"
       backgroundColor="accent"
-      transition="to-accent"
-      content={{}}
       headline={{
         text: "Unsere Marken",
         sub: "Entdecken Sie unsere Fahrzeugvielfalt",
@@ -327,7 +325,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         ]}
       />
     </Section>
-    <Footer {...footerProps} />
+    <Footer {...footerProps} inverted />
   </>
 );
 
