@@ -101,6 +101,7 @@ export const TextBoxOnFullScreen: Story = {
     textbox: true,
     height: "fullScreen",
     highlightText: false,
+    skipButton: true,
     textPosition: "left",
     image: {
       srcMobile: "img/people-brainstorming-work-meeting.png",

@@ -4,6 +4,8 @@
 
 .c-visual.dsa-hero {
   --c-visual_overlay--background-size: 100%;
+  --c-visual--min-height: var(--dsa-hero--min-height);
+  --c-visual_overlay--background: transparent;
 
   .c-visual__box {
     --c-visual_box--background: var(
@@ -27,12 +29,10 @@
     --dsa-hero__subheadline--color: var(--dsa-hero_color-neutral__copy--color, var(--ks-text-color-default));
   }
 
-  --c-visual_overlay--background: transparent;
-
   min-height: var(--dsa-hero--min-height);
 
   &.c-visual--small {
-    min-height: var(--dsa-hero--min-height_small);
+    --dsa-hero--min-height: var(--dsa-hero--min-height_small);
   }
 
   @include container.size("≥", 640px, "hero") {
@@ -64,6 +64,7 @@
     .dsa-headline__headline {
       color: var(--dsa-hero__headline--color, var(--dsa-headline--color, var(--ks-text-color-display)));
     }
+
     .dsa-headline__subheadline {
       color: var(--dsa-hero__subheadline--color, var(--dsa-headline__subheadline--color, var(--ks-text-color-primary)));
     }
@@ -88,8 +89,13 @@
   }
 
   .c-visual__continue-btn {
-    color: var(--dsa-overlay-text--text-color, var(--ks-color-fg));
-    filter: drop-shadow(var(--dsa-overlay-text--shadow, 0 0 10px var(--ks-color-bg-inverted-alpha-3-base)));
+    transform: translate(0);
+    color: var(--dsa-hero__skip-button--color, var(--dsa-overlay-text--text-color));
+    filter: drop-shadow(var(--dsa-hero__skip-button--shadow, var(--dsa-overlay-text--shadow)));
+
+    &:hover {
+      transform: var(--dsa-hero__skip-button--transform_hover, translateY(10%));
+    }
   }
 
   @include container.size("≥", 640px, "hero") {
@@ -99,7 +105,7 @@
         position: relative;
 
         .c-visual__image {
-          height: var(--c-visual--min-height);
+          height: var(--dsa-hero--min-height);
         }
       }
 
@@ -114,6 +120,8 @@
 
     &.dsa-hero--content-below {
       .c-visual__content {
+        padding: var(--dsa-hero_below__textbox--padding, var(--dsa-content--vertical-spacing));
+
         .c-visual__box {
           --c-visual_box--max-width: var(--dsa-hero_below__textbox--max-width, var(--dsa-content--width_default));
         }
@@ -122,6 +130,7 @@
 
     &.dsa-hero--content-offset {
       .c-visual__content {
+        padding: var(--dsa-hero_offset__textbox--padding, var(--dsa-content--vertical-spacing));
         margin-top: var(--dsa-hero_offset__textbox--offset, -10%);
 
         .c-visual__box {
@@ -131,7 +140,7 @@
     }
 
     &.c-visual--no-crop {
-      --c-visual--min-height: 0;
+      --dsa-hero--min-height: 0;
     }
 
     &.dsa-hero--content-below.c-visual--no-crop,
@@ -151,8 +160,8 @@
 
     &.dsa-hero--content-below.c-visual--full,
     &.dsa-hero--content-offset.c-visual--full {
+      --dsa-hero--min-height: 0 !important;
       height: 100vh;
-      --c-visual--min-height: 0 !important;
       .c-visual__media {
         .c-visual__image {
           @include container.size("≥", 640px, "hero") {

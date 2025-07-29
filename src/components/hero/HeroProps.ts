@@ -31,6 +31,10 @@ export type Height = "small" | "default" | "fullImage" | "fullScreen";
  */
 export type Textbox = boolean;
 /**
+ * Invert the text color for better contrast against the background
+ */
+export type InvertText = boolean;
+/**
  * Text content to display inside the button
  */
 export type Label = string;
@@ -42,6 +46,10 @@ export type Icon = string;
  * The URL to link to when the button is clicked
  */
 export type URL = string;
+/**
+ * Add a skip button to the hero module
+ */
+export type SkipButton = boolean;
 /**
  * Enable grid layer
  */
@@ -83,7 +91,9 @@ export interface HeroProps {
   colorNeutral?: ColorNeutral;
   height?: Height;
   textbox?: Textbox;
+  invertText?: InvertText;
   buttons?: Button[];
+  skipButton?: SkipButton;
   overlay?: GridLayer;
   image?: BackgroundImage;
   textPosition?: ModuleAligment;

@@ -13,8 +13,11 @@
   --dsa-overlay-box--text-color: var(--ks-color-fg);
 
   // Overlay Text styles
-  --dsa-overlay-text--shadow: 0 0 10px var(--ks-color-fg-inverted);
-  --dsa-overlay-text--text-color: var(--ks-text-color-display);
+  --dsa-overlay-text--shadow-base: 0 0 10px var(--ks-color-fg-alpha-3);
+  --dsa-overlay-text--shadow-inverted-base: 0 0 10px var(--ks-color-fg-alpha-3-inverted);
+
+  --dsa-overlay-text--text-color-base: var(--ks-text-color-display-inverted);
+  --dsa-overlay-text--text-color-inverted-base: var(--ks-text-color-display);
 
   // Topic font styles
   --dsa-topic--font: var(--ks-font-display-m);

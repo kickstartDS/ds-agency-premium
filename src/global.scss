@@ -79,9 +79,21 @@ hr.c-divider {
 #root {
   --dsa-text-color-on-primary: var(--dsa-text-color-on-primary-base);
   --dsa-text-color-on-primary-inverted: var(--dsa-text-color-on-primary-inverted-base);
+
+  --dsa-overlay-text--shadow: var(--dsa-overlay-text--shadow-base);
+  --dsa-overlay-text--shadow-inverted: var(--dsa-overlay-text--shadow-inverted-base);
+
+  --dsa-overlay-text--text-color: var(--dsa-overlay-text--text-color-base);
+  --dsa-overlay-text--text-color-inverted: var(--dsa-overlay-text--text-color-inverted-base);
 }
 
 [ks-inverted="true"] {
   --dsa-text-color-on-primary: var(--dsa-text-color-on-primary-inverted-base);
   --dsa-text-color-on-primary-inverted: var(--dsa-text-color-on-primary-base);
+
+  --dsa-overlay-text--shadow: var(--dsa-overlay-text--shadow-inverted-base);
+  --dsa-overlay-text--shadow-inverted: var(--dsa-overlay-text--shadow-base);
+
+  --dsa-overlay-text--text-color: var(--dsa-overlay-text--text-color-inverted-base);
+  --dsa-overlay-text--text-color-inverted: var(--dsa-overlay-text--text-color-base);
 }
