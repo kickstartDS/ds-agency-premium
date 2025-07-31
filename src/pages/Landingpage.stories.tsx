@@ -23,6 +23,7 @@ const Page = () => (
           },
         ]}
         textbox
+        highlightText
         headline="Willkommen bei Autohaus Günther - Ihr Fahrzeugexperte seit 1967!"
         sub="Bei uns stehen Sie und Ihr Fahrzeug im Mittelpunkt."
         text="Mit persönlichem Service und Fachexpertise sind wir Ihr offizieller Vertragspartner für die Marken Nissan, Kia, Maserati, Corvette, Cadillac, Subaru, microlino, Isuzu, MSG-Stablehopper, Infiniti-Service und SAAB.
@@ -36,7 +37,6 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         }}
       />
     </Section>
-
     <Section id="startit" width="wide">
       <Stats
         stat={[
@@ -61,10 +61,9 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         ]}
       />
     </Section>
-
     <Section
+      transition="to-bold"
       width="wide"
-      backgroundColor="accent"
       headline={{
         text: "Unsere Marken",
         sub: "Entdecken Sie unsere Fahrzeugvielfalt",
@@ -161,45 +160,6 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
       />
     </Section>
 
-    <Section
-      width="wide"
-      headline={{
-        text: "Aktuelle Beiträge & News",
-      }}
-    >
-      <TeaserCard
-        url="/angebote-neuwagen"
-        headline="Neuwagen-Angebote"
-        text="Topaktuelle Modelle zu attraktiven Konditionen – jetzt entdecken!"
-        image="/img/showcases/comp_tfe01.jpg"
-        button={{
-          label: "Zu den Neuwagen",
-          chevron: true,
-        }}
-      />
-      <TeaserCard
-        url="/angebote-gebrauchtwagen"
-        headline="Gebrauchtwagen-Auswahl"
-        label="Geprüfte Qualität"
-        text="Unsere geprüften Gebrauchtwagen – sicher, zuverlässig und preiswert."
-        image="/img/showcases/comp_audio01.jpg"
-        button={{
-          label: "Zu den Gebrauchtwagen",
-          chevron: true,
-        }}
-      />
-      <TeaserCard
-        url="/werkstatt-service"
-        headline="Werkstatt & Service"
-        text="Inspektion, Reparatur, Reifenwechsel – unser Service für Ihre Mobilität."
-        image="/img/showcases/comp_eco01.jpg"
-        button={{
-          label: "Mehr erfahren",
-          chevron: true,
-        }}
-      />
-    </Section>
-
     <Section width="wide">
       <Cta
         headline="Jetzt Kontakt aufnehmen und Probefahrt vereinbaren!"
@@ -221,7 +181,6 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         ]}
       />
     </Section>
-
     <Section
       headline={{
         text: "Häufige Fragen rund ums Autohaus Günther",
@@ -260,7 +219,6 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         ]}
       />
     </Section>
-
     <Section width="wide" spaceBefore="none" spaceAfter="small">
       <ImageText
         image={{
@@ -271,7 +229,6 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         layout={"above"}
       />
     </Section>
-
     <Section
       headline={{
         text: "Autohaus Günther – Mobilität, die begeistert",
@@ -303,7 +260,6 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         ]}
       />
     </Section>
-
     <Section width="wide">
       <Cta
         highlightText
@@ -324,7 +280,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         ]}
       />
     </Section>
-    <Footer {...footerProps} inverted />
+    <Footer {...footerProps} />
   </>
 );
 
