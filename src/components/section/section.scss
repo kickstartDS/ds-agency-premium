@@ -37,8 +37,10 @@
 }
 
 .l-section.dsa-section {
+  --dsa-section--background-color: var(--dsa-section--background-color_default, var(--ks-color-bg));
+
   background-image: var(--dsa-section--background-image);
-  background-color: var(--dsa-section--background-color_default, var(--ks-color-bg));
+  background-color: var(--dsa-section--background-color, var(--ks-color-bg));
   position: relative;
 
   .l-section__container {
@@ -58,11 +60,11 @@
   }
 
   &.l-section--accent {
-    background-color: var(--dsa-section--background-color_accent, var(--ks-background-color-accent));
+    --dsa-section--background-color: var(--dsa-section--background-color_accent, var(--ks-background-color-accent));
   }
 
   &.l-section--bold {
-    background-color: var(--dsa-section--background-color_bold, var(--ks-background-color-bold));
+    --dsa-section--background-color: var(--dsa-section--background-color_bold, var(--ks-background-color-bold));
   }
 
   &.dsa-section--transition-to-accent {
@@ -118,11 +120,41 @@
       }
     }
 
-    &--deko {
-      background-image: var(
-        --dsa-section_deko--background-image,
-        radial-gradient(180deg, transparent 0%, var(--ks-background-color-default) 100%)
-      );
+    &--shine {
+      &-left {
+        background-image: var(
+          --dsa-section_shine--background-image,
+          radial-gradient(
+            70% 150% at 20% 50%,
+            var(--ks-color-fg-inverted-alpha-8-base),
+            var(--ks-color-bg-inverted-alpha-8)
+          )
+        );
+
+        &[ks-inverted="true"] {
+          background-image: var(
+            --dsa-section_shine--background-image,
+            radial-gradient(70% 150% at 20% 50%, var(--ks-color-fg-inverted-alpha-8-base), var(--ks-color-bg))
+          );
+        }
+      }
+
+      &-right {
+        background-image: var(
+          --dsa-section_shine--background-image,
+          radial-gradient(70% 150% at 80% 50%, var(--ks-color-fg-inverted-alpha-8-base), var(--ks-color-bg))
+        );
+      }
+    }
+
+    &--carbon {
+      background:
+        radial-gradient(var(--ks-color-fg-inverted-alpha-7) 15%, transparent 16%) 0 0,
+        radial-gradient(var(--ks-color-fg-inverted-alpha-7) 15%, transparent 16%) 8px 8px,
+        radial-gradient(var(--ks-color-fg-alpha-9) 15%, transparent 20%) 0 1px,
+        radial-gradient(var(--ks-color-fg-alpha-9) 15%, transparent 20%) 8px 9px !important;
+      background-color: var(--dsa-section--background-color) !important;
+      background-size: 16px 16px !important;
     }
   }
 

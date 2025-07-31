@@ -9,7 +9,7 @@
   gap: var(--dsa-cta--gap, var(--ks-spacing-inline-m));
   border-radius: var(--dsa-cta--border-radius, var(--ks-border-radius-surface));
 
-  &:not(.dsa-cta--no-padding) {
+  &.dsa-cta--no-padding {
     overflow: hidden;
   }
 

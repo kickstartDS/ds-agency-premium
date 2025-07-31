@@ -38,14 +38,10 @@
   --dsa-section--background-color_bold: var(--ks-background-color-bold);
 
   //Background Transitions
-  --dsa-section--transition_to-default: linear-gradient(178deg, transparent, var(--ks-background-color-default));
-  --dsa-section--transition_to-accent: linear-gradient(178deg, transparent, var(--ks-background-color-accent));
-  --dsa-section--transition_to-bold: linear-gradient(178deg, transparent, var(--ks-background-color-bold));
-  --dsa-section--transition_to-inverted: linear-gradient(
-    178deg,
-    transparent,
-    var(--ks-background-color-default-inverted)
-  );
+  --dsa-section--transition_to-default: linear-gradient(transparent, var(--ks-background-color-default));
+  --dsa-section--transition_to-accent: linear-gradient(transparent, var(--ks-background-color-accent));
+  --dsa-section--transition_to-bold: linear-gradient(transparent, var(--ks-background-color-bold));
+  --dsa-section--transition_to-inverted: linear-gradient(transparent, var(--ks-background-color-default-inverted));
 
   //Slider Arrows
   --dsa-section__slider-arrow--color: var(--ks-text-color-interface-interactive);

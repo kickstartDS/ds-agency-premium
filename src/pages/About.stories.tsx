@@ -8,11 +8,11 @@ import { ImageStory } from "../components/image-story/ImageStoryComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
 import { Slider } from "../components/slider/SliderComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
-import { VideoCurtain } from "../components/video-curtain/VideoCurtainComponent";
+import { Hero } from "../components/hero/HeroComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
+    <Header {...headerProps} />
     <Section
       inverted
       spaceBefore="none"
@@ -22,22 +22,22 @@ const Page = () => (
         mode: "list",
       }}
     >
-      <VideoCurtain
-        overlay
+      <Hero
         highlightText
+        overlay
         textPosition="corner"
-        headline="kickstartDS CMS Starter are here!"
-        sub="Featuring a fully fledged, ready to use and easily themeable Design System"
+        headline="Autohaus Günther – Mobilität, die begeistert"
+        sub="Ihr Partner für Fahrzeuge, Service und Beratung in Norddeutschland"
         buttons={[
           {
-            label: "Start here",
+            label: "Mehr erfahren",
             url: "#starthere",
           },
         ]}
-        video={{
-          srcMobile: "img/videos/video-agency.mp4",
-          srcTablet: "img/videos/video-agency.mp4",
-          srcDesktop: "img/videos/video-agency.mp4",
+        image={{
+          srcMobile: "/guenther/header.png",
+          srcTablet: "/guenther/header.png",
+          srcDesktop: "/guenther/header.png",
         }}
       />
     </Section>
@@ -45,14 +45,14 @@ const Page = () => (
     <Section
       id="starthere"
       width="wide"
+      style="shine-left"
       headline={{
-        text: "A Design System is nothing without a system applying it",
-        sub: "Take off with our Starters 🚀",
+        text: "Willkommen bei Autohaus Günther",
+        sub: "Ihr Fahrzeugexperte seit 1967!",
         width: "default",
         align: "left",
         large: true,
       }}
-      style="deko"
       content={{
         mode: "list",
         align: "left",
@@ -61,17 +61,17 @@ const Page = () => (
       <Cta
         align="top"
         highlightText
-        image={{ src: "/img/about/cta.png" }}
+        image={{ src: "/guenther/contact.jpg" }}
         text="
-We bring you [CMS starter](/starter) to help setup your next professional website lighning fast. For the beginning you can choose between headless CMS backends like **Static CMS**, **Storyblok**, **Netlify Create** (formerly **Stackbit**) or you go with **11ty static site** generation.
+Bei uns stehen Sie und Ihr Fahrzeug im Mittelpunkt. Mit persönlichem Service und Fachexpertise sind wir Ihr offizieller Vertragspartner für die Marken [Nissan](#), [Kia](#), [Maserati](#), [Corvette](#), [Cadillac](#), [Subaru](#), [microlino](#), [Isuzu](#), [MSG-Stablehopper](#), [Infiniti-Service](#) und [SAAB](#).
 
-**Dive into our demos, starter, components and discover the kickstartDS experience that suits you best!**"
+Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen eine vielfältige Auswahl für jeden Bedarf. Finden Sie gemeinsam mit uns Ihr Wunschfahrzeug und erleben unseren erstklassigen Service. Von markenspezifischen Wartungsarbeiten, über fachgerechte Reparaturen in unserer Meisterwerkstatt, bis hin zu originalen Ersatzteilen und Zubehör – wir sind für Sie da."
         order={{ desktopImageLast: true }}
         buttons={[
           {
             icon: "chevron-right",
-            label: "Go with a starter",
-            url: "/starter",
+            label: "Jetzt Kontakt aufnehmen",
+            url: "https://guenther-gruppe.de/kontakt",
           },
         ]}
       />
@@ -80,66 +80,31 @@ We bring you [CMS starter](/starter) to help setup your next professional websit
     <Section
       width="wide"
       headline={{
-        text: "Highlights of the CMS Starter",
-        sub: "Slide through our highlights",
+        text: "Unsere Standorte & Marken",
+        sub: "Immer in Ihrer Nähe – immer für Sie da",
         textAlign: "left",
       }}
     >
       <Slider autoplay equalHeight gap={15} arrows type="carousel">
         <ImageText
-          text={""}
           image={{
-            src: "/static/img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
-            alt: "A Slideshow - content of this slide: Connecting a Design System to a CMS has never been easier. And cheaper. Create your next digital experience faster, more consistent and sustainably than ever.",
+            src: "/guenther/car-cutout-3.png",
+            alt: "Autohaus Günther Markenvielfalt",
           }}
+          text={`
+**Unsere Markenvielfalt:**
+Ob sportlich, komfortabel oder elektrisch – bei uns finden Sie das passende Fahrzeug. Entdecken Sie unsere Markenwelt und lassen Sie sich individuell beraten.
+        `}
           layout={"above"}
         />
         <ImageText
           image={{
-            src: "/static/img/kickstartDS/CMS-Starter producthunt-slide-02.svg",
-            alt: "A Slideshow - content of this slide: StaticCMS, Storyblok, Netlify Create (formerly Stackbit) and 11ty. Meet our Starters, low-code, open source, ready to start and batteries included",
+            src: "/guenther/car-cutout-1.avif",
+            alt: "Autohaus Günther Fahrzeugangebot",
           }}
-          text={""}
-          layout={"above"}
-        />
-        <ImageText
-          image={{
-            src: "/static/img/kickstartDS/CMS-Starter producthunt-slide-03.svg",
-            alt: "A Slideshow - content of this slide: From zero to a deployed production website in less than 30 mins. For Storyblok, Stackbit (aka Netlify Create), StaticCMS or even as a static site with 11ty. Your choice!",
-          }}
-          text={""}
-          layout={"above"}
-        />
-        <ImageText
-          image={{
-            src: "/static/img/kickstartDS/CMS-Starter producthunt-slide-05.svg",
-            alt: "A Slideshow - content of this slide: Full Design System with branding layer included. Professional components, optimized for content & marketing websites to be used as a starting point for your very own Design System!",
-          }}
-          text={""}
-          layout={"above"}
-        />
-        <ImageText
-          image={{
-            src: "/static/img/kickstartDS/CMS-Starter producthunt-slide-04.svg",
-            alt: "A Slideshow - content of this slide: All component variants as presets in the CMS editor. Develop components once and reuse everywhere.",
-          }}
-          text={""}
-          layout={"above"}
-        />
-        <ImageText
-          image={{
-            src: "/static/img/kickstartDS/CMS-Starter producthunt-slide-06.svg",
-            alt: "A Slideshow - content of this slide: Automatic conversion with next-gen schema tooling! Use our transformers, or write your own one, based on an extensive library we wrote. Component screenshots, presets and configuration ... all automated!",
-          }}
-          text={""}
-          layout={"above"}
-        />
-        <ImageText
-          image={{
-            src: "/static/img/kickstartDS/CMS-Starter producthunt-slide-07.svg",
-            alt: "A Slideshow - content of this slide: Enter the world of headless CMS and start today. It's just one click away! We're on a mission to democratize Design Systems. Are you too?",
-          }}
-          text={""}
+          text={`
+Rund um Hamburg, Lübeck und Lüneburg – wir sind immer in Ihrer Nähe.
+`}
           layout={"above"}
         />
       </Slider>
@@ -153,127 +118,92 @@ We bring you [CMS starter](/starter) to help setup your next professional websit
       }}
     >
       <ImageStory
-        headline="Open Source vs. Premium Experience"
+        headline="Unsere Geschichte"
         layout="imageLeft"
         text={`
-We built two distinct demo websites to represent the range of possibilities with kickstartDS. Plus, You'll find website starters, to start your journey even faster.
-
-#### Basic Demo of an Agency Website
-The Open Source Demo, built entirely on our [**open-source** modules](https://www.kickstartds.com/modules/), demonstrates the robust capabilities you can leverage at no cost. It highlights the immense value **kickstartDS** offers, without any investment.
-
-#### Premium Experience Demo
-For a more enhanced experience, check out the Premium Experience Demo. It demonstrates the potential of our [**premium** kickstartDS Content Component Module](https://www.kickstartds.com/content-module/). See how a modest and fair one time investment can significantly elevate the look and feel of your website or content-driven application, sustainably.
+Seit über sechs Jahrzehnten steht das Autohaus Günther für automobile Leidenschaft und Kundennähe. Was 1967 als kleiner Familienbetrieb begann, ist heute eine der führenden Autohausgruppen Norddeutschlands.
+Wir verbinden Tradition mit Innovation und setzen auf nachhaltige Mobilitätslösungen für unsere Kunden.
+**Vertrauen, Qualität und Service** – das sind die Werte, die uns antreiben.
 `}
         image={{
           src: "/img/full-shot-different-people-working-together.png",
-          alt: "Digital art of two friendly girls standing in front of each other, playing with a huge pile of toy bricks in their center. the scene is surrounded by horizontal light stripes in motion creating a ring around them, light blue, violet and purple colors, light neon-lights, laser-light, wide-angle",
+          alt: "Team Autohaus Günther",
         }}
       />
     </Section>
 
-    <Section width="wide">
+    <Section style="carbon" inverted width="wide">
       <Cta
-        backgroundColor="var(--ks-background-color-bold)"
         padding
-        headline="Spoiler Alert!"
+        headline="Jetzt Probefahrt vereinbaren!"
         image={{
-          src: "/static/img/about/spoiler.png",
+          src: "/guenther/car-2.webp",
           padding: true,
         }}
         highlightText
-        text="Although this is just a website for demo purposes, if you are looking for an agency to serve your **headless** or **Design System** needs, contact us, we are real experts!"
+        text="Erleben Sie unsere Fahrzeuge hautnah. Vereinbaren Sie noch heute Ihre persönliche Probefahrt bei einem unserer Standorte!"
         order={{
           desktopImageLast: true,
         }}
         buttons={[
           {
-            label: "Contact us",
-            url: "https://app.lemcal.com/@daniel-ley",
-            icon: "person",
+            label: "Probefahrt buchen",
+            url: "https://guenther-gruppe.de/probefahrt",
+            icon: "date",
           },
         ]}
       />
     </Section>
 
     <Section
-      backgroundColor="accent"
       width="wide"
       headline={{
         width: "default",
         align: "left",
-        text: "Comparing both demos, you can **gain** a clear understanding of the **value** proposition offered by **kickstartDS**",
-        sub: "From Open Source solution to premium marketing experience",
+        text: "Unsere Leistungen im Überblick",
+        sub: "Alles rund ums Auto – aus einer Hand",
         switchOrder: true,
       }}
     >
       <TeaserCard
-        headline="Basic Agency Website Demo"
-        text="Compare what the free version, using Open Source components only, can already offer"
-        url={"https://basic.design-system.agency/"}
+        headline="Neuwagen & Gebrauchtwagen"
+        text="Entdecken Sie unsere große Auswahl an aktuellen Modellen und geprüften Gebrauchtwagen."
+        url={"https://guenther-gruppe.de/angebote"}
         button={{
-          label: "Browse basic Demo",
+          label: "Zu den Angeboten",
         }}
       />
       <TeaserCard
-        headline="Premium Content Experience"
-        text="Which is enriched with more complex components, based on the kickstartDS Content Module."
-        url={"https://design-system.agency/"}
+        headline="Werkstatt & Service"
+        text="Von Inspektion bis Reparatur – unser erfahrenes Team sorgt für Ihre Mobilität."
+        url={"https://guenther-gruppe.de/service"}
         button={{
-          label: "Browse premium Demo",
+          label: "Mehr erfahren",
         }}
       />
       <TeaserCard
-        headline="65+ Examples build on top of 18 components"
-        text="Flick through our component collection, switching themes or toggling inverted styles"
-        url={"/components"}
+        headline="Finanzierung & Leasing"
+        text="Flexible Finanzierungs- und Leasingangebote, individuell auf Sie zugeschnitten."
+        url={"https://guenther-gruppe.de/finanzierung"}
         button={{
-          label: "Browse all Components",
+          label: "Finanzierungsangebote",
         }}
       />
       <TeaserCard
-        headline="Check out the Storybook"
-        text="Browsing our Storybook will allow a look behind the scenes on what the kickstartDS Design System starter has to offer"
-        url={"https://main--64f08cbba622af835d382b4f.chromatic.com/"}
+        headline="Teile & Zubehör"
+        text="Originalteile, Zubehör und Reifenservice – alles für Ihr Fahrzeug."
+        url={"https://guenther-gruppe.de/teile-und-zubehoer"}
         button={{
-          label: "Explore Storybook",
+          label: "Mehr erfahren",
         }}
       />
     </Section>
 
-    <Section
-      spaceBefore="none"
-      transition="to-inverted"
-      style="framed"
-      width="wide"
-    >
-      <ImageText
-        image={{
-          src: "/img/about/purpose.png",
-        }}
-        text={`
-### The purpose of this demo
-This demo is intended to provide a firsthand experience of the capabilities of [**kickstartDS**](https://www.kickstartds.com). It's not just a website; it's a demonstration of how we can transform your digital landscape. Please note that while this demo represents a **Design System Agency**, the principles and techniques showcased are applicable to a wide range of industries and use cases.
-        `}
-        layout={"above"}
-      />
-      <ImageText
-        text={`
-### Important disclaimer
-While we've strived to provide a comprehensive demonstration, please bear in mind that this is a simplified showcase of the potential of [**kickstartDS**](https://www.kickstartds.com). The actual implementation of a **Design System** and **headless CMS** like **Storyblok** or **Netlify Create** can be tailored to your specific needs and goals, ensuring a custom solution that drives your digital success.
-        `}
-        image={{
-          src: "/img/about/disclaimer.png",
-          alt: "",
-        }}
-        layout={"above"}
-      />
-    </Section>
-
-    <Section inverted width="wide">
+    <Section transition="to-accent" width="wide">
       <Cta
-        headline="Want to know more?"
-        sub="Intrigued by what a kickstartDS-driven website can do for your brand?"
-        text="Let's explore how we can shape your digital journey. Get in touch today!"
+        headline="Kontaktieren Sie uns!"
+        sub="Wir sind gerne für Sie da – telefonisch, per E-Mail oder vor Ort."
+        text="Lassen Sie sich von unserem Team beraten und erleben Sie die Günther Gruppe persönlich."
         order={{
           desktopImageLast: false,
         }}
@@ -282,14 +212,14 @@ While we've strived to provide a comprehensive demonstration, please bear in min
         }}
         buttons={[
           {
-            label: "Contact us",
-            url: "https://app.lemcal.com/@daniel-ley",
+            label: "Kontakt aufnehmen",
+            url: "https://guenther-gruppe.de/kontakt",
             icon: "person",
           },
           {
-            label: "Book a meeting",
-            url: "https://app.lemcal.com/@daniel-ley",
-            icon: "date",
+            label: "Standorte entdecken",
+            url: "https://guenther-gruppe.de/standorte",
+            icon: "map-pin",
           },
         ]}
       />

@@ -20,7 +20,7 @@
     }
 
     @include container.size("≥", 1024px, "hero") {
-      --dsa-hero--min-height: 34rem;
+      --dsa-hero--min-height: 42rem;
       --dsa-hero--min-height_small: 20rem;
       --dsa-hero__textbox--max-width: var(--dsa-content--width_narrow);
     }
@@ -54,7 +54,11 @@
       var(--ks-color-primary-alpha-5) 0%,
       var(--ks-color-bg-alpha-4) 100%
     );
-
+    --dsa-hero_corner__overlay--background: linear-gradient(
+      40deg,
+      var(--ks-background-color-default) 15%,
+      transparent 50%
+    );
     --dsa-hero_offset__textbox--max-width: var(--dsa-content--width_default);
     --dsa-hero_offset__textbox--offset: -10%;
     --dsa-hero_offset__overlay--background: linear-gradient(

@@ -39,7 +39,7 @@
       },
       "bold-inverted": {
         "base": {
-          "value": "{ks.color.primary.base}",
+          "value": "{ks.color.fg-inverted.to-bg.8.base}",
           "attributes": {
             "category": "color"
           },
