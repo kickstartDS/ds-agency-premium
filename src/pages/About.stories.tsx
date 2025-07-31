@@ -12,7 +12,7 @@ import { Hero } from "../components/hero/HeroComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} />
+    <Header {...headerProps} floating />
     <Section
       inverted
       spaceBefore="none"
@@ -25,7 +25,9 @@ const Page = () => (
       <Hero
         highlightText
         overlay
-        textPosition="corner"
+        skipButton
+        height="fullScreen"
+        textPosition="left"
         headline="Autohaus Günther – Mobilität, die begeistert"
         sub="Ihr Partner für Fahrzeuge, Service und Beratung in Norddeutschland"
         buttons={[
@@ -35,9 +37,9 @@ const Page = () => (
           },
         ]}
         image={{
-          srcMobile: "/guenther/header.png",
-          srcTablet: "/guenther/header.png",
-          srcDesktop: "/guenther/header.png",
+          srcMobile: "/guenther/visual.png",
+          srcTablet: "/guenther/visual.png",
+          srcDesktop: "/guenther/visual.png",
         }}
       />
     </Section>

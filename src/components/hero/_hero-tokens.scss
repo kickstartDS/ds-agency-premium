@@ -59,6 +59,11 @@
       var(--ks-background-color-default) 15%,
       transparent 50%
     );
+    --dsa-hero_left__overlay--background: radial-gradient(
+      100% 200% at 0% 50%,
+      var(--ks-color-bg-alpha-3) 15%,
+      var(--ks-color-bg-alpha-9) 50%
+    );
     --dsa-hero_offset__textbox--max-width: var(--dsa-content--width_default);
     --dsa-hero_offset__textbox--offset: -10%;
     --dsa-hero_offset__overlay--background: linear-gradient(

@@ -70,11 +70,19 @@
     }
   }
 
-  &--content-corner {
-    --c-visual_overlay--background: var(
-      --dsa-hero_corner__overlay--background,
-      linear-gradient(40deg, var(--ks-background-color-default) 15%, transparent 50%)
-    );
+  &--content {
+    &-corner {
+      --c-visual_overlay--background: var(
+        --dsa-hero_corner__overlay--background,
+        linear-gradient(40deg, var(--ks-background-color-default) 15%, transparent 50%)
+      );
+    }
+    &-left {
+      --c-visual_overlay--background: var(
+        --dsa-hero_left__overlay--background,
+        linear-gradient(40deg, var(--ks-background-color-default) 15%, transparent 50%)
+      );
+    }
   }
 
   .c-button-group {
