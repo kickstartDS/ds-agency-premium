@@ -95,7 +95,7 @@
         "bottom"
       ],
       "type": "string",
-      "default": "bottom"
+      "default": "below"
     }
   },
   "additionalProperties": false

@@ -6,6 +6,8 @@ import { ButtonContext } from "@kickstartds/base/lib/button";
 import classnames from "classnames";
 import { useButtonGroup } from "../button-group/ButtonGroupComponent";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./CtaDefaults";
 
 export type { CtaProps };
 
@@ -90,6 +92,6 @@ export const Cta = forwardRef<
   CtaProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(CtaContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Cta.displayName = "Cta";

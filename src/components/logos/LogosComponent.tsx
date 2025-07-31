@@ -7,6 +7,8 @@ import { LogoTiles } from "@kickstartds/content/lib/logo-tiles";
 import { Button } from "@kickstartds/base/lib/button";
 import { Link } from "@kickstartds/base/lib/link";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./LogosDefaults";
 
 export type { LogosProps };
 
@@ -68,6 +70,6 @@ export const Logos = forwardRef<
   LogosProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(LogosContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Logos.displayName = "Logos";

@@ -8,15 +8,15 @@ import {
 } from "react";
 import classnames from "classnames";
 import { useKsComponent } from "@kickstartds/core/lib/react";
-
 import {
   SectionContextDefault as KdsSectionContextDefault,
   SectionContext as KdsSectionContext,
 } from "@kickstartds/base/lib/section";
-
 import { SectionProps } from "./SectionProps";
 import "./section.scss";
 import { identifier } from "./js/Section.client";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./SectionDefaults";
 
 export type { SectionProps };
 
@@ -108,7 +108,7 @@ export const Section = forwardRef<
   SectionProps & Omit<HTMLAttributes<HTMLElement>, "style" | "content">
 >((props, ref) => {
   const Component = useContext(SectionContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Section.displayName = "Section";
 

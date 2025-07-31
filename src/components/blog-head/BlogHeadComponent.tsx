@@ -2,6 +2,8 @@ import { forwardRef, createContext, useContext } from "react";
 import { PostHead } from "@kickstartds/blog/lib/post-head";
 import { BlogHeadProps } from "./BlogHeadProps";
 import "./blog-head.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./BlogHeadDefaults";
 
 export type { BlogHeadProps };
 
@@ -27,7 +29,7 @@ export const BlogHeadContext = createContext(BlogHeadContextDefault);
 export const BlogHead = forwardRef<HTMLDivElement, BlogHeadProps>(
   (props, ref) => {
     const Component = useContext(BlogHeadContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 BlogHead.displayName = "BlogHead";

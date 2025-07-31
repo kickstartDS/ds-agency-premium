@@ -4,6 +4,9 @@ import { Icon } from "@kickstartds/base/lib/icon";
 import { Button } from "../button/ButtonComponent";
 import { FeatureProps } from "./FeatureProps";
 import { Link } from "@kickstartds/base/lib/link";
+import { RichText } from "@kickstartds/base/lib/rich-text";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./FeatureDefaults";
 
 export type { FeatureProps };
 
@@ -44,7 +47,7 @@ export const FeatureContextDefault = forwardRef<
     </div>
     {text || cta.style === "intext" ? (
       <p className="dsa-feature__text">
-        {text}
+        <RichText text={text} />
         {cta.style === "intext" && cta.toggle ? (
           <>
             &#32;{" "}
@@ -91,6 +94,6 @@ export const Feature = forwardRef<
   FeatureProps & Omit<HTMLAttributes<HTMLDivElement>, "style">
 >((props, ref) => {
   const Component = useContext(FeatureContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Feature.displayName = "Feature";
