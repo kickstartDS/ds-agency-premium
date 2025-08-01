@@ -24,6 +24,7 @@ const Page = () => (
       <Hero
         highlightText
         overlay
+        textbox={false}
         skipButton
         height="fullScreen"
         textPosition="left"
