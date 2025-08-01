@@ -74,8 +74,11 @@
       position: relative;
 
       .l-split-even__sticky-container {
+        display: flex;
+        flex-direction: column;
         position: sticky;
         top: var(--dsa-split-even--sticky-margin, var(--ks-spacing-stack-xl));
+        gap: var(--dsa-split-even--v-gutter, var(--ks-spacing-stack-m));
         height: fit-content;
       }
     }
