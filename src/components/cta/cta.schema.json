@@ -36,12 +36,6 @@
       "default": false,
       "type": "boolean"
     },
-    "fullWidth": {
-      "title": "Width",
-      "description": "Set the width of the content to the full width of the element",
-      "type": "boolean",
-      "default": false
-    },
     "buttons": {
       "type": "array",
       "items": {
@@ -54,8 +48,8 @@
           "icon": {
             "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/icon"
           },
-          "target": {
-            "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/target"
+          "url": {
+            "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/url"
           }
         }
       }
@@ -87,6 +81,13 @@
           "title": "Alt text",
           "description": "Image description",
           "type": "string"
+        },
+        "align": {
+          "title": "Vertical alignment of the image",
+          "description": "Select a vertical alignment for the image",
+          "type": "string",
+          "enum": ["center", "top", "bottom"],
+          "default": "center"
         }
       },
       "additionalProperties": false
@@ -118,12 +119,18 @@
       "type": "string",
       "default": "left"
     },
-    "contentAlign": {
+    "align": {
       "title": "Vertical alignment of the content",
-      "description": "Select a vertical alignment for the image",
+      "description": "Select a vertical alignment for the content",
       "type": "string",
       "enum": ["center", "top", "bottom"],
       "default": "center"
+    },
+    "padding": {
+      "title": "Padding",
+      "description": "Toggle padding of the content",
+      "type": "boolean",
+      "default": false
     }
   },
   "additionalProperties": false

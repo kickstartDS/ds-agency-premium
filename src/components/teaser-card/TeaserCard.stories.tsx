@@ -31,7 +31,7 @@ export const ProductTiles: Story = {
     headline: "Castaway",
     text: "Transforming Ideas into Code",
     image: "img/logos/castaway.svg",
-    target: "#",
+    url: "#",
     button: {
       label: "Go to page",
       hidden: true,
@@ -51,7 +51,7 @@ export const PageNavigation: Story = {
     text: "Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture.",
     image: "img/02.jpg",
     imageRatio: "landscape",
-    target: "#",
+    url: "#",
     button: {
       label: "Read more",
     },
@@ -72,7 +72,7 @@ export const ShowcasePreview: Story = {
     headline: "Transformation Love Story",
     text: "See how we saved TechFusions a year's worth of development time",
     image: "img/showcases/comp_tfe01.jpg",
-    target: "#",
+    url: "#",
     button: {
       label: "View showcase",
     },

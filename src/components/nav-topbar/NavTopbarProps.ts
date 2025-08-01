@@ -12,11 +12,11 @@ export type DropdownInverted = boolean;
 
 export interface NavTopbarProps {
   items?: {
-    href: string;
+    url: string;
     label: string;
     active?: boolean;
     items?: {
-      href?: string;
+      url?: string;
       label?: string;
       active?: boolean;
     }[];

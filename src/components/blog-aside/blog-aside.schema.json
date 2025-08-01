@@ -22,9 +22,9 @@
             "format": "icon",
             "examples": ["twitter", "facebook"]
           },
-          "href": {
-            "title": "Href",
-            "description": "The href for the social link",
+          "url": {
+            "title": "URL",
+            "description": "The url for the social link",
             "type": "string",
             "format": "uri",
             "examples": [
@@ -39,7 +39,7 @@
           }
         },
         "additionalProperties": false,
-        "required": ["icon", "href", "title"]
+        "required": ["icon", "url", "title"]
       }
     },
     "readingTime": {

@@ -43,7 +43,8 @@
       "type": "string",
       "title": "Layout",
       "description": "The layout of the gallery images",
-      "enum": ["stack", "smallTiles", "largeTiles"]
+      "enum": ["stack", "smallTiles", "largeTiles"],
+      "default": "smallTiles"
     },
     "aspectRatio": {
       "type": "string",

@@ -11,8 +11,14 @@ import { Cta } from "../components/cta/CtaComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
-    <Section spaceBefore="none" width="full">
+    <Header
+      {...headerProps}
+      floating
+      inverted
+      dropdownInverted
+      flyoutInverted
+    />
+    <Section spaceBefore="none" width="full" inverted>
       <Hero
         height="fullScreen"
         image={{
@@ -35,13 +41,9 @@ const Page = () => (
       />
     </Section>
 
-    <Section
-      style="accentTransition"
-      spaceBefore="small"
-      spaceAfter="none"
-      width="max"
-    >
+    <Section width="wide" content={{ mode: "list", gutter: "large" }} inverted>
       <Mosaic
+        layout="textLeft"
         tile={[
           {
             headline: "A Digital Transformation Love Story",
@@ -57,9 +59,14 @@ const Page = () => (
               label: "See showcase",
               icon: "chevron-right",
               toggle: true,
-              target: "/showcase-techfusion",
+              url: "/showcase-techfusion",
             },
           },
+        ]}
+      />
+      <Mosaic
+        layout="textRight"
+        tile={[
           {
             headline: "Speed and Scale",
             sub: "LaunchPad Audio Innovations",
@@ -73,9 +80,14 @@ const Page = () => (
               label: "See showcase",
               icon: "chevron-right",
               toggle: true,
-              target: "/showcase-launchpad",
+              url: "/showcase-launchpad",
             },
           },
+        ]}
+      />
+      <Mosaic
+        layout="textLeft"
+        tile={[
           {
             headline: "Navigating the Headless Frontier for Brand Consistency",
             sub: "EcoTech Solutions",
@@ -86,7 +98,7 @@ const Page = () => (
             backgroundColor: "#21331E",
             backgroundImage: "img/showcases/eco_bg.png",
             button: {
-              target: "/showcase-eco",
+              url: "/showcase-eco",
               label: "See showcase",
               icon: "chevron-right",
               toggle: true,
@@ -96,15 +108,8 @@ const Page = () => (
       />
     </Section>
 
-    <Section
-      spaceBefore="small"
-      spaceAfter="none"
-      backgroundColor="accent"
-      style="anchorGlow"
-      width="wide"
-    >
+    <Section backgroundColor="accent" width="wide">
       <Cta
-        fullWidth
         textAlign="center"
         highlightText
         headline="Ready to embark on a transformative digital journey?"
@@ -112,12 +117,12 @@ const Page = () => (
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}
@@ -137,43 +142,43 @@ const Page = () => (
         logo={[
           {
             alt: "Logo 1",
-            src: "img/logos/logoipsum-212.svg",
+            src: "img/logos/logoipsum-344.svg",
           },
           {
             alt: "Logo 2",
-            src: "img/logos/logoipsum-217.svg",
+            src: "img/logos/logoipsum-347.svg",
           },
           {
             alt: "Logo 3",
-            src: "img/logos/logoipsum-239.svg",
+            src: "img/logos/logoipsum-352.svg",
           },
           {
             alt: "Logo 4",
-            src: "img/logos/logoipsum-244.svg",
+            src: "img/logos/logoipsum-356.svg",
           },
           {
             alt: "Logo 5",
-            src: "img/logos/logoipsum-250.svg",
+            src: "img/logos/logoipsum-358.svg",
           },
           {
             alt: "Logo 6",
-            src: "img/logos/logoipsum-286.svg",
+            src: "img/logos/logoipsum-369.svg",
           },
           {
             alt: "Logo 7",
-            src: "img/logos/logoipsum-212.svg",
+            src: "img/logos/logoipsum-373.svg",
           },
           {
             alt: "Logo 8",
-            src: "img/logos/logoipsum-217.svg",
+            src: "img/logos/logoipsum-344.svg",
           },
           {
             alt: "Logo 9",
-            src: "img/logos/logoipsum-239.svg",
+            src: "img/logos/logoipsum-347.svg",
           },
           {
             alt: "Logo 10",
-            src: "img/logos/logoipsum-244.svg",
+            src: "img/logos/logoipsum-352.svg",
           },
         ]}
         logosPerRow={4}
