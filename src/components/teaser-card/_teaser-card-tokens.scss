@@ -9,8 +9,11 @@
   --dsa-teaser-card--border-color_hover: var(--ks-border-color-card-interactive-hover);
   --dsa-teaser-card--border-radius: var(--ks-border-radius-card);
 
-  --dsa-teaser-card--shadow: none;
-  --dsa-teaser-card--shadow_hover: none;
+  --dsa-teaser-card--shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 2px 4px rgba(0, 0, 0, 0.02),
+    0px 4px 9px rgba(0, 0, 0, 0.03), 0px 6px 15px rgba(0, 0, 0, 0.04), 0px 10px 24px rgba(0, 0, 0, 0.05);
+
+  --dsa-teaser-card--shadow_hover: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 2px 4px rgba(0, 0, 0, 0.02),
+    0px 4px 9px rgba(0, 0, 0, 0.03), 0px 6px 15px rgba(0, 0, 0, 0.04), 0px 10px 24px rgba(0, 0, 0, 0.05);
 
   --dsa-teaser-card__image--transform_hover: scale(1.1);
   --dsa-teaser-card__image--transition: transform var(--ks-transition-fade);

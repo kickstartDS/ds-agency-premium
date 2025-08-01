@@ -334,7 +334,7 @@ const Page = () => (
         }}
       />
     </Section>
-    <Section inverted style="shine-left" width="wide">
+    <Section inverted width="wide">
       <Cta
         highlightText
         textAlign="center"
@@ -354,7 +354,7 @@ const Page = () => (
         ]}
       />
     </Section>
-    <Footer {...footerProps} />
+    <Footer {...footerProps} inverted />
   </>
 );
 

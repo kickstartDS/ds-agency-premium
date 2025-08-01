@@ -208,7 +208,7 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
       }}
       headline={{
         text: "Unsere neusten Modelle",
-        textAlign: "left",
+        align: "center",
       }}
     >
       <ImageText
@@ -250,6 +250,7 @@ Wagen Sie den Schritt in die Zukunft mit dem neuen Kia EV6. Unser Elektro-SUV ve
     </Section>
     <Section
       width="wide"
+      style="stripe"
       headline={{
         text: "Aktuelle Beiträge & News",
       }}
@@ -276,7 +277,7 @@ Wagen Sie den Schritt in die Zukunft mit dem neuen Kia EV6. Unser Elektro-SUV ve
         button={{ label: "Zum Beitrag" }}
       />
     </Section>
-    <Section inverted style="shine-left" width="wide">
+    <Section inverted width="wide">
       <Cta
         highlightText
         textAlign="center"
@@ -296,7 +297,7 @@ Wagen Sie den Schritt in die Zukunft mit dem neuen Kia EV6. Unser Elektro-SUV ve
         ]}
       />
     </Section>
-    <Footer {...footerProps} />
+    <Footer {...footerProps} inverted />
   </>
 );
 

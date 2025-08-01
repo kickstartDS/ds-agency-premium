@@ -170,9 +170,25 @@
         width: 100%;
         height: 100%;
         z-index: 0;
-        background: linear-gradient(180deg, var(--ks-color-fg-alpha-9) 0%, transparent 10px),
-          linear-gradient(180deg, transparent calc(100% - 10px), var(--ks-color-fg-alpha-9) 100%),
+        background: linear-gradient(180deg, var(--ks-color-fg-alpha-9) 0%, transparent 5px),
+          linear-gradient(180deg, var(--ks-color-fg-alpha-9) 0%, transparent 30px),
+          linear-gradient(180deg, transparent calc(100% - 30px), var(--ks-color-fg-alpha-9) 100%),
+          linear-gradient(180deg, transparent calc(100% - 5px), var(--ks-color-fg-alpha-9) 100%),
           radial-gradient(100% 100% at 50% 50%, var(--ks-color-bg), var(--ks-color-bg-to-fg-1));
+      }
+    }
+
+    &-stripe {
+      &::before {
+        background-image: linear-gradient(
+            45deg,
+            transparent 5%,
+            var(--ks-color-bg-inverted-alpha-8) 5%,
+            var(--ks-color-bg-inverted-alpha-8) 18%,
+            transparent 18%
+          ),
+          linear-gradient(180deg, transparent calc(100% - 30px), var(--ks-color-fg-alpha-9) 100%),
+          linear-gradient(180deg, transparent calc(100% - 5px), var(--ks-color-fg-alpha-9) 100%);
       }
     }
   }

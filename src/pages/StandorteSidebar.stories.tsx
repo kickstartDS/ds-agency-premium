@@ -5,12 +5,9 @@ import { footerProps } from "../components/footer/Footer.stories";
 import { Section } from "../components/section/SectionComponent";
 import { Cta } from "../components/cta/CtaComponent";
 import { Hero } from "../components/hero/HeroComponent";
-import { Button } from "../components/button/ButtonComponent";
 import { BusinessCard } from "../components/business-card/BusinessCardComponent";
-
 import { SplitWeighted } from "../components/split-weighted/SplitWeightedComponent";
 import { Headline } from "@kickstartds/base/lib/headline";
-import { SearchResult } from "../components/search-result/SearchResultComponent";
 import { SearchFilter } from "../components/search-filter/SearchFilterComponent";
 
 const Page = () => (
@@ -27,17 +24,19 @@ const Page = () => (
       />
     </Section>
     <Section
-      spaceAfter="small"
       width="wide"
-      headline={{
-        align: "center",
-        text: "Wir sind an 9 Standorten für Sie da!",
-        sub: "Hier präsentieren wir Ihnen eine Übersicht aller Marken, die im Autohaus Günther erhältlich sind, sowie Informationen darüber, wo Sie Ihre Lieblingsmarke finden können.",
-      }}
       content={{
-        tileWidth: "smallest",
+        width: "default",
+        align: "left",
       }}
     >
+      <Cta
+        highlightText
+        headline="Wir sind an 9 Standorten für Sie da!"
+        text="Hier präsentieren wir Ihnen eine Übersicht aller Marken, die im Autohaus Günther erhältlich sind, sowie Informationen darüber, wo Sie Ihre Lieblingsmarke finden können."
+      />
+    </Section>
+    <Section spaceBefore="small" width="wide">
       <SplitWeighted
         order={{
           desktop: "asideFirst",
@@ -350,7 +349,7 @@ const Page = () => (
       />
     </Section>
 
-    <Section inverted style="shine-left" width="wide">
+    <Section inverted width="wide">
       <Cta
         highlightText
         textAlign="center"
@@ -370,7 +369,7 @@ const Page = () => (
         ]}
       />
     </Section>
-    <Footer {...footerProps} />
+    <Footer {...footerProps} inverted />
   </>
 );
 

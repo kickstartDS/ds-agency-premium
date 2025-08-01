@@ -31,7 +31,7 @@ export type Width = "full" | "max" | "wide" | "default" | "narrow";
 /**
  * Style of background
  */
-export type Style = "default" | "framed" | "shine-left" | "shine-right" | "carbon";
+export type Style = "default" | "framed" | "shine-left" | "shine-right" | "carbon" | "stripe";
 /**
  * Color of background
  */
