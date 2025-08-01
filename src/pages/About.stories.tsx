@@ -45,9 +45,8 @@ const Page = () => (
     </Section>
 
     <Section
-      id="starthere"
       width="wide"
-      style="shine-left"
+      style="shine-right"
       headline={{
         text: "Willkommen bei Autohaus Günther",
         sub: "Ihr Fahrzeugexperte seit 1967!",

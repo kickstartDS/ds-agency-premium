@@ -37,6 +37,33 @@
   --dsa-section--background-color_accent: var(--ks-background-color-accent);
   --dsa-section--background-color_bold: var(--ks-background-color-bold);
 
+  // Styles
+  --dsa-section_shine-left--background-image: radial-gradient(
+    80% 150% at 20% 50%,
+    var(--ks-color-fg-inverted),
+    var(--ks-color-bg-inverted-alpha-8)
+  );
+
+  --dsa-section_shine-right--background-image: radial-gradient(
+    80% 150% at 80% 50%,
+    var(--ks-color-fg-inverted),
+    var(--ks-color-bg-inverted-alpha-8)
+  );
+
+  &[ks-inverted="true"] {
+    --dsa-section_shine-left--background-image: radial-gradient(
+      70% 150% at 20% 50%,
+      var(--ks-color-fg-inverted-alpha-8-base),
+      var(--ks-color-bg)
+    );
+
+    --dsa-section_shine-right--background-image: radial-gradient(
+      70% 150% at 80% 50%,
+      var(--ks-color-fg-inverted-alpha-87-base),
+      var(--ks-color-bg)
+    );
+  }
+
   //Background Transitions
   --dsa-section--transition_to-default: linear-gradient(transparent, var(--ks-background-color-default));
   --dsa-section--transition_to-accent: linear-gradient(transparent, var(--ks-background-color-accent));

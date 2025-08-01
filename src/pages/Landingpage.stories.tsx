@@ -9,34 +9,75 @@ import { Cta } from "../components/cta/CtaComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
 import { Hero } from "../components/hero/HeroComponent";
 import { Stats } from "../components/stats/StatsComponent";
+import { Slider } from "../components/slider/SliderComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} />
-    <Section spaceBefore="none" spaceAfter="none" width="full">
+    <Header {...headerProps} floating />
+    <Section
+      inverted
+      spaceBefore="none"
+      spaceAfter="none"
+      width="full"
+      content={{
+        mode: "list",
+      }}
+    >
       <Hero
+        highlightText
+        overlay
+        skipButton
+        height="fullScreen"
+        textPosition="left"
+        headline="Autohaus Günther – Mobilität, die begeistert"
+        sub="Ihr Partner für Fahrzeuge, Service und Beratung in Norddeutschland"
         buttons={[
           {
-            label: "Erfahren Sie mehr",
-            url: "#startit",
-            icon: "chevron-down",
+            label: "Mehr erfahren",
+            url: "#starthere",
           },
         ]}
-        textbox
-        highlightText
-        headline="Willkommen bei Autohaus Günther - Ihr Fahrzeugexperte seit 1967!"
-        sub="Bei uns stehen Sie und Ihr Fahrzeug im Mittelpunkt."
-        text="Mit persönlichem Service und Fachexpertise sind wir Ihr offizieller Vertragspartner für die Marken Nissan, Kia, Maserati, Corvette, Cadillac, Subaru, microlino, Isuzu, MSG-Stablehopper, Infiniti-Service und SAAB.
-
-Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen eine vielfältige Auswahl für jeden Bedarf. Finden Sie gemeinsam mit uns Ihr Wunschfahrzeug und erleben unseren erstklassigen Service. Von markenspezifischen Wartungsarbeiten, über fachgerechte Reparaturen in unserer Meisterwerkstatt, bis hin zu originalen Ersatzteilen und Zubehör – wir sind für Sie da."
-        textPosition="below"
         image={{
-          srcDesktop: "/guenther/header.png",
-          srcMobile: "/guenther/header.png",
-          srcTablet: "/guenther/header.png",
+          srcMobile: "/guenther/visual.png",
+          srcTablet: "/guenther/visual.png",
+          srcDesktop: "/guenther/visual.png",
         }}
       />
     </Section>
+
+    <Section
+      width="wide"
+      headline={{
+        text: "Willkommen bei Autohaus Günther",
+        sub: "Ihr Fahrzeugexperte seit 1967!",
+        width: "default",
+        align: "left",
+        large: true,
+      }}
+      content={{
+        mode: "list",
+        align: "left",
+      }}
+    >
+      <Cta
+        align="top"
+        highlightText
+        image={{ src: "/guenther/contact.jpg" }}
+        text="
+Bei uns stehen Sie und Ihr Fahrzeug im Mittelpunkt. Mit persönlichem Service und Fachexpertise sind wir Ihr offizieller Vertragspartner für die Marken [Nissan](#), [Kia](#), [Maserati](#), [Corvette](#), [Cadillac](#), [Subaru](#), [microlino](#), [Isuzu](#), [MSG-Stablehopper](#), [Infiniti-Service](#) und [SAAB](#).
+
+Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen eine vielfältige Auswahl für jeden Bedarf. Finden Sie gemeinsam mit uns Ihr Wunschfahrzeug und erleben unseren erstklassigen Service. Von markenspezifischen Wartungsarbeiten, über fachgerechte Reparaturen in unserer Meisterwerkstatt, bis hin zu originalen Ersatzteilen und Zubehör – wir sind für Sie da."
+        order={{ desktopImageLast: true }}
+        buttons={[
+          {
+            icon: "chevron-right",
+            label: "Jetzt Kontakt aufnehmen",
+            url: "https://guenther-gruppe.de/kontakt",
+          },
+        ]}
+      />
+    </Section>
+
     <Section id="startit" width="wide">
       <Stats
         stat={[
@@ -62,7 +103,8 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
       />
     </Section>
     <Section
-      transition="to-bold"
+      backgroundColor="accent"
+      style="carbon"
       width="wide"
       headline={{
         text: "Unsere Marken",
@@ -160,107 +202,83 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
       />
     </Section>
 
-    <Section width="wide">
-      <Cta
-        headline="Jetzt Kontakt aufnehmen und Probefahrt vereinbaren!"
-        image={{
-          src: "/guenther/contact.jpg",
-          padding: false,
-        }}
-        buttons={[
-          {
-            label: "Kontakt aufnehmen",
-            url: "https://guenther-gruppe.de/kontakt",
-            icon: "person",
-          },
-          {
-            label: "Probefahrt buchen",
-            url: "https://guenther-gruppe.de/probefahrt",
-            icon: "date",
-          },
-        ]}
-      />
-    </Section>
     <Section
+      width="max"
+      content={{
+        mode: "slider",
+        tileWidth: "largest",
+      }}
       headline={{
-        text: "Häufige Fragen rund ums Autohaus Günther",
-        sub: "Antworten auf Ihre wichtigsten Fragen",
-        large: true,
-        align: "left",
+        text: "Unsere neusten Modelle",
+        textAlign: "left",
       }}
     >
-      <Faq
-        questions={[
-          {
-            question: "Welche Marken bietet das Autohaus Günther an?",
-            answer:
-              "Wir führen eine große Auswahl an Marken und Modellen – von Volkswagen über Audi bis hin zu Skoda und Seat. Sprechen Sie uns gerne an!",
-          },
-          {
-            question: "Kann ich online einen Servicetermin buchen?",
-            answer:
-              "Ja, über unsere Website können Sie bequem und schnell einen Servicetermin vereinbaren.",
-          },
-          {
-            question: "Bietet die Günther Gruppe auch Finanzierungen an?",
-            answer:
-              "Selbstverständlich! Wir beraten Sie zu individuellen Finanzierungs- und Leasingmöglichkeiten, die zu Ihren Bedürfnissen passen.",
-          },
-          {
-            question: "Wie finde ich das passende Zubehör für mein Fahrzeug?",
-            answer:
-              "Unser Team berät Sie gerne zu Originalteilen und passendem Zubehör für Ihr Fahrzeug. Sprechen Sie uns einfach an oder besuchen Sie unseren Zubehörshop.",
-          },
-          {
-            question: "Wo finde ich die Standorte der Günther Gruppe?",
-            answer:
-              "Alle Standorte und Kontaktdaten finden Sie auf unserer Website unter 'Standorte'. Wir sind in Hamburg, Lübeck, Lüneburg und Umgebung für Sie da.",
-          },
-        ]}
-      />
-    </Section>
-    <Section width="wide" spaceBefore="none" spaceAfter="small">
       <ImageText
         image={{
-          src: "/img/office-divider-image.png",
-          alt: "Modernes Autohaus Günther – Innenansicht",
+          src: "/guenther/car-cutout-1.avif",
+          alt: "Autohaus Günther Markenvielfalt",
         }}
-        text={""}
+        text={`
+Der neue Subaru Solterra – 100% elektrisch, 100% Subaru. Erleben Sie die Zukunft der Mobilität mit unserem neuesten Elektro-SUV. Besuchen Sie uns und lassen Sie sich von den Vorteilen überzeugen!`}
+        layout={"above"}
+      />
+      <ImageText
+        image={{
+          src: "/guenther/car-cutout-2.avif",
+          alt: "Autohaus Günther Fahrzeugangebot",
+        }}
+        text={`
+Wagen Sie den Schritt in die Zukunft mit dem neuen Kia EV6. Unser Elektro-SUV vereint sportliches Design, innovative Technik und nachhaltige Mobilität. Besuchen Sie uns und erleben Sie den Kia EV6 hautnah!`}
+        layout={"above"}
+      />
+      <ImageText
+        image={{
+          src: "/guenther/car-cutout-3.png",
+          alt: "Autohaus Günther Fahrzeugangebot",
+        }}
+        text={`
+Wagen Sie den Schritt in die Zukunft mit dem neuen Kia EV6. Unser Elektro-SUV vereint sportliches Design, innovative Technik und nachhaltige Mobilität. Besuchen Sie uns und erleben Sie den Kia EV6 hautnah!`}
+        layout={"above"}
+      />
+      <ImageText
+        image={{
+          src: "/guenther/car-cutout-1.avif",
+          alt: "Autohaus Günther Fahrzeugangebot",
+        }}
+        text={`
+Wagen Sie den Schritt in die Zukunft mit dem neuen Kia EV6. Unser Elektro-SUV vereint sportliches Design, innovative Technik und nachhaltige Mobilität. Besuchen Sie uns und erleben Sie den Kia EV6 hautnah!`}
         layout={"above"}
       />
     </Section>
     <Section
+      width="wide"
       headline={{
-        text: "Autohaus Günther – Mobilität, die begeistert",
-        sub: "Ihr Partner für Fahrzeuge, Service und Beratung",
+        text: "Aktuelle Beiträge & News",
       }}
     >
-      <Faq
-        questions={[
-          {
-            question: "Warum Autohaus Günther?",
-            answer:
-              "Weil wir seit über 60 Jahren für Kompetenz, Zuverlässigkeit und Kundennähe stehen. Ihre Zufriedenheit ist unser Antrieb.",
-          },
-          {
-            question: "Welche Vorteile bietet mir die Günther Gruppe?",
-            answer:
-              "Große Auswahl, persönliche Beratung, umfassender Service und attraktive Angebote – alles aus einer Hand.",
-          },
-          {
-            question: "Wie kann ich Kontakt aufnehmen?",
-            answer:
-              "Nutzen Sie unser Kontaktformular, rufen Sie uns an oder besuchen Sie uns direkt vor Ort. Wir freuen uns auf Sie!",
-          },
-          {
-            question: "Kann ich mein Fahrzeug bei Günther in Zahlung geben?",
-            answer:
-              "Ja, wir nehmen Ihr aktuelles Fahrzeug gerne in Zahlung und beraten Sie zu einem fairen Angebot.",
-          },
-        ]}
+      <TeaserCard
+        headline="Automobilverkäufer/in (m/w/d) Berlin"
+        text="Zur Unterstützung unseres Teams für unser Maserati Center in Berlin suchen wir zu sofort engagierten und motivierten Automobilverkäufer (m/w/d)."
+        url={"#"}
+        image={"/guenther/contact.jpg"}
+        button={{ label: "Zum Beitrag" }}
+      />
+      <TeaserCard
+        headline="GT2 Stradale Roadshow: Maserati Probefahrt & Expertenberatung in Hamburg"
+        text="Die Maserati GT2 Stradale Roadshow machte Halt in Hamburg! Besucher des Autohaus Günther testeten den Supersportwagen und profitierten von individueller Beratung durch einen erfahrenen Maserati Master Fahrer. Ein einzigartiges Fahrerlebnis, das Begeisterung bei allen Teilnehmern auslöste."
+        url={"#"}
+        image={"/guenther/car-yellow.webp"}
+        button={{ label: "Zum Beitrag" }}
+      />
+      <TeaserCard
+        headline="E-Mobilität Kaufberater"
+        text="Entdecken Sie die E-Mobilität von Kia beim Autohaus Günther! Unsere zertifizierten Berater informieren Sie umfassend zu Reichweite, Ladezeiten, Förderungen und allen Kia E-Modellen. Lassen Sie sich individuell beraten und finden Sie das passende Elektrofahrzeug für Ihre Zukunft."
+        url={"#"}
+        image={"/guenther/kia-header.webp"}
+        button={{ label: "Zum Beitrag" }}
       />
     </Section>
-    <Section width="wide">
+    <Section inverted style="shine-left" width="wide">
       <Cta
         highlightText
         textAlign="center"

@@ -58,7 +58,9 @@ export const SectionContextDefault = forwardRef<
         {...componentProps}
         className={classnames(
           "dsa-section",
-          style && style !== "default" && `dsa-section-style--${style}`,
+          style &&
+            style !== "default" &&
+            `dsa-section--style dsa-section--style-${style}`,
           transition &&
             transition !== "none" &&
             `dsa-section--transition-${transition}`,
