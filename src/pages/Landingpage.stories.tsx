@@ -3,13 +3,11 @@ import { headerProps } from "../components/header/Header.stories";
 import { Footer } from "../components/footer/FooterComponent";
 import { footerProps } from "../components/footer/Footer.stories";
 import { Section } from "../components/section/SectionComponent";
-import { Faq } from "../components/faq/FaqComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 import { Cta } from "../components/cta/CtaComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
 import { Hero } from "../components/hero/HeroComponent";
 import { Stats } from "../components/stats/StatsComponent";
-import { Slider } from "../components/slider/SliderComponent";
 
 const Page = () => (
   <>
@@ -83,19 +81,19 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
         stat={[
           {
             title: "Marken",
-            number: 10,
+            number: "10",
             icon: "star",
             description: `Nissan, Kia, Maserati, Corvette, Cadillac, Subaru, Micro, Isuzu, MSG-Stablehopper, Infiniti-Service, Saab`,
           },
           {
             title: "Standorte",
-            number: 9,
+            number: "9",
             icon: "map-pin",
             description: "Hamburg, Berlin, Frankfurt, Ahrensburg, Halstenbek",
           },
           {
             title: "Leidenschaft",
-            number: 1,
+            number: "1",
             icon: "heart",
             description: "Seit über 57 Jahren aus Liebe zum Automobil",
           },
