@@ -139,11 +139,13 @@
     --g-link--color-hover: var(--dsa-business-card__contact--color_hover, var(--dsa-link--color_hover));
     --g-link--font-weight: var(--dsa-business-card__contact--font-weight, var(--ks-font-weight-semi-bold));
     text-align: center;
+    white-space: nowrap;
 
     .icon {
       width: var(--dsa-business-card__contact--icon-size, 1.25em);
       height: var(--dsa-business-card__contact--icon-size, 1.25em);
       margin-right: 0.35em;
+      flex-shrink: 0;
     }
   }
 
