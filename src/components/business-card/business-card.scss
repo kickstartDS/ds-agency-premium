@@ -49,6 +49,10 @@
     font-weight: var(--dsa-business-card__topic--font-weight, var(--dsa-topic--font-weight));
   }
 
+  &__location {
+    margin: 0;
+  }
+
   &__image {
     flex-grow: 1;
 
