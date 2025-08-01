@@ -4,6 +4,8 @@ import { Icon } from "@kickstartds/base/lib/icon";
 import { PaginationProps } from "./PaginationProps";
 import "./pagination.scss";
 import { Link } from "@kickstartds/base/lib/link";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./PaginationDefaults";
 
 export type { PaginationProps };
 
@@ -125,6 +127,6 @@ export const Pagination = forwardRef<
   PaginationProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(PaginationContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Pagination.displayName = "Pagination";

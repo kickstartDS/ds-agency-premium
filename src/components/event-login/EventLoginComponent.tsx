@@ -6,6 +6,8 @@ import { Link } from "@kickstartds/base/lib/link";
 import { TextField } from "@kickstartds/form/lib/text-field";
 import { Button } from "../button/ButtonComponent";
 import Markdown from "markdown-to-jsx";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./EventLoginDefaults";
 
 export type { EventLoginProps };
 
@@ -56,7 +58,7 @@ export const EventLoginContext = createContext(EventLoginContextDefault);
 export const EventLogin = forwardRef<HTMLDivElement, EventLoginProps>(
   (props, ref) => {
     const Component = useContext(EventLoginContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 EventLogin.displayName = "EventLogin";

@@ -2,6 +2,8 @@ import { createContext, forwardRef, useContext } from "react";
 import { ContentNavProps } from "./ContentNavProps";
 import "./content-nav.scss";
 import { Icon } from "@kickstartds/base/lib/icon";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./ContentNavDefaults";
 
 export type { ContentNavProps };
 
@@ -67,7 +69,7 @@ export const ContentNavContext = createContext(ContentNavContextDefault);
 export const ContentNav = forwardRef<HTMLDivElement, ContentNavProps>(
   (props, ref) => {
     const Component = useContext(ContentNavContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 ContentNav.displayName = "ContentNav";

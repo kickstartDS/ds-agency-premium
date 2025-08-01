@@ -168,10 +168,19 @@
       "items": {
         "anyOf": [
           {
+            "$ref": "http://schema.mydesignsystem.com/business-card.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/content-nav.schema.json"
+          },
+          {
             "$ref": "http://schema.mydesignsystem.com/cta.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/divider.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/downloads.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/faq.schema.json"
@@ -202,6 +211,12 @@
           },
           {
             "$ref": "http://schema.mydesignsystem.com/slider.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/split-even.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/split-weighted.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/stats.schema.json"

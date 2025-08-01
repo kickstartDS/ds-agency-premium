@@ -6,6 +6,8 @@ import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Icon } from "@kickstartds/base/lib/icon";
 import { EventAppointment } from "../event-appointment/EventAppointmentComponent";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./EventLocationDefaults";
 
 export type { EventLocationProps };
 
@@ -70,7 +72,7 @@ export const EventLocationContext = createContext(EventLocationContextDefault);
 export const EventLocation = forwardRef<HTMLDivElement, EventLocationProps>(
   (props, ref) => {
     const Component = useContext(EventLocationContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 EventLocation.displayName = "EventLocation";

@@ -4,6 +4,8 @@ import { Icon } from "@kickstartds/base/lib/icon";
 import { Picture } from "@kickstartds/base/lib/picture";
 import { DownloadsProps } from "./DownloadsProps";
 import "./downloads.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./DownloadsDefaults";
 
 export type { DownloadsProps };
 
@@ -77,6 +79,6 @@ export const Downloads = forwardRef<
   DownloadsProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(DownloadsContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Downloads.displayName = "Downloads";

@@ -2,6 +2,8 @@ import { forwardRef, createContext, useContext, HTMLAttributes } from "react";
 import { EventLatestProps } from "./EventLatestProps";
 import "./event-latest.scss";
 import { EventLatestTeaser } from "../event-latest-teaser/EventLatestTeaserComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./EventLatestDefaults";
 
 export type { EventLatestProps };
 
@@ -24,6 +26,6 @@ export const EventLatest = forwardRef<
   EventLatestProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(EventLatestContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 EventLatest.displayName = "EventLatest";

@@ -7,6 +7,8 @@ import { Container } from "@kickstartds/core/lib/container";
 import { Picture } from "@kickstartds/base/lib/picture";
 import Markdown from "markdown-to-jsx";
 import { TagLabel } from "@kickstartds/base/lib/tag-label";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./EventListTeaserDefaults";
 
 export type { EventListTeaserProps };
 
@@ -113,6 +115,6 @@ export const EventListTeaser = forwardRef<
   EventListTeaserProps & HTMLAttributes<HTMLAnchorElement>
 >((props, ref) => {
   const Component = useContext(EventListTeaserContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 EventListTeaser.displayName = "EventListTeaser";

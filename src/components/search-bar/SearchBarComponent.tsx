@@ -5,6 +5,8 @@ import { TextField } from "@kickstartds/form/lib/text-field";
 import Markdown from "markdown-to-jsx";
 import { Icon } from "@kickstartds/base/lib/icon";
 import { Link } from "@kickstartds/base/lib/link";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./SearchBarDefaults";
 
 export type { SearchBarProps };
 
@@ -48,7 +50,7 @@ export const SearchBarContext = createContext(SearchBarContextDefault);
 export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
   (props, ref) => {
     const Component = useContext(SearchBarContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 SearchBar.displayName = "SearchBar";
