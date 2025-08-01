@@ -31,7 +31,7 @@
       "title": "Style",
       "description": "Color of background",
       "enum": ["none", "to-default", "to-accent", "to-bold", "to-inverted"],
-      "default": "to-default"
+      "default": "none"
     },
     "backgroundImage": {
       "title": "Background image",
