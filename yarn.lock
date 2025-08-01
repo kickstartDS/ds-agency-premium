@@ -2233,10 +2233,10 @@
     mkdirp "^1.0.4"
     prettier "^2.6.2"
 
-"@kickstartds/jsonschema-utils@3.7.0", "@kickstartds/jsonschema-utils@^3.7.0":
-  version "3.7.0"
-  resolved "https://registry.npmjs.org/@kickstartds/jsonschema-utils/-/jsonschema-utils-3.7.0.tgz#95ffd90cc808d6ea5010436b6e3327f170e637bf"
-  integrity sha512-fgzLDl6ALF81Oi4e3Jw8a+NyspTfyqmierdde3sOWHrmP+me1j7D3I9if4qeXVx5vTsw5tbEKQpbow2GWSNnww==
+"@kickstartds/jsonschema-utils@3.8.1", "@kickstartds/jsonschema-utils@^3.8.1":
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/@kickstartds/jsonschema-utils/-/jsonschema-utils-3.8.1.tgz#4f568c7bd6865b8cb0f774d8263a190f8107d7e3"
+  integrity sha512-3ZdI2ZscE2yvgDN5XfiZMupRlFpU3+lGIBo7aG47YTYw58arBM/ES83Y9aS2FatWWKVEW8G+vIBmvWgn9R4y3w==
   dependencies:
     "@bcherny/json-schema-ref-parser" "10.0.5-fork"
     "@kickstartds/cambria" "1.0.5"
@@ -2248,13 +2248,13 @@
     json-schema-traverse "^1.0.0"
     jsonpointer "~5.0.1"
 
-"@kickstartds/jsonschema2types@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.npmjs.org/@kickstartds/jsonschema2types/-/jsonschema2types-1.2.5.tgz#6ad9feee3a8b66f61293c34a213a7b3f63467c42"
-  integrity sha512-JItd6ZKK6FsW4vS1EFoQRdElyi99EXAZgsWs1tZEXdo1pzm77aYuCvPgXzeTE0qvRyyjoikTYJO5Z2ocah4s0A==
+"@kickstartds/jsonschema2types@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@kickstartds/jsonschema2types/-/jsonschema2types-1.2.7.tgz#31753adcb79cd2c8a73a57f3195c94bc623dc8a4"
+  integrity sha512-f3yNQWFzGLZf2Jgnr4OyBJl8+ldgo/WmnSJML1OZ8QJ1bcj8cwaHhNxHWNCHRhExguIwReHLq6HKJUaADlkmuw==
   dependencies:
     "@kickstartds/json-schema-to-typescript" "~13.1.20"
-    "@kickstartds/jsonschema-utils" "3.7.0"
+    "@kickstartds/jsonschema-utils" "3.8.1"
     ajv "^8.12.0"
     object-traversal "^1.0.1"
 
@@ -9160,10 +9160,10 @@ kebab-case@^1.0.0:
   resolved "https://registry.npmjs.org/kebab-case/-/kebab-case-1.0.2.tgz"
   integrity sha512-7n6wXq4gNgBELfDCpzKc+mRrZFs7D+wgfF5WRFLNAr4DA/qtr9Js8uOAVAfHhuLMfAcQ0pRKqbpjx+TcJVdE1Q==
 
-kickstartds@3.5.0--canary.62.320.0:
-  version "3.5.0--canary.62.320.0"
-  resolved "https://registry.npmjs.org/kickstartds/-/kickstartds-3.5.0--canary.62.320.0.tgz#3d6dfe19b118ef06a02d69ee3e6a384c185f2af4"
-  integrity sha512-aHsPMYHrTkTIARRcpTwGrV9R3CAK3Emt1xykat0OIQ4va3A5rHH/F+wbyc8fen0xpko1zPb/dCPna+57pV/lgg==
+kickstartds@3.5.0--canary.62.324.0:
+  version "3.5.0--canary.62.324.0"
+  resolved "https://registry.yarnpkg.com/kickstartds/-/kickstartds-3.5.0--canary.62.324.0.tgz#7a20dc728830f030bf0dd751f97debda59235742"
+  integrity sha512-WjMhZ1yPz1BEvFyTjEDl09nrG7Xh/yR7Py3UMF3St/3UBuA04WGcCXMXOsbXeO7h6g0jIDS74vUn4WqLHGrxkA==
   dependencies:
     "@apidevtools/json-schema-ref-parser" "^9.0.9"
     "@babel/preset-react" "^7.17.12"

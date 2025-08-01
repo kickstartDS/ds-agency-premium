@@ -22,6 +22,7 @@
 
     --c-teaser--border-radius: var(--dsa-teaser-card--border-radius, var(--ks-border-radius-card));
     --c-teaser--shadow-hover: var(--dsa-teaser-card--shadow_hover, var(--ks-box-shadow-card-hover));
+    --c-teaser_text--spacing: var(--dsa-teaser-card__copy--margin-top, 0.5em);
 
     position: relative;
     transition-property: border-color, background-color, box-shadow;
