@@ -53,6 +53,18 @@
     }
   }
 
+  .c-form-check-group {
+    display: flex;
+    gap: var(--ks-spacing-stack-xs);
+    flex-direction: column;
+
+    &__group {
+      display: flex;
+      gap: var(--ks-spacing-xxs);
+      flex-direction: column;
+    }
+  }
+
   .c-form-field {
     --c-form-field_label--padding: 0 0 var(--dsa-input__label--padding-bottom, 0.25em) 0;
     --c-form-field--border: var(--dsa-input--border, var(--ks-border-width-default) solid);
