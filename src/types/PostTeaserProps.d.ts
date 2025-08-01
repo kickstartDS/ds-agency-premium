@@ -8,16 +8,9 @@ declare module "@kickstartds/blog/lib/post-teaser/typing" {
 
 import type {PictureProps} from "@kickstartds/base/lib/picture/typing";
 import type {PostMetaProps} from "@kickstartds/blog/lib/post-meta/typing";
+import type {ButtonProps} from "@kickstartds/base/lib/button/typing";
 import type {TagLabelProps} from "@kickstartds/base/lib/tag-label/typing";
 
-/**
- * Link used for button
- */
-export type ButtonHref = string;
-/**
- * Text content to display inside the button
- */
-export type Label = string;
 /**
  * Title for news item
  */
@@ -67,8 +60,14 @@ export interface PostTeaserProps {
  * Link for news item
  */
 export interface Link {
-  href: ButtonHref;
-  label: Label;
+  /**
+   * Referenced component ButtonProps
+   */
+  href: ButtonProps;
+  /**
+   * Referenced component ButtonProps
+   */
+  label: ButtonProps;
 }
 
 }

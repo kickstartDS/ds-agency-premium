@@ -9,14 +9,6 @@ declare module "@kickstartds/blog/lib/post-share-bar/typing" {
 import type {HeadlineProps} from "@kickstartds/base/lib/headline/typing";
 
 /**
- * Text content for the headline
- */
-export type Text = string;
-/**
- * Whether to display space after headline
- */
-export type SpaceAfter = "minimum" | "small" | "large";
-/**
  * Open link in new Tab
  */
 export type OpenLinkInNewTab = boolean;
@@ -34,8 +26,8 @@ export type KsComponentAttribute = string;
  */
 export interface PostShareBarProps {
   headline?: {
-    content?: Text;
-    spaceAfter?: string & SpaceAfter;
+    content?: string & HeadlineProps;
+    spaceAfter?: string & HeadlineProps;
   } & HeadlineProps;
   links?: ShareLink[];
   className?: Class;

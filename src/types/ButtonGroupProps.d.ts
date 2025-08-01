@@ -17,9 +17,9 @@ export type Buttons = ButtonProps[];
  */
 export type ColorNeutral = boolean;
 /**
- * Size of button to use
+ * Choose a size between small, medium and large
  */
-export type Size = "small" | "medium" | "large";
+export type ButtonSize = "small" | "medium" | "large";
 /**
  * Vertical arrangement of the buttons
  */
@@ -32,7 +32,7 @@ export type AdditionalClasses = string;
 export interface ButtonGroupProps {
   buttons?: Buttons;
   colorNeutral?: ColorNeutral;
-  size?: Size;
+  size?: ButtonSize;
   arrangement?: ButtonArrangement;
   className?: AdditionalClasses;
 }

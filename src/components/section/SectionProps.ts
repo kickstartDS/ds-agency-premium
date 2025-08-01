@@ -5,8 +5,11 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {BusinessCardProps} from "../business-card/BusinessCardProps";
+import type {ContentNavProps} from "../content-nav/ContentNavProps";
 import type {CtaProps} from "../cta/CtaProps";
 import type {DividerProps} from "../divider/DividerProps";
+import type {DownloadsProps} from "../downloads/DownloadsProps";
 import type {FaqProps} from "../faq/FaqProps";
 import type {FeaturesProps} from "../features/FeaturesProps";
 import type {GalleryProps} from "../gallery/GalleryProps";
@@ -17,6 +20,8 @@ import type {ImageTextProps} from "../image-text/ImageTextProps";
 import type {LogosProps} from "../logos/LogosProps";
 import type {MosaicProps} from "../mosaic/MosaicProps";
 import type {SliderProps} from "../slider/SliderProps";
+import type {SplitEvenProps} from "../split-even/SplitEvenProps";
+import type {SplitWeightedProps} from "../split-weighted/SplitWeightedProps";
 import type {StatsProps} from "../stats/StatsProps";
 import type {TeaserCardProps} from "../teaser-card/TeaserCardProps";
 import type {TestimonialsProps} from "../testimonials/TestimonialsProps";
@@ -116,8 +121,11 @@ export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest";
  * Allowed components for content
  */
 export type Content = (
+  | BusinessCardProps
+  | ContentNavProps
   | CtaProps
   | DividerProps
+  | DownloadsProps
   | FaqProps
   | FeaturesProps
   | GalleryProps
@@ -128,6 +136,8 @@ export type Content = (
   | LogosProps
   | MosaicProps
   | SliderProps
+  | SplitEvenProps
+  | SplitWeightedProps
   | StatsProps
   | TeaserCardProps
   | TestimonialsProps
