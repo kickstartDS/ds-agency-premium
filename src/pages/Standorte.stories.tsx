@@ -166,7 +166,7 @@ const Page = () => (
         ]}
         image={{
           alt: "",
-          src: "guenther/locations/Farmsen.png",
+          src: "guenther/locations/farmsen.png",
         }}
       />
       <BusinessCard
