@@ -13,7 +13,7 @@ export const Slider = forwardRef<
   (
     {
       gap,
-      type,
+      variant,
       autoplay,
       arrows,
       teaseNeighbours,
@@ -27,7 +27,7 @@ export const Slider = forwardRef<
     <KickstartSlider
       className={classnames(`dsa-slider`, className)}
       gap={gap}
-      type={type}
+      type={variant}
       arrows={arrows}
       autoplay={autoplay}
       teaseNeighbours={teaseNeighbours}

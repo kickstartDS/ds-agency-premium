@@ -29,9 +29,9 @@ export const CountUpWithIcons: Story = {
   },
   args: pack({
     stat: [
-      { number: 1500, title: "Users", icon: "person" },
-      { number: 350, title: "Subscribers", icon: "star" },
-      { number: 125, title: "Locations", icon: "map" },
+      { number: "mind. 1500 davon", title: "Users", icon: "person" },
+      { number: "bis zu 350", title: "Subscribers", icon: "star" },
+      { number: "125%", title: "Growth", icon: "map" },
     ],
   }),
 };
@@ -46,13 +46,13 @@ export const CountUpWithDescription: Story = {
   args: pack({
     stat: [
       {
-        number: 1500,
+        number: "1500",
         title: "Users",
         description:
           "Experience the power of our platform, embraced by a vast community of users. Our user base is diverse and dynamic, including both active and inactive members. Join us and become part of this ever-growing community.",
       },
       {
-        number: 350,
+        number: "350",
         title: "Subscribers",
         description:
           "Stay ahead with our regular updates and newsletters. Our subscribers are always in the loop, receiving the latest news and features. Subscribe now and never miss an update from us.",

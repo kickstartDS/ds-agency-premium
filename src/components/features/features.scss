@@ -32,7 +32,8 @@
 
   .dsa-feature {
     --dsa-feature_large__icon--size: calc(
-      var(--dsa-feature_small__icon--size) * var(--dsa-feature_large__icon--size-multiplier)
+      var(--dsa-feature_small__icon--size) *
+        var(--dsa-feature_large__icon--size-multiplier)
     );
 
     display: flex;
@@ -41,22 +42,41 @@
     gap: var(--dsa-feature--gap);
 
     &--large {
-      --dsa-feature__icon--size: var(--dsa-feature_large__icon--size, calc(var(--ks-font-size-copy-m) * 2.5));
-      --dsa-feature__icon--gap: var(--dsa-feature_large__icon--gap, var(--ks-spacing-xs));
-      --dsa-feature--gap: var(--dsa-feature_large--gap, var(--ks-spacing-stack-s));
+      --dsa-feature__icon--size: var(
+        --dsa-feature_large__icon--size,
+        calc(var(--ks-font-size-copy-m) * 2.5)
+      );
+      --dsa-feature__icon--gap: var(
+        --dsa-feature_large__icon--gap,
+        var(--ks-spacing-xs)
+      );
+      --dsa-feature--gap: var(
+        --dsa-feature_large--gap,
+        var(--ks-spacing-stack-s)
+      );
     }
 
     &--small {
       --dsa-feature__icon--size: var(
         --dsa-feature_small__icon--size,
-        calc(var(--ks-line-height-interface-m) * var(--ks-font-size-interface-m))
+        calc(
+          var(--ks-line-height-interface-m) * var(--ks-font-size-interface-m)
+        )
       );
-      --dsa-feature__icon--gap: var(--dsa-feature_small__icon--gap, var(--ks-spacing-xs));
-      --dsa-feature--gap: var(--dsa-feature_small--gap, var(--ks-spacing-stack-xs));
+      --dsa-feature__icon--gap: var(
+        --dsa-feature_small__icon--gap,
+        var(--ks-spacing-xs)
+      );
+      --dsa-feature--gap: var(
+        --dsa-feature_small--gap,
+        var(--ks-spacing-stack-xs)
+      );
     }
 
     &--beside {
-      padding-left: calc(var(--dsa-feature__icon--size) + var(--dsa-feature__icon--gap));
+      padding-left: calc(
+        var(--dsa-feature__icon--size) + var(--dsa-feature__icon--gap)
+      );
 
       .dsa-feature__icon {
         position: absolute;
@@ -66,7 +86,10 @@
     }
 
     &--beside.dsa-feature--large {
-      padding-top: calc((var(--dsa-feature__icon--size) / 2) - (var(--dsa-feature_small__icon--size) / 2));
+      padding-top: calc(
+        (var(--dsa-feature__icon--size) / 2) -
+          (var(--dsa-feature_small__icon--size) / 2)
+      );
     }
 
     &--stack {
@@ -108,8 +131,14 @@
     &__title {
       font: var(--dsa-feature__title--font, var(--ks-font-interface-m));
       color: var(--dsa-feature__title--color, var(--dsa-topic--color));
-      font-family: var(--dsa-feature__title--font-family, var(--ks-font-family-display));
-      font-weight: var(--dsa-feature__title--font-weight, var(--ks-font-weight-semi-bold));
+      font-family: var(
+        --dsa-feature__title--font-family,
+        var(--ks-font-family-display)
+      );
+      font-weight: var(
+        --dsa-feature__title--font-weight,
+        var(--ks-font-weight-semi-bold)
+      );
     }
 
     &__text {
@@ -135,16 +164,28 @@
     &__link {
       font: var(--dsa-feature__link--font, var(--ks-font-copy-s));
       color: var(--dsa-feature__link--color, var(--dsa-link--color));
-      font-weight: var(--dsa-feature__link--font-weight, var(--dsa-link--font-weight));
-      text-decoration: var(--dsa-feature__link--text-decoration, var(--dsa-link--text-decoration));
+      font-weight: var(
+        --dsa-feature__link--font-weight,
+        var(--dsa-link--font-weight)
+      );
+      text-decoration: var(
+        --dsa-feature__link--text-decoration,
+        var(--dsa-link--text-decoration)
+      );
       display: flex;
       align-items: center;
       gap: var(--dsa-feature__link--gap, 0.35em);
       width: fit-content;
 
       &:hover {
-        color: var(--dsa-feature__link--color_hover, var(--dsa-link--color_hover));
-        text-decoration: var(--dsa-feature__link--text-decoration_hover, var(--dsa-link--text-decoration_hover));
+        color: var(
+          --dsa-feature__link--color_hover,
+          var(--dsa-link--color_hover)
+        );
+        text-decoration: var(
+          --dsa-feature__link--text-decoration_hover,
+          var(--dsa-link--text-decoration_hover)
+        );
       }
 
       .icon {

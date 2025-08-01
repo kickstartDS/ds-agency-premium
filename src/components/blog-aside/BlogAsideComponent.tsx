@@ -7,6 +7,8 @@ import { BlogAsideProps } from "./BlogAsideProps";
 import "./blog-aside.scss";
 import { BlogAuthor } from "../blog-author/BlogAuthorComponent";
 import { Headline } from "../headline/HeadlineComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./BlogAsideDefaults";
 
 export type { BlogAsideProps };
 
@@ -69,7 +71,7 @@ export const BlogAsideContext = createContext(BlogAsideContextDefault);
 export const BlogAside = forwardRef<HTMLDivElement, BlogAsideProps>(
   (props, ref) => {
     const Component = useContext(BlogAsideContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 BlogAside.displayName = "BlogAside";

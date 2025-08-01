@@ -2,6 +2,8 @@ import { forwardRef, createContext, useContext, HTMLAttributes } from "react";
 import { FaqProps } from "./FaqProps";
 import "./faq.scss";
 import { CollapsibleBox } from "@kickstartds/base/lib/collapsible-box";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./FaqDefaults";
 
 export type { FaqProps };
 
@@ -26,6 +28,6 @@ export const Faq = forwardRef<
   FaqProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(FaqContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Faq.displayName = "Faq";

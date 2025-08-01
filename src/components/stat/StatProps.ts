@@ -8,7 +8,7 @@
 /**
  * The number of the stat
  */
-export type Number = number;
+export type Number = string;
 /**
  * Optional description of the stat
  */
