@@ -22,6 +22,7 @@ const Page = () => (
       />
     </Section>
     <Section
+      spaceAfter="small"
       width="wide"
       headline={{
         align: "center",
@@ -32,30 +33,70 @@ const Page = () => (
         tileWidth: "smallest",
       }}
     >
-      <Button variant="tertiary" size="small" label="Hamburg" url={"#"} />
+      <Button
+        variant="tertiary"
+        size="small"
+        label="Hamburg"
+        url={"#hamburg"}
+      />
       <Button
         variant="tertiary"
         size="small"
         label="Hamburg Maserati"
-        url={"#"}
+        url={"#hamburg-maserati"}
       />
-      <Button variant="tertiary" size="small" label="Ahrensburg" url={"#"} />
-      <Button variant="tertiary" size="small" label="Halstenbek" url={"#"} />
-      <Button variant="tertiary" size="small" label="Berlin" url={"#"} />
-      <Button variant="tertiary" size="small" label="Frankfurt" url={"#"} />
+      <Button
+        variant="tertiary"
+        size="small"
+        label="Ahrensburg"
+        url={"#ahrensburg"}
+      />
+      <Button
+        variant="tertiary"
+        size="small"
+        label="Halstenbek"
+        url={"#halstenbek"}
+      />
+      <Button variant="tertiary" size="small" label="Berlin" url={"#berlin"} />
+      <Button
+        variant="tertiary"
+        size="small"
+        label="Frankfurt"
+        url={"#frankfurt"}
+      />
     </Section>
-    <Section width="wide">
+
+    <Section
+      id="hamburg"
+      headline={{
+        text: "Hamburg",
+      }}
+      spaceBefore="small"
+      width="wide"
+      content={{ mode: "list" }}
+    >
       <BusinessCard
-        topic="Ahrensburg"
-        address="An der Strusbek 4
-<br />22926 Ahrensburg"
+        topic="Hamburg-Hamm"
+        address={`Ausschläger Weg 49<br />
+20537 Hamburg<br />
+
+**Verkauf:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+<br />Sa. 10.00 bis 14.00 Uhr
+
+**Kundendienst:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+
+**TÜV-Service:**
+<br />Montag
+`}
         avatar={{
           alt: "Emily Johnson",
-          src: "img/people/contact-person.png",
+          src: "img/contact-person.png",
         }}
         buttons={[
           {
-            label: "Market Insights",
+            label: "Kontakt aufnehmen",
             url: "#",
           },
         ]}
@@ -77,13 +118,219 @@ const Page = () => (
           },
         ]}
         image={{
-          alt: "A group of people collaborating in an office setting",
-          src: "img/full-shot-different-people-working-together.png",
+          alt: "",
+          src: "guenther/locations/hamm.png",
         }}
-        logo={{
-          alt: "Business Logo",
-          src: "logo.svg",
-          url: "#",
+      />
+      <BusinessCard
+        topic="Hamburg-Farmsen"
+        address={`Friedrich-Ebert-Damm 319<br />
+22159 Hamburg<br />
+
+**Verkauf:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+<br />Sa. 10.00 bis 14.00 Uhr
+
+**Kundendienst:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+
+**TÜV-Service:**
+<br />Montag, Mittwoch, Freitag
+`}
+        avatar={{
+          alt: "Emily Johnson",
+          src: "img/contact-person.png",
+        }}
+        buttons={[
+          {
+            label: "Kontakt aufnehmen",
+            url: "#",
+          },
+        ]}
+        contact={[
+          {
+            icon: "phone",
+            label: "+(04102) 78794-50",
+            url: "tel:+1234567890",
+          },
+          {
+            icon: "email",
+            label: "info@guenther-gruppe.de",
+            url: "mailto:info@guenther-gruppe.de",
+          },
+          {
+            icon: "map-pin",
+            label: "Google Maps",
+            url: "#",
+          },
+        ]}
+        image={{
+          alt: "",
+          src: "guenther/locations/Farmsen.png",
+        }}
+      />
+      <BusinessCard
+        topic="Hamburg-Poppenbüttel"
+        address={`Poppenbütteler Bogen 33<br />
+22399 Hamburg<br />
+
+**Verkauf:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+<br />Sa. 10.00 bis 14.00 Uhr
+
+**Kundendienst:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+
+**TÜV-Service:**
+<br />Montag, Mittwoch, Freitag
+`}
+        avatar={{
+          alt: "Emily Johnson",
+          src: "img/contact-person.png",
+        }}
+        buttons={[
+          {
+            label: "Kontakt aufnehmen",
+            url: "#",
+          },
+        ]}
+        contact={[
+          {
+            icon: "phone",
+            label: "+(04102) 78794-50",
+            url: "tel:+1234567890",
+          },
+          {
+            icon: "email",
+            label: "info@guenther-gruppe.de",
+            url: "mailto:info@guenther-gruppe.de",
+          },
+          {
+            icon: "map-pin",
+            label: "Google Maps",
+            url: "#",
+          },
+        ]}
+        image={{
+          alt: "",
+          src: "guenther/locations/poppenbuettel.jpg",
+        }}
+      />
+    </Section>
+
+    <Section
+      headline={{
+        text: "Hamburg Maserati",
+      }}
+      spaceBefore="small"
+      width="wide"
+      content={{ mode: "list" }}
+      backgroundColor="accent"
+      id="hamburg-maserati"
+    >
+      <BusinessCard
+        topic="Hamburg-Hamm"
+        address={`Ausschläger Weg 49<br />
+20537 Hamburg<br />
+
+**Verkauf:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+<br />Sa. 10.00 bis 14.00 Uhr
+
+**Kundendienst:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+
+**TÜV-Service:**
+<br />Montag
+`}
+        avatar={{
+          alt: "Emily Johnson",
+          src: "img/contact-person.png",
+        }}
+        buttons={[
+          {
+            label: "Kontakt aufnehmen",
+            url: "#",
+          },
+        ]}
+        contact={[
+          {
+            icon: "phone",
+            label: "+(04102) 78794-50",
+            url: "tel:+1234567890",
+          },
+          {
+            icon: "email",
+            label: "info@guenther-gruppe.de",
+            url: "mailto:info@guenther-gruppe.de",
+          },
+          {
+            icon: "map-pin",
+            label: "Google Maps",
+            url: "#",
+          },
+        ]}
+        image={{
+          alt: "",
+          src: "guenther/locations/hamm.png",
+        }}
+      />
+    </Section>
+
+    <Section
+      headline={{
+        text: "Ahrensburg",
+      }}
+      spaceBefore="small"
+      width="wide"
+      content={{ mode: "list" }}
+      id="ahrensburg"
+    >
+      <BusinessCard
+        topic="Hamburg-Hamm"
+        address={`Ausschläger Weg 49<br />
+20537 Hamburg<br />
+
+**Verkauf:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+<br />Sa. 10.00 bis 14.00 Uhr
+
+**Kundendienst:**
+<br />Mo. - Fr. 8.00 bis 18.00 Uhr
+
+**TÜV-Service:**
+<br />Montag
+`}
+        avatar={{
+          alt: "Emily Johnson",
+          src: "img/contact-person.png",
+        }}
+        buttons={[
+          {
+            label: "Kontakt aufnehmen",
+            url: "#",
+          },
+        ]}
+        contact={[
+          {
+            icon: "phone",
+            label: "+(04102) 78794-50",
+            url: "tel:+1234567890",
+          },
+          {
+            icon: "email",
+            label: "info@guenther-gruppe.de",
+            url: "mailto:info@guenther-gruppe.de",
+          },
+          {
+            icon: "map-pin",
+            label: "Google Maps",
+            url: "#",
+          },
+        ]}
+        image={{
+          alt: "",
+          src: "guenther/locations/hamm.png",
         }}
       />
     </Section>
