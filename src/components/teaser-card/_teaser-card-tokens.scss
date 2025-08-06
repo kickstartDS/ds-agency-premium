@@ -16,6 +16,8 @@
   --dsa-teaser-card__image--transform_hover: scale(1.05);
   --dsa-teaser-card__image--transition: transform var(--ks-transition-hover);
 
+  --dsa-teaser__body--gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
+
   --dsa-teaser-card__topic--color: var(--dsa-topic--color);
 
   --dsa-teaser-card__label--font: var(--ks-font-interface-s);
@@ -72,10 +74,6 @@
     // Scaling for Desktop Breakpoint LargeTiles
     @include container.size("≥", 820px, "teaser-card") {
       --dsa-teaser-card--padding: var(--ks-spacing-inset-l);
-
-      --dsa-teaser-card__topic--font: var(--ks-font-display-l);
-
-      --dsa-teaser-card__copy--font: var(--ks-font-copy-l);
     }
   }
 }

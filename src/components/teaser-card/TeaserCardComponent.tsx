@@ -43,7 +43,8 @@ export const TeaserCardContextDefault = forwardRef<
         className={classnames(
           `dsa-teaser-card`,
           `dsa-teaser-card--${layout}`,
-          `dsa-teaser-card--${imageRatio}`
+          `dsa-teaser-card--${imageRatio}`,
+          !image && "dsa-teaser-card--no-image"
         )}
       >
         {label && <span className="dsa-teaser-card__label">{label}</span>}
