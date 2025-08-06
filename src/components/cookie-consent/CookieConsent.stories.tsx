@@ -31,7 +31,8 @@ export const Card: Story = {
     notice: {
       displayMode: "card",
       title: "We use cookies",
-      description: "We use cookies to enhance your experience on our website.",
+      description:
+        "We use cookies to enhance your experience on our website. You can choose which cookies to accept.",
       acceptButton: {
         label: "Accept All",
         variant: "primary",
@@ -98,19 +99,19 @@ export const Banner: Story = {
         label: "Accept All Cookies",
         variant: "tertiary",
       },
-      rejectButton: {
-        label: "Reject Non-Essential",
-        variant: "tertiary",
-      },
       customizeButton: {
         label: "Customize Settings",
+        variant: "secondary",
+      },
+      rejectButton: {
+        label: "Reject Non-Essential",
         variant: "tertiary",
       },
     },
     dialogue: {
       title: "Manage Your Cookie Preferences",
       description:
-        "Here you can enable or disable different types of cookies. Essential cookies are always active as they are necessary for the website to function properly.",
+        "Here you can enable or disable different types of cookies. Essential cookies are always active as they are necessary for the website to function properly. You can change your preferences at any time. Please note that disabling certain cookies may affect your experience on our website.",
       required: [
         {
           name: "Essential Cookies",

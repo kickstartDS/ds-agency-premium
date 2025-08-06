@@ -1,2 +1,85 @@
 .dsa-cookie-consent {
+  // Consent notice
+  --dsa-cookie-consent-notice--gap: var(--ks-spacing-stack-s);
+  --dsa-cookie-consent-notice--max-height: 45vh;
+
+  /// Card style
+  --dsa-cookie-consent-notice_card--background-color: var(--ks-background-color-default);
+  --dsa-cookie-consent-notice_card--padding: var(--ks-spacing-inset-m);
+  --dsa-cookie-consent-notice_card--spacing: var(--ks-spacing-m);
+  --dsa-cookie-consent-notice_card--border-radius: var(--ks-border-radius-card);
+  --dsa-cookie-consent-notice_card--max-width: var(--dsa-tile--width_largest);
+  --dsa-cookie-consent-notice_card--border: var(--ks-border-color-card) solid var(--ks-border-width-default);
+  --dsa-cookie-consent-notice_card--box-shadow: var(--ks-box-shadow-card);
+
+  /// Banner style
+  --dsa-cookie-consent-notice_banner--padding: var(--ks-spacing-inset-m);
+  --dsa-cookie-consent-notice_banner--background-color: var(--ks-background-color-default);
+  --dsa-cookie-consent-notice_banner--box-shadow: var(--ks-box-shadow-surface);
+  --dsa-cookie-consent-notice_banner--border-top: var(--ks-border-color-interface) solid var(--ks-border-width-default);
+
+  /// Buttons
+  --dsa-cookie-consent-notice__buttons--gap: var(--ks-spacing-stack-xs) var(--ks-spacing-inline-s);
+
+  // Consent dialogue
+  --dsa-cookie-consent-dialogue--padding-horizontal: var(--ks-spacing-inset-m);
+
+  --dsa-cookie-consent-dialogue--border-radius: var(--ks-border-radius-card);
+  --dsa-cookie-consent-dialogue--border: var(--ks-border-color-interface) solid var(--ks-border-width-default);
+
+  --dsa-cookie-consent-dialogue--box-shadow: var(--ks-box-shadow-card);
+  --dsa-cookie-consent-dialogue--background-color: var(--ks-background-color-default);
+
+  --dsa-cookie-consent-dialogue--max-width: var(--dsa-tile--width_largest);
+  --dsa-cookie-consent-dialogue--max-height: 100%;
+
+  @media (min-width: 48em) {
+    --dsa-cookie-consent-dialogue--max-height: 90vh;
+  }
+
+  --dsa-cookie-consent-dialogue--spacing-vertical: var(--ks-spacing-inset-s);
+  --dsa-cookie-consent-dialogue--spacing-horizontal: var(--ks-spacing-inset-s);
+
+  /// Block
+  --dsa-cookie-consent-dialogue__block--padding-vertical: var(--ks-spacing-inset-m);
+
+  /// Header
+  --dsa-cookie-consent-dialogue__header--padding: var(--ks-spacing-inset-squish-m);
+  --dsa-cookie-consent-dialogue__header--gap: var(--ks-spacing-inline-m);
+
+  /// Content
+  --dsa-cookie-consent-dialogue__content--border: var(--ks-border-color-interface) solid var(--ks-border-width-default);
+
+  /// Close button
+  --dsa-cookie-consent-dialogue__close--padding: var(--ks-spacing-inset-xs);
+
+  --dsa-cookie-consent-dialogue__close--color: var(--ks-text-color-interface-interactive);
+  --dsa-cookie-consent-dialogue__close--color_hover: var(--ks-text-color-interface-interactive);
+
+  --dsa-cookie-consent-dialogue__close--background-color_hover: var(--ks-color-fg-alpha-8);
+  --dsa-cookie-consent-dialogue__close--background-color: transparent;
+
+  /// Description
+  --dsa-cookie-consent-dialogue__description--border-bottom: 1px solid var(--ks-border-color-interface);
+  --dsa-cookie-consent-dialogue__description--font: var(--ks-font-interface-s);
+  --dsa-cookie-consent-dialogue__description--color: var(--ks-text-color-interface);
+
+  /// Options
+  --dsa-cookie-consent-dialogue__option--border-bottom: 1px solid var(--ks-border-color-interface);
+  --dsa-cookie-consent-dialogue__option--padding-vertical: var(--ks-spacing-stack-m);
+  --dsa-cookie-consent-dialogue__option--gap: var(--ks-spacing-stack-xs);
+
+  /// Label
+  --dsa-cookie-consent-dialogue__label--font: var(--ks-font-interface-s);
+  --dsa-cookie-consent-dialogue__label--color: var(--ks-text-color-positive);
+  --dsa-cookie-consent-dialogue__label--font-weight: var(--ks-font-weight-bold);
+
+  /// Toggle
+  --dsa-cookie-consent-dialogue__toggle--gap: var(--ks-spacing-stack-xs) var(--ks-spacing-inline-m);
+
+  /// Buttons
+  --dsa-cookie-consent-dialogue__buttons--gap: var(--ks-spacing-stack-xs) var(--ks-spacing-inline-s);
+
+  // Overlay
+  --dsa-cookie-consent-overlay--background-color: var(--dsa-overlay--background-color);
 }

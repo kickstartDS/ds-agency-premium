@@ -49,14 +49,14 @@ export const CookieConsentContextDefault = forwardRef<
         <div className="dsa-cookie-consent-notice__buttons">
           <Button
             size="small"
-            label={notice?.rejectButton?.label}
-            variant={notice?.rejectButton?.variant}
-          />
-          <Button
-            size="small"
             label={notice?.customizeButton?.label}
             variant={notice?.customizeButton?.variant}
             onClick={() => setShowDialogue(true)}
+          />
+          <Button
+            size="small"
+            label={notice?.rejectButton?.label}
+            variant={notice?.rejectButton?.variant}
           />
           <Button
             size="small"
@@ -70,65 +70,74 @@ export const CookieConsentContextDefault = forwardRef<
         hidden={!showDialogue}
         aria-hidden={!showDialogue}
       >
-        <Button
-          aria-label="Close Cookie Consent Dialogue"
-          className="dsa-cookie-consent-dialogue__close"
-          icon="close"
-          label={""}
-          onClick={() => setShowDialogue(false)}
-        />
         <div className="dsa-cookie-consent-dialogue__header">
-          <Headline spaceAfter="minimum" text={dialogue?.title} level={"h2"} />
-          <RichText text={dialogue?.description} />
+          <Headline
+            spaceAfter="minimum"
+            text={dialogue?.title}
+            level="h2"
+            style="h3"
+          />
+          <Button
+            aria-label="Close Cookie Consent Dialogue"
+            className="dsa-cookie-consent-dialogue__close"
+            icon="close"
+            label={""}
+            onClick={() => setShowDialogue(false)}
+          />
         </div>
-        <div className="dsa-cookie-consent-dialogue__options">
-          {dialogue?.required?.map((option, index) => (
-            <div className="dsa-cookie-consent-dialogue__option" key={index}>
-              <Headline
-                key={index}
-                spaceAfter="minimum"
-                text={option.name}
-                level={"h3"}
-                style="h4"
-              />
-              <Markdown className="dsa-cookie-consent-dialogue__description">
-                {option.description}
-              </Markdown>
-              <div className="dsa-cookie-consent-dialogue__toggle">
-                <Radio checked name={option.name} disabled label={"Accept"} />
-                <Radio name={option.name} disabled label={"Reject"} />
+        <div className="dsa-cookie-consent-dialogue__content">
+          <RichText
+            className="dsa-cookie-consent-dialogue__description"
+            text={dialogue?.description}
+          />
+          <div className="dsa-cookie-consent-dialogue__options">
+            {dialogue?.required?.map((option, index) => (
+              <div className="dsa-cookie-consent-dialogue__option" key={index}>
+                <Headline
+                  key={index}
+                  spaceAfter="minimum"
+                  text={option.name}
+                  level="h3"
+                  style="h4"
+                />
+                <Markdown className="dsa-cookie-consent-dialogue__option-description">
+                  {option.description}
+                </Markdown>
+                <span className="dsa-cookie-consent-dialogue__label">
+                  Always active
+                </span>
               </div>
-            </div>
-          ))}
+            ))}
 
-          {dialogue?.options?.map((option, index) => (
-            <div className="dsa-cookie-consent-dialogue__option" key={index}>
-              <Headline
-                key={index}
-                spaceAfter="minimum"
-                text={option.name}
-                level={"h3"}
-                style="h4"
-              />
-              <Markdown className="dsa-cookie-consent-dialogue__description">
-                {option.description}
-              </Markdown>
-              <div className="dsa-cookie-consent-dialogue__toggle">
-                <Radio
-                  name={option.name}
-                  checked={optionStates?.[index] ?? true}
-                  label={"Accept"}
-                  onChange={() => handleRadioChange(index, true)}
+            {dialogue?.options?.map((option, index) => (
+              <div className="dsa-cookie-consent-dialogue__option" key={index}>
+                <Headline
+                  key={index}
+                  spaceAfter="minimum"
+                  text={option.name}
+                  level={"h3"}
+                  style="h4"
                 />
-                <Radio
-                  name={option.name}
-                  checked={optionStates ? !optionStates[index] : false}
-                  label={"Reject"}
-                  onChange={() => handleRadioChange(index, false)}
-                />
+                <Markdown className="dsa-cookie-consent-dialogue__option-description">
+                  {option.description}
+                </Markdown>
+                <div className="dsa-cookie-consent-dialogue__toggle">
+                  <Radio
+                    name={option.name}
+                    checked={optionStates?.[index] ?? true}
+                    label={"Accept"}
+                    onChange={() => handleRadioChange(index, true)}
+                  />
+                  <Radio
+                    name={option.name}
+                    checked={optionStates ? !optionStates[index] : false}
+                    label={"Reject"}
+                    onChange={() => handleRadioChange(index, false)}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <div className="dsa-cookie-consent-dialogue__buttons">
           <Button
