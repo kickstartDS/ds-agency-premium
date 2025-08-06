@@ -11,9 +11,10 @@
 
   --dsa-footer__link--font: var(--ks-font-interface-s);
   --dsa-footer__link--font-weight: var(--dsa-link--font-weight);
-  --dsa-footer__link--color: var(--dsa-link--color);
+  --dsa-footer__link--color: var(--ks-text-color-interface-interactive);
+  --dsa-footer__link--color_hover: var(--ks-text-color-interface-interactive-hover);
   --dsa-footer__link--text-tecoration: none;
-  --dsa-footer__link--text-tecoration_hover: underline;
+  --dsa-footer__link--text-tecoration_hover: none;
 
   --dsa-footer__logo--height: 1.5rem;
 
