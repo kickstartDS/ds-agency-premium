@@ -11,13 +11,7 @@ import { Cta } from "../components/cta/CtaComponent";
 
 const Page = () => (
   <>
-    <Header
-      {...headerProps}
-      floating
-      inverted
-      dropdownInverted
-      flyoutInverted
-    />
+    <Header {...headerProps} inverted dropdownInverted flyoutInverted />
     <Section spaceBefore="none" width="full" inverted>
       <Hero
         height="fullScreen"
@@ -36,7 +30,7 @@ const Page = () => (
         overlay
         headline="Transformations powered by 💗, Innovation & Design Systems"
         sub="Selected showcases from Design Systems and headless Webs of the biggest global Enterprises 😁"
-        textPosition="below"
+        textPosition="offset"
         text={`Welcome to our showcase of success stories. Here, you'll discover how we've partnered with diverse organizations to revolutionize their digital landscapes. From creating bespoke design systems to implementing headless CMSs, our solutions have empowered brands to streamline processes, enhance user experiences, and foster brand consistency. Dive in to explore how we've turned challenges into opportunities, and visions into reality.`}
       />
     </Section>

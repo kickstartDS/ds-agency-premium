@@ -85,7 +85,7 @@ We bring you [CMS starter](/starter) to help setup your next professional websit
         textAlign: "left",
       }}
     >
-      <Slider autoplay equalHeight gap={15} arrows type="carousel">
+      <Slider autoplay equalHeight gap={15} arrows>
         <ImageText
           text={""}
           image={{
