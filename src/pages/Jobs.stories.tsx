@@ -10,11 +10,11 @@ import { Testimonials } from "../components/testimonials/TestimonialsComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 import { Faq } from "../components/faq/FaqComponent";
 import { Contact } from "../components/contact/ContactComponent";
+import { Features } from "../components/features/FeaturesComponent";
 
 const Page = () => (
   <>
     <Header {...headerProps} />
-
     <Section width="full" spaceAfter="none" spaceBefore="none">
       <Hero
         image={{
@@ -42,7 +42,7 @@ At Systemics, we value creativity, collaboration, and a commitment to excellence
         layout={"beside-right"}
       />
     </Section>
-    <Section>
+    <Section width="wide">
       <Testimonials
         layout="slider"
         quoteSigns="normal"
@@ -80,7 +80,14 @@ At Systemics, we value creativity, collaboration, and a commitment to excellence
         ]}
       />
     </Section>
-    <Section width="wide">
+    <Section
+      headline={{
+        text: "Facts and Figures",
+        sub: "Get to know Systemics by the numbers.",
+        align: "center",
+      }}
+      width="wide"
+    >
       <Stats
         stat={[
           {
@@ -103,7 +110,10 @@ At Systemics, we value creativity, collaboration, and a commitment to excellence
       />
     </Section>
     <Section
-      headline={{ text: "Current Job Openings" }}
+      headline={{
+        text: "Current Job Openings",
+        sub: "Find the role that matches your skills and ambitions.",
+      }}
       content={{
         mode: "list",
       }}
@@ -154,7 +164,75 @@ At Systemics, we value creativity, collaboration, and a commitment to excellence
         }}
       />
     </Section>
-    <Section headline={{ text: "Frequently Asked Questions" }}>
+    <Section
+      width="wide"
+      headline={{
+        text: "Application Process",
+        sub: "Your path to joining Systemics – step by step.",
+      }}
+      content={{
+        mode: "slider",
+        tileWidth: "full",
+        gutter: "large",
+      }}
+    >
+      <Hero
+        textPosition="right"
+        invertText
+        textbox={false}
+        overlay
+        image={{
+          srcMobile:
+            "img/colleagues-work-office-using-computers-looking-aside.png",
+          alt: "Application Process",
+        }}
+        headline="Discover Your Opportunity..."
+        text="Browse our open positions and find the role that matches your skills and ambitions. We offer a variety of opportunities for professionals at every stage of their career."
+      />
+      <Hero
+        textPosition="left"
+        invertText
+        textbox={false}
+        overlay
+        image={{
+          srcMobile: "img/people-brainstorming-work-meeting.png",
+          alt: "Application Process",
+        }}
+        headline="... Apply to Us ..."
+        text="Prepare your resume and cover letter, then submit your application through our online portal. Make sure to highlight your experience and motivation for joining Systemics."
+      />
+      <Hero
+        textPosition="left"
+        invertText
+        textbox={false}
+        overlay
+        image={{
+          srcMobile:
+            "img/colleagues-work-office-using-computers-looking-aside.png",
+          alt: "Application Process",
+        }}
+        headline="... Ace the Interview ..."
+        text="If your profile matches our requirements, we’ll invite you to an interview. This is your chance to get to know us and for us to learn more about you."
+      />
+      <Hero
+        textPosition="right"
+        invertText
+        textbox={false}
+        overlay
+        image={{
+          srcMobile: "img/people-brainstorming-work-meeting.png",
+          alt: "Application Process",
+        }}
+        headline="and Join Our Team!"
+        text="Congratulations! If you’re selected, we’ll send you an offer and guide you through the onboarding process."
+      />
+    </Section>
+    <Section
+      headline={{
+        text: "Frequently Asked Questions",
+        sub: "Everything you need to know about working and applying at Systemics.",
+      }}
+    >
       <Faq
         questions={[
           {
@@ -185,7 +263,58 @@ At Systemics, we value creativity, collaboration, and a commitment to excellence
         ]}
       />
     </Section>
-    <Section headline={{ text: "Get in Touch" }}>
+    <Section
+      headline={{
+        text: "Our Benefits at a Glance",
+        sub: "Working at Systemics comes with many advantages. These are just a few of them.",
+      }}
+    >
+      <Features
+        ctas={{
+          toggle: false,
+        }}
+        feature={[
+          {
+            icon: "arrow-right",
+            title: "Flexible Work Arrangements",
+            text: "Enjoy the freedom to work remotely or from our modern offices. We support flexible schedules to help you balance your professional and personal life.",
+          },
+          {
+            icon: "arrow-right",
+            title: "Continuous Learning",
+            text: "Benefit from ongoing training, workshops, and access to the latest technologies. We invest in your growth and professional development.",
+          },
+          {
+            icon: "arrow-right",
+            title: "Collaborative Culture",
+            text: "Be part of a diverse and inclusive team where your ideas are valued. Collaboration and open communication are at the heart of our success.",
+          },
+          {
+            icon: "arrow-right",
+            title: "Attractive Compensation",
+            text: "Receive a competitive salary and performance-based bonuses. We recognize and reward your contributions to our shared goals.",
+          },
+          {
+            icon: "arrow-right",
+            title: "Health & Wellbeing",
+            text: "Take advantage of comprehensive health benefits, wellness programs, and regular team events to keep you healthy and motivated.",
+          },
+          {
+            icon: "arrow-right",
+            title: "Career Advancement",
+            text: "Grow with us! We offer clear career paths, mentorship, and opportunities for internal promotions so you can achieve your ambitions.",
+          },
+        ]}
+        layout="largeTiles"
+        style="besideSmall"
+      />
+    </Section>
+    <Section
+      headline={{
+        text: "Get in Touch",
+        sub: "Contact our recruitment team for any questions about your application.",
+      }}
+    >
       <Contact
         image={{
           alt: "Picture of Isabella Doe",
