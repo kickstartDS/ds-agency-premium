@@ -35,12 +35,11 @@ export const Card: Story = {
         "We use cookies to enhance your experience on our website. You can choose which cookies to accept.",
       acceptButton: {
         label: "Accept All",
-        variant: "primary",
       },
       rejectButton: {
         label: "Reject All",
-        variant: "tertiary",
       },
+      decisionButtonVariant: "primary",
       customizeButton: {
         label: "Customize",
         variant: "tertiary",
@@ -95,9 +94,9 @@ export const Banner: Story = {
       title: "Your Privacy Matters to Us",
       description:
         "We use cookies and similar technologies to personalize content, provide social media features, and analyze our traffic. You can choose which categories you want to allow and change your preferences at any time. For more information, please see our privacy policy.",
+      decisionButtonVariant: "tertiary",
       acceptButton: {
         label: "Accept All Cookies",
-        variant: "tertiary",
       },
       customizeButton: {
         label: "Customize Settings",
@@ -105,7 +104,6 @@ export const Banner: Story = {
       },
       rejectButton: {
         label: "Reject Non-Essential",
-        variant: "tertiary",
       },
     },
     dialogue: {
@@ -119,6 +117,7 @@ export const Banner: Story = {
             "These cookies are required for basic website functionality, such as page navigation and access to secure areas of the website. The website cannot function properly without these cookies.",
         },
       ],
+      decisionButtonVariant: "tertiary",
       options: [
         {
           name: "Statistics Cookies",

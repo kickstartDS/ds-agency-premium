@@ -27,12 +27,6 @@
               "type": "string",
               "description": "The label for the accept button",
               "examples": ["Accept All Cookies"]
-            },
-            "variant": {
-              "type": "string",
-              "enum": ["primary", "secondary", "tertiary"],
-              "examples": ["primary"],
-              "description": "The variant of the accept button"
             }
           }
         },
@@ -43,12 +37,6 @@
               "type": "string",
               "description": "The label for the reject button",
               "examples": ["Reject All Cookies"]
-            },
-            "variant": {
-              "type": "string",
-              "enum": ["primary", "secondary", "tertiary"],
-              "examples": ["tertiary"],
-              "description": "The variant of the reject button"
             }
           }
         },
@@ -61,12 +49,12 @@
               "examples": ["Customize Cookies"]
             },
             "variant": {
-              "type": "string",
-              "enum": ["primary", "secondary", "tertiary"],
-              "examples": ["tertiary"],
-              "description": "The variant of the customize button"
+              "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/variant"
             }
           }
+        },
+        "decisionButtonVariant": {
+          "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/variant"
         },
         "description": {
           "type": "string",
@@ -115,6 +103,31 @@
             }
           }
         },
+        "buttons": {
+          "type": "object",
+          "properties": {
+            "acceptLabel": {
+              "type": "string",
+              "description": "The label for the accept button in the dialogue",
+              "default": "Accept All"
+            },
+            "rejectLabel": {
+              "type": "string",
+              "description": "The label for the reject button in the dialogue",
+              "default": "Reject All"
+            },
+            "savePreferencesLabel": {
+              "type": "string",
+              "description": "The label for the button to save preferences",
+              "default": "Save Preferences"
+            }
+          }
+        },
+        "decisionButtonVariant": {
+          "type": "string",
+          "description": "The variant of the decision buttons in the dialogue",
+          "enum": ["secondary", "tertiary"]
+        },
         "options": {
           "type": "array",
           "items": {
@@ -139,6 +152,22 @@
               }
             }
           }
+        },
+        "toggleLabels": {
+          "type": "object",
+          "properties": {
+            "accept": {
+              "type": "string",
+              "description": "Label for enabled toggle state",
+              "default": "Accept"
+            },
+            "reject": {
+              "type": "string",
+              "description": "Label for disabled toggle state",
+              "default": "Reject"
+            }
+          },
+          "additionalProperties": false
         }
       }
     }

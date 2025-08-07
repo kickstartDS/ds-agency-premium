@@ -3,12 +3,10 @@ import { headerProps } from "../components/header/Header.stories";
 import { Footer } from "../components/footer/FooterComponent";
 import { footerProps } from "../components/footer/Footer.stories";
 import { Section } from "../components/section/SectionComponent";
-import { ImageText } from "../components/image-text/ImageTextComponent";
 import { Hero } from "../components/hero/HeroComponent";
 import { Faq } from "../components/faq/FaqComponent";
 import { Contact } from "../components/contact/ContactComponent";
 import { Features } from "../components/features/FeaturesComponent";
-import { Picture } from "@kickstartds/base/lib/picture";
 import { Cta } from "../components/cta/CtaComponent";
 
 const Page = () => (

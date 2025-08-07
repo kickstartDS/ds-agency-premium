@@ -56,12 +56,12 @@ export const CookieConsentContextDefault = forwardRef<
           <Button
             size="small"
             label={notice?.rejectButton?.label}
-            variant={notice?.rejectButton?.variant}
+            variant={notice?.decisionButtonVariant}
           />
           <Button
             size="small"
             label={notice?.acceptButton?.label}
-            variant={notice?.acceptButton?.variant}
+            variant={notice?.decisionButtonVariant}
           />
         </div>
       </div>
@@ -125,13 +125,13 @@ export const CookieConsentContextDefault = forwardRef<
                   <Radio
                     name={option.name}
                     checked={optionStates?.[index] ?? true}
-                    label={"Accept"}
+                    label={dialogue?.toggleLabels?.accept || "Accept"}
                     onChange={() => handleRadioChange(index, true)}
                   />
                   <Radio
                     name={option.name}
                     checked={optionStates ? !optionStates[index] : false}
-                    label={"Reject"}
+                    label={dialogue?.toggleLabels?.reject || "Reject"}
                     onChange={() => handleRadioChange(index, false)}
                   />
                 </div>
@@ -142,20 +142,20 @@ export const CookieConsentContextDefault = forwardRef<
         <div className="dsa-cookie-consent-dialogue__buttons">
           <Button
             size="small"
-            variant="tertiary"
-            label={"Accept All"}
+            variant={dialogue?.decisionButtonVariant}
+            label={dialogue?.buttons.acceptLabel || "Accept All"}
             onClick={() => setOptionStates(optionStates?.map(() => true))}
           />
           <Button
             size="small"
-            variant="tertiary"
-            label={"Reject All"}
+            variant={dialogue?.decisionButtonVariant}
+            label={dialogue?.buttons.rejectLabel || "Reject All"}
             onClick={() => setOptionStates(optionStates?.map(() => false))}
           />
           <Button
             size="small"
             variant="primary"
-            label={"Save Preferences"}
+            label={dialogue?.buttons.savePreferencesLabel || "Save Preferences"}
             onClick={() => setShowDialogue(false)}
           />
         </div>

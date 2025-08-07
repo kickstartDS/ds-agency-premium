@@ -5,6 +5,10 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+/**
+ * Variant of button to be used
+ */
+export type Variant = "primary" | "secondary" | "tertiary";
 export type RequiredCookies = {
   /**
    * The name of the required cookie
@@ -37,31 +41,21 @@ export interface InitialCookieConsentNotice {
      * The label for the accept button
      */
     label?: string;
-    /**
-     * The variant of the accept button
-     */
-    variant?: "primary" | "secondary" | "tertiary";
   };
   rejectButton?: {
     /**
      * The label for the reject button
      */
     label?: string;
-    /**
-     * The variant of the reject button
-     */
-    variant?: "primary" | "secondary" | "tertiary";
   };
   customizeButton?: {
     /**
      * The label for the customize button
      */
     label?: string;
-    /**
-     * The variant of the customize button
-     */
-    variant?: "primary" | "secondary" | "tertiary";
+    variant?: Variant;
   };
+  decisionButtonVariant?: Variant;
   /**
    * The description of the cookie consent section
    */
@@ -80,6 +74,24 @@ export interface CookieConsentDialogue {
    */
   description?: string;
   required?: RequiredCookies;
+  buttons?: {
+    /**
+     * The label for the accept button in the dialogue
+     */
+    acceptLabel?: string;
+    /**
+     * The label for the reject button in the dialogue
+     */
+    rejectLabel?: string;
+    /**
+     * The label for the button to save preferences
+     */
+    savePreferencesLabel?: string;
+  };
+  /**
+   * The variant of the decision buttons in the dialogue
+   */
+  decisionButtonVariant?: "secondary" | "tertiary";
   options?: {
     /**
      * The name of the cookie category
@@ -94,4 +106,14 @@ export interface CookieConsentDialogue {
      */
     checked?: boolean;
   }[];
+  toggleLabels?: {
+    /**
+     * Label for enabled toggle state
+     */
+    accept?: string;
+    /**
+     * Label for disabled toggle state
+     */
+    reject?: string;
+  };
 }
