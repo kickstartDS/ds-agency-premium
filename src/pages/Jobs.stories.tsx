@@ -17,11 +17,20 @@ const Page = () => (
     <Header {...headerProps} />
     <Section width="full" spaceAfter="none" spaceBefore="none">
       <Hero
+        headline="Welcome to Systemics"
+        sub="Your partner in innovative software solutions"
+        textPosition="corner"
+        buttons={[
+          {
+            label: "Skip to Openings",
+            url: "#openings",
+            icon: "arrow-down",
+          },
+        ]}
         image={{
           srcMobile:
             "img/colleagues-work-office-using-computers-looking-aside.png",
         }}
-        textPosition="offset"
       />
     </Section>
     <Section
@@ -110,6 +119,7 @@ At Systemics, we value creativity, collaboration, and a commitment to excellence
       />
     </Section>
     <Section
+      id="openings"
       headline={{
         text: "Current Job Openings",
         sub: "Find the role that matches your skills and ambitions.",
