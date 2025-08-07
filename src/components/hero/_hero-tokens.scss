@@ -55,6 +55,18 @@
       var(--ks-color-bg-alpha-4) 100%
     );
 
+    --dsa-hero--left__overlay--background: linear-gradient(
+      90deg,
+      var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width),
+      transparent
+    );
+
+    --dsa-hero--right__overlay--background: linear-gradient(
+      270deg,
+      var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width),
+      transparent
+    );
+
     --dsa-hero_offset__textbox--max-width: var(--dsa-content--width_default);
     --dsa-hero_offset__textbox--offset: -10%;
     --dsa-hero_offset__overlay--background: linear-gradient(

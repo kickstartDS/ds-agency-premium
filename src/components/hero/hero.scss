@@ -48,6 +48,20 @@
       );
     }
 
+    &.dsa-hero--content-left {
+      --c-visual_overlay--background: var(
+        --dsa-hero--left__overlay--background,
+        linear-gradient(90deg, var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width), transparent)
+      );
+    }
+
+    &.dsa-hero--content-right {
+      --c-visual_overlay--background: var(
+        --dsa-hero--right__overlay--background,
+        linear-gradient(270deg, var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width), transparent)
+      );
+    }
+
     .c-visual__box {
       --c-visual_box--max-width: var(--dsa-hero__textbox--max-width, var(--dsa-content--width_narrow));
 
