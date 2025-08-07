@@ -29,6 +29,7 @@ export type Size = "small" | "medium" | "large";
  * Whether the button should be disabled
  */
 export type Disabled = boolean;
+export type ButtonType = "button" | "submit" | "reset";
 
 /**
  * Component used for user interaction
@@ -40,4 +41,5 @@ export interface ButtonProps {
   icon?: Icon;
   size?: Size;
   disabled?: Disabled;
+  type?: ButtonType;
 }

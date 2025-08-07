@@ -161,7 +161,15 @@
     background-color: var(--dsa-cookie-consent-dialogue__close--background-color, transparent);
   }
 
+  &__form {
+    flex: 1;
+     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
   &__content {
+    flex: 1;
     overflow-y: auto;
     border-top: var(
       --dsa-cookie-consent-dialogue__content--border,

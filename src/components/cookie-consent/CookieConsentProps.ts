@@ -9,7 +9,9 @@
  * Variant of button to be used
  */
 export type Variant = "primary" | "secondary" | "tertiary";
+export type InternalKey = string;
 export type RequiredCookies = {
+  key?: InternalKey;
   /**
    * The name of the required cookie
    */
@@ -19,11 +21,17 @@ export type RequiredCookies = {
    */
   description?: string;
 }[];
+export type InternalKey1 = string;
+/**
+ * Optional custom component identifier
+ */
+export type KsComponentAttribute = string;
 
 export interface CookieConsentProps {
   notice?: InitialCookieConsentNotice;
   revisitButton?: RevisitCookieConsentButton;
   dialogue?: CookieConsentDialogue;
+  component?: KsComponentAttribute;
 }
 /**
  * The initial notice displayed to users regarding cookie consent.
@@ -70,10 +78,6 @@ export interface RevisitCookieConsentButton {
    * The label for the revisit button
    */
   label?: string;
-  /**
-   * Whether the revisit button is a toggle
-   */
-  toggle?: boolean;
 }
 /**
  * The dialogue displayed when users choose to customize their cookie preferences.
@@ -107,6 +111,7 @@ export interface CookieConsentDialogue {
    */
   decisionButtonVariant?: "secondary" | "tertiary";
   options?: {
+    key?: InternalKey1;
     /**
      * The name of the cookie category
      */
@@ -115,10 +120,6 @@ export interface CookieConsentDialogue {
      * A description of the cookie category
      */
     description?: string;
-    /**
-     * Whether the cookie category is checked by default
-     */
-    checked?: boolean;
   }[];
   toggleLabels?: {
     /**

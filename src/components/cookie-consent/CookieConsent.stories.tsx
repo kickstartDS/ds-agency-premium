@@ -1,10 +1,16 @@
 import { Meta, StoryObj } from "@storybook/react";
+import { useEffect } from "react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { CookieConsent } from "./CookieConsentComponent";
 import customProperties from "./cookie-consent-tokens.json";
 import schema from "./cookie-consent.schema.dereffed.json";
+
+import { define } from "@kickstartds/core/lib/component";
+import { configureConsentManager, createConsentManagerStore } from "c15t";
+import { Button } from "../button/ButtonComponent";
+import CookieConsentC15t from "./C15t.client";
 
 const meta: Meta = {
   title: "Corporate/Cookie Consent",
@@ -14,6 +20,12 @@ const meta: Meta = {
     cssprops: { customProperties },
   },
   ...getArgsShared(schema as JSONSchema7),
+  render(args) {
+    useEffect(() => {
+      window._ks.radio.emit("dsa.cookie-consent.showNotice", true);
+    }, []);
+    return <CookieConsent {...args} />;
+  },
 };
 
 export default meta;
@@ -50,6 +62,7 @@ export const Card: Story = {
       description: "Manage your cookie preferences below.",
       required: [
         {
+          key: "necessary",
           name: "Essential Cookies",
           description:
             "These cookies are necessary for the website to function.",
@@ -57,21 +70,25 @@ export const Card: Story = {
       ],
       options: [
         {
+          key: "measurement",
           name: "Analytics Cookies",
           description:
             "These cookies help us understand how our visitors interact with the website.",
         },
         {
+          key: "marketing",
           name: "Marketing Cookies",
           description:
             "These cookies are used to deliver advertisements that are relevant to you.",
         },
         {
+          key: "functionality",
           name: "Functional Cookies",
           description:
             "These cookies allow the website to remember choices you make and provide enhanced, more personal features.",
         },
         {
+          key: "experience",
           name: "Performance Cookies",
           description:
             "These cookies collect information about how visitors use the website, such as which pages are visited most often and if they get error messages from web pages.",
@@ -137,4 +154,39 @@ export const Banner: Story = {
       ],
     },
   }),
+};
+
+const c15cStore = createConsentManagerStore(
+  configureConsentManager({ mode: "offline" }),
+  {
+    ignoreGeoLocation: true, // Useful for development to always view the banner.
+  }
+);
+define(
+  "dsa.cookie-consent.c15t.offline",
+  class extends CookieConsentC15t {
+    static store = c15cStore;
+  }
+);
+
+export const C15t: Story = {
+  parameters: Card.parameters,
+  args: { ...Card.args, component: "dsa.cookie-consent.c15t.offline" },
+  render(args) {
+    return (
+      <>
+        <Button
+          size="small"
+          label="reset"
+          onClick={() => {
+            const state = c15cStore.getState();
+            state.resetConsents();
+            state.setShowPopup(true);
+          }}
+        />
+        <hr />
+        <CookieConsent {...args} />
+      </>
+    );
+  },
 };

@@ -42,6 +42,11 @@
       "title": "Disabled?",
       "description": "Whether the button should be disabled",
       "default": false
+    },
+    "type": {
+      "type": "string",
+      "title": "Button Type",
+      "enum": ["button", "submit", "reset"]
     }
   },
   "additionalProperties": false,

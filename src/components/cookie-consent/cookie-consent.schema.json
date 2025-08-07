@@ -11,14 +11,19 @@
       "properties": {
         "displayMode": {
           "type": "string",
-          "enum": ["card", "banner"],
+          "enum": [
+            "card",
+            "banner"
+          ],
           "description": "The display mode of the cookie consent component",
           "default": "card"
         },
         "title": {
           "type": "string",
           "description": "The title of the cookie consent section",
-          "examples": ["We value your privacy"]
+          "examples": [
+            "We value your privacy"
+          ]
         },
         "acceptButton": {
           "type": "object",
@@ -46,7 +51,9 @@
             "label": {
               "type": "string",
               "description": "The label for the customize button",
-              "examples": ["Customize Cookies"]
+              "examples": [
+                "Customize Cookies"
+              ]
             },
             "variant": {
               "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/variant"
@@ -74,11 +81,6 @@
           "type": "string",
           "description": "The label for the revisit button",
           "default": "Manage Cookies"
-        },
-        "toggle": {
-          "type": "boolean",
-          "description": "Whether the revisit button is a toggle",
-          "default": true
         }
       }
     },
@@ -90,7 +92,9 @@
         "title": {
           "type": "string",
           "description": "The title of the cookie consent dialogue",
-          "examples": ["Manage Cookie Preferences"]
+          "examples": [
+            "Manage Cookie Preferences"
+          ]
         },
         "description": {
           "type": "string",
@@ -105,10 +109,19 @@
           "items": {
             "type": "object",
             "properties": {
+              "key": {
+                "type": "string",
+                "title": "Internal Key",
+                "examples": [
+                  "necessary"
+                ]
+              },
               "name": {
                 "type": "string",
                 "description": "The name of the required cookie",
-                "examples": ["Session Cookie"]
+                "examples": [
+                  "Session Cookie"
+                ]
               },
               "description": {
                 "type": "string",
@@ -150,10 +163,22 @@
           "items": {
             "type": "object",
             "properties": {
+              "key": {
+                "type": "string",
+                "title": "Internal Key",
+                "examples": [
+                  "functionality",
+                  "measurement",
+                  "experience",
+                  "marketing"
+                ]
+              },
               "name": {
                 "type": "string",
                 "description": "The name of the cookie category",
-                "examples": ["Essential Cookies"]
+                "examples": [
+                  "Essential Cookies"
+                ]
               },
               "description": {
                 "type": "string",
@@ -161,11 +186,6 @@
                 "examples": [
                   "These cookies are necessary for the website to function."
                 ]
-              },
-              "checked": {
-                "type": "boolean",
-                "description": "Whether the cookie category is checked by default",
-                "default": true
               }
             }
           }
@@ -192,6 +212,12 @@
           "default": "Always Active"
         }
       }
+    },
+    "component": {
+      "title": "`ks-component` attribute",
+      "description": "Optional custom component identifier",
+      "type": "string",
+      "default": "dsa.cookie-consent"
     }
   },
   "additionalProperties": false
