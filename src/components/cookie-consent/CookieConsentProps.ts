@@ -22,6 +22,7 @@ export type RequiredCookies = {
 
 export interface CookieConsentProps {
   notice?: InitialCookieConsentNotice;
+  revisitButton?: RevisitCookieConsentButton;
   dialogue?: CookieConsentDialogue;
 }
 /**
@@ -60,6 +61,19 @@ export interface InitialCookieConsentNotice {
    * The description of the cookie consent section
    */
   description?: string;
+}
+/**
+ * The button that allows users to revisit their cookie preferences.
+ */
+export interface RevisitCookieConsentButton {
+  /**
+   * The label for the revisit button
+   */
+  label?: string;
+  /**
+   * Whether the revisit button is a toggle
+   */
+  toggle?: boolean;
 }
 /**
  * The dialogue displayed when users choose to customize their cookie preferences.
@@ -116,4 +130,8 @@ export interface CookieConsentDialogue {
      */
     reject?: string;
   };
+  /**
+   * Label that indicates that the cookie category is always active
+   */
+  alwaysActiveLabel?: string;
 }

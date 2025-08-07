@@ -6,7 +6,8 @@
   /// Card style
   --dsa-cookie-consent-notice_card--background-color: var(--ks-background-color-default);
   --dsa-cookie-consent-notice_card--padding: var(--ks-spacing-inset-m);
-  --dsa-cookie-consent-notice_card--spacing: var(--ks-spacing-m);
+  --dsa-cookie-consent-notice_card--left: var(--ks-spacing-m);
+  --dsa-cookie-consent-notice_card--bottom: var(--ks-spacing-m);
   --dsa-cookie-consent-notice_card--border-radius: var(--ks-border-radius-card);
   --dsa-cookie-consent-notice_card--max-width: var(--dsa-tile--width_largest);
   --dsa-cookie-consent-notice_card--border: var(--ks-border-color-card) solid var(--ks-border-width-default);
@@ -20,6 +21,13 @@
 
   /// Buttons
   --dsa-cookie-consent-notice__buttons--gap: var(--ks-spacing-stack-xs) var(--ks-spacing-inline-s);
+
+  // Revisit button
+  --dsa-cookie-consent-revisit--bottom: var(--ks-spacing-m);
+  --dsa-cookie-consent-revisit--left: var(--ks-spacing-m);
+  --dsa-cookie-consent-revisit__label--background-color: var(--ks-background-color-default-inverted);
+  --dsa-cookie-consent-revisit__label--border-radius: 0.25em;
+  --dsa-cookie-consent-revisit__label--padding: var(--ks-spacing-inset-squish-xs);
 
   // Consent dialogue
   --dsa-cookie-consent-dialogue--padding-horizontal: var(--ks-spacing-inset-m);

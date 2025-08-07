@@ -65,6 +65,23 @@
         }
       }
     },
+    "revisitButton": {
+      "type": "object",
+      "title": "Revisit Cookie Consent Button",
+      "description": "The button that allows users to revisit their cookie preferences.",
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "The label for the revisit button",
+          "default": "Manage Cookies"
+        },
+        "toggle": {
+          "type": "boolean",
+          "description": "Whether the revisit button is a toggle",
+          "default": true
+        }
+      }
+    },
     "dialogue": {
       "type": "object",
       "title": "Cookie Consent Dialogue",
@@ -168,6 +185,11 @@
             }
           },
           "additionalProperties": false
+        },
+        "alwaysActiveLabel": {
+          "type": "string",
+          "description": "Label that indicates that the cookie category is always active",
+          "default": "Always Active"
         }
       }
     }

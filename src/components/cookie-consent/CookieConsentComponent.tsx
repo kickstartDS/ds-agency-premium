@@ -19,7 +19,7 @@ export type { CookieConsentProps };
 export const CookieConsentContextDefault = forwardRef<
   HTMLDivElement,
   CookieConsentProps & HTMLAttributes<HTMLDivElement>
->(({ notice, dialogue }, ref) => {
+>(({ notice, revisitButton, dialogue }, ref) => {
   const [showDialogue, setShowDialogue] = useState(false);
 
   const [optionStates, setOptionStates] = useState(
@@ -65,6 +65,18 @@ export const CookieConsentContextDefault = forwardRef<
           />
         </div>
       </div>
+
+      {revisitButton && revisitButton.toggle && (
+        <Button
+          className="dsa-cookie-consent-revisit"
+          size="small"
+          variant="primary"
+          icon="star"
+          label={revisitButton?.label || "Cookie Preferences"}
+          onClick={() => setShowDialogue(true)}
+        />
+      )}
+
       <div
         className="dsa-cookie-consent-dialogue"
         hidden={!showDialogue}
@@ -104,7 +116,7 @@ export const CookieConsentContextDefault = forwardRef<
                   {option.description}
                 </Markdown>
                 <span className="dsa-cookie-consent-dialogue__label">
-                  Always active
+                  {dialogue?.alwaysActiveLabel || "Always Active"}
                 </span>
               </div>
             ))}

@@ -26,8 +26,8 @@
       );
       border-radius: var(--dsa-cookie-consent-notice_card--border-radius, var(--ks-border-radius-card));
       max-width: var(--dsa-cookie-consent-notice_card--max-width, var(--dsa-tile--width_large));
-      bottom: var(--dsa-cookie-consent-notice_card--spacing, var(--ks-spacing-m));
-      left: var(--dsa-cookie-consent-notice_card--spacing, var(--ks-spacing-m));
+      bottom: var(--dsa-cookie-consent-notice_card--bottom, var(--ks-spacing-m));
+      left: var(--dsa-cookie-consent-notice_card--left, var(--ks-spacing-m));
       border-radius: var(--dsa-cookie-consent-notice_card--border-radius, var(--ks-border-radius-card));
     }
   }
@@ -53,6 +53,57 @@
 
     @media (min-width: 36em) {
       flex-direction: row;
+    }
+  }
+}
+
+.dsa-cookie-consent-revisit {
+  position: fixed;
+  bottom: var(--dsa-cookie-consent-revisit--bottom, var(--ks-spacing-m));
+  left: var(--dsa-cookie-consent-revisit--left, var(--ks-spacing-m));
+  z-index: 1000;
+  height: fit-content;
+  width: fit-content;
+  padding: var(--dsa-cookie-consent-revisit--padding, var(--ks-spacing-inset-s));
+  border-radius: var(--ks-border-radius-circle);
+
+  .icon {
+    margin: 0;
+  }
+
+  &:hover {
+    span {
+      opacity: 1;
+    }
+  }
+
+  span {
+    transition: var(--ks-transition-hover);
+    position: absolute;
+    width: fit-content;
+    white-space: nowrap;
+    left: 100%;
+    transform: translateX(6.5%);
+    background-color: var(
+      --dsa-cookie-consent-revisit__label--background-color,
+      var(--ks-background-color-default-inverted)
+    );
+    padding: var(--dsa-cookie-consent-revisit__label--padding, var(--ks-spacing-inset-squish-xs));
+    border-radius: var(--dsa-cookie-consent-revisit__label--border-radius, 0.25em);
+    opacity: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 0.75em;
+      aspect-ratio: 1;
+      background-color: var(
+        --dsa-cookie-consent-revisit__label--background-color,
+        var(--ks-background-color-default-inverted)
+      );
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      left: 0;
     }
   }
 }
