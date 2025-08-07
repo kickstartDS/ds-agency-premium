@@ -178,6 +178,10 @@
     --l-section_tile-width--largest: var(--dsa-section__col--min-width_largest, var(--dsa-tile--width_largest));
     --l-section_buttons--space-before: var(--dsa-section__buttons--space-before, var(--l-section--gutter));
 
+    &--tiles-full {
+      --l-section_col--min-width: 100%;
+    }
+
     &--slider {
       padding: var(--ks-spacing-s) 0;
 

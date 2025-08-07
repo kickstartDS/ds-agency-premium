@@ -116,7 +116,7 @@ export type Mode = "default" | "tile" | "list" | "slider";
 /**
  * Set min-width for the tiles in the grid
  */
-export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest";
+export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest" | "full";
 /**
  * Allowed components for content
  */
