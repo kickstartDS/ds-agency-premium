@@ -35,7 +35,6 @@ const Page = () => (
         width: "default",
         align: "center",
         textAlign: "center",
-        large: true,
       }}
       width="wide"
     >

@@ -30,6 +30,11 @@
     --headline--space-after_minimum: var(--dsa-headline_h1--space-after_minimum);
     --headline--space-after_small: var(--dsa-headline_h1--space-after_small);
     --headline--space-after_large: var(--dsa-headline_h1--space-after_large);
+    .dsa-headline__headline {
+      .dsa-headline__inner {
+        color: var(--dsa-headline_h1--color, var(--ks-text-color-primary));
+      }
+    }
   }
 
   &--h2 {
