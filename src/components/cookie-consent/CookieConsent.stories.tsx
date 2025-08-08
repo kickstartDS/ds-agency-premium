@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { CookieConsent } from "./CookieConsentComponent";
+import { CookieConsent, CookieConsentProps } from "./CookieConsentComponent";
 import customProperties from "./cookie-consent-tokens.json";
 import schema from "./cookie-consent.schema.dereffed.json";
 
@@ -11,6 +11,13 @@ import { define } from "@kickstartds/core/lib/component";
 import { configureConsentManager, createConsentManagerStore } from "c15t";
 import { Button } from "../button/ButtonComponent";
 import CookieConsentC15t from "./C15t.client";
+
+const PureCookieConsent = (props: CookieConsentProps) => {
+  useEffect(() => {
+    window._ks.radio.emit("dsa.cookie-consent.showNotice", true);
+  }, []);
+  return <CookieConsent {...props} />;
+};
 
 const meta: Meta = {
   title: "Corporate/Cookie Consent",
@@ -21,10 +28,7 @@ const meta: Meta = {
   },
   ...getArgsShared(schema as JSONSchema7),
   render(args) {
-    useEffect(() => {
-      window._ks.radio.emit("dsa.cookie-consent.showNotice", true);
-    }, []);
-    return <CookieConsent {...args} />;
+    return <PureCookieConsent {...args} />;
   },
 };
 
