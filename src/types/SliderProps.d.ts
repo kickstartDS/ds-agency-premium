@@ -66,7 +66,7 @@ export interface SliderProps {
   equalHeight?: EqualizeSlidesHeights;
   gap?: Gap;
   arrows?: ShowArrows;
-  type?: Type;
+  variant?: Type;
   className?: Class;
   components?: Content;
 }

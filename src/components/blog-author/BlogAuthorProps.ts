@@ -33,6 +33,10 @@ export type AspectRatio = "wide" | "square" | "vertical";
  * Open link in new Tab
  */
 export type OpenLinkInNewTab = boolean;
+/**
+ * Aria label for the link
+ */
+export type AriaLabel = string;
 
 /**
  * The author of the blog post
@@ -49,7 +53,8 @@ export interface BlogAuthorProps {
   links?: {
     icon?: string;
     label?: string;
-    href?: string;
+    url?: string;
     newTab?: OpenLinkInNewTab;
+    ariaLabel?: AriaLabel;
   }[];
 }

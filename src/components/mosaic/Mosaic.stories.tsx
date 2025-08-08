@@ -31,7 +31,7 @@ export const ColorfulTiles: Story = {
     layout: "alternate",
     tile: [
       {
-        backgroundColor: "#81005a",
+        backgroundColor: "#ffd4f1",
         headline: "Collaborative Environment",
         text: "Our team thrives in a collaborative environment, fostering creativity and innovation.",
         image: {
@@ -39,7 +39,7 @@ export const ColorfulTiles: Story = {
         },
       },
       {
-        backgroundColor: "#003380",
+        backgroundColor: "#d8e8f",
         headline: "Modern Infrastructure",
         text: "Our state-of-the-art office facilities inspire productivity and efficiency.",
         image: {
@@ -47,7 +47,7 @@ export const ColorfulTiles: Story = {
         },
       },
       {
-        backgroundColor: "#004241",
+        backgroundColor: "#ddfffe",
         headline: "Teamwork",
         text: "We believe in the power of teamwork. Together, we can achieve great things.",
         image: {

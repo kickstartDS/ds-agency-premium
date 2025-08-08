@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/cms/search.schema.json",
+  "title": "Search",
+  "type": "object",
+  "properties": {
+    "searchFilter": {
+      "$ref": "http://schema.mydesignsystem.com/search-filter.schema.json"
+    },
+    "searchResults": {
+      "type": "array",
+      "items": {
+        "$ref": "http://schema.mydesignsystem.com/search-result.schema.json"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -9,6 +9,8 @@ import { LogoProps } from "./LogoProps";
 import { Picture } from "@kickstartds/base/lib/picture";
 import { Link } from "@kickstartds/base/lib/link";
 import "./logo.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./LogoDefaults";
 
 export type { LogoProps };
 
@@ -50,6 +52,6 @@ export const Logo = forwardRef<
   LogoProps & ImgHTMLAttributes<HTMLImageElement>
 >((props, ref) => {
   const Component = useContext(LogoContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Logo.displayName = "Logo";

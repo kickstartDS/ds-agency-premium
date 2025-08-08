@@ -15,6 +15,8 @@ import { Link } from "@kickstartds/base/lib/link";
 import { Icon } from "@kickstartds/base/lib/icon";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./ContactDefaults";
 
 export type { ContactProps };
 
@@ -33,7 +35,7 @@ export const ContactContextDefault = forwardRef<
       ref={ref}
       {...props}
     >
-      {image && image.src ? (
+      {image && image.src && (
         <div className="dsa-contact__image-wrap">
           <Picture
             src={image?.src}
@@ -41,8 +43,6 @@ export const ContactContextDefault = forwardRef<
             className="dsa-contact__image"
           />
         </div>
-      ) : (
-        ""
       )}
       <div className="dsa-contact__body">
         {title && (
@@ -53,23 +53,27 @@ export const ContactContextDefault = forwardRef<
         )}
         {copy && <RichText text={copy} className="dsa-contact__copy" />}
 
-        {links && links.length ? (
+        {links && links.length && (
           <ul className="dsa-contact__links">
-            {links.map(({ icon, href, label, newTab }, i) => (
+            {links.map(({ icon, url, label, ariaLabel, newTab }, i) => (
               <li key={i}>
                 <Link
                   className="dsa-contact__link"
-                  href={href}
-                  {...(newTab ? { target: "_blank", rel: "noopener" } : {})}
+                  aria-label={ariaLabel}
+                  href={url}
+                  {...(newTab && { target: "_blank", rel: "noopener" })}
                 >
-                  <Icon icon={icon} />
+                  <Icon
+                    role="presentation"
+                    focusable="false"
+                    aria-hidden
+                    icon={icon}
+                  />
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
-        ) : (
-          ""
         )}
       </div>
     </address>
@@ -80,7 +84,7 @@ export const ContactContext = createContext(ContactContextDefault);
 export const Contact = forwardRef<HTMLDivElement, ContactProps>(
   (props, ref) => {
     const Component = useContext(ContactContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 Contact.displayName = "Contact";
