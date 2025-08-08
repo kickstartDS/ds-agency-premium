@@ -9,7 +9,6 @@ import { Testimonials } from "../components/testimonials/TestimonialsComponent";
 import { Cta } from "../components/cta/CtaComponent";
 import { ImageStory } from "../components/image-story/ImageStoryComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
-import { Hero } from "../components/hero/HeroComponent";
 
 const Page = () => (
   <>
@@ -25,7 +24,95 @@ const Page = () => (
         text: "CX für die Energiewirtschaft",
         sub: "Wir befähigen die Energiewirtschaft, innovative digitale Kundenerlebnisse schnell, sicher und skalierbar zu gestalten.",
       }}
-    ></Section>
+    >
+      <Cta
+        padding
+        backgroundColor="var(--ks-background-color-default)"
+        image={{
+          src: "/taktsoft-energy/preview.gif",
+          alt: "Hero Image",
+          padding: false,
+        }}
+        headline="encore übergibt Geschäftsbetrieb an Taktsoft Energy Solutions"
+        text="Wir freuen uns, die Verantwortung für dieses starke Produktportfolio zu übernehmen und gemeinsam mit den bisherigen encore-Kunden die nächsten Innovationsschritte zu gestalten."
+      />
+    </Section>
+    <Section
+      backgroundColor="accent"
+      width="wide"
+      headline={{
+        width: "narrow",
+        align: "center",
+        text: "Aktuelle Artikel",
+      }}
+      content={{
+        mode: "slider",
+        tileWidth: "medium",
+      }}
+    >
+      <TeaserCard
+        url={""}
+        headline={
+          'Plattformen in der Energiewirtschaft: "Es braucht manchmal mehr Mut!"'
+        }
+        text="Nils Brettschneider, Geschäftsführer von Taktsoft Energy, spricht im ZfK-Interview über die Digitalisierung bei Stadtwerken. Sein Unternehmen hat dazu einen Ratgeber herausgegeben."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={"Trumps Wiederwahl bedroht die deutsche Datensouveränität"}
+        text="Trumps bewährte „America First“-Agenda und der uneingeschränkte Fokus auf nationale Interessen werfen brisante Fragen zur Datensicherheit deutscher Unternehmen in der US-Cloud-Infrastrukturen auf."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={
+          "Badenova und Taktsoft entwickeln neue Lösung für Newsletter-Marketing"
+        }
+        text="Kundenbewertungen sind ein unverzichtbarer Bestandteil jeder Webseite. Es ist noch besser, wenn sie authentisch und mit den Originalbeiträgen verlinkt sind."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={
+          'Plattformen in der Energiewirtschaft: "Es braucht manchmal mehr Mut!"'
+        }
+        text="Nils Brettschneider, Geschäftsführer von Taktsoft Energy, spricht im ZfK-Interview über die Digitalisierung bei Stadtwerken. Sein Unternehmen hat dazu einen Ratgeber herausgegeben."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={"Trumps Wiederwahl bedroht die deutsche Datensouveränität"}
+        text="Trumps bewährte „America First“-Agenda und der uneingeschränkte Fokus auf nationale Interessen werfen brisante Fragen zur Datensicherheit deutscher Unternehmen in der US-Cloud-Infrastrukturen auf."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={
+          "Badenova und Taktsoft entwickeln neue Lösung für Newsletter-Marketing"
+        }
+        text="Kundenbewertungen sind ein unverzichtbarer Bestandteil jeder Webseite. Es ist noch besser, wenn sie authentisch und mit den Originalbeiträgen verlinkt sind."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+    </Section>
     <Section
       id="startit"
       headline={{

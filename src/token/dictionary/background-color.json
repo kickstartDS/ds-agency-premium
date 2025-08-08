@@ -3,7 +3,7 @@
     "background-color": {
       "accent": {
         "base": {
-          "value": "{ks.color.primary.to-bg.9.base}",
+          "value": "{ks.color.primary.to-bg.8.base}",
           "attributes": {
             "category": "color"
           },
@@ -339,7 +339,7 @@
       },
       "card": {
         "base": {
-          "value": "{ks.color.fg.alpha.9.base}",
+          "value": "{ks.color.bg.base}",
           "attributes": {
             "category": "color"
           },
@@ -350,7 +350,7 @@
         },
         "interactive": {
           "base": {
-            "value": "{ks.color.fg.alpha.8.base}",
+            "value": "{ks.color.bg.base}",
             "attributes": {
               "category": "color"
             },
