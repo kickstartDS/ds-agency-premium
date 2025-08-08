@@ -2,21 +2,21 @@
   "ks": {
     "font-family": {
       "display": {
-        "value": "Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+        "value": "'Wix Madefor Display', Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "copy": {
-        "value": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+        "value": "'Wix Madefor Text', system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "interface": {
-        "value": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+        "value": "'Wix Madefor Text', system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
@@ -46,7 +46,7 @@
         }
       },
       "semi-bold": {
-        "value": 500,
+        "value": 600,
         "token": {
           "category": "Font Weights",
           "presenter": "FontWeight"
@@ -154,7 +154,7 @@
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.6164rem",
           "attributes": {
             "category": "size"
           },
@@ -164,7 +164,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.7243rem",
           "attributes": {
             "category": "size"
           },
@@ -174,7 +174,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.8511rem",
           "attributes": {
             "category": "size"
           },
@@ -194,7 +194,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.175rem",
           "attributes": {
             "category": "size"
           },
@@ -204,7 +204,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.3806rem",
           "attributes": {
             "category": "size"
           },
@@ -214,7 +214,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.6222rem",
           "attributes": {
             "category": "size"
           },
@@ -231,7 +231,7 @@
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.6164rem",
           "attributes": {
             "category": "size"
           },
@@ -241,7 +241,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.7243rem",
           "attributes": {
             "category": "size"
           },
@@ -251,7 +251,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.8511rem",
           "attributes": {
             "category": "size"
           },
@@ -271,7 +271,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.175rem",
           "attributes": {
             "category": "size"
           },
@@ -281,7 +281,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.3806rem",
           "attributes": {
             "category": "size"
           },
@@ -291,7 +291,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.6222rem",
           "attributes": {
             "category": "size"
           },
@@ -308,7 +308,7 @@
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.6164rem",
           "attributes": {
             "category": "size"
           },
@@ -318,7 +318,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.7243rem",
           "attributes": {
             "category": "size"
           },
@@ -328,7 +328,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.8511rem",
           "attributes": {
             "category": "size"
           },
@@ -348,7 +348,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.175rem",
           "attributes": {
             "category": "size"
           },
@@ -358,7 +358,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.3806rem",
           "attributes": {
             "category": "size"
           },
@@ -368,7 +368,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.6222rem",
           "attributes": {
             "category": "size"
           },
@@ -382,25 +382,25 @@
     "line-height": {
       "display": {
         "xxs": {
-          "value": 1.15
+          "value": 1.5
         },
         "xs": {
-          "value": 1.15
+          "value": 1.5
         },
         "s": {
-          "value": 1.15
+          "value": 1.5
         },
         "m": {
-          "value": 1.15
+          "value": 1.5
         },
         "l": {
-          "value": 1.15
+          "value": 1.5
         },
         "xl": {
-          "value": 1.15
+          "value": 1.5
         },
         "xxl": {
-          "value": 1.15
+          "value": 1.5
         }
       },
       "copy": {

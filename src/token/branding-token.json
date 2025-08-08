@@ -1,13 +1,13 @@
 {
   "color": {
-    "primary": "#3065C0",
+    "primary": "#00a9ae",
     "primary-inverted": "#3065C0",
     "background": "#fff",
     "background-inverted": "#0F203E",
-    "foreground": "#06081f",
+    "foreground": "#0D1117",
     "foreground-inverted": "#fff",
-    "link": "#3065C0",
-    "link-inverted": "#98b2e0",
+    "link": "#0D1117",
+    "link-inverted": "#fff",
     "positive": "#23831B",
     "positive-inverted": "#6EDB64",
     "informative": "#00718F",
@@ -19,9 +19,9 @@
   },
   "font": {
     "display": {
-      "family": "Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+      "family": "'Wix Madefor Display', Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
       "font-size": 16,
-      "line-height": 1.15,
+      "line-height": 1.5,
       "scale-ratio": 1.25,
       "bp-factor": {
         "phone": 1,
@@ -31,19 +31,19 @@
       }
     },
     "copy": {
-      "family": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+      "family": "'Wix Madefor Text', system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
       "font-size": 16,
       "line-height": 1.5,
-      "scale-ratio": 1.225,
+      "scale-ratio": 1.175,
       "bp-factor": {
         "tablet": 1.125
       }
     },
     "interface": {
-      "family": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+      "family": "'Wix Madefor Text', system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
       "font-size": 16,
       "line-height": 1.5,
-      "scale-ratio": 1.225,
+      "scale-ratio": 1.175,
       "bp-factor": {
         "tablet": 1.125
       }
@@ -52,7 +52,7 @@
       "family": "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace",
       "font-size": 16,
       "line-height": 1.5,
-      "scale-ratio": 1.225,
+      "scale-ratio": 1.175,
       "bp-factor": {
         "tablet": 1.125
       }
@@ -61,7 +61,7 @@
   "font-weight": {
     "light": 300,
     "regular": 400,
-    "semi-bold": 500,
+    "semi-bold": 600,
     "bold": 700
   },
   "spacing": {

@@ -13,36 +13,19 @@ import { Hero } from "../components/hero/HeroComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
+    <Header {...headerProps} />
 
-    <Section width="full" spaceAfter="none" spaceBefore="none">
-      <Hero
-        buttons={[
-          {
-            icon: "arrow-down",
-            label: "Explore further",
-            url: "#startit",
-          },
-        ]}
-        headline="Welcome to Our Dynamic Workplace"
-        textbox
-        textPosition="left"
-        height="fullScreen"
-        highlightText
-        image={{
-          indent: "none",
-          src: "https://picsum.photos/seed/kdsvisual/640/270",
-          srcDesktop:
-            "img/colleagues-work-office-using-computers-looking-aside.png",
-          srcMobile:
-            "img/colleagues-work-office-using-computers-looking-aside.png",
-          srcTablet:
-            "img/colleagues-work-office-using-computers-looking-aside.png",
-        }}
-        sub="Where Creativity Meets Innovation"
-        text="Experience the perfect blend of creativity, innovation, and productivity in our modern office environment."
-      />
-    </Section>
+    <Section
+      transition="to-accent"
+      width="wide"
+      headline={{
+        width: "narrow",
+        large: true,
+        align: "center",
+        text: "CX für die Energiewirtschaft",
+        sub: "Wir befähigen die Energiewirtschaft, innovative digitale Kundenerlebnisse schnell, sicher und skalierbar zu gestalten.",
+      }}
+    ></Section>
     <Section
       id="startit"
       headline={{
