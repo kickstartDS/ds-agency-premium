@@ -171,7 +171,23 @@ define(
 
 export const C15t: Story = {
   parameters: Card.parameters,
-  args: { ...Card.args, component: "dsa.cookie-consent.c15t.offline" },
+  args: pack({
+    notice: {
+      displayMode: "card",
+      decisionButtonVariant: "primary",
+      customizeButton: { variant: "tertiary" },
+    },
+    dialogue: {
+      required: [{ key: "necessary" }],
+      options: [
+        { key: "measurement" },
+        { key: "marketing" },
+        { key: "functionality" },
+        { key: "experience" },
+      ],
+    },
+    component: "dsa.cookie-consent.c15t.offline",
+  }),
   render(args) {
     return (
       <>

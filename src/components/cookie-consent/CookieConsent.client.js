@@ -9,6 +9,8 @@ export default class CookieConsent extends Component {
     const elements = (this.elements = {
       notice: {
         wrapper: $(".dsa-cookie-consent-notice"),
+        title: $(".dsa-cookie-consent-notice__title .dsa-headline__inner"),
+        description: $(".dsa-cookie-consent-notice__description"),
         customizeBtn: $(".dsa-cookie-consent-notice__button--customize"),
         rejectAllBtn: $(".dsa-cookie-consent-notice__button--reject"),
         acceptAllBtn: $(".dsa-cookie-consent-notice__button--accept"),
@@ -16,12 +18,15 @@ export default class CookieConsent extends Component {
       dialog: {
         wrapper: $(".dsa-cookie-consent-dialogue"),
         overlay: $(".dsa-cookie-consent-overlay"),
+        title: $(".dsa-cookie-consent-dialogue__title .dsa-headline__inner"),
+        description: $(".dsa-cookie-consent-dialogue__description"),
         closeBtn: $(".dsa-cookie-consent-dialogue__close"),
         form: $(".dsa-cookie-consent-dialogue__form"),
         activateAllBtn: $(".dsa-cookie-consent-dialogue__button--activate-all"),
         deactivateAllBtn: $(
           ".dsa-cookie-consent-dialogue__button--deactivate-all"
         ),
+        saveBtn: $(".dsa-cookie-consent-dialogue__button--save"),
       },
       settings: {
         button: $(".dsa-cookie-consent-revisit"),

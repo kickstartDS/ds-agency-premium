@@ -1,6 +1,44 @@
 import { define } from "@kickstartds/core/lib/component";
 import CookieConsent from "./CookieConsent.client.js";
 
+const translate = (elements, state) => {
+  const translations =
+    state.translationConfig.translations[
+      state.translationConfig.defaultLanguage
+    ];
+
+  // Notice
+  elements.notice.title.textContent = translations.cookieBanner.title;
+  elements.notice.description.textContent =
+    translations.cookieBanner.description;
+  elements.notice.customizeBtn.textContent = translations.common.customize;
+  elements.notice.rejectAllBtn.textContent = translations.common.rejectAll;
+  elements.notice.acceptAllBtn.textContent = translations.common.acceptAll;
+
+  // Dialog
+  elements.dialog.title.textContent = translations.consentManagerDialog.title;
+  elements.dialog.description.textContent =
+    translations.consentManagerDialog.description;
+
+  elements.dialog.activateAllBtn.textContent = translations.common.acceptAll;
+  elements.dialog.deactivateAllBtn.textContent = translations.common.rejectAll;
+  elements.dialog.saveBtn.textContent = translations.common.save;
+
+  for (const option of elements.dialog.form.querySelectorAll(
+    ".dsa-cookie-consent-dialogue__option"
+  )) {
+    const type = option.dataset.consentType;
+    const translation = translations.consentTypes[type];
+    if (translation) {
+      option.querySelector(".dsa-headline__inner").textContent =
+        translation.title;
+      option.querySelector(
+        ".dsa-cookie-consent-dialogue__option-description"
+      ).textContent = translation.description;
+    }
+  }
+};
+
 export default class CookieConsentC15t extends CookieConsent {
   static identifier = "dsa.cookie-consent.c15t";
   static store;
@@ -38,7 +76,8 @@ export default class CookieConsentC15t extends CookieConsent {
       }
     };
     const unsub = store.subscribe(update);
-    update(store.getState());
+    translate(this.elements, initialState);
+    update(initialState);
 
     const acceptCustom = () => {
       const state = store.getState();

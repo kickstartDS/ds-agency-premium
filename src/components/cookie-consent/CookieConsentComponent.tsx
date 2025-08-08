@@ -32,8 +32,12 @@ export const CookieConsentContextDefault = forwardRef<
             text={notice?.title}
             level="h2"
             style="h3"
+            className="dsa-cookie-consent-notice__title"
           />
-          <RichText text={notice?.description} />
+          <RichText
+            text={notice?.description}
+            className="dsa-cookie-consent-notice__description"
+          />
           <div className="dsa-cookie-consent-notice__buttons">
             <Button
               size="small"
@@ -72,6 +76,7 @@ export const CookieConsentContextDefault = forwardRef<
               text={dialogue?.title}
               level="h2"
               style="h3"
+              className="dsa-cookie-consent-dialogue__title"
             />
             <Button
               aria-label="Close Cookie Consent Dialogue"
@@ -90,6 +95,7 @@ export const CookieConsentContextDefault = forwardRef<
                 {dialogue?.required?.map((option, index) => (
                   <div
                     className="dsa-cookie-consent-dialogue__option"
+                    data-consent-type={option.key}
                     key={index}
                   >
                     <Headline
@@ -110,6 +116,7 @@ export const CookieConsentContextDefault = forwardRef<
                 {dialogue?.options?.map((option, index) => (
                   <div
                     className="dsa-cookie-consent-dialogue__option"
+                    data-consent-type={option.key}
                     key={index}
                   >
                     <Headline
@@ -159,6 +166,7 @@ export const CookieConsentContextDefault = forwardRef<
                 label={
                   dialogue?.buttons.savePreferencesLabel || "Save Preferences"
                 }
+                className="dsa-cookie-consent-dialogue__button--save"
               />
             </div>
           </form>
