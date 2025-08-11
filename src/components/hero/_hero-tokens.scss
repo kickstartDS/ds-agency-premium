@@ -54,24 +54,20 @@
       var(--ks-color-primary-alpha-5) 0%,
       var(--ks-color-bg-alpha-4) 100%
     );
+
     --dsa-hero_corner__overlay--background: linear-gradient(
       40deg,
       var(--ks-background-color-default) 15%,
       transparent 50%
     );
+
     --dsa-hero_left__overlay--background: radial-gradient(
       100% 200% at 0% 50%,
       var(--ks-color-fg-inverted-alpha-4) 25%,
       var(--ks-color-bg-alpha-9) 50%
     );
 
-    --dsa-hero--left__overlay--background: linear-gradient(
-      90deg,
-      var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width),
-      transparent
-    );
-
-    --dsa-hero--right__overlay--background: linear-gradient(
+    --dsa-hero_right__overlay--background: linear-gradient(
       270deg,
       var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width),
       transparent

@@ -52,21 +52,21 @@ const Page = () => (
       <SplitEven
         contentMinWidth="narrow"
         verticalAlign="sticky"
-        first={
+        firstComponents={
           <>
             <Picture src="/guenther/nissan/junke-abmessungen-600x400.jpg" />
             <SplitEven
               contentMinWidth="narrow"
-              first={
+              firstComponents={
                 <Picture src="/guenther/nissan/24TDIEU_JUKE_Dimension-illustration-pace502.jpg.ximg_.l_4_h.smart_.jpg" />
               }
-              second={
+              secondComponents={
                 <Picture src="/guenther/nissan/24TDIEU_JUKE_Dimension-illustration-pace503.jpg.ximg_.l_4_h.smart_.jpg" />
               }
             />
           </>
         }
-        second={
+        secondComponents={
           <Text
             text={`### Abmessungen Gesamt:
 
@@ -160,8 +160,8 @@ const Page = () => (
       <SplitEven
         contentMinWidth="narrow"
         horizontalGutter="small"
-        first={<TextField required label="Vorname" />}
-        second={<TextField required label="Nachname" />}
+        firstComponents={<TextField required label="Vorname" />}
+        secondComponents={<TextField required label="Nachname" />}
       />
       <TextField required label="E-Mail" />
       <TextField

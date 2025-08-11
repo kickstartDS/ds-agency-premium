@@ -43,21 +43,21 @@
 
     &.dsa-hero--content-offset {
       --c-visual_overlay--background: var(
-        --dsa-hero--offset__overlay--background,
+        --dsa-hero_offset__overlay--background,
         linear-gradient(0deg, var(--ks-background-color-default) 15%, transparent 50%)
       );
     }
 
     &.dsa-hero--content-left {
       --c-visual_overlay--background: var(
-        --dsa-hero--left__overlay--background,
+        --dsa-hero_left__overlay--background,
         linear-gradient(90deg, var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width), transparent)
       );
     }
 
     &.dsa-hero--content-right {
       --c-visual_overlay--background: var(
-        --dsa-hero--right__overlay--background,
+        --dsa-hero_right__overlay--background,
         linear-gradient(270deg, var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width), transparent)
       );
     }
