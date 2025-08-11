@@ -5,6 +5,9 @@
   --dsa-text-color-on-primary-base: var(--ks-color-fg-inverted);
   --dsa-text-color-on-primary-inverted-base: var(--ks-color-fg);
 
+  // Overlay styles
+  --dsa-overlay--background-color: var(--ks-color-fg-alpha-4);
+
   // Overlay Box styles
   --dsa-overlay-box_transparent--background-color: var(--ks-color-bg-alpha-4);
   --dsa-overlay-box_transparent--backdrop-filter: blur(16px);
@@ -55,7 +58,7 @@
   --dsa-tile--width_small: calc(var(--ks-font-size-copy-m) * 14);
   --dsa-tile--width_medium: calc(var(--ks-font-size-copy-m) * 20);
   --dsa-tile--width_large: calc(var(--ks-font-size-copy-m) * 28);
-  --dsa-tile--width_largest: calc(var(--ks-font-size-copy-m) * 38);
+  --dsa-tile--width_largest: calc(var(--ks-font-size-copy-m) * 42);
 
   // Logo height
   --dsa-logo--height: 2rem;

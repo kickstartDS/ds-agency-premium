@@ -4,6 +4,8 @@ import "./event-filter.scss";
 import { TextField } from "@kickstartds/form/lib/text-field";
 import { Checkbox } from "@kickstartds/form/lib/checkbox";
 import { Button } from "../button/ButtonComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./EventFilterDefaults";
 
 export type { EventFilterProps };
 
@@ -99,7 +101,7 @@ export const EventFilterContext = createContext(EventFilterContextDefault);
 export const EventFilter = forwardRef<HTMLDivElement, EventFilterProps>(
   (props, ref) => {
     const Component = useContext(EventFilterContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 EventFilter.displayName = "EventFilter";

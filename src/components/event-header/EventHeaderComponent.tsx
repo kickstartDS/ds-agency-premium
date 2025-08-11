@@ -4,6 +4,8 @@ import { Headline } from "../headline/HeadlineComponent";
 import { Text } from "../text/TextComponent";
 import { TagLabel } from "@kickstartds/base/lib/tag-label";
 import "./event-header.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./EventHeaderDefaults";
 
 export type { EventHeaderProps };
 
@@ -32,7 +34,7 @@ export const EventHeaderContext = createContext(EventHeaderContextDefault);
 export const EventHeader = forwardRef<HTMLDivElement, EventHeaderProps>(
   (props, ref) => {
     const Component = useContext(EventHeaderContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 EventHeader.displayName = "EventHeader";

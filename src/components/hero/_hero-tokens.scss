@@ -6,21 +6,21 @@
 [ks-inverted="false"] {
   .dsa-hero {
     --dsa-hero--min-height: 18rem;
-    --dsa-hero--min-height_small: 13.2rem;
+    --dsa-hero--min-height_small: 12rem;
 
     @include container.size("≥", 640px, "hero") {
-      --dsa-hero--min-height: 21rem;
-      --dsa-hero--min-height_small: 13.35rem;
+      --dsa-hero--min-height: 24rem;
+      --dsa-hero--min-height_small: 14rem;
       --dsa-hero__textbox--max-width: 50vw;
     }
 
     @include container.size("≥", 960px, "hero") {
-      --dsa-hero--min-height: 31.5rem;
-      --dsa-hero--min-height_small: 15.8rem;
+      --dsa-hero--min-height: 32rem;
+      --dsa-hero--min-height_small: 16rem;
     }
 
     @include container.size("≥", 1024px, "hero") {
-      --dsa-hero--min-height: 42rem;
+      --dsa-hero--min-height: 36rem;
       --dsa-hero--min-height_small: 20rem;
       --dsa-hero__textbox--max-width: var(--dsa-content--width_narrow);
     }
@@ -64,6 +64,19 @@
       var(--ks-color-fg-inverted-alpha-4) 25%,
       var(--ks-color-bg-alpha-9) 50%
     );
+
+    --dsa-hero--left__overlay--background: linear-gradient(
+      90deg,
+      var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width),
+      transparent
+    );
+
+    --dsa-hero--right__overlay--background: linear-gradient(
+      270deg,
+      var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width),
+      transparent
+    );
+
     --dsa-hero_offset__textbox--max-width: var(--dsa-content--width_default);
     --dsa-hero_offset__textbox--offset: -10%;
     --dsa-hero_offset__overlay--background: linear-gradient(

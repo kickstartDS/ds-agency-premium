@@ -3,6 +3,8 @@ import { SearchFilterProps } from "./SearchFilterProps";
 import "./search-filter.scss";
 import Markdown from "markdown-to-jsx";
 import { Link } from "@kickstartds/base/lib/link";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./SearchFilterDefaults";
 
 export type { SearchFilterProps };
 
@@ -34,7 +36,7 @@ export const SearchFilterContext = createContext(SearchFilterContextDefault);
 export const SearchFilter = forwardRef<HTMLDivElement, SearchFilterProps>(
   (props, ref) => {
     const Component = useContext(SearchFilterContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 SearchFilter.displayName = "SearchFilter";

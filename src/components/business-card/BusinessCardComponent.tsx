@@ -8,6 +8,8 @@ import Markdown from "markdown-to-jsx";
 import { Button } from "../button/ButtonComponent";
 import { Link } from "@kickstartds/base/lib/link";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./BusinessCardDefaults";
 
 export type { BusinessCardProps };
 
@@ -117,7 +119,7 @@ export const BusinessCardContext = createContext(BusinessCardContextDefault);
 export const BusinessCard = forwardRef<HTMLDivElement, BusinessCardProps>(
   (props, ref) => {
     const Component = useContext(BusinessCardContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 BusinessCard.displayName = "BusinessCard";

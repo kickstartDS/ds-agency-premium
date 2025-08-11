@@ -4,6 +4,8 @@ import { EventLatestTeaserProps } from "./EventLatestTeaserProps";
 import "./event-latest-teaser.scss";
 import { Icon } from "@kickstartds/base/lib/icon";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./EventLatestTeaserDefaults";
 
 export type { EventLatestTeaserProps };
 
@@ -76,6 +78,6 @@ export const EventLatestTeaser = forwardRef<
   EventLatestTeaserProps & HTMLAttributes<HTMLAnchorElement>
 >((props, ref) => {
   const Component = useContext(EventLatestTeaserContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 EventLatestTeaser.displayName = "EventLatestTeaser";

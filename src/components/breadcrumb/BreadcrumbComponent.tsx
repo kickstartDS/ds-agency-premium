@@ -3,6 +3,8 @@ import { Icon } from "@kickstartds/base/lib/icon";
 import { BreadcrumbProps } from "./BreadcrumbProps";
 import "./breadcrumb.scss";
 import { Link } from "@kickstartds/base/lib/link";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./BreadcrumbDefaults";
 
 export type { BreadcrumbProps };
 
@@ -34,6 +36,6 @@ export const Breadcrumb = forwardRef<
   BreadcrumbProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(BreadcrumbContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Breadcrumb.displayName = "Breadcrumb";

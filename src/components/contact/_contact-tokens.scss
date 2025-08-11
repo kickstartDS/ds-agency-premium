@@ -24,7 +24,7 @@
   --dsa-contact__subtitle--font: var(--ks-font-copy-m);
   --dsa-contact__subtitle--font-weight: var(--ks-font-weight-regular);
 
-  --dsa-contact__links--gap: 0;
+  --dsa-contact__links--gap: calc(var(--ks-spacing-xxs) * 0.5);
 
   --dsa-contact__link--color: var(--dsa-link--color);
   --dsa-contact__link--color_hover: var(--dsa-link--color_hover);

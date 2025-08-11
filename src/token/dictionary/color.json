@@ -3257,9 +3257,9 @@
       "positive": {
         "base": {
           "value": {
-            "r": 110,
-            "g": 219,
-            "b": 100,
+            "r": 35,
+            "g": 131,
+            "b": 27,
             "a": 1
           },
           "attributes": {
@@ -3765,7 +3765,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -3782,7 +3782,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -3799,7 +3799,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -3816,7 +3816,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -3833,7 +3833,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -3850,7 +3850,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -3867,7 +3867,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -3884,7 +3884,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -3901,7 +3901,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -4075,7 +4075,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -4092,7 +4092,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -4109,7 +4109,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -4126,7 +4126,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -4143,7 +4143,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -4160,7 +4160,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -4177,7 +4177,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -4194,7 +4194,7 @@
                 "category": "color"
               },
               "token": {
-                "category": "Colors: Positive Inverted",
+                "category": "Colors: Positive",
                 "presenter": "Color"
               }
             }
@@ -4205,6 +4205,643 @@
                 "r": 244,
                 "g": 249,
                 "b": 244,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          }
+        },
+        "to-fg": {
+          "1": {
+            "base": {
+              "value": {
+                "r": 34,
+                "g": 125,
+                "b": 27,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          },
+          "2": {
+            "base": {
+              "value": {
+                "r": 31,
+                "g": 115,
+                "b": 28,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          },
+          "3": {
+            "base": {
+              "value": {
+                "r": 28,
+                "g": 101,
+                "b": 28,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          },
+          "4": {
+            "base": {
+              "value": {
+                "r": 24,
+                "g": 85,
+                "b": 28,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          },
+          "5": {
+            "base": {
+              "value": {
+                "r": 21,
+                "g": 70,
+                "b": 29,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          },
+          "6": {
+            "base": {
+              "value": {
+                "r": 17,
+                "g": 54,
+                "b": 30,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          },
+          "7": {
+            "base": {
+              "value": {
+                "r": 13,
+                "g": 38,
+                "b": 30,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          },
+          "8": {
+            "base": {
+              "value": {
+                "r": 10,
+                "g": 24,
+                "b": 30,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          },
+          "9": {
+            "base": {
+              "value": {
+                "r": 7,
+                "g": 14,
+                "b": 31,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive",
+                "presenter": "Color"
+              }
+            }
+          }
+        }
+      },
+      "positive-inverted": {
+        "base": {
+          "value": {
+            "r": 110,
+            "g": 219,
+            "b": 100,
+            "a": 1
+          },
+          "attributes": {
+            "category": "color"
+          },
+          "token": {
+            "category": "Colors: Positive Inverted",
+            "presenter": "Color"
+          }
+        },
+        "alpha": {
+          "1": {
+            "base": {
+              "value": {
+                "r": 110,
+                "g": 219,
+                "b": 100,
+                "a": 0.95
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "2": {
+            "base": {
+              "value": {
+                "r": 110,
+                "g": 219,
+                "b": 100,
+                "a": 0.87
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "3": {
+            "base": {
+              "value": {
+                "r": 110,
+                "g": 219,
+                "b": 100,
+                "a": 0.76
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "4": {
+            "base": {
+              "value": {
+                "r": 110,
+                "g": 219,
+                "b": 100,
+                "a": 0.63
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "5": {
+            "base": {
+              "value": {
+                "r": 110,
+                "g": 219,
+                "b": 100,
+                "a": 0.5
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "6": {
+            "base": {
+              "value": {
+                "r": 110,
+                "g": 219,
+                "b": 100,
+                "a": 0.37
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "7": {
+            "base": {
+              "value": {
+                "r": 110,
+                "g": 219,
+                "b": 100,
+                "a": 0.24
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "8": {
+            "base": {
+              "value": {
+                "r": 110,
+                "g": 219,
+                "b": 100,
+                "a": 0.13
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "9": {
+            "base": {
+              "value": {
+                "r": 110,
+                "g": 219,
+                "b": 100,
+                "a": 0.05
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          }
+        },
+        "to-bg": {
+          "1": {
+            "base": {
+              "value": {
+                "r": 105,
+                "g": 210,
+                "b": 98,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "2": {
+            "base": {
+              "value": {
+                "r": 98,
+                "g": 195,
+                "b": 95,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "3": {
+            "base": {
+              "value": {
+                "r": 87,
+                "g": 174,
+                "b": 91,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "4": {
+            "base": {
+              "value": {
+                "r": 75,
+                "g": 150,
+                "b": 86,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "5": {
+            "base": {
+              "value": {
+                "r": 63,
+                "g": 126,
+                "b": 81,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "6": {
+            "base": {
+              "value": {
+                "r": 50,
+                "g": 101,
+                "b": 76,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "7": {
+            "base": {
+              "value": {
+                "r": 38,
+                "g": 77,
+                "b": 71,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "8": {
+            "base": {
+              "value": {
+                "r": 27,
+                "g": 56,
+                "b": 67,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "9": {
+            "base": {
+              "value": {
+                "r": 20,
+                "g": 41,
+                "b": 64,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          }
+        },
+        "to-fg": {
+          "1": {
+            "base": {
+              "value": {
+                "r": 117,
+                "g": 221,
+                "b": 108,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "2": {
+            "base": {
+              "value": {
+                "r": 129,
+                "g": 224,
+                "b": 120,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "3": {
+            "base": {
+              "value": {
+                "r": 145,
+                "g": 228,
+                "b": 137,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "4": {
+            "base": {
+              "value": {
+                "r": 164,
+                "g": 232,
+                "b": 157,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "5": {
+            "base": {
+              "value": {
+                "r": 183,
+                "g": 237,
+                "b": 178,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "6": {
+            "base": {
+              "value": {
+                "r": 201,
+                "g": 242,
+                "b": 198,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "7": {
+            "base": {
+              "value": {
+                "r": 220,
+                "g": 246,
+                "b": 218,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "8": {
+            "base": {
+              "value": {
+                "r": 236,
+                "g": 250,
+                "b": 235,
+                "a": 1
+              },
+              "attributes": {
+                "category": "color"
+              },
+              "token": {
+                "category": "Colors: Positive Inverted",
+                "presenter": "Color"
+              }
+            }
+          },
+          "9": {
+            "base": {
+              "value": {
+                "r": 248,
+                "g": 253,
+                "b": 247,
                 "a": 1
               },
               "attributes": {

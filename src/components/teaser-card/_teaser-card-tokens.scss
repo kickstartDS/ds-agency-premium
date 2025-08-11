@@ -18,6 +18,8 @@
   --dsa-teaser-card__image--transform_hover: scale(1.1);
   --dsa-teaser-card__image--transition: transform var(--ks-transition-fade);
 
+  --dsa-teaser__body--gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
+
   --dsa-teaser-card__topic--color: var(--dsa-topic--color);
 
   --dsa-teaser-card__label--font: var(--ks-font-interface-xs);
@@ -42,7 +44,7 @@
 
   --dsa-teaser-card__button--font: var(--ks-font-interface-s);
 
-  // Scaling for Mobile Breakpoint MediumTiles
+  // Scaling for Mobile Breakpoint Large Tiles
   @include container.size("≥", 400px, "teaser-card") {
     --dsa-teaser-card--padding: var(--ks-spacing-inset-l);
 
@@ -54,7 +56,7 @@
   }
 
   @media (min-width: 48em) {
-    //Scaling for Desktop Breakpoint SmallTiles
+    //Scaling for Desktop Breakpoint Small Tiles
     --dsa-teaser-card__topic--font: var(--ks-font-display-s);
     --dsa-teaser-card__copy--font: var(--ks-font-copy-s);
 
@@ -62,22 +64,13 @@
 
     --dsa-teaser-card__button--font: var(--ks-font-interface-s);
 
-    // Scaling for Desktop Breakpoint MediumTiles
+    // Scaling for Desktop Breakpoint Large Tiles
     @include container.size("≥", 400px, "teaser-card") {
       --dsa-teaser-card__copy--font: var(--ks-font-copy-m);
 
       --dsa-teaser-card__topic--font: var(--ks-font-display-m);
 
       --dsa-teaser-card__button--font: var(--ks-font-interface-m);
-    }
-
-    // Scaling for Desktop Breakpoint LargeTiles
-    @include container.size("≥", 820px, "teaser-card") {
-      --dsa-teaser-card--padding: var(--ks-spacing-inset-l);
-
-      --dsa-teaser-card__topic--font: var(--ks-font-display-l);
-
-      --dsa-teaser-card__copy--font: var(--ks-font-copy-l);
     }
   }
 }

@@ -78,6 +78,7 @@ export const SectionContextDefault = forwardRef<
             : undefined
         }
         backgroundImage={backgroundImage}
+        // @ts-expect-error
         content={content}
         headline={{
           ...headlineRest,

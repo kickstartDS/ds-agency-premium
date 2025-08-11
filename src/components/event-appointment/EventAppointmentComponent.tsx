@@ -2,6 +2,8 @@ import { createContext, forwardRef, useContext } from "react";
 import { EventAppointmentProps } from "./EventAppointmentProps";
 import "./event-appointment.scss";
 import { Icon } from "@kickstartds/base/lib/icon";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./EventAppointmentDefaults";
 
 export type { EventAppointmentProps };
 
@@ -53,6 +55,6 @@ export const EventAppointment = forwardRef<
   EventAppointmentProps
 >((props, ref) => {
   const Component = useContext(EventAppointmentContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 EventAppointment.displayName = "EventAppointment";

@@ -25,8 +25,7 @@
   }
 
   &--h1 {
-    font: var(--dsa-headline_h1--font, var(--ks-font-display-xxl));
-    --subheadline--font-size: var(--dsa-headline_h1--font-size, 50%);
+    --subheadline--font-size: var(--dsa-headline_h1__subheadline--font-size, 50%);
     --headline--space-after_minimum: var(--dsa-headline_h1--space-after_minimum);
     --headline--space-after_small: var(--dsa-headline_h1--space-after_small);
     --headline--space-after_large: var(--dsa-headline_h1--space-after_large);
@@ -84,38 +83,39 @@
         align-items: flex-end;
       }
     }
+    font: var(--dsa-headline_h1--font, var(--ks-font-display-xxl));
   }
 
   &--h2 {
-    font: var(--dsa-headline_h2--font, var(--ks-font-display-xl));
     --subheadline--font-size: var(--dsa-headline_h2__subheadline--font-size, 50%);
     --headline--space-after_minimum: var(--dsa-headline_h2--space-after_minimum);
     --headline--space-after_small: var(--dsa-headline_h2--space-after_small);
     --headline--space-after_large: var(--dsa-headline_h2--space-after_large);
+    font: var(--dsa-headline_h2--font, var(--ks-font-display-xl));
   }
 
   &--h3 {
-    font: var(--dsa-headline_h3--font, var(--ks-font-display-l));
     --subheadline--font-size: var(--dsa-headline_h3__subheadline--font-size, 50%);
     --headline--space-after_minimum: var(--dsa-headline_h3--space-after_minimum);
     --headline--space-after_small: var(--dsa-headline_h3--space-after_small);
     --headline--space-after_large: var(--dsa-headline_h3--space-after_large);
+    font: var(--dsa-headline_h3--font, var(--ks-font-display-l));
   }
 
   &--h4 {
-    font: var(--dsa-headline_h4--font, var(--ks-font-display-m));
     --subheadline--font-size: var(--dsa-headline_h4__subheadline--font-size, 75%);
     --headline--space-after_minimum: var(--dsa-headline_h4--space-after_minimum);
     --headline--space-after_small: var(--dsa-headline_h4--space-after_small);
     --headline--space-after_large: var(--dsa-headline_h4--space-after_large);
+    font: var(--dsa-headline_h4--font, var(--ks-font-display-m));
   }
 
   &--p {
-    font: var(--dsa-headline_p--font, var(--ks-font-copy-m));
     --subheadline--font-size: var(--dsa-headline_p__subheadline--font-size, 75%);
     --headline--space-after_minimum: var(--dsa-headline_p--space-after_minimum);
     --headline--space-after_small: var(--dsa-headline_p--space-after_small);
     --headline--space-after_large: var(--dsa-headline_p--space-after_large);
+    font: var(--dsa-headline_p--font, var(--ks-font-copy-m));
   }
 
   .dsa-headline__headline {

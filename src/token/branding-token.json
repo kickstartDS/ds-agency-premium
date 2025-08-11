@@ -8,14 +8,14 @@
     "foreground-inverted": "#fff",
     "link": "#c3002f",
     "link-inverted": "#c3002f",
-    "positive": "#6EDB64",
-    "positive-inverted": "#23831B",
-    "informative": "#64C2DB",
-    "informative-inverted": "#00718F",
-    "notice": "#F9DE55",
-    "notice-inverted": "#FF5D53",
-    "negative": "#FF1A57",
-    "negative-inverted": "#D21D48"
+    "positive": "#23831B",
+    "positive-inverted": "#6EDB64",
+    "informative": "#00718F",
+    "informative-inverted": "#64C2DB",
+    "notice": "#FF5D53",
+    "notice-inverted": "#F9DE55",
+    "negative": "#D21D48",
+    "negative-inverted": "#FF1A57"
   },
   "font": {
     "display": {

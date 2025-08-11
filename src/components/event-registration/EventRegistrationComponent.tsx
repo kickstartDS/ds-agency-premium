@@ -8,6 +8,8 @@ import Markdown from "markdown-to-jsx";
 import { TextField } from "@kickstartds/form/lib/text-field";
 import { Checkbox } from "@kickstartds/form/lib/checkbox";
 import { Button } from "../button/ButtonComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./EventRegistrationDefaults";
 
 export type { EventRegistrationProps };
 
@@ -113,6 +115,6 @@ export const EventRegistration = forwardRef<
   EventRegistrationProps
 >((props, ref) => {
   const Component = useContext(EventRegistrationContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 EventRegistration.displayName = "EventRegistration";

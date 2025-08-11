@@ -3,6 +3,8 @@ import { SearchResultProps } from "./SearchResultProps";
 import "./search-result.scss";
 import { Link } from "@kickstartds/base/lib/link";
 import { RichText } from "@kickstartds/base/lib/rich-text";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./SearchResultDefaults";
 
 export type { SearchResultProps };
 
@@ -26,7 +28,7 @@ export const SearchResultContext = createContext(SearchResultContextDefault);
 export const SearchResult = forwardRef<HTMLAnchorElement, SearchResultProps>(
   (props, ref) => {
     const Component = useContext(SearchResultContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 SearchResult.displayName = "SearchResult";

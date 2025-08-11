@@ -54,11 +54,11 @@ export const HeroContextDefault = forwardRef<
                 overlay && `dsa-hero--overlay`,
                 className
               )}
+              ks-inverted={invertText ? "true" : undefined}
               height={height}
               overlay={overlay}
               skipButton={skipButton}
               box={{
-                inverted: invertText,
                 background:
                   textPosition === "below"
                     ? "transparent"
