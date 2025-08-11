@@ -37,7 +37,7 @@ export const TextWithLogos: Story = {
     contentGutter: "small",
     verticalAlign: "center",
     contentMinWidth: "wide",
-    first: (
+    firstComponents: (
       <>
         <Cta
           highlightText
@@ -49,7 +49,7 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
         />
       </>
     ),
-    second: (
+    secondComponents: (
       <>
         <Logos
           logosPerRow={3}
@@ -98,7 +98,7 @@ export const FAQWithForm: Story = {
     sectionMinWidth: "medium",
     horizontalGutter: "large",
     verticalGutter: "large",
-    first: (
+    firstComponents: (
       <>
         <Headline text={"Frequently Asked Questions"} level={"h2"} />
         <Faq
@@ -124,7 +124,7 @@ export const FAQWithForm: Story = {
         />
       </>
     ),
-    second: (
+    secondComponents: (
       <>
         <Headline
           text="Still have questions?"
