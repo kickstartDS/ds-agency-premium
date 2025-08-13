@@ -9,6 +9,13 @@
   --c-storytelling--vertical-padding: var(--dsa-image-story--vertical-padding, var(--ks-spacing-xl));
 
   .c-storytelling__box {
+    &.c-storytelling__box--top {
+      .c-storytelling__box__content {
+        top: var(--ks-spacing-m);
+        position: sticky;
+      }
+    }
+
     &__content {
       max-width: var(--dsa-content--width_narrow);
     }
