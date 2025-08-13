@@ -22,12 +22,12 @@
       "family": "Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
       "font-size": 16,
       "line-height": 1.15,
-      "scale-ratio": 1.25,
+      "scale-ratio": 1.35,
       "bp-factor": {
         "phone": 1,
         "tablet": 1.125,
         "laptop": 1.25,
-        "desktop": 1.35
+        "desktop": 1.375
       }
     },
     "copy": {

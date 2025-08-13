@@ -34,7 +34,7 @@
   &--floating {
     width: calc(100vw - var(--dsa-header_floating--spacing-horizontal) * 2);
     max-width: calc(var(--dsa-header--max-width) + var(--dsa-header_floating--spacing-horizontal) * 2);
-    top: 10px;
+    top: 0;
     padding: var(--dsa-header--spacing-vertical) 0;
     left: 50%;
     transform: translate(-50%, 0);
