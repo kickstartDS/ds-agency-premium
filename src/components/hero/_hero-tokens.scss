@@ -63,13 +63,13 @@
 
     --dsa-hero_left__overlay--background: linear-gradient(
       90deg,
-      var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width),
-      transparent
+      var(--ks-color-bg-alpha-1),
+      transparent var(--dsa-hero__textbox--max-width)
     );
 
     --dsa-hero_right__overlay--background: linear-gradient(
       270deg,
-      var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width),
+      var(--ks-color-bg) var(--dsa-hero__textbox--max-width),
       transparent
     );
 
