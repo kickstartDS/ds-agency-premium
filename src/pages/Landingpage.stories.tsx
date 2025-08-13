@@ -25,19 +25,16 @@ const Page = () => (
           },
         ]}
         headline="Welcome to Our Dynamic Workplace"
-        textbox
-        textPosition="left"
+        overlay
+        textbox={false}
+        textPosition="corner"
         height="fullScreen"
         highlightText
         image={{
           indent: "none",
-          src: "https://picsum.photos/seed/kdsvisual/640/270",
-          srcDesktop:
-            "img/colleagues-work-office-using-computers-looking-aside.png",
-          srcMobile:
-            "img/colleagues-work-office-using-computers-looking-aside.png",
-          srcTablet:
-            "img/colleagues-work-office-using-computers-looking-aside.png",
+          srcDesktop: "/optoma/bannerimgpro.jpg",
+          srcMobile: "/optoma/bannerimgpro.jpg",
+          srcTablet: "/optoma/bannerimgpro.jpg",
         }}
         sub="Where Creativity Meets Innovation"
         text="Experience the perfect blend of creativity, innovation, and productivity in our modern office environment."
