@@ -11,7 +11,7 @@ import { Stats } from "../components/stats/StatsComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
+    <Header {...headerProps} floating inverted />
     <Section
       inverted
       spaceBefore="none"

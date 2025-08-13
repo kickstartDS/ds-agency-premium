@@ -206,3 +206,9 @@
     }
   }
 }
+
+.dsa-header:not(.dsa-header--floating) + .dsa-section {
+  .dsa-hero.c-visual--full {
+    height: calc(100vh - var(--dsa-header--height));
+  }
+}

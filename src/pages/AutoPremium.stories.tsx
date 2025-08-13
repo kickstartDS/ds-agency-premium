@@ -17,7 +17,7 @@ import { ImageStory } from "../components/image-story/ImageStoryComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating inverted />
+    <Header {...headerProps} inverted floating />
     <Section width="full" spaceBefore="none" spaceAfter="none">
       <Hero
         invertText

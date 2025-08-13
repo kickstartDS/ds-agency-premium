@@ -18,7 +18,7 @@ import { Button } from "@kickstartds/base/lib/button";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
+    <Header {...headerProps} />
     <Section width="full" spaceBefore="none" spaceAfter="none">
       <Hero
         headline="Der neue Nissan Juke"
