@@ -4,10 +4,8 @@ import { Footer } from "../components/footer/FooterComponent";
 import { footerProps } from "../components/footer/Footer.stories";
 import { Section } from "../components/section/SectionComponent";
 
-import { Text } from "../components/text/TextComponent";
 import { Hero } from "../components/hero/HeroComponent";
 import { SplitEven } from "../components/split-even/SplitEvenComponent";
-import { Picture } from "@kickstartds/base/lib/picture";
 import { Slider } from "../components/slider/SliderComponent";
 import { Mosaic } from "../components/mosaic/MosaicComponent";
 import { Headline } from "@kickstartds/base/lib/headline";
@@ -16,7 +14,6 @@ import { TextArea } from "@kickstartds/form/lib/text-area";
 import { CheckboxGroup } from "@kickstartds/form/lib/checkbox-group";
 import { Button } from "@kickstartds/base/lib/button";
 import { ImageStory } from "../components/image-story/ImageStoryComponent";
-import { Cta } from "../components/cta/CtaComponent";
 
 const Page = () => (
   <>
@@ -40,7 +37,9 @@ const Page = () => (
       />
     </Section>
     <Section
+      transition="to-accent"
       inverted
+      style="stripe"
       width="max"
       headline={{
         align: "center",
@@ -73,7 +72,7 @@ const Page = () => (
         text={`Stellen Sie sich die Straße als eine bunte, bewegliche Leinwand vor, die nach jeder Kurve neue Horizonte freigibt. Das ist der GranTurismo-Effekt. Ein Fest handwerklicher Innovation, rennsportlicher Tradition und überschwänglicher italienischer Lebensfreude, geschaffen für alle, die die stillen Momente des Lebens genießen, aber auch den Nervenkitzel der Überholspur zu schätzen wissen.`}
         image={{
           aspectRatio: "unset",
-          src: "/guenther/maserati/GT-Power-Meets-Grace-scaled.webp",
+          src: "/guenther/maserati/Maserati-GT2-234640M.jpg",
           vAlign: "top",
         }}
         layout="textLeft"
@@ -82,44 +81,41 @@ const Page = () => (
       />
     </Section>
     <Section
-      inverted
+      width="full"
       spaceAfter="none"
+      inverted
       headline={{
         align: "center",
         width: "default",
-        text: "Verbinden Sie sich nahtlos mit Ihrer Welt",
-        sub: "Entdecken Sie die Größe und Geräumigkeit dieses smarten Autos.",
+        text: "Grand-Touring-Vergnügen für vier",
+        sub: "Purer Genuss für alle Sinne und handwerklich geschaffener Komfort für den Fahrer und alle drei Begleiter.",
       }}
     >
-      <Text
-        text="Mit seiner hochwertigen Innenausstattung sowie einem geräumigen und vielseitigen Kofferraum ist der neue Nissan Juke für Sie und Ihre Fahrten gemacht."
-        highlightText
-        align="center"
-      />
-    </Section>
-    <Section inverted spaceBefore="small" width="max">
       <Slider autoplay arrows>
         <Hero
+          height="fullScreen"
           image={{
             srcMobile:
-              "/guenther/nissan/24TDIEULHD_JUKE_MC_Lifestyle_pace-702.jpg.ximg_.l_12_h.smart_.jpg",
+              "/guenther/maserati/granturismo-folgore-in-a-private-garden-right-side-view-desktop.jpg",
           }}
         />
         <Hero
+          height="fullScreen"
           image={{
-            srcMobile:
-              "/guenther/nissan/24TDIEULHD_JUKE_MC_006-pace204.jpg.ximg_.l_12_h.smart_.jpg",
+            srcMobile: "/guenther/maserati/granturismo-grey-bridge-desktop.jpg",
           }}
         />
         <Hero
+          height="fullScreen"
           image={{
             srcMobile:
-              "/guenther/nissan/24TDIEULHD_JUKE_MC_009-pace205.jpg.ximg_.l_12_h.smart_.jpg",
+              "/guenther/maserati/granturismo-trofeo-red-top-view-on-the-road-nature-desktop.jpg",
           }}
         />
       </Slider>
     </Section>
-    <Section width="max">
+
+    <Section transition="to-bold" width="max">
       <ImageStory
         buttons={[
           {
@@ -137,18 +133,14 @@ const Page = () => (
             variant: "secondary",
           },
         ]}
-        headline="GranTurismo: Power Meets Grace"
+        headline="Power Meets Grace"
         sub="Erleben Sie italienische Ingenieurskunst und zeitloses Design"
-        text={`Der Maserati GranTurismo vereint beeindruckende Leistung mit elegantem Stil. Genießen Sie ein Fahrerlebnis, das Emotionen weckt und Komfort auf höchstem Niveau bietet. Entdecken Sie innovative Technologien, luxuriöse Ausstattung und ein unvergleichliches Fahrgefühl – für alle, die das Besondere suchen.
-
-
-          `}
+        text={`Der Maserati GranTurismo vereint beeindruckende Leistung mit elegantem Stil. Genießen Sie ein Fahrerlebnis, das Emotionen weckt und Komfort auf höchstem Niveau bietet. Entdecken Sie innovative Technologien, luxuriöse Ausstattung und ein unvergleichliches Fahrgefühl – für alle, die das Besondere suchen.`}
         image={{
           aspectRatio: "unset",
           src: "/guenther/maserati/GT-Power-Meets-Grace-scaled.webp",
           vAlign: "top",
         }}
-        largeHeadline
         layout="textLeft"
         padding
         textAlign="left"
@@ -156,13 +148,11 @@ const Page = () => (
     </Section>
     <Section
       inverted
+      style="carbon"
       transition="to-accent"
-      width="max"
-      headline={{
-        text: "Starker Klang in aufregender Klarheit mit BOSE® PERSONAL® PLUS",
-        align: "center",
-        width: "default",
-      }}
+      width="full"
+      spaceAfter="none"
+      spaceBefore="none"
     >
       <Mosaic
         layout="alternate"
@@ -170,7 +160,7 @@ const Page = () => (
           {
             headline: "Das ist Musik in Ihren Ohren, nur noch besser",
             image: {
-              src: "/guenther/maserati/GT-Trofeo-ALT.jpg",
+              src: "/guenther/maserati/granturismo-folgore-dashboard-white-detail-desktop.jpg",
             },
             text: "Rock-, Pop- und Jazzmusik haben eines gemeinsam: exzellente Klangqualität. Das Bose® Personal® Plus¹ Soundsystem im neuen Nissan Juke verfügt über 10 leistungsstarke Lautsprecher, die strategisch im Fahrzeuginnenraum positioniert sind, um eine optimale Klangqualität zu gewährleisten.",
           },
@@ -178,7 +168,7 @@ const Page = () => (
             headline:
               "Ein Platz in der ersten Reihe hat sich noch nie so gut angehört.",
             image: {
-              src: "/guenther/maserati/GT-Trofeo-HERO.jpg",
+              src: "/guenther/maserati/GT-Power-Meets-Grace-scaled.webp",
             },
             text: "Die Kopfstützen des Fahrer- und Beifahrersitzes im neuen Juke können als Teil des Bose® Personal® Plus Soundsystems mit Ultra-Nearfield-Lautsprechern ausgestattet werden.¹ Diese Lautsprecher ermöglichen Ihnen ein besonders intensives Eintauchen in Ihre Lieblingsmusik.",
           },
