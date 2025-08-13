@@ -41,6 +41,13 @@
       radial-gradient(50% 125% at 100% 0%, var(--ks-color-primary-alpha-5) 0%, var(--ks-color-bg-alpha-4) 100%)
     );
 
+    &.dsa-hero--content-corner {
+      --c-visual_overlay--background: var(
+        --dsa-hero_corner__overlay--background,
+        linear-gradient(40deg, var(--ks-background-color-default) 15%, transparent 50%)
+      );
+    }
+
     &.dsa-hero--content-offset {
       --c-visual_overlay--background: var(
         --dsa-hero--offset__overlay--background,

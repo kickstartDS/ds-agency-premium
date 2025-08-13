@@ -55,6 +55,12 @@
       var(--ks-color-bg-alpha-4) 100%
     );
 
+    --dsa-hero_corner__overlay--background: linear-gradient(
+      40deg,
+      var(--ks-background-color-default) 15%,
+      transparent 50%
+    );
+
     --dsa-hero--left__overlay--background: linear-gradient(
       90deg,
       var(--ks-color-bg-alpha-1) var(--dsa-hero__textbox--max-width),
