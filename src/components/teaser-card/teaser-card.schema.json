@@ -28,6 +28,12 @@
       "description": "Layout for the Teaser Card",
       "default": "stack"
     },
+    "centered": {
+      "type": "boolean",
+      "title": "Centered",
+      "description": "Whether the Teaser Card is centered",
+      "default": false
+    },
     "url": {
       "type": "string",
       "title": "Url",

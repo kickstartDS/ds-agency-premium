@@ -12,6 +12,12 @@
   height: 100%;
   position: relative;
 
+  &--centered {
+    .c-teaser {
+      text-align: center;
+    }
+  }
+
   .c-teaser {
     --c-teaser--padding: var(--dsa-teaser-card--padding, var(--ks-spacing-inset-l));
     --c-teaser--background: var(--dsa-teaser-card--background, var(--ks-background-color-card-interactive));
@@ -76,7 +82,7 @@
   }
 
   .c-teaser__topic {
-    color: var(--dsa-teaser__topic--color, var(--dsa-topic--color));
+    color: var(--dsa-teaser-card__topic--color, var(--dsa-topic--color));
     font: var(--dsa-teaser-card__topic--font, var(--dsa-topic--font));
     font-weight: var(--dsa-teaser-card__topic--font-weight, var(--dsa-topic--font-weight));
   }
