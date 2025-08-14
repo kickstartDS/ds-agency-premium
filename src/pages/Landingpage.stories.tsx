@@ -83,19 +83,19 @@ Ob Neuwagen, Tageszulassungen oder geprüfte Gebrauchtwagen – wir bieten Ihnen
           {
             title: "Marken",
             number: "10",
-            icon: "star",
+            icon: "star-thin",
             description: `Nissan, Kia, Maserati, Corvette, Cadillac, Subaru, Micro, Isuzu, MSG-Stablehopper, Infiniti-Service, Saab`,
           },
           {
             title: "Standorte",
             number: "9",
-            icon: "map-pin",
+            icon: "map-pin-thin",
             description: "Hamburg, Berlin, Frankfurt, Ahrensburg, Halstenbek",
           },
           {
             title: "Leidenschaft",
             number: "1",
-            icon: "heart",
+            icon: "heart-thin",
             description: "Seit über 57 Jahren aus Liebe zum Automobil",
           },
         ]}
