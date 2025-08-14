@@ -14,7 +14,7 @@ import { Slider } from "../components/slider/SliderComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
+    <Header {...headerProps} />
 
     <Section width="full" spaceAfter="none" spaceBefore="none">
       <Slider arrows autoplay>
@@ -26,7 +26,7 @@ const Page = () => (
               url: "#startit",
             },
           ]}
-          headline="Welcome to Our Dynamic Workplace"
+          headline="Treffen Sie auf das LED Display der Zukunft"
           textPosition="corner"
           height="fullScreen"
           textbox={false}
@@ -35,12 +35,11 @@ const Page = () => (
           highlightText
           image={{
             indent: "none",
-            srcDesktop: "/optoma/bannerimgpro.jpg",
-            srcMobile: "/optoma/bannerimgpro.jpg",
-            srcTablet: "/optoma/bannerimgpro.jpg",
+            srcDesktop: "/optoma/3333.jpg",
+            srcMobile: "/optoma/3333.jpg",
+            srcTablet: "/optoma/3333.jpg",
           }}
-          sub="Where Creativity Meets Innovation"
-          text="Experience the perfect blend of creativity, innovation, and productivity in our modern office environment."
+          sub="Das ProScene FHDC135 COB LED Display, Gewinner der Best of Show auf der ISE 2025"
         />
         <Hero
           buttons={[
@@ -50,7 +49,7 @@ const Page = () => (
               url: "#startit",
             },
           ]}
-          headline="Welcome to Our Dynamic Workplace"
+          headline="Neu! Photon GO"
           textPosition="corner"
           height="fullScreen"
           textbox={false}
@@ -59,12 +58,11 @@ const Page = () => (
           highlightText
           image={{
             indent: "none",
-            srcDesktop: "/optoma/bannerimgpro.jpg",
-            srcMobile: "/optoma/bannerimgpro.jpg",
-            srcTablet: "/optoma/bannerimgpro.jpg",
+            srcDesktop: "/optoma/3276.jpg",
+            srcMobile: "/optoma/3276.jpg",
+            srcTablet: "/optoma/3276.jpg",
           }}
-          sub="Where Creativity Meets Innovation"
-          text="Experience the perfect blend of creativity, innovation, and productivity in our modern office environment."
+          sub="Unterhaltung für alle, jederzeit!"
         />
       </Slider>
     </Section>
@@ -75,7 +73,15 @@ const Page = () => (
       }}
       width="max"
     >
-      <TeaserCard headline="Beamer" image="optoma/beamer.svg" url={"#"} />
+      <TeaserCard
+        headline="Beamer"
+        image="optoma/beamer.svg"
+        url={"#"}
+        button={{
+          hidden: true,
+          label: "Mehr erfahren",
+        }}
+      />
       <TeaserCard
         headline="Interaktive Displays"
         image="optoma/interaktive-displays.svg"
