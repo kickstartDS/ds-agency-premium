@@ -34,6 +34,7 @@ export const TeaserCardContextDefault = forwardRef<
       imageRatio = "wide",
       label,
       layout = "stack",
+      centered = false,
       ...rest
     },
     ref
@@ -44,6 +45,7 @@ export const TeaserCardContextDefault = forwardRef<
           `dsa-teaser-card`,
           `dsa-teaser-card--${layout}`,
           `dsa-teaser-card--${imageRatio}`,
+          centered && `dsa-teaser-card--centered`,
           !image && "dsa-teaser-card--no-image"
         )}
       >

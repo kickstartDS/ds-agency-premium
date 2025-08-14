@@ -18,6 +18,10 @@ export type Text = string;
  */
 export type Label = string;
 /**
+ * Whether the Teaser Card is centered
+ */
+export type Centered = boolean;
+/**
  * Url that should be linked
  */
 export type Url = string;
@@ -49,6 +53,7 @@ export interface TeaserCardProps {
    * Layout for the Teaser Card
    */
   layout?: "stack" | "row";
+  centered?: Centered;
   url: Url;
   button?: {
     label: Label1;
