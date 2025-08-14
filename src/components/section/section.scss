@@ -1,5 +1,6 @@
 @use "section-tokens.scss";
 
+.l-section.dsa-section [ks-inverted],
 .l-section.dsa-section {
   --l-section_buttons--space-before: var(--dsa-section__buttons--space-before, var(--l-section--gutter));
 
