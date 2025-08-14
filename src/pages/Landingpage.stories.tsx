@@ -146,8 +146,8 @@ const Page = () => (
     </Section>
     <Section spaceBefore="none" width="full">
       <Hero
-        headline="Create and connect effortlessly with Whiteboard"
-        sub="Creative sharing is easy with built-in annotation tools to help facilitate collaboration in the classroom and sync with cloud accounts."
+        headline="Entdecken Sie die Zukunft des Lernens"
+        text="Optoma bietet eine breite Palette an interaktiven Displays, die speziell für den Bildungsbereich entwickelt wurden. Unsere Produkte fördern die Zusammenarbeit und Interaktivität im Klassenzimmer."
         buttons={[
           {
             label: "Mehr erfahren",

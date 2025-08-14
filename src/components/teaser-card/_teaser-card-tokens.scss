@@ -30,7 +30,7 @@
   --dsa-teaser-card__button--font: var(--ks-font-interface-m);
 
   // Scaling for Mobile Breakpoint
-  --dsa-teaser-card--padding: var(--ks-spacing-inset-m);
+  --dsa-teaser-card--padding: var(--ks-spacing-inset-stretch-m);
 
   --dsa-teaser-card__topic--font: var(--ks-font-display-m);
   --dsa-teaser-card__topic--font-weight: var(--dsa-topic--font-weight);
@@ -43,7 +43,7 @@
 
   // Scaling for Mobile Breakpoint Large Tiles
   @include container.size("≥", 400px, "teaser-card") {
-    --dsa-teaser-card--padding: var(--ks-spacing-inset-l);
+    --dsa-teaser-card--padding: var(--ks-spacing-inset-stretch-l);
 
     --dsa-teaser-card__topic--font: var(--ks-font-display-l);
 
@@ -57,13 +57,15 @@
     --dsa-teaser-card__topic--font: var(--ks-font-display-s);
     --dsa-teaser-card__copy--font: var(--ks-font-copy-s);
 
-    --dsa-teaser-card--padding: var(--ks-spacing-inset-m);
+    --dsa-teaser-card--padding: var(--ks-spacing-inset-stretch-m);
 
     --dsa-teaser-card__button--font: var(--ks-font-interface-s);
 
     // Scaling for Desktop Breakpoint Large Tiles
     @include container.size("≥", 400px, "teaser-card") {
       --dsa-teaser-card__copy--font: var(--ks-font-copy-m);
+
+      --dsa-teaser-card--padding: var(--ks-spacing-inset-stretch-l);
 
       --dsa-teaser-card__topic--font: var(--ks-font-display-m);
 
