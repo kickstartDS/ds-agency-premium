@@ -14,6 +14,7 @@ import { Slider } from "../components/slider/SliderComponent";
 import { TextField } from "@kickstartds/form/lib/text-field";
 import { Button } from "../components/button/ButtonComponent";
 import { SplitWeighted } from "../components/split-weighted/SplitWeightedComponent";
+import { Mosaic } from "../components/mosaic/MosaicComponent";
 
 const Page = () => (
   <>
@@ -65,13 +66,31 @@ const Page = () => (
         />
       </Slider>
     </Section>
+    <Section>
+      <Cta
+        textAlign="center"
+        headline="Jetzt mehr erfahren"
+        text="Erfahren Sie mehr über unsere Produkte und Lösungen."
+        buttons={[
+          {
+            label: "Mehr erfahren",
+            url: "#startit",
+          },
+          {
+            label: "Mehr erfahren",
+            url: "#startit",
+          },
+        ]}
+        highlightText
+      />
+    </Section>
     <Section
       backgroundColor="accent"
       headline={{
         text: "Unsere Produkte",
         align: "center",
       }}
-      width="max"
+      content={{}}
     >
       <TeaserCard
         headline="Beamer"
@@ -128,37 +147,44 @@ const Page = () => (
         }}
       />
     </Section>
-    <Section spaceAfter="none" spaceBefore="none" width="max">
-      <Cta
-        headline="Mühelos Erstellen und verbinden, dank der Whiteboard-App"
-        text="Die integrierte Funktionen erleichtert die Zusammenarbeit im Klassenzimmer und ermöglichen eine Synchronisierung mit der Cloud. Lehrer können den Unterricht jederzeit und von überall aus planen."
-        buttons={[
+    <Section
+      transition="to-accent"
+      content={{
+        mode: "list",
+        gutter: "none",
+      }}
+      spaceAfter="none"
+      spaceBefore="none"
+      width="full"
+    >
+      <Mosaic
+        layout="alternate"
+        tile={[
           {
-            label: "Mehr erfahren",
-            url: "#",
+            button: {
+              label: "Mehr erfahren",
+              toggle: true,
+            },
+            headline:
+              "Mühelos Erstellen und verbinden, dank der Whiteboard-App",
+            image: {
+              src: "/optoma/location-1.jpg",
+            },
+            text: "Die integrierte Funktionen erleichtert die Zusammenarbeit im Klassenzimmer und ermöglichen eine Synchronisierung mit der Cloud. Lehrer können den Unterricht jederzeit und von überall aus planen.",
+          },
+
+          {
+            button: {
+              label: "Mehr erfahren",
+              toggle: true,
+            },
+            headline: "Einfaches Teilen von Inhalten",
+            image: {
+              src: "/optoma/location-1.jpg",
+            },
+            text: "Die Whiteboard-App ermöglicht es Lehrern, Inhalte einfach zu teilen und zu präsentieren. Sie können Notizen, Bilder und Videos hinzufügen, um den Unterricht interaktiver zu gestalten.",
           },
         ]}
-        image={{
-          src: "/optoma/location-1.jpg",
-          padding: false,
-        }}
-      />
-    </Section>
-    <Section spaceBefore="none" width="full">
-      <Hero
-        headline="Entdecken Sie die Zukunft des Lernens"
-        text="Optoma bietet eine breite Palette an interaktiven Displays, die speziell für den Bildungsbereich entwickelt wurden. Unsere Produkte fördern die Zusammenarbeit und Interaktivität im Klassenzimmer."
-        buttons={[
-          {
-            label: "Mehr erfahren",
-            url: "#",
-          },
-        ]}
-        image={{
-          srcMobile: "/optoma/landing-banner.jpg",
-          srcTablet: "/optoma/landing-banner.jpg",
-          srcDesktop: "/optoma/landing-banner.jpg",
-        }}
       />
     </Section>
     <Section
@@ -223,6 +249,23 @@ const Page = () => (
         url="#"
         button={{
           label: "Zum Beitrag",
+        }}
+      />
+    </Section>
+    <Section spaceBefore="none" spaceAfter="none" width="full">
+      <Hero
+        headline="Entdecken Sie die Zukunft des Lernens"
+        text="Optoma bietet eine breite Palette an interaktiven Displays, die speziell für den Bildungsbereich entwickelt wurden. Unsere Produkte fördern die Zusammenarbeit und Interaktivität im Klassenzimmer."
+        buttons={[
+          {
+            label: "Mehr erfahren",
+            url: "#",
+          },
+        ]}
+        image={{
+          srcMobile: "/optoma/landing-banner.jpg",
+          srcTablet: "/optoma/landing-banner.jpg",
+          srcDesktop: "/optoma/landing-banner.jpg",
         }}
       />
     </Section>

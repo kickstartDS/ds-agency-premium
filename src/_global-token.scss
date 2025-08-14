@@ -3,7 +3,7 @@
 #{$selectors} {
   // Text color on primary backgrounds (e.g., buttons)
   --dsa-text-color-on-primary-base: var(--ks-color-fg-inverted);
-  --dsa-text-color-on-primary-inverted-base: var(--ks-color-fg);
+  --dsa-text-color-on-primary-inverted-base: var(--ks-color-fg-inverted);
 
   // Overlay styles
   --dsa-overlay--background-color: var(--ks-color-fg-alpha-4);

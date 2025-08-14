@@ -57,7 +57,7 @@ export const TeaserCardContextDefault = forwardRef<
           link={{
             hidden: button?.hidden,
             label: button.label,
-            variant: "primary",
+            variant: "secondary",
             url: url,
             icon: button?.chevron ? "chevron-right" : undefined,
           }}
