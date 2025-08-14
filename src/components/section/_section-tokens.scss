@@ -39,11 +39,7 @@
 
   //Background Transitions
   --dsa-section--transition_to-default: linear-gradient(180deg, transparent, var(--ks-background-color-default));
-  --dsa-section--transition_to-accent: radial-gradient(
-    200% 70% at 40% 120%,
-    var(--ks-background-color-accent),
-    transparent
-  );
+  --dsa-section--transition_to-accent: linear-gradient(180deg, transparent, var(--ks-background-color-accent));
   --dsa-section--transition_to-bold: linear-gradient(180deg, transparent, var(--ks-background-color-bold));
   --dsa-section--transition_to-inverted: linear-gradient(
     180deg,

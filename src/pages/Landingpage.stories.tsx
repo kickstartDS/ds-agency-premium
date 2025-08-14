@@ -66,33 +66,20 @@ const Page = () => (
         />
       </Slider>
     </Section>
-    <Section>
-      <Cta
-        textAlign="center"
-        headline="Jetzt mehr erfahren"
-        text="Erfahren Sie mehr über unsere Produkte und Lösungen."
-        buttons={[
-          {
-            label: "Mehr erfahren",
-            url: "#startit",
-          },
-          {
-            label: "Mehr erfahren",
-            url: "#startit",
-          },
-        ]}
-        highlightText
-      />
-    </Section>
+
     <Section
-      backgroundColor="accent"
       headline={{
         text: "Unsere Produkte",
+        sub: "Entdecken Sie unsere Produktpalette",
         align: "center",
       }}
-      content={{}}
+      width="wide"
+      content={{
+        tileWidth: "smallest",
+      }}
     >
       <TeaserCard
+        centered
         headline="Beamer"
         image="optoma/beamer.svg"
         url={"#"}
@@ -102,6 +89,7 @@ const Page = () => (
         }}
       />
       <TeaserCard
+        centered
         headline="Interaktive Displays"
         image="optoma/interaktive-displays.svg"
         url={"#"}
@@ -111,6 +99,7 @@ const Page = () => (
         }}
       />
       <TeaserCard
+        centered
         headline="Professionelle Displays"
         image="optoma/professionelle-displays.svg"
         url={"#"}
@@ -120,6 +109,7 @@ const Page = () => (
         }}
       />
       <TeaserCard
+        centered
         headline="LED Displays"
         image="optoma/led.svg"
         url={"#"}
@@ -129,6 +119,7 @@ const Page = () => (
         }}
       />
       <TeaserCard
+        centered
         headline="Lösungen"
         image="optoma/lösungen.svg"
         url={"#"}
@@ -138,6 +129,7 @@ const Page = () => (
         }}
       />
       <TeaserCard
+        centered
         headline="Zubehör"
         image="optoma/zubehör.svg"
         url={"#"}
@@ -148,11 +140,11 @@ const Page = () => (
       />
     </Section>
     <Section
-      transition="to-accent"
       content={{
         mode: "list",
         gutter: "none",
       }}
+      style="inset"
       spaceAfter="none"
       spaceBefore="none"
       width="full"
@@ -170,7 +162,9 @@ const Page = () => (
             image: {
               src: "/optoma/location-1.jpg",
             },
-            text: "Die integrierte Funktionen erleichtert die Zusammenarbeit im Klassenzimmer und ermöglichen eine Synchronisierung mit der Cloud. Lehrer können den Unterricht jederzeit und von überall aus planen.",
+            text: `Die integrierte Funktionen erleichtert die Zusammenarbeit im Klassenzimmer und ermöglichen eine Synchronisierung mit der Cloud. Lehrer können den Unterricht jederzeit und von überall aus planen.
+
+Real-time-Updates und die Möglichkeit, Inhalte zu teilen, machen den Unterricht interaktiver und effizienter.`,
           },
 
           {
@@ -182,7 +176,9 @@ const Page = () => (
             image: {
               src: "/optoma/location-1.jpg",
             },
-            text: "Die Whiteboard-App ermöglicht es Lehrern, Inhalte einfach zu teilen und zu präsentieren. Sie können Notizen, Bilder und Videos hinzufügen, um den Unterricht interaktiver zu gestalten.",
+            text: `Die integrierte Funktionen erleichtert die Zusammenarbeit im Klassenzimmer und ermöglichen eine Synchronisierung mit der Cloud. Lehrer können den Unterricht jederzeit und von überall aus planen.
+
+Real-time-Updates und die Möglichkeit, Inhalte zu teilen, machen den Unterricht interaktiver und effizienter.`,
           },
         ]}
       />
@@ -191,7 +187,7 @@ const Page = () => (
       width="wide"
       content={{
         mode: "slider",
-        tileWidth: "large",
+        tileWidth: "medium",
       }}
       headline={{
         text: "Aktuelle Meldungen",

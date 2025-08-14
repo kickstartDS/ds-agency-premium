@@ -147,7 +147,7 @@
       },
       "default": {
         "base": {
-          "value": "{ks.color.fg-inverted.base}",
+          "value": "{ks.color.fg.alpha.7.base}",
           "attributes": {
             "category": "color"
           },

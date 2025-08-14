@@ -54,15 +54,17 @@
 
   @media (min-width: 48em) {
     //Scaling for Desktop Breakpoint Small Tiles
-    --dsa-teaser-card__topic--font: var(--ks-font-display-m);
-    --dsa-teaser-card__copy--font: var(--ks-font-copy-s);
+    --dsa-teaser-card__topic--font: var(--ks-font-display-s);
+    --dsa-teaser-card__copy--font: var(--ks-font-copy-xs);
 
-    --dsa-teaser-card--padding: var(--ks-spacing-inset-stretch-m);
+    --dsa-teaser-card--padding: var(--ks-spacing-inset-stretch-s);
 
     --dsa-teaser-card__button--font: var(--ks-font-interface-s);
 
     // Scaling for Desktop Breakpoint Large Tiles
-    @include container.size("≥", 400px, "teaser-card") {
+    @include container.size("≥", 300px, "teaser-card") {
+      --dsa-teaser-card__topic--font: var(--ks-font-display-m);
+
       --dsa-teaser-card__copy--font: var(--ks-font-copy-m);
 
       --dsa-teaser-card--padding: var(--ks-spacing-inset-stretch-l);

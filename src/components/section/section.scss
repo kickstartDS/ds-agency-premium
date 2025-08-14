@@ -130,11 +130,12 @@
     );
   }
 
-  &-style--colorful {
-    background-image: var(
-      --dsa-section_colorful--background-image,
-      linear-gradient(145deg, var(--ks-color-primary) 30%, #4aaea9 100%)
-    );
+  &-style--inset {
+    background-image: linear-gradient(180deg, var(--ks-color-fg-alpha-9) 0%, transparent 5px),
+      linear-gradient(180deg, var(--ks-color-fg-alpha-9) 0%, transparent 30px),
+      linear-gradient(180deg, transparent calc(100% - 30px), var(--ks-color-fg-alpha-9) 100%),
+      linear-gradient(180deg, transparent calc(100% - 5px), var(--ks-color-fg-alpha-9) 100%),
+      radial-gradient(100% 100% at 50% 50%, var(--ks-color-bg), var(--ks-color-bg-to-fg-1));
   }
 
   &--spotlight {
