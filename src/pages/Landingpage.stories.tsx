@@ -11,6 +11,9 @@ import { ImageStory } from "../components/image-story/ImageStoryComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
 import { Hero } from "../components/hero/HeroComponent";
 import { Slider } from "../components/slider/SliderComponent";
+import { TextField } from "@kickstartds/form/lib/text-field";
+import { Button } from "../components/button/ButtonComponent";
+import { SplitWeighted } from "../components/split-weighted/SplitWeightedComponent";
 
 const Page = () => (
   <>
@@ -21,14 +24,12 @@ const Page = () => (
         <Hero
           buttons={[
             {
-              icon: "arrow-down",
-              label: "Explore further",
+              label: "Mehr erfahren",
               url: "#startit",
             },
           ]}
           headline="Treffen Sie auf das LED Display der Zukunft"
           textPosition="corner"
-          height="fullScreen"
           textbox={false}
           invertText
           overlay
@@ -44,14 +45,12 @@ const Page = () => (
         <Hero
           buttons={[
             {
-              icon: "arrow-down",
-              label: "Explore further",
+              label: "Mehr erfahren",
               url: "#startit",
             },
           ]}
           headline="Neu! Photon GO"
           textPosition="corner"
-          height="fullScreen"
           textbox={false}
           invertText
           overlay
@@ -67,6 +66,7 @@ const Page = () => (
       </Slider>
     </Section>
     <Section
+      backgroundColor="accent"
       headline={{
         text: "Unsere Produkte",
         align: "center",
@@ -128,15 +128,11 @@ const Page = () => (
         }}
       />
     </Section>
-    <Section backgroundColor="accent" width="max">
+    <Section spaceAfter="none" spaceBefore="none" width="max">
       <Cta
-        headline="Create and connect effortlessly with Whiteboard"
-        sub="Creative sharing is easy with built-in annotation tools to help facilitate collaboration in the classroom and sync with cloud accounts."
+        headline="Mühelos Erstellen und verbinden, dank der Whiteboard-App"
+        text="Die integrierte Funktionen erleichtert die Zusammenarbeit im Klassenzimmer und ermöglichen eine Synchronisierung mit der Cloud. Lehrer können den Unterricht jederzeit und von überall aus planen."
         buttons={[
-          {
-            label: "Jetzt starten",
-            url: "#",
-          },
           {
             label: "Mehr erfahren",
             url: "#",
@@ -144,6 +140,7 @@ const Page = () => (
         ]}
         image={{
           src: "/optoma/location-1.jpg",
+          padding: false,
         }}
       />
     </Section>
@@ -152,10 +149,6 @@ const Page = () => (
         headline="Create and connect effortlessly with Whiteboard"
         sub="Creative sharing is easy with built-in annotation tools to help facilitate collaboration in the classroom and sync with cloud accounts."
         buttons={[
-          {
-            label: "Jetzt starten",
-            url: "#",
-          },
           {
             label: "Mehr erfahren",
             url: "#",
@@ -167,6 +160,89 @@ const Page = () => (
           srcDesktop: "/optoma/landing-banner.jpg",
         }}
       />
+    </Section>
+    <Section
+      width="wide"
+      content={{
+        mode: "slider",
+        tileWidth: "large",
+      }}
+      headline={{
+        text: "Aktuelle Meldungen",
+      }}
+    >
+      <TeaserCard
+        headline="Optoma auf der Gamescom 20.-24.08.2025"
+        text="Optoma unterstützt gemeinsam mit Fresh Movement den diesjährigen ROBLOX-Messestand! Entdecken Sie unsere LED-Wand FHDC135, den beliebten Projektor UHZ68LV und das interaktive Display 5753RK – alles live im Einsatz!"
+        image="/optoma/3342.jpg"
+        url="#"
+        button={{
+          label: "Zum Beitrag",
+        }}
+      />
+      <TeaserCard
+        headline="Optoma trifft ins Schwarze mit Golferin Charley Hull"
+        text="Erfahren Sie, wie wir mit unserem ZK608TST einen maßgeschneiderten Golfsimulator für die bekannte Profigolferin Charley Hull erschaffen haben."
+        image="/optoma/3124.jpg"
+        url="#"
+        button={{
+          label: "Zum Beitrag",
+        }}
+      />
+      <TeaserCard
+        headline="Eine Welt voller Kreativität"
+        text="Kostenloses 1-Jahres Abonnement der mozaBook Bildungssoftware mit Ihrem interaktiven Display von Optoma**"
+        image="/optoma/3081.jpg"
+        url="#"
+        button={{
+          label: "Zum Beitrag",
+        }}
+      />
+      <TeaserCard
+        headline="Optoma auf der Gamescom 20.-24.08.2025"
+        text="Optoma unterstützt gemeinsam mit Fresh Movement den diesjährigen ROBLOX-Messestand! Entdecken Sie unsere LED-Wand FHDC135, den beliebten Projektor UHZ68LV und das interaktive Display 5753RK – alles live im Einsatz!"
+        image="/optoma/3342.jpg"
+        url="#"
+        button={{
+          label: "Zum Beitrag",
+        }}
+      />
+      <TeaserCard
+        headline="Optoma trifft ins Schwarze mit Golferin Charley Hull"
+        text="Erfahren Sie, wie wir mit unserem ZK608TST einen maßgeschneiderten Golfsimulator für die bekannte Profigolferin Charley Hull erschaffen haben."
+        image="/optoma/3124.jpg"
+        url="#"
+        button={{
+          label: "Zum Beitrag",
+        }}
+      />
+      <TeaserCard
+        headline="Eine Welt voller Kreativität"
+        text="Kostenloses 1-Jahres Abonnement der mozaBook Bildungssoftware mit Ihrem interaktiven Display von Optoma**"
+        image="/optoma/3081.jpg"
+        url="#"
+        button={{
+          label: "Zum Beitrag",
+        }}
+      />
+    </Section>
+    <Section
+      content={{
+        gutter: "small",
+      }}
+      headline={{
+        text: "Subscribe",
+        sub: "Jetzt anmelden für unsere Neuigkeiten, Aktionen und Promotions.",
+        align: "center",
+      }}
+      width="narrow"
+      backgroundColor="accent"
+      style="framed"
+    >
+      <TextField label="E-Mail" placeholder="Ihre E-Mail-Adresse" />
+      <div>
+        <Button size="small" label="Anmelden" />
+      </div>
     </Section>
     <Footer {...footerProps} />
   </>

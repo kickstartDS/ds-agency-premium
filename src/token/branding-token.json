@@ -19,7 +19,7 @@
   },
   "font": {
     "display": {
-      "family": "'HelveticaNeue LT', Helvetica, Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+      "family": "system-ui, -apple-system, Helvetica, Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
       "font-size": 16,
       "line-height": 1.15,
       "scale-ratio": 1.25,
@@ -31,7 +31,7 @@
       }
     },
     "copy": {
-      "family": "'HelveticaNeue LT', Helvetica, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+      "family": "system-ui, -apple-system, BlinkMacSystemFont, Helvetica, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
       "font-size": 16,
       "line-height": 1.5,
       "scale-ratio": 1.225,
@@ -40,7 +40,7 @@
       }
     },
     "interface": {
-      "family": "'HelveticaNeue LT', Helvetica, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+      "family": "system-ui, -apple-system, BlinkMacSystemFont, Helvetica, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
       "font-size": 16,
       "line-height": 1.5,
       "scale-ratio": 1.225,
