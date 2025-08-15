@@ -11,6 +11,8 @@ import { Hero } from "../components/hero/HeroComponent";
 import { Downloads } from "../components/downloads/DownloadsComponent";
 import { Gallery } from "../components/gallery/GalleryComponent";
 import { Cta } from "../components/cta/CtaComponent";
+import { Faq } from "../components/faq/FaqComponent";
+import { Table } from "@kickstartds/base/lib/table";
 
 const Page = () => (
   <>
@@ -170,6 +172,212 @@ Rüsten Sie Ihr Heimkino auf mit einem 4K-UHD-Tri-Laser-RGB-Projektor mit 5.000 
         ]}
         layout="largeTiles"
         lightbox
+      />
+    </Section>
+
+    <Section
+      headline={{
+        text: "Technische Daten",
+      }}
+      width="wide"
+      backgroundColor="accent"
+    >
+      <Faq
+        questions={[
+          {
+            question: "Display- und Bildspezifikationen",
+            children: (
+              <>
+                <Section
+                  spaceAfter="none"
+                  spaceBefore="none"
+                  backgroundColor="accent"
+                  width="full"
+                  content={{ mode: "tile", tileWidth: "default" }}
+                >
+                  <Text text={`**Projektionssystem**<br/>DLP™-Technologie`} />
+                  <Text text={`**Auflösung**<br/>4K UHD (3840 × 2160 Pixel)`} />
+                  <Text text={`**Lichtleistung**<br/>5.000 Lumen`} />
+                  <Text text={`**Kontrastverhältnis**<br/>4.500.000:1`} />
+                  <Text text={`**Bildformat (nativ)**<br/>16:9`} />
+                  <Text
+                    text={`**Unterstützte Bildformate**<br/>16:9, 4:3, V-Stretch, Full, 21:9, 32:9, nativ, automatisch`}
+                  />
+                  <Text text={`**Horizontale Keystone-Korrektur**<br/>±30°`} />
+                  <Text text={`**Vertikale Keystone-Korrektur**<br/>±30°`} />
+                  <Text
+                    text={`**Horizontale Bildwiederholrate**<br/>15 kHz – 255 kHz`}
+                  />
+                  <Text
+                    text={`**Vertikale Bildwiederholrate**<br/>24 Hz – 240 Hz`}
+                  />
+                  <Text text={`**Bildhomogenität**<br/>95 %`} />
+                  <Text text={`**Projektionsgröße**<br/>80" – 300"`} />
+                  <Text text={`**Farbraum**<br/>96 % BT.2020, 98 % DCI-P3`} />
+                  <Text text={`**Farbtiefe**<br/>bis zu 12 Bit`} />
+                  <Text
+                    text={`**Bildmodi**<br/>Vivid, HDR, HLG, Cinema, Game, Reference, WCG, Bright, Dolby Vision (Bright, Dark, Vivid, Cinema), HDR10+, Golf Simulation, AI-PQ, 3D, Filmmaker Mode, IMAX Enhanced, ISF`}
+                  />
+                </Section>
+              </>
+            ),
+          },
+          {
+            question: "Lichtquellen-Spezifikationen",
+            children: (
+              <>
+                <Section
+                  spaceAfter="none"
+                  spaceBefore="none"
+                  backgroundColor="accent"
+                  width="full"
+                  content={{ mode: "tile", tileWidth: "default" }}
+                >
+                  <Text text={`**Lichtquelle**<br/>RGB-Tri-Laser`} />
+                  <Text
+                    text={`**Lebensdauer der Lichtquelle**<br/>bis zu 30.000 Stunden (Eco-Modus)`}
+                  />
+                </Section>
+              </>
+            ),
+          },
+          {
+            question: "Optische Spezifikationen",
+            children: (
+              <Section
+                spaceAfter="none"
+                spaceBefore="none"
+                backgroundColor="accent"
+                width="full"
+                content={{ mode: "tile", tileWidth: "default" }}
+              >
+                <Text text={`**Projektionsverhältnis**<br/>1,25:1 – 2,0:1`} />
+                <Text text={`**Projektionsabstand**<br/>2,20 m – 13,06 m`} />
+                <Text text={`**Objektiv-Zoom**<br/>1,6-fach`} />
+                <Text text={`**Zoomtyp**<br/>Motorisiert`} />
+                <Text text={`**Brennweite**<br/>18,72 mm – 29,59 mm`} />
+                <Text text={`**Lokale Verschiebung**<br/>0 (100 %)`} />
+                <Text
+                  text={`**Lens Shift**<br/>Vertikal ±55 %; Horizontal ±25 %`}
+                />
+              </Section>
+            ),
+          },
+          {
+            question: "Anschlüsse",
+            children: (
+              <Section
+                spaceAfter="none"
+                spaceBefore="none"
+                backgroundColor="accent"
+                width="full"
+                content={{ mode: "tile", tileWidth: "default" }}
+              >
+                <Text
+                  text={`**Eingänge**<br/>HDMI 2.1 ×1, HDMI 2.0 ×2 (davon einer mit ARC/eARC Out)`}
+                />
+                <Text
+                  text={`**Ausgänge**<br/>USB-A Power 5V/1,5A ×1, USB-A Power 5V/0,9A ×2, 3D Sync ×1, Audio 3,5 mm ×1, S/PDIF ×1`}
+                />
+                <Text
+                  text={`**Steuerung**<br/>RJ45 ×1, RS232 ×1, 12V Trigger ×2`}
+                />
+              </Section>
+            ),
+          },
+          {
+            question: "Allgemeine Spezifikationen",
+            children: (
+              <Section
+                spaceAfter="none"
+                spaceBefore="none"
+                backgroundColor="accent"
+                width="full"
+                content={{ mode: "tile", tileWidth: "default" }}
+              >
+                <Text text={`**Geräuschpegel (Standard)**<br/>25 dB`} />
+                <Text text={`**Geräuschpegel (Maximal)**<br/>28 dB`} />
+                <Text text={`**3D-Unterstützung**<br/>Full 3D`} />
+                <Text
+                  text={`**Sicherheitsmechanismen**<br/>Diebstahlsicherung, Kensington-Schloss, passwortgeschützte Schnittstelle`}
+                />
+                <Text
+                  text={`**OSD-Sprachen**<br/>27 Sprachen (u.a. Deutsch, Englisch, Französisch, Spanisch, Chinesisch, Türkisch, etc.)`}
+                />
+                <Text text={`**24-Stunden-Betrieb**<br/>Ja`} />
+                <Text text={`**360°-Projektion**<br/>Ja`} />
+                <Text
+                  text={`**Betriebsbedingungen**<br/>Temperatur: 0–40 °C (Toleranz ±2 °C), Höhe: max. 3.048 m (10.000 ft) bei 0–30 °C, Luftfeuchtigkeit: max. 80 % rF, nicht kondensierend`}
+                />
+                <Text
+                  text={`**Fernbedienung**<br/>Beleuchtete Fernbedienung`}
+                />
+                <Text
+                  text={`**Input Lag**<br/>≤8,5 ms (1080p/240Hz), ≤20 ms (4K/60Hz)`}
+                />
+                <Text
+                  text={`**Standardzubehör**<br/>Netzkabel, Fernbedienung, 2× AAA-Batterien, Kurzanleitung`}
+                />
+                <Text
+                  text={`**Unterstützte Audioformate (eARC)**<br/>LPCM, Dolby Digital, Dolby Digital Plus, Dolby TrueHD, DTS-M6, Dolby Atmos Pass-Through`}
+                />
+              </Section>
+            ),
+          },
+          {
+            question: "Internetverbindung",
+            children: (
+              <Section
+                spaceAfter="none"
+                spaceBefore="none"
+                backgroundColor="accent"
+                width="full"
+                content={{ mode: "tile", tileWidth: "default" }}
+              >
+                <Text text={`**LAN-Steuerung**<br/>Ja`} />
+              </Section>
+            ),
+          },
+          {
+            question: "Stromversorgung",
+            children: (
+              <Section
+                spaceAfter="none"
+                spaceBefore="none"
+                backgroundColor="accent"
+                width="full"
+                content={{ mode: "tile", tileWidth: "default" }}
+              >
+                <Text text={`**Stromverbrauch**<br/>AC 100–240 V, 50–60 Hz`} />
+                <Text text={`**Stromverbrauch (Standby)**<br/>≤0,5 W`} />
+                <Text
+                  text={`**Stromverbrauch (Minimum)**<br/>130 W (typisch), 163 W (maximal)`}
+                />
+                <Text
+                  text={`**Stromverbrauch (Maximum)**<br/>271 W (typisch), 326 W (maximal)`}
+                />
+              </Section>
+            ),
+          },
+          {
+            question: "Gewicht und Abmessungen",
+            children: (
+              <Section
+                spaceAfter="none"
+                spaceBefore="none"
+                backgroundColor="accent"
+                width="full"
+                content={{ mode: "tile", tileWidth: "default" }}
+              >
+                <Text
+                  text={`**Abmessungen (B × T × H)**<br/>486 × 432,5 × 185,5 mm / 19,1" × 17,0" × 7,3"`}
+                />
+                <Text text={`**Bruttogewicht**<br/>14,8 kg / 32,6 lbs`} />
+                <Text text={`**Nettogewicht**<br/>11,5 kg / 25,3 lbs`} />
+              </Section>
+            ),
+          },
+        ]}
       />
     </Section>
 
