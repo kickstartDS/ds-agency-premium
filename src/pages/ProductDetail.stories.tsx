@@ -88,6 +88,7 @@ Rüsten Sie Ihr Heimkino auf mit einem 4K-UHD-Tri-Laser-RGB-Projektor mit 5.000 
       content={{
         mode: "list",
       }}
+      transition="to-accent"
     >
       <Cta
         headline="5000 Lumen hohe Helligkeit – perfekt für Film-Marathons am Tag"
@@ -109,7 +110,7 @@ Rüsten Sie Ihr Heimkino auf mit einem 4K-UHD-Tri-Laser-RGB-Projektor mit 5.000 
         }}
       />
     </Section>
-    <Section width="full">
+    <Section spaceBefore="none" spaceAfter="none" width="full">
       <Hero
         textbox={false}
         invertText
