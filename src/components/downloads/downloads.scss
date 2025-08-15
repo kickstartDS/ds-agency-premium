@@ -7,13 +7,16 @@
   gap: var(--dsa-downloads--gap, var(--ks-spacing-stack-xs));
 
   .dsa-downloads-item {
+    --g-link--background: var(--dsa-downloads-item--background, transparent);
+    --g-link--color: var(--dsa-downloads-item__link--color, var(--ks-text-color-interface-interactive));
+    --g-link--color-hover: var(
+      --dsa-downloads-item__link--color_hover,
+      var(--ks-text-color-interface-interactive-hover)
+    );
+    --g-link--background-hover: var(--dsa-downloads-item--background-color_hover, var(--ks-color-fg-alpha-9));
     --g-link--text-decoration: none;
     --g-link--text-decoration-hover: none;
-    --g-link--color: var(--ks-text-color-interface-interactive);
-    --g-link--color-hover: var(--ks-text-color-interface-interactive);
-    --g-link--border-radius: var(--ks-border-radius-control);
-    --g-link--background: var(--ks-background-color-default);
-    --g-link--background-hover: var(--ks-background-color-default);
+    --g-link--border-radius: 0;
 
     position: relative;
     display: flex;
@@ -27,16 +30,10 @@
 
     &:hover {
       cursor: pointer;
-      background-color: var(--dsa-downloads-item--background-color_hover, var(--ks-background-color-accent));
 
       @media (min-width: 992px) {
         .dsa-downloads-item__button {
           span {
-            background: linear-gradient(
-              270deg,
-              var(--dsa-downloads-item--background-color_hover, var(--ks-background-color-accent)) 80%,
-              transparent
-            );
             opacity: 1;
             transform: translateX(0%);
           }

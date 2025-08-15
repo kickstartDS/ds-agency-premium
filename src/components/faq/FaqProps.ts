@@ -10,20 +10,11 @@
  *
  * @minItems 1
  */
-export type Questions = [
-  {
-    question: Question;
-    answer: Answer;
-  },
-  ...{
-    question: Question;
-    answer: Answer;
-  }[]
-];
+export type Questions = [Question, ...Question[]];
 /**
  * The question
  */
-export type Question = string;
+export type Question1 = string;
 /**
  * The answer to the question
  */
@@ -34,4 +25,8 @@ export type Answer = string;
  */
 export interface FaqProps {
   questions: Questions;
+}
+export interface Question {
+  question: Question1;
+  answer?: Answer;
 }
