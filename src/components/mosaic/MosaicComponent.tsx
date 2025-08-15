@@ -32,6 +32,7 @@ export const MosaicContextDefault = forwardRef<
               url: tile?.button?.url,
               label: tile?.button?.label,
               icon: tile?.button?.icon,
+              variant: "primary",
             },
           }),
         }}

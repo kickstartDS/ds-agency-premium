@@ -15,6 +15,7 @@ import { TextField } from "@kickstartds/form/lib/text-field";
 import { Button } from "../components/button/ButtonComponent";
 import { SplitWeighted } from "../components/split-weighted/SplitWeightedComponent";
 import { Mosaic } from "../components/mosaic/MosaicComponent";
+import { Downloads } from "../components/downloads/DownloadsComponent";
 
 const Page = () => (
   <>
