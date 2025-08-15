@@ -1,9 +1,15 @@
 .dsa-downloads {
   --dsa-downloads--gap: var(--ks-spacing-stack-xs);
 
+  --dsa-downloads-item--background: transparent;
+  --dsa-downloads-item--background-hover: var(--ks-color-fg-alpha-9);
+
+  --dsa-downloads-item__link--color: var(--ks-text-color-interface-interactive);
+  --dsa-downloads-item__link--color_hover: var(--ks-text-color-interface-interactive-hover);
+
   --dsa-downloads-item--transition: var(--ks-transition-hover);
   --dsa-downloads-item__gap: var(--ks-spacing-inline-s);
-  --dsa-downloads-item--background-color_hover: var(--ks-background-color-accent);
+  --dsa-downloads-item--background-color_hover: var(--ks-color-fg-alpha-9);
   --dsa-downloads-item--padding: var(--ks-spacing-inset-xs);
   --dsa-downloads-item--border-radius: var(--ks-border-radius-control);
 
