@@ -34,11 +34,6 @@
       @media (min-width: 992px) {
         .dsa-downloads-item__button {
           span {
-            background: linear-gradient(
-              270deg,
-              var(--dsa-downloads-item--background-color_hover, var(--ks-background-color-accent)) 80%,
-              transparent
-            );
             opacity: 1;
             transform: translateX(0%);
           }
