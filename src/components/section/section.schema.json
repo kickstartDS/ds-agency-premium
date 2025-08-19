@@ -16,7 +16,14 @@
       "type": "string",
       "title": "Style",
       "description": "Style of background",
-      "enum": ["default", "framed", "deko"],
+      "enum": [
+        "default",
+        "framed",
+        "shine-left",
+        "shine-right",
+        "carbon",
+        "stripe"
+      ],
       "default": "default"
     },
     "backgroundColor": {

@@ -38,11 +38,15 @@
 }
 
 .l-section.dsa-section {
+  --dsa-section--background-color: var(--dsa-section--background-color_default, var(--ks-color-bg));
+
   background-image: var(--dsa-section--background-image);
-  background-color: var(--dsa-section--background-color_default, var(--ks-color-bg));
+  background-color: var(--dsa-section--background-color, var(--ks-color-bg));
   position: relative;
 
   .l-section__container {
+    position: relative;
+    z-index: 2;
     font: var(--ks-font-copy-m);
   }
 
@@ -59,11 +63,11 @@
   }
 
   &.l-section--accent {
-    background-color: var(--dsa-section--background-color_accent, var(--ks-background-color-accent));
+    --dsa-section--background-color: var(--dsa-section--background-color_accent, var(--ks-background-color-accent));
   }
 
   &.l-section--bold {
-    background-color: var(--dsa-section--background-color_bold, var(--ks-background-color-bold));
+    --dsa-section--background-color: var(--dsa-section--background-color_bold, var(--ks-background-color-bold));
   }
 
   &.dsa-section--transition-to-accent {
@@ -106,35 +110,93 @@
     padding-top: calc(var(--dsa-header--height) + var(--dsa-section--space-small));
   }
 
-  &-style--framed {
-    --frame-background-color: var(--ks-background-color-accent);
+  &--style {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
 
-    .l-section__container--content {
-      .l-section__content {
-        padding: var(--dsa-section--space_default);
-        background-color: var(--frame-background-color, var(--ks-background-color-default));
-        border-radius: var(--ks-border-radius-surface);
+    &--framed {
+      --frame-background-color: var(--ks-background-color-accent);
+
+      .l-section__container--content {
+        .l-section__content {
+          padding: var(--dsa-section--space_default);
+          background-color: var(--frame-background-color, var(--ks-background-color-default));
+          border-radius: var(--ks-border-radius-surface);
+        }
+      }
+
+      &.l-section--accent,
+      &.l-section--bold {
+        --frame-background-color: var(--ks-background-color-default);
       }
     }
 
-    &.l-section--accent,
-    &.l-section--bold {
-      --frame-background-color: var(--ks-background-color-default);
+    &-shine {
+      &-left {
+        &::before {
+          background-image: var(
+            --dsa-section_shine-left--background-image,
+            radial-gradient(70% 150% at 20% 50%, var(--ks-color-fg-inverted), var(--ks-color-bg-inverted-alpha-7))
+          );
+        }
+      }
+
+      &-right {
+        &::before {
+          background-image: var(
+            --dsa-section_shine-right--background-image,
+            radial-gradient(70% 150% at 80% 50%, var(--ks-color-fg-inverted-alpha-8-base), var(--ks-color-bg))
+          );
+        }
+      }
     }
-  }
 
-  &-style--deko {
-    background-image: var(
-      --dsa-section_deko--background-image,
-      radial-gradient(180deg, transparent 0%, var(--ks-background-color-default) 100%)
-    );
-  }
+    &-carbon {
+      &::before {
+        background:
+          radial-gradient(var(--ks-color-fg-inverted-alpha-7) 15%, transparent 16%) 0 0,
+          radial-gradient(var(--ks-color-fg-inverted-alpha-7) 15%, transparent 16%) 8px 8px,
+          radial-gradient(var(--ks-color-fg-alpha-9) 15%, transparent 20%) 0 1px,
+          radial-gradient(var(--ks-color-fg-alpha-9) 15%, transparent 20%) 8px 9px;
+        background-size: 16px 16px;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: linear-gradient(180deg, var(--ks-color-fg-alpha-9) 0%, transparent 5px),
+          linear-gradient(180deg, var(--ks-color-fg-alpha-9) 0%, transparent 30px),
+          linear-gradient(180deg, transparent calc(100% - 30px), var(--ks-color-fg-alpha-9) 100%),
+          linear-gradient(180deg, transparent calc(100% - 5px), var(--ks-color-fg-alpha-9) 100%),
+          radial-gradient(100% 100% at 50% 50%, var(--ks-color-bg), var(--ks-color-bg-to-fg-1));
+      }
+    }
 
-  &-style--colorful {
-    background-image: var(
-      --dsa-section_colorful--background-image,
-      linear-gradient(145deg, var(--ks-color-primary) 30%, #4aaea9 100%)
-    );
+    &-stripe {
+      &::before {
+        background-image: linear-gradient(
+            45deg,
+            transparent 5%,
+            var(--ks-color-bg-inverted-alpha-8) 5%,
+            var(--ks-color-bg-inverted-alpha-8) 18%,
+            transparent 18%
+          ),
+          linear-gradient(180deg, transparent calc(100% - 30px), var(--ks-color-fg-alpha-9) 100%),
+          linear-gradient(180deg, transparent calc(100% - 5px), var(--ks-color-fg-alpha-9) 100%);
+      }
+    }
   }
 
   &--spotlight {

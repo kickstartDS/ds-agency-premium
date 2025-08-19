@@ -45,43 +45,51 @@
       "examples": [
         [
           {
-            "label": "Active Item",
+            "label": "Fahrzeugsuche",
             "url": "#",
             "active": true
           },
           {
-            "label": "Navigation Item",
-            "url": "#"
-          },
-          {
-            "label": "Dropdown",
+            "label": "Marken",
             "url": "#",
             "items": [
               {
-                "label": "Level 2 Item",
+                "label": "Nissan",
                 "url": "#"
               },
               {
-                "label": "Active Item",
+                "label": "Kia",
                 "active": true,
                 "url": "#"
               },
               {
-                "label": "An Item with a longer Label",
+                "label": "Maserati",
                 "url": "#"
               },
               {
-                "label": "And One last one",
+                "label": "Corvette",
                 "url": "#"
               }
             ]
           },
           {
-            "label": "One more Item",
+            "label": "Standorte",
             "url": "#"
           },
           {
-            "label": "Last Item",
+            "label": "Bonusprogramm",
+            "url": "#"
+          },
+          {
+            "label": "News",
+            "url": "#"
+          },
+          {
+            "label": "Jobs",
+            "url": "#"
+          },
+          {
+            "label": "Kontakt",
             "url": "#"
           }
         ]

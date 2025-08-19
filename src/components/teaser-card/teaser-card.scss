@@ -90,13 +90,13 @@
   .dsa-teaser-card__label {
     position: absolute;
     z-index: 1;
-    top: 0;
-    right: 0;
+    top: var(--ks-spacing-inset-xs);
+    right: var(--ks-spacing-inset-xs);
     border-radius: var(--dsa-teaser-card__label--border-radius);
     border: var(--dsa-teaser-card__label--border, 0);
     pointer-events: initial;
     padding: var(--dsa-teaser-card__label--padding);
-    transform: translate(0.5em, -50%);
+
     font: var(--dsa-teaser-card__label--font);
     text-align: center;
     font-weight: var(--dsa-teaser-card__label--font-weight);

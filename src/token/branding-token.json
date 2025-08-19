@@ -1,13 +1,13 @@
 {
   "color": {
-    "primary": "#3065C0",
-    "primary-inverted": "#3065C0",
+    "primary": "#c3002f",
+    "primary-inverted": "#c41631",
     "background": "#fff",
-    "background-inverted": "#0F203E",
-    "foreground": "#06081f",
+    "background-inverted": "#202020",
+    "foreground": "#000",
     "foreground-inverted": "#fff",
-    "link": "#3065C0",
-    "link-inverted": "#98b2e0",
+    "link": "#c3002f",
+    "link-inverted": "#c3002f",
     "positive": "#23831B",
     "positive-inverted": "#6EDB64",
     "informative": "#00718F",
@@ -22,12 +22,12 @@
       "family": "Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
       "font-size": 16,
       "line-height": 1.15,
-      "scale-ratio": 1.25,
+      "scale-ratio": 1.35,
       "bp-factor": {
         "phone": 1,
         "tablet": 1.125,
         "laptop": 1.25,
-        "desktop": 1.35
+        "desktop": 1.375
       }
     },
     "copy": {

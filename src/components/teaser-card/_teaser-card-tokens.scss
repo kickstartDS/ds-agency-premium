@@ -7,26 +7,28 @@
   --dsa-teaser-card--border-width: var(--ks-border-width-default);
   --dsa-teaser-card--border-color: var(--ks-border-color-card-interactive);
   --dsa-teaser-card--border-color_hover: var(--ks-border-color-card-interactive-hover);
-  --dsa-teaser-card--border-radius: var(--ks-border-radius-card) var(--ks-border-radius-card)
-    var(--ks-border-radius-card) calc(var(--ks-border-radius-card) * 3);
+  --dsa-teaser-card--border-radius: var(--ks-border-radius-card);
 
-  --dsa-teaser-card--shadow: none;
-  --dsa-teaser-card--shadow_hover: none;
+  --dsa-teaser-card--shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 2px 4px rgba(0, 0, 0, 0.02),
+    0px 4px 9px rgba(0, 0, 0, 0.03), 0px 6px 15px rgba(0, 0, 0, 0.04), 0px 10px 24px rgba(0, 0, 0, 0.05);
 
-  --dsa-teaser-card__image--transform_hover: scale(1.05);
-  --dsa-teaser-card__image--transition: transform var(--ks-transition-hover);
+  --dsa-teaser-card--shadow_hover: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 2px 4px rgba(0, 0, 0, 0.02),
+    0px 4px 9px rgba(0, 0, 0, 0.03), 0px 6px 15px rgba(0, 0, 0, 0.04), 0px 10px 24px rgba(0, 0, 0, 0.05);
+
+  --dsa-teaser-card__image--transform_hover: scale(1.1);
+  --dsa-teaser-card__image--transition: transform var(--ks-transition-fade);
 
   --dsa-teaser-card__body--gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
 
   --dsa-teaser-card__topic--color: var(--dsa-topic--color);
 
-  --dsa-teaser-card__label--font: var(--ks-font-interface-s);
+  --dsa-teaser-card__label--font: var(--ks-font-interface-xs);
   --dsa-teaser-card__label--font-weight: var(--ks-font-weight-semi-bold);
-  --dsa-teaser-card__label--color: var(--ks-text-color-primary);
-  --dsa-teaser-card__label--background-color: var(--ks-background-color-bold);
+  --dsa-teaser-card__label--color: var(--dsa-text-color-on-primary);
+  --dsa-teaser-card__label--background-color: var(--ks-background-color-primary);
   --dsa-teaser-card__label--padding: 0.5em 1em;
   --dsa-teaser-card__label--border-radius: var(--ks-border-radius-pill);
-  --dsa-teaser-card__label--border: 1px solid var(--ks-border-color-interface);
+  --dsa-teaser-card__label--border: 0;
 
   --dsa-teaser-card__button--font: var(--ks-font-interface-m);
 
@@ -38,7 +40,7 @@
 
   --dsa-teaser-card__copy--font: var(--ks-font-copy-s);
   --dsa-teaser-card__copy--color: var(--ks-text-color-default);
-  --dsa-teaser-card__copy--margin-top: 0.5em;
+  --dsa-teaser-card__copy--margin-top: 0.85em;
 
   --dsa-teaser-card__button--font: var(--ks-font-interface-s);
 

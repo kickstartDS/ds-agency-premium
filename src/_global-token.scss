@@ -36,7 +36,7 @@
   --dsa-link--text-decoration_hover: none;
 
   // Highlight typography (e.g., gradients in text)
-  --dsa-typo--highlight: var(--ks-color-primary);
+  --dsa-typo--highlight: var(--ks-text-color-primary);
 
   // Outer padding for content
   --dsa-content--horizontal-spacing: var(--ks-spacing-inset-l);
@@ -68,7 +68,7 @@
   }
 
   @media (min-width: 62em) {
-    --dsa-logo--height: 2.5rem;
+    --dsa-logo--height: 3.5rem;
   }
 
   // Header height calculation
