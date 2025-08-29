@@ -9,6 +9,7 @@ import schema from "./cookie-consent.schema.dereffed.json";
 
 import { define } from "@kickstartds/core/lib/component";
 import { configureConsentManager, createConsentManagerStore } from "c15t";
+import { baseTranslations } from "@c15t/translations";
 import { Button } from "../button/ButtonComponent";
 import CookieConsentC15t from "./C15t.client";
 
@@ -163,6 +164,10 @@ export const Banner: Story = {
 const c15cStore = createConsentManagerStore(
   configureConsentManager({ mode: "offline" }),
   {
+    initialTranslationConfig: {
+      translations: baseTranslations,
+      disableAutoLanguageSwitch: false,
+    },
     ignoreGeoLocation: true, // Useful for development to always view the banner.
   }
 );

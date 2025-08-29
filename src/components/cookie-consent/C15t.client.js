@@ -1,11 +1,27 @@
 import { define } from "@kickstartds/core/lib/component";
+import { detectBrowserLanguage } from "c15t";
 import CookieConsent from "./CookieConsent.client.js";
 
-const translate = (elements, state) => {
-  const translations =
-    state.translationConfig.translations[
-      state.translationConfig.defaultLanguage
-    ];
+const customTranslations = {
+  de: {
+    accept: "Akzeptieren",
+    reject: "Ablehnen",
+    required: "Immer aktiv",
+    settings: "Cookies verwalten",
+  },
+  en: {
+    accept: "Accept",
+    reject: "Reject",
+    required: "Always Active",
+    settings: "Cookie Preferences",
+  },
+};
+
+const translate = (elements, translationConfig) => {
+  const defaultLanguage = translationConfig.defaultLanguage;
+  const translations = translationConfig.translations[defaultLanguage];
+  const customTranslation =
+    customTranslations[defaultLanguage] || customTranslations.en;
 
   // Notice
   elements.notice.title.textContent = translations.cookieBanner.title;
@@ -36,7 +52,23 @@ const translate = (elements, state) => {
         ".dsa-cookie-consent-dialogue__option-description"
       ).textContent = translation.description;
     }
+
+    const requiredLabel = option.querySelector(
+      ".dsa-cookie-consent-dialogue__label"
+    );
+    if (requiredLabel) requiredLabel.textContent = customTranslation.required;
   }
+
+  for (const element of elements.dialog.form.elements) {
+    if (element.type === "radio") {
+      element.nextElementSibling.nextElementSibling.textContent =
+        customTranslation[element.value];
+    }
+  }
+
+  // settings
+  elements.settings.button.firstElementChild.textContent =
+    customTranslation.settings;
 };
 
 export default class CookieConsentC15t extends CookieConsent {
@@ -76,7 +108,7 @@ export default class CookieConsentC15t extends CookieConsent {
       }
     };
     const unsub = store.subscribe(update);
-    translate(this.elements, initialState);
+    translate(this.elements, initialState.translationConfig);
     update(initialState);
 
     const acceptCustom = () => {
