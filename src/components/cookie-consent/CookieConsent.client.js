@@ -17,7 +17,6 @@ export default class CookieConsent extends Component {
       },
       dialog: {
         wrapper: $(".dsa-cookie-consent-dialogue"),
-        overlay: $(".dsa-cookie-consent-overlay"),
         title: $(".dsa-cookie-consent-dialogue__title .dsa-headline__inner"),
         description: $(".dsa-cookie-consent-dialogue__description"),
         closeBtn: $(".dsa-cookie-consent-dialogue__close"),
@@ -34,18 +33,17 @@ export default class CookieConsent extends Component {
     });
 
     const showDialog = () => {
-      elements.dialog.overlay.removeAttribute("hidden");
-      elements.dialog.wrapper.removeAttribute("hidden");
-      elements.dialog.wrapper.setAttribute("aria-hidden", "false");
+      elements.dialog.wrapper.showModal();
     };
     const closeDialog = () => {
-      elements.dialog.overlay.setAttribute("hidden", "");
-      elements.dialog.wrapper.setAttribute("hidden", "");
-      elements.dialog.wrapper.setAttribute("aria-hidden", "true");
+      elements.dialog.wrapper.close();
     };
     const closeDialogAndReset = () => {
       closeDialog();
       elements.dialog.form.reset();
+    };
+    const onBackdropClick = (event) => {
+      if (event.target === elements.dialog.wrapper) closeDialogAndReset();
     };
 
     const activateAll = () => {
@@ -62,10 +60,6 @@ export default class CookieConsent extends Component {
         }
       }
     };
-    const onSubmit = (event) => {
-      event.preventDefault();
-      closeDialog();
-    };
 
     elements.notice.customizeBtn.addEventListener("click", showDialog);
     elements.settings.button.addEventListener("click", showDialog);
@@ -74,7 +68,7 @@ export default class CookieConsent extends Component {
 
     elements.dialog.activateAllBtn.addEventListener("click", activateAll);
     elements.dialog.deactivateAllBtn.addEventListener("click", deactivateAll);
-    elements.dialog.form.addEventListener("submit", onSubmit);
+    elements.dialog.wrapper.addEventListener("click", onBackdropClick);
 
     window._ks.radio.on(
       CookieConsent.identifier + ".showNotice",
@@ -97,7 +91,7 @@ export default class CookieConsent extends Component {
         "click",
         deactivateAll
       );
-      elements.dialog.form.removeEventListener("submit", onSubmit);
+      elements.dialog.wrapper.removeEventListener("click", onBackdropClick);
     });
   }
 

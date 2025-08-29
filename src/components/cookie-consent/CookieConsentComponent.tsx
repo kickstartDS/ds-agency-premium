@@ -69,7 +69,7 @@ export const CookieConsentContextDefault = forwardRef<
           hidden
         />
 
-        <div className="dsa-cookie-consent-dialogue" hidden aria-hidden>
+        <dialog className="dsa-cookie-consent-dialogue">
           <div className="dsa-cookie-consent-dialogue__header">
             <Headline
               spaceAfter="minimum"
@@ -83,9 +83,10 @@ export const CookieConsentContextDefault = forwardRef<
               className="dsa-cookie-consent-dialogue__close"
               icon="close"
               label={""}
+              autoFocus
             />
           </div>
-          <form className="dsa-cookie-consent-dialogue__form">
+          <form className="dsa-cookie-consent-dialogue__form" method="dialog">
             <div className="dsa-cookie-consent-dialogue__content">
               <RichText
                 className="dsa-cookie-consent-dialogue__description"
@@ -170,8 +171,7 @@ export const CookieConsentContextDefault = forwardRef<
               />
             </div>
           </form>
-        </div>
-        <div className="dsa-cookie-consent-overlay" hidden />
+        </dialog>
       </div>
     );
   }

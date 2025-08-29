@@ -109,26 +109,24 @@
 }
 
 .dsa-cookie-consent-dialogue {
-  border-radius: var(--dsa-cookie-consent-dialogue--border-radius, var(--ks-border-radius-card));
-  border: var(
-    --dsa-cookie-consent-dialogue--border,
-    var(--ks-border-color-interface) solid var(--ks-border-width-default)
-  );
-  box-shadow: var(--dsa-cookie-consent-dialogue--box-shadow, var(--ks-box-shadow-card));
-  background-color: var(--dsa-cookie-consent-dialogue--background-color, var(--ks-background-color-default));
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - calc(var(--dsa-cookie-consent-dialogue--spacing-horizontal, var(--ks-spacing-inset-xs)) * 2));
-  max-width: var(--dsa-cookie-consent-dialogue--max-width, var(--dsa-tile--width_largest));
-  z-index: 1000;
-  max-height: calc(
-    var(--dsa-cookie-consent-dialogue--max-height, 100%) -
-      calc(var(--dsa-cookie-consent-dialogue--spacing-vertical, var(--ks-spacing-inset-xs)) * 2)
-  );
+  &[open] {
+    border-radius: var(--dsa-cookie-consent-dialogue--border-radius, var(--ks-border-radius-card));
+    border: var(
+      --dsa-cookie-consent-dialogue--border,
+      var(--ks-border-color-interface) solid var(--ks-border-width-default)
+    );
+    box-shadow: var(--dsa-cookie-consent-dialogue--box-shadow, var(--ks-box-shadow-card));
+    background-color: var(--dsa-cookie-consent-dialogue--background-color, var(--ks-background-color-default));
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: calc(100% - calc(var(--dsa-cookie-consent-dialogue--spacing-horizontal, var(--ks-spacing-inset-xs)) * 2));
+    max-width: var(--dsa-cookie-consent-dialogue--max-width, var(--dsa-tile--width_largest));
+    max-height: calc(
+      var(--dsa-cookie-consent-dialogue--max-height, 100%) -
+        calc(var(--dsa-cookie-consent-dialogue--spacing-vertical, var(--ks-spacing-inset-xs)) * 2 )
+    );
+  }
 
   &__header {
     padding-top: var(--dsa-cookie-consent-dialogue__block--padding-vertical, var(--ks-spacing-inset-m));
@@ -247,15 +245,8 @@
       flex-direction: row;
     }
   }
-}
 
-.dsa-cookie-consent-overlay {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  background-color: var(--dsa-cookie-consent-overlay--background-color, var(--dsa-overlay--background-color));
+  &::backdrop {
+    background-color: var(--dsa-cookie-consent-overlay--background-color, var(--dsa-overlay--background-color));
+  }
 }
