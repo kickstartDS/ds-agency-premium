@@ -5,10 +5,20 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {HeadlineProps} from "../headline/HeadlineProps";
+import type {SearchBarProps} from "../search-bar/SearchBarProps";
 import type {SearchFilterProps} from "../search-filter/SearchFilterProps";
 import type {SearchResultProps} from "../search-result/SearchResultProps";
 
 export interface SearchProps {
+  /**
+   * Referenced component HeadlineProps
+   */
+  headline?: HeadlineProps;
+  /**
+   * Referenced component SearchBarProps
+   */
+  searchBar?: SearchBarProps;
   /**
    * Referenced component SearchFilterProps
    */

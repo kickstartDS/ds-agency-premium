@@ -4,6 +4,12 @@
   "title": "Search",
   "type": "object",
   "properties": {
+    "headline": {
+      "$ref": "http://schema.mydesignsystem.com/headline.schema.json"
+    },
+    "searchBar": {
+      "$ref": "http://schema.mydesignsystem.com/search-bar.schema.json"
+    },
     "searchFilter": {
       "$ref": "http://schema.mydesignsystem.com/search-filter.schema.json"
     },

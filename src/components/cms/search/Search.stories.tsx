@@ -27,6 +27,11 @@ export const Search: Story = {
     },
   },
   args: pack({
+    headline: {
+      text: "Search",
+      level: "h1",
+      style: "h1",
+    },
     searchFilter: {
       title: "Search Filters",
       categories: [

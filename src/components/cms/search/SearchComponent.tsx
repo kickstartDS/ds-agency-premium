@@ -7,15 +7,35 @@ import { SearchFilter } from "../../search-filter/SearchFilterComponent";
 import { SearchResult } from "../../search-result/SearchResultComponent";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Pagination } from "../../pagination/PaginationComponent";
+import { SearchBar } from "../../search-bar/SearchBarComponent";
+import { Headline } from "../../headline/HeadlineComponent";
 
 export type { SearchProps };
 
 export const Search: FC<PropsWithChildren<SearchProps>> = ({
+  headline,
+  searchBar,
   searchFilter,
   searchResults,
 }) => (
   <>
-    <Section width="wide">
+    <Section
+      content={{
+        mode: "list",
+        gutter: "none",
+      }}
+      spaceAfter="small"
+    >
+      <Headline {...headline} />
+      <SearchBar {...searchBar} />
+    </Section>
+    <Section
+      width="wide"
+      spaceBefore="small"
+      content={{
+        mode: "list",
+      }}
+    >
       <SplitWeighted
         verticalAlign="sticky"
         mainLayout={{
