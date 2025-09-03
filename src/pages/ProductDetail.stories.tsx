@@ -12,7 +12,6 @@ import { Downloads } from "../components/downloads/DownloadsComponent";
 import { Gallery } from "../components/gallery/GalleryComponent";
 import { Cta } from "../components/cta/CtaComponent";
 import { Faq } from "../components/faq/FaqComponent";
-import { Table } from "@kickstartds/base/lib/table";
 
 const Page = () => (
   <>
@@ -30,9 +29,9 @@ const Page = () => (
       }}
     >
       <Slider arrows nav>
-        <Picture src="/optoma/beamer.png" />
-        <Picture src="/optoma/beamer.png" />
-        <Picture src="/optoma/beamer.png" />
+        <Picture src="/optoma/product-4.png" />
+        <Picture src="/optoma/product-1.png" />
+        <Picture src="/optoma/product-2.png" />
       </Slider>
       <Text
         text={`## Ultraheller professioneller WUXGA-Laserprojektor
@@ -85,21 +84,18 @@ Rüsten Sie Ihr Heimkino auf mit einem 4K-UHD-Tri-Laser-RGB-Projektor mit 5.000 
         ]}
       />
     </Section>
-    <Section
-      width="wide"
-      content={{
-        mode: "list",
-      }}
-      transition="to-accent"
-    >
+    <Section width="wide">
       <Cta
         headline="5000 Lumen hohe Helligkeit – perfekt für Film-Marathons am Tag"
         text="Die Helligkeit von 5000 Lumen sorgt für beeindruckende Bilder, selbst in Räumen mit Umgebungslicht. Egal ob Sie ein Film-Marathon am Tag veranstalten oder Live-Sport schauen – genießen Sie lebendige Farben und gestochen scharfe Details ohne ausgewaschene Bilder."
         image={{
           src: "/optoma/square-1.jpg",
           alt: "Home Cinema",
+          padding: false,
         }}
       />
+    </Section>
+    <Section width="wide">
       <Cta
         order={{
           desktopImageLast: false,
@@ -109,10 +105,11 @@ Rüsten Sie Ihr Heimkino auf mit einem 4K-UHD-Tri-Laser-RGB-Projektor mit 5.000 
         image={{
           src: "/optoma/square-2.jpg",
           alt: "Gaming Setup",
+          padding: false,
         }}
       />
     </Section>
-    <Section spaceBefore="none" spaceAfter="none" width="full">
+    <Section spaceAfter="none" width="full">
       <Hero
         textbox={false}
         invertText
