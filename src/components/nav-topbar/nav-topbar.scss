@@ -118,4 +118,23 @@
   .dsa-nav-topbar__label:not(.dsa-nav-topbar__link) {
     cursor: default;
   }
+
+  .dsa-nav-topbar__actions {
+    margin-left: var(--ks-spacing-inline-xs);
+    padding-left: var(--ks-spacing-inline-xs);
+    border-left: var(--ks-border-color-default) var(--ks-border-width-default) solid;
+    display: flex;
+    align-items: center;
+
+    .dsa-nav-topbar__button {
+      font-size: var(--dsa-nav-topbar__label--font-size);
+      padding: var(--dsa-nav-topbar__label--padding);
+      color: var(--dsa-nav-topbar__label--color);
+      transition: color var(--ks-transition-hover);
+
+      &:hover {
+        color: var(--dsa-nav-topbar__label--color_hover);
+      }
+    }
+  }
 }

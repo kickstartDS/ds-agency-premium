@@ -62,6 +62,14 @@ export const NavTopbarContextDefault = forwardRef<
             </li>
           );
         })}
+        <div className="dsa-nav-topbar__actions">
+          <button className="dsa-nav-topbar__button dsa-nav-topbar__search">
+            <Icon icon={"search"} />
+          </button>
+          <button className="dsa-nav-topbar__button dsa-nav-topbar__lang">
+            <Icon icon={"globe"} />
+          </button>
+        </div>
       </ul>
     </nav>
   ) : null

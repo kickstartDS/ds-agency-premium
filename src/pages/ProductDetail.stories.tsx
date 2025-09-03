@@ -390,17 +390,20 @@ Rüsten Sie Ihr Heimkino auf mit einem 4K-UHD-Tri-Laser-RGB-Projektor mit 5.000 
             name: "Gebrauchsanleitung",
             size: "2.5 MB",
             url: "#",
+            previewImage: "/optoma/downloads/gebrauchsanleitung.png",
           },
           {
             format: "PDF",
             name: "Datenblatt",
+            previewImage: "/optoma/downloads/datenblatt.png",
             size: "3.2 MB",
             url: "#",
           },
           {
             format: "PDF",
-            name: "Linsen Informationen",
+            name: "CAD",
             size: "20 KB",
+            previewImage: "/optoma/downloads/cad.png",
             url: "#",
           },
           {
