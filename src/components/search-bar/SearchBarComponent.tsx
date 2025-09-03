@@ -30,6 +30,7 @@ export const SearchBarContextDefault = forwardRef<
           type="search"
           placeholder={placeholder || "Search..."}
           className="dsa-search-bar__input"
+          autoComplete="off"
         />
         <Icon icon={"search"} />
       </div>
