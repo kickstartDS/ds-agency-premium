@@ -45,16 +45,31 @@
       "examples": [
         [
           {
-            "label": "Active Item",
+            "label": "Beamer",
             "url": "#",
-            "active": true
+            "active": true,
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
           },
           {
-            "label": "Navigation Item",
-            "url": "#"
-          },
-          {
-            "label": "Dropdown",
+            "label": "Interaktive Displays",
             "url": "#",
             "items": [
               {
@@ -77,12 +92,142 @@
             ]
           },
           {
-            "label": "One more Item",
-            "url": "#"
+            "label": "Professional Displays",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
           },
           {
-            "label": "Last Item",
-            "url": "#"
+            "label": "LED Displays",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
+          },
+          {
+            "label": "Lösungen",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
+          },
+          {
+            "label": "Zubehör",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
+          },
+          {
+            "label": "Über Optoma",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
+          },
+          {
+            "label": "Support",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
           }
         ]
       ]

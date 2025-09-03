@@ -1,12 +1,12 @@
 .dsa-nav-dropdown {
-  --dsa-nav-dropdown--padding: var(--ks-spacing-xxs) var(--ks-spacing-xxs) var(--ks-spacing-m) var(--ks-spacing-xxs);
+  --dsa-nav-dropdown--padding: var(--ks-spacing-m) var(--ks-spacing-m) var(--ks-spacing-m) var(--ks-spacing-m);
   --dsa-nav-dropdown--background: var(--ks-background-color-default);
 
   &[ks-inverted="true"] {
     --dsa-nav-dropdown--background: var(--ks-color-fg-inverted);
   }
 
-  --dsa-nav-dropdown--border-radius: var(--ks-border-radius-card);
+  --dsa-nav-dropdown--border-radius: calc(var(--ks-border-radius-card) * 1);
   --dsa-nav-dropdown--box-shadow: var(--ks-box-shadow-card);
   --dsa-nav-dropdown--border: 1px solid var(--ks-border-color-card);
   --dsa-nav-dropdown--min-width: 14em;
@@ -14,13 +14,13 @@
   --dsa-nav-dropdown__label--color: var(--ks-color-fg);
   --dsa-nav-dropdown__label--color_hover: var(--ks-text-color-interface-interactive-hover);
   --dsa-nav-dropdown__label--color_active: var(--ks-text-color-interface-interactive-active);
-  --dsa-nav-dropdown__label--background-color_hover: var(--ks-color-fg-alpha-8);
-  --dsa-nav-dropdown__label--background-color_active: unset;
+  --dsa-nav-dropdown__label--background-color_hover: transparent;
+  --dsa-nav-dropdown__label--background-color_active: transparent;
   --dsa-nav-dropdown__label--border-radius: var(--ks-border-radius-control);
   --dsa-nav-dropdown__label--font: var(--ks-font-interface-s);
   --dsa-nav-dropdown__label--font-family: var(--ks-font-family-display);
   --dsa-nav-dropdown__label--font-weight: var(--ks-font-weight-semi-bold);
   --dsa-nav-dropdown__label--font-weight_active: var(--ks-font-weight-bold);
-  --dsa-nav-dropdown__label--padding: 0.45em 0.75em;
+  --dsa-nav-dropdown__label--padding: 0.45em 0em;
   --dsa-nav-dropdown__label_dimmed--opacity: 1;
 }
