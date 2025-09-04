@@ -31,10 +31,10 @@ export const Default: Story = {
 [...] register now for the **AI Conference** to secure your spot
 [...] highlights from last year’s **AI Conference** included keynote speeches on machine learning
 [...] find out more about the **AI Conference** agenda and speakers`,
-    link: {
-      url: "https://www.example.com/ai-conference-2023",
-      label: "Read more",
+    previewImage: {
+      src: "/img/full-shot-different-people-working-together.png",
     },
+    url: "https://www.example.com/ai-conference-2023",
     ariaLabel: "Search Result: AI Conference 2023",
   }),
 };

@@ -5,22 +5,35 @@ import { Link } from "@kickstartds/base/lib/link";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { deepMergeDefaults } from "../helpers";
 import defaults from "./SearchResultDefaults";
+import classnames from "classnames";
+import { Picture } from "@kickstartds/base/lib/picture";
 
 export type { SearchResultProps };
 
 export const SearchResultContextDefault = forwardRef<
   HTMLAnchorElement,
   SearchResultProps
->(({ title, text, url, showLink, ariaLabel }, ref) => (
+>(({ title, previewImage, text, url, showLink, ariaLabel }, ref) => (
   <Link
     aria-label={ariaLabel}
     href={url}
-    className="dsa-search-result"
+    className={classnames("dsa-search-result", {
+      "dsa-search-result--image-large": previewImage?.large,
+    })}
     ref={ref}
   >
-    <span className="dsa-search-result__title">{title}</span>
-    <RichText text={text} className="dsa-search-result__text" />
-    {showLink && <span className="dsa-search-result__link">{url}</span>}
+    {previewImage && (
+      <Picture
+        src={previewImage?.src}
+        alt=""
+        className="dsa-search-result__image"
+      />
+    )}
+    <div className="dsa-search-result__content">
+      <span className="dsa-search-result__title">{title}</span>
+      <RichText text={text} className="dsa-search-result__text" />
+      {showLink && <span className="dsa-search-result__link">{url}</span>}
+    </div>
   </Link>
 ));
 

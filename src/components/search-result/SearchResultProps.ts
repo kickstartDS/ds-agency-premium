@@ -29,7 +29,21 @@ export type ARIALabel = string;
 export interface SearchResultProps {
   url?: URL;
   title?: Title;
+  previewImage?: PreviewImage;
   text?: Text;
   showLink?: ShowLink;
   ariaLabel?: ARIALabel;
+}
+/**
+ * An optional preview image for the search result.
+ */
+export interface PreviewImage {
+  /**
+   * A URL to an image preview for the search result.
+   */
+  src?: string;
+  /**
+   * Large display of the preview image.
+   */
+  large?: boolean;
 }
