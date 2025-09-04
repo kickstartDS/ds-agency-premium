@@ -25,20 +25,44 @@
           "type": "string",
           "description": "A URL to an image preview for the search result."
         },
-        "small": {
+        "large": {
           "type": "boolean",
-          "description": "Small display of the preview image.",
+          "description": "Large display of the preview image.",
           "default": false
         }
       }
     },
-    "text": {
-      "title": "Text",
-      "type": "string",
-      "description": "The main content or description of the search result.",
-      "examples": [
-        "Join us for the AI Conference 2023, where industry leaders discuss the future of AI."
-      ]
+    "matches": {
+      "title": "Matches",
+      "type": "array",
+      "description": "An array of search matches.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "Title",
+            "type": "string",
+            "description": "The title of the match.",
+            "examples": ["Panel Discussion: Ethics in AI"]
+          },
+          "snippet": {
+            "title": "Text",
+            "type": "string",
+            "description": "The main content or description of the search result.",
+            "examples": [
+              "Experts debate the ethical challenges and responsibilities of deploying AI technologies."
+            ]
+          },
+          "url": {
+            "title": "URL",
+            "type": "string",
+            "description": "A URL linking to the specific match or more information.",
+            "examples": [
+              "https://www.example.com/ai-conference-2023/panel-discussion"
+            ]
+          }
+        }
+      }
     },
     "showLink": {
       "title": "Show Link",

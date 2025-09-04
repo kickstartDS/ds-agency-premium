@@ -14,9 +14,25 @@ export type URL = string;
  */
 export type Title = string;
 /**
+ * The title of the match.
+ */
+export type Title1 = string;
+/**
  * The main content or description of the search result.
  */
 export type Text = string;
+/**
+ * A URL linking to the specific match or more information.
+ */
+export type URL1 = string;
+/**
+ * An array of search matches.
+ */
+export type Matches = {
+  title?: Title1;
+  snippet?: Text;
+  url?: URL1;
+}[];
 /**
  * Whether to display the link to the search result.
  */
@@ -30,7 +46,7 @@ export interface SearchResultProps {
   url?: URL;
   title?: Title;
   previewImage?: PreviewImage;
-  text?: Text;
+  matches?: Matches;
   showLink?: ShowLink;
   ariaLabel?: ARIALabel;
 }
@@ -43,7 +59,7 @@ export interface PreviewImage {
    */
   src?: string;
   /**
-   * Small display of the preview image.
+   * Large display of the preview image.
    */
-  small?: boolean;
+  large?: boolean;
 }

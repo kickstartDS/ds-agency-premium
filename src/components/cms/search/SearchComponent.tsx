@@ -40,6 +40,7 @@ export const Search: FC<PropsWithChildren<SearchProps>> = ({
         verticalAlign="sticky"
         mainLayout={{
           minWidth: "narrow",
+          gutter: "large",
         }}
         asideLayout={{
           gutter: "small",

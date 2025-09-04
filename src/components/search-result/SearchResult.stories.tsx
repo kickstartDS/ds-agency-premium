@@ -4,6 +4,7 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { SearchResult } from "./SearchResultComponent";
 import schema from "./search-result.schema.dereffed.json";
+import preview from "../../../.storybook/preview";
 
 const meta: Meta<typeof SearchResult> = {
   title: "Corporate / Search Result",
@@ -26,15 +27,31 @@ export const Default: Story = {
     },
   },
   args: pack({
-    title: "AI Conference 2023",
-    text: `Join us for the annual **AI Conference** brings together experts from around the world
-[...] register now for the **AI Conference** to secure your spot
-[...] highlights from last year’s **AI Conference** included keynote speeches on machine learning
-[...] find out more about the **AI Conference** agenda and speakers`,
+    title: "GreenTech Summit 2023",
     previewImage: {
-      src: "/img/full-shot-different-people-working-together.png",
+      src: "img/full-shot-different-people-working-together.png",
     },
-    url: "https://www.example.com/ai-conference-2023",
-    ariaLabel: "Search Result: AI Conference 2023",
+    matches: [
+      {
+        title: "Keynote: Embracing Sustainability",
+        snippet:
+          "Learn how leading companies are integrating **sustainability** into their core strategies.",
+        url: "#",
+      },
+      {
+        title: "Panel: Sustainability in Practice",
+        snippet:
+          "Business models that prioritize **sustainability** are shared by industry experts in this session.",
+        url: "#",
+      },
+      {
+        title: "Workshop: Measuring Sustainability",
+        snippet:
+          "In your organization, **sustainability** can be assessed using new tools and techniques.",
+        url: "#",
+      },
+    ],
+    url: "https://www.example.com/greentech-summit-2023",
+    ariaLabel: "Search Result: GreenTech Summit 2023",
   }),
 };

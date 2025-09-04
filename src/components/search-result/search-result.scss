@@ -4,19 +4,30 @@
   --g-link--text-decoration-hover: none;
 
   display: flex;
-  gap: var(--ks-spacing-inline-m);
-  border: var(--ks-border-width-default) solid var(--ks-border-color-card-interactive);
-  padding: var(--ks-spacing-inset-m);
-  transition: var(--ks-transition-hover);
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--ks-spacing-stack-s);
+
+  .l-container {
+    container-type: unset;
+  }
 
   &:hover {
     border-color: var(--ks-border-color-card-interactive-hover);
   }
 
-  &--image-small {
+  &__header {
+    display: block;
+    width: fit-content;
+  }
+
+  &__link {
+    font: var(--ks-font-interface-s);
+    color: var(--ks-text-color-interface);
+  }
+
+  &--image-large {
     & .dsa-search-result__image {
-      max-width: var(--dsa-tile--width_smallest);
+      max-width: var(--dsa-tile--width_small);
     }
   }
 
@@ -26,32 +37,47 @@
     object-fit: cover;
     aspect-ratio: 4/3;
     border-radius: calc(var(--ks-border-radius-card) / 2);
-    max-width: var(--dsa-tile--width_small);
+    max-width: var(--dsa-tile--width_smallest);
   }
 
   &__content {
     display: flex;
-    flex-direction: column;
-    gap: var(--ks-spacing-stack-xs);
-    flex-grow: 1;
-    flex-basis: var(--dsa-tile--width_medium);
+    flex-wrap: wrap;
+    gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-s);
   }
 
   &__title {
-    font: var(--dsa-topic--font);
-    color: var(--dsa-topic--color);
-    font-weight: var(--dsa-topic--font-weight);
+    font-size: var(--ks-font-size-display-m);
+    font-family: var(--ks-font-family-display);
+    line-height: var(--ks-line-height-display-m);
   }
 
-  &__link {
-    max-width: 100%;
-    width: auto;
-    font: var(--ks-font-interface-s);
-    color: var(--dsa-link--color);
-    transition: inherit;
+  &__matches {
+    flex-basis: var(--dsa-tile--width_medium);
+    flex-grow: 1;
+  }
 
-    &:hover {
-      color: var(--dsa-link--color_hover);
+  &__match {
+    --g-link--border-radius: 0;
+    font: var(--ks-font-interface-s);
+    padding: var(--ks-spacing-stack-s) 0;
+    border-top: 1px solid var(--ks-border-color-default);
+    display: block;
+
+    .l-container--rich-text {
+      margin-left: 1em;
     }
+  }
+
+  &__match-title {
+  }
+
+  &__match-snippet {
+    font: var(--ks-font-copy-s);
+  }
+
+  &__match-chevron {
+    width: 1em;
+    height: 1em;
   }
 }
