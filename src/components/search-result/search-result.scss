@@ -14,17 +14,19 @@
     border-color: var(--ks-border-color-card-interactive-hover);
   }
 
-  &--image-large {
+  &--image-small {
     & .dsa-search-result__image {
-      max-width: var(--dsa-tile--width_medium);
+      max-width: var(--dsa-tile--width_smallest);
     }
   }
 
   &__image {
-    flex-grow: 0;
-    max-width: var(--dsa-tile--width_small);
-    aspect-ratio: 4/3;
+    width: 100%;
+    height: fit-content;
     object-fit: cover;
+    aspect-ratio: 4/3;
+    border-radius: calc(var(--ks-border-radius-card) / 2);
+    max-width: var(--dsa-tile--width_small);
   }
 
   &__content {
@@ -32,6 +34,7 @@
     flex-direction: column;
     gap: var(--ks-spacing-stack-xs);
     flex-grow: 1;
+    flex-basis: var(--dsa-tile--width_medium);
   }
 
   &__title {
@@ -41,7 +44,8 @@
   }
 
   &__link {
-    width: fit-content;
+    max-width: 100%;
+    width: auto;
     font: var(--ks-font-interface-s);
     color: var(--dsa-link--color);
     transition: inherit;

@@ -18,17 +18,16 @@ export const SearchResultContextDefault = forwardRef<
     aria-label={ariaLabel}
     href={url}
     className={classnames("dsa-search-result", {
-      "dsa-search-result--image-large": previewImage?.large,
+      "dsa-search-result--image-small": previewImage?.small,
     })}
     ref={ref}
   >
-    {previewImage && (
-      <Picture
-        src={previewImage?.src}
-        alt=""
-        className="dsa-search-result__image"
-      />
-    )}
+    <Picture
+      src="img/full-shot-different-people-working-together.png"
+      alt=""
+      className="dsa-search-result__image"
+    />
+
     <div className="dsa-search-result__content">
       <span className="dsa-search-result__title">{title}</span>
       <RichText text={text} className="dsa-search-result__text" />

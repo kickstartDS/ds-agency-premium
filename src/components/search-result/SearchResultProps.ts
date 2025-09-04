@@ -43,7 +43,7 @@ export interface PreviewImage {
    */
   src?: string;
   /**
-   * Large display of the preview image.
+   * Small display of the preview image.
    */
-  large?: boolean;
+  small?: boolean;
 }

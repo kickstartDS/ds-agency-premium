@@ -23,12 +23,11 @@
       "properties": {
         "src": {
           "type": "string",
-          "description": "A URL to an image preview for the search result.",
-          "examples": ["/img/full-shot-different-people-working-together.png"]
+          "description": "A URL to an image preview for the search result."
         },
-        "large": {
+        "small": {
           "type": "boolean",
-          "description": "Large display of the preview image.",
+          "description": "Small display of the preview image.",
           "default": false
         }
       }
