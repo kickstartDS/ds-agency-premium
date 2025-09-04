@@ -1,0 +1,9 @@
+.dsa-search-form {
+  &__results {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ks-spacing-m);
+    list-style: none;
+    padding: 0;
+  }
+}
