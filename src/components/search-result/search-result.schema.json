@@ -16,6 +16,23 @@
       "description": "The title of the search result.",
       "examples": ["AI Conference 2023"]
     },
+    "previewImage": {
+      "title": "Preview Image",
+      "type": "object",
+      "description": "An optional preview image for the search result.",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "A URL to an image preview for the search result.",
+          "examples": ["/img/full-shot-different-people-working-together.png"]
+        },
+        "large": {
+          "type": "boolean",
+          "description": "Large display of the preview image.",
+          "default": false
+        }
+      }
+    },
     "text": {
       "title": "Text",
       "type": "string",
