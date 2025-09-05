@@ -47,20 +47,16 @@ export const SearchResultContextDefault = forwardRef<
               {title}
             </Link>
           </div>
-          {initialMatch && (
-            <RichText
-              className="dsa-search-result__initial-match"
-              text={initialMatch}
-              data-result-excerpt
-            />
-          )}
-          {matches && matches.length > 0 && (
-            <div className="dsa-search-result__matches" data-result-subresults>
-              {matches.map((match, index) => (
-                <SearchResultMatch key={index} {...match} />
-              ))}
-            </div>
-          )}
+          <RichText
+            className="dsa-search-result__initial-match"
+            text={initialMatch}
+            data-result-excerpt
+          />
+          <div className="dsa-search-result__matches" data-result-subresults>
+            {matches.map((match, index) => (
+              <SearchResultMatch key={index} {...match} />
+            ))}
+          </div>
           {showLink && (
             <Link
               href={url}
@@ -74,22 +70,20 @@ export const SearchResultContextDefault = forwardRef<
         </div>
         {imageColSize !== "none" && (
           <div className="dsa-search-result__preview-image-row">
-            {previewImage && (
-              <Link
-                tabIndex={-1}
-                aria-hidden
-                href={url}
-                className="dsa-search-result__preview-image-wrapper"
-                data-result-link
-              >
-                <Picture
-                  src={previewImage}
-                  alt=""
-                  className="dsa-search-result__preview-image"
-                  data-result-image
-                />
-              </Link>
-            )}
+            <Link
+              tabIndex={-1}
+              aria-hidden
+              href={url}
+              className="dsa-search-result__preview-image-wrapper"
+              data-result-link
+            >
+              <Picture
+                src={previewImage}
+                alt=""
+                className="dsa-search-result__preview-image"
+                data-result-image
+              />
+            </Link>
           </div>
         )}
       </div>

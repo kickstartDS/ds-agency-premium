@@ -1,10 +1,17 @@
 import { Meta, StoryObj } from "@storybook/react";
+import { JSONSchema7 } from "json-schema";
+import { getArgsShared } from "@kickstartds/core/lib/storybook";
 import { SearchForm } from "./SearchFormComponent";
+import schema from "./search-form.schema.dereffed.json";
 import "./SearchFormPagefind.client";
 
 const meta: Meta<typeof SearchForm> = {
   title: "Corporate / Search Form",
   component: SearchForm,
+  parameters: {
+    jsonschema: { schema },
+  },
+  ...getArgsShared(schema as JSONSchema7),
 };
 
 export default meta;

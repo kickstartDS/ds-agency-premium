@@ -32,10 +32,12 @@
     font: var(--ks-font-interface-s);
   }
 
-  strong {
+  strong,
+  mark {
     border-bottom: 1px dashed var(--ks-color-fg);
     font-weight: unset;
     color: var(--ks-color-fg);
+    background-color: transparent;
   }
 
   &__matches {
@@ -75,5 +77,9 @@
     object-fit: cover;
     aspect-ratio: 4/3;
     border-radius: calc(var(--ks-border-radius-card) / 2);
+
+    &:not([src]) {
+      display: none;
+    }
   }
 }
