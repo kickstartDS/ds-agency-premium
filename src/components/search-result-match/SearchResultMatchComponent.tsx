@@ -5,7 +5,6 @@ import { Link } from "@kickstartds/base/lib/link";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import { deepMergeDefaults } from "../helpers";
 import defaults from "./SearchResultMatchDefaults";
-import { Icon } from "@kickstartds/base/lib/icon";
 
 export type { SearchResultMatchProps };
 
@@ -14,13 +13,7 @@ export const SearchResultMatchContextDefault = forwardRef<
   SearchResultMatchProps
 >(({ title, snippet, url }, ref) => (
   <Link ref={ref} href={url} className="dsa-search-result-match">
-    <div className="dsa-search-result-match__title">
-      <Icon
-        className="dsa-search-result-match__chevron"
-        icon={"chevron-right"}
-      />
-      {title}
-    </div>
+    <div className="dsa-search-result-match__title">{title}</div>
     <RichText text={snippet} className="dsa-search-result-match__snippet" />
   </Link>
 ));

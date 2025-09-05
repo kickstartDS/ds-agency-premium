@@ -5,6 +5,7 @@
   padding: var(--ks-spacing-stack-s) 0;
   border-top: 1px solid var(--ks-border-color-default);
   display: block;
+  margin-left: 1.25em;
 
   &__snippet {
     font: var(--ks-font-copy-m);
@@ -17,9 +18,5 @@
 
   &:last-child {
     border-bottom: 1px solid var(--ks-border-color-default);
-  }
-
-  .l-container--rich-text {
-    margin-left: 1em;
   }
 }

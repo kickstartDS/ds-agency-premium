@@ -16,6 +16,14 @@ export type URL = string;
  */
 export type Title = string;
 /**
+ * The reserved space of the image row.
+ */
+export type ImageRowSize = "none" | "small" | "large";
+/**
+ * A URL to an image preview for the search result.
+ */
+export type PreviewImage = string;
+/**
  * The initial search match or summary of the search result.
  */
 export type InitialMatch = string;
@@ -31,21 +39,9 @@ export type ShowLink = boolean;
 export interface SearchResultProps {
   url?: URL;
   title?: Title;
+  imageRowSize?: ImageRowSize;
   previewImage?: PreviewImage;
   initialMatch?: InitialMatch;
   matches?: Matches;
   showLink?: ShowLink;
-}
-/**
- * An optional preview image for the search result.
- */
-export interface PreviewImage {
-  /**
-   * A URL to an image preview for the search result.
-   */
-  src?: string;
-  /**
-   * Large display of the preview image.
-   */
-  large?: boolean;
 }

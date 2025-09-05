@@ -27,9 +27,7 @@ export const Default: Story = {
   },
   args: pack({
     title: "GreenTech Summit 2023",
-    previewImage: {
-      src: "img/full-shot-different-people-working-together.png",
-    },
+    previewImage: "img/full-shot-different-people-working-together.png",
     initialMatch:
       "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact. From using energy-efficient appliances to adopting renewable energy sources, every small step counts towards a greener future.",
     matches: [

@@ -55,9 +55,7 @@ export const Search: Story = {
     searchResults: [
       {
         title: "Sustainable Living: Everyday Tips",
-        previewImage: {
-          src: "img/people-brainstorming-work-meeting.png",
-        },
+        previewImage: "img/people-brainstorming-work-meeting.png",
         initialMatch:
           "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact. From using energy-efficient appliances to adopting renewable energy sources, every small step counts towards a greener future.",
         matches: [
@@ -78,17 +76,13 @@ export const Search: Story = {
       },
       {
         title: "Sustainable Architecture Trends",
-        previewImage: {
-          large: true,
-          src: "img/full-shot-different-people-working-together.png",
-        },
+        previewImage: "img/full-shot-different-people-working-together.png",
         initialMatch:
           "Discover how **sustainable** design is shaping the future of urban development, from green buildings to eco-friendly materials. Research shows that **sustainable** architecture not only benefits the environment but also enhances the well-being of its occupants.",
         url: "www.example.com/architecture/sustainable-trends",
       },
       {
         title: "How to Build a Sustainable Business",
-
         matches: [
           {
             title: "Getting Started",
@@ -113,10 +107,7 @@ export const Search: Story = {
       },
       {
         title: "Sustainable Living: Everyday Tips",
-        previewImage: {
-          large: true,
-          src: "img/full-shot-different-people-working-together.png",
-        },
+        previewImage: "img/full-shot-different-people-working-together.png",
         initialMatch:
           "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact. From using energy-efficient appliances to adopting renewable energy sources, every small step counts towards a greener future.",
         matches: [
