@@ -11,10 +11,22 @@ export type { SearchResultMatchProps };
 export const SearchResultMatchContextDefault = forwardRef<
   HTMLAnchorElement,
   SearchResultMatchProps
->(({ title, snippet, url }, ref) => (
-  <Link ref={ref} href={url} className="dsa-search-result-match">
-    <div className="dsa-search-result-match__title">{title}</div>
-    <RichText text={snippet} className="dsa-search-result-match__snippet" />
+>(({ title, snippet, url, ...props }, ref) => (
+  <Link
+    ref={ref}
+    href={url}
+    className="dsa-search-result-match"
+    data-result-link
+    {...props}
+  >
+    <div data-result-title className="dsa-search-result-match__title">
+      {title}
+    </div>
+    <RichText
+      text={snippet}
+      className="dsa-search-result-match__snippet"
+      data-result-excerpt
+    />
   </Link>
 ));
 

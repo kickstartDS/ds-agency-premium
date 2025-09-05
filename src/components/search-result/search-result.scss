@@ -40,6 +40,10 @@
 
   &__matches {
     padding: var(--ks-spacing-xxs) 0;
+
+    &:empty {
+      display: none;
+    }
   }
 
   &__title {

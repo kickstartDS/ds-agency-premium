@@ -51,10 +51,14 @@ describe("Create Seach Index", async () => {
           test(storyName, async () => {
             const { errors } = await index.addHTMLFile({
               url: `/?path=/story/${story.id}`,
-              content: `<html lang="en">
-                          <head><title>${storyFile.componentName} - ${storyName}</title></head>
-                          <body>${html}</body>
-                        </html>`,
+              content: `\
+                <html lang="en">
+                  <head><title>${storyFile.componentName} - ${storyName}</title></head>
+                  <body>
+                    <img data-pagefind-meta="image[src]" src="/img/screenshots/${story.id}.png" />
+                    ${html}
+                  </body>
+                </html>`,
             });
             if (errors.length) {
               throw new Error(errors[0]);

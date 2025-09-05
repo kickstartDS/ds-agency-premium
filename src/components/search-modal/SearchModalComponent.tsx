@@ -20,6 +20,7 @@ export const SearchModal: FC<SearchModalProps> = ({
         renderSubheadline(sub: string) {
           return (
             <Button
+              className="dsa-search-modal__close"
               aria-label={sub}
               label=""
               icon="close"

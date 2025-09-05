@@ -20,7 +20,7 @@ export const SearchResultContextDefault = forwardRef<
     {
       title,
       previewImage,
-      imageRowSize = "small",
+      imageColSize = "small",
       initialMatch,
       matches,
       url,
@@ -32,36 +32,47 @@ export const SearchResultContextDefault = forwardRef<
       <div
         ref={ref}
         className={classnames("dsa-search-result", {
-          "dsa-search-result--image-row-large": imageRowSize === "large",
-          "dsa-search-result--image-row-none": imageRowSize === "none",
+          "dsa-search-result--image-row-large": imageColSize === "large",
+          "dsa-search-result--image-row-none": imageColSize === "none",
         })}
       >
         <div className="dsa-search-result__content">
           <div className="dsa-search-result__header">
-            <Link href={url} className="dsa-search-result__title">
+            <Link
+              data-result-link
+              data-result-title
+              href={url}
+              className="dsa-search-result__title"
+            >
               {title}
             </Link>
           </div>
           {initialMatch && (
             <RichText
-              text={initialMatch}
               className="dsa-search-result__initial-match"
+              text={initialMatch}
+              data-result-excerpt
             />
           )}
           {matches && matches.length > 0 && (
-            <div className="dsa-search-result__matches">
+            <div className="dsa-search-result__matches" data-result-subresults>
               {matches.map((match, index) => (
                 <SearchResultMatch key={index} {...match} />
               ))}
             </div>
           )}
           {showLink && (
-            <Link href={url} className="dsa-search-result__link">
+            <Link
+              href={url}
+              className="dsa-search-result__link"
+              data-result-link
+              data-result-url
+            >
               {url}
             </Link>
           )}
         </div>
-        {imageRowSize !== "none" && (
+        {imageColSize !== "none" && (
           <div className="dsa-search-result__preview-image-row">
             {previewImage && (
               <Link
@@ -69,11 +80,13 @@ export const SearchResultContextDefault = forwardRef<
                 aria-hidden
                 href={url}
                 className="dsa-search-result__preview-image-wrapper"
+                data-result-link
               >
                 <Picture
                   src={previewImage}
                   alt=""
                   className="dsa-search-result__preview-image"
+                  data-result-image
                 />
               </Link>
             )}

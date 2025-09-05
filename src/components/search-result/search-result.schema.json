@@ -16,7 +16,7 @@
       "description": "The title of the search result.",
       "examples": ["AI Conference 2023"]
     },
-    "imageRowSize": {
+    "imageColSize": {
       "title": "Image Row Size",
       "type": "string",
       "description": "The reserved space of the image row.",

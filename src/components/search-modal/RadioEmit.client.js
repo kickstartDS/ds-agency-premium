@@ -7,7 +7,6 @@ export default class RadioEmit extends Component {
     super(element);
 
     const { topic, action = "click", value } = element.dataset;
-    console.log(topic,action)
     const handler = () => window._ks.radio.emit(topic, value);
     element.addEventListener(action, handler);
 

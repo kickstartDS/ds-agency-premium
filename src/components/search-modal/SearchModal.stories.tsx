@@ -19,7 +19,7 @@ const meta: Meta<typeof SearchModal> = {
       <>
         <Button
           size="small"
-          label="open"
+          label="Open"
           ks-component="dsa.radio-emit"
           data-topic="dsa.search-modal.open"
         />

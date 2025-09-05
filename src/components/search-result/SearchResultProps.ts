@@ -39,7 +39,7 @@ export type ShowLink = boolean;
 export interface SearchResultProps {
   url?: URL;
   title?: Title;
-  imageRowSize?: ImageRowSize;
+  imageColSize?: ImageRowSize;
   previewImage?: PreviewImage;
   initialMatch?: InitialMatch;
   matches?: Matches;
