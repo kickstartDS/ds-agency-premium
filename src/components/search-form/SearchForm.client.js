@@ -30,6 +30,16 @@ const renderResult = (result, element) => {
   }
 };
 
+const limitSubResults = (subResults, limit) => {
+  if (subResults.length <= limit) return subResults;
+  const topUrls = [...subResults]
+    .sort((a, b) => b.locations.length - a.locations.length)
+    .slice(0, limit)
+    .map((r) => r.url);
+
+  return subResults.filter((r) => topUrls.includes(r.url));
+};
+
 export default class SearchForm extends Component {
   static identifier = "dsa.search-form";
 
@@ -42,6 +52,9 @@ export default class SearchForm extends Component {
     this.$resultTemplate = this.$("[data-template=result]");
     this.$subresultTemplate = this.$("[data-template=subresult]");
     this.$results = this.$(".dsa-search-form__results");
+
+    const rawSubResultsLimit = Number(element.dataset.maxSubresults);
+    const subResultsLimit = isNaN(rawSubResultsLimit) ? 3 : rawSubResultsLimit;
 
     this.on(element, "submit", (event) => {
       event.preventDefault();
@@ -60,10 +73,12 @@ export default class SearchForm extends Component {
 
     this.onRadio(lazyEvents.beforeunveil, async (_, el) => {
       if (this.lazyResults.has(el)) {
-        const result = await this.lazyResults.get(el);
+        const lazyResult = this.lazyResults.get(el);
+        const result = await lazyResult();
         renderResult(result, el);
         const $subResults = this.$("[data-result-subresults]", el);
-        for (const subResult of result.subResults) {
+        const subResults = limitSubResults(result.subResults, subResultsLimit);
+        for (const subResult of subResults) {
           const $subResultClone = this.$subresultTemplate.cloneNode(true);
           $subResultClone.setAttribute("href", subResult.url);
           renderResult(subResult, $subResultClone);
