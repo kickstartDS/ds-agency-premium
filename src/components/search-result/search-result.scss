@@ -1,10 +1,12 @@
+@use "@kickstartds/core/source/core/container";
+@include container.wrapper("search-result");
+
 .dsa-search-result {
   --g-link--border-radius: var(--ks-border-radius-card);
   --g-link--text-decoration: none;
   --g-link--text-decoration-hover: none;
 
   display: flex;
-  flex-wrap: wrap;
   gap: var(--ks-spacing-stack-m) var(--ks-spacing-inline-m);
 
   .l-container {
@@ -18,24 +20,19 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: var(--ks-spacing-stack-s);
+    gap: var(--ks-spacing-stack-xs);
     flex-basis: var(--dsa-tile--width_medium);
     flex-grow: 1;
   }
 
-  &__header {
-    display: block;
-    width: fit-content;
-  }
-
   &__link {
-    margin-top: 0.35em;
-    font: var(--ks-font-interface-m);
-    color: var(--ks-text-color-interface);
+    width: fit-content;
+    font: var(--ks-font-interface-s);
+    color: var(--ks-color-fg-alpha-4);
   }
 
-  &__initial-match {
-    padding-bottom: var(--ks-spacing-stack-s);
+  &__matches {
+    padding: var(--ks-spacing-xxs) 0;
   }
 
   &__match {
@@ -46,7 +43,7 @@
     display: block;
 
     &:last-child {
-      padding-bottom: 0;
+      border-bottom: 1px solid var(--ks-border-color-default);
     }
 
     .l-container--rich-text {
@@ -67,6 +64,17 @@
   &__match-chevron {
     width: 1em;
     height: 1em;
+  }
+
+  &__preview-image-wrapper {
+    height: fit-content;
+    @media (max-width: 980px) {
+      display: none;
+
+      @include container.size("≥", 640px, "search-result") {
+        display: block;
+      }
+    }
   }
 
   &__preview-image {

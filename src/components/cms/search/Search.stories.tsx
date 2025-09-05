@@ -59,7 +59,7 @@ export const Search: Story = {
           src: "img/people-brainstorming-work-meeting.png",
         },
         initialMatch:
-          "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact.",
+          "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact. From using energy-efficient appliances to adopting renewable energy sources, every small step counts towards a greener future.",
         matches: [
           {
             title: "Home",
@@ -82,19 +82,43 @@ export const Search: Story = {
           large: true,
           src: "img/full-shot-different-people-working-together.png",
         },
-        matches: [
-          {
-            title: "Introduction",
-            snippet:
-              "Discover how **sustainable** design is shaping the future of urban development.",
-            url: "#",
-          },
-        ],
+        initialMatch:
+          "Discover how **sustainable** design is shaping the future of urban development, from green buildings to eco-friendly materials. Research shows that **sustainable** architecture not only benefits the environment but also enhances the well-being of its occupants.",
         url: "www.example.com/architecture/sustainable-trends",
       },
       {
         title: "How to Build a Sustainable Business",
 
+        matches: [
+          {
+            title: "Getting Started",
+            snippet:
+              "A **sustainable** business model focuses on long-term growth and environmental responsibility.",
+            url: "#",
+          },
+          {
+            title: "Case Studies",
+            snippet:
+              "Explore examples of companies that have adopted **sustainable** practices successfully.",
+            url: "#",
+          },
+          {
+            title: "Materials",
+            snippet:
+              "Using **sustainable** materials can significantly reduce a building’s carbon footprint.",
+            url: "#",
+          },
+        ],
+        url: "www.example.com/business/sustainable-model",
+      },
+      {
+        title: "Sustainable Living: Everyday Tips",
+        previewImage: {
+          large: true,
+          src: "img/full-shot-different-people-working-together.png",
+        },
+        initialMatch:
+          "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact. From using energy-efficient appliances to adopting renewable energy sources, every small step counts towards a greener future.",
         matches: [
           {
             title: "Getting Started",

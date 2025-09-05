@@ -4,7 +4,6 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { SearchResult } from "./SearchResultComponent";
 import schema from "./search-result.schema.dereffed.json";
-import preview from "../../../.storybook/preview";
 
 const meta: Meta<typeof SearchResult> = {
   title: "Corporate / Search Result",
@@ -31,6 +30,8 @@ export const Default: Story = {
     previewImage: {
       src: "img/full-shot-different-people-working-together.png",
     },
+    initialMatch:
+      "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact. From using energy-efficient appliances to adopting renewable energy sources, every small step counts towards a greener future.",
     matches: [
       {
         title: "Keynote: Embracing Sustainability",
@@ -52,6 +53,5 @@ export const Default: Story = {
       },
     ],
     url: "https://www.example.com/greentech-summit-2023",
-    ariaLabel: "Search Result: GreenTech Summit 2023",
   }),
 };
