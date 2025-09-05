@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { getArgsShared } from "@kickstartds/core/lib/storybook";
+import { getArgsShared, pack } from "@kickstartds/core/lib/storybook";
 import { JSONSchema7 } from "json-schema";
 import { Button } from "../button/ButtonComponent";
 import { SearchModal } from "./SearchModalComponent";
@@ -35,7 +35,7 @@ export default meta;
 type Story = StoryObj<typeof SearchModal>;
 
 export const Pagefind: Story = {
-  args: {
-    formComponent: "dsa.search-form.pagefind",
-  },
+  args: pack({
+    form: { component: "dsa.search-form.pagefind" },
+  }),
 };

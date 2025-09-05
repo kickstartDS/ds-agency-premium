@@ -5,8 +5,13 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {SearchFormProps} from "../search-form/SearchFormProps";
+
 export interface SearchModalProps {
   headline: string;
   closeAriaLabel: string;
-  formComponent?: string;
+  /**
+   * Referenced component SearchFormProps
+   */
+  form?: SearchFormProps;
 }

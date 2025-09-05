@@ -12,10 +12,13 @@
       "type": "string",
       "default": "close"
     },
-    "formComponent": {
-      "type": "string"
+    "form": {
+      "$ref": "http://schema.mydesignsystem.com/search-form.schema.json"
     }
   },
-  "required": ["headline", "closeAriaLabel"],
+  "required": [
+    "headline",
+    "closeAriaLabel"
+  ],
   "additionalProperties": false
 }

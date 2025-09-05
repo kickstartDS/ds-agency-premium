@@ -9,7 +9,7 @@ import { SearchModalProps } from "./SearchModalProps";
 export const SearchModal: FC<SearchModalProps> = ({
   headline = "Search",
   closeAriaLabel = "close",
-  formComponent,
+  form: formProps = {},
 }) => (
   <dialog ks-component="dsa.search-modal" className="dsa-search-modal">
     <Section
@@ -34,7 +34,7 @@ export const SearchModal: FC<SearchModalProps> = ({
       spaceBefore="small"
       spaceAfter="small"
     >
-      <SearchForm component={formComponent} />
+      <SearchForm {...formProps} />
     </Section>
   </dialog>
 );
