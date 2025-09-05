@@ -14,6 +14,10 @@ export type URL = string;
  */
 export type Title = string;
 /**
+ * The initial search match or summary of the search result.
+ */
+export type InitialMatch = string;
+/**
  * The title of the match.
  */
 export type Title1 = string;
@@ -37,18 +41,14 @@ export type Matches = {
  * Whether to display the link to the search result.
  */
 export type ShowLink = boolean;
-/**
- * An ARIA label for accessibility purposes.
- */
-export type ARIALabel = string;
 
 export interface SearchResultProps {
   url?: URL;
   title?: Title;
   previewImage?: PreviewImage;
+  initialMatch?: InitialMatch;
   matches?: Matches;
   showLink?: ShowLink;
-  ariaLabel?: ARIALabel;
 }
 /**
  * An optional preview image for the search result.

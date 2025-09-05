@@ -58,17 +58,19 @@ export const Search: Story = {
         previewImage: {
           src: "img/people-brainstorming-work-meeting.png",
         },
+        initialMatch:
+          "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact.",
         matches: [
           {
             title: "Home",
             snippet:
-              "Simple changes can make your home more sustainable and energy-efficient.",
+              "Simple changes can make your home more **sustainable** and energy-efficient.",
             url: "#",
           },
           {
             title: "Lifestyle",
             snippet:
-              "Adopting a sustainable lifestyle benefits both you and the planet.",
+              "Adopting a **sustainable** lifestyle benefits both you and the planet.",
             url: "#",
           },
         ],
@@ -77,13 +79,14 @@ export const Search: Story = {
       {
         title: "Sustainable Architecture Trends",
         previewImage: {
+          large: true,
           src: "img/full-shot-different-people-working-together.png",
         },
         matches: [
           {
             title: "Introduction",
             snippet:
-              "Discover how sustainable design is shaping the future of urban development.",
+              "Discover how **sustainable** design is shaping the future of urban development.",
             url: "#",
           },
         ],
@@ -96,19 +99,19 @@ export const Search: Story = {
           {
             title: "Getting Started",
             snippet:
-              "A sustainable business model focuses on long-term growth and environmental responsibility.",
+              "A **sustainable** business model focuses on long-term growth and environmental responsibility.",
             url: "#",
           },
           {
             title: "Case Studies",
             snippet:
-              "Explore examples of companies that have adopted sustainable practices successfully.",
+              "Explore examples of companies that have adopted **sustainable** practices successfully.",
             url: "#",
           },
           {
             title: "Materials",
             snippet:
-              "Using sustainable materials can significantly reduce a building’s carbon footprint.",
+              "Using **sustainable** materials can significantly reduce a building’s carbon footprint.",
             url: "#",
           },
         ],

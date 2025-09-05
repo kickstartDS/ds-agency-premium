@@ -14,26 +14,25 @@ export type { SearchResultProps };
 export const SearchResultContextDefault = forwardRef<
   HTMLDivElement,
   SearchResultProps
->(({ title, previewImage, matches, url, showLink }, ref) => (
+>(({ title, previewImage, initialMatch, matches, url, showLink }, ref) => (
   <div
     ref={ref}
     className={classnames("dsa-search-result", {
       "dsa-search-result--image-large": previewImage?.large,
     })}
   >
-    <Link href={url} className="dsa-search-result__header">
-      <div className="dsa-search-result__title">{title}</div>
-      {showLink && <div className="dsa-search-result__link">{url}</div>}
-    </Link>
     <div className="dsa-search-result__content">
-      {previewImage?.src && (
-        <Picture
-          src={previewImage?.src}
-          alt=""
-          className="dsa-search-result__image"
-        />
-      )}
+      <Link href={url} className="dsa-search-result__header">
+        <div className="dsa-search-result__title">{title}</div>
+        {showLink && <div className="dsa-search-result__link">{url}</div>}
+      </Link>
       <div className="dsa-search-result__matches">
+        {initialMatch && (
+          <RichText
+            text={initialMatch}
+            className="dsa-search-result__initial-match"
+          />
+        )}
         {matches.map((match, index) => (
           <Link
             href={match.url}
@@ -55,6 +54,20 @@ export const SearchResultContextDefault = forwardRef<
         ))}
       </div>
     </div>
+    {previewImage?.src && (
+      <Link
+        tabIndex={-1}
+        aria-hidden
+        href={url}
+        className="dsa-search-result__preview-image-wrapper"
+      >
+        <Picture
+          src={previewImage?.src}
+          alt=""
+          className="dsa-search-result__preview-image"
+        />
+      </Link>
+    )}
   </div>
 ));
 

@@ -4,8 +4,8 @@
   --g-link--text-decoration-hover: none;
 
   display: flex;
-  flex-direction: column;
-  gap: var(--ks-spacing-stack-s);
+  flex-wrap: wrap;
+  gap: var(--ks-spacing-stack-m) var(--ks-spacing-inline-m);
 
   .l-container {
     container-type: unset;
@@ -15,69 +15,70 @@
     border-color: var(--ks-border-color-card-interactive-hover);
   }
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ks-spacing-stack-s);
+    flex-basis: var(--dsa-tile--width_medium);
+    flex-grow: 1;
+  }
+
   &__header {
     display: block;
     width: fit-content;
   }
 
   &__link {
-    font: var(--ks-font-interface-s);
+    margin-top: 0.35em;
+    font: var(--ks-font-interface-m);
     color: var(--ks-text-color-interface);
   }
 
-  &--image-large {
-    & .dsa-search-result__image {
-      max-width: var(--dsa-tile--width_small);
-    }
-  }
-
-  &__image {
-    width: 100%;
-    height: fit-content;
-    object-fit: cover;
-    aspect-ratio: 4/3;
-    border-radius: calc(var(--ks-border-radius-card) / 2);
-    max-width: var(--dsa-tile--width_smallest);
-  }
-
-  &__content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-s);
-  }
-
-  &__title {
-    font-size: var(--ks-font-size-display-m);
-    font-family: var(--ks-font-family-display);
-    line-height: var(--ks-line-height-display-m);
-  }
-
-  &__matches {
-    flex-basis: var(--dsa-tile--width_medium);
-    flex-grow: 1;
+  &__initial-match {
+    padding-bottom: var(--ks-spacing-stack-s);
   }
 
   &__match {
     --g-link--border-radius: 0;
-    font: var(--ks-font-interface-s);
+    font: var(--ks-font-interface-m);
     padding: var(--ks-spacing-stack-s) 0;
     border-top: 1px solid var(--ks-border-color-default);
     display: block;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
 
     .l-container--rich-text {
       margin-left: 1em;
     }
   }
 
-  &__match-title {
+  &__title {
+    font-size: var(--ks-font-size-display-l);
+    font-family: var(--ks-font-family-display);
+    line-height: var(--ks-line-height-display-m);
   }
 
   &__match-snippet {
-    font: var(--ks-font-copy-s);
+    font: var(--ks-font-copy-m);
   }
 
   &__match-chevron {
     width: 1em;
     height: 1em;
+  }
+
+  &__preview-image {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    border-radius: calc(var(--ks-border-radius-card) / 2);
+    max-width: var(--dsa-tile--width_smallest);
+
+    .dsa-search-result--image-large & {
+      max-width: var(--dsa-tile--width_small);
+    }
   }
 }
