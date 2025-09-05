@@ -8,7 +8,6 @@ export default class SearchFormPagefind extends SearchForm {
 
   constructor(element) {
     super(element);
-    console.log("hello");
 
     (async () => {
       const pagefind = await import(/* @vite-ignore */ staticPageFindPath);
@@ -18,7 +17,9 @@ export default class SearchFormPagefind extends SearchForm {
         if (!pagefind) return;
 
         if (this.$searchInput.value.length) {
-          const search = await pagefind.debouncedSearch(this.$searchInput.value);
+          const search = await pagefind.debouncedSearch(
+            this.$searchInput.value
+          );
           if (search) {
             if (search.results.length) {
               // TODO: Pagination / Load More
@@ -31,6 +32,12 @@ export default class SearchFormPagefind extends SearchForm {
                   title: result.meta.title,
                   url: result.url,
                   excerpt: result.excerpt,
+                  image: result.meta.image,
+                  subResults: (result.sub_results || []).map((subResult) => ({
+                    title: subResult.title,
+                    url: subResult.url,
+                    excerpt: subResult.excerpt,
+                  })),
                 }))
               );
             } else {

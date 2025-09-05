@@ -25,40 +25,44 @@ export const SearchResultContextDefault = forwardRef<
     >
       <div className="dsa-search-result__content">
         <div className="dsa-search-result__header">
-          <Link href={url} className="dsa-search-result__title">
+          <Link
+            href={url}
+            className="dsa-search-result__title"
+            data-result-link
+            data-result-title
+          >
             {title}
           </Link>
         </div>
-        {initialMatch && (
-          <RichText
-            text={initialMatch}
-            className="dsa-search-result__initial-match"
-          />
-        )}
-        {matches && matches.length > 0 && (
-          <div className="dsa-search-result__matches">
-            {matches.map((match, index) => (
-              <SearchResultMatch key={index} {...match} />
-            ))}
-          </div>
-        )}
+        <RichText
+          text={initialMatch}
+          className="dsa-search-result__initial-match"
+          data-result-excerpt
+        />
+        <div className="dsa-search-result__matches" data-result-subresults>
+          {matches?.map((match, index) => (
+            <SearchResultMatch key={index} {...match} />
+          ))}
+        </div>
         {showLink && (
-          <Link href={url} className="dsa-search-result__link">
+          <Link href={url} className="dsa-search-result__link" data-result-link data-result-url>
             {url}
           </Link>
         )}
       </div>
-      {previewImage?.src && (
+      {previewImage && (
         <Link
           tabIndex={-1}
           aria-hidden
           href={url}
           className="dsa-search-result__preview-image-wrapper"
+          data-result-link
         >
           <Picture
-            src={previewImage?.src}
+            src={previewImage.src}
             alt=""
             className="dsa-search-result__preview-image"
+            data-result-image
           />
         </Link>
       )}

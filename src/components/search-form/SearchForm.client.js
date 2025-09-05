@@ -2,6 +2,33 @@ import { Component, define } from "@kickstartds/core/lib/component";
 
 const parser = new DOMParser();
 
+const renderResult = (result, element) => {
+  const $ = element.querySelector.bind(element),
+    $$ = element.querySelectorAll.bind(element);
+  if (result.title) {
+    const title = $("[data-result-title]");
+    if (title) title.textContent = result.title;
+  }
+  if (result.excerpt) {
+    const doc = parser.parseFromString(result.excerpt, "text/html");
+    const excerpt = $("[data-result-excerpt]");
+    if (excerpt) excerpt.replaceChildren(...doc.body.childNodes);
+  }
+  if (result.url) {
+    const url = $("[data-result-url]");
+    if (url) url.textContent = result.url;
+
+    const links = $$("[data-result-link]");
+    for (const link of links) {
+      link.setAttribute("href", result.url);
+    }
+  }
+  if (result.image) {
+    const image = $("[data-result-image]");
+    if (image) image.dataset.src = result.image;
+  }
+};
+
 export default class SearchForm extends Component {
   static identifier = "dsa.search-form";
 
@@ -9,7 +36,8 @@ export default class SearchForm extends Component {
     super(element);
 
     this.$searchInput = this.$(".dsa-search-bar__input");
-    this.$template = this.$("[data-template=result]");
+    this.$resultTemplate = this.$("[data-template=result]");
+    this.$subresultTemplate = this.$("[data-template=subresult]");
     this.$results = this.$(".dsa-search-form__results");
 
     this.on(element, "submit", (event) => {
@@ -33,26 +61,19 @@ export default class SearchForm extends Component {
   }
   showResults(results) {
     for (const result of results) {
-      const clone = this.$template.cloneNode(true);
-      clone.removeAttribute("hidden");
-      clone.removeAttribute("data-template");
-      clone.firstElementChild.setAttribute("href", result.url);
-
-      if (result.title) {
-        const title = clone.querySelector(".dsa-search-result__title");
-        title.textContent = result.title;
+      const $resultClone = this.$resultTemplate.cloneNode(true);
+      renderResult(result, $resultClone);
+      const $subResultsContainer = this.$(
+        "[data-result-subresults]",
+        $resultClone
+      );
+      for (const subResult of result.subResults) {
+        const $subResultClone = this.$subresultTemplate.cloneNode(true);
+        $subResultClone.setAttribute("href", subResult.url);
+        renderResult(subResult, $subResultClone);
+        $subResultsContainer.appendChild($subResultClone);
       }
-
-      if (result.excerpt) {
-        const doc = parser.parseFromString(result.excerpt, "text/html");
-        const excerpt = clone.querySelector(".dsa-search-result__text span");
-        excerpt.replaceChildren(...doc.body.childNodes);
-      }
-
-      const link = clone.querySelector(".dsa-search-result__link");
-      link.textContent = result.url;
-
-      this.$results.appendChild(clone);
+      this.$results.appendChild($resultClone);
     }
   }
 
