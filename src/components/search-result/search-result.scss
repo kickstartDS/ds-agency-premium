@@ -35,35 +35,10 @@
     padding: var(--ks-spacing-xxs) 0;
   }
 
-  &__match {
-    --g-link--border-radius: 0;
-    font: var(--ks-font-interface-m);
-    padding: var(--ks-spacing-stack-s) 0;
-    border-top: 1px solid var(--ks-border-color-default);
-    display: block;
-
-    &:last-child {
-      border-bottom: 1px solid var(--ks-border-color-default);
-    }
-
-    .l-container--rich-text {
-      margin-left: 1em;
-    }
-  }
-
   &__title {
     font-size: var(--ks-font-size-display-l);
     font-family: var(--ks-font-family-display);
     line-height: var(--ks-line-height-display-m);
-  }
-
-  &__match-snippet {
-    font: var(--ks-font-copy-m);
-  }
-
-  &__match-chevron {
-    width: 1em;
-    height: 1em;
   }
 
   &__preview-image-wrapper {

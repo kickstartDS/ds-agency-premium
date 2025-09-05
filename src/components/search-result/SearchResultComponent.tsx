@@ -7,8 +7,8 @@ import { deepMergeDefaults } from "../helpers";
 import defaults from "./SearchResultDefaults";
 import classnames from "classnames";
 import { Picture } from "@kickstartds/base/lib/picture";
-import { Icon } from "@kickstartds/base/lib/icon";
 import { Container } from "@kickstartds/core/lib/container";
+import { SearchResultMatch } from "../search-result-match/SearchResultMatchComponent";
 
 export type { SearchResultProps };
 
@@ -38,23 +38,7 @@ export const SearchResultContextDefault = forwardRef<
         {matches && matches.length > 0 && (
           <div className="dsa-search-result__matches">
             {matches.map((match, index) => (
-              <Link
-                href={match.url}
-                key={index}
-                className="dsa-search-result__match"
-              >
-                <div className="dsa-search-result__match-title">
-                  <Icon
-                    className="dsa-search-result__match-chevron"
-                    icon={"chevron-right"}
-                  />
-                  {match.title}
-                </div>
-                <RichText
-                  text={match.snippet}
-                  className="dsa-search-result__match-snippet"
-                />
-              </Link>
+              <SearchResultMatch key={index} {...match} />
             ))}
           </div>
         )}
