@@ -1,4 +1,5 @@
 import { Component, define } from "@kickstartds/core/lib/component";
+import { events as lazyEvents } from "@kickstartds/core/lib/core";
 
 const parser = new DOMParser();
 
@@ -25,12 +26,14 @@ const renderResult = (result, element) => {
   }
   if (result.image) {
     const image = $("[data-result-image]");
-    if (image) image.dataset.src = result.image;
+    if (image) image.src = result.image;
   }
 };
 
 export default class SearchForm extends Component {
   static identifier = "dsa.search-form";
+
+  lazyResults = new WeakMap();
 
   constructor(element) {
     super(element);
@@ -54,6 +57,20 @@ export default class SearchForm extends Component {
     this.on(window, "hashchange", (event) => {
       window._ks.radio.emit("dsa.search-form.hashchange");
     });
+
+    this.onRadio(lazyEvents.beforeunveil, async (_, el) => {
+      if (this.lazyResults.has(el)) {
+        const result = await this.lazyResults.get(el);
+        renderResult(result, el);
+        const $subResults = this.$("[data-result-subresults]", el);
+        for (const subResult of result.subResults) {
+          const $subResultClone = this.$subresultTemplate.cloneNode(true);
+          $subResultClone.setAttribute("href", subResult.url);
+          renderResult(subResult, $subResultClone);
+          $subResults.appendChild($subResultClone);
+        }
+      }
+    });
   }
 
   clearResults() {
@@ -62,17 +79,7 @@ export default class SearchForm extends Component {
   showResults(results) {
     for (const result of results) {
       const $resultClone = this.$resultTemplate.cloneNode(true);
-      renderResult(result, $resultClone);
-      const $subResultsContainer = this.$(
-        "[data-result-subresults]",
-        $resultClone
-      );
-      for (const subResult of result.subResults) {
-        const $subResultClone = this.$subresultTemplate.cloneNode(true);
-        $subResultClone.setAttribute("href", subResult.url);
-        renderResult(subResult, $subResultClone);
-        $subResultsContainer.appendChild($subResultClone);
-      }
+      this.lazyResults.set($resultClone, result);
       this.$results.appendChild($resultClone);
     }
   }

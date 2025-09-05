@@ -3,6 +3,18 @@ import SearchForm from "./SearchForm.client";
 
 const staticPageFindPath = "/pagefind/pagefind.js";
 
+const pagefindResult2searchResult = (result) => ({
+  title: result.meta.title,
+  url: result.url,
+  excerpt: result.excerpt,
+  image: result.meta.image,
+  subResults: (result.sub_results || []).map((subResult) => ({
+    title: subResult.title,
+    url: subResult.url,
+    excerpt: subResult.excerpt,
+  })),
+});
+
 export default class SearchFormPagefind extends SearchForm {
   static identifier = "dsa.search-form.pagefind";
 
@@ -23,23 +35,11 @@ export default class SearchFormPagefind extends SearchForm {
           if (search) {
             if (search.results.length) {
               // TODO: Pagination / Load More
-              const results = await Promise.all(
-                search.results.map((result) => result.data())
+              const results = search.results.map((result) =>
+                result.data().then(pagefindResult2searchResult)
               );
               this.clearResults();
-              this.showResults(
-                results.map((result) => ({
-                  title: result.meta.title,
-                  url: result.url,
-                  excerpt: result.excerpt,
-                  image: result.meta.image,
-                  subResults: (result.sub_results || []).map((subResult) => ({
-                    title: subResult.title,
-                    url: subResult.url,
-                    excerpt: subResult.excerpt,
-                  })),
-                }))
-              );
+              this.showResults(results);
             } else {
               // TODO: no results message
             }

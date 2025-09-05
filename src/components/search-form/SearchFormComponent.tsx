@@ -16,7 +16,7 @@ export const SearchForm: FC<
   >
     <SearchBar alternativeText="" alternativeResult="" hint="" />
     <div hidden>
-      <li data-template="result">
+      <li data-template="result" className="lazyload">
         <SearchResult previewImage={{}} />
       </li>
       <SearchResultMatch data-template="subresult" />
