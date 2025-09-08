@@ -1,6 +1,6 @@
 import classnames from "classnames";
 import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
-import { SplitWeightedProps } from "./SplitWeightedProps";
+import { SplitWeightedProps as SplitWeightedComponentProps } from "./SplitWeightedProps";
 import "./split-weighted.scss";
 import { deepMergeDefaults } from "../helpers";
 import defaults from "./SplitWeightedDefaults";
@@ -11,15 +11,15 @@ export interface ComponentProps {
 }
 
 // Merge SplitWeightedProps and ComponentProps for full prop support
-export type SplitWeightedComponentProps = Omit<
-  SplitWeightedProps,
+export type SplitWeightedProps = Omit<
+  SplitWeightedComponentProps,
   "main" | "aside"
 > &
   ComponentProps;
 
 export const SplitWeightedContextDefault = forwardRef<
   HTMLDivElement,
-  SplitWeightedComponentProps & HTMLAttributes<HTMLDivElement>
+  SplitWeightedProps & HTMLAttributes<HTMLDivElement>
 >(
   (
     {
@@ -90,7 +90,7 @@ export const SplitWeightedContextDefault = forwardRef<
 export const SplitWeightedContext = createContext(SplitWeightedContextDefault);
 export const SplitWeighted = forwardRef<
   HTMLDivElement,
-  SplitWeightedComponentProps & HTMLAttributes<HTMLDivElement>
+  SplitWeightedProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(SplitWeightedContext);
   return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;

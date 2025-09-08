@@ -1,6 +1,6 @@
 import classnames from "classnames";
 import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
-import { SplitEvenProps } from "./SplitEvenProps";
+import { SplitEvenProps as SplitEvenComponentProps } from "./SplitEvenProps";
 import "./split-even.scss";
 import { deepMergeDefaults } from "../helpers";
 import defaults from "./SplitEvenDefaults";
@@ -11,15 +11,15 @@ export interface ComponentProps {
 }
 
 // Merge SplitEvenProps and ComponentProps for full prop support
-export type SplitEvenComponentProps = Omit<
-  SplitEvenProps,
+export type SplitEvenProps = Omit<
+  SplitEvenComponentProps,
   "firstComponents" | "secondComponents"
 > &
   ComponentProps;
 
 export const SplitEvenContextDefault = forwardRef<
   HTMLDivElement,
-  SplitEvenComponentProps & HTMLAttributes<HTMLDivElement>
+  SplitEvenProps & HTMLAttributes<HTMLDivElement>
 >(
   (
     {
@@ -80,7 +80,7 @@ export const SplitEvenContextDefault = forwardRef<
 export const SplitEvenContext = createContext(SplitEvenContextDefault);
 export const SplitEven = forwardRef<
   HTMLDivElement,
-  SplitEvenComponentProps & HTMLAttributes<HTMLDivElement>
+  SplitEvenProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(SplitEvenContext);
   return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
