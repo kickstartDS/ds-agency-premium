@@ -27,4 +27,6 @@ export interface SearchFormProps {
     showLink?: ShowLink;
     imageColSize?: ImageRowSize;
   };
+  resultPerPage?: number;
+  moreButtonLabel?: string;
 }

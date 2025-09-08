@@ -6,6 +6,7 @@
  */
 
 export interface PaginationProps {
+  truncate?: boolean;
   ariaLabels?: {
     /**
      * Aria label for the previous page link

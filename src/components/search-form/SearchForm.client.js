@@ -1,7 +1,57 @@
 import { Component, define } from "@kickstartds/core/lib/component";
 import { events as lazyEvents } from "@kickstartds/core/lib/core";
+import { debounce } from "@kickstartds/core/lib/utils";
 
 const parser = new DOMParser();
+
+const renderPagination = (
+  $pagination,
+  $linkTemplate,
+  totalPages,
+  currentPageIndex,
+  hrefPrefix
+) => {
+  const [$first, $prev, $pages, $next, $last] = $pagination.children;
+  $pages.textContent = "";
+
+  for (let i = 0; i < totalPages; i++) {
+    const $link = $linkTemplate.cloneNode(true);
+    $link.textContent = i + 1;
+    $link.href = hrefPrefix + (i + 1);
+    $link.setAttribute(
+      "aria-current",
+      i === currentPageIndex ? "page" : "false"
+    );
+    $pages.appendChild($link);
+  }
+  $first.href = hrefPrefix + 1;
+  $prev.href = hrefPrefix + (currentPageIndex + 1 - 1);
+  $next.href = hrefPrefix + (currentPageIndex + 1 + 1);
+  $last.href = hrefPrefix + totalPages;
+
+  if (currentPageIndex === 0) {
+    $first.setAttribute("hidden", "");
+    $prev.setAttribute("hidden", "");
+  } else {
+    $first.removeAttribute("hidden", "");
+    $prev.removeAttribute("hidden", "");
+  }
+  if (currentPageIndex === totalPages - 1) {
+    $next.setAttribute("hidden", "");
+    $last.setAttribute("hidden", "");
+  } else {
+    $next.removeAttribute("hidden", "");
+    $last.removeAttribute("hidden", "");
+  }
+
+  $pagination.removeAttribute("hidden");
+};
+
+const renderMoreButton = ($button, totalResults) => {
+  $button.removeAttribute("hidden");
+  const $count = $button.children[0].children[0];
+  $count.textContent = totalResults;
+};
 
 const renderResult = (result, element) => {
   const $ = element.querySelector.bind(element),
@@ -40,10 +90,30 @@ const limitSubResults = (subResults, limit) => {
   return subResults.filter((r) => topUrls.includes(r.url));
 };
 
+const parseNumber = (value, fallback) => {
+  const number = Number(value);
+  return isNaN(number) ? fallback : number;
+};
+
+const debouncedSearch = debounce(
+  (term) => window._ks.radio.emit("dsa.search.search", { term }),
+  300
+);
+
 export default class SearchForm extends Component {
   static identifier = "dsa.search-form";
 
   lazyResults = new WeakMap();
+  resultsPerPage = 10;
+  state = {
+    term: undefined,
+    page: undefined,
+    results: undefined,
+  };
+
+  async loadEngine() {
+    throw new Error("please connect a search engine");
+  }
 
   constructor(element) {
     super(element);
@@ -51,11 +121,22 @@ export default class SearchForm extends Component {
     this.$searchInput = this.$(".dsa-search-bar__input");
     this.$resultTemplate = this.$("[data-template=result]");
     this.$subresultTemplate = this.$("[data-template=subresult]");
+    this.$paginationLinkTemplate = this.$("[data-template=pagination-link]");
+    this.$pagination = this.$(".dsa-pagination");
     this.$results = this.$(".dsa-search-form__results");
+    this.$moreButton = this.$(".c-button");
 
-    const rawSubResultsLimit = Number(element.dataset.maxSubresults);
-    const subResultsLimit = isNaN(rawSubResultsLimit) ? 3 : rawSubResultsLimit;
+    const subResultsLimit = parseNumber(element.dataset.maxSubresults, 3);
+    this.resultsPerPage = parseNumber(element.dataset.resultsPerPage, 10);
 
+    this.on(this.$searchInput, "input", () => {
+      const term = this.$searchInput.value.trim();
+      if (term.length) {
+        debouncedSearch(term);
+      } else {
+        window._ks.radio.emit("dsa.search.reset");
+      }
+    });
     this.on(element, "submit", (event) => {
       event.preventDefault();
       const url = new URL(
@@ -66,9 +147,12 @@ export default class SearchForm extends Component {
       url.hash = new URLSearchParams(formData);
       window.location.href = url;
     });
+    this.on(element, "reset", (event) => {
+      window._ks.radio.emit("dsa.search.reset");
+    });
 
-    this.on(window, "hashchange", (event) => {
-      window._ks.radio.emit("dsa.search-form.hashchange");
+    this.on(window, "hashchange", () => {
+      this.updateFromHash();
     });
 
     this.onRadio(lazyEvents.beforeunveil, async (_, el) => {
@@ -86,12 +170,78 @@ export default class SearchForm extends Component {
         }
       }
     });
+
+    // init
+
+    this.loadEngine().then((search) => {
+      this.updateFromHash();
+
+      this.onRadio("dsa.search.reset", () => {
+        this.$results.textContent = "";
+        this.$pagination.setAttribute("hidden", "");
+        this.state = {};
+      });
+      this.onRadio("dsa.search.search", async (_, { term, page = 0 }) => {
+        window._ks.radio.emit("dsa.search.loading");
+        this.state.term = term;
+        this.state.page = page;
+        try {
+          this.state.results = await search(term);
+          window._ks.radio.emit("dsa.search.loaded");
+        } catch (e) {
+          console.error(e);
+          window._ks.radio.emit("dsa.search.reset");
+        }
+      });
+      this.onRadio("dsa.search.loaded", () => {
+        if (this.state.results.length) {
+          const startIndex = this.state.page * this.resultsPerPage;
+          const endIndex = startIndex + this.resultsPerPage;
+          const results = this.state.results.slice(startIndex, endIndex);
+          this.renderResults(results);
+
+          if (this.element.hasAttribute("action")) {
+            renderMoreButton(this.$moreButton, this.state.results.length);
+          } else {
+            renderPagination(
+              this.$pagination,
+              this.$paginationLinkTemplate,
+              Math.ceil(this.state.results.length / this.resultsPerPage),
+              this.state.page,
+              `#q=${this.state.term}&page=`
+            );
+          }
+        } else {
+          // TODO: no results message
+        }
+      });
+      this.onRadio("dsa.search.goToPage", (_, page) => {
+        this.state.page = page;
+        window._ks.radio.emit("dsa.search.loaded");
+      });
+    });
   }
 
-  clearResults() {
-    this.$results.textContent = "";
+  updateFromHash() {
+    const params = new URLSearchParams(window.location.hash.slice(1));
+    if (params.has("q")) {
+      const term = params.get("q");
+      const page = params.has("page") ? Number(params.get("page")) - 1 : 0;
+
+      this.$searchInput.value = term;
+
+      if (term) {
+        if (term !== this.state.term) {
+          window._ks.radio.emit("dsa.search.search", { term, page });
+        } else if (page !== this.state.page) {
+          window._ks.radio.emit("dsa.search.goToPage", page);
+        }
+      }
+    }
   }
-  showResults(results) {
+
+  renderResults(results) {
+    this.$results.textContent = "";
     for (const result of results) {
       const $resultClone = this.$resultTemplate.cloneNode(true);
       this.lazyResults.set($resultClone, result);

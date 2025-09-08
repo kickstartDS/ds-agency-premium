@@ -4,6 +4,9 @@
   "title": "Pagination",
   "type": "object",
   "properties": {
+    "truncate": {
+      "type": "boolean"
+    },
     "ariaLabels": {
       "type": "object",
       "properties": {

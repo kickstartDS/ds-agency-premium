@@ -36,6 +36,10 @@ type Story = StoryObj<typeof SearchModal>;
 
 export const Pagefind: Story = {
   args: pack({
-    form: { component: "dsa.search-form.pagefind" },
+    form: {
+      component: "dsa.search-form.pagefind",
+      action: "iframe.html?id=corporate-search-form--pagefind&viewMode=story",
+      target: "_self",
+    },
   }),
 };
