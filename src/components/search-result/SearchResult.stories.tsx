@@ -26,15 +26,30 @@ export const Default: Story = {
     },
   },
   args: pack({
-    title: "AI Conference 2023",
-    text: `Join us for the annual **AI Conference** brings together experts from around the world
-[...] register now for the **AI Conference** to secure your spot
-[...] highlights from last year’s **AI Conference** included keynote speeches on machine learning
-[...] find out more about the **AI Conference** agenda and speakers`,
-    previewImage: {
-      src: "/img/full-shot-different-people-working-together.png",
-    },
-    url: "https://www.example.com/ai-conference-2023",
-    ariaLabel: "Search Result: AI Conference 2023",
+    title: "GreenTech Summit 2023",
+    previewImage: "img/full-shot-different-people-working-together.png",
+    initialMatch:
+      "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact. From using energy-efficient appliances to adopting renewable energy sources, every small step counts towards a greener future.",
+    matches: [
+      {
+        title: "Keynote: Embracing Sustainability",
+        snippet:
+          "Learn how leading companies are integrating **sustainability** into their core strategies.",
+        url: "#",
+      },
+      {
+        title: "Panel: Sustainability in Practice",
+        snippet:
+          "Business models that prioritize **sustainability** are shared by industry experts in this session.",
+        url: "#",
+      },
+      {
+        title: "Workshop: Measuring Sustainability",
+        snippet:
+          "In your organization, **sustainability** can be assessed using new tools and techniques.",
+        url: "#",
+      },
+    ],
+    url: "https://www.example.com/greentech-summit-2023",
   }),
 };

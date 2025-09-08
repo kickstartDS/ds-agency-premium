@@ -5,6 +5,8 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {SearchResultMatchProps} from "../search-result-match/SearchResultMatchProps";
+
 /**
  * A URL linking to the search result or more information.
  */
@@ -14,36 +16,32 @@ export type URL = string;
  */
 export type Title = string;
 /**
- * The main content or description of the search result.
+ * The reserved space of the image row.
  */
-export type Text = string;
+export type ImageRowSize = "none" | "small" | "large";
+/**
+ * A URL to an image preview for the search result.
+ */
+export type PreviewImage = string;
+/**
+ * The initial search match or summary of the search result.
+ */
+export type InitialMatch = string;
+/**
+ * An array of search matches.
+ */
+export type Matches = SearchResultMatchProps[];
 /**
  * Whether to display the link to the search result.
  */
 export type ShowLink = boolean;
-/**
- * An ARIA label for accessibility purposes.
- */
-export type ARIALabel = string;
 
 export interface SearchResultProps {
   url?: URL;
   title?: Title;
+  imageColSize?: ImageRowSize;
   previewImage?: PreviewImage;
-  text?: Text;
+  initialMatch?: InitialMatch;
+  matches?: Matches;
   showLink?: ShowLink;
-  ariaLabel?: ARIALabel;
-}
-/**
- * An optional preview image for the search result.
- */
-export interface PreviewImage {
-  /**
-   * A URL to an image preview for the search result.
-   */
-  src?: string;
-  /**
-   * Large display of the preview image.
-   */
-  large?: boolean;
 }

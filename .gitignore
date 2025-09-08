@@ -32,3 +32,6 @@ src/components/**/*Defaults.ts
 static/*.css
 static/*.css.map
 dist
+
+# pagefind
+static/pagefind

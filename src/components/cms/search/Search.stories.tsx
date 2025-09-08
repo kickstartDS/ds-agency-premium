@@ -54,54 +54,83 @@ export const Search: Story = {
     },
     searchResults: [
       {
-        url: "https://www.example.com/ai-conference-2023",
-        title: "AI Conference 2023",
-        text: `Join us for the annual **AI Conference** bringing together experts from around the world.
-        Register now to secure your spot and learn about the latest advancements in AI.`,
-        ariaLabel: "Search Result: AI Conference 2023",
-        showLink: true,
+        title: "Sustainable Living: Everyday Tips",
+        previewImage: "img/people-brainstorming-work-meeting.png",
+        initialMatch:
+          "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact. From using energy-efficient appliances to adopting renewable energy sources, every small step counts towards a greener future.",
+        matches: [
+          {
+            title: "Home",
+            snippet:
+              "Simple changes can make your home more **sustainable** and energy-efficient.",
+            url: "#",
+          },
+          {
+            title: "Lifestyle",
+            snippet:
+              "Adopting a **sustainable** lifestyle benefits both you and the planet.",
+            url: "#",
+          },
+        ],
+        url: "www.example.com/lifestyle/sustainable-living",
       },
       {
-        url: "https://www.example.com/web-development-summit-2023",
-        title: "Web Development Summit 2023",
-        text: `Explore the future of web development at the **Web Development Summit**.
-        Discover new technologies and network with industry leaders.`,
-
-        ariaLabel: "Search Result: Web Development Summit 2023",
-        showLink: true,
+        title: "Sustainable Architecture Trends",
+        previewImage: "img/full-shot-different-people-working-together.png",
+        initialMatch:
+          "Discover how **sustainable** design is shaping the future of urban development, from green buildings to eco-friendly materials. Research shows that **sustainable** architecture not only benefits the environment but also enhances the well-being of its occupants.",
+        url: "www.example.com/architecture/sustainable-trends",
       },
       {
-        url: "https://www.example.com/data-science-bootcamp",
-        title: "Data Science Bootcamp",
-        text: `Enhance your skills with our **Data Science Bootcamp**.
-        Learn from experts and work on real-world projects.`,
-        ariaLabel: "Search Result: Data Science Bootcamp",
-        showLink: true,
+        title: "How to Build a Sustainable Business",
+        matches: [
+          {
+            title: "Getting Started",
+            snippet:
+              "A **sustainable** business model focuses on long-term growth and environmental responsibility.",
+            url: "#",
+          },
+          {
+            title: "Case Studies",
+            snippet:
+              "Explore examples of companies that have adopted **sustainable** practices successfully.",
+            url: "#",
+          },
+          {
+            title: "Materials",
+            snippet:
+              "Using **sustainable** materials can significantly reduce a building’s carbon footprint.",
+            url: "#",
+          },
+        ],
+        url: "www.example.com/business/sustainable-model",
       },
       {
-        url: "https://www.example.com/ai-conference-2023",
-        title: "AI Conference 2023",
-        text: `Join us for the annual **AI Conference** bringing together experts from around the world.
-        Register now to secure your spot and learn about the latest advancements in AI.`,
-        ariaLabel: "Search Result: AI Conference 2023",
-        showLink: true,
-      },
-      {
-        url: "https://www.example.com/web-development-summit-2023",
-        title: "Web Development Summit 2023",
-        text: `Explore the future of web development at the **Web Development Summit**.
-        Discover new technologies and network with industry leaders.`,
-
-        ariaLabel: "Search Result: Web Development Summit 2023",
-        showLink: true,
-      },
-      {
-        url: "https://www.example.com/data-science-bootcamp",
-        title: "Data Science Bootcamp",
-        text: `Enhance your skills with our **Data Science Bootcamp**.
-        Learn from experts and work on real-world projects.`,
-        ariaLabel: "Search Result: Data Science Bootcamp",
-        showLink: true,
+        title: "Sustainable Living: Everyday Tips",
+        previewImage: "img/full-shot-different-people-working-together.png",
+        initialMatch:
+          "Embracing a **sustainable** lifestyle can significantly reduce your environmental impact. From using energy-efficient appliances to adopting renewable energy sources, every small step counts towards a greener future.",
+        matches: [
+          {
+            title: "Getting Started",
+            snippet:
+              "A **sustainable** business model focuses on long-term growth and environmental responsibility.",
+            url: "#",
+          },
+          {
+            title: "Case Studies",
+            snippet:
+              "Explore examples of companies that have adopted **sustainable** practices successfully.",
+            url: "#",
+          },
+          {
+            title: "Materials",
+            snippet:
+              "Using **sustainable** materials can significantly reduce a building’s carbon footprint.",
+            url: "#",
+          },
+        ],
+        url: "www.example.com/business/sustainable-model",
       },
     ],
   }),
