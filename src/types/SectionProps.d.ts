@@ -6,11 +6,15 @@ declare module "@kickstartds/base/lib/section/typing" {
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {BlogTeaserProps} from "@kickstartds/blog-teaser.schema.json/lib/blog-teaser/typing";
 import type {BusinessCardProps} from "@kickstartds/business-card.schema.json/lib/business-card/typing";
+import type {ContactProps} from "@kickstartds/base/lib/contact/typing";
 import type {ContentNavProps} from "@kickstartds/content-nav.schema.json/lib/content-nav/typing";
 import type {CtaProps} from "@kickstartds/cta.schema.json/lib/cta/typing";
 import type {DividerProps} from "@kickstartds/base/lib/divider/typing";
 import type {DownloadsProps} from "@kickstartds/downloads.schema.json/lib/downloads/typing";
+import type {EventLatestTeaserProps} from "@kickstartds/event-latest-teaser.schema.json/lib/event-latest-teaser/typing";
+import type {EventListTeaserProps} from "@kickstartds/event-list-teaser.schema.json/lib/event-list-teaser/typing";
 import type {FaqProps} from "@kickstartds/faq.schema.json/lib/faq/typing";
 import type {FeaturesProps} from "@kickstartds/features.schema.json/lib/features/typing";
 import type {GalleryProps} from "@kickstartds/gallery.schema.json/lib/gallery/typing";
@@ -122,11 +126,15 @@ export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest" 
  * Allowed components for content
  */
 export type Content = (
+  | BlogTeaserProps
   | BusinessCardProps
+  | ContactProps
   | ContentNavProps
   | CtaProps
   | DividerProps
   | DownloadsProps
+  | EventLatestTeaserProps
+  | EventListTeaserProps
   | FaqProps
   | FeaturesProps
   | GalleryProps

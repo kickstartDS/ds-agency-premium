@@ -5,8 +5,15 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {BlogTeaserProps} from "../blog-teaser/BlogTeaserProps";
+import type {BusinessCardProps} from "../business-card/BusinessCardProps";
+import type {ContactProps} from "../contact/ContactProps";
+import type {ContentNavProps} from "../content-nav/ContentNavProps";
 import type {CtaProps} from "../cta/CtaProps";
 import type {DividerProps} from "../divider/DividerProps";
+import type {DownloadsProps} from "../downloads/DownloadsProps";
+import type {EventLatestTeaserProps} from "../event-latest-teaser/EventLatestTeaserProps";
+import type {EventListTeaserProps} from "../event-list-teaser/EventListTeaserProps";
 import type {FaqProps} from "../faq/FaqProps";
 import type {FeaturesProps} from "../features/FeaturesProps";
 import type {GalleryProps} from "../gallery/GalleryProps";
@@ -51,8 +58,15 @@ export type HorizontalGutter = "large" | "default" | "small" | "none";
  * Allowed components for the first half of the split layout
  */
 export type First = (
+  | BlogTeaserProps
+  | BusinessCardProps
+  | ContactProps
+  | ContentNavProps
   | CtaProps
   | DividerProps
+  | DownloadsProps
+  | EventLatestTeaserProps
+  | EventListTeaserProps
   | FaqProps
   | FeaturesProps
   | GalleryProps
@@ -73,8 +87,15 @@ export type First = (
  * Allowed components for the second half of the split layout
  */
 export type Second = (
+  | BlogTeaserProps
+  | BusinessCardProps
+  | ContactProps
+  | ContentNavProps
   | CtaProps
   | DividerProps
+  | DownloadsProps
+  | EventLatestTeaserProps
+  | EventListTeaserProps
   | FaqProps
   | FeaturesProps
   | GalleryProps

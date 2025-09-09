@@ -52,10 +52,31 @@
       "items": {
         "anyOf": [
           {
+            "$ref": "http://schema.mydesignsystem.com/blog-teaser.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/business-card.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/contact.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/content-nav.schema.json"
+          },
+          {
             "$ref": "http://schema.mydesignsystem.com/cta.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/divider.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/downloads.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/event-latest-teaser.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/event-list-teaser.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/faq.schema.json"
@@ -112,10 +133,31 @@
       "items": {
         "anyOf": [
           {
+            "$ref": "http://schema.mydesignsystem.com/blog-teaser.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/business-card.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/contact.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/content-nav.schema.json"
+          },
+          {
             "$ref": "http://schema.mydesignsystem.com/cta.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/divider.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/downloads.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/event-latest-teaser.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/event-list-teaser.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/faq.schema.json"
