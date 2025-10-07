@@ -1,5 +1,6 @@
 @use "section-tokens.scss";
 
+.l-section.dsa-section [ks-inverted],
 .l-section.dsa-section {
   --l-section_buttons--space-before: var(--dsa-section__buttons--space-before, var(--l-section--gutter));
 
@@ -65,6 +66,34 @@
     background-color: var(--dsa-section--background-color_bold, var(--ks-background-color-bold));
   }
 
+  &.dsa-section--transition-to-accent {
+    background-image: var(
+      --dsa-section--transition_to-accent,
+      linear-gradient(180deg, transparent 0%, var(--ks-background-color-accent) 100%)
+    );
+  }
+
+  &.dsa-section--transition-to-bold {
+    background-image: var(
+      --dsa-section--transition_to-bold,
+      linear-gradient(180deg, transparent 0%, var(--ks-background-color-bold) 100%)
+    );
+  }
+
+  &.dsa-section--transition-to-default {
+    background-image: var(
+      --dsa-section--transition_to-default,
+      linear-gradient(180deg, transparent 0%, var(--ks-background-color-default) 100%)
+    );
+  }
+
+  &.dsa-section--transition-to-inverted {
+    background-image: var(
+      --dsa-section--transition_to-inverted,
+      linear-gradient(180deg, transparent 80%, var(--ks-background-color-default-inverted) 80%)
+    );
+  }
+
   &--header-spacing {
     padding-top: calc(var(--dsa-header--height) + var(--dsa-section--space_default));
   }
@@ -77,55 +106,36 @@
     padding-top: calc(var(--dsa-header--height) + var(--dsa-section--space-small));
   }
 
-  &-style--stagelights {
+  &-style--framed {
+    --frame-background-color: var(--ks-background-color-accent);
+
+    .l-section__container--content {
+      .l-section__content {
+        padding: var(--dsa-section--space_default);
+        background-color: var(--frame-background-color, var(--ks-background-color-default));
+        border-radius: var(--ks-border-radius-surface);
+      }
+    }
+
+    &.l-section--accent,
+    &.l-section--bold {
+      --frame-background-color: var(--ks-background-color-default);
+    }
+  }
+
+  &-style--deko {
     background-image: var(
-      --dsa-section_stagelights--background-image,
-      radial-gradient(50% 150% at 100% -50%, var(--ks-color-primary-inverted-alpha-3) 0%, transparent 100%),
-      radial-gradient(50% 150% at 0% -50%, var(--ks-color-primary-alpha-3) 0%, transparent 100%)
+      --dsa-section_deko--background-image,
+      radial-gradient(180deg, transparent 0%, var(--ks-background-color-default) 100%)
     );
   }
 
-  &-style--anchor-glow {
-    background-image: var(
-      --dsa-section_anchor-glow--background-image,
-      radial-gradient(50% 50% at 50% 100%, var(--ks-color-secondary-alpha-5) 0%, transparent 100%)
-    );
-  }
-
-  &-style--symmetric-glow {
-    background-image: var(
-      --dsa-section_symmetric-glow--background-image,
-      radial-gradient(20% 50% at 100% 50%, var(--ks-color-primary-alpha-5) 0%, transparent 100%),
-      radial-gradient(20% 50% at 0% 50%, var(--ks-color-primary-inverted-alpha-5) 0%, transparent 100%)
-    );
-  }
-
-  &-style--accent-transition {
-    background-image: var(
-      --dsa-section_accent-transition--background-image,
-      linear-gradient(180deg, transparent 0%, var(--ks-background-color-accent) 100%)
-    );
-  }
-
-  &-style--bold-transition {
-    background-image: var(
-      --dsa-section_bold-transition--background-image,
-      linear-gradient(180deg, transparent 0%, var(--ks-background-color-bold) 100%)
-    );
-  }
-
-  &-style--vertical-gradient {
-    background-image: var(
-      --dsa-section_vertical-gradient--background-image,
-      linear-gradient(0deg, var(--ks-color-primary-alpha-5) 0%, var(--ks-color-secondary-alpha-5) 100%)
-    );
-  }
-
-  &-style--horizontal-gradient {
-    background-image: var(
-      --dsa-section_horizontal-gradient--background-image,
-      linear-gradient(90deg, var(--ks-color-primary-alpha-5) 0%, var(--ks-color-secondary-alpha-5) 100%)
-    );
+  &-style--inset {
+    background-image: linear-gradient(180deg, var(--ks-color-fg-alpha-9) 0%, transparent 5px),
+      linear-gradient(180deg, var(--ks-color-fg-alpha-9) 0%, transparent 30px),
+      linear-gradient(180deg, transparent calc(100% - 30px), var(--ks-color-fg-alpha-9) 100%),
+      linear-gradient(180deg, transparent calc(100% - 5px), var(--ks-color-fg-alpha-9) 100%),
+      radial-gradient(100% 100% at 50% 50%, var(--ks-color-bg), var(--ks-color-bg-to-fg-1));
   }
 
   &--spotlight {
@@ -170,11 +180,15 @@
     --l-section_tile-width--largest: var(--dsa-section__col--min-width_largest, var(--dsa-tile--width_largest));
     --l-section_buttons--space-before: var(--dsa-section__buttons--space-before, var(--l-section--gutter));
 
+    &--tiles-full {
+      --l-section_col--min-width: 100%;
+    }
+
     &--slider {
       padding: var(--ks-spacing-s) 0;
 
       &:after {
-        min-width: calc(50vw - calc(var(--dsa-section_col--min-width) / 2) - calc(var(--dsa-section--gutter) * 1.25));
+        min-width: calc(50vw - calc(var(--l-section_col--min-width) / 2) - calc(var(--l-section--gutter) * 1.25));
       }
     }
   }

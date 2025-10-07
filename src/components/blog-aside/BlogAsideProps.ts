@@ -12,9 +12,9 @@ import type {BlogAuthorProps} from "../blog-author/BlogAuthorProps";
  */
 export type Icon = string;
 /**
- * The href for the social link
+ * The url for the social link
  */
-export type Href = string;
+export type URL = string;
 /**
  * The title for the social link
  */
@@ -24,7 +24,7 @@ export type Title = string;
  */
 export type SocialSharing = {
   icon: Icon;
-  href: Href;
+  url: URL;
   title: Title;
 }[];
 /**

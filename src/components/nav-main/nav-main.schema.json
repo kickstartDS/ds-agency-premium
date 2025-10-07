@@ -24,7 +24,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "href": { "type": "string", "format": "uri" },
+          "url": { "type": "string", "format": "uri" },
           "label": { "type": "string" },
           "active": { "type": "boolean" },
           "items": {
@@ -32,7 +32,7 @@
             "items": {
               "type": "object",
               "properties": {
-                "href": { "type": "string", "format": "uri" },
+                "url": { "type": "string", "format": "uri" },
                 "label": { "type": "string" },
                 "active": { "type": "boolean" }
               }
@@ -40,49 +40,42 @@
           }
         },
         "additionalProperties": false,
-        "required": ["href", "label"]
+        "required": ["url", "label"]
       },
       "examples": [
         [
           {
-            "label": "Active Item",
-            "href": "#",
+            "label": "Beamer",
+            "url": "#",
             "active": true
           },
           {
-            "label": "Navigation Item",
-            "href": "#"
+            "label": "Interaktive Displays",
+            "url": "#"
           },
           {
-            "label": "Dropdown",
-            "href": "#",
-            "items": [
-              {
-                "label": "Level 2 Item",
-                "href": "#"
-              },
-              {
-                "label": "Active Item",
-                "active": true,
-                "href": "#"
-              },
-              {
-                "label": "An Item with a longer Label",
-                "href": "#"
-              },
-              {
-                "label": "And One last one",
-                "href": "#"
-              }
-            ]
+            "label": "Professional Displays",
+            "url": "#"
           },
           {
-            "label": "One more Item",
-            "href": "#"
+            "label": "LED Displays",
+            "url": "#"
           },
           {
-            "label": "Last Item",
-            "href": "#"
+            "label": "Lösungen",
+            "url": "#"
+          },
+          {
+            "label": "Zubehör",
+            "url": "#"
+          },
+          {
+            "label": "Über Optoma",
+            "url": "#"
+          },
+          {
+            "label": "Support",
+            "url": "#"
           }
         ]
       ]
@@ -101,8 +94,8 @@
         "label": {
           "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/label"
         },
-        "target": {
-          "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/target"
+        "url": {
+          "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/url"
         }
       }
     }

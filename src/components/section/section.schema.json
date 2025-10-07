@@ -16,15 +16,7 @@
       "type": "string",
       "title": "Style",
       "description": "Style of background",
-      "enum": [
-        "stagelights",
-        "horizontalGradient",
-        "verticalGradient",
-        "accentTransition",
-        "boldTransition",
-        "symmetricGlow",
-        "anchorGlow"
-      ],
+      "enum": ["default", "framed", "inset"],
       "default": "default"
     },
     "backgroundColor": {
@@ -33,6 +25,13 @@
       "description": "Color of background",
       "enum": ["default", "accent", "bold"],
       "default": "default"
+    },
+    "transition": {
+      "type": "string",
+      "title": "Style",
+      "description": "Color of background",
+      "enum": ["none", "to-default", "to-accent", "to-bold", "to-inverted"],
+      "default": "none"
     },
     "backgroundImage": {
       "title": "Background image",
@@ -150,13 +149,13 @@
           "title": "Mode",
           "description": "Layout mode used for section contents",
           "enum": ["default", "tile", "list", "slider"],
-          "default": "list"
+          "default": "default"
         },
         "tileWidth": {
           "type": "string",
           "title": "Tile Width",
           "description": "Set min-width for the tiles in the grid",
-          "enum": ["smallest", "default", "medium", "large", "largest"],
+          "enum": ["smallest", "default", "medium", "large", "largest", "full"],
           "default": "default"
         }
       },
@@ -169,10 +168,19 @@
       "items": {
         "anyOf": [
           {
+            "$ref": "http://schema.mydesignsystem.com/business-card.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/content-nav.schema.json"
+          },
+          {
             "$ref": "http://schema.mydesignsystem.com/cta.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/divider.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/downloads.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/faq.schema.json"
@@ -203,6 +211,12 @@
           },
           {
             "$ref": "http://schema.mydesignsystem.com/slider.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/split-even.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/split-weighted.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/stats.schema.json"

@@ -1,6 +1,6 @@
 @use "sass:meta";
 @use "bourbon/core/bourbon";
-@use "./nav-topbar-tokens";
+@use "nav-topbar-tokens";
 
 .dsa-nav-topbar {
   --g-link--text-decoration: none;
@@ -58,6 +58,7 @@
     &--active {
       .dsa-nav-topbar__label {
         color: var(--dsa-nav-topbar__label--color_active);
+        background-color: var(--dsa-nav-topbar__label--background-color_active);
         font-weight: var(--dsa-nav-topbar__label--font-weight_active);
       }
     }
@@ -75,18 +76,24 @@
 
   .dsa-nav-topbar__label {
     display: flex;
-    font: var(--dsa-nav-topbar__label--font);
+    font-family: var(--dsa-nav-topbar__label--font-family);
+    font-size: var(--dsa-nav-topbar__label--font-size);
     font-weight: var(--dsa-nav-topbar__label--font-weight);
     color: var(--dsa-nav-topbar__label--color);
+    background-color: var(--dsa-nav-topbar__label--background-color);
+    border-radius: var(--ks-border-radius-control);
     height: 100%;
     align-items: center;
     padding: var(--dsa-nav-topbar__label--padding);
     text-decoration: var(--dsa-nav-topbar__label--text-decoration);
+    transition: var(--dsa-nav-topbar__label--transition);
+    transition-property: var(--dsa-nav-topbar__label--transition-property);
 
     &:hover,
     &:focus,
     &:active {
       color: var(--dsa-nav-topbar__label--color_hover);
+      background-color: var(--dsa-nav-topbar__label--background-color_hover);
       text-decoration: var(--dsa-nav-topbar__label--text-decoration_hover);
     }
 
@@ -110,5 +117,24 @@
 
   .dsa-nav-topbar__label:not(.dsa-nav-topbar__link) {
     cursor: default;
+  }
+
+  .dsa-nav-topbar__actions {
+    margin-left: var(--ks-spacing-inline-xs);
+    padding-left: var(--ks-spacing-inline-xs);
+    border-left: var(--ks-border-color-default) var(--ks-border-width-default) solid;
+    display: flex;
+    align-items: center;
+
+    .dsa-nav-topbar__button {
+      font-size: var(--dsa-nav-topbar__label--font-size);
+      padding: var(--dsa-nav-topbar__label--padding);
+      color: var(--dsa-nav-topbar__label--color);
+      transition: color var(--ks-transition-hover);
+
+      &:hover {
+        color: var(--dsa-nav-topbar__label--color_hover);
+      }
+    }
   }
 }

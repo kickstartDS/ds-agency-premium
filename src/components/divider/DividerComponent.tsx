@@ -11,9 +11,10 @@ import {
   DividerContextDefault as DsaDividerContextDefault,
   DividerContext as DsaDividerContext,
 } from "@kickstartds/base/lib/divider";
-
 import { DividerProps } from "./DividerProps";
 import "./divider.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./DividerDefaults";
 
 export type { DividerProps };
 
@@ -34,7 +35,7 @@ export const Divider = forwardRef<
   DividerProps & HTMLAttributes<HTMLHRElement>
 >((props, ref) => {
   const Component = useContext(DividerContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Divider.displayName = "Divider";
 

@@ -1,0 +1,55 @@
+@import "../../selectors";
+
+.c-form-check {
+  --dsa-check--background: transparent;
+  --dsa-check--background_checked: var(--ks-color-primary);
+  --dsa-check--background_active: transparent;
+
+  --dsa-check--border: var(--ks-border-width-default) solid;
+  --dsa-check--border-color: var(--ks-border-color-interface-interactive);
+  --dsa-check--border-color_hover: var(--ks-border-color-interface-interactive-hover);
+  --dsa-check--border-color_focus: var(--ks-border-color-interface-interactive-active);
+  --dsa-check--border-color_checked: var(--ks-border-color-interface-interactive-selected);
+
+  --dsa-check--size: 1.5em;
+
+  --dsa-check--shadow_focus: 0 0 0 var(--ks-border-width-emphasized);
+
+  --dsa-check_box--border-radius: min(var(--ks-border-radius-control), calc(var(--dsa-check--size) / 4));
+
+  --dsa-check_radio--border-radius: var(--ks-border-radius-circle);
+  --dsa-check_radio__checkmark--size: calc(var(--dsa-check--size) * 0.5);
+
+  --dsa-check__checkmark--color: var(--dsa-text-color-on-primary);
+
+  --dsa-check__label--font: var(--ks-font-interface-s);
+  --dsa-check__label--font-weight: var(--ks-font-weight-regular);
+  --dsa-check__label--color: var(--ks-text-color-interface);
+  --dsa-check__label--margin-left: 0.5em;
+}
+
+.c-form-field {
+  --dsa-input--color: var(--ks-text-color-interface);
+
+  --dsa-input--border: var(--ks-border-width-default) solid;
+  --dsa-input--border-color: var(--ks-border-color-interface-interactive);
+  --dsa-input--border-color_hover: var(--ks-border-color-interface-interactive-hover);
+  --dsa-input--border-color_focus: var(--ks-border-color-interface-interactive-active);
+  --dsa-input--border-color_active: var(--ks-border-color-interface-interactive-active);
+
+  --dsa-input__label--padding-bottom: 0.25em;
+  --dsa-input__label--color: var(--ks-text-color-interface);
+  --dsa-input__label--font: var(--ks-font-interface-s);
+  --dsa-input__label--font-weight: var(--ks-font-weight-semi-bold);
+
+  --dsa-input--font: var(--ks-font-interface-s);
+
+  --dsa-input--background: transparent;
+  --dsa-input--background_focus: transparent;
+
+  --dsa-input--padding: 0.75em;
+
+  --dsa-input--shadow_focus: 0 0 0 var(--ks-border-width-emphasized);
+
+  --dsa-input__placeholder--color: var(--ks-color-fg-alpha-5);
+}

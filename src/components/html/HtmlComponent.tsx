@@ -5,6 +5,8 @@ import { HtmlProps } from "./HtmlProps";
 import { RichText } from "@kickstartds/base/lib/rich-text";
 import "./Html.client";
 import "./html.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./HtmlDefaults";
 
 export type { HtmlProps };
 
@@ -72,6 +74,6 @@ export const Html = forwardRef<
   HtmlProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(HtmlContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Html.displayName = "Html";

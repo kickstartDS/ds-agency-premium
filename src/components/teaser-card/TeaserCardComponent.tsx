@@ -15,6 +15,8 @@ import { TeaserCardProps } from "./TeaserCardProps";
 import "./teaser-card.scss";
 import { Container } from "@kickstartds/core/lib/container";
 import { compiler } from "markdown-to-jsx";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./TeaserCardDefaults";
 
 export type { TeaserCardProps };
 
@@ -27,47 +29,44 @@ export const TeaserCardContextDefault = forwardRef<
       headline,
       text,
       button,
-      target,
+      url,
       image,
       imageRatio = "wide",
       label,
       layout = "stack",
+      centered = false,
       ...rest
     },
     ref
   ) => (
     <Container name="teaser-card">
-      <TeaserBoxContextDefault
-        {...rest}
+      <div
         className={classnames(
           `dsa-teaser-card`,
-          label && `dsa-teaser-card--label`,
           `dsa-teaser-card--${layout}`,
-          `dsa-teaser-card--${imageRatio}`
+          `dsa-teaser-card--${imageRatio}`,
+          centered && `dsa-teaser-card--centered`,
+          !image && "dsa-teaser-card--no-image"
         )}
-        topic={headline}
-        text={text}
-        // @ts-expect-error
-        renderTopic={() => (
-          <>
-            {label ? (
-              <span className="dsa-teaser-card__label">{label}</span>
-            ) : (
-              ""
-            )}
-            {compiler(headline)}
-          </>
-        )}
-        link={{
-          hidden: button?.hidden,
-          label: button.label,
-          variant: "secondary",
-          target: target,
-          icon: button?.chevron ? "chevron-right" : undefined,
-        }}
-        image={image}
-        ref={ref}
-      />
+      >
+        {label && <span className="dsa-teaser-card__label">{label}</span>}
+        <TeaserBoxContextDefault
+          {...rest}
+          topic={headline}
+          text={text}
+          // @ts-expect-error
+          renderTopic={() => <>{compiler(headline)}</>}
+          link={{
+            hidden: button?.hidden,
+            label: button.label,
+            variant: "secondary",
+            url: url,
+            icon: button?.chevron ? "chevron-right" : undefined,
+          }}
+          image={image}
+          ref={ref}
+        />
+      </div>
     </Container>
   )
 );
@@ -78,7 +77,7 @@ export const TeaserCard = forwardRef<
   TeaserCardProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(TeaserCardContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 TeaserCard.displayName = "TeaserCard";
 
