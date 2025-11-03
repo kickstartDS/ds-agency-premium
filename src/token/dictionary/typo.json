@@ -2,21 +2,21 @@
   "ks": {
     "font-family": {
       "display": {
-        "value": "Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+        "value": "Dosis, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "copy": {
-        "value": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+        "value": "Dosis, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "interface": {
-        "value": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+        "value": "Dosis, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
@@ -46,7 +46,7 @@
         }
       },
       "semi-bold": {
-        "value": 500,
+        "value": 600,
         "token": {
           "category": "Font Weights",
           "presenter": "FontWeight"
@@ -151,10 +151,13 @@
         "bp-factor": {
           "tablet": {
             "value": 1.125
+          },
+          "laptop": {
+            "value": 1.135
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.512rem",
           "attributes": {
             "category": "size"
           },
@@ -164,7 +167,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.64rem",
           "attributes": {
             "category": "size"
           },
@@ -174,7 +177,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.8rem",
           "attributes": {
             "category": "size"
           },
@@ -194,7 +197,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.25rem",
           "attributes": {
             "category": "size"
           },
@@ -204,7 +207,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.5625rem",
           "attributes": {
             "category": "size"
           },
@@ -214,7 +217,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.9531rem",
           "attributes": {
             "category": "size"
           },
@@ -228,10 +231,13 @@
         "bp-factor": {
           "tablet": {
             "value": 1.125
+          },
+          "laptop": {
+            "value": 1.135
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.512rem",
           "attributes": {
             "category": "size"
           },
@@ -241,7 +247,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.64rem",
           "attributes": {
             "category": "size"
           },
@@ -251,7 +257,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.8rem",
           "attributes": {
             "category": "size"
           },
@@ -271,7 +277,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.25rem",
           "attributes": {
             "category": "size"
           },
@@ -281,7 +287,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.5625rem",
           "attributes": {
             "category": "size"
           },
@@ -291,7 +297,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.9531rem",
           "attributes": {
             "category": "size"
           },
@@ -305,10 +311,13 @@
         "bp-factor": {
           "tablet": {
             "value": 1.125
+          },
+          "laptop": {
+            "value": 1.135
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.512rem",
           "attributes": {
             "category": "size"
           },
@@ -318,7 +327,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.64rem",
           "attributes": {
             "category": "size"
           },
@@ -328,7 +337,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.8rem",
           "attributes": {
             "category": "size"
           },
@@ -348,7 +357,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.25rem",
           "attributes": {
             "category": "size"
           },
@@ -358,7 +367,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.5625rem",
           "attributes": {
             "category": "size"
           },
@@ -368,7 +377,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.9531rem",
           "attributes": {
             "category": "size"
           },
