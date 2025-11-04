@@ -73,11 +73,11 @@
             "value": 1.25
           },
           "desktop": {
-            "value": 1.35
+            "value": 1.375
           }
         },
         "xxs-base": {
-          "value": "0.512rem",
+          "value": "0.5428rem",
           "attributes": {
             "category": "size"
           },
@@ -87,7 +87,7 @@
           }
         },
         "xs-base": {
-          "value": "0.64rem",
+          "value": "0.692rem",
           "attributes": {
             "category": "size"
           },
@@ -97,7 +97,7 @@
           }
         },
         "s-base": {
-          "value": "0.8rem",
+          "value": "0.8824rem",
           "attributes": {
             "category": "size"
           },
@@ -107,7 +107,7 @@
           }
         },
         "m-base": {
-          "value": "1rem",
+          "value": "1.125rem",
           "attributes": {
             "category": "size"
           },
@@ -117,7 +117,7 @@
           }
         },
         "l-base": {
-          "value": "1.25rem",
+          "value": "1.4344rem",
           "attributes": {
             "category": "size"
           },
@@ -127,7 +127,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5625rem",
+          "value": "1.8288rem",
           "attributes": {
             "category": "size"
           },
@@ -137,7 +137,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.9531rem",
+          "value": "2.3318rem",
           "attributes": {
             "category": "size"
           },
@@ -153,7 +153,7 @@
             "value": 1.125
           },
           "laptop": {
-            "value": 1.135
+            "value": 1.25
           }
         },
         "xxs-base": {
@@ -233,7 +233,7 @@
             "value": 1.125
           },
           "laptop": {
-            "value": 1.135
+            "value": 1.25
           }
         },
         "xxs-base": {
@@ -313,7 +313,7 @@
             "value": 1.125
           },
           "laptop": {
-            "value": 1.135
+            "value": 1.25
           }
         },
         "xxs-base": {

@@ -22,14 +22,14 @@
   "font": {
     "display": {
       "family": "Dosis, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
-      "font-size": 16,
+      "font-size": 18,
       "line-height": 1.15,
-      "scale-ratio": 1.25,
+      "scale-ratio": 1.275,
       "bp-factor": {
         "phone": 1,
         "tablet": 1.125,
         "laptop": 1.25,
-        "desktop": 1.35
+        "desktop": 1.375
       }
     },
     "copy": {
@@ -39,7 +39,7 @@
       "scale-ratio": 1.25,
       "bp-factor": {
         "tablet": 1.125,
-        "laptop": 1.135
+        "laptop": 1.25
       }
     },
     "interface": {
@@ -49,7 +49,7 @@
       "scale-ratio": 1.25,
       "bp-factor": {
         "tablet": 1.125,
-        "laptop": 1.135
+        "laptop": 1.25
       }
     },
     "mono": {
@@ -59,14 +59,14 @@
       "scale-ratio": 1.25,
       "bp-factor": {
         "tablet": 1.125,
-        "laptop": 1.135
+        "laptop": 1.25
       }
     }
   },
   "font-weight": {
     "light": 300,
     "regular": 400,
-    "semi-bold": 500,
+    "semi-bold": 600,
     "bold": 700
   },
   "spacing": {
