@@ -32,7 +32,7 @@
       "title": "Byline",
       "description": "Small line of text displayed below the logo",
       "type": "string",
-      "default": "© 2024 systemics Inc. All rights reserved."
+      "default": "Made with love in Cologne | © paxconnect 2025"
     },
     "inverted": {
       "type": "boolean",

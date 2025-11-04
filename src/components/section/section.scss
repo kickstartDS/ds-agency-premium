@@ -130,6 +130,10 @@
     );
   }
 
+  &-style--gradient {
+    background-image: var(--dsa-section_gradient--background-image, linear-gradient(90deg, #ec6227 26%, #ed6b76 100%));
+  }
+
   &-style--colorful {
     background-image: var(
       --dsa-section_colorful--background-image,

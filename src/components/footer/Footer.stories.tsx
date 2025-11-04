@@ -10,7 +10,7 @@ const { args, argTypes } = getArgsShared(schema as JSONSchema7);
 export const footerProps = {
   ...unpack(args),
   logo: {
-    src: "/logo.svg",
+    src: "/logo.png",
     srcInverted: "/logo-inverted.svg",
     inverted: false,
     homepageHref: "#",
