@@ -3,324 +3,461 @@ import { headerProps } from "../components/header/Header.stories";
 import { Footer } from "../components/footer/FooterComponent";
 import { footerProps } from "../components/footer/Footer.stories";
 import { Section } from "../components/section/SectionComponent";
-import { Faq } from "../components/faq/FaqComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 import { Testimonials } from "../components/testimonials/TestimonialsComponent";
 import { Cta } from "../components/cta/CtaComponent";
-import { ImageStory } from "../components/image-story/ImageStoryComponent";
-import { ImageText } from "../components/image-text/ImageTextComponent";
 import { Hero } from "../components/hero/HeroComponent";
+import { Logos } from "../components/logos/LogosComponent";
+import { EventLatest } from "../components/event-latest/EventLatestComponent";
+import { Text } from "../components/text/TextComponent";
+import { Slider } from "../components/slider/SliderComponent";
+import { SplitEven } from "../components/split-even/SplitEvenComponent";
+import { TextField } from "@kickstartds/form/lib/text-field";
+import { CheckboxGroup } from "@kickstartds/form/lib/checkbox-group";
+import { SelectField } from "@kickstartds/form/lib/select-field";
+import { Checkbox } from "@kickstartds/form/lib/checkbox";
+import { TextArea } from "@kickstartds/form/lib/text-area";
+import { Button } from "../components/button/ButtonComponent";
+import { Headline } from "@kickstartds/base/lib/headline";
+import { Contact } from "../components/contact/ContactComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating />
+    <Header {...headerProps} />
 
     <Section width="full" spaceAfter="none" spaceBefore="none">
-      <Hero
-        buttons={[
-          {
-            icon: "arrow-down",
-            label: "Explore further",
-            url: "#startit",
-          },
-        ]}
-        headline="Welcome to Our Dynamic Workplace"
-        textbox
-        textPosition="left"
-        height="fullScreen"
-        highlightText
-        image={{
-          indent: "none",
-          src: "https://picsum.photos/seed/kdsvisual/640/270",
-          srcDesktop:
-            "img/colleagues-work-office-using-computers-looking-aside.png",
-          srcMobile:
-            "img/colleagues-work-office-using-computers-looking-aside.png",
-          srcTablet:
-            "img/colleagues-work-office-using-computers-looking-aside.png",
-        }}
-        sub="Where Creativity Meets Innovation"
-        text="Experience the perfect blend of creativity, innovation, and productivity in our modern office environment."
-      />
+      <Slider autoplay arrows>
+        <Hero
+          headline="paxlounge - die Software für smarte Reise-Profis"
+          sub="Das Original seit 2009"
+          textbox
+          textPosition="left"
+          image={{
+            indent: "none",
+            srcDesktop: "img/paxconnect/woman-in-van.png",
+            srcMobile: "img/paxconnect/woman-in-van.png",
+            srcTablet: "img/paxconnect/woman-in-van.png",
+          }}
+        />
+        <Hero
+          headline='"Das System hebt uns von unseren Mitbewerbern ab und wir haben eine gute Rücklaufquote auf die Angebote. Wir möchten die paxlounge nicht mehr missen."'
+          sub="Stefanie Dieters-Galiläa - urlaubsoase.net"
+          text=""
+          textbox
+          textPosition="left"
+          image={{
+            indent: "none",
+            srcDesktop: "img/paxconnect/hero-2.png",
+            srcMobile: "img/paxconnect/hero-2.png",
+            srcTablet: "img/paxconnect/hero-2.png",
+          }}
+        />
+      </Slider>
     </Section>
     <Section
-      id="startit"
-      headline={{
-        text: "Design System Services",
-        sub: "Crafting Consistency, Fostering Growth",
-        switchOrder: true,
-        width: "default",
-        align: "center",
-        textAlign: "center",
-        large: true,
-      }}
-      width="wide"
+      headline={{ text: "Persönliche Angebotswebseiten für Ihre Reisekunden" }}
     >
-      <ImageStory
-        layout="imageLeft"
+      <TeaserCard
+        headline={"Preise & Konditionen"}
         text={`
-Here at Systemics, we bring a range of design system services that can make a difference:
-
-### 1. Design System **Consulting**
-Let's work side by side to shape a design system strategy that aligns perfectly with your goals. It's not just about tools; it's about guiding principles, stakeholder management und making the right decisions at the right time.
-
-### 2. Design System **Creation & Development**
-We'll bring your design system from concept to production, giving you consistent and engaging user experiences across different platforms. We will work together with your digital teams to transfer all complex Figma ideas into code using kickstartDS.
-
-### 3. Headless **CMS & Websites**
-We leverage the power of headless CMSs to provide scalable, flexible, and versatile websites that drive your online presence.
-
-### 4. Design System **Training**
-We empower your digital teams with the knowledge and skills to manage and evolve your design system effectively.
-
-**Ready to make your digital journey exceptional?**`}
-        image={{
-          src: "/img/full-shot-different-people-working-together.png",
-          alt: "Just a decorative illustration",
-          vAlign: "top",
-        }}
-        buttons={[
-          {
-            label: "Reach out today!",
-            icon: "chevron-right",
-            url: "https://app.lemcal.com/@daniel-ley",
-          },
-        ]}
+- Faire Preise ab 24,00 EUR pro Monat
+- Sonderkonditionen für Kooperationen
+- ständige Weiterentwicklung`}
+        url={"#"}
+      />
+      <TeaserCard
+        headline={"... jetzt testen!"}
+        text={`
+- 30 Tage kostenlos
+- ohne Vertragsautomatik
+- inkl. Basis-Webinar`}
+        url={"#"}
       />
     </Section>
 
+    <Section content={{ mode: "list" }} headline={{ text: "Schulungen" }}>
+      <TeaserCard
+        headline="Basis-Webinare"
+        text="Du hast dich zur kostenfreien Testphase angemeldet und möchtest loslegen oder Du arbeitest bereits mit der paxlounge und benötigst einen Refresh?
+
+Dieses Format ist die Grundvoraussetzung für einen schnellen Einstieg in die paxlounge!"
+        layout="row"
+        image="https://www.paxconnect.de/img/webinar/basis.png"
+        url="#"
+        button={{
+          label: "Zu den Terminen",
+        }}
+      />
+      <TeaserCard
+        headline="Aufbau-Webinare"
+        text="Hast Du das Basis-Webinar besucht oder bist bereits vertraut mit der paxlounge, aber möchtest auf dem neuesten Stand sein?
+
+Melde Dich jetzt für das Aufbau-Webinar an, um die paxlounge effektiv in Deinen täglichen Reiseverkäufen zu nutzen!"
+        layout="row"
+        image="https://www.paxconnect.de/img/webinar/aufbau.png"
+        url="#"
+        button={{
+          label: "Zu den Terminen",
+        }}
+      />
+      <TeaserCard
+        headline="Expert-Webinare"
+        text="Du sitzt fest im Sattel und meinst Du hättest schon alles aus der paxlounge herausgeholt? Dann lass Dich in diesem Format überraschen, was noch so alles unter der Haube schlummert.
+
+Schnelle Pferde schneller machen!"
+        layout="row"
+        image="https://www.paxconnect.de/img/webinar/expert.png"
+        url="#"
+        button={{
+          label: "Zu den Terminen",
+        }}
+      />
+      <TeaserCard
+        headline="paxlounge Showroom"
+        text="In diesem Format geht’s um wertvolle Neuigkeiten.
+
+Neuigkeiten rund um die paxlounge, um unsere Systempartner sowie unsere Neuzugänge.
+
+Persönlich, live und informativ."
+        layout="row"
+        image="https://www.paxconnect.de/img/webinar/showroom.png"
+        url="#"
+        button={{
+          label: "Zu den Terminen",
+        }}
+      />
+    </Section>
     <Section
-      style="framed"
-      transition="to-accent"
+      width="wide"
       headline={{
-        text: "No Agency site without some shiny happy Customer",
-        sub: "AI-generated smiles, as you see them everywhere nowadays",
-        textAlign: "left",
+        text: "Systempartner",
       }}
     >
-      <Testimonials
-        layout="slider"
-        testimonial={[
+      <Logos
+        logosPerRow={6}
+        logo={[
           {
-            image: {
-              src: "/img/people/author-emily.png",
-              alt: "Fake Testimonial Portrait",
-            },
-            name: "- Emily Johnson",
-            quote:
-              "Systemics's Design System transformed our development process. The consistency it introduced across our platforms not only saved us time but also boosted our brand's credibility. It's a partnership that continues to pay dividends.",
-            title: "Director of Digital Strategy at EcoTech Solutions",
+            src: "https://www.paxconnect.de/img/partner/A3M.png",
           },
           {
-            image: {
-              src: "/img/people/author-john.png",
-              alt: "Fake Testimonial Portrait",
-            },
-            name: "- John Smith",
-            quote:
-              "Working with Systemics technology has been a game-changer for our brand. Their design system expertise brought harmony to our user experiences, making our digital platforms not just functional, but truly captivating.",
-            title: "Chief Marketing Officer at TechFusion Enterprises",
+            src: "https://www.paxconnect.de/img/partner/adigi.png",
           },
           {
-            image: {
-              src: "/img/people/author-alex.png",
-              alt: "Fake Testimonial Portrait",
-            },
-            name: "- Alex Chen",
-            quote:
-              "As a startup, we needed to hit the ground running. Systemics's approach streamlined our dev and design process, allowing us to scale faster and focus on what truly matters - building a product that stands out in the market.",
-            title: "CEO of LaunchPad Innovations",
+            src: "https://www.paxconnect.de/img/partner/aida.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/amadeus.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/argus.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/atmosfair.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/ATRnew.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/axolot.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bedsonline.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bentourlogo.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bergeundmeer_logo.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bestfewo.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bewo.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/Booking.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/buchdeinvisumwebseite.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/A3M.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/adigi.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/aida.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/amadeus.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/argus.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/atmosfair.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/ATRnew.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/axolot.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bedsonline.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bentourlogo.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bergeundmeer_logo.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bestfewo.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/bewo.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/Booking.png",
+          },
+          {
+            src: "https://www.paxconnect.de/img/partner/buchdeinvisumwebseite.png",
           },
         ]}
       />
     </Section>
-
     <Section
       backgroundColor="accent"
-      width="wide"
-      headline={{
-        text: "Happy Customers Showcases",
-        sub: "We can create something shining for you too!",
-      }}
+      headline={{ text: "News & Neue Systempartner" }}
     >
-      <TeaserCard
-        url="/showcase-techfusion_paid"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        button={{
-          label: "View showcase",
-          chevron: true,
-        }}
-      />
-      <TeaserCard
-        url="/showcase-launchpad_paid"
-        headline="Speed and Scale"
-        label="Freshest Fruit"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        image="/img/showcases/comp_audio01.jpg"
-        button={{
-          label: "View showcase",
-          chevron: true,
-        }}
-      />
-      <TeaserCard
-        url="/showcase-eco_paid"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
-        button={{
-          label: "View showcase",
-          chevron: true,
-        }}
+      <Text
+        text={`
+###Coming soon: AER360 | Cockpit Marketplace – Bald startklar für flexible Reiseideen
+Individuelle Reisen auf den Punkt gebracht: Der Cockpit Marketplace bietet bald modulare Konzepte mit System – ideal für Beratung mit Weitblick.
+<br/>
+<br/>
+<hr/>
+###Coming soon: Troll Tours – Nordlichter in Sichtweite
+Skandinavien, Fjorde & Faröer – Troll Tours ist der Spezialist für den echten Norden. Renommierter Anbieter mit Bausteinen für die ganze nordische Erlebniswelt.
+<br/>
+<br/>
+<hr/>
+###Coming soon: NAAR Reisen | Ihr Spezialist für hochwertige Fernreisen
+Mit Qualitätsanspruch und Liebe zum Detail.
+Coming soon: Bavarian Fernreisen | Der Spezialist für Rundreisen weltweit
+Verwandeln Sie die Reiseträume Ihrer Kunden in unvergessliche Realität.
+<br/>
+<br/>
+<hr/>
+###✅ TUI Tours – Maßarbeit trifft Markenpower
+Individuelle Rundreisen wie aus dem Bilderbuch: Mit TUI Tours stellt ihr modular maßgeschneiderte Reisen zusammen – flexibel, markenstark und voller Möglichkeiten.
+<br/>
+<br/>
+<hr/>
+###✅ Bentour à la Carte – Glück zum Zusammenstellen
+Noch glücklicher unterwegs: Mit Bentour à la Carte konfiguriert ihr persönliche Reisen mit Herz – für Kunden, die das Besondere lieben.
+<br/>
+<br/>
+<hr/>
+###✅ Müller Touren – Wenn Gruppenreise, dann richtig
+Wenn’s ein bisschen lauter sein darf: Müller Touren liefert organisierte Gruppenreisen mit Feierfaktor – ob Kegelklub, Freundeskreis oder Verein, hier trifft Stimmung auf Struktur.
+<br/>
+<br/>
+<hr/>
+###✅ Meier Touren – Kleine Gruppen, großer Anspruch
+Für Genießer mit Anspruch: Meier Touren bringt stilvolle Kurztrips für kleine Gruppen – entspannt, organisiert und mit dem gewissen Extra.
+<br/>
+<br/>
+<hr/>
+###✅ TMG TravelCard – Reiseschutz, der mitdenkt
+Reiseschutz gehört dazu: Die TravelCard stärkt eure Beratung mit transparenten Leistungen, smartem Handling und erfüllt dabei eure Informationspflicht.
+<br/>
+<br/>
+<hr/>
+###✅ Flightbuilder von Schmetterling Air Conso – Fliegen mit System
+Der Flightbuilder unterstützt euch bei der schnellen Auswahl passender Flugverbindungen – effizient integriert in euren Beratungsprozess mit der paxlounge.
+<br/>
+<br/>
+<hr/>
+###✅ Expedia TAAP für die Schweiz
+Planen Sie sich unvergessliche Reisen mit Expedia TAAP! Bald auch für unsere Schweizer Reisebüros in der paxlounge.
+<br/>
+<br/>
+<hr/>
+###✅ Spa Travel – KWenn Reisen zur Regeneration wird.
+Abschalten erwünscht: Spa Travel bringt hochwertige Wellnessreisen für Körper & Kopf – handverlesen, thematisch stark und systematisch kuratiert...`}
       />
     </Section>
-
-    <Section width="wide">
-      <Cta
-        headline="Get in touch and chat with us about getting your product or platform to market faster"
-        backgroundImage="/img/bg/bg_dot-carpet-blue.svg"
-        image={{
-          src: "/img/people/contact-person.png",
-          padding: false,
-        }}
-        buttons={[
+    <Section width="narrow" headline={{ text: "Termine" }}>
+      <EventLatest
+        events={[
           {
-            label: "Contact us",
-            url: "https://app.lemcal.com/@daniel-ley",
-            icon: "person",
+            calendar: {
+              day: "12",
+              month: "Nov",
+            },
+            cta: "Zum Termin",
+            date: "14.11.",
+            location: "Limak Lara | Türkei",
+            title: "Amondo Jahrestagung",
+            url: "https://systemics.events/conference-berlin",
           },
           {
-            label: "Book a meeting",
-            url: "https://app.lemcal.com/@daniel-ley",
-            icon: "date",
+            calendar: {
+              day: "16",
+              month: "Nov",
+            },
+            cta: "Zum Termin",
+            date: "16.11.",
+            title: "Holidayland Jahrestagung",
+            location: "Barut Lara | Türkei",
+            url: "https://uxsummit.de/koeln-2025",
+          },
+          {
+            calendar: {
+              day: "20",
+              month: "Nov",
+            },
+            cta: "Zum Termin",
+            date: "20.11",
+            title: "RTK Dialogtage",
+            location: "XANADU Makadi Bay | Ägypten",
+            url: "https://frontendfuture.de/hamburg",
+          },
+          {
+            calendar: {
+              day: "20",
+              month: "Nov",
+            },
+            cta: "Zum Termin",
+            date: "20.11",
+            title: "Deutscher Reisering Jahrestagung",
+            location: "Gran Hotel Taoro | Teneriffa",
+            url: "https://a11yworkshop.com/dec-2025",
+          },
+          {
+            calendar: {
+              day: "28",
+              month: "Nov",
+            },
+            cta: "Zum Termin",
+            date: "28.11.",
+            title: "BEST-REISEN Jahrestagung",
+            location: "Aldiana Club & Sentido Naga Bay | Ägypten",
+            url: "https://a11yworkshop.com/dec-2025",
           },
         ]}
       />
     </Section>
-
+    <Section>
+      <Testimonials
+        layout="slider"
+        quoteSigns="large"
+        testimonial={[
+          {
+            quote:
+              "Das Feedback ist nur positiv… Oft wird auch direkt aus den Angeboten heraus per Mail ein Buchungsauftrag an uns erteilt. Die Datenübernahme aus Bistro ist einfach zu handhaben.",
+            name: "Kristina Tießen",
+            image: {
+              src: "img/paxconnect/testimonial-1.png",
+              alt: "Alt Text Customer 1",
+            },
+            title: "Nonstop Reisen",
+          },
+          {
+            quote:
+              "… eins ist sicher, paxconnect ist das Genialste, was der Markt seit den letzten 20 Jahren so hergibt und aus unserem Büro nicht mehr wegzudenken.",
+            name: "Sandra Behler",
+            image: {
+              src: "img/paxconnect/testimonial-2.png",
+              alt: "Alt Text Customer 2",
+            },
+            title: "Reisebüro Ehne-Mehne-Weg",
+          },
+          {
+            quote:
+              "paxconnect erleichtert uns die Arbeit immens! Viele unserer Kunden lassen sich telefonisch beraten oder buchen online. Wir konnten durch das Tool unsere Absatzzahlen sowie den Service signifikant verbessern",
+            name: "Sebastian Hosbach",
+            title: "RTS Media Reisen GmbH",
+            image: {
+              src: "img/paxconnect/testimonial-3.png",
+              alt: "Alt Text Customer 3",
+            },
+          },
+        ]}
+      />
+    </Section>
     <Section
-      headline={{
-        text: "Design Systems, all you need to know",
-        sub: "Why Design Systems have gained popularity in digital product development.",
-        large: true,
-        align: "left",
+      content={{
+        mode: "list",
       }}
+      backgroundColor="accent"
+      style="framed"
     >
-      <Faq
-        questions={[
-          {
-            question: "What is a Design System?",
-            answer:
-              "A Design System is a comprehensive set of guidelines, components, and tools that facilitate the consistent creation and maintenance of digital products. It serves as a single source of truth for designers, developers, and content creators, ensuring a cohesive brand identity and user experience across all platforms and devices.",
-          },
-          {
-            question: "What are the benefits of investing in a Design System?",
-            answer:
-              "Investing in a Design System offers numerous benefits, including increased efficiency, improved collaboration, enhanced consistency, and streamlined workflows. It ensures a unified brand voice, facilitates faster product development, and enables teams to create scalable, maintainable, and adaptable digital experiences.",
-          },
-          {
-            question:
-              "How does it help enterprise companies with complex SaaS products?",
-            answer:
-              "We assist enterprise companies by creating tailored Design Systems that cater to the unique requirements of their complex SaaS products. Our approach involves understanding the product's goals, user needs, and brand identity, and then crafting a comprehensive Design System that streamlines workflows, enhances collaboration, and ensures a consistent user experience.",
-          },
-          {
-            question: "Is a Design System not too expensive for a Startup?",
-            answer:
-              "While Design Systems may initially seem expensive, they are a long-term investment that can save startups time, resources, and money in the long run. By establishing a solid foundation for design and development, startups can reduce inconsistencies, minimize rework, and improve overall product quality, which ultimately leads to a more successful and sustainable business.",
-          },
-          {
-            question: "How long does a Design System take to build?",
-            answer:
-              "The time required to build a Design System varies depending on the project's complexity, scope, and specific requirements. On average, a Design System can take anywhere from a few weeks to several months to develop. However, it is essential to remember that a Design System is an evolving entity that requires ongoing maintenance and updates.",
-          },
-          {
-            question:
-              "What's the difference between a Design System and a Style Guide?",
-            answer:
-              "A Style Guide is a subset of a Design System, focusing primarily on the visual aspects of a brand, such as colors, typography, and iconography. A Design System, on the other hand, is a more comprehensive framework that encompasses not only visual elements but also components, patterns, guidelines, and tools for design, development, and content creation.",
-          },
-          {
-            question: "How much does a Design System cost?",
-            answer:
-              "The cost of a Design System varies depending on factors such as project scope, complexity, and specific requirements. It is essential to view a Design System as a long-term investment that yields significant returns in terms of improved efficiency, reduced rework, and enhanced brand consistency. If you start at zero and the design system should serve at least 5 digital touchpoints, it could take months to years to develop all the code base. We believe in tailored solutions, so get in touch with us to discuss your specific requirements. As we work with kickstartDS, you can save lots of money because all the main concepts and aspects are already covered. Invest in its paid modules is really low in comparison to the development time you normally need to spend. For the rest, we'll provide you with a transparent, customized quote that aligns with your goals.",
-          },
-        ]}
+      <Headline text={"Sie haben Fragen zu unseren Produkten?"} level={"h1"} />
+      <SplitEven
+        contentMinWidth="narrow"
+        firstComponents={
+          <>
+            <Contact
+              image={{
+                alt: "Picture of Isabella Doe",
+                aspectRatio: "wide",
+                fullWidth: true,
+                src: "img/people/contact-isabella.png",
+              }}
+              copy="Wir beraten Sie gerne rund um Ihre Fragen zu unseren Produkten.
+Nutzen Sie unser Kontaktformular oder rufen Sie uns an."
+              links={[
+                {
+                  icon: "phone",
+                  label: "0221 - 25 88 78 0",
+                  newTab: false,
+                  url: "#",
+                },
+              ]}
+              subtitle="Kontakt für Produktanfragen"
+              title="Isabella Doe"
+            />
+          </>
+        }
+        secondComponents={
+          <>
+            <TextField label="Agenturname" />
+            <SelectField
+              label="Anrede"
+              options={[
+                {
+                  label: "Frau",
+                  value: "frau",
+                },
+                {
+                  label: "Herr",
+                  value: "herr",
+                },
+                { label: "Divers", value: "divers" },
+              ]}
+            />
+            <TextField label="Name" />
+            <TextField label="Email" />
+            <TextField label="Telefonnummer" />
+            <Checkbox label="Ich akzeptiere die Datenschutzerklärung" />
+            <TextArea label="Ihre Nachricht" />
+            <Button label="Nachricht senden" />
+          </>
+        }
       />
     </Section>
 
-    <Section width="wide" spaceBefore="none" spaceAfter="small">
-      <ImageText
-        image={{
-          src: "/img/office-divider-image.png",
-          alt: "Photorealistic image Super wide scale of a view into a hyper modern design & web development agency, glass walls, no people, wide angle, blade runner movie like aesthetics, neon-light, lens-flare, pink, blue, and cyan color tonality, wide angle, sharp, ",
-        }}
-        text={""}
-        layout={"above"}
-      />
-    </Section>
-
-    <Section
-      headline={{
-        text: "Headless CMS for the modern web",
-        sub: "Frequently asked questions",
-      }}
-    >
-      <Faq
-        questions={[
-          {
-            question: "How do Headless CMSs fit into the picture?",
-            answer:
-              "A Headless CMS fits perfectly into the picture by offering a content-first approach that complements a Design System. It decouples the back-end content repository from the front-end presentation layer, allowing for seamless integration with any design system. The result is a flexible, scalable, and platform-agnostic system that ensures content consistency across all platforms and devices.",
-          },
-          {
-            question:
-              "How does the combination of Headless CMS and Design System create value?",
-            answer:
-              "The combination of a Headless CMS and a Design System creates value by enhancing efficiency, consistency, and scalability. A Headless CMS allows for seamless content management across various platforms, while a Design System ensures a consistent user experience and brand identity. Together, they enable teams to create and manage digital experiences more effectively, resulting in improved user engagement and business growth.",
-          },
-          {
-            question: "Is transitioning to a Headless Web complicated?",
-            answer:
-              "Transitioning to a Headless Web can be a significant change, but it doesn't have to be complicated. With the right planning, tools, and expertise, the transition can be smooth and beneficial. It's about understanding your specific needs and goals, choosing the right Headless CMS, and effectively integrating it with your Design System.",
-          },
-          {
-            question:
-              "How can I ensure a consistent design across various channels with a Headless Web setup? ",
-            answer:
-              "Ensuring a consistent design across various channels with a Headless Web setup is achieved through the integration of a Design System. The Design System serves as a single source of truth for design elements and guidelines, ensuring a unified brand identity and user experience across all platforms and devices. Combined with the platform-agnostic nature of a Headless CMS, you can deliver a consistent and engaging user experience across all channels.",
-          },
-        ]}
-      />
-    </Section>
-
-    <Section width="wide">
-      <Cta
-        highlightText
-        textAlign="center"
-        headline="Ready to embark on a transformative digital journey?"
-        sub="Reach out to us for insights and solutions that seamlessly merge design systems and headless web architecture."
-        buttons={[
-          {
-            label: "Contact us",
-            url: "https://app.lemcal.com/@daniel-ley",
-            icon: "person",
-          },
-          {
-            label: "Book a meeting",
-            url: "https://app.lemcal.com/@daniel-ley",
-            icon: "date",
-          },
-        ]}
-      />
-    </Section>
     <Footer {...footerProps} />
   </>
 );
 
 export default {
-  title: "Page Archetypes/Landingpage",
+  title: "Demo Page/Landingpage",
   render: Page,
   parameters: {
     layout: "fullscreen",
