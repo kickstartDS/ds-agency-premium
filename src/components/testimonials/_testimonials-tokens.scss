@@ -25,7 +25,8 @@
   --dsa-testimonials__byline--font-weight: var(--ks-font-weight-regular);
   --dsa-testimonials__byline--color: var(--ks-text-color-copy);
 
-  --dsa-testimonials__image--max-width: 40%;
+  --dsa-testimonials__image--border-radius: var(--ks-border-radius-surface);
+  --dsa-testimonials__image--max-width: 30%;
 
   @container quote (min-width: 640px) {
     --dsa-testimonials__image--max-width: 40%;

@@ -10,36 +10,52 @@ import { Hero } from "../components/hero/HeroComponent";
 import { Logos } from "../components/logos/LogosComponent";
 import { EventLatest } from "../components/event-latest/EventLatestComponent";
 import { Text } from "../components/text/TextComponent";
+import { Slider } from "../components/slider/SliderComponent";
+import { SplitEven } from "../components/split-even/SplitEvenComponent";
+import { TextField } from "@kickstartds/form/lib/text-field";
+import { CheckboxGroup } from "@kickstartds/form/lib/checkbox-group";
+import { SelectField } from "@kickstartds/form/lib/select-field";
+import { Checkbox } from "@kickstartds/form/lib/checkbox";
+import { TextArea } from "@kickstartds/form/lib/text-area";
+import { Button } from "../components/button/ButtonComponent";
+import { Headline } from "@kickstartds/base/lib/headline";
+import { Contact } from "../components/contact/ContactComponent";
 
 const Page = () => (
   <>
     <Header {...headerProps} />
 
     <Section width="full" spaceAfter="none" spaceBefore="none">
-      <Hero
-        buttons={[
-          {
-            icon: "arrow-down",
-            label: "Explore further",
-            url: "#startit",
-          },
-        ]}
-        headline="paxlounge - die Software für smarte Reise-Profis"
-        sub="Das Original seit 2009"
-        textbox
-        textPosition="left"
-        highlightText
-        image={{
-          indent: "none",
-          src: "img/paxconnect/woman-in-van.png",
-          srcDesktop: "img/paxconnect/woman-in-van.png",
-          srcMobile: "img/paxconnect/woman-in-van.png",
-          srcTablet: "img/paxconnect/woman-in-van.png",
-        }}
-      />
+      <Slider autoplay arrows>
+        <Hero
+          headline="paxlounge - die Software für smarte Reise-Profis"
+          sub="Das Original seit 2009"
+          textbox
+          textPosition="left"
+          image={{
+            indent: "none",
+            srcDesktop: "img/paxconnect/woman-in-van.png",
+            srcMobile: "img/paxconnect/woman-in-van.png",
+            srcTablet: "img/paxconnect/woman-in-van.png",
+          }}
+        />
+        <Hero
+          headline='"Das System hebt uns von unseren Mitbewerbern ab und wir haben eine gute Rücklaufquote auf die Angebote. Wir möchten die paxlounge nicht mehr missen."'
+          sub="Stefanie Dieters-Galiläa - urlaubsoase.net"
+          text=""
+          textbox
+          textPosition="left"
+          image={{
+            indent: "none",
+            srcDesktop: "img/paxconnect/hero-2.png",
+            srcMobile: "img/paxconnect/hero-2.png",
+            srcTablet: "img/paxconnect/hero-2.png",
+          }}
+        />
+      </Slider>
     </Section>
     <Section
-      headline={{ text: "persönliche Angebotswebseiten für Ihre Reisekunden" }}
+      headline={{ text: "Persönliche Angebotswebseiten für Ihre Reisekunden" }}
     >
       <TeaserCard
         headline={"Preise & Konditionen"}
@@ -275,7 +291,7 @@ Planen Sie sich unvergessliche Reisen mit Expedia TAAP! Bald auch für unsere Sc
 Abschalten erwünscht: Spa Travel bringt hochwertige Wellnessreisen für Körper & Kopf – handverlesen, thematisch stark und systematisch kuratiert...`}
       />
     </Section>
-    <Section headline={{ text: "Termine" }}>
+    <Section width="narrow" headline={{ text: "Termine" }}>
       <EventLatest
         events={[
           {
@@ -346,7 +362,7 @@ Abschalten erwünscht: Spa Travel bringt hochwertige Wellnessreisen für Körper
               "Das Feedback ist nur positiv… Oft wird auch direkt aus den Angeboten heraus per Mail ein Buchungsauftrag an uns erteilt. Die Datenübernahme aus Bistro ist einfach zu handhaben.",
             name: "Kristina Tießen",
             image: {
-              src: "https://www.paxconnect.de/img/kundenmeinungen/3.png",
+              src: "img/paxconnect/testimonial-1.png",
               alt: "Alt Text Customer 1",
             },
             title: "Nonstop Reisen",
@@ -356,7 +372,7 @@ Abschalten erwünscht: Spa Travel bringt hochwertige Wellnessreisen für Körper
               "… eins ist sicher, paxconnect ist das Genialste, was der Markt seit den letzten 20 Jahren so hergibt und aus unserem Büro nicht mehr wegzudenken.",
             name: "Sandra Behler",
             image: {
-              src: "https://www.paxconnect.de/img/kundenmeinungen/2.png",
+              src: "img/paxconnect/testimonial-2.png",
               alt: "Alt Text Customer 2",
             },
             title: "Reisebüro Ehne-Mehne-Weg",
@@ -367,29 +383,72 @@ Abschalten erwünscht: Spa Travel bringt hochwertige Wellnessreisen für Körper
             name: "Sebastian Hosbach",
             title: "RTS Media Reisen GmbH",
             image: {
-              src: "https://www.paxconnect.de/img/kundenmeinungen/21.png",
+              src: "img/paxconnect/testimonial-3.png",
               alt: "Alt Text Customer 3",
             },
           },
         ]}
       />
     </Section>
-    <Section>
-      <Cta
-        headline="Sie haben Fragen zu unseren Produkten?"
-        text="Wir beraten Sie gerne rund um Ihre Fragen zu unseren Produkten.
-Nutzen Sie unser Kontaktformular oder rufen Sie uns an.<br/>
-[0221 - 25 88 78 0](#)"
-        buttons={[{ label: "Kontaktformular aufrufen", url: "#" }]}
-        image={{
-          padding: false,
-          align: "center",
-          src: "img/people/contact-person.png",
-        }}
-        order={{
-          mobileImageLast: false,
-          desktopImageLast: false,
-        }}
+    <Section
+      content={{
+        mode: "list",
+      }}
+      backgroundColor="accent"
+      style="framed"
+    >
+      <Headline text={"Sie haben Fragen zu unseren Produkten?"} level={"h1"} />
+      <SplitEven
+        contentMinWidth="narrow"
+        firstComponents={
+          <>
+            <Contact
+              image={{
+                alt: "Picture of Isabella Doe",
+                aspectRatio: "wide",
+                fullWidth: true,
+                src: "img/people/contact-isabella.png",
+              }}
+              copy="Wir beraten Sie gerne rund um Ihre Fragen zu unseren Produkten.
+Nutzen Sie unser Kontaktformular oder rufen Sie uns an."
+              links={[
+                {
+                  icon: "phone",
+                  label: "0221 - 25 88 78 0",
+                  newTab: false,
+                  url: "#",
+                },
+              ]}
+              subtitle="Kontakt für Produktanfragen"
+              title="Isabella Doe"
+            />
+          </>
+        }
+        secondComponents={
+          <>
+            <TextField label="Agenturname" />
+            <SelectField
+              label="Anrede"
+              options={[
+                {
+                  label: "Frau",
+                  value: "frau",
+                },
+                {
+                  label: "Herr",
+                  value: "herr",
+                },
+                { label: "Divers", value: "divers" },
+              ]}
+            />
+            <TextField label="Name" />
+            <TextField label="Email" />
+            <TextField label="Telefonnummer" />
+            <Checkbox label="Ich akzeptiere die Datenschutzerklärung" />
+            <TextArea label="Ihre Nachricht" />
+            <Button label="Nachricht senden" />
+          </>
+        }
       />
     </Section>
 
