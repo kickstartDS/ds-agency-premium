@@ -2,21 +2,21 @@
   "ks": {
     "font-family": {
       "display": {
-        "value": "Fredoka, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+        "value": "Dosis, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "copy": {
-        "value": "Mulish, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+        "value": "Dosis, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "interface": {
-        "value": "Mulish, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+        "value": "Dosis, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
@@ -45,13 +45,6 @@
           "presenter": "FontWeight"
         }
       },
-      "medium": {
-        "value": 500,
-        "token": {
-          "category": "Font Weights",
-          "presenter": "FontWeight"
-        }
-      },
       "semi-bold": {
         "value": 600,
         "token": {
@@ -71,26 +64,20 @@
       "display": {
         "bp-factor": {
           "phone": {
-            "value": 1.125
+            "value": 1
           },
           "tablet": {
-            "value": 1.5
+            "value": 1.125
           },
           "laptop": {
-            "value": 1.5
+            "value": 1.25
           },
           "desktop": {
-            "value": 1.75
-          },
-          "widescreen": {
-            "value": 2.25
-          },
-          "tv": {
-            "value": 2.75
+            "value": 1.375
           }
         },
         "xxs-base": {
-          "value": "0.68rem",
+          "value": "0.5428rem",
           "attributes": {
             "category": "size"
           },
@@ -100,7 +87,7 @@
           }
         },
         "xs-base": {
-          "value": "0.833rem",
+          "value": "0.692rem",
           "attributes": {
             "category": "size"
           },
@@ -110,7 +97,7 @@
           }
         },
         "s-base": {
-          "value": "1.0204rem",
+          "value": "0.8824rem",
           "attributes": {
             "category": "size"
           },
@@ -120,7 +107,7 @@
           }
         },
         "m-base": {
-          "value": "1.25rem",
+          "value": "1.125rem",
           "attributes": {
             "category": "size"
           },
@@ -130,7 +117,7 @@
           }
         },
         "l-base": {
-          "value": "1.5313rem",
+          "value": "1.4344rem",
           "attributes": {
             "category": "size"
           },
@@ -140,7 +127,7 @@
           }
         },
         "xl-base": {
-          "value": "1.8758rem",
+          "value": "1.8288rem",
           "attributes": {
             "category": "size"
           },
@@ -150,7 +137,7 @@
           }
         },
         "xxl-base": {
-          "value": "2.2978rem",
+          "value": "2.3318rem",
           "attributes": {
             "category": "size"
           },
@@ -165,15 +152,12 @@
           "tablet": {
             "value": 1.125
           },
-          "widescreen": {
-            "value": 1.35
-          },
-          "tv": {
-            "value": 1.65
+          "laptop": {
+            "value": 1.25
           }
         },
         "xxs-base": {
-          "value": "0.612rem",
+          "value": "0.512rem",
           "attributes": {
             "category": "size"
           },
@@ -183,7 +167,7 @@
           }
         },
         "xs-base": {
-          "value": "0.7497rem",
+          "value": "0.64rem",
           "attributes": {
             "category": "size"
           },
@@ -193,7 +177,7 @@
           }
         },
         "s-base": {
-          "value": "0.9184rem",
+          "value": "0.8rem",
           "attributes": {
             "category": "size"
           },
@@ -203,7 +187,7 @@
           }
         },
         "m-base": {
-          "value": "1.125rem",
+          "value": "1rem",
           "attributes": {
             "category": "size"
           },
@@ -213,7 +197,7 @@
           }
         },
         "l-base": {
-          "value": "1.3781rem",
+          "value": "1.25rem",
           "attributes": {
             "category": "size"
           },
@@ -223,7 +207,7 @@
           }
         },
         "xl-base": {
-          "value": "1.6882rem",
+          "value": "1.5625rem",
           "attributes": {
             "category": "size"
           },
@@ -233,7 +217,7 @@
           }
         },
         "xxl-base": {
-          "value": "2.068rem",
+          "value": "1.9531rem",
           "attributes": {
             "category": "size"
           },
@@ -248,15 +232,12 @@
           "tablet": {
             "value": 1.125
           },
-          "widescreen": {
-            "value": 1.35
-          },
-          "tv": {
-            "value": 1.65
+          "laptop": {
+            "value": 1.25
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.512rem",
           "attributes": {
             "category": "size"
           },
@@ -266,7 +247,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.64rem",
           "attributes": {
             "category": "size"
           },
@@ -276,7 +257,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.8rem",
           "attributes": {
             "category": "size"
           },
@@ -296,7 +277,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.25rem",
           "attributes": {
             "category": "size"
           },
@@ -306,7 +287,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.5625rem",
           "attributes": {
             "category": "size"
           },
@@ -316,7 +297,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.9531rem",
           "attributes": {
             "category": "size"
           },
@@ -331,15 +312,12 @@
           "tablet": {
             "value": 1.125
           },
-          "widescreen": {
-            "value": 1.35
-          },
-          "tv": {
-            "value": 1.65
+          "laptop": {
+            "value": 1.25
           }
         },
         "xxs-base": {
-          "value": "0.612rem",
+          "value": "0.512rem",
           "attributes": {
             "category": "size"
           },
@@ -349,7 +327,7 @@
           }
         },
         "xs-base": {
-          "value": "0.7497rem",
+          "value": "0.64rem",
           "attributes": {
             "category": "size"
           },
@@ -359,7 +337,7 @@
           }
         },
         "s-base": {
-          "value": "0.9184rem",
+          "value": "0.8rem",
           "attributes": {
             "category": "size"
           },
@@ -369,7 +347,7 @@
           }
         },
         "m-base": {
-          "value": "1.125rem",
+          "value": "1rem",
           "attributes": {
             "category": "size"
           },
@@ -379,7 +357,7 @@
           }
         },
         "l-base": {
-          "value": "1.3781rem",
+          "value": "1.25rem",
           "attributes": {
             "category": "size"
           },
@@ -389,7 +367,7 @@
           }
         },
         "xl-base": {
-          "value": "1.6882rem",
+          "value": "1.5625rem",
           "attributes": {
             "category": "size"
           },
@@ -399,7 +377,7 @@
           }
         },
         "xxl-base": {
-          "value": "2.068rem",
+          "value": "1.9531rem",
           "attributes": {
             "category": "size"
           },

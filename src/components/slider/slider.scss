@@ -35,8 +35,14 @@
 
   --c-slider_arrow--color: var(--dsa-slider__arrow--color, var(--ks-text-color-interface-interactive));
 
+  position: relative;
+
   &__nav {
     margin-top: var(--ks-spacing-stack-m);
+  }
+
+  .c-slider__arrows {
+    top: 50%;
   }
 
   .c-slider__nav {
@@ -60,7 +66,8 @@
 
       .c-slider__bullet {
         display: block;
-        transition: border-color var(--ks-transition-hover);
+        transition: var(--ks-transition-hover);
+        transition-property: border-color, background-color;
       }
     }
   }

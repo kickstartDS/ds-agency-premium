@@ -1,0 +1,24 @@
+:root,
+[ks-theme],
+[ks-inverted] {
+  //Global token for calculation of header height
+  --dsa-header--height: calc(var(--dsa-logo--height) + var(--dsa-header--spacing-vertical) * 2);
+  --dsa-header--spacing-vertical: var(--ks-spacing-inset-l);
+  --dsa-header--spacing-horizontal: var(--ks-spacing-inset-xl);
+  --dsa-header_floating--spacing-horizontal: var(--ks-spacing-inset-l);
+  --dsa-header_open--shadow: 0 0 0 100px var(--ks-color-fg-alpha-3);
+
+  @media (min-width: 62em) {
+    --dsa-header--spacing-horizontal: var(--dsa-content--horizontal-spacing);
+  }
+}
+
+.dsa-header {
+  --dsa-header--max-width: var(--dsa-content--width_default);
+  --dsa-header--background: var(--ks-background-color-default);
+
+  --dsa-header_floating--background: var(--dsa-overlay-box_opaque--background-color);
+  --dsa-header_floating--backdrop-filter: var(--dsa-overlay-box_opaque--backdrop-filter);
+
+  --dsa-header__logo--height: var(--dsa-logo--height);
+}

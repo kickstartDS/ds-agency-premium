@@ -1,4 +1,4 @@
-# kickstartDS Premium Agency Starter
+# kickstartDS Premium Agency Starter.
 
 kickstartDS Agency Starter is a specialized version of the kickstartDS Starter, tailored for digital agencies. It provides a set of content components that can be used to style marketing pages, while maintaining the flexibility and customizability of the original starter. This repository contains the kickstartDS Premium Agency Starter... which includes more visually rich content components based off of our [kickstartDS Content module](https://www.kickstartds.com/content-module/).
 

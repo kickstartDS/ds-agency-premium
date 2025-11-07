@@ -35,12 +35,12 @@ export const Banner: Story = {
     buttons: [
       {
         label: "Contact Us",
-        target: "#",
+        url: "#",
         icon: "person",
       },
       {
         label: "Learn More",
-        target: "#",
+        url: "#",
         icon: "date",
       },
     ],
@@ -63,7 +63,7 @@ export const Highlighted: Story = {
     buttons: [
       {
         label: "Get Started",
-        target: "#",
+        url: "#",
         icon: "person",
       },
     ],
@@ -84,7 +84,7 @@ export const LeftAligned: Story = {
     buttons: [
       {
         label: "Learn More",
-        target: "#",
+        url: "#",
         icon: "person",
       },
     ],
@@ -104,7 +104,7 @@ export const ProductAdvertisement: Story = {
     text: "Our over-ear headphones provide an immersive audio experience. With noise-cancellation technology and high-quality sound.",
     backgroundImage: "img/bg_dot-carpet-blue.svg",
     highlightText: true,
-    width: "wide",
+    padding: true,
     order: {
       desktopImageLast: false,
     },
@@ -116,14 +116,12 @@ export const ProductAdvertisement: Story = {
     buttons: [
       {
         label: "Shop Now",
-        target: "/shop",
-        variant: "primary",
+        url: "/shop",
         icon: "chevron-right",
       },
       {
         label: "Learn More",
-        target: "/product-info",
-        variant: "secondary",
+        url: "/product-info",
       },
     ],
   }),
@@ -140,10 +138,9 @@ export const ContactBanner: Story = {
     headline: "Get in touch",
     sub: "Chat with us about getting your product or platform to market faster",
     text: "Our modular design approach allows for flexibility and scalability in your application's architecture.",
-    width: "wide",
-    fullWidth: true,
+    padding: true,
     image: {
-      src: "img/contact-person.png",
+      src: "img/people/contact-person.png",
       padding: false,
     },
     order: {
@@ -153,12 +150,12 @@ export const ContactBanner: Story = {
       {
         label: "Contact us",
         icon: "person",
-        target: "#",
+        url: "#",
       },
       {
         label: "Book a meeting",
         icon: "date",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -175,9 +172,8 @@ export const SplitBanner: Story = {
     headline: "Design System Services",
     text: "Here at Systemics, we bring a range of design system services that can make a difference.",
     colorNeutral: true,
-    backgroundColor: "#001856",
-    width: "wide",
-    fullWidth: true,
+    backgroundColor: "#d9e4ff",
+    padding: true,
     order: {
       desktopImageLast: false,
     },
@@ -189,7 +185,7 @@ export const SplitBanner: Story = {
       {
         label: "What can we do for you?",
         icon: "person",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -207,8 +203,7 @@ export const AngledImage: Story = {
     text: `We value efficiency without compromising quality. Our secret weapon? kickstartDS, a revolutionary code-first and open source framework for creating design systems.
 
 This tool accelerates our development, saving you valuable time and helping us deliver top-notch results faster.`,
-    width: "wide",
-    fullWidth: true,
+    padding: true,
     image: {
       src: "img/angled-image.png",
       padding: false,
@@ -220,12 +215,12 @@ This tool accelerates our development, saving you valuable time and helping us d
       {
         label: "Contact us",
         icon: "person",
-        target: "#",
+        url: "#",
       },
       {
         label: "Book a meeting",
         icon: "date",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -243,15 +238,16 @@ export const ColoredBanner: Story = {
     text: "Leverage our expertise in creating scalable and robust applications using modern technologies.",
     highlightText: true,
     colorNeutral: true,
-    backgroundColor: "#a30051",
+    backgroundColor: "#ffd4ea",
+    padding: true,
     buttons: [
       {
         label: "Learn More",
-        target: "#",
+        url: "#",
       },
       {
         label: "Contact Us",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -270,9 +266,7 @@ export const AlignBottom: Story = {
 
 We understand that every business is different, and that's why we offer custom solutions tailored to your specific business needs and requirements.`,
     backgroundImage: "img/grid-bg.svg",
-    width: "wide",
-    fullWidth: true,
-    contentAlign: "bottom",
+    align: "bottom",
     image: {
       src: "img/offset-image.png",
     },
@@ -283,9 +277,9 @@ We understand that every business is different, and that's why we offer custom s
       {
         label: "Contact us",
         icon: "person",
-        target: "#",
+        url: "#",
       },
-      { label: "Book a meeting", icon: "date", target: "#" },
+      { label: "Book a meeting", icon: "date", url: "#" },
     ],
   }),
 };

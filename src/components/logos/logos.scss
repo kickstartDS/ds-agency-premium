@@ -1,4 +1,4 @@
-@use "./logos-tokens.scss";
+@use "logos-tokens.scss";
 
 .dsa-logos {
   .c-logo-tiles {
@@ -101,6 +101,13 @@
     margin: 0;
 
     .c-logo-tiles__col {
+      background-color: var(--ks-background-color-default-base);
+      box-shadow:
+        0 0 2px 2px rgba(0, 0, 0, 0.025),
+        0px 3px 4px 2px rgba(0, 0, 0, 0.015),
+        0px 6px 8px 4px rgba(0, 0, 0, 0.035);
+
+      border-radius: var(--ks-border-radius-card);
       margin: 0;
       aspect-ratio: 16/9;
       display: flex;

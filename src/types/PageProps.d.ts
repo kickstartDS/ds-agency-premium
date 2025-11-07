@@ -7,67 +7,49 @@ declare module "@kickstartds/page.schema.json/lib/page/typing" {
  */
 
 import type {SectionProps} from "@kickstartds/base/lib/section/typing";
+import type {SeoProps} from "@kickstartds/seo.schema.json/lib/seo/typing";
 
-/**
- * Identifying uuid for the page
- */
-export type ID = string;
-/**
- * URL slug for the page
- */
-export type Slug = string;
-/**
- * Choose a layout for the page
- */
-export type Layout = "default" | "content" | "blog-list" | "blog-detail" | "glossary";
-/**
- * Title used for the page
- */
-export type Title = string;
-/**
- * Description used for the page
- */
-export type Description = string;
-/**
- * Keywords used for the page
- */
-export type Keywords = string;
-/**
- * Preview image used for the page
- */
-export type PreviewImage = string;
-/**
- * Card preview image (larger, e.g. Twitter) used for the page
- */
-export type CardPreviewImage = string;
 /**
  * Collection of sections (with their contents) to render on the page
  */
 export type Sections = SectionProps[];
 /**
- * Last update date for the page
+ * Toggle default floating header behaviour set in global settings
  */
-export type Updated = string;
+export type ToggleFloating = boolean;
 /**
- * Creation date for the page
+ * Toggle default inverted header behaviour set in global settings
  */
-export type Created = string;
+export type ToggleInverted = boolean;
+/**
+ * Toggle default inverted footer behaviour set in global settings
+ */
+export type ToggleInverted1 = boolean;
 
 /**
  * Abstracts a page concept into JSON schema
  */
 export interface PageProps {
-  id: ID;
-  slug: Slug;
-  layout: Layout;
-  title: Title;
-  description?: Description;
-  keywords?: Keywords;
-  image?: PreviewImage;
-  cardImage?: CardPreviewImage;
-  sections?: Sections;
-  updated?: Updated;
-  created?: Created;
+  section?: Sections;
+  header?: Header;
+  footer?: Footer;
+  /**
+   * Referenced component SeoProps
+   */
+  seo: SeoProps;
+}
+/**
+ * Header settings for the page
+ */
+export interface Header {
+  floating?: ToggleFloating;
+  inverted?: ToggleInverted;
+}
+/**
+ * Footer settings for the page
+ */
+export interface Footer {
+  inverted?: ToggleInverted1;
 }
 
 }
