@@ -4,9 +4,9 @@ import { Icon } from "@kickstartds/base/lib/icon";
 import { Button } from "../button/ButtonComponent";
 import { FeatureProps } from "./FeatureProps";
 import { Link } from "@kickstartds/base/lib/link";
-import { RichText } from "@kickstartds/base/lib/rich-text";
 import { deepMergeDefaults } from "../helpers";
 import defaults from "./FeatureDefaults";
+import Markdown from "markdown-to-jsx";
 
 export type { FeatureProps };
 
@@ -47,7 +47,7 @@ export const FeatureContextDefault = forwardRef<
     </div>
     {text || cta.style === "intext" ? (
       <p className="dsa-feature__text">
-        <RichText text={text} />
+        <Markdown>{text}</Markdown>
         {cta.style === "intext" && cta.toggle ? (
           <>
             &#32;{" "}
