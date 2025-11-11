@@ -7,7 +7,6 @@ import { Faq } from "../components/faq/FaqComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 import { Testimonials } from "../components/testimonials/TestimonialsComponent";
 import { Cta } from "../components/cta/CtaComponent";
-import { ImageStory } from "../components/image-story/ImageStoryComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
 import { Hero } from "../components/hero/HeroComponent";
 
@@ -30,47 +29,21 @@ const Page = () => (
         }}
       />
     </Section>
-    <Section
-      id="startit"
-      headline={{
-        text: "Design System Services",
-        sub: "Crafting Consistency, Fostering Growth",
-        switchOrder: true,
-        width: "default",
-        align: "center",
-        textAlign: "center",
-        large: true,
-      }}
-      width="wide"
-    >
-      <ImageStory
-        layout="imageLeft"
-        text={`
-Here at Systemics, we bring a range of design system services that can make a difference:
-
-### 1. Design System **Consulting**
-Let's work side by side to shape a design system strategy that aligns perfectly with your goals. It's not just about tools; it's about guiding principles, stakeholder management und making the right decisions at the right time.
-
-### 2. Design System **Creation & Development**
-We'll bring your design system from concept to production, giving you consistent and engaging user experiences across different platforms. We will work together with your digital teams to transfer all complex Figma ideas into code using kickstartDS.
-
-### 3. Headless **CMS & Websites**
-We leverage the power of headless CMSs to provide scalable, flexible, and versatile websites that drive your online presence.
-
-### 4. Design System **Training**
-We empower your digital teams with the knowledge and skills to manage and evolve your design system effectively.
-
-**Ready to make your digital journey exceptional?**`}
+    <Section width="wide" id="startit">
+      <Cta
+        highlightText
+        headline="Sie benötigen einen Stromvertrag?"
+        text="Hier finden Sie Ihren richtigen Stromtarif zum kleinen Preis!
+Treffen Sie Ihre Auswahl:"
         image={{
-          src: "/img/full-shot-different-people-working-together.png",
-          alt: "Just a decorative illustration",
-          vAlign: "top",
+          src: "/img/gws/green-energy-with-hand-holding-environmental-light-bulb-background-20.png",
         }}
         buttons={[
           {
-            label: "Reach out today!",
-            icon: "chevron-right",
-            url: "https://app.lemcal.com/@daniel-ley",
+            label: "Privatstrom",
+          },
+          {
+            label: "Gewerbestrom",
           },
         ]}
       />
