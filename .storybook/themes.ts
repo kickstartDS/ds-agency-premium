@@ -36,5 +36,5 @@ export const light = create({
 
   brandTitle: "Your kickstartDS Storybook",
   brandUrl: "https://www.kickstartDS.com",
-  brandImage: "/logo.svg",
+  brandImage: "/logo.png",
 });

@@ -1,12 +1,14 @@
 {
   "color": {
-    "primary": "#3065C0",
-    "primary-inverted": "#3065C0",
+    "primary": "#295caa",
+    "primary-inverted": "#295caa",
+    "secondary": "#f39325",
+    "secondary-inverted": "#f39325",
     "background": "#fff",
     "background-inverted": "#0F203E",
     "foreground": "#06081f",
     "foreground-inverted": "#fff",
-    "link": "#3065C0",
+    "link": "#295caa",
     "link-inverted": "#98b2e0",
     "positive": "#23831B",
     "positive-inverted": "#6EDB64",
@@ -19,7 +21,7 @@
   },
   "font": {
     "display": {
-      "family": "Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+      "family": "'Myriad Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
       "font-size": 16,
       "line-height": 1.15,
       "scale-ratio": 1.25,
@@ -31,7 +33,7 @@
       }
     },
     "copy": {
-      "family": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+      "family": "'Myriad Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
       "font-size": 16,
       "line-height": 1.5,
       "scale-ratio": 1.225,
@@ -40,7 +42,7 @@
       }
     },
     "interface": {
-      "family": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+      "family": "'Myriad Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
       "font-size": 16,
       "line-height": 1.5,
       "scale-ratio": 1.225,
@@ -61,7 +63,7 @@
   "font-weight": {
     "light": 300,
     "regular": 400,
-    "semi-bold": 500,
+    "semi-bold": 600,
     "bold": 700
   },
   "spacing": {

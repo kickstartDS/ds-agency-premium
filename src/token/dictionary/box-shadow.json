@@ -20,18 +20,18 @@
         },
         "card": {
           "_": {
-            "value": "0.1"
+            "value": "0.2"
           },
           "hover": {
-            "value": "0.2"
+            "value": "0.3"
           }
         },
         "card-inverted": {
           "_": {
-            "value": "0.1"
+            "value": "0.2"
           },
           "hover": {
-            "value": "0.2"
+            "value": "0.3"
           }
         },
         "surface": {

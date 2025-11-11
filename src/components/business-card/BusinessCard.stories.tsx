@@ -32,7 +32,7 @@ export const Default: Story = {
       alt: "A group of people collaborating in an office setting",
     },
     logo: {
-      src: "logo.svg",
+      src: "logo.png",
       alt: "Business Logo",
       url: "#",
     },
@@ -73,7 +73,7 @@ export const Centered: Story = {
       alt: "A group of people collaborating in an office setting",
     },
     logo: {
-      src: "logo.svg",
+      src: "logo.png",
       alt: "Business Logo",
       url: "#",
     },
@@ -110,7 +110,7 @@ export const WithoutImage: Story = {
   args: pack({
     centered: false,
     logo: {
-      src: "logo.svg",
+      src: "logo.png",
       alt: "Business Logo",
       url: "#",
     },
