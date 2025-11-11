@@ -7,14 +7,13 @@
   --dsa-teaser-card--border-width: var(--ks-border-width-default);
   --dsa-teaser-card--border-color: var(--ks-border-color-card-interactive);
   --dsa-teaser-card--border-color_hover: var(--ks-border-color-card-interactive-hover);
-  --dsa-teaser-card--border-radius: var(--ks-border-radius-card) var(--ks-border-radius-card)
-    var(--ks-border-radius-card) calc(var(--ks-border-radius-card) * 3);
+  --dsa-teaser-card--border-radius: var(--ks-border-radius-card);
 
   --dsa-teaser-card--shadow: none;
   --dsa-teaser-card--shadow_hover: none;
 
   --dsa-teaser-card__image--transform_hover: scale(1.05);
-  --dsa-teaser-card__image--transition: transform var(--ks-transition-hover);
+  --dsa-teaser-card__image--transition: transform var(--ks-transition-fade);
 
   --dsa-teaser-card__body--gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
 

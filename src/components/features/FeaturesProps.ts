@@ -41,6 +41,10 @@ export type Title = string;
  */
 export type Text = string;
 /**
+ * Whether the icon is set via Unicode character
+ */
+export type UnicodeIcon = boolean;
+/**
  * The CTA url
  */
 export type CallToActionUrl = string;
@@ -69,6 +73,7 @@ export interface Feature {
   icon?: Icon;
   title?: Title;
   text?: Text;
+  unicodeIcon?: UnicodeIcon;
   cta?: {
     url?: CallToActionUrl;
     label?: LinkLabel;

@@ -51,6 +51,9 @@
           "text": {
             "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/text"
           },
+          "unicodeIcon": {
+            "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/unicodeIcon"
+          },
           "cta": {
             "type": "object",
             "properties": {

@@ -30,6 +30,12 @@
       "enum": ["intext", "stack", "centered", "besideLarge", "besideSmall"],
       "default": "stack"
     },
+    "unicodeIcon": {
+      "type": "boolean",
+      "title": "Unicode Icon",
+      "description": "Whether the icon is set via Unicode character",
+      "default": false
+    },
     "cta": {
       "type": "object",
       "title": "Call to Action",

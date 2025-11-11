@@ -339,7 +339,7 @@
       },
       "card": {
         "base": {
-          "value": "{ks.color.fg.alpha.9.base}",
+          "value": "{ks.color.bg.base}",
           "attributes": {
             "category": "color"
           },
@@ -350,7 +350,7 @@
         },
         "interactive": {
           "base": {
-            "value": "{ks.color.fg.alpha.8.base}",
+            "value": "{ks.color.bg.base}",
             "attributes": {
               "category": "color"
             },

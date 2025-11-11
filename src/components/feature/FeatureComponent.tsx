@@ -13,7 +13,7 @@ export type { FeatureProps };
 export const FeatureContextDefault = forwardRef<
   HTMLDivElement,
   FeatureProps & Omit<HTMLAttributes<HTMLDivElement>, "style">
->(({ style = "stack", title, text, icon, cta, ...rest }, ref) => (
+>(({ style = "stack", title, text, icon, unicodeIcon, cta, ...rest }, ref) => (
   <div
     {...rest}
     ref={ref}
@@ -34,7 +34,7 @@ export const FeatureContextDefault = forwardRef<
     )}
   >
     <div className="dsa-feature__header">
-      {icon && (
+      {icon && !unicodeIcon ? (
         <Icon
           className="dsa-feature__icon"
           icon={icon}
@@ -42,6 +42,15 @@ export const FeatureContextDefault = forwardRef<
           aria-hidden
           focusable={false}
         />
+      ) : icon && unicodeIcon ? (
+        <span
+          className="dsa-feature__icon dsa-feature__icon--unicode"
+          aria-hidden
+        >
+          {icon}
+        </span>
+      ) : (
+        ""
       )}
       <span className="dsa-feature__title">{title}</span>
     </div>
