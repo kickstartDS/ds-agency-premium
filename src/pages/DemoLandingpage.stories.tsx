@@ -29,14 +29,11 @@ const Page = () => (
     </Section>
     <Section width="wide" id="startit">
       <Cta
+        textAlign="center"
         highlightText
         headline="Sie benötigen einen Stromvertrag?"
         text="Hier finden Sie Ihren richtigen Stromtarif zum kleinen Preis!
 Treffen Sie Ihre Auswahl:"
-        image={{
-          src: "/img/gws/green-energy-with-hand-holding-environmental-light-bulb-background-20.png",
-          padding: false,
-        }}
         buttons={[
           {
             label: "Privatstrom",
