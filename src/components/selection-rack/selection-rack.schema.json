@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/selection-rack.schema.json",
+  "title": "Selection Rack",
+  "description": "Component used for user interaction",
+  "type": "object",
+  "properties": {
+    "options": {
+      "title": "Options",
+      "type": "array",
+      "items": {
+        "title": "Option Select Button",
+        "description": "An option in the selection rack",
+        "type": "object",
+        "properties": {
+          "label": {
+            "title": "Label",
+            "description": "The label for the element",
+            "type": "string",
+            "examples": ["Est dolore a debitis"]
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": ["label"],
+        "additionalProperties": false
+      }
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

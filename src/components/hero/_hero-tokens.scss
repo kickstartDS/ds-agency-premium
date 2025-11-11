@@ -25,8 +25,8 @@
       --dsa-hero__textbox--max-width: var(--dsa-content--width_narrow);
     }
 
-    --dsa-hero__headline--color: var(--dsa-headline--color);
-    --dsa-hero__subheadline--color: var(--dsa-headline__subheadline--color);
+    --dsa-hero__headline--color: var(--dsa-text-color-on-primary-base);
+    --dsa-hero__subheadline--color: var(--ks-text-color-primary);
 
     --dsa-hero_color-neutral__headline--color: var(--ks-text-color-default);
     --dsa-hero_color-neutral__subheadline--color: var(--ks-text-color-default);
@@ -41,7 +41,7 @@
     --dsa-hero__textbox--box-shadow: none;
     --dsa-hero__textbox--border-radius: var(--ks-border-radius-card);
     --dsa-hero__textbox--max-width: var(--dsa-content--width_narrow);
-    --dsa-hero__textbox--padding: var(--ks-spacing-inset-squish-xl);
+    --dsa-hero__textbox--padding: var(--ks-spacing-inset-xl);
     --dsa-hero_below__textbox--padding: var(--dsa-content--vertical-spacing);
     --dsa-hero_offset__textbox--padding: var(--dsa-content--vertical-spacing);
 

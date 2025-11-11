@@ -243,7 +243,7 @@
       },
       "display": {
         "base": {
-          "value": "{ks.color.fg.base}",
+          "value": "{ks.color.primary.base}",
           "attributes": {
             "category": "color"
           },

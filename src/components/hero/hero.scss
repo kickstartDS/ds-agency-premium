@@ -82,12 +82,29 @@
 
 .c-visual.dsa-hero {
   .dsa-headline {
+    --dsa-headline--gap: 0.5em;
+
     .dsa-headline__headline {
-      color: var(--dsa-hero__headline--color, var(--dsa-headline--color, var(--ks-text-color-display)));
+      span {
+        background-color: var(--ks-background-color-primary);
+        padding: 0.25em;
+        border-radius: var(--ks-border-radius-control);
+        box-decoration-break: clone;
+        color: var(--dsa-hero__headline--color, var(--dsa-headline--color, var(--ks-text-color-display)));
+      }
     }
 
     .dsa-headline__subheadline {
-      color: var(--dsa-hero__subheadline--color, var(--dsa-headline__subheadline--color, var(--ks-text-color-primary)));
+      span {
+        background-color: var(--ks-background-color-default);
+        padding: 0.25em;
+        box-decoration-break: clone;
+        border-radius: var(--ks-border-radius-control);
+        color: var(
+          --dsa-hero__subheadline--color,
+          var(--dsa-headline__subheadline--color, var(--ks-text-color-primary))
+        );
+      }
     }
   }
 

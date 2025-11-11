@@ -229,7 +229,7 @@
           },
           "hover": {
             "base": {
-              "value": "{ks.color.fg.alpha.6.base}",
+              "value": "{ks.color.fg.alpha.8.base}",
               "attributes": {
                 "category": "color"
               },

@@ -7,6 +7,7 @@ import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 import { Cta } from "../components/cta/CtaComponent";
 import { Hero } from "../components/hero/HeroComponent";
 import { Features } from "../components/features/FeaturesComponent";
+import { SelectionRack } from "../components/selection-rack/SelectionRackComponent";
 
 const Page = () => (
   <>
@@ -16,8 +17,9 @@ const Page = () => (
       <Hero
         headline="Wir versorgen Sie mit Strom"
         sub="Jetzt schnell zu den Gemeindewerken Sinzheim wechseln!"
-        textPosition="left"
         highlightText
+        textbox={false}
+        textPosition="corner"
         image={{
           indent: "none",
           src: "img/gws/Familie-in-der-Kueche-1650x600px.jpg",
@@ -27,21 +29,20 @@ const Page = () => (
         }}
       />
     </Section>
-    <Section width="wide" id="startit">
+    <Section
+      content={{ mode: "list", gutter: "none" }}
+      width="narrow"
+      id="startit"
+    >
       <Cta
         textAlign="center"
         highlightText
         headline="Sie benötigen einen Stromvertrag?"
         text="Hier finden Sie Ihren richtigen Stromtarif zum kleinen Preis!
 Treffen Sie Ihre Auswahl:"
-        buttons={[
-          {
-            label: "Privatstrom",
-          },
-          {
-            label: "Gewerbestrom",
-          },
-        ]}
+      />
+      <SelectionRack
+        options={[{ label: "Privatstrom" }, { label: "Gewerbestrom" }]}
       />
     </Section>
 
