@@ -3,7 +3,7 @@
 [ks-inverted] {
   //Global token for calculation of header height
   --dsa-header--height: calc(var(--dsa-logo--height) + var(--dsa-header--spacing-vertical) * 2);
-  --dsa-header--spacing-vertical: var(--ks-spacing-inset-m);
+  --dsa-header--spacing-vertical: var(--ks-spacing-inset-s);
   --dsa-header--spacing-horizontal: var(--ks-spacing-inset-xl);
   --dsa-header_floating--spacing-horizontal: var(--ks-spacing-inset-l);
   --dsa-header_open--shadow: 0 0 0 100px var(--ks-color-fg-alpha-3);
