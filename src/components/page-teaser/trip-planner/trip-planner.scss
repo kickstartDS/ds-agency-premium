@@ -1,0 +1,53 @@
+@use "sass:math";
+
+.trip-planner {
+  &__row {
+    margin: -0.5rem 0 -0.5rem -1rem;
+    display: flex;
+
+    > * {
+      padding: 0.5rem 0 0.5rem 1rem;
+    }
+  }
+
+  &__col {
+    margin-top: 1rem;
+
+    @media (min-width: 960px) {
+      margin-top: 1.5rem;
+    }
+
+    &--supply {
+      width: 50%;
+
+      svg {
+        color: var(--ks-color-primary);
+      }
+    }
+
+    &--postalCode,
+    &--consumption {
+      margin-top: 0.75rem;
+
+      @media (min-width: 640px) {
+        margin-top: 1.25rem;
+      }
+
+      @media (min-width: 960px) {
+        margin-top: 1.25rem;
+      }
+    }
+
+    &--postalCode {
+      width: 40%;
+    }
+
+    &--consumption {
+      width: 60%;
+    }
+  }
+
+  &__link {
+    font: var(--ks-font-copy-s);
+  }
+}

@@ -8,6 +8,7 @@ import { Cta } from "../components/cta/CtaComponent";
 import { Hero } from "../components/hero/HeroComponent";
 import { Features } from "../components/features/FeaturesComponent";
 import { SelectionRack } from "../components/selection-rack/SelectionRackComponent";
+import { Signpost } from "../components/signpost/SignpostComponent";
 
 const Page = () => (
   <>
@@ -19,7 +20,7 @@ const Page = () => (
         sub="Jetzt schnell zu den Gemeindewerken Sinzheim wechseln!"
         highlightText
         textbox={false}
-        textPosition="corner"
+        textPosition="left"
         image={{
           indent: "none",
           src: "img/gws/Familie-in-der-Kueche-1650x600px.jpg",
@@ -27,6 +28,129 @@ const Page = () => (
           srcMobile: "img/gws/Familie-in-der-Kueche-1650x600px.jpg",
           srcTablet: "img/gws/Familie-in-der-Kueche-1650x600px.jpg",
         }}
+      />
+    </Section>
+    <Section spaceBefore="none" backgroundColor="accent">
+      <Signpost
+        offset
+        tabs={[
+          {
+            label: "Energie & Wasser",
+            icon: "person",
+            pageTeaser: {
+              widget: "energyCalculator",
+              links: [
+                {
+                  label:
+                    "Jetzt kostenlos anmelden: Informationsveranstaltung zum Umstieg auf die Wärmepumpe",
+                  target: "#",
+                },
+                {
+                  label:
+                    "Kundenportal Energie & Wasser: Erledigen Sie die Anliegen zu Ihrer Energie rund um die Uhr",
+                  target: "#",
+                },
+                {
+                  label:
+                    "Sichern Sie sich jetzt Ihren Termin im Servicezentrum",
+                  target: "#",
+                },
+              ],
+            },
+          },
+          {
+            label: "Mobilität",
+            icon: "home",
+            pageTeaser: {
+              widget: "timetable",
+              links: [
+                {
+                  label: "Deutschlandticket – für 58 Euro quer durch's Land!",
+                  target: "/swo-mobil/bus/deutschlandticket-vos",
+                },
+                {
+                  label: "FAQs zur Entwicklung der VOS-Ticketpreise",
+                  target: "/swo-mobil/ticketpreise-entwicklung-vos",
+                },
+                {
+                  label: "HandyTicket: schnell und entspannt per App buchen",
+                  target: "/swo-mobil/bus/handyticket",
+                },
+                {
+                  label: "YANiQ macht's möglich. Busfahren zum Bestpreis!",
+                  target: "https://www.yaniq.de/",
+                },
+                {
+                  label: "VOSpilot – Mobilitäts-App für Osnabrück und Region",
+                  target: "/swo-mobil/service-angebote/app-vospilot",
+                },
+                {
+                  label: "Aktuelle Verkehrsmeldungen",
+                  target:
+                    "https://www.vos.info/aktuelles/verkehrsmeldungen.html",
+                },
+              ],
+            },
+          },
+          {
+            label: "Bäder & Freizeit",
+            icon: "person",
+            pageTeaser: {
+              widget: "image",
+              image: {
+                src: "img/gws/Teaser_ErsteWhg.jpg",
+                alt: "",
+              },
+              links: [
+                {
+                  label:
+                    "Nettebad: Erleben Sie Norddeutschlands größten Rutschenpark.",
+                  target: "#",
+                },
+                {
+                  label:
+                    "Loma-Sauna: Gönnen Sie sich einen Tag Urlaub vor der Haustür.",
+                  target: "#",
+                },
+                {
+                  label:
+                    "Moskaubad: Entdecken Sie das Traditionsfreibad im Herzen Osnabrücks.",
+                  target: "#",
+                },
+                {
+                  label:
+                    "E-Kartbahn: Lassen Sie sich von elektrischem Fahrspaß faszinieren.",
+                  target: "#",
+                },
+              ],
+            },
+          },
+          {
+            label: "Wohnen",
+            icon: "person",
+            pageTeaser: {
+              widget: "image",
+              image: {
+                src: "img/gws/Teaser_Wasserwerk.jpg",
+                alt: "Wohnen ist Lebensqualität",
+              },
+              links: [
+                {
+                  label: "WiO - Die kommunale Wohnungsgesellschaft",
+                  target: "/wohnen/wio-wohnen-in-osnabrueck",
+                },
+                {
+                  label: "Die Stadtwerke als regionaler Bauherr und Vermieter",
+                  target: "/wohnen",
+                },
+                {
+                  label: "ESOS - Erschließung, Immobilien- und Wohnungsbau",
+                  target: "/geschaeftskunden/immobilien/esos",
+                },
+              ],
+            },
+          },
+        ]}
       />
     </Section>
     <Section

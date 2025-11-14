@@ -1,0 +1,55 @@
+.energy-calculator {
+  h2 {
+    margin-bottom: -0.5rem;
+
+    @media (min-width: 640px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  label,
+  .input-radio + label {
+    font: var(--ks-font-interface-s);
+  }
+
+  &__input-label {
+    font-weight: bold;
+    display: block;
+  }
+
+  .button {
+    margin-top: 0.25rem;
+
+    @media (min-width: 640px) {
+      margin-top: 0.75rem;
+    }
+
+    @media (min-width: 960px) {
+      margin-top: 0.25rem;
+    }
+  }
+
+  &-wrapper {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+
+    @media (min-width: 640px) {
+      padding: 2.5rem;
+    }
+
+    @media (min-width: 960px) {
+      padding: 3rem;
+    }
+
+    .energy-calculator {
+      margin: 0 auto;
+      max-width: 32rem;
+
+      @media (min-width: 960px) {
+        max-width: calc(50% - 3rem);
+      }
+    }
+  }
+}

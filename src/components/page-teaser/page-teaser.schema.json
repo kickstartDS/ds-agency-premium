@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/page-teaser.schema.json",
+  "title": "Page Teaser",
+  "type": "object",
+  "properties": {
+    "image": {
+      "title": "Image",
+      "description": "The image to display in the teaser",
+      "type": "object",
+      "properties": {
+        "src": {
+          "title": "Image Source",
+          "type": "string",
+          "format": "image"
+        },
+        "alt": {
+          "title": "Image Alt Text",
+          "type": "string"
+        }
+      },
+      "required": ["src"]
+    },
+    "widget": {
+      "title": "Widget",
+      "type": "string",
+      "description": "Choose what widget to display in the teaser",
+      "enum": ["image", "energyCalculator", "timetable"]
+    },
+    "links": {
+      "type": "array",
+      "title": "Links",
+      "description": "A list of links to display in the teaser",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "target": {
+            "title": "URL",
+            "type": "string"
+          }
+        },
+        "required": ["label", "target"]
+      }
+    },
+    "className": {
+      "title": "Additional Classes",
+      "description": "Add additional css classes that should be applied to the logo",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

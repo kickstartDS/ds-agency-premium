@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/signpost.schema.json",
+  "title": "Signpost",
+  "type": "object",
+  "properties": {
+    "offset": {
+      "title": "Offset",
+      "description": "Offset of the signpost to overlap the previous section",
+      "type": "boolean",
+      "default": true
+    },
+    "tabs": {
+      "title": "Tabs",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "icon": {
+            "title": "Icon",
+            "type": "string"
+          },
+          "pageTeaser": {
+            "$ref": "http://schema.mydesignsystem.com/page-teaser.schema.json"
+          }
+        }
+      }
+    },
+    "className": {
+      "title": "Additional Classes",
+      "description": "Add additional css classes that should be applied to the logo",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
