@@ -1,63 +1,22 @@
-.spacings {
-  border: 2px solid white;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.spacing {
-  height: 26px;
-  background-color: var(--ks-color-fg-alpha-4);
-  position: relative;
-}
-
-.spacing-xxs {
-  width: calc(var(--ks-spacing-xxs) * 1);
-}
-
-.spacing-xs {
-  width: calc(var(--ks-spacing-xs) * 1);
-}
-
-.spacing-s {
-  width: calc(var(--ks-spacing-s) * 1);
-}
-
-.spacing-m {
-  width: calc(var(--ks-spacing-m) * 1);
-}
-
-.spacing-l {
-  width: calc(var(--ks-spacing-l) * 1);
-}
-
-.spacing-xl {
-  width: calc(var(--ks-spacing-xl) * 1);
-}
-
-.spacing-xxl {
-  width: calc(var(--ks-spacing-xxl) * 1);
-}
-
 .font-sizes {
   display: flex;
   flex-direction: column;
   gap: var(--ks-spacing-stack-m);
 
   &-display {
-    font-family: var(--ks-font-family-display);
+    font-family: var(--ks-font-family-display, sans-serif);
   }
 
   &-interface {
-    font-family: var(--ks-font-family-interface);
+    font-family: var(--ks-font-family-interface, sans-serif);
   }
 
   &-copy {
-    font-family: var(--ks-font-family-copy);
+    font-family: var(--ks-font-family-copy, sans-serif);
   }
 
   &-mono {
-    font-family: var(--ks-font-family-mono);
+    font-family: var(--ks-font-family-mono, monospace);
   }
 }
 

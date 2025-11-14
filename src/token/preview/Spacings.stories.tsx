@@ -1,4 +1,4 @@
-import { Section } from "../components/section/SectionComponent";
+import { Section } from "../../components/section/SectionComponent";
 
 const Page = () => (
   <>
@@ -22,7 +22,7 @@ const Page = () => (
 );
 
 export default {
-  title: "Pages/Tokens",
+  title: "Token / Spacings",
   render: Page,
   parameters: {
     layout: "fullscreen",

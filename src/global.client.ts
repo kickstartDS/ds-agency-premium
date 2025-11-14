@@ -1,4 +1,4 @@
-import "@kickstartds/base/lib/global/base";
+// import "@kickstartds/base/lib/global/base";
 import "./global.scss";
 
 // we need to export something to prevent next js

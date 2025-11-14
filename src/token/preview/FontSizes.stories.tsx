@@ -1,4 +1,4 @@
-import { Section } from "../components/section/SectionComponent";
+import { Section } from "../../components/section/SectionComponent";
 
 const Page = () => (
   <>
@@ -102,7 +102,7 @@ const Page = () => (
 );
 
 export default {
-  title: "Pages/Tokens",
+  title: "Token / Font Sizes",
   render: Page,
   parameters: {
     layout: "fullscreen",
