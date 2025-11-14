@@ -80,6 +80,51 @@
   --ks-spacing-xxl-bp-factor-desktop: calc(var(--ks-spacing-xxl-bp-factor-laptop) * var(--spacing-xxl-bp-factor));
 }
 
+:root,
+[ks-theme],
+[ks-inverted="false"],
+[ks-inverted="true"] {
+  --ks-spacing-stack-xxs: var(--ks-spacing-xxs);
+  --ks-spacing-stack-xs: var(--ks-spacing-xs);
+  --ks-spacing-stack-s: var(--ks-spacing-s);
+  --ks-spacing-stack-m: var(--ks-spacing-m);
+  --ks-spacing-stack-l: var(--ks-spacing-l);
+  --ks-spacing-stack-xl: var(--ks-spacing-xl);
+  --ks-spacing-stack-xxl: var(--ks-spacing-xxl);
+
+  --ks-spacing-inline-xxs: var(--ks-spacing-xxs);
+  --ks-spacing-inline-xs: var(--ks-spacing-xs);
+  --ks-spacing-inline-s: var(--ks-spacing-s);
+  --ks-spacing-inline-m: var(--ks-spacing-m);
+  --ks-spacing-inline-l: var(--ks-spacing-l);
+  --ks-spacing-inline-xl: var(--ks-spacing-xl);
+  --ks-spacing-inline-xxl: var(--ks-spacing-xxl);
+
+  --ks-spacing-inset-xxs: var(--ks-spacing-xxs);
+  --ks-spacing-inset-xs: var(--ks-spacing-xs);
+  --ks-spacing-inset-s: var(--ks-spacing-s);
+  --ks-spacing-inset-m: var(--ks-spacing-m);
+  --ks-spacing-inset-l: var(--ks-spacing-l);
+  --ks-spacing-inset-xl: var(--ks-spacing-xl);
+  --ks-spacing-inset-xxl: var(--ks-spacing-xxl);
+
+  --ks-spacing-inset-squish-xxs: var(--ks-spacing-xs) var(--ks-spacing-xxs);
+  --ks-spacing-inset-squish-xs: var(--ks-spacing-s) var(--ks-spacing-xs);
+  --ks-spacing-inset-squish-s: var(--ks-spacing-m) var(--ks-spacing-s);
+  --ks-spacing-inset-squish-m: var(--ks-spacing-l) var(--ks-spacing-m);
+  --ks-spacing-inset-squish-l: var(--ks-spacing-xl) var(--ks-spacing-l);
+  --ks-spacing-inset-squish-xl: var(--ks-spacing-xxl) var(--ks-spacing-xl);
+  --ks-spacing-inset-squish-xxl: calc(var(--ks-spacing-xxl) * 1.25) var(--ks-spacing-xxl);
+
+  --ks-spacing-inset-squish-xxs: var(--ks-spacing-xxs) var(--ks-spacing-xs);
+  --ks-spacing-inset-squish-xs: var(--ks-spacing-xs) var(--ks-spacing-s);
+  --ks-spacing-inset-squish-s: var(--ks-spacing-s) var(--ks-spacing-m);
+  --ks-spacing-inset-squish-m: var(--ks-spacing-m) var(--ks-spacing-l);
+  --ks-spacing-inset-squish-l: var(--ks-spacing-l) var(--ks-spacing-xl);
+  --ks-spacing-inset-squish-xl: var(--ks-spacing-xl) var(--ks-spacing-xxl);
+  --ks-spacing-inset-squish-xxl: var(--ks-spacing-xxl) calc(var(--ks-spacing-xxl) * 1.25);
+}
+
 // Spacings get BP-factor applied
 :root,
 [ks-theme],
@@ -92,11 +137,6 @@
   --ks-spacing-l: calc(var(--ks-spacing-l-base) * var(--ks-spacing-l-bp-factor, 1));
   --ks-spacing-xl: calc(var(--ks-spacing-xl-base) * var(--ks-spacing-xl-bp-factor, 1));
   --ks-spacing-xxl: calc(var(--ks-spacing-xxl-base) * var(--ks-spacing-xxl-bp-factor, 1));
-  --ks-spacing-stack: calc(var(--ks-spacing-stack-base) * var(--ks-spacing-stack-bp-factor, 1));
-  --ks-spacing-inline: calc(var(--ks-spacing-inline-base) * var(--ks-spacing-inline-bp-factor, 1));
-  --ks-spacing-inset: calc(var(--ks-spacing-inset-base) * var(--ks-spacing-inset-bp-factor, 1));
-  --ks-spacing-inset-squish: calc(var(--ks-spacing-inset-squish-base) * var(--ks-spacing-inset-squish-bp-factor, 1));
-  --ks-spacing-inset-stretch: calc(var(--ks-spacing-inset-stretch-base) * var(--ks-spacing-inset-stretch-bp-factor, 1));
 }
 
 // BP-factor gets redefined on each breakpoints
@@ -105,7 +145,6 @@
   [ks-theme],
   [ks-inverted="false"],
   [ks-inverted="true"] {
-    --ks-font-size-display-bp-factor: var(--ks-font-size-display-bp-factor-phone);
     --ks-spacing-xxs-bp-factor: var(--ks-spacing-xxs-bp-factor-phone);
     --ks-spacing-xs-bp-factor: var(--ks-spacing-xs-bp-factor-phone);
     --ks-spacing-s-bp-factor: var(--ks-spacing-s-bp-factor-phone);
