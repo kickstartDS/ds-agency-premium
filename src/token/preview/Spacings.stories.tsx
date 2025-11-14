@@ -1,24 +1,23 @@
-import { Section } from "../../components/section/SectionComponent";
-
 const Page = () => (
-  <>
-    <Section
-      width="narrow"
-      content={{
-        mode: "list",
-      }}
-    >
-      <div className="spacings">
-        <div className="spacing spacing-xxs" />
-        <div className="spacing spacing-xs" />
-        <div className="spacing spacing-s" />
-        <div className="spacing spacing-m" />
-        <div className="spacing spacing-l" />
-        <div className="spacing spacing-xl" />
-        <div className="spacing spacing-xxl" />
-      </div>
-    </Section>
-  </>
+  <div className="preview-page">
+    <div className="spacings">
+      <h1>Spacings</h1>
+      <span>XXS</span>
+      <div className="spacing spacing-xxs" />
+      <span>XS</span>
+      <div className="spacing spacing-xs" />
+      <span>S</span>
+      <div className="spacing spacing-s" />
+      <span>M</span>
+      <div className="spacing spacing-m" />
+      <span>L</span>
+      <div className="spacing spacing-l" />
+      <span>XL</span>
+      <div className="spacing spacing-xl" />
+      <span>XXL</span>
+      <div className="spacing spacing-xxl" />
+    </div>
+  </div>
 );
 
 export default {
