@@ -11,9 +11,9 @@ declare module "@kickstartds/base/lib/button/typing" {
  */
 export type Label = string;
 /**
- * Target that should be linked, makes the button behave like a link semantically
+ * The URL to link to when the button is clicked
  */
-export type Target = string;
+export type URL = string;
 /**
  * Variant of button to be used
  */
@@ -30,17 +30,19 @@ export type Size = "small" | "medium" | "large";
  * Whether the button should be disabled
  */
 export type Disabled = boolean;
+export type ButtonType = "button" | "submit" | "reset";
 
 /**
  * Component used for user interaction
  */
 export interface ButtonProps {
   label: Label;
-  target?: Target;
+  url?: URL;
   variant?: Variant;
   icon?: Icon;
   size?: Size;
   disabled?: Disabled;
+  type?: ButtonType;
 }
 
 }

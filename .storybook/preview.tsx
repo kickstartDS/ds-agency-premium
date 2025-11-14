@@ -4,7 +4,7 @@ import "lazysizes/plugins/attrchange/ls.attrchange";
 import { Preview } from "@storybook/react";
 import { unpackDecorator } from "@kickstartds/core/lib/storybook";
 import { CssPropsParameter } from "@kickstartds/storybook-addon-component-tokens";
-import { dark } from "./themes";
+import { light } from "./themes";
 import { themeSwitchDecorator, globalThemeTypes } from "./themeSwitch";
 
 import { PageWrapper } from "../src/components/page-wrapper/PageWrapperComponent";
@@ -37,8 +37,8 @@ const preview: Preview = {
           "Form",
           "Layout",
           "Blog",
-          "Pages",
-          ["Archetypes"],
+          "Page Archetypes",
+          ["Landingpage", "Showcase", "Overview", "Blog Post", "Blog Overview"],
           "Design Tokens",
         ],
         method: "alphabetical",
@@ -48,7 +48,7 @@ const preview: Preview = {
       disable: true,
     },
     docs: {
-      theme: dark,
+      theme: light,
       container: (props: DocsContainerProps) => (
         <LinkProvider>
           <PageWrapper>

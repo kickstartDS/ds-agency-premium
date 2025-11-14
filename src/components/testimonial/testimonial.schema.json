@@ -12,6 +12,13 @@
       "format": "markdown",
       "examples": ["This product is amazing!"]
     },
+    "quoteSigns": {
+      "title": "Style of the quote signs",
+      "description": "The style of the quote signs",
+      "type": "string",
+      "enum": ["normal", "large", "none"],
+      "default": "normal"
+    },
     "name": {
       "title": "Name",
       "description": "The name of the quote author",

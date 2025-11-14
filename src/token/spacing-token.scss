@@ -12,6 +12,9 @@
   // --spacing-shrink-factor: 0.6;
   // --spacing-grow-factor: 1.3;
   // --spacing-bp-factor: 1.03;
+  --spacing-shrink-factor: 0.65;
+  --spacing-grow-factor: 1.585;
+  --spacing-bp-factor: 1.0125;
 
   // Calculated BP Factor
   --spacing-xxs-bp-factor: calc(1 * var(--spacing-bp-factor));

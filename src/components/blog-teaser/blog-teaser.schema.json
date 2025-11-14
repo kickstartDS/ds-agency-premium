@@ -17,8 +17,7 @@
       "title": "Tags",
       "description": "The tags for the blog post",
       "items": {
-        "type": "string",
-        "examples": ["tech", "programming"]
+        "$ref": "http://schema.mydesignsystem.com/blog-tag.schema.json"
       }
     },
     "headline": {
@@ -42,6 +41,12 @@
       "format": "image",
       "examples": ["img/close-up-young-business-team-working.png"]
     },
+    "alt": {
+      "title": "Alt",
+      "description": "The alt text for the preview image",
+      "type": "string",
+      "examples": ["Image of a business team working"]
+    },
     "link": {
       "type": "object",
       "title": "Link",
@@ -54,12 +59,12 @@
           "format": "uri",
           "examples": ["https://example.com"]
         },
-        "label": {
-          "title": "Label",
-          "description": "The label to use for the link",
+        "text": {
+          "title": "Text",
+          "description": "The text for the link",
           "type": "string",
-          "examples": ["Read more"],
-          "default": "Read more"
+          "default": "Read article",
+          "examples": ["Read article"]
         }
       },
       "additionalProperties": false,

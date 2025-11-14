@@ -3,6 +3,10 @@ import classnames from "classnames";
 import { FeaturesProps } from "./FeaturesProps";
 import "./features.scss";
 import { Feature } from "../feature/FeatureComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./FeaturesDefaults";
+
+export type { FeaturesProps };
 
 export const FeaturesContextDefault = forwardRef<
   HTMLDivElement,
@@ -25,7 +29,7 @@ export const FeaturesContextDefault = forwardRef<
       {...rest}
       ref={ref}
       className={classnames(
-        `c-features c-features--${
+        `dsa-features dsa-features--${
           layout === "largeTiles"
             ? "large-tiles"
             : layout === "smallTiles"
@@ -34,9 +38,27 @@ export const FeaturesContextDefault = forwardRef<
         }`
       )}
     >
-      {features.map((feature, index) => (
-        <Feature key={index} {...feature} style={style} />
-      ))}
+      {features.map((feature, index) => {
+        const { icon, title, text, cta, ...rest } = feature;
+
+        return (
+          <Feature
+            {...rest}
+            key={index}
+            icon={icon}
+            style={style}
+            title={title}
+            text={text}
+            cta={{
+              label: cta?.label,
+              url: cta?.url,
+              style: ctas.style,
+              toggle: ctas.toggle,
+              icon: cta?.icon,
+            }}
+          />
+        );
+      })}
     </div>
   )
 );
@@ -47,6 +69,6 @@ export const Features = forwardRef<
   FeaturesProps & Omit<HTMLAttributes<HTMLDivElement>, "style">
 >((props, ref) => {
   const Component = useContext(FeaturesContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Features.displayName = "Features";

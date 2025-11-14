@@ -55,11 +55,11 @@ Ready to make your digital journey exceptional?
     buttons: [
       {
         label: "Learn More",
-        target: "#",
+        url: "#",
       },
       {
         label: "Contact Us",
-        target: "#",
+        url: "#",
       },
     ],
   }),

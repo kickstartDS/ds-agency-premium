@@ -13,43 +13,98 @@
       "description": "Toggle the inversion of the flyout navigation",
       "default": false
     },
+    "dropdownInverted": {
+      "type": "boolean",
+      "title": "Dropdown Inverted",
+      "description": "Toggle the inversion of the dropdown navigation",
+      "default": false
+    },
     "items": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "href": { "type": "string", "format": "uri" },
+          "url": { "type": "string", "format": "uri" },
           "label": { "type": "string" },
-          "active": { "type": "boolean" }
+          "active": { "type": "boolean" },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": { "type": "string", "format": "uri" },
+                "label": { "type": "string" },
+                "active": { "type": "boolean" }
+              }
+            }
+          }
         },
         "additionalProperties": false,
-        "required": ["href", "label"]
+        "required": ["url", "label"]
       },
       "examples": [
         [
           {
-            "label": "Nav Item",
-            "href": "#"
-          },
-          {
             "label": "Active Item",
-            "href": "#",
+            "url": "#",
             "active": true
           },
           {
-            "label": "Another Item",
-            "href": "#"
+            "label": "Navigation Item",
+            "url": "#"
+          },
+          {
+            "label": "Dropdown",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
           },
           {
             "label": "One more Item",
-            "href": "#"
+            "url": "#"
           },
           {
             "label": "Last Item",
-            "href": "#"
+            "url": "#"
           }
         ]
       ]
+    },
+    "cta": {
+      "type": "object",
+      "title": "CTA",
+      "description": "Add a CTA to the Navigation",
+      "properties": {
+        "toggle": {
+          "title": "Toggle CTA",
+          "description": "Toggle the CTA",
+          "type": "boolean",
+          "default": false
+        },
+        "label": {
+          "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/label"
+        },
+        "url": {
+          "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/url"
+        }
+      }
     }
   },
   "additionalProperties": false,

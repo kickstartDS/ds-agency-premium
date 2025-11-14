@@ -1,8 +1,8 @@
-@import "./text-tokens.scss";
+@import "text-tokens.scss";
 
 .c-rich-text.dsa-text {
-  font: var(--dsa-text--font, var(--dsa-rich-text--font), var(--ks-font-copy-m));
-  color: var(--dsa-text--color, var(--dsa-rich-text--color), var(--ks-text-color-default));
+  font: var(--dsa-text--font, var(--dsa-rich-text--font, var(--ks-font-copy-m)));
+  color: var(--dsa-text--color, var(--dsa-rich-text--color, var(--ks-text-color-default)));
 
   &--highlight.c-rich-text {
     color: var(--dsa-text_highlight--color, var(--ks-text-color-default));

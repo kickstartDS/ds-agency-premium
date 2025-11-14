@@ -6,6 +6,10 @@ import "./video-curtain.scss";
 import { Container } from "@kickstartds/core/lib/container";
 import { ButtonContext } from "@kickstartds/base/lib/button";
 import { useButtonGroup } from "../button-group/ButtonGroupComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./VideoCurtainDefaults";
+
+export type { VideoCurtainProps };
 
 export const VideoCurtainContextDefault = forwardRef<
   HTMLDivElement,
@@ -41,8 +45,9 @@ export const VideoCurtainContextDefault = forwardRef<
             skipButton
             className={classnames(
               `dsa-video-curtain`,
-              highlightText ? `dsa-video-curtain--highlight-text` : "",
-              colorNeutral ? `dsa-video-curtain--color-neutral` : "",
+              textPosition && `dsa-video-curtain--content-${textPosition}`,
+              highlightText && `dsa-video-curtain--highlight-text`,
+              colorNeutral && `dsa-video-curtain--color-neutral`,
               className
             )}
             height="fullScreen"
@@ -50,14 +55,25 @@ export const VideoCurtainContextDefault = forwardRef<
             box={{
               background: "transparent",
               enabled: true,
-              vertical: "center",
-              horizontal: textPosition,
+              vertical:
+                textPosition === "bottom" || textPosition === "corner"
+                  ? "bottom"
+                  : "center",
+              horizontal:
+                textPosition === "left" || textPosition === "corner"
+                  ? "left"
+                  : textPosition === "right"
+                  ? "right"
+                  : "center",
               link: {
                 // @ts-expect-error
                 buttons,
                 colorNeutral,
                 enabled: buttons.length > 0,
-                arrangement: textPosition === "center" ? "center" : "left",
+                arrangement:
+                  textPosition === "left" || textPosition === "corner"
+                    ? "left"
+                    : "center",
               },
               headline: {
                 text: headline,
@@ -90,6 +106,6 @@ export const VideoCurtain = forwardRef<
   VideoCurtainProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(VideoCurtainContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 VideoCurtain.displayName = "VideoCurtain";

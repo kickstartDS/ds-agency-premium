@@ -9,6 +9,10 @@ import classnames from "classnames";
 import { GalleryProps } from "./GalleryProps";
 import "./gallery.scss";
 import { TextMedia } from "@kickstartds/base/lib/text-media";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./GalleryDefaults";
+
+export type { GalleryProps };
 
 export const GalleryContextDefault = forwardRef<
   HTMLDivElement,
@@ -17,7 +21,7 @@ export const GalleryContextDefault = forwardRef<
   (
     {
       lightbox = false,
-      layout = "tiles",
+      layout = "smallTiles",
       aspectRatio = "square",
       images = [],
       ...rest
@@ -85,6 +89,6 @@ export const Gallery = forwardRef<
   GalleryProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(GalleryContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Gallery.displayName = "Gallery";

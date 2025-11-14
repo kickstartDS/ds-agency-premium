@@ -46,6 +46,12 @@
       "default": true,
       "description": "Toggle wether you want your text to be displayed within in box"
     },
+    "invertText": {
+      "type": "boolean",
+      "title": "Invert Text",
+      "description": "Invert the text color for better contrast against the background",
+      "default": false
+    },
     "buttons": {
       "type": "array",
       "items": {
@@ -58,11 +64,17 @@
           "icon": {
             "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/icon"
           },
-          "target": {
-            "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/target"
+          "url": {
+            "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/url"
           }
         }
       }
+    },
+    "skipButton": {
+      "type": "boolean",
+      "title": "Skip Button",
+      "description": "Add a skip button to the hero module",
+      "default": false
     },
     "overlay": {
       "$ref": "http://schema.kickstartds.com/content/visual.schema.json#/properties/overlay"
@@ -73,9 +85,17 @@
     "textPosition": {
       "title": "Module aligment",
       "description": "Choose the alginment of the module content",
-      "enum": ["center", "below", "left", "right"],
+      "enum": [
+        "center",
+        "below",
+        "offset",
+        "left",
+        "right",
+        "corner",
+        "bottom"
+      ],
       "type": "string",
-      "default": "bottom"
+      "default": "left"
     }
   },
   "additionalProperties": false

@@ -8,7 +8,7 @@ import { Section } from "./SectionComponent";
 import schema from "./section.schema.dereffed.json";
 import customProperties from "./section-tokens.json";
 
-const meta: Meta<typeof Section> = {
+const meta: Meta = {
   ...sectionStories,
   title: "Layout/Section",
   component: Section,
@@ -24,7 +24,7 @@ const meta: Meta<typeof Section> = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -33,9 +33,8 @@ const meta: Meta<typeof Section> = {
       <TeaserCard
         layout="row"
         headline="Speed and Scale"
-        label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -47,7 +46,7 @@ const meta: Meta<typeof Section> = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -61,7 +60,7 @@ export default meta;
 
 type Story = StoryObj<typeof Section>;
 
-export const Cards: Story = {
+export const DynamicLayout: Story = {
   parameters: {
     viewport: {
       width: 1440,
@@ -70,11 +69,105 @@ export const Cards: Story = {
   },
   args: pack({
     content: {
+      mode: "flex",
+    },
+    headline: {
+      text: "Happy Customers Showcases",
+      sub: "We can create something shining for you too!",
+      align: "center",
+    },
+    buttons: [],
+  }),
+  render: (args) => (
+    <Section {...args}>
+      <TeaserCard
+        layout="row"
+        headline="Transformation Love Story"
+        text="See how we saved TechFusions a year's worth of development time"
+        image="/img/showcases/comp_tfe01.jpg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Speed and Scale"
+        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+        image="/img/showcases/comp_audio01.jpg"
+      />
+    </Section>
+  ),
+};
+
+export const TileLayout: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 445,
+    },
+  },
+  args: pack({
+    width: "default",
+    content: {
       mode: "tile",
     },
     headline: {
       text: "Happy Customers Showcases",
       sub: "We can create something shining for you too!",
+      align: "center",
+    },
+    buttons: [],
+  }),
+  render: (args) => (
+    <Section {...args}>
+      <TeaserCard
+        layout="row"
+        headline="Transformation Love Story"
+        text="See how we saved TechFusions a year's worth of development time"
+        image="/img/showcases/comp_tfe01.jpg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Speed and Scale"
+        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+        image="/img/showcases/comp_audio01.jpg"
+      />
+    </Section>
+  ),
+};
+
+export const ListLayout: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 1658,
+    },
+  },
+  args: pack({
+    content: {
+      mode: "list",
+    },
+    headline: {
+      text: "Happy Customers Showcases",
+      sub: "We can create something shining for you too!",
+      align: "center",
     },
     buttons: [],
   }),
@@ -100,7 +193,7 @@ export const Slider: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -109,9 +202,8 @@ export const Slider: Story = {
       <TeaserCard
         layout="row"
         headline="Speed and Scale"
-        label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -123,7 +215,7 @@ export const Slider: Story = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -134,7 +226,7 @@ export const Slider: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -143,9 +235,8 @@ export const Slider: Story = {
       <TeaserCard
         layout="row"
         headline="Speed and Scale"
-        label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -157,7 +248,7 @@ export const Slider: Story = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -168,7 +259,7 @@ export const Slider: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -177,9 +268,8 @@ export const Slider: Story = {
       <TeaserCard
         layout="row"
         headline="Speed and Scale"
-        label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -191,7 +281,7 @@ export const Slider: Story = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -202,7 +292,7 @@ export const Slider: Story = {
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -211,9 +301,8 @@ export const Slider: Story = {
       <TeaserCard
         layout="row"
         headline="Speed and Scale"
-        label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -225,7 +314,7 @@ export const Slider: Story = {
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -244,54 +333,11 @@ export const Inverted: Story = {
   },
   args: pack({
     inverted: true,
-    content: {
-      mode: "list",
-    },
+    content: { mode: "default" },
     headline: {
       text: "Happy Customers Showcases",
       sub: "We can create something shining for you too!",
     },
-    buttons: [],
-  }),
-};
-
-export const Spotlight: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "list",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-    },
-    spotlight: true,
-    buttons: [],
-  }),
-};
-
-export const Stagelights: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "list",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    style: "stagelights",
     buttons: [],
   }),
 };
@@ -304,9 +350,6 @@ export const AccentBackground: Story = {
     },
   },
   args: pack({
-    content: {
-      mode: "list",
-    },
     backgroundColor: "accent",
     headline: {
       text: "Happy Customers Showcases",
@@ -325,9 +368,6 @@ export const BoldBackground: Story = {
     },
   },
   args: pack({
-    content: {
-      mode: "list",
-    },
     backgroundColor: "bold",
     headline: {
       text: "Happy Customers Showcases",
@@ -338,7 +378,7 @@ export const BoldBackground: Story = {
   }),
 };
 
-export const ColorfulGradient: Story = {
+export const Framed: Story = {
   parameters: {
     viewport: {
       width: 1440,
@@ -346,15 +386,32 @@ export const ColorfulGradient: Story = {
     },
   },
   args: pack({
-    content: {
-      mode: "list",
-    },
     headline: {
       text: "Happy Customers Showcases",
       sub: "We can create something shining for you too!",
       align: "center",
     },
-    style: "horizontalGradient",
+    style: "framed",
+    buttons: [],
+  }),
+};
+
+export const BackgroundImage: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 928,
+    },
+  },
+  args: pack({
+    backgroundImage: "/img/bg_dot-carpet-blue.svg",
+    headline: {
+      text: "Happy Customers Showcases",
+      sub: "We can create something shining for you too!",
+    },
+    content: {
+      mode: "default",
+    },
     buttons: [],
   }),
 };
@@ -367,9 +424,6 @@ export const WithButtons: Story = {
     },
   },
   args: pack({
-    content: {
-      mode: "list",
-    },
     headline: {
       text: "Happy Customers Showcases",
       sub: "We can create something shining for you too!",
@@ -391,119 +445,5 @@ export const WithButtons: Story = {
         variant: "secondary",
       },
     ],
-  }),
-};
-
-export const TileLayout: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 445,
-    },
-  },
-  args: pack({
-    width: "max",
-    content: {
-      mode: "tile",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    buttons: [],
-  }),
-  render: (args) => (
-    <Section {...args}>
-      <TeaserCard
-        layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-      <TeaserCard
-        layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        image="/img/showcases/comp_audio01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-    </Section>
-  ),
-};
-
-export const FlexLayout: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    width: "max",
-    content: {
-      align: "center",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    buttons: [],
-  }),
-  render: (args) => (
-    <Section {...args}>
-      <TeaserCard
-        layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-      <TeaserCard
-        layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        image="/img/showcases/comp_audio01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-    </Section>
-  ),
-};
-
-export const ListLayout: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 1658,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "list",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    buttons: [],
   }),
 };

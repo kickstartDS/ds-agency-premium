@@ -10,6 +10,10 @@
  */
 export type Quote = string;
 /**
+ * The style of the quote signs
+ */
+export type StyleOfTheQuoteSigns = "normal" | "large" | "none";
+/**
  * The name of the quote author
  */
 export type Name = string;
@@ -35,6 +39,7 @@ export type Rating = number;
  */
 export interface TestimonialProps {
   quote: Quote;
+  quoteSigns?: StyleOfTheQuoteSigns;
   name: Name;
   title?: Title;
   image: {

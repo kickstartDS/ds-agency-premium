@@ -7,13 +7,24 @@ import { LogoTiles } from "@kickstartds/content/lib/logo-tiles";
 import { Button } from "@kickstartds/base/lib/button";
 import { Link } from "@kickstartds/base/lib/link";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./LogosDefaults";
+
+export type { LogosProps };
 
 export const LogosContextDefault = forwardRef<
   HTMLDivElement,
   LogosProps & HTMLAttributes<HTMLDivElement>
 >(
   (
-    { logo: logos = [], tagline, align, cta, logosPerRow = "6", ...rest },
+    {
+      logo: logos = [],
+      tagline,
+      align = "center",
+      cta,
+      logosPerRow = "6",
+      ...rest
+    },
     ref
   ) => (
     <div {...rest} ref={ref}>
@@ -31,21 +42,17 @@ export const LogosContextDefault = forwardRef<
             <div className="dsa-logos__cta">
               <div className="dsa-logos__cta__text">
                 {cta?.text}
-                {cta?.style === "text" ? (
+                {cta?.style === "text" && (
                   <>
                     &#32;
                     <Link className="dsa-logos__cta__link" href={cta.link}>
                       {cta.label}
                     </Link>
                   </>
-                ) : (
-                  ""
                 )}
               </div>
-              {cta?.style === "button" ? (
+              {cta?.style === "button" && (
                 <Button href={cta.link} label={cta.label} />
-              ) : (
-                ""
               )}
             </div>
           ) : (
@@ -63,6 +70,6 @@ export const Logos = forwardRef<
   LogosProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(LogosContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Logos.displayName = "Logos";

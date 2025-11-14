@@ -1,4 +1,4 @@
-@import "./stats-tokens.scss";
+@import "stats-tokens.scss";
 
 .dsa-stats {
   display: flex;
@@ -6,7 +6,7 @@
   gap: var(--dsa-stats--gap-vertical, var(--ks-spacing-stack-l))
     var(--dsa-stats--gap-horizontal, var(--ks-spacing-inline-m));
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
 
   .l-container--rich-text {
     width: 100%;
@@ -27,10 +27,7 @@
   }
 
   .c-count-up__number {
-    background: var(
-      --dsa-stats__number--backgroud,
-      linear-gradient(135deg, var(--ks-color-primary-base) 0%, var(--ks-color-secondary-base) 100%)
-    );
+    background: var(--dsa-stats__number--background, var(--dsa-typo--highlight));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font: var(--dsa-stats__number--font, var(--ks-font-display-xl));

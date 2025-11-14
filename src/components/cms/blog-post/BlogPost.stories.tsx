@@ -7,7 +7,7 @@ import schema from "../blog-post.schema.dereffed.json";
 
 const meta: Meta<typeof BlogPostComponent> = {
   component: BlogPostComponent,
-  title: "Pages/Archetypes",
+  title: "Page Archetypes/Blog Post",
   parameters: {
     jsonschema: { schema },
     layout: "fullscreen",
@@ -23,13 +23,20 @@ export const BlogPost: Story = {
   args: pack({
     head: {
       date: "12/30/2022",
-      tags: ["Technology", "AI"],
+      tags: [
+        {
+          entry: "Technology",
+        },
+        {
+          entry: "AI",
+        },
+      ],
       headline: "The Future of AI: A Glimpse into the Unseen",
       image: "img/close-up-young-business-team-working.png",
     },
     content: `
 ## Introduction
-The future of **ArtiEficial Intelligence (AI)** is a topic that has been the subject of much debate. It's a field that's constantly evolving, with new advancements and breakthroughs happening all the time. [Learn more about AI](https://en.wikipedia.org/wiki/Artificial_intelligence)
+The future of **Artificial Intelligence (AI)** is a topic that has been the subject of much debate. It's a field that's constantly evolving, with new advancements and breakthroughs happening all the time. [Learn more about AI](https://en.wikipedia.org/wiki/Artificial_intelligence)
 
 ## The Current State of AI
 Today, AI is already a part of our daily lives. From *smart home devices* to *recommendation algorithms* on our favorite streaming services, AI is everywhere.
@@ -50,42 +57,71 @@ The future of AI is exciting and full of potential. However, it's important that
       author: {
         name: "Jane Doe",
         byline: "Senior Developer",
-        image: "img/people/author-emily.png",
+        image: {
+          src: "img/people/contact-isabella.png",
+          alt: "Picture of Jane Doe",
+          aspectRatio: "square",
+        },
         twitter: "Janedoe",
         email: "Jane.doe@example.com",
       },
       socialSharing: [
         {
           icon: "twitter",
-          href: "https://twitter.com/share?text=This%20is%20a%20blog%20post%20headline&url=https://example.com/blog",
+          url: "https://twitter.com/share?text=This%20is%20a%20blog%20post%20headline&url=https://example.com/blog",
           title: "Share on Twitter",
         },
         {
           icon: "linkedin",
-          href: "https://www.linkedin.com/shareArticle?mini=true&url=https://example.com/blog&title=This%20is%20a%20blog%20post%20headline",
+          url: "https://www.linkedin.com/shareArticle?mini=true&url=https://example.com/blog&title=This%20is%20a%20blog%20post%20headline",
           title: "Share on LinkedIn",
         },
       ],
       readingTime: "5 min read",
       date: "12/30/2022",
     },
+    contact: {
+      image: {
+        src: "img/people/contact-john.png",
+        alt: "Picture of Jane Smith",
+        fullWidth: false,
+        aspectRatio: "vertical",
+      },
+      title: "John Smith",
+      subtitle: "Sales Representative",
+      links: [
+        {
+          icon: "xing",
+          label: "john.smith",
+          url: "mailto:mail@example.com",
+          newTab: false,
+        },
+        {
+          icon: "twitter",
+          label: "@john_smith",
+          url: "#",
+          newTab: false,
+        },
+      ],
+      copy: "Leads with a vision for innovative, user-centric web designs, ensuring each project merges creativity with functionality to deliver outstanding digital experiences.",
+    },
     cta: {
       headline: "Ready to Transform Your Development Process?",
       sub: "Start your journey today.",
-      text: "Get started with our design system today and experience a new level of efficiency and consistency in your projects.",
-      textAlign: "center",
       buttons: [
         {
           label: "Contact Us",
-          target: "#",
+          url: "#",
           icon: "person",
         },
         {
           label: "Learn More",
-          target: "#",
+          url: "#",
           icon: "date",
         },
       ],
+      textAlign: "center",
+      text: "Get started with our design system today and experience a new level of efficiency and consistency in your projects.",
     },
   }),
 };

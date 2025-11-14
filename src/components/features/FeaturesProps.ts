@@ -5,8 +5,6 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-import type {FeatureProps} from "../feature/FeatureProps";
-
 /**
  * The layout variant to use for the features
  */
@@ -22,14 +20,38 @@ export type CTAToggle = boolean;
  * @maxItems 8
  */
 export type Features =
-  | [FeatureProps]
-  | [FeatureProps, FeatureProps]
-  | [FeatureProps, FeatureProps, FeatureProps]
-  | [FeatureProps, FeatureProps, FeatureProps, FeatureProps]
-  | [FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps]
-  | [FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps]
-  | [FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps]
-  | [FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps, FeatureProps];
+  | [Feature]
+  | [Feature, Feature]
+  | [Feature, Feature, Feature]
+  | [Feature, Feature, Feature, Feature]
+  | [Feature, Feature, Feature, Feature, Feature]
+  | [Feature, Feature, Feature, Feature, Feature, Feature]
+  | [Feature, Feature, Feature, Feature, Feature, Feature, Feature]
+  | [Feature, Feature, Feature, Feature, Feature, Feature, Feature, Feature];
+/**
+ * The icon for the feature
+ */
+export type Icon = string;
+/**
+ * The title of the feature
+ */
+export type Title = string;
+/**
+ * The description of the feature
+ */
+export type Text = string;
+/**
+ * The CTA url
+ */
+export type CallToActionUrl = string;
+/**
+ * The text label displayed on the link
+ */
+export type LinkLabel = string;
+/**
+ * Icon for the link style of the cta
+ */
+export type Icon1 = string;
 
 /**
  * Component used to display a set of features
@@ -42,4 +64,14 @@ export interface FeaturesProps {
     style?: "button" | "link" | "intext";
   };
   feature?: Features;
+}
+export interface Feature {
+  icon?: Icon;
+  title?: Title;
+  text?: Text;
+  cta?: {
+    url?: CallToActionUrl;
+    label?: LinkLabel;
+    icon?: Icon1;
+  };
 }

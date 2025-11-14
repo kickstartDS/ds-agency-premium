@@ -11,6 +11,22 @@ import type {LogoProps} from "../logo/LogoProps";
  * Toggle the inversion of the flyout navigation
  */
 export type FlyoutInverted = boolean;
+/**
+ * Toggle the inversion of the dropdown navigation
+ */
+export type DropdownInverted = boolean;
+/**
+ * Toggle the CTA
+ */
+export type ToggleCTA = boolean;
+/**
+ * Text content to display inside the button
+ */
+export type Label = string;
+/**
+ * The URL to link to when the button is clicked
+ */
+export type URL = string;
 
 export interface NavMainProps {
   /**
@@ -18,9 +34,24 @@ export interface NavMainProps {
    */
   logo: LogoProps;
   flyoutInverted?: FlyoutInverted;
+  dropdownInverted?: DropdownInverted;
   items?: {
-    href: string;
+    url: string;
     label: string;
     active?: boolean;
+    items?: {
+      url?: string;
+      label?: string;
+      active?: boolean;
+    }[];
   }[];
+  cta?: CTA;
+}
+/**
+ * Add a CTA to the Navigation
+ */
+export interface CTA {
+  toggle?: ToggleCTA;
+  label?: Label;
+  url?: URL;
 }

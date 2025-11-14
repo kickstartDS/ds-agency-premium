@@ -12,12 +12,41 @@
       "enum": ["slider", "list", "alternating"],
       "default": "slider"
     },
+    "quoteSigns": {
+      "title": "Style of the quote signs",
+      "description": "The style of the quote signs",
+      "type": "string",
+      "enum": ["normal", "large", "none"],
+      "default": "normal"
+    },
     "testimonial": {
       "type": "array",
       "title": "Testimonials",
       "description": "Add testimonials featuring an image, a quote, a source and a rating",
       "items": {
-        "$ref": "http://schema.mydesignsystem.com/testimonial.schema.json"
+        "title": "Testimonial",
+        "description": "Testimonial entry of Testimonials component",
+        "type": "object",
+        "properties": {
+          "quote": {
+            "$ref": "http://schema.mydesignsystem.com/testimonial.schema.json#/properties/quote"
+          },
+
+          "name": {
+            "$ref": "http://schema.mydesignsystem.com/testimonial.schema.json#/properties/name"
+          },
+          "title": {
+            "$ref": "http://schema.mydesignsystem.com/testimonial.schema.json#/properties/title"
+          },
+          "image": {
+            "$ref": "http://schema.mydesignsystem.com/testimonial.schema.json#/properties/image"
+          },
+          "rating": {
+            "$ref": "http://schema.mydesignsystem.com/testimonial.schema.json#/properties/rating"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["quote", "name", "image"]
       }
     }
   },

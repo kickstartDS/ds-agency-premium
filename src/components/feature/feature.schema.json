@@ -7,6 +7,7 @@
   "properties": {
     "icon": {
       "type": "string",
+      "format": "icon",
       "title": "Icon",
       "description": "The icon for the feature",
       "examples": ["person"]
@@ -34,10 +35,10 @@
       "title": "Call to Action",
       "description": "The call to action",
       "properties": {
-        "target": {
+        "url": {
           "type": "string",
-          "title": "Call to Action target",
-          "description": "The CTA target",
+          "title": "Call to Action url",
+          "description": "The CTA url",
           "default": "#",
           "format": "uri"
         },
@@ -47,6 +48,14 @@
           "description": "The text label displayed on the link",
           "default": "See more",
           "examples": ["See all our partners"]
+        },
+        "icon": {
+          "type": "string",
+          "format": "icon",
+          "title": "Icon",
+          "description": "Icon for the link style of the cta",
+          "examples": ["arrow-right"],
+          "default": "arrow-right"
         },
         "toggle": {
           "type": "boolean",

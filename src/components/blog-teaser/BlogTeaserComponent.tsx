@@ -1,14 +1,17 @@
 import classnames from "classnames";
-import { forwardRef, createContext, useContext } from "react";
+import { forwardRef, createContext, useContext, HTMLAttributes } from "react";
 import { PostTeaserContextDefault } from "@kickstartds/blog/lib/post-teaser";
-
 import { BlogTeaserProps } from "./BlogTeaserProps";
 import "./blog-teaser.scss";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./BlogTeaserDefaults";
+
+export type { BlogTeaserProps };
 
 export const BlogTeaserContextDefault = forwardRef<
   HTMLDivElement,
-  BlogTeaserProps
+  BlogTeaserProps & HTMLAttributes<HTMLDivElement>
 >(
   (
     {
@@ -17,10 +20,12 @@ export const BlogTeaserContextDefault = forwardRef<
       headline,
       teaserText,
       image,
+      alt,
       link,
       readingTime,
       author,
       className,
+      ...rest
     },
     ref
   ) => {
@@ -40,11 +45,12 @@ export const BlogTeaserContextDefault = forwardRef<
       });
 
     return (
-      <Container name="post-teaser">
+      <Container name="blog-teaser">
         <PostTeaserContextDefault
+          {...rest}
           className={classnames(className, "dsa-blog-teaser")}
           // @ts-expect-error
-          image={{ src: image }}
+          image={{ src: image, alt: alt || headline }}
           meta={{
             author: author
               ? {
@@ -54,19 +60,15 @@ export const BlogTeaserContextDefault = forwardRef<
               : undefined,
             items: teaserMetaItems,
           }}
-          link={
-            link
-              ? {
-                  label: link.label || "Read more",
-                  // @ts-expect-error
-                  target: link.url,
-                }
-              : undefined
-          }
+          link={{
+            //@ts-expect-error
+            url: link.url,
+            label: link?.text || "Read article",
+          }}
           title={headline}
           body={teaserText}
           categories={tags.map((tag) => {
-            return { label: tag };
+            return { label: tag.entry };
           })}
           ref={ref}
         />
@@ -76,10 +78,11 @@ export const BlogTeaserContextDefault = forwardRef<
 );
 
 export const BlogTeaserContext = createContext(BlogTeaserContextDefault);
-export const BlogTeaser = forwardRef<HTMLDivElement, BlogTeaserProps>(
-  (props, ref) => {
-    const Component = useContext(BlogTeaserContext);
-    return <Component {...props} ref={ref} />;
-  }
-);
+export const BlogTeaser = forwardRef<
+  HTMLDivElement,
+  BlogTeaserProps & HTMLAttributes<HTMLDivElement>
+>((props, ref) => {
+  const Component = useContext(BlogTeaserContext);
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
+});
 BlogTeaser.displayName = "BlogTeaser";

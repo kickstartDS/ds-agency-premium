@@ -1,17 +1,21 @@
-import { HTMLAttributes, forwardRef } from "react";
+import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
 import classnames from "classnames";
 import { SliderProps } from "./SliderProps";
 import { Slider as KickstartSlider } from "@kickstartds/content/lib/slider";
 import "./slider.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./SliderDefaults";
 
-export const Slider = forwardRef<
+export type { SliderProps };
+
+export const SliderContextDefault = forwardRef<
   HTMLDivElement,
   SliderProps & HTMLAttributes<HTMLDivElement>
 >(
   (
     {
       gap,
-      type,
+      variant,
       autoplay,
       arrows,
       teaseNeighbours,
@@ -25,7 +29,7 @@ export const Slider = forwardRef<
     <KickstartSlider
       className={classnames(`dsa-slider`, className)}
       gap={gap}
-      type={type}
+      type={variant}
       arrows={arrows}
       autoplay={autoplay}
       teaseNeighbours={teaseNeighbours}
@@ -37,3 +41,13 @@ export const Slider = forwardRef<
     </KickstartSlider>
   )
 );
+
+export const SliderContext = createContext(SliderContextDefault);
+export const Slider = forwardRef<
+  HTMLDivElement,
+  SliderProps & HTMLAttributes<HTMLDivElement>
+>((props, ref) => {
+  const Component = useContext(SliderContext);
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
+});
+Slider.displayName = "Slider";

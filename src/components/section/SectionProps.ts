@@ -5,16 +5,27 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {BlogTeaserProps} from "../blog-teaser/BlogTeaserProps";
+import type {BusinessCardProps} from "../business-card/BusinessCardProps";
+import type {ContactProps} from "../contact/ContactProps";
+import type {ContentNavProps} from "../content-nav/ContentNavProps";
 import type {CtaProps} from "../cta/CtaProps";
+import type {DividerProps} from "../divider/DividerProps";
+import type {DownloadsProps} from "../downloads/DownloadsProps";
+import type {EventLatestTeaserProps} from "../event-latest-teaser/EventLatestTeaserProps";
+import type {EventListTeaserProps} from "../event-list-teaser/EventListTeaserProps";
 import type {FaqProps} from "../faq/FaqProps";
 import type {FeaturesProps} from "../features/FeaturesProps";
 import type {GalleryProps} from "../gallery/GalleryProps";
 import type {HeroProps} from "../hero/HeroProps";
+import type {HtmlProps} from "../html/HtmlProps";
 import type {ImageStoryProps} from "../image-story/ImageStoryProps";
 import type {ImageTextProps} from "../image-text/ImageTextProps";
 import type {LogosProps} from "../logos/LogosProps";
 import type {MosaicProps} from "../mosaic/MosaicProps";
 import type {SliderProps} from "../slider/SliderProps";
+import type {SplitEvenProps} from "../split-even/SplitEvenProps";
+import type {SplitWeightedProps} from "../split-weighted/SplitWeightedProps";
 import type {StatsProps} from "../stats/StatsProps";
 import type {TeaserCardProps} from "../teaser-card/TeaserCardProps";
 import type {TestimonialsProps} from "../testimonials/TestimonialsProps";
@@ -29,18 +40,19 @@ export type Width = "full" | "max" | "wide" | "default" | "narrow";
 /**
  * Style of background
  */
-export type Style =
-  | "stagelights"
-  | "horizontalGradient"
-  | "verticalGradient"
-  | "accentTransition"
-  | "boldTransition"
-  | "symmetricGlow"
-  | "anchorGlow";
+export type Style = "default" | "framed" | "deko";
 /**
  * Color of background
  */
 export type Style1 = "default" | "accent" | "bold";
+/**
+ * Color of background
+ */
+export type Style2 = "none" | "to-default" | "to-accent" | "to-bold" | "to-inverted";
+/**
+ * Background image for the whole section
+ */
+export type BackgroundImage = string;
 /**
  * Show spotlight behind cursor
  */
@@ -108,21 +120,32 @@ export type Mode = "default" | "tile" | "list" | "slider";
 /**
  * Set min-width for the tiles in the grid
  */
-export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest";
+export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest" | "full";
 /**
  * Allowed components for content
  */
 export type Content = (
+  | BlogTeaserProps
+  | BusinessCardProps
+  | ContactProps
+  | ContentNavProps
   | CtaProps
+  | DividerProps
+  | DownloadsProps
+  | EventLatestTeaserProps
+  | EventListTeaserProps
   | FaqProps
   | FeaturesProps
   | GalleryProps
   | HeroProps
+  | HtmlProps
   | ImageStoryProps
   | ImageTextProps
   | LogosProps
   | MosaicProps
   | SliderProps
+  | SplitEvenProps
+  | SplitWeightedProps
   | StatsProps
   | TeaserCardProps
   | TestimonialsProps
@@ -141,6 +164,8 @@ export interface SectionProps {
   width?: Width;
   style?: Style;
   backgroundColor?: Style1;
+  transition?: Style2;
+  backgroundImage?: BackgroundImage;
   spotlight?: Spotlight;
   spaceBefore?: SpaceBefore;
   spaceAfter?: SpaceAfter;

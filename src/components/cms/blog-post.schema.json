@@ -1,10 +1,10 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.mydesignsystem.com/cms/blog-post.schema.json",
+  "$id": "http://cms.mydesignsystem.com/blog-post.schema.json",
   "title": "Blog Post",
   "description": "Abstracts a blog post concept into JSON schema",
   "type": "object",
-  "required": ["seo"],
+  "required": ["head", "seo"],
   "properties": {
     "head": {
       "$ref": "http://schema.mydesignsystem.com/blog-head.schema.json"
@@ -15,14 +15,22 @@
     "content": {
       "type": "string",
       "title": "Text",
-      "description": "Body text for the blog post",
+      "description": "Body text for the blog post, overwrites sections if present",
       "format": "markdown"
+    },
+    "section": {
+      "type": "array",
+      "title": "Blog Sections",
+      "description": "Collection of sections (with their contents) to render on the blog post",
+      "items": {
+        "$ref": "http://schema.mydesignsystem.com/section.schema.json"
+      }
     },
     "cta": {
       "$ref": "http://schema.mydesignsystem.com/cta.schema.json"
     },
     "seo": {
-      "$ref": "http://schema.mydesignsystem.com/cms/seo.schema.json"
+      "$ref": "http://cms.mydesignsystem.com/seo.schema.json"
     }
   }
 }

@@ -1,26 +1,44 @@
-import { Split } from "../../split/SplitComponent";
+import { SplitWeighted } from "../../split-weighted/SplitWeightedComponent";
 import { BlogHead } from "../../blog-head/BlogHeadComponent";
 import { Section } from "../../section/SectionComponent";
 import { BlogAside } from "../../blog-aside/BlogAsideComponent";
 import { Text } from "../../text/TextComponent";
 import { Cta } from "../../cta/CtaComponent";
 import { BlogPostProps } from "../BlogPostProps";
+import { FC, PropsWithChildren } from "react";
 
-export const BlogPost = ({ head, content, aside, cta }: BlogPostProps) => (
+export type { BlogPostProps };
+
+export const BlogPost: FC<PropsWithChildren<BlogPostProps>> = ({
+  head,
+  content,
+  aside,
+  cta,
+  children,
+}) => (
   <>
     <Section width="wide">
-      <Split layout="sidebarRight">
-        <div>
-          {head && <BlogHead {...head} />}
-          <Text text={content} />
-        </div>
-        <BlogAside {...aside} />
-      </Split>
+      <SplitWeighted
+        verticalAlign="sticky"
+        horizontalGutter="large"
+        mainLayout={{
+          minWidth: "narrow",
+        }}
+        main={
+          <>
+            {head && <BlogHead {...head} />}
+            {content ? <Text text={content} /> : children}
+          </>
+        }
+        aside={aside && <BlogAside {...aside} />}
+      />
     </Section>
     {cta && (
-      <Section>
-        <Cta {...cta} />
-      </Section>
+      <>
+        <Section backgroundColor="accent" content={{ mode: "list" }}>
+          <Cta {...cta} />
+        </Section>
+      </>
     )}
   </>
 );

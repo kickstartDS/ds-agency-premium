@@ -39,9 +39,14 @@ export interface FooterProps {
   byline?: Byline;
   inverted?: Inverted;
   navItems?: {
-    href: string;
+    url: string;
     label: string;
     active?: boolean;
+    items?: {
+      url?: string;
+      label?: string;
+      active?: boolean;
+    }[];
   }[];
 }
 export interface Logo {

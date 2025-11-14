@@ -4,6 +4,10 @@ import "./testimonials.scss";
 import { Slider } from "../slider/SliderComponent";
 import { SliderProps } from "../slider/SliderProps";
 import { Testimonial } from "../testimonial/TestimonialComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./TestimonialsDefaults";
+
+export type { TestimonialsProps };
 
 interface ConditionalSliderProps extends SliderProps {
   layout: "slider" | "list" | "alternating";
@@ -41,20 +45,31 @@ export const ConditionalSlider = forwardRef<
 export const TestimonialsContextDefault = forwardRef<
   HTMLDivElement,
   TestimonialsProps & HTMLAttributes<HTMLDivElement>
->(({ testimonial: testimonials = [], layout = "slider", ...props }, ref) => {
-  return (
-    <ConditionalSlider layout={layout} arrows nav {...props} ref={ref}>
-      {testimonials.map((testimonial, index) => (
-        <Testimonial
-          {...testimonial}
-          index={index}
-          layout={layout}
-          key={index}
-        />
-      ))}
-    </ConditionalSlider>
-  );
-});
+>(
+  (
+    {
+      testimonial: testimonials = [],
+      layout = "slider",
+      quoteSigns = "normal",
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <ConditionalSlider layout={layout} arrows nav {...props} ref={ref}>
+        {testimonials.map((testimonial, index) => (
+          <Testimonial
+            {...testimonial}
+            quoteSigns={quoteSigns}
+            index={index}
+            layout={layout}
+            key={index}
+          />
+        ))}
+      </ConditionalSlider>
+    );
+  }
+);
 
 export const TestimonialsContext = createContext(TestimonialsContextDefault);
 export const Testimonials = forwardRef<
@@ -62,6 +77,6 @@ export const Testimonials = forwardRef<
   TestimonialsProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(TestimonialsContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Testimonials.displayName = "Testimonials";

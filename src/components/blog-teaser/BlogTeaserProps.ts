@@ -5,6 +5,8 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {BlogTagProps} from "../blog-tag/BlogTagProps";
+
 /**
  * The date of the blog post
  */
@@ -12,7 +14,7 @@ export type Date = string;
 /**
  * The tags for the blog post
  */
-export type Tags = string[];
+export type Tags = BlogTagProps[];
 /**
  * The headline of the blog post
  */
@@ -26,13 +28,17 @@ export type TeaserText = string;
  */
 export type Image = string;
 /**
+ * The alt text for the preview image
+ */
+export type Alt = string;
+/**
  * The blog entry URL to link
  */
 export type URL = string;
 /**
- * The label to use for the link
+ * The text for the link
  */
-export type Label = string;
+export type Text = string;
 /**
  * Time to read for the blog post
  */
@@ -59,6 +65,7 @@ export interface BlogTeaserProps {
   headline: Headline;
   teaserText: TeaserText;
   image?: Image;
+  alt?: Alt;
   link?: Link;
   readingTime?: ReadingTime;
   author?: Author;
@@ -69,7 +76,7 @@ export interface BlogTeaserProps {
  */
 export interface Link {
   url: URL;
-  label?: Label;
+  text?: Text;
 }
 /**
  * The author of the blog post

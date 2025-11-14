@@ -1,9 +1,9 @@
 @import "../../selectors";
 
 .dsa-button {
-  --dsa-button--padding: 0.75em 2em;
+  --dsa-button--padding: 0.75em 1.5em;
   --dsa-button--border-width: var(--ks-border-width-default);
-  --dsa-button--border-radius: var(--ks-border-radius-pill);
+  --dsa-button--border-radius: var(--ks-border-radius-control);
   --dsa-button--font-weight: var(--ks-font-weight-semi-bold);
   --dsa-button--text-transform: default;
 
@@ -21,10 +21,7 @@
 
   --dsa-button_primary--background-color: var(--ks-background-color-primary-interactive);
   --dsa-button_primary--background-color_hover: var(--ks-background-color-primary-interactive-hover);
-
-  --dsa-button_primary_inverted--color: var(--ks-color-fg-inverted-alpha-2);
-  --dsa-button_primary_inverted--color_hover: var(--ks-color-fg-inverted);
-  --dsa-button_primary_inverted--color_active: var(--ks-color-fg-inverted);
+  --dsa-button_primary--background-color_active: var(--ks-background-color-primary-interactive-active);
 
   //SECONDARY
 

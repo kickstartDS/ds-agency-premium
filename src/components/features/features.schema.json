@@ -39,7 +39,33 @@
       "title": "Features",
       "description": "The features to display",
       "items": {
-        "$ref": "http://schema.mydesignsystem.com/feature.schema.json"
+        "type": "object",
+        "title": "Feature",
+        "properties": {
+          "icon": {
+            "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/icon"
+          },
+          "title": {
+            "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/title"
+          },
+          "text": {
+            "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/text"
+          },
+          "cta": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/cta/properties/url"
+              },
+              "label": {
+                "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/cta/properties/label"
+              },
+              "icon": {
+                "$ref": "http://schema.mydesignsystem.com/feature.schema.json#/properties/cta/properties/icon"
+              }
+            }
+          }
+        }
       },
       "minItems": 1,
       "maxItems": 8

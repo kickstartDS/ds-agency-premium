@@ -2,16 +2,27 @@
 
 .dsa-testimonials {
   .c-quote {
-    --c-quote_source--font: var(--dsa-testimonial__source--font, var(--ks-font-copy-m));
+    --c-quote_text--font: var(--dsa-testimonials__quote--font, var(--ks-font-copy-l));
+    --c-quote_text--margin-bottom: var(--dsa-testimonials__quote--margin-bottom, var(--ks-spacing-stack-s));
 
-    --c-quote_icon--font-family: var(--dsa-testimonial__icon--font-family, var(--ks-font-family-copy));
-    --c-quote_icon--font-size: var(--dsa-testimonial__icon--font-size, 3em);
-    --c-quote_icon--color: var(--dsa-testimonial__icon--color, var(--ks-text-color-primary));
+    --c-quote_source--font: var(--dsa-testimonials__source--font, (--ks-font-copy-s));
+    --c-quote_source--font-style: var(--dsa-testimonials__source--font-style, normal);
+    --c-quote_source--font-weight: var(--dsa-testimonials__source--font-weight, var(--ks-font-weight-bold));
+    --c-quote_source--text-transform: var(--dsa-testimonials__source--text-transform, uppercase);
 
-    --c-quote_byline--font: var(--dsa-testimonial__byline--font, var(--ks-font-copy-m));
-    --c-quote_byline--font-weight: var(--dsa-testimonial__byline--font-weight, var(--ks-font-weight-regular));
+    --c-quote_icon--font-family: var(--dsa-testimonials__icon--font-family, var(--ks-font-family-copy));
+    --c-quote_icon--font-size: var(--dsa-testimonials__icon--font-size, 3em);
+    --c-quote_icon--color: var(--dsa-testimonials__icon--color, var(--ks-text-color-primary));
+    --c-quote_icon--content: var(--dsa-testimonials__icon--content, "”");
+    --c-quote_icon--left: var(--dsa-testimonials__icon--left, calc(var(--c-quote_content--padding-left) / 2));
+    --c-quote_icon--transform: var(--dsa-testimonials__icon--transform, translateX(-50%));
 
-    --c-quote_image--max-width: var(--dsa-testimonial__image--max-width, 40%);
+    --c-quote_byline--font: var(--dsa-testimonials__byline--font, var(--ks-font-copy-m));
+    --c-quote_byline--font-weight: var(--dsa-testimonials__byline--font-weight, var(--ks-font-weight-regular));
+
+    --c-quote_image--max-width: var(--dsa-testimonials__image--max-width, 40%);
+
+    --c-quote_content--padding-left: var(--dsa-testimonials--padding-left, var(--ks-spacing-inline-l));
   }
 
   .c-slider-main {
@@ -22,27 +33,32 @@
   &--list {
     display: flex;
     flex-direction: column;
-    gap: var(--dsa-testimonial__list--gap, var(--ks-spacing-stack-xl));
+    gap: var(--dsa-testimonials__list--gap, var(--ks-spacing-stack-xl));
   }
 
   .c-quote {
+    gap: var(--dsa-testimonials--gap, var(--ks-spacing-stack-s) var(--ks-spacing-inline-m));
+
     &__source {
-      color: var(--dsa-testimonial__source--color, var(--ks-text-color-default));
+      color: var(--dsa-testimonials__source--color, var(--ks-text-color-default));
     }
 
     &__byline {
-      color: var(--dsa-testimonial__byline--color, var(--ks-text-color-copy));
+      color: var(--dsa-testimonials__byline--color, var(--ks-text-color-copy));
     }
 
     &__text {
-      margin-bottom: var(--testimonials__copy--margin-bottom, var(--ks-spacing-stack-s));
+      font-weight: var(--dsa-testimonials__quote--font-weight, var(--ks-font-weight-regular));
+      position: relative;
+      z-index: 1;
+      margin-bottom: var(--dsa-testimonials__quote--margin-bottom, var(--ks-spacing-stack-s));
     }
 
     &--reverse {
       flex-direction: row-reverse;
 
       .c-quote__content {
-        padding-right: var(--dsa-testimonial--padding-left, var(--ks-spacing-xl));
+        padding-right: var(--dsa-testimonials--padding-left, var(--ks-spacing-xl));
         padding-left: unset;
 
         &:before {
@@ -53,8 +69,18 @@
       }
     }
 
+    &.c-quote--small-signs {
+      .c-quote__content {
+        padding: 0;
+        &::before {
+          content: "";
+        }
+      }
+    }
+
     .c-quote__content {
-      font: var(--dsa-testimonial__copy--font, var(--ks-font-copy-l));
+      font: var(--dsa-testimonials__quote--font, var(--ks-font-copy-l));
+      padding-top: var(--dsa-testimonials--padding-top, 0.5em);
 
       &::before {
         line-height: 0.7;

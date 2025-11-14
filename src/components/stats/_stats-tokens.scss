@@ -1,0 +1,18 @@
+.dsa-stats {
+  --dsa-stats--gap-vertical: var(--ks-spacing-stack-l);
+  --dsa-stats--gap-horizontal: var(--ks-spacing-inline-m);
+
+  --dsa-stats__item--gap: var(--ks-spacing-stack-xs);
+
+  --dsa-stats__icon--color: var(--ks-text-color-primary);
+  --dsa-stats__icon--size: 5em;
+
+  --dsa-stats__number--font: var(--ks-font-display-xl);
+  --dsa-stats__number--font-weight: var(--ks-font-weight-semi-bold);
+  --dsa-stats__number--background: var(--dsa-typo--highlight);
+  --dsa-stats__topic__font: var(--ks-font-interface-xl);
+  --dsa-stats__topic--color: var(--ks-text-color-display);
+
+  --dsa-stats__copy--font: var(--ks-font-copy-s);
+  --dsa-stats__copy--color: var(--ks-text-color-default);
+}

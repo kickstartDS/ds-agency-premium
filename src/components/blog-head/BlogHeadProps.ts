@@ -5,6 +5,8 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {BlogTagProps} from "../blog-tag/BlogTagProps";
+
 /**
  * The date when the blog post was published
  */
@@ -12,7 +14,7 @@ export type PublishedDate = string;
 /**
  * The tags associated with the blog post
  */
-export type Tags = string[];
+export type Tags = BlogTagProps[];
 /**
  * The headline of the blog post
  */
@@ -21,6 +23,10 @@ export type Headline = string;
  * The source of the cover image for the blog post
  */
 export type CoverImage = string;
+/**
+ * The alt text for the cover image
+ */
+export type AltText = string;
 
 /**
  * Intro portion of a singular blog entry
@@ -30,4 +36,5 @@ export interface BlogHeadProps {
   tags?: Tags;
   headline: Headline;
   image?: CoverImage;
+  alt?: AltText;
 }

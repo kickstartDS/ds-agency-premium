@@ -1,3 +1,1688 @@
+# v1.6.70 (Fri Jun 27 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: update added screenshots ([@julrich](https://github.com/julrich))
+- fix: add correct component screenshots ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.6.69 (Thu Jun 26 2025)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add markdown capabilities to feature component ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.6.68 (Thu Jun 26 2025)
+
+#### ⚠️ Pushed to `main`
+
+- fix: mixed string and integer content in stats ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.6.67 (Wed Feb 05 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(hmtl): increase readability of consent message ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.66 (Tue Feb 04 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(html): add inverted property ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.65 (Tue Feb 04 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(html): style consent ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.64 (Tue Jan 28 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(testimonials): rename token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.62 (Tue Jan 28 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(quote): add quoteSign property to quote ([@fleven-kds](https://github.com/fleven-kds))
+- feat(testimonials): fix faulty token naming ([@fleven-kds](https://github.com/fleven-kds))
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(testimonial): fix token typo ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.61 (Mon Jan 27 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(hero): remove min-height from no-crop setting ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.60 (Fri Jan 10 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(border): add image border-radius ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.58 (Fri Jan 10 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(global-token): up selector specificity ([@fleven-kds](https://github.com/fleven-kds))
+- feat(global-tokens): reduce selector specificity ([@fleven-kds](https://github.com/fleven-kds))
+- feat(token): change global typo gradient to highlight ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.57 (Tue Jan 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(docs): add missing docs page ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.56 (Mon Jan 06 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(section): rename token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.55 (Mon Jan 06 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(global-token): update default value of tile-widths ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.54 (Mon Jan 06 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(token): fix syntax typo ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.53 (Fri Dec 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(section): add global tile-width token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.52 (Fri Dec 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(global-token): calculate content-width independently ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.51 (Fri Dec 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(global-token): remove annotations ([@fleven-kds](https://github.com/fleven-kds))
+- feat(token): make content-width em based ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.50 (Fri Dec 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(breakpoints): add widescreen breakpoint ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.49 (Fri Dec 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(global-token): Increase the default value of content-width_wide #78 ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.48 (Thu Dec 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(ImageStory): remove ts-expect-error designation ([@fleven-kds](https://github.com/fleven-kds))
+- feat(section): add BackgroundImage story ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.47 (Thu Dec 19 2024)
+
+#### 🐛 Bug Fix
+
+- Optimise for large screen resolutions [#39](https://github.com/kickstartDS/ds-agency-premium/pull/39) ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.46 (Thu Dec 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(pages): restructure pages ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.45 (Fri Dec 13 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(hero): fix "corner" layout ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.44 (Thu Dec 12 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(hero): add "corner" variant to textPosition ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.43 (Tue Dec 10 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(package): adjust script ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.42 (Tue Dec 10 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(features:) add min-width to icons ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.41 (Mon Dec 09 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(features): fix feature icon layout ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.40 (Thu Dec 05 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(dependencies): update kickstartDS ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.39 (Wed Dec 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add markdown capabilities to teaser card headline ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.6.36 (Tue Dec 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(typo): adjust fallback typo token ([@fleven-kds](https://github.com/fleven-kds))
+- feat(token): reduce scaling on tv-bp token ([@fleven-kds](https://github.com/fleven-kds))
+- feat(cta): roll back previous changes + adjust flex layout ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.35 (Tue Dec 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(author): add docs for author ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.34 (Tue Dec 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(divider): adjust default component token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.33 (Tue Dec 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(icons): add missing built-in icons ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.32 (Mon Dec 02 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(section): remove max-width value ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.31 (Mon Dec 02 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(section): change token default value ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.30 (Fri Nov 29 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(breakpoints): rename 4k breakpoint ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.29 (Fri Nov 29 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(section): add tv support ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.28 (Thu Nov 28 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(cta): rewire properties ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.27 (Wed Nov 27 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(icons): remove duplicate icon ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.25 (Tue Nov 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(contact): rename token ([@fleven-kds](https://github.com/fleven-kds))
+- feat(contact): add token for vertical link padding ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.24 (Tue Nov 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(blogHead): add dsa specific className for blog-head ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.23 (Tue Nov 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(icons): remove custom icons ([@fleven-kds](https://github.com/fleven-kds))
+- feat(sd.config): fix icon sprite generation ([@fleven-kds](https://github.com/fleven-kds))
+- feat(package): update kickstartDS-content ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.22 (Tue Nov 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: add explicit alt texts to blog related images ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.6.21 (Tue Nov 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add better label to blog teasers ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.6.20 (Thu Nov 21 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(section): improve z-index behaviour ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.19 (Thu Nov 21 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(blogTeaser): Add component token for Blog Teaser avatar size #23 ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.18 (Wed Nov 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: bring back spotlight in section ([@lmestel](https://github.com/lmestel))
+
+#### Authors: 1
+
+- Lukas Mestel ([@lmestel](https://github.com/lmestel))
+
+---
+
+# v1.6.17 (Wed Nov 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(footer): change border color tokem ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.16 (Wed Nov 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(footer): adjust footer border colo ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.15 (Wed Nov 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(section): revert previous change ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.14 (Wed Nov 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(section): fix spotlight ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.13 (Wed Nov 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(global): fix text-color-on-primary token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.12 (Wed Nov 20 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(icons): add icons ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.11 (Tue Nov 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(hero): fix container name ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.10 (Mon Nov 18 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(hero): add component token for hero min width ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.9 (Thu Nov 14 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(start): replace image component ([@fleven-kds](https://github.com/fleven-kds))
+- feat(image): remove component ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.8 (Thu Nov 14 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(tokens): fix typo ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.7 (Thu Nov 07 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add label to blog teaser links ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.6.6 (Thu Nov 07 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add iconSprite to settings schema ([@julrich](https://github.com/julrich))
+- fix: add alt tags to blog teaser and blog head images ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.6.5 (Thu Nov 07 2024)
+
+#### ⚠️ Pushed to `main`
+
+- build: update markdown-to-jsx dependency ([@lmestel](https://github.com/lmestel))
+
+#### Authors: 1
+
+- Lukas Mestel ([@lmestel](https://github.com/lmestel))
+
+---
+
+# v1.6.4 (Thu Nov 07 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: features rendering ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.6.3 (Wed Nov 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(icons): fix folder path ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.2 (Wed Nov 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(icons): add new icon set ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.1 (Wed Nov 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(features): apply properties more precisely ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.6.0 (Fri Oct 25 2024)
+
+#### 🚀 Enhancement
+
+- Execute scripts in html component & add consent [#19](https://github.com/kickstartDS/ds-agency-premium/pull/19) ([@lmestel](https://github.com/lmestel) [@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 2
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+- Lukas Mestel ([@lmestel](https://github.com/lmestel))
+
+---
+
+# v1.5.42 (Fri Oct 25 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(stats): improve vertical alignment ([@fleven-kds](https://github.com/fleven-kds))
+- feat(header): increase z-index ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.41 (Thu Oct 24 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: fix headline link position ([@lmestel](https://github.com/lmestel))
+
+#### Authors: 1
+
+- Lukas Mestel ([@lmestel](https://github.com/lmestel))
+
+---
+
+# v1.5.40 (Thu Oct 24 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat: enhance headline links ([@lmestel](https://github.com/lmestel))
+
+#### Authors: 1
+
+- Lukas Mestel ([@lmestel](https://github.com/lmestel))
+
+---
+
+# v1.5.39 (Thu Oct 24 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: divider default token ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.38 (Thu Oct 24 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: remove obsolete typescript files ([@julrich](https://github.com/julrich))
+- fix: make header semantic ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.37 (Wed Oct 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add missing and updated component previews ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.36 (Wed Oct 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add new components divider and html to section ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.35 (Mon Oct 14 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feature: add icon picker capabilities ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.34 (Mon Oct 14 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: add linked h2 headlines ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.33 (Wed Oct 09 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(lightbox): fix token typo ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.32 (Wed Oct 09 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(lightbox): add lightbox component token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.31 (Wed Oct 09 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(slider): increase control nav margin ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.30 (Tue Oct 08 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'feature/add-divider' ([@fleven-kds](https://github.com/fleven-kds))
+- feat(DividerStory): move divider to layout category ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.29 (Wed Oct 02 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add prop type exports to components ([@lmestel](https://github.com/lmestel))
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: add prop type exports to components ([@julrich](https://github.com/julrich))
+
+#### Authors: 2
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+- Lukas Mestel ([@lmestel](https://github.com/lmestel))
+
+---
+
+# v1.5.28 (Thu Sep 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: empty images in testimonial ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.27 (Wed Sep 11 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(blogTeaser): remove link label property ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.26 (Tue Sep 10 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: html attributes for HTML component ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.25 (Tue Sep 10 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(footer): fix token typos ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.24 (Tue Sep 10 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(Footer): fix HTMLDivElement declaration ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.23 (Tue Sep 10 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(footer): add footerContext ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.22 (Tue Sep 10 2024)
+
+#### 🐛 Bug Fix
+
+- Feature/add divider [#16](https://github.com/kickstartDS/ds-agency-premium/pull/16) ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.21 (Tue Sep 10 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(blogAside): fix token typo ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.20 (Mon Sep 09 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(contact): center links vertically ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.19 (Fri Sep 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(teaser-card): add border token for label ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.18 (Fri Sep 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(section): make style class conditional ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.17 (Fri Sep 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(button-token): add missing token, remove superflous ones ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.16 (Thu Sep 05 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: component previews ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.15 (Thu Sep 05 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(blogAuthor): add story ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.14 (Thu Sep 05 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: update component previews ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.12 (Thu Sep 05 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(section-token): replace section token with global content spacing ([@fleven-kds](https://github.com/fleven-kds))
+- feat(flyout): remove chevron icon from sublist items ([@fleven-kds](https://github.com/fleven-kds))
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(nav-flyout): make active state selector more specific ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.11 (Wed Sep 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: pass through rest props in new blog components ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.10 (Wed Sep 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add ref to blog aside ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.9 (Wed Sep 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branches 'main' and 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(features): add link token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.7 (Wed Sep 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(contact): manually give props to picture component ([@fleven-kds](https://github.com/fleven-kds))
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(blog): replace contact element with cta ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.5 (Wed Sep 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(BlogPost): insert replace cta with contact componetn ([@fleven-kds](https://github.com/fleven-kds))
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: providers / context ([@julrich](https://github.com/julrich))
+
+#### Authors: 2
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.4 (Wed Sep 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add undefined guard to links in contact ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.3 (Wed Sep 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(blog): refactor blog compnents ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.2 (Tue Sep 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(blog-teaser): adjust token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.5.1 (Tue Sep 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feature: extract blog author to its own component ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.5.0 (Tue Sep 03 2024)
+
+#### 🚀 Enhancement
+
+- Add contact component [#15](https://github.com/kickstartDS/ds-agency-premium/pull/15) ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.16 (Tue Sep 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(headline): streamline token naming ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.15 (Tue Sep 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(Start): remove br tags from template ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.14 (Tue Sep 03 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branches 'main' and 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(section-token): fix token mapping ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.13 (Mon Sep 02 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(teaser-card): fix syntax error ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.12 (Mon Sep 02 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feature: add page component ([@julrich](https://github.com/julrich))
+- fix: make head in blog post required ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.4.11 (Mon Sep 02 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(blogStories): update story to new tag entry schema ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.10 (Thu Aug 29 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(nav-main): add toggle to nav-main breakpoint toggle ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.9 (Thu Aug 29 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branches 'main' and 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(topbar): increase selector for right aligned dropdown ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.8 (Thu Aug 29 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(nav-main): move breakpoint for display of nav components to nav-main ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.7 (Tue Aug 27 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(nav-topbar): adjust selector ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.5 (Mon Aug 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: blog tag schema ([@julrich](https://github.com/julrich))
+- feat(hero): correct typo ([@fleven-kds](https://github.com/fleven-kds))
+- feat(cta): up token selector specifity to enable overwriting ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 2
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.4.4 (Fri Aug 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: add explicit titles to blog overview ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.4.3 (Fri Aug 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- feature: add more flexibility to blog overview ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.4.2 (Fri Aug 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: typing of header ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.4.1 (Fri Aug 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(flyout): add padding to accomodate for mobile browser bottom bars ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.4.0 (Fri Aug 23 2024)
+
+#### 🚀 Enhancement
+
+- Feature/develop dropdown nav [#14](https://github.com/kickstartDS/ds-agency-premium/pull/14) ([@fleven-kds](https://github.com/fleven-kds) [@julrich](https://github.com/julrich))
+
+#### Authors: 2
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.3.51 (Fri Aug 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: section layout for blog cta ([@julrich](https://github.com/julrich))
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@julrich](https://github.com/julrich))
+- fix: only render sections in blog when content empty ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.3.49 (Wed Aug 21 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(headline): add missing token prefix ([@fleven-kds](https://github.com/fleven-kds))
+- feat(image-token): update token prefix ([@fleven-kds](https://github.com/fleven-kds))
+- feat(class prefix): change outdated prefix to "dsa" ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.3.48 (Mon Aug 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feature: add sections to blog post ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.3.47 (Mon Aug 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(cta): fix faulty token declaration ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.3.45 (Mon Aug 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(headline): refactor token ([@fleven-kds](https://github.com/fleven-kds))
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(headline): remove unused token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.3.44 (Mon Aug 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: pass through rest props in blog components ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
+# v1.3.43 (Wed Aug 14 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(selectors): update selectors ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.3.42 (Wed Aug 14 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(selectors): decrease global selector specificity ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.3.41 (Wed Aug 14 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:kickstartDS/ds-agency-premium ([@fleven-kds](https://github.com/fleven-kds))
+- feat(footer): expand link token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.3.40 (Wed Aug 14 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(footer): make link text decoration for footer more explicit ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.3.39 (Tue Aug 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(global): fix token syntax ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.3.38 (Tue Aug 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(nav): fix floating header token ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
+# v1.3.37 (Mon Aug 05 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(footer + header): disable link text-decoration ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
 # v1.3.36 (Mon Aug 05 2024)
 
 #### ⚠️ Pushed to `main`
