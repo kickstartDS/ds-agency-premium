@@ -13,7 +13,7 @@
   --ks-timing-function-linear: linear;
 
   // Transition
-  --ks-transition-collapse: var(--ks-duration-slow) var(var(--ks-timing-function-ease-out));
-  --ks-transition-hover: var(--ks-duration-fast) var(var(--ks-timing-function-ease-in-out));
-  --ks-transition-hover: var(--ks-duration-slow) var(var(--ks-timing-function-ease-out));
+  --ks-transition-collapse: var(--ks-duration-slow) var(--ks-timing-function-ease-out);
+  --ks-transition-hover: var(--ks-duration-fast) var(--ks-timing-function-ease-in-out);
+  --ks-transition-fade: var(--ks-duration-slow) var(--ks-timing-function-ease-out);
 }

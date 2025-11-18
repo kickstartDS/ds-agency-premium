@@ -95,11 +95,11 @@ const Page = () => (
 );
 
 export default {
-  title: "Token / Fonts",
+  title: "Token / Base / Font Size",
   render: Page,
   parameters: {
     layout: "fullscreen",
   },
 };
 
-export const Fonts = {};
+export const FontSize = {};

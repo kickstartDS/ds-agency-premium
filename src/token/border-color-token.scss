@@ -1,0 +1,42 @@
+:root,
+[ks-theme] {
+  --ks-border-color-primary-base: var(--ks-color-primary);
+  --ks-border-color-primary-inverted-base: var(--ks-color-primary-inverted);
+
+  --ks-border-color-primary-translucent-base: var(--ks-color-primary-alpha-5);
+  --ks-border-color-primary-inverted-translucent-base: var(--ks-color-primary-inverted-alpha-5);
+
+  --ks-border-color-primary-interactive-base: var(--ks-color-primary);
+  --ks-border-color-primary-inverted-interactive-base: var(--ks-color-primary-inverted);
+
+  --ks-border-color-primary-interactive-hover-base: var(--ks-color-primary-to-bg-6);
+  --ks-border-color-primary-inverted-interactive-hover-base: var(--ks-color-primary-inverted-to-bg-6);
+}
+
+:root {
+  --ks-border-color-primary: var(--ks-border-color-primary-base);
+  --ks-border-color-primary-inverted: var(--ks-border-color-primary-inverted-base);
+
+  --ks-border-color-primary-translucent: var(--ks-border-color-primary-translucent-base);
+  --ks-border-color-primary-inverted-translucent: var(--ks-border-color-primary-inverted-translucent-base);
+
+  --ks-border-color-primary-interactive: var(--ks-border-color-primary-interactive-base);
+  --ks-border-color-primary-inverted-interactive: var(--ks-border-color-primary-inverted-interactive-base);
+
+  --ks-border-color-primary-interactive-hover: var(--ks-border-color-primary-interactive-hover-base);
+  --ks-border-color-primary-inverted-interactive-hover: var(--ks-border-color-primary-inverted-interactive-hover-base);
+}
+
+[ks-inverted="true"] {
+  --ks-border-color-primary: var(--ks-border-color-primary-inverted-base);
+  --ks-border-color-primary-inverted: var(--ks-border-color-primary-base);
+
+  --ks-border-color-primary-translucent: var(--ks-border-color-primary-inverted-translucent-base);
+  --ks-border-color-primary-inverted-translucent: var(--ks-border-color-primary-translucent-base);
+
+  --ks-border-color-primary-interactive: var(--ks-border-color-primary-inverted-interactive-base);
+  --ks-border-color-primary-inverted-interactive: var(--ks-border-color-primary-interactive-base);
+
+  --ks-border-color-primary-interactive-hover: var(--ks-border-color-primary-inverted-interactive-hover-base);
+  --ks-border-color-primary-inverted-interactive-hover: var(--ks-border-color-primary-interactive-hover-base);
+}

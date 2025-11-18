@@ -21,11 +21,11 @@ const Page = () => (
 );
 
 export default {
-  title: "Token / Spacings",
+  title: "Token / Base / Spacing",
   render: Page,
   parameters: {
     layout: "fullscreen",
   },
 };
 
-export const Spacings = {};
+export const Spacing = {};

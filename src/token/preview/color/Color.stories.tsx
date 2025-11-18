@@ -90,11 +90,11 @@ const Page = () => (
 );
 
 export default {
-  title: "Token / Colors",
+  title: "Token / Base / Color",
   render: Page,
   parameters: {
     layout: "fullscreen",
   },
 };
 
-export const Colors = {};
+export const Color = {};

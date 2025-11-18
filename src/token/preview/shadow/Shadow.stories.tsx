@@ -48,11 +48,11 @@ const Page = () => (
 );
 
 export default {
-  title: "Token / Shadows",
+  title: "Token / Base / Shadow",
   render: Page,
   parameters: {
     layout: "fullscreen",
   },
 };
 
-export const Shadows = {};
+export const Shadow = {};
