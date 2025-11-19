@@ -6,8 +6,18 @@
   --color-bg: #fff;
   --color-bg-inverted: #212124;
 
-  --color-fg: #000;
+  --color-fg: #212124;
   --color-fg-inverted: #fff;
+
+  --color-scale-1: 5%;
+  --color-scale-2: 15%;
+  --color-scale-3: 27%;
+  --color-scale-4: 39%;
+  --color-scale-5: 50%;
+  --color-scale-6: 61%;
+  --color-scale-7: 73%;
+  --color-scale-8: 85%;
+  --color-scale-9: 95%;
 }
 
 // BASE TOKEN
@@ -52,179 +62,395 @@
 [ks-inverted],
 [ks-inverted="true"],
 [ks-inverted="false"] {
-  --ks-color-primary-alpha-1: color-mix(in srgb, var(--ks-color-primary) 10%, transparent);
-  --ks-color-primary-alpha-2: color-mix(in srgb, var(--ks-color-primary) 20%, transparent);
-  --ks-color-primary-alpha-3: color-mix(in srgb, var(--ks-color-primary) 30%, transparent);
-  --ks-color-primary-alpha-4: color-mix(in srgb, var(--ks-color-primary) 40%, transparent);
-  --ks-color-primary-alpha-5: color-mix(in srgb, var(--ks-color-primary) 50%, transparent);
-  --ks-color-primary-alpha-6: color-mix(in srgb, var(--ks-color-primary) 60%, transparent);
-  --ks-color-primary-alpha-7: color-mix(in srgb, var(--ks-color-primary) 70%, transparent);
-  --ks-color-primary-alpha-8: color-mix(in srgb, var(--ks-color-primary) 80%, transparent);
-  --ks-color-primary-alpha-9: color-mix(in srgb, var(--ks-color-primary) 90%, transparent);
+  --ks-color-primary-alpha-1: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-1, 10%), transparent);
+  --ks-color-primary-alpha-2: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-2, 20%), transparent);
+  --ks-color-primary-alpha-3: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-3, 30%), transparent);
+  --ks-color-primary-alpha-4: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-4, 40%), transparent);
+  --ks-color-primary-alpha-5: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-5, 50%), transparent);
+  --ks-color-primary-alpha-6: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-6, 60%), transparent);
+  --ks-color-primary-alpha-7: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-7, 70%), transparent);
+  --ks-color-primary-alpha-8: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-8, 80%), transparent);
+  --ks-color-primary-alpha-9: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-9, 90%), transparent);
 
-  --ks-color-primary-inverted-alpha-1: color-mix(in srgb, var(--ks-color-primary-inverted) 10%, transparent);
-  --ks-color-primary-inverted-alpha-2: color-mix(in srgb, var(--ks-color-primary-inverted) 20%, transparent);
-  --ks-color-primary-inverted-alpha-3: color-mix(in srgb, var(--ks-color-primary-inverted) 30%, transparent);
-  --ks-color-primary-inverted-alpha-4: color-mix(in srgb, var(--ks-color-primary-inverted) 40%, transparent);
-  --ks-color-primary-inverted-alpha-5: color-mix(in srgb, var(--ks-color-primary-inverted) 50%, transparent);
-  --ks-color-primary-inverted-alpha-6: color-mix(in srgb, var(--ks-color-primary-inverted) 60%, transparent);
-  --ks-color-primary-inverted-alpha-7: color-mix(in srgb, var(--ks-color-primary-inverted) 70%, transparent);
-  --ks-color-primary-inverted-alpha-8: color-mix(in srgb, var(--ks-color-primary-inverted) 80%, transparent);
-  --ks-color-primary-inverted-alpha-9: color-mix(in srgb, var(--ks-color-primary-inverted) 90%, transparent);
+  --ks-color-primary-inverted-alpha-1: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-1, 10%),
+    transparent
+  );
+  --ks-color-primary-inverted-alpha-2: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-2, 20%),
+    transparent
+  );
+  --ks-color-primary-inverted-alpha-3: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-3, 30%),
+    transparent
+  );
+  --ks-color-primary-inverted-alpha-4: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-4, 40%),
+    transparent
+  );
+  --ks-color-primary-inverted-alpha-5: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-5, 50%),
+    transparent
+  );
+  --ks-color-primary-inverted-alpha-6: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-6, 60%),
+    transparent
+  );
+  --ks-color-primary-inverted-alpha-7: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-7, 70%),
+    transparent
+  );
+  --ks-color-primary-inverted-alpha-8: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-8, 80%),
+    transparent
+  );
+  --ks-color-primary-inverted-alpha-9: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-9, 90%),
+    transparent
+  );
 
-  --ks-color-primary-to-bg-1: color-mix(in srgb, var(--ks-color-primary) 10%, var(--ks-color-bg));
-  --ks-color-primary-to-bg-2: color-mix(in srgb, var(--ks-color-primary) 20%, var(--ks-color-bg));
-  --ks-color-primary-to-bg-3: color-mix(in srgb, var(--ks-color-primary) 30%, var(--ks-color-bg));
-  --ks-color-primary-to-bg-4: color-mix(in srgb, var(--ks-color-primary) 40%, var(--ks-color-bg));
-  --ks-color-primary-to-bg-5: color-mix(in srgb, var(--ks-color-primary) 50%, var(--ks-color-bg));
-  --ks-color-primary-to-bg-6: color-mix(in srgb, var(--ks-color-primary) 60%, var(--ks-color-bg));
-  --ks-color-primary-to-bg-7: color-mix(in srgb, var(--ks-color-primary) 70%, var(--ks-color-bg));
-  --ks-color-primary-to-bg-8: color-mix(in srgb, var(--ks-color-primary) 80%, var(--ks-color-bg));
-  --ks-color-primary-to-bg-9: color-mix(in srgb, var(--ks-color-primary) 90%, var(--ks-color-bg));
+  --ks-color-primary-to-bg-1: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-1, 10%), var(--ks-color-bg));
+  --ks-color-primary-to-bg-2: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-2, 20%), var(--ks-color-bg));
+  --ks-color-primary-to-bg-3: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-3, 30%), var(--ks-color-bg));
+  --ks-color-primary-to-bg-4: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-4, 40%), var(--ks-color-bg));
+  --ks-color-primary-to-bg-5: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-5, 50%), var(--ks-color-bg));
+  --ks-color-primary-to-bg-6: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-6, 60%), var(--ks-color-bg));
+  --ks-color-primary-to-bg-7: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-7, 70%), var(--ks-color-bg));
+  --ks-color-primary-to-bg-8: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-8, 80%), var(--ks-color-bg));
+  --ks-color-primary-to-bg-9: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-9, 90%), var(--ks-color-bg));
 
   --ks-color-primary-inverted-to-bg-1: color-mix(
     in srgb,
-    var(--ks-color-primary-inverted) 10%,
+    var(--ks-color-primary-inverted) var(--color-scale-1, 10%),
     var(--ks-color-bg-inverted)
   );
   --ks-color-primary-inverted-to-bg-2: color-mix(
     in srgb,
-    var(--ks-color-primary-inverted) 20%,
+    var(--ks-color-primary-inverted) var(--color-scale-2, 20%),
     var(--ks-color-bg-inverted)
   );
   --ks-color-primary-inverted-to-bg-3: color-mix(
     in srgb,
-    var(--ks-color-primary-inverted) 30%,
+    var(--ks-color-primary-inverted) var(--color-scale-3, 30%),
     var(--ks-color-bg-inverted)
   );
   --ks-color-primary-inverted-to-bg-4: color-mix(
     in srgb,
-    var(--ks-color-primary-inverted) 40%,
+    var(--ks-color-primary-inverted) var(--color-scale-4, 40%),
     var(--ks-color-bg-inverted)
   );
   --ks-color-primary-inverted-to-bg-5: color-mix(
     in srgb,
-    var(--ks-color-primary-inverted) 50%,
+    var(--ks-color-primary-inverted) var(--color-scale-5, 50%),
     var(--ks-color-bg-inverted)
   );
   --ks-color-primary-inverted-to-bg-6: color-mix(
     in srgb,
-    var(--ks-color-primary-inverted) 60%,
+    var(--ks-color-primary-inverted) var(--color-scale-6, 60%),
     var(--ks-color-bg-inverted)
   );
   --ks-color-primary-inverted-to-bg-7: color-mix(
     in srgb,
-    var(--ks-color-primary-inverted) 70%,
+    var(--ks-color-primary-inverted) var(--color-scale-7, 70%),
     var(--ks-color-bg-inverted)
   );
   --ks-color-primary-inverted-to-bg-8: color-mix(
     in srgb,
-    var(--ks-color-primary-inverted) 80%,
+    var(--ks-color-primary-inverted) var(--color-scale-8, 80%),
     var(--ks-color-bg-inverted)
   );
   --ks-color-primary-inverted-to-bg-9: color-mix(
     in srgb,
-    var(--ks-color-primary-inverted) 90%,
+    var(--ks-color-primary-inverted) var(--color-scale-9, 90%),
     var(--ks-color-bg-inverted)
   );
 
-  --ks-color-primary-to-fg-1: color-mix(in srgb, var(--ks-color-primary) 10%, var(--ks-color-fg));
-  --ks-color-primary-to-fg-2: color-mix(in srgb, var(--ks-color-primary) 20%, var(--ks-color-fg));
-  --ks-color-primary-to-fg-3: color-mix(in srgb, var(--ks-color-primary) 30%, var(--ks-color-fg));
-  --ks-color-primary-to-fg-4: color-mix(in srgb, var(--ks-color-primary) 40%, var(--ks-color-fg));
-  --ks-color-primary-to-fg-5: color-mix(in srgb, var(--ks-color-primary) 50%, var(--ks-color-fg));
-  --ks-color-primary-to-fg-6: color-mix(in srgb, var(--ks-color-primary) 60%, var(--ks-color-fg));
-  --ks-color-primary-to-fg-7: color-mix(in srgb, var(--ks-color-primary) 70%, var(--ks-color-fg));
-  --ks-color-primary-to-fg-8: color-mix(in srgb, var(--ks-color-primary) 80%, var(--ks-color-fg));
-  --ks-color-primary-to-fg-9: color-mix(in srgb, var(--ks-color-primary) 90%, var(--ks-color-fg));
+  --ks-color-primary-to-fg-1: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-1, 10%), var(--ks-color-fg));
+  --ks-color-primary-to-fg-2: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-2, 20%), var(--ks-color-fg));
+  --ks-color-primary-to-fg-3: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-3, 30%), var(--ks-color-fg));
+  --ks-color-primary-to-fg-4: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-4, 40%), var(--ks-color-fg));
+  --ks-color-primary-to-fg-5: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-5, 50%), var(--ks-color-fg));
+  --ks-color-primary-to-fg-6: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-6, 60%), var(--ks-color-fg));
+  --ks-color-primary-to-fg-7: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-7, 70%), var(--ks-color-fg));
+  --ks-color-primary-to-fg-8: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-8, 80%), var(--ks-color-fg));
+  --ks-color-primary-to-fg-9: color-mix(in srgb, var(--ks-color-primary) var(--color-scale-9, 90%), var(--ks-color-fg));
 
-  --ks-color-primary-to-fg-1: color-mix(in srgb, var(--ks-color-primary-inverted) 10%, var(--ks-color-fg-inverted));
-  --ks-color-primary-to-fg-2: color-mix(in srgb, var(--ks-color-primary-inverted) 20%, var(--ks-color-fg-inverted));
-  --ks-color-primary-to-fg-3: color-mix(in srgb, var(--ks-color-primary-inverted) 30%, var(--ks-color-fg-inverted));
-  --ks-color-primary-to-fg-4: color-mix(in srgb, var(--ks-color-primary-inverted) 40%, var(--ks-color-fg-inverted));
-  --ks-color-primary-to-fg-5: color-mix(in srgb, var(--ks-color-primary-inverted) 50%, var(--ks-color-fg-inverted));
-  --ks-color-primary-to-fg-6: color-mix(in srgb, var(--ks-color-primary-inverted) 60%, var(--ks-color-fg-inverted));
-  --ks-color-primary-to-fg-7: color-mix(in srgb, var(--ks-color-primary-inverted) 70%, var(--ks-color-fg-inverted));
-  --ks-color-primary-to-fg-8: color-mix(in srgb, var(--ks-color-primary-inverted) 80%, var(--ks-color-fg-inverted));
-  --ks-color-primary-to-fg-9: color-mix(in srgb, var(--ks-color-primary-inverted) 90%, var(--ks-color-fg-inverted));
+  --ks-color-primary-to-fg-1: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-1, 10%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-primary-to-fg-2: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-2, 20%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-primary-to-fg-3: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-3, 30%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-primary-to-fg-4: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-4, 40%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-primary-to-fg-5: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-5, 50%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-primary-to-fg-6: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-6, 60%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-primary-to-fg-7: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-7, 70%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-primary-to-fg-8: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-8, 80%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-primary-to-fg-9: color-mix(
+    in srgb,
+    var(--ks-color-primary-inverted) var(--color-scale-9, 90%),
+    var(--ks-color-fg-inverted)
+  );
 
-  --ks-color-fg-alpha-1: color-mix(in srgb, var(--ks-color-fg) 10%, transparent);
-  --ks-color-fg-alpha-2: color-mix(in srgb, var(--ks-color-fg) 20%, transparent);
-  --ks-color-fg-alpha-3: color-mix(in srgb, var(--ks-color-fg) 30%, transparent);
-  --ks-color-fg-alpha-4: color-mix(in srgb, var(--ks-color-fg) 40%, transparent);
-  --ks-color-fg-alpha-5: color-mix(in srgb, var(--ks-color-fg) 50%, transparent);
-  --ks-color-fg-alpha-6: color-mix(in srgb, var(--ks-color-fg) 60%, transparent);
-  --ks-color-fg-alpha-7: color-mix(in srgb, var(--ks-color-fg) 70%, transparent);
-  --ks-color-fg-alpha-8: color-mix(in srgb, var(--ks-color-fg) 80%, transparent);
-  --ks-color-fg-alpha-9: color-mix(in srgb, var(--ks-color-fg) 90%, transparent);
+  --ks-color-fg-alpha-1: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-1, 10%), transparent);
+  --ks-color-fg-alpha-2: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-2, 20%), transparent);
+  --ks-color-fg-alpha-3: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-3, 30%), transparent);
+  --ks-color-fg-alpha-4: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-4, 40%), transparent);
+  --ks-color-fg-alpha-5: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-5, 50%), transparent);
+  --ks-color-fg-alpha-6: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-6, 60%), transparent);
+  --ks-color-fg-alpha-7: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-7, 70%), transparent);
+  --ks-color-fg-alpha-8: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-8, 80%), transparent);
+  --ks-color-fg-alpha-9: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-9, 90%), transparent);
 
-  --ks-color-fg-inverted-alpha-1: color-mix(in srgb, var(--ks-color-fg-inverted) 10%, transparent);
-  --ks-color-fg-inverted-alpha-2: color-mix(in srgb, var(--ks-color-fg-inverted) 20%, transparent);
-  --ks-color-fg-inverted-alpha-3: color-mix(in srgb, var(--ks-color-fg-inverted) 30%, transparent);
-  --ks-color-fg-inverted-alpha-4: color-mix(in srgb, var(--ks-color-fg-inverted) 40%, transparent);
-  --ks-color-fg-inverted-alpha-5: color-mix(in srgb, var(--ks-color-fg-inverted) 50%, transparent);
-  --ks-color-fg-inverted-alpha-6: color-mix(in srgb, var(--ks-color-fg-inverted) 60%, transparent);
-  --ks-color-fg-inverted-alpha-7: color-mix(in srgb, var(--ks-color-fg-inverted) 70%, transparent);
-  --ks-color-fg-inverted-alpha-8: color-mix(in srgb, var(--ks-color-fg-inverted) 80%, transparent);
-  --ks-color-fg-inverted-alpha-9: color-mix(in srgb, var(--ks-color-fg-inverted) 90%, transparent);
+  --ks-color-fg-inverted-alpha-1: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-1, 10%),
+    transparent
+  );
+  --ks-color-fg-inverted-alpha-2: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-2, 20%),
+    transparent
+  );
+  --ks-color-fg-inverted-alpha-3: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-3, 30%),
+    transparent
+  );
+  --ks-color-fg-inverted-alpha-4: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-4, 40%),
+    transparent
+  );
+  --ks-color-fg-inverted-alpha-5: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-5, 50%),
+    transparent
+  );
+  --ks-color-fg-inverted-alpha-6: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-6, 60%),
+    transparent
+  );
+  --ks-color-fg-inverted-alpha-7: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-7, 70%),
+    transparent
+  );
+  --ks-color-fg-inverted-alpha-8: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-8, 80%),
+    transparent
+  );
+  --ks-color-fg-inverted-alpha-9: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-9, 90%),
+    transparent
+  );
 
-  --ks-color-fg-to-bg-1: color-mix(in srgb, var(--ks-color-fg) 10%, var(--ks-color-bg));
-  --ks-color-fg-to-bg-2: color-mix(in srgb, var(--ks-color-fg) 20%, var(--ks-color-bg));
-  --ks-color-fg-to-bg-3: color-mix(in srgb, var(--ks-color-fg) 30%, var(--ks-color-bg));
-  --ks-color-fg-to-bg-4: color-mix(in srgb, var(--ks-color-fg) 40%, var(--ks-color-bg));
-  --ks-color-fg-to-bg-5: color-mix(in srgb, var(--ks-color-fg) 50%, var(--ks-color-bg));
-  --ks-color-fg-to-bg-6: color-mix(in srgb, var(--ks-color-fg) 60%, var(--ks-color-bg));
-  --ks-color-fg-to-bg-7: color-mix(in srgb, var(--ks-color-fg) 70%, var(--ks-color-bg));
-  --ks-color-fg-to-bg-8: color-mix(in srgb, var(--ks-color-fg) 80%, var(--ks-color-bg));
-  --ks-color-fg-to-bg-9: color-mix(in srgb, var(--ks-color-fg) 90%, var(--ks-color-bg));
+  --ks-color-fg-to-bg-1: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-1, 10%), var(--ks-color-bg));
+  --ks-color-fg-to-bg-2: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-2, 20%), var(--ks-color-bg));
+  --ks-color-fg-to-bg-3: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-3, 30%), var(--ks-color-bg));
+  --ks-color-fg-to-bg-4: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-4, 40%), var(--ks-color-bg));
+  --ks-color-fg-to-bg-5: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-5, 50%), var(--ks-color-bg));
+  --ks-color-fg-to-bg-6: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-6, 60%), var(--ks-color-bg));
+  --ks-color-fg-to-bg-7: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-7, 70%), var(--ks-color-bg));
+  --ks-color-fg-to-bg-8: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-8, 80%), var(--ks-color-bg));
+  --ks-color-fg-to-bg-9: color-mix(in srgb, var(--ks-color-fg) var(--color-scale-9, 90%), var(--ks-color-bg));
 
-  --ks-color-fg-inverted-to-bg-1: color-mix(in srgb, var(--ks-color-fg-inverted) 10%, var(--ks-color-bg-inverted));
-  --ks-color-fg-inverted-to-bg-2: color-mix(in srgb, var(--ks-color-fg-inverted) 20%, var(--ks-color-bg-inverted));
-  --ks-color-fg-inverted-to-bg-3: color-mix(in srgb, var(--ks-color-fg-inverted) 30%, var(--ks-color-bg-inverted));
-  --ks-color-fg-inverted-to-bg-4: color-mix(in srgb, var(--ks-color-fg-inverted) 40%, var(--ks-color-bg-inverted));
-  --ks-color-fg-inverted-to-bg-5: color-mix(in srgb, var(--ks-color-fg-inverted) 50%, var(--ks-color-bg-inverted));
-  --ks-color-fg-inverted-to-bg-6: color-mix(in srgb, var(--ks-color-fg-inverted) 60%, var(--ks-color-bg-inverted));
-  --ks-color-fg-inverted-to-bg-7: color-mix(in srgb, var(--ks-color-fg-inverted) 70%, var(--ks-color-bg-inverted));
-  --ks-color-fg-inverted-to-bg-8: color-mix(in srgb, var(--ks-color-fg-inverted) 80%, var(--ks-color-bg-inverted));
-  --ks-color-fg-inverted-to-bg-9: color-mix(in srgb, var(--ks-color-fg-inverted) 90%, var(--ks-color-bg-inverted));
+  --ks-color-fg-inverted-to-bg-1: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-1, 10%),
+    var(--ks-color-bg-inverted)
+  );
+  --ks-color-fg-inverted-to-bg-2: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-2, 20%),
+    var(--ks-color-bg-inverted)
+  );
+  --ks-color-fg-inverted-to-bg-3: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-3, 30%),
+    var(--ks-color-bg-inverted)
+  );
+  --ks-color-fg-inverted-to-bg-4: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-4, 40%),
+    var(--ks-color-bg-inverted)
+  );
+  --ks-color-fg-inverted-to-bg-5: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-5, 50%),
+    var(--ks-color-bg-inverted)
+  );
+  --ks-color-fg-inverted-to-bg-6: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-6, 60%),
+    var(--ks-color-bg-inverted)
+  );
+  --ks-color-fg-inverted-to-bg-7: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-7, 70%),
+    var(--ks-color-bg-inverted)
+  );
+  --ks-color-fg-inverted-to-bg-8: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-8, 80%),
+    var(--ks-color-bg-inverted)
+  );
+  --ks-color-fg-inverted-to-bg-9: color-mix(
+    in srgb,
+    var(--ks-color-fg-inverted) var(--color-scale-9, 90%),
+    var(--ks-color-bg-inverted)
+  );
 
-  --ks-color-bg-alpha-1: color-mix(in srgb, var(--ks-color-bg) 10%, transparent);
-  --ks-color-bg-alpha-2: color-mix(in srgb, var(--ks-color-bg) 20%, transparent);
-  --ks-color-bg-alpha-3: color-mix(in srgb, var(--ks-color-bg) 30%, transparent);
-  --ks-color-bg-alpha-4: color-mix(in srgb, var(--ks-color-bg) 40%, transparent);
-  --ks-color-bg-alpha-5: color-mix(in srgb, var(--ks-color-bg) 50%, transparent);
-  --ks-color-bg-alpha-6: color-mix(in srgb, var(--ks-color-bg) 60%, transparent);
-  --ks-color-bg-alpha-7: color-mix(in srgb, var(--ks-color-bg) 70%, transparent);
-  --ks-color-bg-alpha-8: color-mix(in srgb, var(--ks-color-bg) 80%, transparent);
-  --ks-color-bg-alpha-9: color-mix(in srgb, var(--ks-color-bg) 90%, transparent);
+  --ks-color-bg-alpha-1: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-1, 10%), transparent);
+  --ks-color-bg-alpha-2: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-2, 20%), transparent);
+  --ks-color-bg-alpha-3: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-3, 30%), transparent);
+  --ks-color-bg-alpha-4: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-4, 40%), transparent);
+  --ks-color-bg-alpha-5: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-5, 50%), transparent);
+  --ks-color-bg-alpha-6: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-6, 60%), transparent);
+  --ks-color-bg-alpha-7: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-7, 70%), transparent);
+  --ks-color-bg-alpha-8: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-8, 80%), transparent);
+  --ks-color-bg-alpha-9: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-9, 90%), transparent);
 
-  --ks-color-bg-inverted-alpha-1: color-mix(in srgb, var(--ks-color-bg-inverted) 10%, transparent);
-  --ks-color-bg-inverted-alpha-2: color-mix(in srgb, var(--ks-color-bg-inverted) 20%, transparent);
-  --ks-color-bg-inverted-alpha-3: color-mix(in srgb, var(--ks-color-bg-inverted) 30%, transparent);
-  --ks-color-bg-inverted-alpha-4: color-mix(in srgb, var(--ks-color-bg-inverted) 40%, transparent);
-  --ks-color-bg-inverted-alpha-5: color-mix(in srgb, var(--ks-color-bg-inverted) 50%, transparent);
-  --ks-color-bg-inverted-alpha-6: color-mix(in srgb, var(--ks-color-bg-inverted) 60%, transparent);
-  --ks-color-bg-inverted-alpha-7: color-mix(in srgb, var(--ks-color-bg-inverted) 70%, transparent);
-  --ks-color-bg-inverted-alpha-8: color-mix(in srgb, var(--ks-color-bg-inverted) 80%, transparent);
-  --ks-color-bg-inverted-alpha-9: color-mix(in srgb, var(--ks-color-bg-inverted) 90%, transparent);
+  --ks-color-bg-inverted-alpha-1: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-1, 10%),
+    transparent
+  );
+  --ks-color-bg-inverted-alpha-2: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-2, 20%),
+    transparent
+  );
+  --ks-color-bg-inverted-alpha-3: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-3, 30%),
+    transparent
+  );
+  --ks-color-bg-inverted-alpha-4: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-4, 40%),
+    transparent
+  );
+  --ks-color-bg-inverted-alpha-5: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-5, 50%),
+    transparent
+  );
+  --ks-color-bg-inverted-alpha-6: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-6, 60%),
+    transparent
+  );
+  --ks-color-bg-inverted-alpha-7: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-7, 70%),
+    transparent
+  );
+  --ks-color-bg-inverted-alpha-8: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-8, 80%),
+    transparent
+  );
+  --ks-color-bg-inverted-alpha-9: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-9, 90%),
+    transparent
+  );
 
-  --ks-color-bg-to-fg-1: color-mix(in srgb, var(--ks-color-bg) 10%, var(--ks-color-fg));
-  --ks-color-bg-to-fg-2: color-mix(in srgb, var(--ks-color-bg) 20%, var(--ks-color-fg));
-  --ks-color-bg-to-fg-3: color-mix(in srgb, var(--ks-color-bg) 30%, var(--ks-color-fg));
-  --ks-color-bg-to-fg-4: color-mix(in srgb, var(--ks-color-bg) 40%, var(--ks-color-fg));
-  --ks-color-bg-to-fg-5: color-mix(in srgb, var(--ks-color-bg) 50%, var(--ks-color-fg));
-  --ks-color-bg-to-fg-6: color-mix(in srgb, var(--ks-color-bg) 60%, var(--ks-color-fg));
-  --ks-color-bg-to-fg-7: color-mix(in srgb, var(--ks-color-bg) 70%, var(--ks-color-fg));
-  --ks-color-bg-to-fg-8: color-mix(in srgb, var(--ks-color-bg) 80%, var(--ks-color-fg));
-  --ks-color-bg-to-fg-9: color-mix(in srgb, var(--ks-color-bg) 90%, var(--ks-color-fg));
+  --ks-color-bg-to-fg-1: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-1, 10%), var(--ks-color-fg));
+  --ks-color-bg-to-fg-2: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-2, 20%), var(--ks-color-fg));
+  --ks-color-bg-to-fg-3: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-3, 30%), var(--ks-color-fg));
+  --ks-color-bg-to-fg-4: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-4, 40%), var(--ks-color-fg));
+  --ks-color-bg-to-fg-5: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-5, 50%), var(--ks-color-fg));
+  --ks-color-bg-to-fg-6: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-6, 60%), var(--ks-color-fg));
+  --ks-color-bg-to-fg-7: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-7, 70%), var(--ks-color-fg));
+  --ks-color-bg-to-fg-8: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-8, 80%), var(--ks-color-fg));
+  --ks-color-bg-to-fg-9: color-mix(in srgb, var(--ks-color-bg) var(--color-scale-9, 90%), var(--ks-color-fg));
 
-  --ks-color-bg-inverted-to-fg-1: color-mix(in srgb, var(--ks-color-bg-inverted) 10%, var(--ks-color-fg-inverted));
-  --ks-color-bg-inverted-to-fg-2: color-mix(in srgb, var(--ks-color-bg-inverted) 20%, var(--ks-color-fg-inverted));
-  --ks-color-bg-inverted-to-fg-3: color-mix(in srgb, var(--ks-color-bg-inverted) 30%, var(--ks-color-fg-inverted));
-  --ks-color-bg-inverted-to-fg-4: color-mix(in srgb, var(--ks-color-bg-inverted) 40%, var(--ks-color-fg-inverted));
-  --ks-color-bg-inverted-to-fg-5: color-mix(in srgb, var(--ks-color-bg-inverted) 50%, var(--ks-color-fg-inverted));
-  --ks-color-bg-inverted-to-fg-6: color-mix(in srgb, var(--ks-color-bg-inverted) 60%, var(--ks-color-fg-inverted));
-  --ks-color-bg-inverted-to-fg-7: color-mix(in srgb, var(--ks-color-bg-inverted) 70%, var(--ks-color-fg-inverted));
-  --ks-color-bg-inverted-to-fg-8: color-mix(in srgb, var(--ks-color-bg-inverted) 80%, var(--ks-color-fg-inverted));
-  --ks-color-bg-inverted-to-fg-9: color-mix(in srgb, var(--ks-color-bg-inverted) 90%, var(--ks-color-fg-inverted));
+  --ks-color-bg-inverted-to-fg-1: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-1, 10%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-bg-inverted-to-fg-2: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-2, 20%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-bg-inverted-to-fg-3: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-3, 30%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-bg-inverted-to-fg-4: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-4, 40%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-bg-inverted-to-fg-5: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-5, 50%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-bg-inverted-to-fg-6: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-6, 60%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-bg-inverted-to-fg-7: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-7, 70%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-bg-inverted-to-fg-8: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-8, 80%),
+    var(--ks-color-fg-inverted)
+  );
+  --ks-color-bg-inverted-to-fg-9: color-mix(
+    in srgb,
+    var(--ks-color-bg-inverted) var(--color-scale-9, 90%),
+    var(--ks-color-fg-inverted)
+  );
 }

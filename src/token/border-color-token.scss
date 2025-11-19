@@ -8,6 +8,12 @@
 
   --ks-border-color-primary-interactive-hover-base: var(--ks-color-primary-to-bg-6);
   --ks-border-color-primary-inverted-interactive-hover-base: var(--ks-color-primary-inverted-to-bg-6);
+
+  --ks-border-color-interface-base: var(--ks-color-fg-alpha-2);
+  --ks-border-color-interface-inverted-base: var(--ks-color-fg-inverted-alpha-2);
+
+  --ks-border-color-interface-interactive-base: var(--ks-color-fg-alpha-2);
+  --ks-border-color-interface-inverted-interactive-base: var(--ks-color-fg-inverted-alpha-2);
 }
 
 :root {
@@ -19,6 +25,12 @@
 
   --ks-border-color-primary-interactive-hover: var(--ks-border-color-primary-interactive-hover-base);
   --ks-border-color-primary-inverted-interactive-hover: var(--ks-border-color-primary-inverted-interactive-hover-base);
+
+  --ks-border-color-interface: var(--ks-border-color-interface-base);
+  --ks-border-color-interface-inverted: var(--ks-border-color-interface-inverted-base);
+
+  --ks-border-color-interface-interactive: var(--ks-border-color-interface-interactive-base);
+  --ks-border-color-interface-inverted-interactive: var(--ks-border-color-interface-inverted-interactive-base);
 }
 
 [ks-inverted="true"] {
@@ -30,4 +42,10 @@
 
   --ks-border-color-primary-interactive-hover: var(--ks-border-color-primary-inverted-interactive-hover-base);
   --ks-border-color-primary-inverted-interactive-hover: var(--ks-border-color-primary-interactive-hover-base);
+
+  --ks-border-color-interface: var(--ks-border-color-interface-inverted-base);
+  --ks-border-color-interface-inverted: var(--ks-border-color-interface-base);
+
+  --ks-border-color-interface-interactive: var(--ks-border-color-interface-inverted-interactive-base);
+  --ks-border-color-interface-inverted-interactive: var(--ks-border-color-interface-interactive-base);
 }

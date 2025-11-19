@@ -1,6 +1,14 @@
 .token-preview {
-  border-bottom: 1px solid grey;
   vertical-align: top;
+
+  td {
+    border-bottom: 1px solid var(--ks-border-color-interface);
+    padding: 0.5em 0;
+
+    &:not(:last-child) {
+      padding-right: 0.5em;
+    }
+  }
 
   &__info {
     width: 100%;
