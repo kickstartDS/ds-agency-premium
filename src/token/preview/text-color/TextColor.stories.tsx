@@ -1,73 +1,30 @@
+import { Headline } from "../../../components/headline/HeadlineComponent";
+import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
+
 const Page = () => (
   <div className="preview-page">
-    <h1>Text Color</h1>
-    <div>
-      <h2>Primary</h2>
-      <div className="text-color">
-        <div style={{ color: "var(--ks-text-color-primary)" }}>Lorem Ipsum</div>
-        <div
-          style={{
-            color: "var(--ks-text-color-primary-inverted)",
-          }}
-        >
-          Lorem Ipsum
-        </div>
-      </div>
-      <h3>Translucent</h3>
-      <div className="text-color">
-        <div
-          style={{
-            color: "var(--ks-text-color-primary-translucent)",
-          }}
-        >
-          Lorem Ipsum
-        </div>
-        <div
-          ks-inverted="true"
-          style={{
-            color: "var(--ks-text-color-primary-translucent)",
-          }}
-        >
-          Lorem Ipsum
-        </div>
-      </div>
-      <h3>Interactive</h3>
-      <div className="text-color">
-        <div
-          style={{
-            color: "var(--ks-text-color-primary-interactive)",
-          }}
-        >
-          Lorem Ipsum
-        </div>
-        <div
-          ks-inverted="true"
-          style={{
-            color: "var(--ks-text-color-primary-interactive)",
-          }}
-        >
-          Lorem Ipsum
-        </div>
-      </div>
-      <h3>Hover</h3>
-      <div className="text-color">
-        <div
-          style={{
-            color: "var(--ks-text-color-primary-interactive-hover)",
-          }}
-        >
-          Lorem Ipsum
-        </div>
-        <div
-          ks-inverted="true"
-          style={{
-            color: "var(--ks-text-color-primary-interactive-hover)",
-          }}
-        >
-          Lorem Ipsum
-        </div>
-      </div>
-    </div>
+    <Headline text="Text Color" style="h2" level="h1" />
+    <Headline text="Primary" level="h2" style="h3" />
+    <table>
+      <ColorPreview
+        category="color"
+        showInverted
+        token="--ks-text-color-primary"
+        referencedToken="Primary"
+      />
+      <ColorPreview
+        category="color"
+        showInverted
+        token="--ks-text-color-primary-interactive"
+        referencedToken="Primary"
+      />
+      <ColorPreview
+        category="color"
+        showInverted
+        token="--ks-text-color-primary-interactive-hover"
+        referencedToken="PrimaryToBg6"
+      />
+    </table>
   </div>
 );
 

@@ -1,10 +1,11 @@
+import { Headline } from "../../../components/headline/HeadlineComponent";
 import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
 
 const Page = () => (
   <div className="preview-page">
-    <h1>Background Color</h1>
-    <div>
-      <h2>Primary</h2>
+    <Headline text="Background Color" style="h2" level="h1" />
+    <Headline text="Primary" level="h2" style="h3" />
+    <table>
       <ColorPreview
         showInverted
         token="--ks-background-color-primary"
@@ -25,7 +26,7 @@ const Page = () => (
         token="--ks-background-color-primary-translucent"
         referencedToken="PrimaryAlpha5"
       />
-    </div>
+    </table>
   </div>
 );
 

@@ -1,59 +1,30 @@
+import { Headline } from "../../../components/headline/HeadlineComponent";
+import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
+
 const Page = () => (
   <div className="preview-page">
-    <h1>Border Color</h1>
-    <div>
-      <h2>Primary</h2>
-      <div className="color-swatches">
-        <div style={{ borderColor: "var(--ks-border-color-primary)" }} />
-        <div
-          style={{
-            borderColor: "var(--ks-border-color-primary-inverted)",
-          }}
-        />
-      </div>
-      <h3>Translucent</h3>
-      <div className="color-swatches">
-        <div
-          style={{
-            borderColor: "var(--ks-border-color-primary-translucent)",
-          }}
-        />
-        <div
-          ks-inverted="true"
-          style={{
-            borderColor: "var(--ks-border-color-primary-translucent)",
-          }}
-        />
-      </div>
-      <h3>Interactive</h3>
-      <div className="color-swatches">
-        <div
-          style={{
-            borderColor: "var(--ks-border-color-primary-interactive)",
-          }}
-        />
-        <div
-          ks-inverted="true"
-          style={{
-            borderColor: "var(--ks-border-color-primary-interactive)",
-          }}
-        />
-      </div>
-      <h3>Hover</h3>
-      <div className="color-swatches">
-        <div
-          style={{
-            borderColor: "var(--ks-border-color-primary-interactive-hover)",
-          }}
-        />
-        <div
-          ks-inverted="true"
-          style={{
-            borderColor: "var(--ks-border-color-primary-interactive-hover)",
-          }}
-        />
-      </div>
-    </div>
+    <Headline text="Border Color" style="h2" level="h1" />
+    <Headline text="Primary" level="h2" style="h3" />
+    <table>
+      <ColorPreview
+        category="borderColor"
+        showInverted
+        token="--ks-border-color-primary"
+        referencedToken="Primary"
+      />
+      <ColorPreview
+        category="borderColor"
+        showInverted
+        token="--ks-border-color-primary-interactive"
+        referencedToken="Primary"
+      />
+      <ColorPreview
+        category="borderColor"
+        showInverted
+        token="--ks-border-color-primary-interactive-hover"
+        referencedToken="PrimaryToBg6"
+      />
+    </table>
   </div>
 );
 

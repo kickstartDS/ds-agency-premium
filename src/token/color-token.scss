@@ -3,11 +3,11 @@
   --color-primary: #ff00ff;
   --color-primary-inverted: #00f2ff;
 
-  --ks-color-bg: #fff;
-  --ks-color-bg-inverted: #212124;
+  --color-bg: #fff;
+  --color-bg-inverted: #212124;
 
-  --ks-color-fg: #000;
-  --ks-color-fg-inverted: #fff;
+  --color-fg: #000;
+  --color-fg-inverted: #fff;
 }
 
 // BASE TOKEN
@@ -15,6 +15,12 @@
 [ks-theme] {
   --ks-color-primary-base: var(--color-primary);
   --ks-color-primary-inverted-base: var(--color-primary-inverted);
+
+  --ks-color-fg-base: var(--color-fg);
+  --ks-color-fg-inverted-base: var(--color-fg-inverted);
+
+  --ks-color-bg-base: var(--color-bg);
+  --ks-color-bg-inverted-base: var(--color-bg-inverted);
 }
 
 :root,
@@ -22,11 +28,23 @@
 [ks-inverted="false"] {
   --ks-color-primary: var(--ks-color-primary-base);
   --ks-color-primary-inverted: var(--ks-color-primary-inverted-base);
+
+  --ks-color-fg: var(--ks-color-fg-base);
+  --ks-color-fg-inverted: var(--ks-color-fg-inverted-base);
+
+  --ks-color-bg: var(--ks-color-bg-base);
+  --ks-color-bg-inverted: var(--ks-color-bg-inverted-base);
 }
 
 [ks-inverted="true"] {
   --ks-color-primary: var(--ks-color-primary-inverted-base);
   --ks-color-primary-inverted: var(--ks-color-primary-base);
+
+  --ks-color-fg: var(--ks-color-fg-inverted-base);
+  --ks-color-fg-inverted: var(--ks-color-fg-base);
+
+  --ks-color-bg: var(--ks-color-bg-inverted-base);
+  --ks-color-bg-inverted: var(--ks-color-bg-base);
 }
 
 /// SCALES (now reduced to 2 declarations per scale)

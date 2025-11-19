@@ -3,7 +3,7 @@
   vertical-align: top;
 
   &__name {
-    font: var(--ks-font-mono-s);
+    font: var(--ks-font-mono-xs);
     background-color: rgb(240, 240, 240);
     padding: 0.1em 0.5em;
     border-radius: 0.35em;
@@ -12,6 +12,6 @@
   }
 
   &__description {
-    font: var(--ks-font-interface-s);
+    font: var(--ks-font-interface-xs);
   }
 }
