@@ -1,11 +1,45 @@
-import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
+import {
+  HTMLAttributes,
+  createContext,
+  forwardRef,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import "./color-preview.scss";
 import { TokenPreview } from "../token-preview/TokenPreviewComponent";
 import { ColorSwatch } from "../color-swatch/ColorSwatchComponent";
 
+function useCssVarValue(token: string, inverted?: boolean) {
+  const [value, setValue] = useState("");
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const varName = token.startsWith("--") ? token : `--${token}`;
+      const root = document.documentElement;
+      let originalAttr: string | null = null;
+
+      if (inverted) {
+        originalAttr = root.getAttribute("ks-inverted");
+        root.setAttribute("ks-inverted", "true");
+      }
+
+      const cssValue = getComputedStyle(root).getPropertyValue(varName).trim();
+      setValue(cssValue);
+
+      if (inverted) {
+        if (originalAttr === null) {
+          root.removeAttribute("ks-inverted");
+        } else {
+          root.setAttribute("ks-inverted", originalAttr);
+        }
+      }
+    }
+  }, [token, inverted]);
+  return value;
+}
+
 export interface ColorPreviewProps {
   token: string;
-  referencedToken?: string;
   showInverted?: boolean;
   category?: string;
   gradientBackground?: boolean;
@@ -20,7 +54,6 @@ export const ColorPreviewContextDefault = forwardRef<
   (
     {
       token,
-      referencedToken,
       showInverted,
       gradientBackground,
       contrastBorder,
@@ -29,10 +62,13 @@ export const ColorPreviewContextDefault = forwardRef<
     },
     ref
   ) => {
+    const cssValue = useCssVarValue(token, false);
+    const cssValueInverted = useCssVarValue(token, true);
+
     return (
       <TokenPreview token={token} ref={ref}>
         <ColorSwatch
-          title={referencedToken}
+          title={cssValue}
           token={token}
           gradientBackground={gradientBackground}
           invertedBackground={invertedBackground}
@@ -42,7 +78,7 @@ export const ColorPreviewContextDefault = forwardRef<
         />
         {showInverted && (
           <ColorSwatch
-            title={referencedToken}
+            title={cssValueInverted}
             token={token}
             gradientBackground={gradientBackground}
             contrastBorder={contrastBorder}
