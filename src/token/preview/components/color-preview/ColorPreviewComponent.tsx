@@ -8,32 +8,54 @@ export interface ColorPreviewProps {
   referencedToken?: string;
   showInverted?: boolean;
   category?: string;
+  gradientBackground?: boolean;
+  contrastBorder?: boolean;
+  invertedBackground?: boolean;
 }
 
 export const ColorPreviewContextDefault = forwardRef<
   HTMLTableRowElement,
   ColorPreviewProps & HTMLAttributes<HTMLTableRowElement>
->(({ token, referencedToken, showInverted, category }, ref) => {
-  return (
-    <TokenPreview token={token} ref={ref}>
-      <ColorSwatch
-        title={referencedToken}
-        token={token}
-        //@ts-expect-error
-        category={category}
-      />
-      {showInverted && (
+>(
+  (
+    {
+      token,
+      referencedToken,
+      showInverted,
+      gradientBackground,
+      contrastBorder,
+      invertedBackground,
+      category,
+    },
+    ref
+  ) => {
+    return (
+      <TokenPreview token={token} ref={ref}>
         <ColorSwatch
           title={referencedToken}
           token={token}
-          inverted
+          gradientBackground={gradientBackground}
+          invertedBackground={invertedBackground}
+          contrastBorder={contrastBorder}
           //@ts-expect-error
           category={category}
         />
-      )}
-    </TokenPreview>
-  );
-});
+        {showInverted && (
+          <ColorSwatch
+            title={referencedToken}
+            token={token}
+            gradientBackground={gradientBackground}
+            contrastBorder={contrastBorder}
+            inverted
+            invertedBackground={invertedBackground}
+            //@ts-expect-error
+            category={category}
+          />
+        )}
+      </TokenPreview>
+    );
+  }
+);
 
 export const ColorPreviewContext = createContext(ColorPreviewContextDefault);
 export const ColorPreview = forwardRef<

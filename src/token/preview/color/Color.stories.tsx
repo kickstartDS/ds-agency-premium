@@ -40,15 +40,51 @@ const Page = () => (
         </td>
       </tr>
 
-      <ColorPreview showInverted token="--ks-color-bg-alpha-1" />
-      <ColorPreview showInverted token="--ks-color-bg-alpha-2" />
-      <ColorPreview showInverted token="--ks-color-bg-alpha-3" />
-      <ColorPreview showInverted token="--ks-color-bg-alpha-4" />
-      <ColorPreview showInverted token="--ks-color-bg-alpha-5" />
-      <ColorPreview showInverted token="--ks-color-bg-alpha-6" />
-      <ColorPreview showInverted token="--ks-color-bg-alpha-7" />
-      <ColorPreview showInverted token="--ks-color-bg-alpha-8" />
-      <ColorPreview showInverted token="--ks-color-bg-alpha-9" />
+      <ColorPreview
+        gradientBackground
+        showInverted
+        token="--ks-color-bg-alpha-1"
+      />
+      <ColorPreview
+        gradientBackground
+        showInverted
+        token="--ks-color-bg-alpha-2"
+      />
+      <ColorPreview
+        gradientBackground
+        showInverted
+        token="--ks-color-bg-alpha-3"
+      />
+      <ColorPreview
+        gradientBackground
+        showInverted
+        token="--ks-color-bg-alpha-4"
+      />
+      <ColorPreview
+        gradientBackground
+        showInverted
+        token="--ks-color-bg-alpha-5"
+      />
+      <ColorPreview
+        gradientBackground
+        showInverted
+        token="--ks-color-bg-alpha-6"
+      />
+      <ColorPreview
+        gradientBackground
+        showInverted
+        token="--ks-color-bg-alpha-7"
+      />
+      <ColorPreview
+        gradientBackground
+        showInverted
+        token="--ks-color-bg-alpha-8"
+      />
+      <ColorPreview
+        gradientBackground
+        showInverted
+        token="--ks-color-bg-alpha-9"
+      />
     </table>
   </div>
 );

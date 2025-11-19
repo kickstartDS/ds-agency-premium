@@ -15,6 +15,63 @@
     }
   }
 
+  &--contrast-border {
+    .token-color-swatch__canvas {
+      box-shadow: 0 0 0 1px solid var(--ks-color-fg-alpha-2);
+    }
+  }
+
+  &--inverted-background {
+    background-color: var(--ks-color-bg-inverted);
+    border-color: var(--ks-color-fg-inverted-to-bg-2);
+
+    .token-color-swatch__title {
+      color: var(--ks-color-fg-inverted);
+    }
+
+    &:hover {
+      background-color: var(--ks-color-bg-inverted-to-fg-9);
+    }
+  }
+
+  &--gradient-background {
+    background-image: url("./img/bg-color-swatch.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: var(--ks-color-fg-to-bg-4);
+
+    &::before {
+      z-index: 0;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--ks-color-fg-alpha-1);
+      opacity: 0;
+      border-radius: 4px;
+      pointer-events: none;
+      transition: var(--ks-transition-hover) opacity;
+    }
+
+    &:hover {
+      border-color: var(--ks-color-fg-to-bg-6);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &[ks-inverted="true"] {
+      border-color: var(--ks-color-fg-inverted-to-bg-4);
+
+      &:hover {
+        border-color: var(--ks-color-fg-inverted-to-bg-6);
+      }
+    }
+  }
+
   &--borderColor {
     .token-color-swatch__canvas {
       border: 1px solid;
@@ -28,6 +85,8 @@
   }
 
   &__canvas {
+    position: relative;
+    z-index: 2;
     font: var(--ks-font-copy-l);
     width: 100px;
     height: 28px;
