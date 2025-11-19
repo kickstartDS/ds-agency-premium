@@ -1,8 +1,19 @@
 .token-color-swatch {
   border-radius: 4px;
-  border: 1px solid rgb(220, 220, 220);
+  border: 1px solid var(--ks-color-fg-to-bg-2);
   background-color: var(--ks-color-bg);
   padding: 0.5em;
+  position: relative;
+  transition: var(--ks-transition-hover);
+
+  &:hover {
+    background-color: var(--ks-color-bg-to-fg-9);
+
+    .copy-tooltip {
+      opacity: 1;
+      transform: translate(-50%, -120%);
+    }
+  }
 
   &--borderColor {
     .token-color-swatch__canvas {

@@ -1,6 +1,7 @@
 import classnames from "classnames";
 import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
 import "./token-preview.scss";
+import CopyTooltip from "../copy-tooltip/CopyTooltipComponent";
 
 export interface TokenPreviewProps {
   token: string;
@@ -16,7 +17,10 @@ export const TokenPreviewContextDefault = forwardRef<
   return (
     <tr className={classnames("token-preview", category)} ref={ref}>
       <td className="token-preview__info">
-        <div className="token-preview__name">{token}</div>
+        <button className="token-preview__name">
+          <CopyTooltip />
+          <span>{token}</span>
+        </button>
         {description && (
           <div className="token-preview__description">{description}</div>
         )}

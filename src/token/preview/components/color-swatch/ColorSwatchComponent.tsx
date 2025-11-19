@@ -1,6 +1,7 @@
 import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
 import classnames from "classnames";
 import "./color-swatch.scss";
+import CopyTooltip from "../copy-tooltip/CopyTooltipComponent";
 
 export enum Category {
   BackgroundColor = "backgroundColor",
@@ -42,10 +43,11 @@ export const ColorSwatchContextDefault = forwardRef<
         )}
         ref={ref}
       >
+        <CopyTooltip />
         <div className="token-color-swatch__canvas" style={style}>
           {category === Category.Color && <span>Aa</span>}
         </div>
-        <span className="token-color-swatch__title">{title}</span>
+        <div className="token-color-swatch__title">{title}</div>
       </button>
     </td>
   );

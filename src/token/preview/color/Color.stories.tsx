@@ -1,36 +1,55 @@
+import { Headline } from "../../../components/headline/HeadlineComponent";
+import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
+
 const Page = () => (
   <div className="preview-page">
-    <h1>Colors</h1>
-    <div>
-      <h2>Primary</h2>
-      <h3>Base</h3>
-      <div className="color-swatches">
-        <div style={{ backgroundColor: "var(--ks-color-primary)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-9)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-8)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-7)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-6)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-5)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-4)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-3)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-2)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-1)" }} />
-      </div>
+    <Headline text="Color Pallette" style="h2" level="h1" />
+    <table>
+      <tr>
+        <td>
+          <Headline text="Primary" level="h2" style="h3" />
+        </td>
+      </tr>
+      <ColorPreview showInverted token="--ks-color-primary-alpha-1" />
+      <ColorPreview showInverted token="--ks-color-primary-alpha-2" />
+      <ColorPreview showInverted token="--ks-color-primary-alpha-3" />
+      <ColorPreview showInverted token="--ks-color-primary-alpha-4" />
+      <ColorPreview showInverted token="--ks-color-primary-alpha-5" />
+      <ColorPreview showInverted token="--ks-color-primary-alpha-6" />
+      <ColorPreview showInverted token="--ks-color-primary-alpha-7" />
+      <ColorPreview showInverted token="--ks-color-primary-alpha-8" />
+      <ColorPreview showInverted token="--ks-color-primary-alpha-9" />
+      <tr>
+        <td>
+          <Headline text="Foreground" level="h2" style="h3" />
+        </td>
+      </tr>
+      <ColorPreview showInverted token="--ks-color-fg-alpha-1" />
+      <ColorPreview showInverted token="--ks-color-fg-alpha-2" />
+      <ColorPreview showInverted token="--ks-color-fg-alpha-3" />
+      <ColorPreview showInverted token="--ks-color-fg-alpha-4" />
+      <ColorPreview showInverted token="--ks-color-fg-alpha-5" />
+      <ColorPreview showInverted token="--ks-color-fg-alpha-6" />
+      <ColorPreview showInverted token="--ks-color-fg-alpha-7" />
+      <ColorPreview showInverted token="--ks-color-fg-alpha-8" />
+      <ColorPreview showInverted token="--ks-color-fg-alpha-9" />
 
-      <h3>Inverted</h3>
-      <div ks-inverted="true" className="color-swatches">
-        <div style={{ backgroundColor: "var(--ks-color-primary)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-9)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-8)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-7)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-6)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-5)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-4)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-3)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-2)" }} />
-        <div style={{ backgroundColor: "var(--ks-color-primary-alpha-1)" }} />
-      </div>
-    </div>
+      <tr>
+        <td>
+          <Headline text="Background" level="h2" style="h3" />
+        </td>
+      </tr>
+
+      <ColorPreview showInverted token="--ks-color-bg-alpha-1" />
+      <ColorPreview showInverted token="--ks-color-bg-alpha-2" />
+      <ColorPreview showInverted token="--ks-color-bg-alpha-3" />
+      <ColorPreview showInverted token="--ks-color-bg-alpha-4" />
+      <ColorPreview showInverted token="--ks-color-bg-alpha-5" />
+      <ColorPreview showInverted token="--ks-color-bg-alpha-6" />
+      <ColorPreview showInverted token="--ks-color-bg-alpha-7" />
+      <ColorPreview showInverted token="--ks-color-bg-alpha-8" />
+      <ColorPreview showInverted token="--ks-color-bg-alpha-9" />
+    </table>
   </div>
 );
 
