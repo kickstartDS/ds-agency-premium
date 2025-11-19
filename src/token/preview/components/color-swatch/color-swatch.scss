@@ -1,0 +1,16 @@
+.token-color-swatch {
+  border-radius: 4px;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 0.5em;
+
+  &__canvas {
+    width: 100px;
+    height: 28px;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin-top: 0.5em;
+    font: var(--ks-font-mono-xs);
+  }
+}

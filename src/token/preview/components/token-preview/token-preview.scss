@@ -1,0 +1,17 @@
+.token-preview {
+  border-bottom: 1px solid grey;
+  vertical-align: top;
+
+  &__name {
+    font: var(--ks-font-mono-s);
+    background-color: rgb(240, 240, 240);
+    padding: 0.1em 0.5em;
+    border-radius: 0.35em;
+    width: fit-content;
+    margin-right: 1em;
+  }
+
+  &__description {
+    font: var(--ks-font-interface-s);
+  }
+}
