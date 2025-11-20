@@ -1,28 +1,11 @@
 import { Headline } from "../../../components/headline/HeadlineComponent";
 import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
 import tokenValues from "../../../../dist/border-color-tokens.json";
+import { getBorderColorTokenGroups } from "./borderColorTokenGroups";
+import TokenPreviewChart from "../components/token-preview-chart/TokenPreviewChartComponent";
 
-// Automatically extract categories and tokens, skipping explicit inverted tokens
-const tokensByCategory: Record<string, string[]> = {};
-
-Object.keys(tokenValues).forEach((token) => {
-  // Skip tokens that explicitly contain '-inverted' after the category
-  if (/--ks-border-color-[^-]+-inverted/.test(token)) return;
-
-  const match = token.match(/^--ks-border-color-([^-]+)/);
-  if (match) {
-    const category = match[1];
-    if (!tokensByCategory[category]) tokensByCategory[category] = [];
-    // Remove -base suffix and deduplicate
-    const normalizedToken = token.replace(/-base$/, "");
-    if (!tokensByCategory[category].includes(normalizedToken)) {
-      tokensByCategory[category].push(normalizedToken);
-    }
-  }
-});
-
-// Sort categories alphabetically or use a custom order
-const categories = Object.keys(tokensByCategory);
+const tokensByCategory = getBorderColorTokenGroups(tokenValues);
+const categories = Object.keys(tokensByCategory).sort();
 
 const Page = () => (
   <div className="preview-page">
@@ -34,23 +17,20 @@ const Page = () => (
           level="h2"
           style="h3"
         />
-        <table>
+        <TokenPreviewChart>
           <tbody>
             {tokensByCategory[category].map((token) => (
-              <tr key={token}>
-                <td>
-                  <ColorPreview
-                    category="borderColor"
-                    token={token}
-                    cssValue={tokenValues[token]?.normal}
-                    cssValueInverted={tokenValues[token]?.inverted}
-                    showInverted
-                  />
-                </td>
-              </tr>
+              <ColorPreview
+                key={token}
+                category="borderColor"
+                token={token}
+                cssValue={tokenValues[token]?.normal}
+                cssValueInverted={tokenValues[token]?.inverted}
+                showInverted
+              />
             ))}
           </tbody>
-        </table>
+        </TokenPreviewChart>
       </div>
     ))}
   </div>

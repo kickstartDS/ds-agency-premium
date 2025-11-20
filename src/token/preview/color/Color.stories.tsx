@@ -1,6 +1,24 @@
 import { Headline } from "../../../components/headline/HeadlineComponent";
 import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
 import TokenPreviewChart from "../components/token-preview-chart/TokenPreviewChartComponent";
+import tokenValues from "../../../../dist/color-tokens.json";
+import React from "react";
+import { getColorTokenGroups } from "./colorTokenGroups";
+
+const tokenGroups = getColorTokenGroups(tokenValues);
+
+// Sort main categories and subcategories alphabetically
+const sortedMainCategories = Object.keys(tokenGroups).sort();
+const formatMainHeading = (main: string) =>
+  main.charAt(0).toUpperCase() + main.slice(1);
+
+const formatSubHeading = (sub: string) =>
+  sub
+    ? sub
+        .split("-")
+        .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+        .join(" ")
+    : null;
 
 const Page = () => (
   <div className="preview-page">
@@ -9,91 +27,54 @@ const Page = () => (
       <thead>
         <tr>
           <th>Token</th>
-          <th>Default</th>
+          <th>Preview</th>
           <th>Inverted</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            <Headline text="Primary" level="h2" style="h3" />
-          </td>
-        </tr>
-        <ColorPreview showInverted token="--ks-color-primary-alpha-1" />
-        <ColorPreview showInverted token="--ks-color-primary-alpha-2" />
-        <ColorPreview showInverted token="--ks-color-primary-alpha-3" />
-        <ColorPreview showInverted token="--ks-color-primary-alpha-4" />
-        <ColorPreview showInverted token="--ks-color-primary-alpha-5" />
-        <ColorPreview showInverted token="--ks-color-primary-alpha-6" />
-        <ColorPreview showInverted token="--ks-color-primary-alpha-7" />
-        <ColorPreview showInverted token="--ks-color-primary-alpha-8" />
-        <ColorPreview showInverted token="--ks-color-primary-alpha-9" />
-        <tr>
-          <td>
-            <Headline text="Foreground" level="h2" style="h3" />
-          </td>
-        </tr>
-        <ColorPreview showInverted token="--ks-color-fg-alpha-1" />
-        <ColorPreview showInverted token="--ks-color-fg-alpha-2" />
-        <ColorPreview showInverted token="--ks-color-fg-alpha-3" />
-        <ColorPreview showInverted token="--ks-color-fg-alpha-4" />
-        <ColorPreview showInverted token="--ks-color-fg-alpha-5" />
-        <ColorPreview showInverted token="--ks-color-fg-alpha-6" />
-        <ColorPreview showInverted token="--ks-color-fg-alpha-7" />
-        <ColorPreview showInverted token="--ks-color-fg-alpha-8" />
-        <ColorPreview showInverted token="--ks-color-fg-alpha-9" />
-
-        <tr>
-          <td>
-            <Headline text="Background" level="h2" style="h3" />
-          </td>
-        </tr>
-
-        <ColorPreview
-          gradientBackground
-          showInverted
-          token="--ks-color-bg-alpha-1"
-        />
-        <ColorPreview
-          gradientBackground
-          showInverted
-          token="--ks-color-bg-alpha-2"
-        />
-        <ColorPreview
-          gradientBackground
-          showInverted
-          token="--ks-color-bg-alpha-3"
-        />
-        <ColorPreview
-          gradientBackground
-          showInverted
-          token="--ks-color-bg-alpha-4"
-        />
-        <ColorPreview
-          gradientBackground
-          showInverted
-          token="--ks-color-bg-alpha-5"
-        />
-        <ColorPreview
-          gradientBackground
-          showInverted
-          token="--ks-color-bg-alpha-6"
-        />
-        <ColorPreview
-          gradientBackground
-          showInverted
-          token="--ks-color-bg-alpha-7"
-        />
-        <ColorPreview
-          gradientBackground
-          showInverted
-          token="--ks-color-bg-alpha-8"
-        />
-        <ColorPreview
-          gradientBackground
-          showInverted
-          token="--ks-color-bg-alpha-9"
-        />
+        {sortedMainCategories.map((main) => (
+          <React.Fragment key={main}>
+            <tr>
+              <td colSpan={3}>
+                <Headline
+                  text={formatMainHeading(main)}
+                  level="h2"
+                  style="h3"
+                />
+              </td>
+            </tr>
+            {Object.keys(tokenGroups[main])
+              .sort()
+              .map((sub) => (
+                <React.Fragment key={sub}>
+                  {formatSubHeading(sub) && (
+                    <tr>
+                      <td colSpan={3}>
+                        <Headline
+                          text={formatSubHeading(sub)!}
+                          level="h3"
+                          style="h4"
+                        />
+                      </td>
+                    </tr>
+                  )}
+                  {tokenGroups[main][sub]
+                    .sort((a, b) =>
+                      a.localeCompare(b, undefined, { numeric: true })
+                    )
+                    .map((token) => (
+                      <ColorPreview
+                        key={token}
+                        token={token}
+                        cssValue={tokenValues[token]?.normal}
+                        cssValueInverted={tokenValues[token]?.inverted}
+                        showInverted
+                      />
+                    ))}
+                </React.Fragment>
+              ))}
+          </React.Fragment>
+        ))}
       </tbody>
     </TokenPreviewChart>
   </div>
