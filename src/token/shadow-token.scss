@@ -1,25 +1,29 @@
-:root {
-  // Control
-  --ks-box-shadow-control: 0 1px 2.75px var(--ks-color-fg-alpha-3);
-  --ks-box-shadow-control-hover: 0 1px 2.75px var(--ks-color-fg-alpha-5);
-
-  // Control Inverted
-  --ks-box-shadow-control-inverted: 0 1px 2.75px var(--ks-color-fg-alpha-3);
-  --ks-box-shadow-control-inverted-hover: 0 1px 2.75px var(--ks-color-fg-alpha-5);
-
-  // Card
-  --ks-box-shadow-card: 0 1px 5.5px var(--ks-color-fg-alpha-3);
-  --ks-box-shadow-card-hover: 0 1px 5.5px var(--ks-color-fg-alpha-5);
-
-  // Card Inverted
-  --ks-box-shadow-card-inverted: 0 1px 5.5px var(--ks-color-fg-alpha-3);
-  --ks-box-shadow-card-inverted-hover: 0 1px 5.5px var(--ks-color-fg-alpha-5);
-
-  // Surface
-  --ks-box-shadow-surface: 0 1px 11px var(--ks-color-fg-alpha-3);
-  --ks-box-shadow-surface-hover: 0 1px 11px var(--ks-color-fg-alpha-5);
-
-  // Surface Inverted
-  --ks-box-shadow-surface-inverted: 0 1px 11px var(--ks-color-fg-alpha-3);
-  --ks-box-shadow-surface-inverted-hover: 0 1px 11px var(--ks-color-fg-alpha-5);
+:root,
+[ks-theme] {
+  --ks-box-shadow-card-color-base: red;
+  --ks-box-shadow-card-color-inverted-base: green;
 }
+
+:root {
+  --ks-box-shadow-card-color: var(--ks-box-shadow-card-color-base);
+  --ks-box-shadow-card-color-inverted: var(--ks-box-shadow-card-color-inverted-base);
+}
+
+[ks-inverted="true"] {
+  --ks-box-shadow-card-color: var(--ks-box-shadow-card-color-inverted-base);
+  --ks-box-shadow-card-color-inverted: var(--ks-box-shadow-card-color-base);
+}
+
+:root {
+  --ks-box-shadow-card: 0px 0px 0px 6px var(--ks-box-shadow-card-color);
+}
+
+// :root {
+//   --ks-box-shadow-card:
+//     0px calc(1px * var(--ks-box-shadow-card-spread-factor-base))
+//       calc(1px * var(--ks-box-shadow-card-spread-factor-base) * 2) red,
+//     0px calc(1px * var(--ks-box-shadow-card-spread-factor-base) * 3)
+//       calc(1px * var(--ks-box-shadow-card-spread-factor-base) * 4) red,
+//     0px calc(1px * var(--ks-box-shadow-card-spread-factor-base) * 5)
+//       calc(1px * var(--ks-box-shadow-card-spread-factor-base) * 6) red;
+// }

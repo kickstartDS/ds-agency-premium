@@ -1,42 +1,7 @@
-import {
-  HTMLAttributes,
-  createContext,
-  forwardRef,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
 import "./color-preview.scss";
 import { TokenPreview } from "../token-preview/TokenPreviewComponent";
 import { ColorSwatch } from "../color-swatch/ColorSwatchComponent";
-
-function useCssVarValue(token: string, inverted?: boolean) {
-  const [value, setValue] = useState("");
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const varName = token.startsWith("--") ? token : `--${token}`;
-      const root = document.documentElement;
-      let originalAttr: string | null = null;
-
-      if (inverted) {
-        originalAttr = root.getAttribute("ks-inverted");
-        root.setAttribute("ks-inverted", "true");
-      }
-
-      const cssValue = getComputedStyle(root).getPropertyValue(varName).trim();
-      setValue(cssValue);
-
-      if (inverted) {
-        if (originalAttr === null) {
-          root.removeAttribute("ks-inverted");
-        } else {
-          root.setAttribute("ks-inverted", originalAttr);
-        }
-      }
-    }
-  }, [token, inverted]);
-  return value;
-}
 
 export interface ColorPreviewProps {
   token: string;
@@ -45,6 +10,8 @@ export interface ColorPreviewProps {
   gradientBackground?: boolean;
   contrastBorder?: boolean;
   invertedBackground?: boolean;
+  cssValue?: string;
+  cssValueInverted?: string;
 }
 
 export const ColorPreviewContextDefault = forwardRef<
@@ -59,12 +26,11 @@ export const ColorPreviewContextDefault = forwardRef<
       contrastBorder,
       invertedBackground,
       category,
+      cssValue,
+      cssValueInverted,
     },
     ref
   ) => {
-    const cssValue = useCssVarValue(token, false);
-    const cssValueInverted = useCssVarValue(token, true);
-
     return (
       <TokenPreview token={token} ref={ref}>
         <ColorSwatch

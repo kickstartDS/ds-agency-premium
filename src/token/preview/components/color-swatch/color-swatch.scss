@@ -7,7 +7,7 @@
   transition: var(--ks-transition-hover);
 
   &:hover {
-    background-color: var(--ks-color-bg-to-fg-9);
+    background-color: var(--ks-color-bg-to-fg-1);
 
     .copy-tooltip {
       opacity: 1;
@@ -17,20 +17,20 @@
 
   &--contrast-border {
     .token-color-swatch__canvas {
-      box-shadow: 0 0 0 1px solid var(--ks-color-fg-alpha-2);
+      box-shadow: 0 0 0 1px solid var(--ks-color-fg-alpha-8);
     }
   }
 
   &--inverted-background {
     background-color: var(--ks-color-bg-inverted);
-    border-color: var(--ks-color-fg-inverted-to-bg-2);
+    border-color: var(--ks-color-fg-inverted-to-bg-8);
 
     .token-color-swatch__title {
       color: var(--ks-color-fg-inverted);
     }
 
     &:hover {
-      background-color: var(--ks-color-bg-inverted-to-fg-9);
+      background-color: var(--ks-color-bg-inverted-to-fg-1);
     }
   }
 
@@ -38,7 +38,7 @@
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)), url("./img/bg-color-swatch.png");
     background-size: cover;
     background-repeat: no-repeat;
-    border-color: var(--ks-color-fg-to-bg-4);
+    border-color: var(--ks-color-fg-to-bg-6);
 
     &::before {
       z-index: 0;
@@ -70,7 +70,7 @@
     }
 
     &[ks-inverted="true"] {
-      border-color: var(--ks-color-fg-inverted-to-bg-4);
+      border-color: var(--ks-color-fg-inverted-to-bg-6);
 
       &:hover {
         border-color: var(--ks-color-fg-inverted-to-bg-6);
