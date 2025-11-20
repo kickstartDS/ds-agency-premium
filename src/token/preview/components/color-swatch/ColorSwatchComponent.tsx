@@ -10,6 +10,7 @@ export enum Category {
 }
 export interface ColorSwatchProps {
   token: string;
+  reference?: string;
   inverted?: boolean;
   category?: Category;
   contrastBorder?: boolean;
@@ -25,6 +26,7 @@ export const ColorSwatchContextDefault = forwardRef<
     {
       token,
       title,
+      reference,
       inverted,
       invertedBackground,
       contrastBorder,
@@ -66,6 +68,9 @@ export const ColorSwatchContextDefault = forwardRef<
             {category === Category.Color && <span>Aa</span>}
           </div>
           {title && <div className="token-color-swatch__title">{title}</div>}
+          {reference && (
+            <div className="token-color-swatch__reference">{reference}</div>
+          )}
         </button>
       </td>
     );

@@ -12,6 +12,8 @@ export interface ColorPreviewProps {
   invertedBackground?: boolean;
   cssValue?: string;
   cssValueInverted?: string;
+  reference?: string;
+  invertedReference?: string;
 }
 
 export const ColorPreviewContextDefault = forwardRef<
@@ -28,6 +30,8 @@ export const ColorPreviewContextDefault = forwardRef<
       category,
       cssValue,
       cssValueInverted,
+      reference,
+      invertedReference,
     },
     ref
   ) => {
@@ -39,6 +43,7 @@ export const ColorPreviewContextDefault = forwardRef<
           gradientBackground={gradientBackground}
           invertedBackground={invertedBackground}
           contrastBorder={contrastBorder}
+          reference={reference}
           //@ts-expect-error
           category={category}
         />
@@ -50,6 +55,7 @@ export const ColorPreviewContextDefault = forwardRef<
             contrastBorder={contrastBorder}
             inverted
             invertedBackground={invertedBackground}
+            invertedReference={invertedReference}
             //@ts-expect-error
             category={category}
           />

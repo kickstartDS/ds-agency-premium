@@ -104,4 +104,9 @@
     font: var(--ks-font-interface-xs);
     color: var(--ks-color-fg);
   }
+
+  &__reference {
+    font: var(--ks-font-interface-xs);
+    color: var(--ks-color-fg-alpha-3);
+  }
 }
