@@ -9,12 +9,14 @@ export function getBackgroundColorTokenGroups(
     if (/--ks-background-color-[^-]+-inverted/.test(token)) return;
     if (token.endsWith("-base")) return; // Exclude base tokens
 
+    // Match main category: --ks-background-color-main
     const match = token.match(/^--ks-background-color-([^-]+)/);
     if (match) {
-      const category = match[1];
-      if (!tokensByCategory[category]) tokensByCategory[category] = [];
-      if (!tokensByCategory[category].includes(token)) {
-        tokensByCategory[category].push(token);
+      const main = match[1];
+
+      if (!tokensByCategory[main]) tokensByCategory[main] = [];
+      if (!tokensByCategory[main].includes(token)) {
+        tokensByCategory[main].push(token);
       }
     }
   });
