@@ -152,4 +152,62 @@ const tokenConfigs = [
     path.resolve(__dirname, "../dist/tokens/border-color-tokens.json"),
     "border-color"
   );
+
+  function addFlexibleReferenceMappings(scssPath, jsonPath) {
+    if (fs.existsSync(scssPath) && fs.existsSync(jsonPath)) {
+      const scssContent = fs.readFileSync(scssPath, "utf8");
+      const json = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+
+      // Find all mappings: --token: var(--ref);
+      const mappingRegex = /(--ks-[\w-]+):\s*var\((--ks-[\w-]+)\);/g;
+      const tokenToReference = {};
+      let match;
+      while ((match = mappingRegex.exec(scssContent))) {
+        const [_, token, reference] = match;
+        tokenToReference[token] = reference;
+      }
+
+      Object.keys(json).forEach((token) => {
+        // Direct reference
+        if (tokenToReference[token]) {
+          json[token].reference = tokenToReference[token];
+        }
+
+        // Try to find an inverted version
+        let invertedToken = token;
+        if (!token.includes("-inverted-")) {
+          // Insert -inverted- after the color family
+          invertedToken = token.replace(
+            /(--ks-border-color-)([^-]+)(.*)/,
+            (_, prefix, family, rest) => `${prefix}${family}-inverted${rest}`
+          );
+        } else {
+          // Already inverted, try to find non-inverted
+          invertedToken = token.replace("-inverted", "");
+        }
+        if (tokenToReference[invertedToken]) {
+          json[token].invertedReference = tokenToReference[invertedToken];
+        }
+      });
+
+      fs.writeFileSync(jsonPath, JSON.stringify(json, null, 2));
+      console.log(
+        `Added flexible reference and invertedReference mappings to ${jsonPath} (without var())`
+      );
+    }
+  }
+
+  // After your puppeteer logic:
+  addFlexibleReferenceMappings(
+    path.resolve(__dirname, "../src/token/text-color-token.scss"),
+    path.resolve(__dirname, "../dist/tokens/text-color-tokens.json")
+  );
+  addFlexibleReferenceMappings(
+    path.resolve(__dirname, "../src/token/background-color-token.scss"),
+    path.resolve(__dirname, "../dist/tokens/background-color-tokens.json")
+  );
+  addFlexibleReferenceMappings(
+    path.resolve(__dirname, "../src/token/border-color-token.scss"),
+    path.resolve(__dirname, "../dist/tokens/border-color-tokens.json")
+  );
 })();

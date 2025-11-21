@@ -1,0 +1,15 @@
+:root,
+[ks-theme] {
+  --ks-box-shadow-card-base: 0 2px 8px 0 var(--ks-color-fg-alpha-8);
+  --ks-box-shadow-card-inverted-base: 0 2px 8px 0 var(--ks-color-fg-inverted-alpha-7);
+}
+
+:root {
+  --ks-box-shadow-card: var(--ks-box-shadow-card-base);
+  --ks-box-shadow-card-inverted: var(--ks-box-shadow-card-inverted-base);
+}
+
+[ks-inverted="true"] {
+  --ks-box-shadow-card: var(--ks-box-shadow-card-inverted-base);
+  --ks-box-shadow-card-inverted: var(--ks-box-shadow-card-base);
+}

@@ -16,11 +16,11 @@ const Page = () => (
 );
 
 export default {
-  title: "Token / Base / Shadow",
+  title: "Token / Base / Box Shadow",
   render: Page,
   parameters: {
     layout: "fullscreen",
   },
 };
 
-export const Shadow = {};
+export const BoxShadow = {};
