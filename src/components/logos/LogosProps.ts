@@ -13,50 +13,8 @@ export type LogoTagline = string;
  * The logos to display
  *
  * @minItems 1
- * @maxItems 20
  */
-export type Logos =
-  | [Logo]
-  | [Logo, Logo]
-  | [Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo]
-  | [
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo,
-      Logo
-    ];
+export type Logos = [Logo, ...Logo[]];
 /**
  * The URL of the logo image
  */

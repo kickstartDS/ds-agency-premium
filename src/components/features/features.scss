@@ -1,4 +1,4 @@
-@import "./features-tokens.scss";
+@import "features-tokens.scss";
 
 .dsa-features {
   gap: var(--dsa-features--gap-vertical, var(--ks-spacing-stack-l))
@@ -31,6 +31,11 @@
   }
 
   .dsa-feature {
+    --dsa-feature_large__icon--size: calc(
+      var(--dsa-feature_small__icon--size) *
+        var(--dsa-feature_large__icon--size-multiplier)
+    );
+
     display: flex;
     position: relative;
     flex-direction: column;
@@ -80,6 +85,13 @@
       }
     }
 
+    &--beside.dsa-feature--large {
+      padding-top: calc(
+        (var(--dsa-feature__icon--size) / 2) -
+          (var(--dsa-feature_small__icon--size) / 2)
+      );
+    }
+
     &--stack {
       .dsa-feature__header {
         display: flex;
@@ -118,7 +130,7 @@
 
     &__title {
       font: var(--dsa-feature__title--font, var(--ks-font-interface-m));
-      color: var(--dsa-feature__title--color, var(--ks-topic-color));
+      color: var(--dsa-feature__title--color, var(--dsa-topic--color));
       font-family: var(
         --dsa-feature__title--font-family,
         var(--ks-font-family-display)
@@ -130,17 +142,8 @@
     }
 
     &__text {
-      .c-rich-text {
-        --c-rich-text--font: var(
-          --dsa-feature__copy--font,
-          var(--ks-font-copy-s)
-        );
-        --c-rich-text--color: var(
-          --dsa-feature__copy--color,
-          var(--dsa-rich-text-color),
-          var(--ks-text-color-default)
-        );
-      }
+      color: var(--dsa-feature__copy--color, var(--ks-text-color-copy));
+      font: var(--dsa-feature__copy--font, var(--ks-font-copy-s));
       margin: 0;
     }
 

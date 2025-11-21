@@ -1,11 +1,21 @@
-@import "./image-story-tokens.scss";
+@import "image-story-tokens.scss";
 
 .c-storytelling.dsa-image-story {
   gap: var(--c-storytelling--horizontal-padding);
-  --c-storytelling--horizontal-padding: var(--dsa-image-story--horizontal-padding, var(--dsa-content--spacing));
+  --c-storytelling--horizontal-padding: var(
+    --dsa-image-story--horizontal-padding,
+    var(--dsa-content--horizontal-spacing)
+  );
   --c-storytelling--vertical-padding: var(--dsa-image-story--vertical-padding, var(--ks-spacing-xl));
 
   .c-storytelling__box {
+    &.c-storytelling__box--top {
+      .c-storytelling__box__content {
+        top: var(--ks-spacing-m);
+        position: sticky;
+      }
+    }
+
     &__content {
       max-width: var(--dsa-content--width_narrow);
     }
@@ -35,8 +45,8 @@
   }
 
   .c-rich-text {
-    font: var(--dsa-image-story__copy--font, var(--dsa-rich-text--font));
-    color: var(--dsa-image-story__copy--color, var(--dsa-rich-text--color));
+    font: var(--dsa-image-story__copy--font, var(--ks-font-copy-m));
+    color: var(--dsa-image-story__copy--color, var(--ks-text-color-copy));
   }
 
   .c-storytelling__box,

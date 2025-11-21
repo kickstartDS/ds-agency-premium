@@ -4,6 +4,8 @@ import { HeaderProps } from "./HeaderProps";
 import { NavMain } from "../nav-main/NavMainComponent";
 import { Logo } from "../logo/LogoComponent";
 import "./header.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./HeaderDefaults";
 
 export type { HeaderProps };
 
@@ -22,27 +24,27 @@ export const HeaderContextDefault = forwardRef<
     },
     ref
   ) => (
-    <header
-      className={classnames(
-        "dsa-header",
-        floating ? `dsa-header--floating` : ""
-      )}
-      ks-inverted={inverted.toString()}
-      ref={ref}
-    >
-      <div className="dsa-header__content">
-        <Logo {...logo} className="dsa-header__logo" inverted={inverted} />
-        <NavMain
-          flyoutInverted={flyoutInverted}
-          dropdownInverted={dropdownInverted}
-          items={navItems}
-          logo={{
-            ...logo,
-            inverted: flyoutInverted,
-          }}
-        />
-      </div>
-    </header>
+    <>
+      <header
+        className={classnames("dsa-header", floating && `dsa-header--floating`)}
+        ks-inverted={inverted.toString()}
+        ref={ref}
+      >
+        <div className="dsa-header__content">
+          <Logo {...logo} className="dsa-header__logo" inverted={inverted} />
+          <NavMain
+            flyoutInverted={flyoutInverted}
+            dropdownInverted={dropdownInverted}
+            items={navItems}
+            logo={{
+              ...logo,
+              inverted: flyoutInverted,
+            }}
+          />
+        </div>
+      </header>
+      {floating && <div className="dsa-header--overlay" />}
+    </>
   )
 );
 
@@ -52,6 +54,6 @@ export const Header = forwardRef<
   HeaderProps & HTMLAttributes<HTMLElement>
 >((props, ref) => {
   const Component = useContext(HeaderContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Header.displayName = "Header";

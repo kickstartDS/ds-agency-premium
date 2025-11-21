@@ -4,6 +4,8 @@ import { FooterProps } from "./FooterProps";
 import { Logo } from "../logo/LogoComponent";
 import "./footer.scss";
 import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./FooterDefaults";
 
 export type { FooterProps };
 
@@ -26,7 +28,7 @@ export const FooterContextDefault = forwardRef<
               <Link
                 {...linkProps}
                 className="dsa-footer__link"
-                key={linkProps.href + label}
+                key={linkProps.url + label}
               >
                 {label}
               </Link>
@@ -44,6 +46,6 @@ export const Footer = forwardRef<
   FooterProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(FooterContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Footer.displayName = "Footer";

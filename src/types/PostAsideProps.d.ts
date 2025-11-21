@@ -7,15 +7,18 @@ declare module "@kickstartds/blog/lib/post-aside/typing" {
  */
 
 import type {ContactProps} from "@kickstartds/base/lib/contact/typing";
-import type {HeadlineProps} from "@kickstartds/base/lib/headline/typing";
 import type {PostMetaProps} from "@kickstartds/blog/lib/post-meta/typing";
 import type {PostShareBarProps} from "@kickstartds/blog/lib/post-share-bar/typing";
 
 export type Author = ContactProps & {
   headline?: {
     [k: string]: unknown;
-  } & HeadlineProps;
+  } & Text;
 };
+/**
+ * Text content for the headline
+ */
+export type Text = string;
 /**
  * Additional css classes attached to the wrapping element
  */

@@ -28,10 +28,16 @@
       "description": "Layout for the Teaser Card",
       "default": "stack"
     },
-    "target": {
+    "centered": {
+      "type": "boolean",
+      "title": "Centered",
+      "description": "Whether the Teaser Card is centered",
+      "default": false
+    },
+    "url": {
       "type": "string",
-      "title": "Target",
-      "description": "Target that should be linked",
+      "title": "Url",
+      "description": "Url that should be linked",
       "format": "uri"
     },
     "button": {
@@ -71,5 +77,5 @@
     }
   },
   "additionalProperties": false,
-  "required": ["topic", "target"]
+  "required": ["topic", "url"]
 }

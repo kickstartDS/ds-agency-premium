@@ -30,10 +30,6 @@
   border-bottom: 2rem solid var(--ks-background-color-default) !important;
 }
 
-.docblock-argstable-body tr > td {
-  color: rgba(255, 255, 255, 0.76);
-}
-
 .sb-show-main.sb-main-padded {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
