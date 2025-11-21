@@ -6,7 +6,7 @@ export interface TokenPreviewChartProps {
 }
 
 const TokenPreviewChart: React.FC<TokenPreviewChartProps> = ({ children }) => (
-  <div className="token-preview-chart">{children}</div>
+  <table className="token-preview-chart">{children}</table>
 );
 
 export default TokenPreviewChart;

@@ -51,28 +51,26 @@ export const ColorSwatchContextDefault = forwardRef<
     }
 
     return (
-      <td>
-        <button
-          ks-inverted={inverted ? "true" : undefined}
-          className={classnames(
-            "token-color-swatch",
-            `token-color-swatch--${category}`,
-            contrastBorder && `token-color-swatch--contrast-border`,
-            gradientBackground && `token-color-swatch--gradient-background`,
-            invertedBackground && `token-color-swatch--inverted-background`
-          )}
-          ref={ref}
-        >
-          <CopyTooltip />
-          <div className="token-color-swatch__canvas" style={style}>
-            {category === Category.Color && <span>Aa</span>}
-          </div>
-          {title && <div className="token-color-swatch__title">{title}</div>}
-          {reference && (
-            <div className="token-color-swatch__reference">{reference}</div>
-          )}
-        </button>
-      </td>
+      <button
+        ks-inverted={inverted ? "true" : undefined}
+        className={classnames(
+          "token-color-swatch",
+          `token-color-swatch--${category}`,
+          contrastBorder && `token-color-swatch--contrast-border`,
+          gradientBackground && `token-color-swatch--gradient-background`,
+          invertedBackground && `token-color-swatch--inverted-background`
+        )}
+        ref={ref}
+      >
+        <CopyTooltip />
+        <div className="token-color-swatch__canvas" style={style}>
+          {category === Category.Color && <span>Aa</span>}
+        </div>
+        {title && <div className="token-color-swatch__title">{title}</div>}
+        {reference && (
+          <div className="token-color-swatch__reference">{reference}</div>
+        )}
+      </button>
     );
   }
 );

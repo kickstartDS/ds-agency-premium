@@ -37,28 +37,32 @@ export const ColorPreviewContextDefault = forwardRef<
   ) => {
     return (
       <TokenPreview token={token} ref={ref}>
-        <ColorSwatch
-          title={cssValue}
-          token={token}
-          gradientBackground={gradientBackground}
-          invertedBackground={invertedBackground}
-          contrastBorder={contrastBorder}
-          reference={reference}
-          //@ts-expect-error
-          category={category}
-        />
-        {showInverted && (
+        <td>
           <ColorSwatch
-            title={cssValueInverted}
+            title={cssValue}
             token={token}
             gradientBackground={gradientBackground}
-            contrastBorder={contrastBorder}
-            inverted
             invertedBackground={invertedBackground}
-            reference={invertedReference}
+            contrastBorder={contrastBorder}
+            reference={reference}
             //@ts-expect-error
             category={category}
           />
+        </td>
+        {showInverted && (
+          <td>
+            <ColorSwatch
+              title={cssValueInverted}
+              token={token}
+              gradientBackground={gradientBackground}
+              contrastBorder={contrastBorder}
+              inverted
+              invertedBackground={invertedBackground}
+              reference={invertedReference}
+              //@ts-expect-error
+              category={category}
+            />
+          </td>
         )}
       </TokenPreview>
     );
