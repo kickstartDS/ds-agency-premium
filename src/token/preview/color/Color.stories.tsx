@@ -1,7 +1,7 @@
 import { Headline } from "../../../components/headline/HeadlineComponent";
 import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
 import TokenPreviewChart from "../components/token-preview-chart/TokenPreviewChartComponent";
-import tokenValues from "../../../../dist/color-tokens.json";
+import tokenValues from "../../../../dist/tokens/color-tokens.json";
 import React from "react";
 import { getColorTokenGroups } from "./colorTokenGroups";
 

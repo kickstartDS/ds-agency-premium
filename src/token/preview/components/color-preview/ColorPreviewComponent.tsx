@@ -55,7 +55,7 @@ export const ColorPreviewContextDefault = forwardRef<
             contrastBorder={contrastBorder}
             inverted
             invertedBackground={invertedBackground}
-            invertedReference={invertedReference}
+            reference={invertedReference}
             //@ts-expect-error
             category={category}
           />

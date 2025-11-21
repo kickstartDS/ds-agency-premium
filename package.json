@@ -48,7 +48,7 @@
     "build-tokens-telekom": "kickstartDS tokens compile --token-dictionary-path src/token-telekom/dictionary --sd-config-path sd.config-telekom.cjs",
     "build-tokens": "run-s build-tokens-* && node scripts/patchThemeTokens.js",
     "chromatic": "chromatic --build-script-name \"build-storybook\" --output-dir \"storybook-static\" --skip \"@(renovate/**|dependabot/**)\" --exit-zero-on-changes --exit-once-uploaded",
-    "generate-background-color-tokens": "node scripts/generateColorTokenValues.js",
+    "generate-color-tokens": "node scripts/generateColorTokenValues.js",
     "init-tokens": "kickstartDS tokens init",
     "playroom": "run-p watch:* playroom:start",
     "playroom:start": "playroom start",
