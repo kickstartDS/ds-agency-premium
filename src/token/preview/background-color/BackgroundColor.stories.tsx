@@ -43,6 +43,10 @@ const Page = () => (
                   cssValue={tokenValues[token]?.normal}
                   cssValueInverted={tokenValues[token]?.inverted}
                   showInverted
+                  reference={tokenValues[token + "-base"]?.reference || ""}
+                  invertedReference={
+                    tokenValues[token + "-base"]?.invertedReference || ""
+                  }
                 />
               ))}
           </React.Fragment>

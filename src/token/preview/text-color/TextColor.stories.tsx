@@ -35,18 +35,23 @@ const Page = () => (
             </tr>
             {tokensByCategory[category]
               .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-              .map((token) => (
-                <ColorPreview
-                  key={token}
-                  category="color"
-                  token={token}
-                  cssValue={tokenValues[token]?.normal}
-                  cssValueInverted={tokenValues[token]?.inverted}
-                  showInverted
-                  reference="var(--ks-color-fg-alpha-3)"
-                  invertedReference="var(--ks-color-fg-inverted-alpha-2)"
-                />
-              ))}
+              .map((token) => {
+                console.log(token, tokenValues[token]); // Debug line
+                return (
+                  <ColorPreview
+                    key={token}
+                    category="color"
+                    token={token}
+                    cssValue={tokenValues[token]?.normal}
+                    cssValueInverted={tokenValues[token]?.inverted}
+                    showInverted
+                    reference={tokenValues[token + "-base"]?.reference || ""}
+                    invertedReference={
+                      tokenValues[token + "-base"]?.invertedReference || ""
+                    }
+                  />
+                );
+              })}
           </React.Fragment>
         ))}
       </tbody>

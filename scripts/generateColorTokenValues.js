@@ -78,4 +78,78 @@ const tokenConfigs = [
   }
 
   await browser.close();
+
+  function addReferenceMappings(scssPath, jsonPath, tokenType) {
+    if (fs.existsSync(scssPath) && fs.existsSync(jsonPath)) {
+      const scssContent = fs.readFileSync(scssPath, "utf8");
+      const json = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+
+      // Match all mappings for base tokens
+      const mappingRegex = new RegExp(
+        `(\\-\\-ks\\-${tokenType}\\-[\\w-]+\\-base):\\s*var\\((\\-\\-ks\\-[\\w-]+)\\);`,
+        "g"
+      );
+      let match;
+      while ((match = mappingRegex.exec(scssContent))) {
+        const [_, token, reference] = match;
+        if (json[token]) {
+          json[token].reference = reference;
+        }
+      }
+
+      // Match all inverted mappings for base tokens
+      const invertedMappingRegex = new RegExp(
+        `(\\-\\-ks\\-${tokenType}\\-[\\w-]+\\-inverted\\-base):\\s*var\\((\\-\\-ks\\-[\\w-]+)\\);`,
+        "g"
+      );
+      while ((match = invertedMappingRegex.exec(scssContent))) {
+        const [_, token, invertedReference] = match;
+        if (json[token]) {
+          json[token].invertedReference = invertedReference;
+        }
+        const baseToken = token.replace("-inverted-base", "-base");
+        if (json[baseToken]) {
+          json[baseToken].invertedReference = invertedReference;
+        }
+      }
+
+      // Match all inverted interactive mappings
+      const invertedInteractiveMappingRegex = new RegExp(
+        `(\\-\\-ks\\-${tokenType}\\-[\\w-]+\\-inverted\\-interactive(?:\\-[\\w]+)?\\-base):\\s*var\\((\\-\\-ks\\-[\\w-]+)\\);`,
+        "g"
+      );
+      while ((match = invertedInteractiveMappingRegex.exec(scssContent))) {
+        const [_, invertedToken, invertedReference] = match;
+        if (json[invertedToken]) {
+          json[invertedToken].invertedReference = invertedReference;
+        }
+        const baseToken = invertedToken.replace("-inverted-", "-");
+        if (json[baseToken]) {
+          json[baseToken].invertedReference = invertedReference;
+        }
+      }
+
+      fs.writeFileSync(jsonPath, JSON.stringify(json, null, 2));
+      console.log(
+        `Added reference and invertedReference mappings to ${tokenType}-tokens.json (without var())`
+      );
+    }
+  }
+
+  // --- Add reference mapping for text-color tokens ---
+  addReferenceMappings(
+    path.resolve(__dirname, "../src/token/text-color-token.scss"),
+    path.resolve(__dirname, "../dist/tokens/text-color-tokens.json"),
+    "text-color"
+  );
+  addReferenceMappings(
+    path.resolve(__dirname, "../src/token/background-color-token.scss"),
+    path.resolve(__dirname, "../dist/tokens/background-color-tokens.json"),
+    "background-color"
+  );
+  addReferenceMappings(
+    path.resolve(__dirname, "../src/token/border-color-token.scss"),
+    path.resolve(__dirname, "../dist/tokens/border-color-tokens.json"),
+    "border-color"
+  );
 })();
