@@ -3,28 +3,6 @@
 [ks-theme],
 [ks-inverted="false"],
 [ks-inverted="true"] {
-  --font-size-base: 16px;
-
-  --font-size-display-shrink-factor: 0.925;
-  --font-size-display-grow-factor: 1.3;
-
-  --font-size-display-bp-factor: 1.02;
-
-  --font-size-copy-shrink-factor: 0.85;
-  --font-size-copy-grow-factor: 1.2;
-
-  --font-size-copy-bp-factor: 1.01;
-
-  --font-size-interface-shrink-factor: 0.85;
-  --font-size-interface-grow-factor: 1.2;
-
-  --font-size-interface-bp-factor: 1.01;
-
-  --font-size-mono-shrink-factor: 0.85;
-  --font-size-mono-grow-factor: 1.2;
-
-  --font-size-mono-bp-factor: 1.01;
-
   // Calculated BP Factor
   --font-size-display-xxs-bp-factor: calc(1 * var(--font-size-display-bp-factor));
   --font-size-display-xs-bp-factor: calc(var(--font-size-display-xxs-bp-factor) * var(--font-size-display-bp-factor));

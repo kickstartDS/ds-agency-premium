@@ -18,11 +18,11 @@
   --color-negative: #ff1a57;
   --color-negative-inverted: #d21d48;
 
-  --color-informative: rgb(100, 194, 219);
-  --color-informative-inverted: rgb(0, 113, 143);
+  --color-informative: #64c2db;
+  --color-informative-inverted: #00718f;
 
-  --color-notice: rgb(100, 194, 219);
-  --color-notice-inverted: rgb(0, 113, 143);
+  --color-notice: #64c2db;
+  --color-notice-inverted: #00718f;
 
   --color-scale-9: 5%;
   --color-scale-8: 15%;
@@ -56,26 +56,35 @@
   --ks-font-weight-bold: 700;
 }
 
+// Font Size
+
 :root {
   --font-size-base: 16px;
 
-  --font-size-display-shrink-factor: 0.925;
-  --font-size-display-grow-factor: 1.3;
+  /* Normalized user input tokens (range: 1-2) */
+  --font-size-display-shrink-factor-input: 1.5;
+  --font-size-display-grow-factor-input: 1.5;
+  --font-size-display-bp-factor-input: 1.5;
 
-  --font-size-display-bp-factor: 1.02;
+  --font-size-copy-shrink-factor-input: 1.5;
+  --font-size-copy-grow-factor-input: 1.5;
+  --font-size-copy-bp-factor-input: 1.5;
 
-  --font-size-copy-shrink-factor: 0.85;
-  --font-size-copy-grow-factor: 1.2;
+  --font-size-interface-shrink-factor-input: 1.5;
+  --font-size-interface-grow-factor-input: 1.5;
+  --font-size-interface-bp-factor-input: 1.5;
 
-  --font-size-copy-bp-factor: 1.01;
+  --font-size-mono-shrink-factor-input: 1.5;
+  --font-size-mono-grow-factor-input: 1.5;
+  --font-size-mono-bp-factor-input: 1.5;
+}
 
-  --font-size-interface-shrink-factor: 0.85;
-  --font-size-interface-grow-factor: 1.2;
+// Spacing
+:root {
+  --spacing-base: 16px;
 
-  --font-size-interface-bp-factor: 1.01;
-
-  --font-size-mono-shrink-factor: 0.85;
-  --font-size-mono-grow-factor: 1.2;
-
-  --font-size-mono-bp-factor: 1.01;
+  /* Normalized user input tokens (range: 1-2) */
+  --spacing-shrink-factor-input: 1.5;
+  --spacing-grow-factor-input: 1.5;
+  --spacing-bp-factor-input: 1.5;
 }
