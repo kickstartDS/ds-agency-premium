@@ -2,9 +2,9 @@
   --ks-border-width-default: 1px;
   --ks-border-width-emphasized: 2px;
 
-  --ks-border-radius-control: 8px;
-  --ks-border-radius-card: 16px;
-  --ks-border-radius-surface: 32px;
+  --ks-border-radius-control: var(--ks-spacing-xs);
+  --ks-border-radius-card: var(--ks-spacing-s);
+  --ks-border-radius-surface: var(--ks-spacing-m);
   --ks-border-radius-pill: 999px;
   --ks-border-radius-circle: 50%;
 }

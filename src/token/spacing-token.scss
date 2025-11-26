@@ -112,7 +112,7 @@
   --ks-spacing-inset-squish-m: var(--ks-spacing-m) var(--ks-spacing-l);
   --ks-spacing-inset-squish-l: var(--ks-spacing-l) var(--ks-spacing-xl);
   --ks-spacing-inset-squish-xl: var(--ks-spacing-xl) var(--ks-spacing-xxl);
-  --ks-spacing-inset-squish-xxl: var(--ks-spacing-xxl) calc(var(--ks-spacing-xxl) * 1.25);
+  --ks-spacing-inset-squish-xxl: var(--ks-spacing-xxl) calc(var(--ks-spacing-xxxl) * 1.25);
 }
 
 // Spacings get BP-factor applied

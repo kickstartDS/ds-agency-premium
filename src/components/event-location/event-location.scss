@@ -14,7 +14,7 @@
   justify-content: space-between;
   gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
   background-color: var(--ks-background-color-accent);
-  padding: var(--ks-spacing-inset-m);
+  padding: var(--ks-spacing-inset-l);
   border-radius: var(--ks-border-radius-surface);
 
   --dsa-event-location__info--flex-basis: 280px;
@@ -67,7 +67,7 @@
   &__appointments {
     display: grid;
     justify-content: flex-end;
-    gap: var(--ks-spacing-stack-s);
+    gap: var(--ks-spacing-s);
     flex-grow: 100;
     flex-shrink: 0;
     grid-template-columns: repeat(

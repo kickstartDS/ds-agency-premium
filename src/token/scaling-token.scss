@@ -61,23 +61,23 @@
 }
 
 :root {
-  --font-size-display-shrink-factor-max: 0.65;
-  --font-size-display-grow-factor-max: 1.75;
-  --font-size-display-bp-factor-max: 1.04;
+  --font-size-display-shrink-factor-max: 0.825;
+  --font-size-display-grow-factor-max: 1.35;
+  --font-size-display-bp-factor-max: 1.015;
 
-  --font-size-copy-shrink-factor-max: 0.65;
-  --font-size-copy-grow-factor-max: 1.75;
-  --font-size-copy-bp-factor-max: 1.04;
+  --font-size-copy-shrink-factor-max: 0.825;
+  --font-size-copy-grow-factor-max: 1.35;
+  --font-size-copy-bp-factor-max: 1.015;
 
-  --font-size-interface-shrink-factor-max: 0.65;
-  --font-size-interface-grow-factor-max: 1.75;
-  --font-size-interface-bp-factor-max: 1.04;
+  --font-size-interface-shrink-factor-max: 0.825;
+  --font-size-interface-grow-factor-max: 1.35;
+  --font-size-interface-bp-factor-max: 1.015;
 
-  --font-size-mono-shrink-factor-max: 0.65;
-  --font-size-mono-grow-factor-max: 1.75;
-  --font-size-mono-bp-factor-max: 1.04;
+  --font-size-mono-shrink-factor-max: 0.825;
+  --font-size-mono-grow-factor-max: 1.35;
+  --font-size-mono-bp-factor-max: 1.015;
 
-  --spacing-shrink-factor-max: 0.5;
-  --spacing-grow-factor-max: 2;
-  --spacing-bp-factor-max: 1.04;
+  --spacing-shrink-factor-max: 0.35;
+  --spacing-grow-factor-max: 1.75;
+  --spacing-bp-factor-max: 1.0425;
 }

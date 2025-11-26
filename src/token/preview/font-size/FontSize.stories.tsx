@@ -38,6 +38,30 @@ const Page = () => (
         <FontSizePreview token="var(--ks-font-size-copy-l)" />
         <FontSizePreview token="var(--ks-font-size-copy-xl)" />
         <FontSizePreview token="var(--ks-font-size-copy-xxl)" />
+        <tr>
+          <td>
+            <Headline text="Interface" level="h2" style="h3" />
+          </td>
+        </tr>
+        <FontSizePreview token="var(--ks-font-size-interface-xxs)" />
+        <FontSizePreview token="var(--ks-font-size-interface-xs)" />
+        <FontSizePreview token="var(--ks-font-size-interface-s)" />
+        <FontSizePreview token="var(--ks-font-size-interface-m)" />
+        <FontSizePreview token="var(--ks-font-size-interface-l)" />
+        <FontSizePreview token="var(--ks-font-size-interface-xl)" />
+        <FontSizePreview token="var(--ks-font-size-interface-xxl)" />
+        <tr>
+          <td>
+            <Headline text="Mono" level="h2" style="h3" />
+          </td>
+        </tr>
+        <FontSizePreview token="var(--ks-font-size-mono-xxs)" />
+        <FontSizePreview token="var(--ks-font-size-mono-xs)" />
+        <FontSizePreview token="var(--ks-font-size-mono-s)" />
+        <FontSizePreview token="var(--ks-font-size-mono-m)" />
+        <FontSizePreview token="var(--ks-font-size-mono-l)" />
+        <FontSizePreview token="var(--ks-font-size-mono-xl)" />
+        <FontSizePreview token="var(--ks-font-size-mono-xxl)" />
       </tbody>
     </TokenPreviewChart>
   </div>

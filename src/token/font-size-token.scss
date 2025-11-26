@@ -64,7 +64,7 @@
   --ks-font-size-display-s-base: calc(
     var(--ks-font-size-display-m-base) * calc(var(--font-size-display-shrink-factor) * 1)
   );
-  --ks-font-size-display-m-base: var(--font-size-base);
+  --ks-font-size-display-m-base: var(--font-size-display-base);
   --ks-font-size-display-l-base: calc(var(--ks-font-size-display-m-base) * var(--font-size-display-grow-factor));
   --ks-font-size-display-xl-base: calc(var(--ks-font-size-display-l-base) * var(--font-size-display-grow-factor));
   --ks-font-size-display-xxl-base: calc(var(--ks-font-size-display-xl-base) * var(--font-size-display-grow-factor));
@@ -72,7 +72,7 @@
   --ks-font-size-copy-xxs-base: calc(var(--ks-font-size-copy-xs-base) * calc(var(--font-size-copy-shrink-factor) * 1));
   --ks-font-size-copy-xs-base: calc(var(--ks-font-size-copy-s-base) * calc(var(--font-size-copy-shrink-factor) * 1));
   --ks-font-size-copy-s-base: calc(var(--ks-font-size-copy-m-base) * calc(var(--font-size-copy-shrink-factor) * 1));
-  --ks-font-size-copy-m-base: var(--font-size-base);
+  --ks-font-size-copy-m-base: var(--font-size-copy-base);
   --ks-font-size-copy-l-base: calc(var(--ks-font-size-copy-m-base) * var(--font-size-copy-grow-factor));
   --ks-font-size-copy-xl-base: calc(var(--ks-font-size-copy-l-base) * var(--font-size-copy-grow-factor));
   --ks-font-size-copy-xxl-base: calc(var(--ks-font-size-copy-xl-base) * var(--font-size-copy-grow-factor));
@@ -86,7 +86,7 @@
   --ks-font-size-interface-s-base: calc(
     var(--ks-font-size-interface-m-base) * calc(var(--font-size-interface-shrink-factor) * 1)
   );
-  --ks-font-size-interface-m-base: var(--font-size-base);
+  --ks-font-size-interface-m-base: var(--font-size-interface-base);
   --ks-font-size-interface-l-base: calc(var(--ks-font-size-interface-m-base) * var(--font-size-interface-grow-factor));
   --ks-font-size-interface-xl-base: calc(var(--ks-font-size-interface-l-base) * var(--font-size-interface-grow-factor));
   --ks-font-size-interface-xxl-base: calc(
@@ -96,7 +96,7 @@
   --ks-font-size-mono-xxs-base: calc(var(--ks-font-size-mono-xs-base) * calc(var(--font-size-mono-shrink-factor) * 1));
   --ks-font-size-mono-xs-base: calc(var(--ks-font-size-mono-s-base) * calc(var(--font-size-mono-shrink-factor) * 1));
   --ks-font-size-mono-s-base: calc(var(--ks-font-size-mono-m-base) * calc(var(--font-size-mono-shrink-factor) * 1));
-  --ks-font-size-mono-m-base: var(--font-size-base);
+  --ks-font-size-mono-m-base: var(--font-size-mono-base);
   --ks-font-size-mono-l-base: calc(var(--ks-font-size-mono-m-base) * var(--font-size-mono-grow-factor));
   --ks-font-size-mono-xl-base: calc(var(--ks-font-size-mono-l-base) * var(--font-size-mono-grow-factor));
   --ks-font-size-mono-xxl-base: calc(var(--ks-font-size-mono-xl-base) * var(--font-size-mono-grow-factor));

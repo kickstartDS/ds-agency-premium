@@ -108,6 +108,7 @@
     margin-top: 0;
     .dsa-button {
       font: var(--dsa-teaser-card__button--font, var(--dsa-button_medium--font));
+      font-weight: var(--dsa-button--font-weight);
       padding: var(--dsa-teaser-card__button--padding, var(--dsa-button--padding));
     }
   }
