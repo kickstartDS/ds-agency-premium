@@ -24,7 +24,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "href": { "type": "string", "format": "uri" },
+          "url": { "type": "string", "format": "uri" },
           "label": { "type": "string" },
           "active": { "type": "boolean" },
           "items": {
@@ -32,7 +32,7 @@
             "items": {
               "type": "object",
               "properties": {
-                "href": { "type": "string", "format": "uri" },
+                "url": { "type": "string", "format": "uri" },
                 "label": { "type": "string" },
                 "active": { "type": "boolean" }
               }
@@ -40,49 +40,148 @@
           }
         },
         "additionalProperties": false,
-        "required": ["href", "label"]
+        "required": ["url", "label"]
       },
       "examples": [
         [
           {
-            "label": "Active Item",
-            "href": "#",
-            "active": true
-          },
-          {
-            "label": "Navigation Item",
-            "href": "#"
-          },
-          {
-            "label": "Dropdown",
-            "href": "#",
+            "label": "Strom",
+            "url": "#",
+            "active": true,
             "items": [
               {
                 "label": "Level 2 Item",
-                "href": "#"
+                "url": "#"
               },
               {
                 "label": "Active Item",
                 "active": true,
-                "href": "#"
+                "url": "#"
               },
               {
                 "label": "An Item with a longer Label",
-                "href": "#"
+                "url": "#"
               },
               {
                 "label": "And One last one",
-                "href": "#"
+                "url": "#"
               }
             ]
           },
           {
-            "label": "One more Item",
-            "href": "#"
+            "label": "Wasser",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
           },
           {
-            "label": "Last Item",
-            "href": "#"
+            "label": "Service+",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
+          },
+          {
+            "label": "Beratung",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
+          },
+          {
+            "label": "Ausschreibungen",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
+          },
+          {
+            "label": "Vertrag kündigen",
+            "url": "#",
+            "items": [
+              {
+                "label": "Level 2 Item",
+                "url": "#"
+              },
+              {
+                "label": "Active Item",
+                "active": true,
+                "url": "#"
+              },
+              {
+                "label": "An Item with a longer Label",
+                "url": "#"
+              },
+              {
+                "label": "And One last one",
+                "url": "#"
+              }
+            ]
           }
         ]
       ]
@@ -101,8 +200,8 @@
         "label": {
           "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/label"
         },
-        "target": {
-          "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/target"
+        "url": {
+          "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/url"
         }
       }
     }

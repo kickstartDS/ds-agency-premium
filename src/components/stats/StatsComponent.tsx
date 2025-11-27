@@ -2,6 +2,8 @@ import { HTMLAttributes, forwardRef, createContext, useContext } from "react";
 import { StatsProps } from "./StatsProps";
 import "./stats.scss";
 import { Stat } from "../stat/StatComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./StatsDefaults";
 
 export type { StatsProps };
 
@@ -24,6 +26,6 @@ export const Stats = forwardRef<
   StatsProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(StatsContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Stats.displayName = "Stats";

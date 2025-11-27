@@ -1,6 +1,8 @@
 import { forwardRef, createContext, useContext, HTMLAttributes } from "react";
 import { BlogAuthorProps } from "./BlogAuthorProps";
 import { Contact } from "../contact/ContactComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./BlogAuthorDefaults";
 
 export type { BlogAuthorProps };
 
@@ -25,7 +27,7 @@ export const BlogAuthorContext = createContext(BlogAuthorContextDefault);
 export const BlogAuthor = forwardRef<HTMLDivElement, BlogAuthorProps>(
   (props, ref) => {
     const Component = useContext(BlogAuthorContext);
-    return <Component {...props} ref={ref} />;
+    return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
   }
 );
 BlogAuthor.displayName = "BlogAuthor";

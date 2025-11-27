@@ -34,9 +34,9 @@ export type Label = string;
  */
 export type Icon = string;
 /**
- * Target that should be linked, makes the button behave like a link semantically
+ * The URL to link to when the button is clicked
  */
-export type Target = string;
+export type URL = string;
 /**
  * Enable grid layer
  */
@@ -56,7 +56,7 @@ export type DesktopVideoSource = string;
 /**
  * Choose the alginment of the module content
  */
-export type ModuleAligment = "center" | "left" | "right";
+export type ModuleAligment = "center" | "bottom" | "left" | "right" | "corner";
 
 export interface VideoCurtainProps {
   headline?: Headline;
@@ -72,7 +72,7 @@ export interface VideoCurtainProps {
 export interface Button {
   label?: Label;
   icon?: Icon;
-  target?: Target;
+  url?: URL;
 }
 /**
  * Sources of background videos for different screen sizes

@@ -17,12 +17,8 @@
         "value": "75em",
         "private": true
       },
-      "widescreen": {
-        "value": "122em",
-        "private": true
-      },
       "tv": {
-        "value": "162em",
+        "value": "122em",
         "private": true
       }
     }

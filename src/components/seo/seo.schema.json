@@ -1,10 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.mydesignsystem.com/cms/seo.schema.json",
+  "$id": "http://cms.mydesignsystem.com/seo.schema.json",
   "title": "Seo",
   "description": "Abstracts SEO settings for a website into JSON schema",
   "type": "object",
-  "required": ["title"],
   "properties": {
     "title": {
       "type": "string",
@@ -33,5 +32,7 @@
       "description": "Card preview image (larger, e.g. Twitter) used for the page",
       "format": "image"
     }
-  }
+  },
+  "required": ["title"],
+  "additionalProperties": false
 }

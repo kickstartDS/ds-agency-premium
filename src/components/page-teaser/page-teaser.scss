@@ -1,0 +1,116 @@
+.page-teaser {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+
+  &__row {
+    margin: -0.5rem 0 -0.5rem -1rem;
+    display: flex;
+
+    > * {
+      padding: 0.5rem 0 0.5rem 1rem;
+    }
+  }
+
+  &__col {
+    margin-top: 1rem;
+
+    @media (min-width: 960px) {
+      margin-top: 1.5rem;
+    }
+
+    &--supply {
+      width: 50%;
+
+      svg {
+        color: var(--ks-color-primary);
+      }
+    }
+
+    &--customer {
+      width: auto;
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+
+    &--postalCode,
+    &--consumption {
+      margin-top: 0.75rem;
+
+      @media (min-width: 640px) {
+        margin-top: 1.25rem;
+      }
+
+      @media (min-width: 960px) {
+        margin-top: 1.25rem;
+      }
+    }
+
+    &--postalCode {
+      width: 40%;
+    }
+
+    &--consumption {
+      width: 60%;
+    }
+  }
+
+  > * {
+    padding: 2rem 1rem;
+    width: 100%;
+
+    @media (min-width: 640px) {
+      padding: 2.5rem;
+    }
+
+    @media (min-width: 960px) {
+      padding: 3rem;
+      max-width: 50%;
+    }
+  }
+
+  &__widget {
+    &:nth-last-child(2) {
+      @media (min-width: 960px) {
+        padding-right: 2rem !important;
+      }
+    }
+
+    &:last-child {
+      margin: 0 auto;
+    }
+  }
+
+  &__image {
+    border-radius: 0.5rem;
+  }
+
+  &__info {
+    border-top: 1px solid var(--ks-border-color-default);
+
+    @media (min-width: 960px) {
+      border-top: 0;
+      border-left: 1px solid var(--ks-border-color-default);
+      padding-left: 2rem !important;
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 32rem;
+  }
+
+  &__link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+}

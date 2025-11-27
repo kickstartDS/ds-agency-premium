@@ -41,13 +41,21 @@ export type Title = string;
  */
 export type Text = string;
 /**
- * The CTA target
+ * Whether the icon is set via Unicode character
  */
-export type CallToActionTarget = string;
+export type UnicodeIcon = boolean;
+/**
+ * The CTA url
+ */
+export type CallToActionUrl = string;
 /**
  * The text label displayed on the link
  */
 export type LinkLabel = string;
+/**
+ * Icon for the link style of the cta
+ */
+export type Icon1 = string;
 
 /**
  * Component used to display a set of features
@@ -65,8 +73,10 @@ export interface Feature {
   icon?: Icon;
   title?: Title;
   text?: Text;
+  unicodeIcon?: UnicodeIcon;
   cta?: {
-    target?: CallToActionTarget;
+    url?: CallToActionUrl;
     label?: LinkLabel;
+    icon?: Icon1;
   };
 }

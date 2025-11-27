@@ -52,7 +52,7 @@ const Page = () => (
         text="EcoTech Solutions, a forward-thinking company in the sustainable PV and wind power industry, sought a way to streamline their development process and enhance their brand consistency across platforms."
       />
     </Section>
-    <Section style="boldTransition" width="full">
+    <Section width="full">
       <Mosaic
         layout="alternate"
         tile={[
@@ -106,15 +106,10 @@ The implementation of the new **Design System** and migration to **Storyblok** t
         ]}
       />
     </Section>
-    <Section
-      width="wide"
-      inverted
-      style="boldTransition"
-      spaceBefore="small"
-      spaceAfter="small"
-    >
+    <Section width="wide" inverted>
       <Cta
-        fullWidth
+        padding
+        inverted
         highlightText
         textAlign="center"
         headline="Ready to **power up your**  Digital Transformation with a tailored **Design System** and Headless **CMS**? "
@@ -122,26 +117,25 @@ The implementation of the new **Design System** and migration to **Storyblok** t
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}
       />
     </Section>
     <Section
-      width="wide"
       headline={{
         text: "More of our Demo Customer Showcases",
         textAlign: "center",
       }}
     >
       <TeaserCard
-        target="#"
+        url="#"
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
@@ -151,7 +145,7 @@ The implementation of the new **Design System** and migration to **Storyblok** t
         }}
       />
       <TeaserCard
-        target="#"
+        url="#"
         headline="Speed and Scale"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
         image="/img/showcases/comp_audio01.jpg"

@@ -1,0 +1,56 @@
+@use "@kickstartds/core/source/core/container";
+@include container.wrapper("selection-rack");
+
+.dsa-selection-rack {
+  border: 1px solid var(--ks-border-color-interface-interactive);
+  border-radius: var(--ks-border-radius-control);
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  transition: var(--ks-transition-hover);
+
+  .dsa-selection-rack__button.dsa-button.c-button--clear {
+    background-color: var(--ks-background-color-default);
+    width: 100%;
+    border-radius: 0;
+    padding: var(--dsa-button--padding);
+    position: relative;
+
+    &:focus-visible,
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: var(--ks-background-color-interface-interactive-hover);
+      transform: none;
+      outline: 0;
+    }
+
+    &:focus-visible {
+      outline: var(--dsa-focus--outline);
+      outline-offset: calc(var(--dsa-focus--outline-offset) * -1 + 1px);
+      z-index: 2;
+    }
+
+    span {
+      transition: transform var(--ks-transition-hover);
+    }
+
+    &:active {
+      span {
+        transform: scale(0.975);
+      }
+    }
+
+    &:first-child {
+      border-radius: calc(var(--ks-border-radius-control) - 1px) calc(var(--ks-border-radius-control) - 1px) 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 calc(var(--ks-border-radius-control) - 1px) calc(var(--ks-border-radius-control) - 1px);
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--ks-border-color-interface-interactive);
+    }
+  }
+}

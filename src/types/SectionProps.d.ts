@@ -6,8 +6,15 @@ declare module "@kickstartds/base/lib/section/typing" {
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {BlogTeaserProps} from "@kickstartds/blog-teaser.schema.json/lib/blog-teaser/typing";
+import type {BusinessCardProps} from "@kickstartds/business-card.schema.json/lib/business-card/typing";
+import type {ContactProps} from "@kickstartds/base/lib/contact/typing";
+import type {ContentNavProps} from "@kickstartds/content-nav.schema.json/lib/content-nav/typing";
 import type {CtaProps} from "@kickstartds/cta.schema.json/lib/cta/typing";
 import type {DividerProps} from "@kickstartds/base/lib/divider/typing";
+import type {DownloadsProps} from "@kickstartds/downloads.schema.json/lib/downloads/typing";
+import type {EventLatestTeaserProps} from "@kickstartds/event-latest-teaser.schema.json/lib/event-latest-teaser/typing";
+import type {EventListTeaserProps} from "@kickstartds/event-list-teaser.schema.json/lib/event-list-teaser/typing";
 import type {FaqProps} from "@kickstartds/faq.schema.json/lib/faq/typing";
 import type {FeaturesProps} from "@kickstartds/features.schema.json/lib/features/typing";
 import type {GalleryProps} from "@kickstartds/gallery.schema.json/lib/gallery/typing";
@@ -18,6 +25,8 @@ import type {ImageTextProps} from "@kickstartds/image-text.schema.json/lib/image
 import type {LogosProps} from "@kickstartds/logos.schema.json/lib/logos/typing";
 import type {MosaicProps} from "@kickstartds/mosaic.schema.json/lib/mosaic/typing";
 import type {SliderProps} from "@kickstartds/content/lib/slider/typing";
+import type {SplitEvenProps} from "@kickstartds/split-even.schema.json/lib/split-even/typing";
+import type {SplitWeightedProps} from "@kickstartds/split-weighted.schema.json/lib/split-weighted/typing";
 import type {StatsProps} from "@kickstartds/stats.schema.json/lib/stats/typing";
 import type {TeaserCardProps} from "@kickstartds/teaser-card.schema.json/lib/teaser-card/typing";
 import type {TestimonialsProps} from "@kickstartds/testimonials.schema.json/lib/testimonials/typing";
@@ -32,18 +41,15 @@ export type Width = "full" | "max" | "wide" | "default" | "narrow";
 /**
  * Style of background
  */
-export type Style =
-  | "stagelights"
-  | "horizontalGradient"
-  | "verticalGradient"
-  | "accentTransition"
-  | "boldTransition"
-  | "symmetricGlow"
-  | "anchorGlow";
+export type Style = "default" | "framed" | "deko" | "gradient";
 /**
  * Color of background
  */
 export type Style1 = "default" | "accent" | "bold";
+/**
+ * Color of background
+ */
+export type Style2 = "none" | "to-default" | "to-accent" | "to-bold" | "to-inverted";
 /**
  * Background image for the whole section
  */
@@ -115,13 +121,20 @@ export type Mode = "default" | "tile" | "list" | "slider";
 /**
  * Set min-width for the tiles in the grid
  */
-export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest";
+export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest" | "full";
 /**
  * Allowed components for content
  */
 export type Content = (
+  | BlogTeaserProps
+  | BusinessCardProps
+  | ContactProps
+  | ContentNavProps
   | CtaProps
   | DividerProps
+  | DownloadsProps
+  | EventLatestTeaserProps
+  | EventListTeaserProps
   | FaqProps
   | FeaturesProps
   | GalleryProps
@@ -132,6 +145,8 @@ export type Content = (
   | LogosProps
   | MosaicProps
   | SliderProps
+  | SplitEvenProps
+  | SplitWeightedProps
   | StatsProps
   | TeaserCardProps
   | TestimonialsProps
@@ -150,6 +165,7 @@ export interface SectionProps {
   width?: Width;
   style?: Style;
   backgroundColor?: Style1;
+  transition?: Style2;
   backgroundImage?: BackgroundImage;
   spotlight?: Spotlight;
   spaceBefore?: SpaceBefore;

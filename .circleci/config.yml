@@ -2,9 +2,8 @@ version: 2.1
 
 defaults: &defaults
   docker:
-    - image: cimg/node:18.16
-  working_directory: /mnt/ramdisk
-  resource_class: medium+
+    - image: cimg/node:18.18
+  resource_class: large
 
 aliases:
   - &save-cache-yarn
@@ -34,7 +33,7 @@ jobs:
       - restore_cache: *restore-cache-node
       - run:
           name: Install Dependencies
-          command: yarn install --frozen-lockfile --cache-folder /mnt/ramdisk/.yarn-cache
+          command: yarn install --frozen-lockfile
       - save_cache: *save-cache-yarn
       - save_cache: *save-cache-node
 

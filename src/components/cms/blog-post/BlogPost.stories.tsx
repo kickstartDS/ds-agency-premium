@@ -57,19 +57,23 @@ The future of AI is exciting and full of potential. However, it's important that
       author: {
         name: "Jane Doe",
         byline: "Senior Developer",
-        image: "img/people/author-emily.png",
+        image: {
+          src: "img/people/contact-isabella.png",
+          alt: "Picture of Jane Doe",
+          aspectRatio: "square",
+        },
         twitter: "Janedoe",
         email: "Jane.doe@example.com",
       },
       socialSharing: [
         {
           icon: "twitter",
-          href: "https://twitter.com/share?text=This%20is%20a%20blog%20post%20headline&url=https://example.com/blog",
+          url: "https://twitter.com/share?text=This%20is%20a%20blog%20post%20headline&url=https://example.com/blog",
           title: "Share on Twitter",
         },
         {
           icon: "linkedin",
-          href: "https://www.linkedin.com/shareArticle?mini=true&url=https://example.com/blog&title=This%20is%20a%20blog%20post%20headline",
+          url: "https://www.linkedin.com/shareArticle?mini=true&url=https://example.com/blog&title=This%20is%20a%20blog%20post%20headline",
           title: "Share on LinkedIn",
         },
       ],
@@ -89,13 +93,13 @@ The future of AI is exciting and full of potential. However, it's important that
         {
           icon: "xing",
           label: "john.smith",
-          href: "mailto:mail@example.com",
+          url: "mailto:mail@example.com",
           newTab: false,
         },
         {
           icon: "twitter",
           label: "@john_smith",
-          href: "#",
+          url: "#",
           newTab: false,
         },
       ],
@@ -107,12 +111,12 @@ The future of AI is exciting and full of potential. However, it's important that
       buttons: [
         {
           label: "Contact Us",
-          target: "#",
+          url: "#",
           icon: "person",
         },
         {
           label: "Learn More",
-          target: "#",
+          url: "#",
           icon: "date",
         },
       ],

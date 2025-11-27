@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/select-button.schema.json",
+  "title": "Select Button",
+  "description": "A button that allows users to select an option from a multiple elements.",
+  "type": "object",
+  "properties": {
+    "icon": {
+      "type": "string",
+      "description": "An icon to display on the button.",
+      "default": ""
+    },
+    "label": {
+      "$ref": "http://schema.kickstartds.com/form/radio.schema.json#/properties/label"
+    },
+    "disabled": {
+      "$ref": "http://schema.kickstartds.com/form/radio.schema.json#/properties/disabled"
+    },
+    "invalid": {
+      "$ref": "http://schema.kickstartds.com/form/radio.schema.json#/properties/invalid"
+    },
+    "invalidMessage": {
+      "$ref": "http://schema.kickstartds.com/form/radio.schema.json#/properties/invalidMessage"
+    },
+    "hint": {
+      "$ref": "http://schema.kickstartds.com/form/radio.schema.json#/properties/hint"
+    },
+    "className": {
+      "$ref": "http://schema.kickstartds.com/form/radio.schema.json#/properties/className"
+    },
+    "component": {
+      "$ref": "http://schema.kickstartds.com/form/radio.schema.json#/properties/component"
+    }
+  }
+}

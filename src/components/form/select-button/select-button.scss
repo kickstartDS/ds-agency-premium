@@ -1,0 +1,37 @@
+.c-select-button {
+  display: flex;
+
+  .c-form-check__field {
+    width: 100%;
+  }
+
+  .c-form-check__input:checked + .c-form-check__box + .c-form-check__label {
+    border-color: var(--ks-border-color-interface-interactive-selected);
+  }
+
+  .c-form-check__label {
+    margin: auto;
+    flex-grow: 1;
+    gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--ks-border-width-default) solid var(--ks-border-color-interface-interactive);
+    border-radius: 0.5rem;
+    transition: var(--ks-transition-hover);
+    padding: 0.75rem;
+
+    &:hover {
+      border-color: var(--ks-border-color-interface-interactive-hover);
+    }
+
+    .icon {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  .c-form-check__box {
+    display: none;
+  }
+}
