@@ -21,9 +21,9 @@ const meta: Meta = {
   },
   ...getArgsShared(schema as JSONSchema7),
   render(args) {
-    useEffect(() => {
-      window._ks.radio.emit("dsa.cookie-consent.showNotice", true);
-    }, []);
+    // useEffect(() => {
+    //   window._ks.radio.emit("dsa.cookie-consent.showNotice", true);
+    // }, []);
     return <CookieConsent {...args} />;
   },
 };
