@@ -4,33 +4,33 @@ import {
   ButtonContextDefault,
   ButtonContext,
 } from "@kickstartds/base/lib/button";
-
 import { ButtonProps } from "./ButtonProps";
 import "./button.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./ButtonDefaults";
 
 export type { ButtonProps };
 
 export const Button = forwardRef<
   HTMLAnchorElement | HTMLButtonElement,
   ButtonProps & HTMLAttributes<HTMLElement>
->(
-  (
-    {
-      label,
-      target,
-      size = "medium",
-      variant = "secondary",
-      icon,
-      disabled = false,
-      className,
-      ...props
-    },
-    ref
-  ) => (
+>((props, ref) => {
+  const {
+    label,
+    url,
+    size = "medium",
+    variant = "secondary",
+    icon,
+    disabled = false,
+    className,
+    ...rest
+  } = deepMergeDefaults(defaults, props);
+
+  return (
     <ButtonContextDefault
-      {...props}
+      {...rest}
       className={classnames("dsa-button", className)}
-      href={target}
+      href={url}
       label={label}
       size={size}
       variant={
@@ -48,8 +48,8 @@ export const Button = forwardRef<
       }}
       ref={ref}
     />
-  )
-);
+  );
+});
 Button.displayName = "Button";
 
 export const ButtonProvider: FC<PropsWithChildren> = (props) => (

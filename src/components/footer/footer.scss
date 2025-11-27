@@ -1,4 +1,4 @@
-@import "./footer-tokens.scss";
+@import "footer-tokens.scss";
 
 .dsa-footer {
   position: relative;
@@ -8,7 +8,7 @@
   background-color: var(--dsa-footer--background-color, var(--ks-background-color-default));
 
   &__content {
-    padding: var(--l-section--space-small) var(--dsa-content--spacing);
+    padding: var(--l-section--space-small) var(--dsa-content--horizontal-spacing);
     border-top: var(--dsa-footer--border-top, 1px solid var(--ks-border-color-default));
     max-width: var(--dsa-footer--max-width, var(--dsa-content--width_wide));
     width: 100%;

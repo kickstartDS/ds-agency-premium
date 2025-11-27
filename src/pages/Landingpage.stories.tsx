@@ -5,7 +5,6 @@ import { footerProps } from "../components/footer/Footer.stories";
 import { Section } from "../components/section/SectionComponent";
 import { Faq } from "../components/faq/FaqComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
-import { VideoCurtain } from "../components/video-curtain/VideoCurtainComponent";
 import { Testimonials } from "../components/testimonials/TestimonialsComponent";
 import { Cta } from "../components/cta/CtaComponent";
 import { ImageStory } from "../components/image-story/ImageStoryComponent";
@@ -13,30 +12,107 @@ import { ImageText } from "../components/image-text/ImageTextComponent";
 
 const Page = () => (
   <>
-    <Header {...headerProps} floating flyoutInverted />
+    <Header {...headerProps} />
 
-    <Section spaceBefore="none" spaceAfter="none" width="full">
-      <VideoCurtain
-        buttons={[
-          {
-            icon: "chevron-down",
-            label: "What can we do for you?",
-            target: "#startit",
-          },
-        ]}
-        headline="Simplify the process of building your Design System"
-        overlay
-        sub="With your headless experts"
-        text="Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture."
-        textPosition="center"
-        video={{
-          srcDesktop: "/img/videos/video-agency.mp4",
-          srcMobile: "/img/videos/video-agency.mp4",
-          srcTablet: "/img/videos/video-agency.mp4",
+    <Section
+      transition="to-accent"
+      width="wide"
+      headline={{
+        width: "narrow",
+        large: true,
+        align: "center",
+        text: "CX für die Energiewirtschaft",
+        sub: "Wir befähigen die Energiewirtschaft, innovative digitale Kundenerlebnisse schnell, sicher und skalierbar zu gestalten.",
+      }}
+    >
+      <Cta
+        padding
+        backgroundColor="var(--ks-background-color-default)"
+        image={{
+          src: "/taktsoft-energy/preview.gif",
+          alt: "Hero Image",
+          padding: false,
+        }}
+        headline="encore übergibt Geschäftsbetrieb an Taktsoft Energy Solutions"
+        text="Wir freuen uns, die Verantwortung für dieses starke Produktportfolio zu übernehmen und gemeinsam mit den bisherigen encore-Kunden die nächsten Innovationsschritte zu gestalten."
+      />
+    </Section>
+    <Section
+      backgroundColor="accent"
+      width="wide"
+      headline={{
+        width: "narrow",
+        align: "center",
+        text: "Aktuelle Artikel",
+      }}
+      content={{
+        mode: "slider",
+        tileWidth: "medium",
+      }}
+    >
+      <TeaserCard
+        url={""}
+        headline={
+          'Plattformen in der Energiewirtschaft: "Es braucht manchmal mehr Mut!"'
+        }
+        text="Nils Brettschneider, Geschäftsführer von Taktsoft Energy, spricht im ZfK-Interview über die Digitalisierung bei Stadtwerken. Sein Unternehmen hat dazu einen Ratgeber herausgegeben."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={"Trumps Wiederwahl bedroht die deutsche Datensouveränität"}
+        text="Trumps bewährte „America First“-Agenda und der uneingeschränkte Fokus auf nationale Interessen werfen brisante Fragen zur Datensicherheit deutscher Unternehmen in der US-Cloud-Infrastrukturen auf."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={
+          "Badenova und Taktsoft entwickeln neue Lösung für Newsletter-Marketing"
+        }
+        text="Kundenbewertungen sind ein unverzichtbarer Bestandteil jeder Webseite. Es ist noch besser, wenn sie authentisch und mit den Originalbeiträgen verlinkt sind."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={
+          'Plattformen in der Energiewirtschaft: "Es braucht manchmal mehr Mut!"'
+        }
+        text="Nils Brettschneider, Geschäftsführer von Taktsoft Energy, spricht im ZfK-Interview über die Digitalisierung bei Stadtwerken. Sein Unternehmen hat dazu einen Ratgeber herausgegeben."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={"Trumps Wiederwahl bedroht die deutsche Datensouveränität"}
+        text="Trumps bewährte „America First“-Agenda und der uneingeschränkte Fokus auf nationale Interessen werfen brisante Fragen zur Datensicherheit deutscher Unternehmen in der US-Cloud-Infrastrukturen auf."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
+        }}
+      />
+      <TeaserCard
+        url={""}
+        headline={
+          "Badenova und Taktsoft entwickeln neue Lösung für Newsletter-Marketing"
+        }
+        text="Kundenbewertungen sind ein unverzichtbarer Bestandteil jeder Webseite. Es ist noch besser, wenn sie authentisch und mit den Originalbeiträgen verlinkt sind."
+        button={{
+          label: "Zum Artikel",
+          chevron: true,
         }}
       />
     </Section>
-
     <Section
       id="startit"
       headline={{
@@ -46,15 +122,13 @@ const Page = () => (
         width: "default",
         align: "center",
         textAlign: "center",
-        large: true,
       }}
-      width="full"
+      width="wide"
     >
       <ImageStory
-        padding
         layout="imageLeft"
         text={`
-**Here at Systemics, we bring a range of design system services that can make a difference:**
+Here at Systemics, we bring a range of design system services that can make a difference:
 
 ### 1. Design System **Consulting**
 Let's work side by side to shape a design system strategy that aligns perfectly with your goals. It's not just about tools; it's about guiding principles, stakeholder management und making the right decisions at the right time.
@@ -72,20 +146,21 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         image={{
           src: "/img/full-shot-different-people-working-together.png",
           alt: "Just a decorative illustration",
-          vAlign: "center",
+          vAlign: "top",
         }}
         buttons={[
           {
             label: "Reach out today!",
             icon: "chevron-right",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
           },
         ]}
       />
     </Section>
 
     <Section
-      style="accentTransition"
+      style="framed"
+      transition="to-accent"
       headline={{
         text: "No Agency site without some shiny happy Customer",
         sub: "AI-generated smiles, as you see them everywhere nowadays",
@@ -131,7 +206,6 @@ We empower your digital teams with the knowledge and skills to manage and evolve
 
     <Section
       backgroundColor="accent"
-      style="boldTransition"
       width="wide"
       headline={{
         text: "Happy Customers Showcases",
@@ -139,7 +213,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       }}
     >
       <TeaserCard
-        target="/showcase-techfusion_paid"
+        url="/showcase-techfusion_paid"
         headline="Transformation Love Story"
         text="See how we saved TechFusions a year's worth of development time"
         image="/img/showcases/comp_tfe01.jpg"
@@ -149,7 +223,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         }}
       />
       <TeaserCard
-        target="/showcase-launchpad_paid"
+        url="/showcase-launchpad_paid"
         headline="Speed and Scale"
         label="Freshest Fruit"
         text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
@@ -160,7 +234,7 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         }}
       />
       <TeaserCard
-        target="/showcase-eco_paid"
+        url="/showcase-eco_paid"
         headline="Saving Time and Money"
         text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
         image="/img/showcases/comp_eco01.jpg"
@@ -171,24 +245,23 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       />
     </Section>
 
-    <Section backgroundColor="bold" width="full">
+    <Section width="wide">
       <Cta
         headline="Get in touch and chat with us about getting your product or platform to market faster"
-        fullWidth
         backgroundImage="/img/bg/bg_dot-carpet-blue.svg"
         image={{
-          src: "/img/contact-person.png",
+          src: "/img/people/contact-person.png",
           padding: false,
         }}
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}
@@ -196,13 +269,11 @@ We empower your digital teams with the knowledge and skills to manage and evolve
     </Section>
 
     <Section
-      width="wide"
       headline={{
         text: "Design Systems, all you need to know",
-        sub: "Design Systems have gained popularity due to the growing need for consistency, efficiency, and scalability in digital product development.",
+        sub: "Why Design Systems have gained popularity in digital product development.",
         large: true,
         align: "left",
-        width: "default",
       }}
     >
       <Faq
@@ -263,7 +334,6 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       headline={{
         text: "Headless CMS for the modern web",
         sub: "Frequently asked questions",
-        align: "right",
       }}
     >
       <Faq
@@ -294,9 +364,8 @@ We empower your digital teams with the knowledge and skills to manage and evolve
       />
     </Section>
 
-    <Section style="anchorGlow" width="wide">
+    <Section width="wide">
       <Cta
-        fullWidth
         highlightText
         textAlign="center"
         headline="Ready to embark on a transformative digital journey?"
@@ -304,12 +373,12 @@ We empower your digital teams with the knowledge and skills to manage and evolve
         buttons={[
           {
             label: "Contact us",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "person",
           },
           {
             label: "Book a meeting",
-            target: "https://app.lemcal.com/@daniel-ley",
+            url: "https://app.lemcal.com/@daniel-ley",
             icon: "date",
           },
         ]}

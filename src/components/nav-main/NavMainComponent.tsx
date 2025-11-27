@@ -6,6 +6,8 @@ import { NavToggle } from "./NavToggleComponent";
 import { NavTopbar } from "../nav-topbar/NavTopbarComponent";
 import { NavFlyout } from "../nav-flyout/NavFlyoutComponent";
 import "./nav-main.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./NavMainDefaults";
 
 export type { NavMainProps };
 
@@ -28,6 +30,6 @@ export const NavMain = forwardRef<
   NavMainProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(NavMainContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 NavMain.displayName = "NavMain";

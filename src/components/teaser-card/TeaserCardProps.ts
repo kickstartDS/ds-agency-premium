@@ -18,9 +18,9 @@ export type Text = string;
  */
 export type Label = string;
 /**
- * Target that should be linked
+ * Url that should be linked
  */
-export type Target = string;
+export type Url = string;
 /**
  * Label of the button. Still A11Y relevant when the button is hidden.
  */
@@ -49,7 +49,7 @@ export interface TeaserCardProps {
    * Layout for the Teaser Card
    */
   layout?: "stack" | "row";
-  target: Target;
+  url: Url;
   button?: {
     label: Label1;
     chevron?: Icon;

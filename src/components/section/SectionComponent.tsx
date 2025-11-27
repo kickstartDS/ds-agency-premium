@@ -8,15 +8,15 @@ import {
 } from "react";
 import classnames from "classnames";
 import { useKsComponent } from "@kickstartds/core/lib/react";
-
 import {
   SectionContextDefault as KdsSectionContextDefault,
   SectionContext as KdsSectionContext,
 } from "@kickstartds/base/lib/section";
-
 import { SectionProps } from "./SectionProps";
 import "./section.scss";
 import { identifier } from "./js/Section.client";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./SectionDefaults";
 
 export type { SectionProps };
 
@@ -33,6 +33,7 @@ export const SectionContextDefault = forwardRef<
       style = "default",
       spotlight = false,
       backgroundColor = "default",
+      transition,
       backgroundImage,
       spaceBefore = "default",
       spaceAfter = "default",
@@ -57,29 +58,25 @@ export const SectionContextDefault = forwardRef<
         {...componentProps}
         className={classnames(
           "dsa-section",
-          style &&
-            style !== "default" &&
-            `dsa-section-style--${
-              style === "verticalGradient"
-                ? "vertical-gradient"
-                : style === "horizontalGradient"
-                ? "horizontal-gradient"
-                : style === "accentTransition"
-                ? "accent-transition"
-                : style === "boldTransition"
-                ? "bold-transition"
-                : style === "symmetricGlow"
-                ? "symmetric-glow"
-                : style === "anchorGlow"
-                ? "anchor-glow"
-                : style
-            }`,
+          style && style !== "default" && `dsa-section-style--${style}`,
+          transition &&
+            transition !== "none" &&
+            `dsa-section--transition-${transition}`,
           headerSpacing && "dsa-section--header-spacing",
           spotlight && "dsa-section--spotlight",
           className
         )}
-        background={backgroundColor}
+        background={
+          backgroundColor === "default"
+            ? "default"
+            : backgroundColor === "accent"
+            ? "accent"
+            : backgroundColor === "bold"
+            ? "bold"
+            : undefined
+        }
         backgroundImage={backgroundImage}
+        // @ts-expect-error
         content={content}
         headline={{
           ...headlineRest,
@@ -112,7 +109,7 @@ export const Section = forwardRef<
   SectionProps & Omit<HTMLAttributes<HTMLElement>, "style" | "content">
 >((props, ref) => {
   const Component = useContext(SectionContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Section.displayName = "Section";
 

@@ -30,27 +30,27 @@ export const CenteredWithButton: Story = {
   args: pack({
     logo: [
       {
-        src: "img/logos/logoipsum-212.svg",
+        src: "img/logos/logoipsum-344.svg",
         alt: "Logo 1",
       },
       {
-        src: "img/logos/logoipsum-217.svg",
+        src: "img/logos/logoipsum-347.svg",
         alt: "Logo 2",
       },
       {
-        src: "img/logos/logoipsum-239.svg",
+        src: "img/logos/logoipsum-352.svg",
         alt: "Logo 3",
       },
       {
-        src: "img/logos/logoipsum-244.svg",
+        src: "img/logos/logoipsum-356.svg",
         alt: "Logo 4",
       },
       {
-        src: "img/logos/logoipsum-250.svg",
+        src: "img/logos/logoipsum-358.svg",
         alt: "Logo 5",
       },
       {
-        src: "img/logos/logoipsum-286.svg",
+        src: "img/logos/logoipsum-369.svg",
         alt: "Logo 6",
       },
     ],
@@ -71,27 +71,27 @@ export const LeftAlignedWithTextLink: Story = {
   args: pack({
     logo: [
       {
-        src: "img/logos/logoipsum-212.svg",
+        src: "img/logos/logoipsum-344.svg",
         alt: "Logo 1",
       },
       {
-        src: "img/logos/logoipsum-217.svg",
+        src: "img/logos/logoipsum-347.svg",
         alt: "Logo 2",
       },
       {
-        src: "img/logos/logoipsum-239.svg",
+        src: "img/logos/logoipsum-352.svg",
         alt: "Logo 3",
       },
       {
-        src: "img/logos/logoipsum-244.svg",
+        src: "img/logos/logoipsum-356.svg",
         alt: "Logo 4",
       },
       {
-        src: "img/logos/logoipsum-250.svg",
+        src: "img/logos/logoipsum-358.svg",
         alt: "Logo 5",
       },
       {
-        src: "img/logos/logoipsum-286.svg",
+        src: "img/logos/logoipsum-369.svg",
         alt: "Logo 6",
       },
     ],
@@ -113,51 +113,51 @@ export const LogoWall: Story = {
     logosPerRow: 4,
     logo: [
       {
-        src: "img/logos/logoipsum-212.svg",
+        src: "img/logos/logoipsum-344.svg",
         alt: "Logo 1",
       },
       {
-        src: "img/logos/logoipsum-217.svg",
+        src: "img/logos/logoipsum-347.svg",
         alt: "Logo 2",
       },
       {
-        src: "img/logos/logoipsum-239.svg",
+        src: "img/logos/logoipsum-352.svg",
         alt: "Logo 3",
       },
       {
-        src: "img/logos/logoipsum-244.svg",
+        src: "img/logos/logoipsum-356.svg",
         alt: "Logo 4",
       },
       {
-        src: "img/logos/logoipsum-250.svg",
+        src: "img/logos/logoipsum-358.svg",
         alt: "Logo 5",
       },
       {
-        src: "img/logos/logoipsum-286.svg",
+        src: "img/logos/logoipsum-369.svg",
         alt: "Logo 6",
       },
       {
-        src: "img/logos/logoipsum-244.svg",
+        src: "img/logos/logoipsum-356.svg",
         alt: "Logo 4",
       },
       {
-        src: "img/logos/logoipsum-250.svg",
+        src: "img/logos/logoipsum-358.svg",
         alt: "Logo 5",
       },
       {
-        src: "img/logos/logoipsum-286.svg",
+        src: "img/logos/logoipsum-369.svg",
         alt: "Logo 6",
       },
       {
-        src: "img/logos/logoipsum-244.svg",
+        src: "img/logos/logoipsum-356.svg",
         alt: "Logo 4",
       },
       {
-        src: "img/logos/logoipsum-250.svg",
+        src: "img/logos/logoipsum-358.svg",
         alt: "Logo 5",
       },
       {
-        src: "img/logos/logoipsum-286.svg",
+        src: "img/logos/logoipsum-369.svg",
         alt: "Logo 6",
       },
     ],
@@ -179,27 +179,27 @@ export const LogoRow: Story = {
     logosPerRow: 6,
     logo: [
       {
-        src: "img/logos/logoipsum-212.svg",
+        src: "img/logos/logoipsum-344.svg",
         alt: "Logo 1",
       },
       {
-        src: "img/logos/logoipsum-217.svg",
+        src: "img/logos/logoipsum-347.svg",
         alt: "Logo 2",
       },
       {
-        src: "img/logos/logoipsum-239.svg",
+        src: "img/logos/logoipsum-352.svg",
         alt: "Logo 3",
       },
       {
-        src: "img/logos/logoipsum-244.svg",
+        src: "img/logos/logoipsum-356.svg",
         alt: "Logo 4",
       },
       {
-        src: "img/logos/logoipsum-250.svg",
+        src: "img/logos/logoipsum-358.svg",
         alt: "Logo 5",
       },
       {
-        src: "img/logos/logoipsum-286.svg",
+        src: "img/logos/logoipsum-369.svg",
         alt: "Logo 6",
       },
     ],
