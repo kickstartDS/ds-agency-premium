@@ -4,6 +4,8 @@ import "./testimonials.scss";
 import { Slider } from "../slider/SliderComponent";
 import { SliderProps } from "../slider/SliderProps";
 import { Testimonial } from "../testimonial/TestimonialComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./TestimonialsDefaults";
 
 export type { TestimonialsProps };
 
@@ -75,6 +77,6 @@ export const Testimonials = forwardRef<
   TestimonialsProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(TestimonialsContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Testimonials.displayName = "Testimonials";

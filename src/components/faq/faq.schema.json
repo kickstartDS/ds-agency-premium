@@ -10,6 +10,7 @@
       "title": "Questions",
       "description": "The questions and answers in the Faq section",
       "items": {
+        "title": "Question",
         "type": "object",
         "properties": {
           "question": {
@@ -28,7 +29,7 @@
           }
         },
         "additionalProperties": false,
-        "required": ["question", "answer"]
+        "required": ["question"]
       },
       "minItems": 1
     }

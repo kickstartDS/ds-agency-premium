@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/breadcrumb.schema.json",
+  "title": "Breadcrumb",
+  "type": "object",
+  "properties": {
+    "pages": {
+      "type": "array",
+      "description": "An array of breadcrumb pages. Each page should have a URL and a label.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The URL to the page"
+          },
+          "label": {
+            "type": "string",
+            "description": "The label for the title of the page"
+          }
+        },
+        "required": ["url", "label"]
+      }
+    }
+  },
+  "additionalProperties": false
+}

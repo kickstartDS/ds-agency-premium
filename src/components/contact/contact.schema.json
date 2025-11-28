@@ -19,7 +19,7 @@
           "type": "string",
           "title": "Alt Text",
           "description": "Alt text of the image",
-          "examples": ["Picture of Jane Smith"]
+          "examples": ["Picture of Isabella Doe"]
         },
         "fullWidth": {
           "type": "boolean",
@@ -40,7 +40,7 @@
       "title": "Title",
       "description": "Name, company name, etc.",
       "type": "string",
-      "examples": ["Jane Smith"]
+      "examples": ["Isabella Doe"]
     },
     "subtitle": {
       "title": "Subtitle",
@@ -60,7 +60,7 @@
           "label": {
             "type": "string"
           },
-          "href": {
+          "url": {
             "type": "string",
             "format": "uri"
           },
@@ -69,6 +69,12 @@
             "description": "Open link in new Tab",
             "type": "boolean",
             "default": false
+          },
+          "ariaLabel": {
+            "title": "Aria Label",
+            "description": "Aria label for the link",
+            "type": "string",
+            "examples": ["Link to Isabella Doe's social media profile"]
           }
         },
         "additionalProperties": false
@@ -78,12 +84,12 @@
           {
             "icon": "phone",
             "label": "0228 / 688 966 20",
-            "href": "tel:+4922868896620"
+            "url": "tel:+4922868896620"
           },
           {
             "icon": "email",
             "label": "mail@example.com",
-            "href": "mailto:mail@example.com"
+            "url": "mailto:mail@example.com"
           }
         ]
       ]

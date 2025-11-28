@@ -4,6 +4,8 @@ import { PostTeaserContextDefault } from "@kickstartds/blog/lib/post-teaser";
 import { BlogTeaserProps } from "./BlogTeaserProps";
 import "./blog-teaser.scss";
 import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./BlogTeaserDefaults";
 
 export type { BlogTeaserProps };
 
@@ -58,15 +60,11 @@ export const BlogTeaserContextDefault = forwardRef<
               : undefined,
             items: teaserMetaItems,
           }}
-          link={
-            link
-              ? {
-                  // @ts-expect-error
-                  target: link.url,
-                  label: link.text || "Read article",
-                }
-              : undefined
-          }
+          link={{
+            //@ts-expect-error
+            url: link.url,
+            label: link?.text || "Read article",
+          }}
           title={headline}
           body={teaserText}
           categories={tags.map((tag) => {
@@ -85,6 +83,6 @@ export const BlogTeaser = forwardRef<
   BlogTeaserProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(BlogTeaserContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 BlogTeaser.displayName = "BlogTeaser";

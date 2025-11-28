@@ -5,6 +5,8 @@ import { Storytelling } from "@kickstartds/content/lib/storytelling";
 import { ButtonContext } from "@kickstartds/base/lib/button";
 import classnames from "classnames";
 import { useButtonGroup } from "../button-group/ButtonGroupComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./ImageStoryDefaults";
 
 export type { ImageStoryProps };
 
@@ -82,6 +84,6 @@ export const ImageStory = forwardRef<
   ImageStoryProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(ImageStoryContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 ImageStory.displayName = "ImageStory";
