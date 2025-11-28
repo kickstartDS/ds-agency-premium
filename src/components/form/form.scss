@@ -53,6 +53,15 @@
     }
   }
 
+  .c-form-check-group {
+    &__label {
+      color: var(--dsa-check-group__label--color, var(--ks-text-color-interface));
+      font: var(--dsa-check-group__label--font, var(--ks-font-interface-s));
+      font-weight: var(--dsa-check-group__label--font-weight, var(--ks-font-weight-semi-bold));
+      padding-bottom: var(--dsa-check-group__label--padding-bottom, 0.25em);
+    }
+  }
+
   .c-form-field {
     --c-form-field_label--padding: 0 0 var(--dsa-input__label--padding-bottom, 0.25em) 0;
     --c-form-field--border: var(--dsa-input--border, var(--ks-border-width-default) solid);

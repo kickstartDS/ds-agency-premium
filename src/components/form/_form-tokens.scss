@@ -1,5 +1,12 @@
 @import "../../selectors";
 
+.c-form-check-group {
+  --dsa-check-group__label--color: var(--ks-text-color-interface);
+  --dsa-check-group__label--font: var(--ks-font-interface-s);
+  --dsa-check-group__label--font-weight: var(--ks-font-weight-semi-bold);
+  --dsa-check-group__label--padding-bottom: 0.25em;
+}
+
 .c-form-check {
   --dsa-check--background: transparent;
   --dsa-check--background_checked: var(--ks-color-primary);
