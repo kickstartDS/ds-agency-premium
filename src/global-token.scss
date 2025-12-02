@@ -24,10 +24,11 @@
   --dsa-typo--highlight: linear-gradient(90deg, var(--ks-color-primary) 0%, var(--ks-color-secondary) 100%);
 
   // Outer padding for content
-  --dsa-content--spacing: var(--ks-spacing-inset-l);
+  --dsa-content--horizontal-spacing: var(--ks-spacing-inset-l);
+  --dsa-content--vertical-spacing: var(--ks-spacing-xxl);
 
   @media (min-width: 48em) {
-    --dsa-content--spacing: var(--ks-spacing-inset-xl);
+    --dsa-content--horizontal-spacing: var(--ks-spacing-inset-xl);
   }
 
   // Content width options (for content displayed in a width constrained container)

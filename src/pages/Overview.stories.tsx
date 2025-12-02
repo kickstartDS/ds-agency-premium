@@ -104,7 +104,6 @@ const Page = () => (
       width="wide"
     >
       <Cta
-        fullWidth
         textAlign="center"
         highlightText
         headline="Ready to embark on a transformative digital journey?"

@@ -174,7 +174,6 @@ We empower your digital teams with the knowledge and skills to manage and evolve
     <Section backgroundColor="bold" width="full">
       <Cta
         headline="Get in touch and chat with us about getting your product or platform to market faster"
-        fullWidth
         backgroundImage="/img/bg/bg_dot-carpet-blue.svg"
         image={{
           src: "/img/contact-person.png",
@@ -296,7 +295,6 @@ We empower your digital teams with the knowledge and skills to manage and evolve
 
     <Section style="anchorGlow" width="wide">
       <Cta
-        fullWidth
         highlightText
         textAlign="center"
         headline="Ready to embark on a transformative digital journey?"
