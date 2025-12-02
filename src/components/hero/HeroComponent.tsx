@@ -52,7 +52,7 @@ export const HeroContextDefault = forwardRef<
             overlay={overlay}
             box={{
               background: textbox === true ? "solid" : "transparent",
-              enabled: true,
+              enabled: headline ? true : false,
               vertical:
                 textPosition === "below" || textPosition === "corner"
                   ? "bottom"
