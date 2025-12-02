@@ -1,11 +1,41 @@
 import { BusinessCard } from "../components/business-card/BusinessCardComponent";
 import { EventLocation } from "../components/event-location/EventLocationComponent";
+import { Hero } from "../components/hero/HeroComponent";
 import { Logos } from "../components/logos/LogosComponent";
 import { Section } from "../components/section/SectionComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 
 const Page = () => (
   <div className="playground-preview-page">
+    <Section width="full">
+      <Hero
+        buttons={[
+          {
+            icon: "arrow-right",
+            label: "Discover More",
+            url: "#",
+          },
+          {
+            icon: "phone",
+            label: "Reach Out",
+            url: "#",
+          },
+        ]}
+        headline="Discover Our Design System"
+        height="small"
+        image={{
+          indent: "none",
+          src: "https://picsum.photos/seed/kdsvisual/640/270",
+          srcDesktop: "img/people-brainstorming-work-meeting.png",
+          srcMobile: "img/people-brainstorming-work-meeting.png",
+          srcTablet: "img/people-brainstorming-work-meeting.png",
+        }}
+        sub="Scalable. Efficient. Seamless."
+        text="Our design system provides a seamless and efficient framework for building scalable applications. Experience unprecedented speed and scalability with our Headless CMS powered websites, web apps & composable architecture."
+        textPosition="left"
+        textbox
+      />
+    </Section>
     <Section
       headline={{
         text: "Lorem Ipsum Dolor",
