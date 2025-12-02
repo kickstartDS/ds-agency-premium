@@ -1,16 +1,11 @@
-import { TextField } from "@kickstartds/form/lib/text-field";
-import { BusinessCard } from "../components/business-card/BusinessCardComponent";
 import { Cta } from "../components/cta/CtaComponent";
 import { Features } from "../components/features/FeaturesComponent";
 import { Section } from "../components/section/SectionComponent";
 import { Stats } from "../components/stats/StatsComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
-import { Testimonials } from "../components/testimonials/TestimonialsComponent";
 import ColorScaleSwatchComponent from "./components/color-scale/ColorScaleComponent";
 import { SelectField } from "@kickstartds/form/lib/select-field";
-import { Radio } from "@kickstartds/form/lib/radio";
 import { TextArea } from "@kickstartds/form/lib/text-area";
-import { Checkbox } from "@kickstartds/form/lib/checkbox";
 import { CheckboxGroup } from "@kickstartds/form/lib/checkbox-group";
 import { Button } from "../components/button/ButtonComponent";
 
