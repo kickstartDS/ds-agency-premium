@@ -1,3 +1,15 @@
+# v1.6.71 (Tue Dec 02 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(hero): make textbox conditional to headline being set ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
 # v1.6.70 (Fri Jun 27 2025)
 
 #### ⚠️ Pushed to `main`
