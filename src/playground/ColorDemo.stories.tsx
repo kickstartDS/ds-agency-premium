@@ -1,4 +1,3 @@
-import { Cta } from "../components/cta/CtaComponent";
 import { Features } from "../components/features/FeaturesComponent";
 import { Section } from "../components/section/SectionComponent";
 import { Stats } from "../components/stats/StatsComponent";
@@ -7,11 +6,22 @@ import ColorScaleSwatchComponent from "./components/color-scale/ColorScaleCompon
 import { SelectField } from "@kickstartds/form/lib/select-field";
 import { TextArea } from "@kickstartds/form/lib/text-area";
 import { CheckboxGroup } from "@kickstartds/form/lib/checkbox-group";
+import { RadioGroup } from "@kickstartds/form/lib/radio-group";
 import { Button } from "../components/button/ButtonComponent";
+import { SearchResult } from "../components/search-result/SearchResultComponent";
+import { Breadcrumb } from "../components/breadcrumb/BreadcrumbComponent";
+import { Downloads } from "../components/downloads/DownloadsComponent";
+import { Pagination } from "../components/pagination/PaginationComponent";
+import { TextField } from "@kickstartds/form/lib/text-field";
+import { EventLatestTeaser } from "../components/event-latest-teaser/EventLatestTeaserComponent";
+import { EventLocation } from "../components/event-location/EventLocationComponent";
+import { EventListTeaser } from "../components/event-list-teaser/EventListTeaserComponent";
+import { BlogTeaser } from "../components/blog-teaser/BlogTeaserComponent";
+import { BlogAside } from "../components/blog-aside/BlogAsideComponent";
 
 const Page = () => (
   <div className="playground-preview-page">
-    <Section spaceAfter="none">
+    {/*
       <ColorScaleSwatchComponent
         tokens={[
           "--ks-color-primary-to-bg-1",
@@ -24,10 +34,16 @@ const Page = () => (
           "--ks-color-primary-to-bg-8",
           "--ks-color-primary-to-bg-9",
         ]}
-      />
-    </Section>
+      /> */}
 
-    <Section spaceAfter="small">
+    <Section
+      content={{
+        gutter: "large",
+        mode: "tile",
+      }}
+      width="wide"
+      spaceAfter="small"
+    >
       <Features
         ctas={{
           style: "link",
@@ -44,30 +60,190 @@ const Page = () => (
             text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
             title: "Scalable Architecture",
           },
-          {
-            cta: {
-              icon: "arrow-right",
-              label: "Get started",
-              url: "#",
-            },
-            icon: "map",
-            text: "Experience efficient development like never before. Our design system streamlines the development process, saving you time and resources.",
-            title: "Efficient Development",
-          },
-          {
-            cta: {
-              icon: "arrow-right",
-              label: "Explore",
-              url: "#",
-            },
-            icon: "person",
-            text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
-            title: "Consistent UI",
-          },
         ]}
         layout="smallTiles"
-        style="intext"
+        style="stack"
       />
+      <TeaserCard
+        imageRatio="landscape"
+        headline="Empower Your Business"
+        text="Leverage our expertise in creating scalable and robust applications using modern technologies."
+        url={""}
+        button={{
+          label: "Get Started",
+          chevron: true,
+        }}
+      />
+      <Stats
+        stat={[
+          {
+            icon: "person",
+            number: "150",
+            title: "Users",
+            description:
+              "Active users on the platform taking advantage of the design system.",
+          },
+        ]}
+      />
+      <SearchResult
+        imageColSize="small"
+        initialMatch="Embracing a **sustainable** lifestyle."
+        matches={[
+          {
+            snippet:
+              "Learn how leading companies are integrating **sustainability**.",
+            title: "Embracing Sustainability",
+            url: "#",
+          },
+        ]}
+        previewImage="img/full-shot-different-people-working-together.png"
+        showLink
+        title="GreenTech Summit"
+        url="https://www.example.com/greentech-summit-2023"
+      />
+    </Section>
+
+    <Section spaceAfter="small" spaceBefore="small" width="wide">
+      <div
+        style={{
+          display: "flex",
+          gap: "var(--ks-spacing-inline-m)",
+          width: "100%",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ flexGrow: "1" }}>
+          <Breadcrumb
+            pages={[
+              {
+                label: "Page 1",
+                url: "https://example.com/page1",
+              },
+              {
+                label: "Page 2",
+                url: "https://example.com/page2",
+              },
+              {
+                label: "Page 3",
+                url: "https://example.com/page3",
+              },
+            ]}
+          />
+        </div>
+        <div style={{ flexGrow: "3" }}>
+          <Downloads
+            downloads={[
+              {
+                format: "PDF",
+                name: "Product Brochure",
+                previewImage: "img/offset-image.png",
+                size: "2.5 MB",
+                url: "#",
+              },
+            ]}
+          />
+        </div>
+        <div style={{ flexGrow: "3" }}>
+          <Pagination
+            ariaLabels={{
+              goToPage: "Go to page",
+              nextPage: "Go to next page",
+              previousPage: "Go to previous page",
+              skipToFirstPage: "Skip to first page",
+              skipToLastPage: "Skip to last page",
+            }}
+            pages={[
+              {
+                active: false,
+                url: "https://example.com/page1",
+              },
+              {
+                active: true,
+                url: "https://example.com/page2",
+              },
+              {
+                active: false,
+                url: "https://example.com/page3",
+              },
+              {
+                active: false,
+                url: "https://example.com/page4",
+              },
+            ]}
+          />
+        </div>
+      </div>
+    </Section>
+
+    <Section
+      width="wide"
+      content={{
+        gutter: "large",
+        mode: "tile",
+      }}
+      spaceAfter="small"
+      spaceBefore="small"
+    >
+      <EventListTeaser
+        category="Buyers"
+        ctaText="Show event"
+        date="30.12.2025"
+        location={{
+          address: "Alexanderplatz 1<br />\n10178 Berlin",
+          name: "Tech Conference Center",
+        }}
+        tags={["AI"]}
+        text="The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence."
+        time="10:00"
+        title="The Future of AI"
+        url="#"
+      />
+      <div
+        style={{
+          display: "flex",
+          gap: "var(--ks-spacing-stack-m)",
+          flexDirection: "column",
+        }}
+      >
+        <EventLocation
+          address="Alexanderplatz 1<br />
+  10178 Berlin"
+          dates={[
+            {
+              ariaLabel:
+                "Register for the event on 18th September 2025 from 09:00 to 17:00",
+              date: "18.09.2025",
+              label: "Register",
+              newTab: true,
+              time: "09:00 – 17:00",
+              url: "#",
+            },
+          ]}
+          displayMode="spacious"
+          links={[
+            {
+              label: "Open in Google Maps",
+              newTab: true,
+              url: "https://maps.google.com/?q=Berlin+Congress+Center",
+            },
+          ]}
+          locationName="Berlin Congress Center"
+        />
+
+        <EventLatestTeaser
+          ariaLabel="Event teaser for "
+          calendar={{
+            day: "30",
+            month: "Dec",
+          }}
+          cta="Show event"
+          date="12/30/2025"
+          location="Berlin, Germany"
+          title="The Future of AI"
+          url="https://example.com"
+        />
+      </div>
       <div
         style={{
           display: "flex",
@@ -90,10 +266,13 @@ const Page = () => (
             },
           ]}
         />
+        <TextField label="Your name" />
         <CheckboxGroup
           label={"Lorem Ipsum"}
           options={[
             {
+              //@ts-expect-error
+              checked: true,
               label: "Lorem Ipsum",
             },
             {
@@ -106,82 +285,75 @@ const Page = () => (
           ]}
         />
         <TextArea label="Your message" />
-        <Button variant="primary" label="Submit" url="#" />
+        <RadioGroup
+          label={"Lorem Ipsum"}
+          options={[
+            {
+              label: "Lorem Ipsum",
+            },
+            {
+              //@ts-expect-error
+              checked: true,
+              label: "Ipsum Dolor",
+            },
+            {
+              label: "Dolor Sit Amet",
+              disabled: true,
+            },
+          ]}
+        />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          justifyContent: "space-between",
+        }}
+      >
+        <Button icon="arrow-right" variant="primary" label={"Learn more"} />
+        <Button icon="date" variant="secondary" label={"Book appointment"} />
+        <Button icon="upload" variant="tertiary" label={"Upload File"} />
+        <BlogAside
+          author={{
+            byline: "CEO at Company",
+
+            links: [
+              {
+                ariaLabel: "Link to Isabella Doe's social media profile",
+                icon: "twitter",
+                label: "jane_smith",
+                newTab: false,
+                url: "tel:+4922868896620",
+              },
+              {
+                ariaLabel: "Link to Isabella Doe's social media profile",
+                icon: "email",
+                label: "jane.smith@example.com",
+                newTab: false,
+                url: "mailto:mail@example.com",
+              },
+            ],
+            name: "Jane Smith",
+          }}
+          date="12/30/2022"
+          readingTime="5 min read"
+          socialSharing={[
+            {
+              icon: "twitter",
+              title: "Share on Twitter",
+              url: "https://twitter.com/share?text=Check%20this%20out!&url=https://example.com",
+            },
+            {
+              icon: "linkedin",
+              title: "Share on LinkedIn",
+              url: "https://twitter.com/share?text=Check%20this%20out!&url=https://example.com",
+            },
+          ]}
+        />
       </div>
     </Section>
-    <Section
-      content={{
-        gutter: "large",
-      }}
-      backgroundColor="accent"
-      spaceAfter="small"
-    >
-      <TeaserCard
-        imageRatio="landscape"
-        image="img/full-shot-different-people-working-together.png"
-        headline="Empower Your Business with Our Cutting-Edge Solutions"
-        text="Leverage our expertise in creating scalable and robust applications using modern technologies."
-        url={""}
-        button={{
-          label: "Get Started",
-          chevron: true,
-        }}
-      />
-      <Stats
-        stat={[
-          {
-            icon: "person",
-            number: "mind. 1500 davon",
-            title: "Users",
-          },
-          {
-            icon: "star",
-            number: "bis zu 350",
-            title: "Subscribers",
-          },
-          {
-            icon: "map",
-            number: "125%",
-            title: "Growth",
-          },
-          {
-            icon: "phone",
-            number: "75%",
-            title: "Engagement",
-          },
-        ]}
-      />
-    </Section>
-    <Section backgroundColor="accent" spaceBefore="small" spaceAfter="small">
-      <Cta
-        ks-inverted="true"
-        align="center"
-        backgroundColor="var(--ks-background-color-default)"
-        buttons={[
-          {
-            label: "Learn More",
-            url: "#",
-          },
-          {
-            label: "Contact Us",
-            url: "#",
-          },
-        ]}
-        headline="Expertise in Scalable Solutions"
-        image={{
-          align: "center",
-          padding: true,
-        }}
-        order={{
-          desktopImageLast: true,
-          mobileImageLast: false,
-        }}
-        padding
-        sub="Subheadline"
-        text="Leverage our expertise in creating scalable and robust applications using modern technologies."
-        textAlign="left"
-      />
-    </Section>
+    <Section width="wide"></Section>
   </div>
 );
 
