@@ -2,7 +2,13 @@ const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
 
-const cssFile = path.resolve(__dirname, "../dist/tokens/tokens.css");
+// Ensure dist/tokens folder exists
+const distTokensDir = path.resolve(__dirname, "../dist/tokens");
+if (!fs.existsSync(distTokensDir)) {
+  fs.mkdirSync(distTokensDir, { recursive: true });
+}
+
+const cssFile = path.resolve(__dirname, "../src/token/tokens.css");
 
 if (!fs.existsSync(cssFile)) {
   console.error("CSS file not found:", cssFile);
