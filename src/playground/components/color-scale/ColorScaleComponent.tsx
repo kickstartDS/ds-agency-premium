@@ -1,5 +1,4 @@
 import React from "react";
-import tokenValues from "../../../token/color-token.json";
 import {
   ColorSwatch,
   ColorSwatchProps,
@@ -7,11 +6,13 @@ import {
 import "./color-scale.scss";
 
 export interface ColorScaleSwatchComponentProps {
+  inverted?: boolean;
   tokens: string[]; // Array of 9 color tokens (CSS custom properties)
   swatchProps?: Omit<ColorSwatchProps, "token">;
 }
 
 const ColorScaleSwatchComponent: React.FC<ColorScaleSwatchComponentProps> = ({
+  inverted,
   tokens,
   swatchProps,
 }) => {
@@ -24,7 +25,8 @@ const ColorScaleSwatchComponent: React.FC<ColorScaleSwatchComponentProps> = ({
     <div className="token-color-scale">
       {tokens.map((token) => (
         <ColorSwatch
-          title={tokenValues[token]?.normal || token}
+          inverted={inverted}
+          title={token}
           key={token}
           token={token}
           {...swatchProps}

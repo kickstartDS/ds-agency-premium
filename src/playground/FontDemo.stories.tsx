@@ -6,7 +6,6 @@ import { Button } from "../components/button/ButtonComponent";
 import { Faq } from "../components/faq/FaqComponent";
 import { Text } from "../components/text/TextComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
-import { Contact } from "../components/contact/ContactComponent";
 import { RadioGroup } from "@kickstartds/form/lib/radio-group";
 import { TextField } from "@kickstartds/form/lib/text-field";
 import { Headline } from "../components/headline/HeadlineComponent";

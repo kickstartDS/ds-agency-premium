@@ -1,14 +1,6 @@
 import { Headline } from "../../../components/headline/HeadlineComponent";
 import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
-import tokenValues from "../../border-color-token.json";
-import { getBorderColorTokenGroups } from "./borderColorTokenGroups";
 import TokenPreviewChart from "../components/token-preview-chart/TokenPreviewChartComponent";
-import React from "react";
-
-const tokensByCategory = getBorderColorTokenGroups(tokenValues);
-const categories = Object.keys(tokensByCategory).sort();
-const formatCategory = (category: string) =>
-  category.charAt(0).toUpperCase() + category.slice(1);
 
 const Page = () => (
   <div className="preview-page">
@@ -22,35 +14,33 @@ const Page = () => (
         </tr>
       </thead>
       <tbody>
-        {categories.map((category) => (
-          <React.Fragment key={category}>
-            <tr>
-              <td colSpan={3}>
-                <Headline
-                  text={formatCategory(category)}
-                  level="h2"
-                  style="h3"
-                />
-              </td>
-            </tr>
-            {tokensByCategory[category]
-              .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-              .map((token) => (
-                <ColorPreview
-                  key={token}
-                  category="borderColor"
-                  token={token}
-                  cssValue={tokenValues[token]?.normal}
-                  cssValueInverted={tokenValues[token]?.inverted}
-                  showInverted
-                  reference={tokenValues[token + "-base"]?.reference || ""}
-                  invertedReference={
-                    tokenValues[token + "-base"]?.invertedReference || ""
-                  }
-                />
-              ))}
-          </React.Fragment>
-        ))}
+        <tr>
+          <td colSpan={3}>
+            <Headline text="Accent" level="h2" style="h3" />
+          </td>
+        </tr>
+
+        <ColorPreview
+          category="borderColor"
+          token="--ks-border-color-accent"
+          showInverted
+        />
+
+        <tr>
+          <td colSpan={3}>
+            <Headline text="Interface" level="h2" style="h3" />
+          </td>
+        </tr>
+        <ColorPreview
+          category="borderColor"
+          token="--ks-border-color-interface"
+          showInverted
+        />
+        <ColorPreview
+          category="borderColor"
+          token="--ks-border-color-interface-interactive"
+          showInverted
+        />
       </tbody>
     </TokenPreviewChart>
   </div>

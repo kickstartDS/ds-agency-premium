@@ -1,15 +1,6 @@
 import { Headline } from "../../../components/headline/HeadlineComponent";
 import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
-import tokenValues from "../../background-color-token.json";
-import { getBackgroundColorTokenGroups } from "./backgroundColorTokenGroups";
 import TokenPreviewChart from "../components/token-preview-chart/TokenPreviewChartComponent";
-import React from "react";
-
-const tokenGroups = getBackgroundColorTokenGroups(tokenValues);
-
-const sortedMainCategories = Object.keys(tokenGroups).sort();
-const formatMainHeading = (main: string) =>
-  main.charAt(0).toUpperCase() + main.slice(1);
 
 const Page = () => (
   <div className="preview-page">
@@ -23,34 +14,44 @@ const Page = () => (
         </tr>
       </thead>
       <tbody>
-        {sortedMainCategories.map((main) => (
-          <React.Fragment key={main}>
-            <tr>
-              <td colSpan={3}>
-                <Headline
-                  text={formatMainHeading(main)}
-                  level="h2"
-                  style="h3"
-                />
-              </td>
-            </tr>
-            {tokenGroups[main]
-              .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-              .map((token) => (
-                <ColorPreview
-                  key={token}
-                  token={token}
-                  cssValue={tokenValues[token]?.normal}
-                  cssValueInverted={tokenValues[token]?.inverted}
-                  showInverted
-                  reference={tokenValues[token + "-base"]?.reference || ""}
-                  invertedReference={
-                    tokenValues[token + "-base"]?.invertedReference || ""
-                  }
-                />
-              ))}
-          </React.Fragment>
-        ))}
+        <tr>
+          <td colSpan={3}>
+            <Headline text="" level="h2" style="h3" />
+          </td>
+        </tr>
+
+        <tr>
+          <td colSpan={3}>
+            <Headline text="Accent" level="h2" style="h3" />
+          </td>
+        </tr>
+
+        <ColorPreview token="--ks-background-color-accent" showInverted />
+        <tr>
+          <td colSpan={3}>
+            <Headline text="Bold" level="h2" style="h3" />
+          </td>
+        </tr>
+
+        <ColorPreview token="--ks-background-color-bold" showInverted />
+        <tr>
+          <td colSpan={3}>
+            <Headline text="Card" level="h2" style="h3" />
+          </td>
+        </tr>
+        <ColorPreview token="--ks-background-color-card" showInverted />
+        <ColorPreview
+          token="--ks-background-color-card-interactive"
+          showInverted
+        />
+        <ColorPreview
+          token="--ks-background-color-card-interactive-hover"
+          showInverted
+        />
+        <ColorPreview
+          token="--ks-background-color-card-interactive-active"
+          showInverted
+        />
       </tbody>
     </TokenPreviewChart>
   </div>
