@@ -21,25 +21,22 @@ const tokenConfigs = [
   {
     name: "background-color",
     regex: /--ks-background-color-[\w-]+/g,
-    output: path.resolve(
-      __dirname,
-      "../dist/tokens/background-color-tokens.json"
-    ),
+    output: path.resolve(__dirname, "../src/token/background-color-token.json"),
   },
   {
     name: "border-color",
     regex: /--ks-border-color-[\w-]+/g,
-    output: path.resolve(__dirname, "../dist/tokens/border-color-tokens.json"),
+    output: path.resolve(__dirname, "../src/token/border-color-token.json"),
   },
   {
     name: "text-color",
     regex: /--ks-text-color-[\w-]+/g,
-    output: path.resolve(__dirname, "../dist/tokens/text-color-tokens.json"),
+    output: path.resolve(__dirname, "../src/token/text-color-token.json"),
   },
   {
     name: "color",
     regex: /--ks-color-[\w-]+/g,
-    output: path.resolve(__dirname, "../dist/tokens/color-tokens.json"),
+    output: path.resolve(__dirname, "../src/token/color-token.json"),
   },
 ];
 
@@ -145,17 +142,17 @@ const tokenConfigs = [
   // --- Add reference mapping for text-color tokens ---
   addReferenceMappings(
     path.resolve(__dirname, "../src/token/text-color-token.scss"),
-    path.resolve(__dirname, "../dist/tokens/text-color-tokens.json"),
+    path.resolve(__dirname, "../src/token/text-color-token.json"),
     "text-color"
   );
   addReferenceMappings(
     path.resolve(__dirname, "../src/token/background-color-token.scss"),
-    path.resolve(__dirname, "../dist/tokens/background-color-tokens.json"),
+    path.resolve(__dirname, "../src/token/background-color-token.json"),
     "background-color"
   );
   addReferenceMappings(
     path.resolve(__dirname, "../src/token/border-color-token.scss"),
-    path.resolve(__dirname, "../dist/tokens/border-color-tokens.json"),
+    path.resolve(__dirname, "../src/token/border-color-token.json"),
     "border-color"
   );
 
@@ -206,14 +203,14 @@ const tokenConfigs = [
   // After your puppeteer logic:
   addFlexibleReferenceMappings(
     path.resolve(__dirname, "../src/token/text-color-token.scss"),
-    path.resolve(__dirname, "../dist/tokens/text-color-tokens.json")
+    path.resolve(__dirname, "../src/token/text-color-token.json")
   );
   addFlexibleReferenceMappings(
     path.resolve(__dirname, "../src/token/background-color-token.scss"),
-    path.resolve(__dirname, "../dist/tokens/background-color-tokens.json")
+    path.resolve(__dirname, "../src/token/background-color-token.json")
   );
   addFlexibleReferenceMappings(
     path.resolve(__dirname, "../src/token/border-color-token.scss"),
-    path.resolve(__dirname, "../dist/tokens/border-color-tokens.json")
+    path.resolve(__dirname, "../src/token/border-color-token.json")
   );
 })();

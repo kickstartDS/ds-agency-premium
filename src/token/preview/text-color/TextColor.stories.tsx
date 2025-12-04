@@ -1,6 +1,6 @@
 import { Headline } from "../../../components/headline/HeadlineComponent";
 import { ColorPreview } from "../components/color-preview/ColorPreviewComponent";
-import tokenValues from "../../../../dist/tokens/text-color-tokens.json";
+import tokenValues from "../../text-color-token.json";
 import { getTextColorTokenGroups } from "./textColorTokenGroups";
 import TokenPreviewChart from "../components/token-preview-chart/TokenPreviewChartComponent";
 import React from "react";

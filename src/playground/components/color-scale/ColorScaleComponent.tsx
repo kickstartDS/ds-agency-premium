@@ -1,5 +1,5 @@
 import React from "react";
-import tokenValues from "../../../../dist/tokens/color-tokens.json";
+import tokenValues from "../../../token/color-token.json";
 import {
   ColorSwatch,
   ColorSwatchProps,
