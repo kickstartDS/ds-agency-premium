@@ -1,7 +1,14 @@
-import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
+import {
+  HTMLAttributes,
+  createContext,
+  forwardRef,
+  useContext,
+  useRef,
+} from "react";
 import classnames from "classnames";
 import "./color-swatch.scss";
 import CopyTooltip from "../copy-tooltip/CopyTooltipComponent";
+import { useCssValue } from "../useCssValue";
 
 export enum Category {
   BackgroundColor = "backgroundColor",
@@ -18,6 +25,20 @@ export interface ColorSwatchProps {
   invertedBackground?: boolean;
 }
 
+const cssPropertyByCategory = (category: Category) => {
+  switch (category) {
+    case Category.BorderColor:
+      return "borderColor";
+
+    case Category.Color:
+      return "color";
+
+    case Category.BackgroundColor:
+    default:
+      return "backgroundColor";
+  }
+};
+
 export const ColorSwatchContextDefault = forwardRef<
   HTMLButtonElement,
   ColorSwatchProps & HTMLAttributes<HTMLButtonElement>
@@ -25,7 +46,6 @@ export const ColorSwatchContextDefault = forwardRef<
   (
     {
       token,
-      title,
       reference,
       inverted,
       invertedBackground,
@@ -35,20 +55,10 @@ export const ColorSwatchContextDefault = forwardRef<
     },
     ref
   ) => {
-    let style: React.CSSProperties = {};
-
-    switch (category) {
-      case Category.BorderColor:
-        style = { borderColor: `var(${token})` };
-        break;
-      case Category.Color:
-        style = { color: `var(${token})` };
-        break;
-      case Category.BackgroundColor:
-      default:
-        style = { backgroundColor: `var(${token})` };
-        break;
-    }
+    const swatchRef = useRef<HTMLDivElement>();
+    const cssProperty = cssPropertyByCategory(category);
+    const style: React.CSSProperties = { [cssProperty]: `var(${token})` };
+    const computedValue = useCssValue(cssProperty, swatchRef);
 
     return (
       <button
@@ -63,10 +73,16 @@ export const ColorSwatchContextDefault = forwardRef<
         ref={ref}
       >
         <CopyTooltip />
-        <div className="token-color-swatch__canvas" style={style}>
+        <div
+          className="token-color-swatch__canvas"
+          style={style}
+          ref={swatchRef}
+        >
           {category === Category.Color && <span>Aa</span>}
         </div>
-        {title && <div className="token-color-swatch__title">{title}</div>}
+        {computedValue && (
+          <div className="token-color-swatch__title">{computedValue}</div>
+        )}
         {reference && (
           <div className="token-color-swatch__reference">{reference}</div>
         )}

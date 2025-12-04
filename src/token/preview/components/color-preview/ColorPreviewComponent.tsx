@@ -10,8 +10,6 @@ export interface ColorPreviewProps {
   gradientBackground?: boolean;
   contrastBorder?: boolean;
   invertedBackground?: boolean;
-  cssValue?: string;
-  cssValueInverted?: string;
   reference?: string;
   invertedReference?: string;
 }
@@ -28,8 +26,6 @@ export const ColorPreviewContextDefault = forwardRef<
       contrastBorder,
       invertedBackground,
       category,
-      cssValue,
-      cssValueInverted,
       reference,
       invertedReference,
     },
@@ -39,7 +35,6 @@ export const ColorPreviewContextDefault = forwardRef<
       <TokenPreview token={token} ref={ref}>
         <td>
           <ColorSwatch
-            title={cssValue}
             token={token}
             gradientBackground={gradientBackground}
             invertedBackground={invertedBackground}
@@ -52,7 +47,6 @@ export const ColorPreviewContextDefault = forwardRef<
         {showInverted && (
           <td>
             <ColorSwatch
-              title={cssValueInverted}
               token={token}
               gradientBackground={gradientBackground}
               contrastBorder={contrastBorder}
