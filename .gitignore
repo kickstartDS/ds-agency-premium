@@ -17,7 +17,6 @@ components.ts
 *.dereffed.json
 *-tokens.json
 src/token/tokens.css
-src/token/*-token.json
 src/token/IconSprite.js
 src/token/tokens.js
 src/token/icon-sprite.html
