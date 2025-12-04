@@ -7,38 +7,21 @@ import { Faq } from "../components/faq/FaqComponent";
 import { Text } from "../components/text/TextComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 import { Contact } from "../components/contact/ContactComponent";
+import { RadioGroup } from "@kickstartds/form/lib/radio-group";
+import { TextField } from "@kickstartds/form/lib/text-field";
+import { Headline } from "../components/headline/HeadlineComponent";
+import { Downloads } from "../components/downloads/DownloadsComponent";
+import { Pagination } from "../components/pagination/PaginationComponent";
+import { Breadcrumb } from "../components/breadcrumb/BreadcrumbComponent";
 
 const Page = () => (
   <div className="playground-preview-page">
-    {/* <Section
-      content={{
-        mode: "list",
-      }}
-      spaceAfter="none"
-    >
-      <span style={{ font: "var(--ks-font-display-xxl)" }}>
-        Display Font XXL
-      </span>
-      <span style={{ font: "var(--ks-font-copy-xxl)" }}>Copy Font XXL</span>
-      <span style={{ font: "var(--ks-font-display-xl)" }}>Display Font XL</span>
-      <span style={{ font: "var(--ks-font-copy-xl)" }}>Copy Font XL</span>
-
-      <span style={{ font: "var(--ks-font-display-l)" }}>Display Font L</span>
-      <span style={{ font: "var(--ks-font-display-m)" }}>Display Font M</span>
-      <span style={{ font: "var(--ks-font-display-s)" }}>Display Font S</span>
-      <span style={{ font: "var(--ks-font-display-xs)" }}>Display Font XS</span>
-      <span style={{ font: "var(--ks-font-display-xxs)" }}>
-        Display Font XXS
-      </span>
-    </Section> */}
-
     <Section
       headline={{
-        text: "This is a H1 Headline",
-        sub: "Subheadline H1",
+        text: "This is a H1 Headline at the top of the page",
+        sub: "This is a H1 subheadline",
         large: true,
       }}
-      spaceAfter="small"
     >
       <Text
         text={`
@@ -46,11 +29,8 @@ const Page = () => (
 
  - Code-first workflows for rapid prototyping
  - *Open collaboration* across disciplines
- - Clear documentation and helpful examples
 
  > "Great products are built by great teams working together."
- >
- Sometimes, a quick solution is all you need:
 
  \`\`\`js
  import { Button } from '@kickstartds/core';
@@ -64,14 +44,13 @@ const Page = () => (
       />
     </Section>
     <Section
-      backgroundColor="accent"
       headline={{
-        width: "default",
-        align: "left",
-        text: "Comparing both demos, you can **gain** a clear understanding of the **value** proposition offered by **kickstartDS**",
-        sub: "From Open Source solution to premium marketing experience",
+        text: "This is a longer H2 Headline that will probably wrap onto multiple lines",
+        sub: "This is a subheadline being displayed as an eyebrow",
         switchOrder: true,
       }}
+      spaceBefore="none"
+      spaceAfter="small"
     >
       <TeaserCard
         headline="Basic Agency Website Demo"
@@ -98,16 +77,38 @@ const Page = () => (
         }}
       />
     </Section>
+    <Section spaceBefore="none" spaceAfter="small">
+      <TeaserCard
+        headline="Basic Agency Website Demo"
+        text="Compare what the free version, using Open Source components only, can already offer"
+        url={"https://basic.design-system.agency/"}
+        button={{
+          label: "Browse basic Demo",
+        }}
+      />
+      <TeaserCard
+        headline="Premium Content Experience"
+        text="Which is enriched with more complex components, based on the kickstartDS Content Module."
+        url={"https://design-system.agency/"}
+        button={{
+          label: "Browse premium Demo",
+        }}
+      />
+    </Section>
     <Section
-      headline={{
-        text: "This is a H2 Headline",
-        sub: "Subheadline H2",
-      }}
-      content={{
-        gutter: "large",
-      }}
+      spaceBefore="small"
       spaceAfter="small"
+      content={{
+        gutter: "small",
+        mode: "list",
+      }}
     >
+      <Headline
+        text={"This is a H3 Headline"}
+        sub="The subheadline size scales with the main headline size"
+        level={"h3"}
+        style="h3"
+      />
       <Faq
         questions={[
           {
@@ -115,48 +116,16 @@ const Page = () => (
             answer:
               "A design system is a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications. It helps maintain consistency and efficiency in design and development. Reusable components, guided by clear standards, that can be assembled to build any number of applications. It helps maintain consistency and efficiency in design and development.",
           },
-          {
-            question: "How does a design system help in development?",
-            answer:
-              "It streamlines the development process by providing pre-designed components, reducing the need for custom designs and speeding up production time. ",
-          },
-          {
-            question: "Can a design system ensure consistency?",
-            answer:
-              "Yes, by using standardized components and styles, a design system helps maintain a consistent look and feel across different platforms and products.",
-          },
         ]}
       />
     </Section>
-
-    <Section style="framed" content={{}} spaceAfter="small">
-      <Contact
-        copy="Leads with a vision for innovative, user-centric web designs, ensuring each project merges creativity with functionality to deliver outstanding digital experiences."
-        image={{
-          alt: "Picture of Isabella Doe",
-          aspectRatio: "wide",
-          fullWidth: false,
-          src: "img/people/contact-jim.png",
-        }}
-        links={[
-          {
-            ariaLabel: "Link to Isabella Doe's social media profile",
-            icon: "xing",
-            label: "john.smith",
-            newTab: false,
-            url: "mailto:mail@example.com",
-          },
-          {
-            ariaLabel: "Link to Isabella Doe's social media profile",
-            icon: "twitter",
-            label: "@john_smith",
-            newTab: false,
-            url: "#",
-          },
-        ]}
-        subtitle="Sales Representative"
-        title="John Smith"
-      />
+    <Section
+      spaceBefore="none"
+      spaceAfter="small"
+      content={{
+        gutter: "large",
+      }}
+    >
       <div
         style={{
           display: "flex",
@@ -179,10 +148,13 @@ const Page = () => (
             },
           ]}
         />
+        <TextField label="Your name" />
         <CheckboxGroup
           label={"Lorem Ipsum"}
           options={[
             {
+              //@ts-expect-error
+              checked: true,
               label: "Lorem Ipsum",
             },
             {
@@ -194,8 +166,141 @@ const Page = () => (
             },
           ]}
         />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "var(--ks-spacing-stack-m)",
+        }}
+      >
         <TextArea label="Your message" />
-        <Button variant="primary" label="Submit" url="#" />
+        <RadioGroup
+          label={"Lorem Ipsum"}
+          options={[
+            {
+              label: "Lorem Ipsum",
+            },
+            {
+              //@ts-expect-error
+              checked: true,
+              label: "Ipsum Dolor",
+            },
+            {
+              label: "Dolor Sit Amet",
+              disabled: true,
+            },
+          ]}
+        />
+      </div>
+    </Section>
+    <Section
+      className="dsa-section--component-preview"
+      spaceAfter="small"
+      spaceBefore="none"
+      content={{
+        mode: "list",
+      }}
+    >
+      <Headline
+        text={"This is a H4 Headline without a Subheadline"}
+        level={"h4"}
+        style="h4"
+      />
+      <div
+        style={{
+          alignItems: "flex-start",
+          display: "flex",
+          gap: "var(--ks-spacing-inline-m)",
+        }}
+      >
+        <Button label="Button Large" size="large" />
+        <Button label="Button Medium" size="medium" />
+        <Button label="Button Small" size="small" />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          gap: "var(--ks-spacing-inline-m)",
+          width: "100%",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ flexGrow: "1" }}>
+          <Breadcrumb
+            pages={[
+              {
+                label: "Page 1",
+                url: "https://example.com/page1",
+              },
+              {
+                label: "Page 2",
+                url: "https://example.com/page2",
+              },
+              {
+                label: "Page 3",
+                url: "https://example.com/page3",
+              },
+              {
+                label: "Page 4",
+                url: "https://example.com/page4",
+              },
+            ]}
+          />
+        </div>
+
+        <div style={{ flexGrow: "3" }}>
+          <Downloads
+            downloads={[
+              {
+                format: "PDF",
+                name: "Product Brochure",
+                previewImage: "img/offset-image.png",
+                size: "2.5 MB",
+                url: "#",
+              },
+            ]}
+          />
+        </div>
+      </div>
+
+      <div style={{ flexGrow: "3" }}>
+        <Pagination
+          ariaLabels={{
+            goToPage: "Go to page",
+            nextPage: "Go to next page",
+            previousPage: "Go to previous page",
+            skipToFirstPage: "Skip to first page",
+            skipToLastPage: "Skip to last page",
+          }}
+          pages={[
+            {
+              active: false,
+              url: "https://example.com/page1",
+            },
+            {
+              active: true,
+              url: "https://example.com/page2",
+            },
+            {
+              active: false,
+              url: "https://example.com/page3",
+            },
+            {
+              active: false,
+              url: "https://example.com/page4",
+            },
+            {
+              active: false,
+              url: "https://example.com/page4",
+            },
+            {
+              active: false,
+              url: "https://example.com/page4",
+            },
+          ]}
+        />
       </div>
     </Section>
   </div>

@@ -1,19 +1,19 @@
 :root {
   // Colors
-  --color-primary: #3065c0;
-  --color-primary-inverted: #4e83e0;
+  --color-primary: #e21879;
+  --color-primary-inverted: #4d25ef;
 
-  --color-on-primary: var(--color-fg-inverted);
-  --color-on-primary-inverted: var(--color-fg);
+  --color-on-primary: var(--color-fg);
+  --color-on-primary-inverted: var(--color-fg-inverted);
 
-  --color-bg: #fff;
-  --color-bg-inverted: #0f203e;
+  --color-bg: #06081f;
+  --color-bg-inverted: #f1f1f3;
 
-  --color-fg: #06081f;
-  --color-fg-inverted: #fff;
+  --color-fg: #fff;
+  --color-fg-inverted: #06081f;
 
-  --color-link: #3065c0;
-  --color-link-inverted: #98b2e0;
+  --color-link: #b7a5ff;
+  --color-link-inverted: #6642f6;
 
   --color-positive: #23831b;
   --color-positive-inverted: #6edb64;

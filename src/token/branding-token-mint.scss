@@ -1,18 +1,18 @@
 :root {
   // Colors
-  --color-primary: #3065c0;
+  --color-primary: #02816e;
   --color-primary-inverted: #4e83e0;
 
   --color-on-primary: var(--color-fg-inverted);
   --color-on-primary-inverted: var(--color-fg);
 
-  --color-bg: #fff;
+  --color-bg: var(--ks-color-primary-alpha-9);
   --color-bg-inverted: #0f203e;
 
   --color-fg: #06081f;
   --color-fg-inverted: #fff;
 
-  --color-link: #3065c0;
+  --color-link: #007e6c;
   --color-link-inverted: #98b2e0;
 
   --color-positive: #23831b;
@@ -75,17 +75,17 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
   --font-size-display-grow-factor-input: 1.5;
   --font-size-display-bp-factor-input: 1.5;
 
-  --font-size-copy-base: 16px;
+  --font-size-copy-base: 18px;
   --font-size-copy-shrink-factor-input: 1.5;
   --font-size-copy-grow-factor-input: 1.5;
   --font-size-copy-bp-factor-input: 1.5;
 
-  --font-size-interface-base: 16px;
+  --font-size-interface-base: 18px;
   --font-size-interface-shrink-factor-input: 1.5;
   --font-size-interface-grow-factor-input: 1.5;
   --font-size-interface-bp-factor-input: 1.5;
 
-  --font-size-mono-base: 16px;
+  --font-size-mono-base: 18px;
   --font-size-mono-shrink-factor-input: 1.5;
   --font-size-mono-grow-factor-input: 1.5;
   --font-size-mono-bp-factor-input: 1.5;
@@ -93,17 +93,18 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 
 /// Spacing
 :root {
-  --spacing-base: 16px;
+  --spacing-base: 18px;
   --spacing-shrink-factor-input: 1.5;
   --spacing-grow-factor-input: 1.5;
   --spacing-bp-factor-input: 1.5;
 }
 
+// Border
 :root {
   --ks-border-width-default: 1px;
   --ks-border-width-emphasized: 2px;
 
-  --ks-border-radius-control: var(--ks-spacing-xs);
-  --ks-border-radius-card: var(--ks-spacing-s);
-  --ks-border-radius-surface: var(--ks-spacing-m);
+  --ks-border-radius-control: var(--ks-spacing-xxs);
+  --ks-border-radius-card: var(--ks-spacing-xs);
+  --ks-border-radius-surface: var(--ks-spacing-s);
 }

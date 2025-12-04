@@ -2,7 +2,6 @@ import { Features } from "../components/features/FeaturesComponent";
 import { Section } from "../components/section/SectionComponent";
 import { Stats } from "../components/stats/StatsComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
-import ColorScaleSwatchComponent from "./components/color-scale/ColorScaleComponent";
 import { SelectField } from "@kickstartds/form/lib/select-field";
 import { TextArea } from "@kickstartds/form/lib/text-area";
 import { CheckboxGroup } from "@kickstartds/form/lib/checkbox-group";
@@ -16,33 +15,19 @@ import { TextField } from "@kickstartds/form/lib/text-field";
 import { EventLatestTeaser } from "../components/event-latest-teaser/EventLatestTeaserComponent";
 import { EventLocation } from "../components/event-location/EventLocationComponent";
 import { EventListTeaser } from "../components/event-list-teaser/EventListTeaserComponent";
-import { BlogTeaser } from "../components/blog-teaser/BlogTeaserComponent";
 import { BlogAside } from "../components/blog-aside/BlogAsideComponent";
 
 const Page = () => (
   <div className="playground-preview-page">
-    {/*
-      <ColorScaleSwatchComponent
-        tokens={[
-          "--ks-color-primary-to-bg-1",
-          "--ks-color-primary-to-bg-2",
-          "--ks-color-primary-to-bg-3",
-          "--ks-color-primary-to-bg-4",
-          "--ks-color-primary-to-bg-5",
-          "--ks-color-primary-to-bg-6",
-          "--ks-color-primary-to-bg-7",
-          "--ks-color-primary-to-bg-8",
-          "--ks-color-primary-to-bg-9",
-        ]}
-      /> */}
-
     <Section
+      className="dsa-section--component-preview"
       content={{
         gutter: "large",
         mode: "tile",
       }}
       width="wide"
-      spaceAfter="small"
+      spaceBefore="small"
+      spaceAfter="none"
     >
       <Features
         ctas={{
@@ -102,81 +87,8 @@ const Page = () => (
         url="https://www.example.com/greentech-summit-2023"
       />
     </Section>
-
-    <Section spaceAfter="small" spaceBefore="small" width="wide">
-      <div
-        style={{
-          display: "flex",
-          gap: "var(--ks-spacing-inline-m)",
-          width: "100%",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div style={{ flexGrow: "1" }}>
-          <Breadcrumb
-            pages={[
-              {
-                label: "Page 1",
-                url: "https://example.com/page1",
-              },
-              {
-                label: "Page 2",
-                url: "https://example.com/page2",
-              },
-              {
-                label: "Page 3",
-                url: "https://example.com/page3",
-              },
-            ]}
-          />
-        </div>
-        <div style={{ flexGrow: "3" }}>
-          <Downloads
-            downloads={[
-              {
-                format: "PDF",
-                name: "Product Brochure",
-                previewImage: "img/offset-image.png",
-                size: "2.5 MB",
-                url: "#",
-              },
-            ]}
-          />
-        </div>
-        <div style={{ flexGrow: "3" }}>
-          <Pagination
-            ariaLabels={{
-              goToPage: "Go to page",
-              nextPage: "Go to next page",
-              previousPage: "Go to previous page",
-              skipToFirstPage: "Skip to first page",
-              skipToLastPage: "Skip to last page",
-            }}
-            pages={[
-              {
-                active: false,
-                url: "https://example.com/page1",
-              },
-              {
-                active: true,
-                url: "https://example.com/page2",
-              },
-              {
-                active: false,
-                url: "https://example.com/page3",
-              },
-              {
-                active: false,
-                url: "https://example.com/page4",
-              },
-            ]}
-          />
-        </div>
-      </div>
-    </Section>
-
     <Section
+      className="dsa-section--component-preview"
       width="wide"
       content={{
         gutter: "large",
@@ -230,7 +142,6 @@ const Page = () => (
           ]}
           locationName="Berlin Congress Center"
         />
-
         <EventLatestTeaser
           ariaLabel="Event teaser for "
           calendar={{
@@ -353,7 +264,83 @@ const Page = () => (
         />
       </div>
     </Section>
-    <Section width="wide"></Section>
+    <Section
+      className="dsa-section--component-preview"
+      spaceAfter="small"
+      spaceBefore="none"
+      width="wide"
+    >
+      <div
+        style={{
+          display: "flex",
+          gap: "var(--ks-spacing-inline-m)",
+          width: "100%",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ flexGrow: "1" }}>
+          <Breadcrumb
+            pages={[
+              {
+                label: "Page 1",
+                url: "https://example.com/page1",
+              },
+              {
+                label: "Page 2",
+                url: "https://example.com/page2",
+              },
+              {
+                label: "Page 3",
+                url: "https://example.com/page3",
+              },
+            ]}
+          />
+        </div>
+        <div style={{ flexGrow: "3" }}>
+          <Downloads
+            downloads={[
+              {
+                format: "PDF",
+                name: "Product Brochure",
+                previewImage: "img/offset-image.png",
+                size: "2.5 MB",
+                url: "#",
+              },
+            ]}
+          />
+        </div>
+        <div style={{ flexGrow: "3" }}>
+          <Pagination
+            ariaLabels={{
+              goToPage: "Go to page",
+              nextPage: "Go to next page",
+              previousPage: "Go to previous page",
+              skipToFirstPage: "Skip to first page",
+              skipToLastPage: "Skip to last page",
+            }}
+            pages={[
+              {
+                active: false,
+                url: "https://example.com/page1",
+              },
+              {
+                active: true,
+                url: "https://example.com/page2",
+              },
+              {
+                active: false,
+                url: "https://example.com/page3",
+              },
+              {
+                active: false,
+                url: "https://example.com/page4",
+              },
+            ]}
+          />
+        </div>
+      </div>
+    </Section>
   </div>
 );
 
