@@ -1,29 +1,29 @@
 // BASE TOKEN
 :root,
 [ks-theme] {
-  --ks-color-primary-base: var(--color-primary);
-  --ks-color-primary-inverted-base: var(--color-primary-inverted);
+  --ks-color-primary-base: var(--ks-brand-color-primary);
+  --ks-color-primary-inverted-base: var(--ks-brand-color-primary-inverted);
 
-  --ks-color-fg-base: var(--color-fg);
-  --ks-color-fg-inverted-base: var(--color-fg-inverted);
+  --ks-color-fg-base: var(--ks-brand-color-fg);
+  --ks-color-fg-inverted-base: var(--ks-brand-color-fg-inverted);
 
-  --ks-color-bg-base: var(--color-bg);
-  --ks-color-bg-inverted-base: var(--color-bg-inverted);
+  --ks-color-bg-base: var(--ks-brand-color-bg);
+  --ks-color-bg-inverted-base: var(--ks-brand-color-bg-inverted);
 
-  --ks-color-link-base: var(--color-link);
-  --ks-color-link-inverted-base: var(--color-link-inverted);
+  --ks-color-link-base: var(--ks-brand-color-link);
+  --ks-color-link-inverted-base: var(--ks-brand-color-link-inverted);
 
-  --ks-color-positive-base: var(--color-positive);
-  --ks-color-positive-inverted-base: var(--color-positive-inverted);
+  --ks-color-positive-base: var(--ks-brand-color-positive);
+  --ks-color-positive-inverted-base: var(--ks-brand-color-positive-inverted);
 
-  --ks-color-negative-base: var(--color-negative);
-  --ks-color-negative-inverted-base: var(--color-negative-inverted);
+  --ks-color-negative-base: var(--ks-brand-color-negative);
+  --ks-color-negative-inverted-base: var(--ks-brand-color-negative-inverted);
 
-  --ks-color-informative-base: var(--color-informative);
-  --ks-color-informative-inverted-base: var(--color-informative-inverted);
+  --ks-color-informative-base: var(--ks-brand-color-informative);
+  --ks-color-informative-inverted-base: var(--ks-brand-color-informative-inverted);
 
-  --ks-color-notice-base: var(--color-notice);
-  --ks-color-notice-inverted-base: var(--color-notice-inverted);
+  --ks-color-notice-base: var(--ks-brand-color-notice);
+  --ks-color-notice-inverted-base: var(--ks-brand-color-notice-inverted);
 }
 
 :root,

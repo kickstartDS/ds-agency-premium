@@ -1,31 +1,31 @@
 :root {
   // Colors
-  --color-primary: #3065c0;
-  --color-primary-inverted: #4e83e0;
+  --ks-brand-color-primary: #3065c0;
+  --ks-brand-color-primary-inverted: #4e83e0;
 
-  --color-on-primary: var(--color-fg-inverted);
-  --color-on-primary-inverted: var(--color-fg);
+  --ks-brand-color-on-primary: var(--ks-color-fg-inverted);
+  --ks-brand-color-on-primary-inverted: var(--ks-color-fg);
 
-  --color-bg: #fff;
-  --color-bg-inverted: #0f203e;
+  --ks-brand-color-bg: #fff;
+  --ks-brand-color-bg-inverted: #0f203e;
 
-  --color-fg: #06081f;
-  --color-fg-inverted: #fff;
+  --ks-brand-color-fg: #06081f;
+  --ks-brand-color-fg-inverted: #fff;
 
-  --color-link: #3065c0;
-  --color-link-inverted: #98b2e0;
+  --ks-brand-color-link: #3065c0;
+  --ks-brand-color-link-inverted: #98b2e0;
 
-  --color-positive: #23831b;
-  --color-positive-inverted: #6edb64;
+  --ks-brand-color-positive: #23831b;
+  --ks-brand-color-positive-inverted: #6edb64;
 
-  --color-negative: #ff1a57;
-  --color-negative-inverted: #d21d48;
+  --ks-brand-color-negative: #ff1a57;
+  --ks-brand-color-negative-inverted: #d21d48;
 
-  --color-informative: #64c2db;
-  --color-informative-inverted: #00718f;
+  --ks-brand-color-informative: #64c2db;
+  --ks-brand-color-informative-inverted: #00718f;
 
-  --color-notice: #64c2db;
-  --color-notice-inverted: #00718f;
+  --ks-brand-color-notice: #64c2db;
+  --ks-brand-color-notice-inverted: #00718f;
 
   --color-scale-9: 5%;
   --color-scale-8: 15%;
