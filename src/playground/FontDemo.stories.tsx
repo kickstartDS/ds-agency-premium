@@ -3,14 +3,11 @@ import { SelectField } from "@kickstartds/form/lib/select-field";
 import { TextArea } from "@kickstartds/form/lib/text-area";
 import { CheckboxGroup } from "@kickstartds/form/lib/checkbox-group";
 import { Button } from "../components/button/ButtonComponent";
-import { Faq } from "../components/faq/FaqComponent";
-import { Text } from "../components/text/TextComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 import { RadioGroup } from "@kickstartds/form/lib/radio-group";
 import { TextField } from "@kickstartds/form/lib/text-field";
 import { Headline } from "../components/headline/HeadlineComponent";
 import { Downloads } from "../components/downloads/DownloadsComponent";
-import { Pagination } from "../components/pagination/PaginationComponent";
 import { Breadcrumb } from "../components/breadcrumb/BreadcrumbComponent";
 import { SearchResult } from "../components/search-result/SearchResultComponent";
 import { Features } from "../components/features/FeaturesComponent";
@@ -28,33 +25,38 @@ const Page = () => (
     >
       <Cta
         highlightText
-        headline="This is a H1 Headline"
-        sub="Leverage our expertise in creating scalable and robust applications"
-        text="Our approach is simple: **empower teams** to build faster and more consistently. Rely on code-first workflows for rapid prototyping and *open collaboration* across disciplines. We believe that great products are built by great teams working together.
+        headline="Empowering Digital Transformation at Scale"
+        sub="Unlocking Synergies for Next-Gen Business Impact"
+        text="Our mission is clear: **drive innovation** through seamless integration and agile methodologies. Harness future-ready solutions for *cross-functional alignment* and operational excellence. We champion collaborative ecosystems that accelerate value creation.
 
-We believe in:
+We focus on:
 
-- Code-first workflows for rapid prototyping
-- *Open collaboration* across disciplines"
+- Agile-driven, scalable innovation
+- *Synergistic* digital enablement"
       />
 
       <div>
         <Cta
-          headline="This is a H2 Headline"
-          sub="Leverage our expertise in creating scalable and robust applications"
-          text="Our approach is simple: **empower teams** to build faster and more consistently. Rely on code-first workflows for rapid prototyping and *open collaboration* across disciplines. We believe that great products are built by great teams working together.
+          headline="Accelerate Outcomes with Strategic Vision"
+          sub="Elevate Experiences with Purposeful Design"
+          text="We deliver: **transformative solutions** for sustainable growth. Leverage data-driven insights for *holistic engagement* and measurable results. Our approach empowers organizations to thrive in a dynamic landscape.
 
-We believe in:
+We deliver:
 
-- Code-first workflows for rapid prototyping
-- *Open collaboration* across disciplines"
+- Data-driven, measurable results
+- *Holistic* stakeholder engagement
+
+`// Example: driveValue(innovation)`
+
+> Empowering tomorrow, today.
+"
         />
       </div>
     </Section>
     <Section width="wide" spaceBefore="none" spaceAfter="small">
       <TeaserCard
-        headline="Basic Agency Website Demo"
-        text="Compare what the free version, using Open Source components only, can already offer"
+        headline="Experience Seamless Digital Enablement"
+        text="Discover how modular, open-source solutions unlock scalable opportunities for every enterprise."
         url={"https://basic.design-system.agency/"}
         button={{
           label: "Browse basic Demo",
@@ -65,26 +67,26 @@ We believe in:
           {
             icon: "person",
             number: "150",
-            title: "Users",
+            title: "Active Innovators",
             description:
-              "Active users on the platform taking advantage of the design system.",
+              "Visionaries leveraging our platform to maximize digital potential.",
           },
         ]}
       />
       <SearchResult
         imageColSize="none"
-        initialMatch="Embracing a **sustainable** lifestyle."
+        initialMatch="Driving **transformational** change."
         matches={[
           {
             snippet:
-              "Learn how leading companies are integrating **sustainability**.",
-            title: "Embracing Sustainability",
+              "Explore how industry leaders champion **innovation** at scale.",
+            title: "Innovation Leadership Forum",
             url: "#",
           },
         ]}
         showLink
-        title="GreenTech Summit"
-        url="https://www.example.com/greentech-summit-2023"
+        title="Future Conference"
+        url="https://www.example.com/futurevision-2025"
       />
       <Features
         ctas={{
@@ -99,8 +101,8 @@ We believe in:
               url: "#",
             },
             icon: "home",
-            text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
-            title: "Scalable Architecture",
+            text: "Empower your business with adaptive frameworks, ensuring future-proof scalability and robust performance.",
+            title: "Adaptive Frameworks",
           },
         ]}
         layout="smallTiles"
@@ -118,7 +120,7 @@ We believe in:
     >
       <TeaserCard
         headline="Basic Agency Website Demo"
-        text="Compare what the free version, using Open Source components only, can already offer"
+        text="Compare what the free version, using Open Source components only, can already offer you and your team."
         url={"https://basic.design-system.agency/"}
         button={{
           label: "Browse basic Demo",
@@ -176,8 +178,8 @@ We believe in:
         }}
       >
         <Headline
-          text="A H3 Headline"
-          sub="With a subheadline"
+          text="Unlock Value with Strategic Partnerships"
+          sub="Collaborate for exponential growth"
           spaceAfter="minimum"
           level="h3"
           style="h3"
@@ -209,7 +211,7 @@ We believe in:
         }}
       >
         <Headline
-          text="A H4 headline"
+          text="Optimize Processes for Maximum Impact"
           level="h4"
           style="h4"
           spaceAfter="minimum"
@@ -259,16 +261,16 @@ We believe in:
         <Breadcrumb
           pages={[
             {
-              label: "Page 1",
-              url: "https://example.com/page1",
+              label: "Home",
+              url: "https://example.com/home",
             },
             {
-              label: "Page 2",
-              url: "https://example.com/page2",
+              label: "Solutions",
+              url: "https://example.com/solutions",
             },
             {
-              label: "Page 3",
-              url: "https://example.com/page3",
+              label: "Insights",
+              url: "https://example.com/insights",
             },
           ]}
         />
@@ -276,7 +278,7 @@ We believe in:
           downloads={[
             {
               format: "PDF",
-              name: "Product Brochure",
+              name: "Visionary Solutions Overview",
               previewImage: "img/offset-image.png",
               size: "2.5 MB",
               url: "#",
@@ -285,17 +287,17 @@ We believe in:
         />
         <Button
           style={{ width: "fit-content" }}
-          label="Button Large"
+          label="Engage Now"
           size="large"
         />
         <Button
           style={{ width: "fit-content" }}
-          label="Button Medium"
+          label="Discover More"
           size="medium"
         />
         <Button
           style={{ width: "fit-content" }}
-          label="Button Small"
+          label="Get Started"
           size="small"
         />
       </div>
