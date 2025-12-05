@@ -4,13 +4,13 @@
 [ks-inverted="false"],
 [ks-inverted="true"] {
   // Calculated BP Factor
-  --spacing-xxs-bp-factor: calc(1 * var(--spacing-bp-factor));
-  --spacing-xs-bp-factor: calc(var(--spacing-xxs-bp-factor) * var(--spacing-bp-factor));
-  --spacing-s-bp-factor: calc(var(--spacing-xs-bp-factor) * var(--spacing-bp-factor));
-  --spacing-m-bp-factor: calc(var(--spacing-s-bp-factor) * var(--spacing-bp-factor));
-  --spacing-l-bp-factor: calc(var(--spacing-m-bp-factor) * var(--spacing-bp-factor));
-  --spacing-xl-bp-factor: calc(var(--spacing-l-bp-factor) * var(--spacing-bp-factor));
-  --spacing-xxl-bp-factor: calc(var(--spacing-xl-bp-factor) * var(--spacing-bp-factor));
+  --ks-scale-spacing-xxs-bp-factor: calc(1 * var(--spacing-bp-factor));
+  --ks-scale-spacing-xs-bp-factor: calc(var(--ks-scale-spacing-xxs-bp-factor) * var(--spacing-bp-factor));
+  --ks-scale-spacing-s-bp-factor: calc(var(--ks-scale-spacing-xs-bp-factor) * var(--spacing-bp-factor));
+  --ks-scale-spacing-m-bp-factor: calc(var(--ks-scale-spacing-s-bp-factor) * var(--spacing-bp-factor));
+  --ks-scale-spacing-l-bp-factor: calc(var(--ks-scale-spacing-m-bp-factor) * var(--spacing-bp-factor));
+  --ks-scale-spacing-xl-bp-factor: calc(var(--ks-scale-spacing-l-bp-factor) * var(--spacing-bp-factor));
+  --ks-scale-spacing-xxl-bp-factor: calc(var(--ks-scale-spacing-xl-bp-factor) * var(--spacing-bp-factor));
 }
 
 // Base Token
@@ -19,13 +19,13 @@
 [ks-theme],
 [ks-inverted="false"],
 [ks-inverted="true"] {
-  --ks-spacing-xxs-base: calc(var(--ks-spacing-xs-base) * calc(var(--spacing-shrink-factor) * 1));
-  --ks-spacing-xs-base: calc(var(--ks-spacing-s-base) * calc(var(--spacing-shrink-factor) * 1));
-  --ks-spacing-s-base: calc(var(--ks-spacing-m-base) * calc(var(--spacing-shrink-factor) * 1));
-  --ks-spacing-m-base: var(--spacing-base);
-  --ks-spacing-l-base: calc(var(--ks-spacing-m-base) * var(--spacing-grow-factor));
-  --ks-spacing-xl-base: calc(var(--ks-spacing-l-base) * var(--spacing-grow-factor));
-  --ks-spacing-xxl-base: calc(var(--ks-spacing-xl-base) * var(--spacing-grow-factor));
+  --ks-spacing-xxs-base: calc(var(--ks-spacing-xs-base) * calc(var(--ks-scale-spacing-shrink-factor) * 1));
+  --ks-spacing-xs-base: calc(var(--ks-spacing-s-base) * calc(var(--ks-scale-spacing-shrink-factor) * 1));
+  --ks-spacing-s-base: calc(var(--ks-spacing-m-base) * calc(var(--ks-scale-spacing-shrink-factor) * 1));
+  --ks-spacing-m-base: var(--ks-brand-spacing-base);
+  --ks-spacing-l-base: calc(var(--ks-spacing-m-base) * var(--ks-scale-spacing-grow-factor));
+  --ks-spacing-xl-base: calc(var(--ks-spacing-l-base) * var(--ks-scale-spacing-grow-factor));
+  --ks-spacing-xxl-base: calc(var(--ks-spacing-xl-base) * var(--ks-scale-spacing-grow-factor));
 }
 
 // BP-Factor Calculation
@@ -34,40 +34,52 @@
 [ks-theme],
 [ks-inverted="false"],
 [ks-inverted="true"] {
-  --ks-spacing-xxs-bp-factor-phone: calc(1 * var(--spacing-xxs-bp-factor));
-  --ks-spacing-xxs-bp-factor-tablet: calc(var(--ks-spacing-xxs-bp-factor-phone) * var(--spacing-xxs-bp-factor));
-  --ks-spacing-xxs-bp-factor-laptop: calc(var(--ks-spacing-xxs-bp-factor-tablet) * var(--spacing-xxs-bp-factor));
-  --ks-spacing-xxs-bp-factor-desktop: calc(var(--ks-spacing-xxs-bp-factor-laptop) * var(--spacing-xxs-bp-factor));
+  --ks-spacing-xxs-bp-factor-phone: calc(1 * var(--ks-scale-spacing-xxs-bp-factor));
+  --ks-spacing-xxs-bp-factor-tablet: calc(
+    var(--ks-spacing-xxs-bp-factor-phone) * var(--ks-scale-spacing-xxs-bp-factor)
+  );
+  --ks-spacing-xxs-bp-factor-laptop: calc(
+    var(--ks-spacing-xxs-bp-factor-tablet) * var(--ks-scale-spacing-xxs-bp-factor)
+  );
+  --ks-spacing-xxs-bp-factor-desktop: calc(
+    var(--ks-spacing-xxs-bp-factor-laptop) * var(--ks-scale-spacing-xxs-bp-factor)
+  );
 
-  --ks-spacing-xs-bp-factor-phone: calc(1 * var(--spacing-xs-bp-factor));
-  --ks-spacing-xs-bp-factor-tablet: calc(var(--ks-spacing-xs-bp-factor-phone) * var(--spacing-xs-bp-factor));
-  --ks-spacing-xs-bp-factor-laptop: calc(var(--ks-spacing-xs-bp-factor-tablet) * var(--spacing-xs-bp-factor));
-  --ks-spacing-xs-bp-factor-desktop: calc(var(--ks-spacing-xs-bp-factor-laptop) * var(--spacing-xs-bp-factor));
+  --ks-spacing-xs-bp-factor-phone: calc(1 * var(--ks-scale-spacing-xs-bp-factor));
+  --ks-spacing-xs-bp-factor-tablet: calc(var(--ks-spacing-xs-bp-factor-phone) * var(--ks-scale-spacing-xs-bp-factor));
+  --ks-spacing-xs-bp-factor-laptop: calc(var(--ks-spacing-xs-bp-factor-tablet) * var(--ks-scale-spacing-xs-bp-factor));
+  --ks-spacing-xs-bp-factor-desktop: calc(var(--ks-spacing-xs-bp-factor-laptop) * var(--ks-scale-spacing-xs-bp-factor));
 
-  --ks-spacing-s-bp-factor-phone: calc(1 * var(--spacing-s-bp-factor));
-  --ks-spacing-s-bp-factor-tablet: calc(var(--ks-spacing-s-bp-factor-phone) * var(--spacing-s-bp-factor));
-  --ks-spacing-s-bp-factor-laptop: calc(var(--ks-spacing-s-bp-factor-tablet) * var(--spacing-s-bp-factor));
-  --ks-spacing-s-bp-factor-desktop: calc(var(--ks-spacing-s-bp-factor-laptop) * var(--spacing-s-bp-factor));
+  --ks-spacing-s-bp-factor-phone: calc(1 * var(--ks-scale-spacing-s-bp-factor));
+  --ks-spacing-s-bp-factor-tablet: calc(var(--ks-spacing-s-bp-factor-phone) * var(--ks-scale-spacing-s-bp-factor));
+  --ks-spacing-s-bp-factor-laptop: calc(var(--ks-spacing-s-bp-factor-tablet) * var(--ks-scale-spacing-s-bp-factor));
+  --ks-spacing-s-bp-factor-desktop: calc(var(--ks-spacing-s-bp-factor-laptop) * var(--ks-scale-spacing-s-bp-factor));
 
-  --ks-spacing-m-bp-factor-phone: calc(1 * var(--spacing-m-bp-factor));
-  --ks-spacing-m-bp-factor-tablet: calc(var(--ks-spacing-m-bp-factor-phone) * var(--spacing-m-bp-factor));
-  --ks-spacing-m-bp-factor-laptop: calc(var(--ks-spacing-m-bp-factor-tablet) * var(--spacing-m-bp-factor));
-  --ks-spacing-m-bp-factor-desktop: calc(var(--ks-spacing-m-bp-factor-laptop) * var(--spacing-m-bp-factor));
+  --ks-spacing-m-bp-factor-phone: calc(1 * var(--ks-scale-spacing-m-bp-factor));
+  --ks-spacing-m-bp-factor-tablet: calc(var(--ks-spacing-m-bp-factor-phone) * var(--ks-scale-spacing-m-bp-factor));
+  --ks-spacing-m-bp-factor-laptop: calc(var(--ks-spacing-m-bp-factor-tablet) * var(--ks-scale-spacing-m-bp-factor));
+  --ks-spacing-m-bp-factor-desktop: calc(var(--ks-spacing-m-bp-factor-laptop) * var(--ks-scale-spacing-m-bp-factor));
 
-  --ks-spacing-l-bp-factor-phone: calc(1 * var(--spacing-l-bp-factor));
-  --ks-spacing-l-bp-factor-tablet: calc(var(--ks-spacing-l-bp-factor-phone) * var(--spacing-l-bp-factor));
-  --ks-spacing-l-bp-factor-laptop: calc(var(--ks-spacing-l-bp-factor-tablet) * var(--spacing-l-bp-factor));
-  --ks-spacing-l-bp-factor-desktop: calc(var(--ks-spacing-l-bp-factor-laptop) * var(--spacing-l-bp-factor));
+  --ks-spacing-l-bp-factor-phone: calc(1 * var(--ks-scale-spacing-l-bp-factor));
+  --ks-spacing-l-bp-factor-tablet: calc(var(--ks-spacing-l-bp-factor-phone) * var(--ks-scale-spacing-l-bp-factor));
+  --ks-spacing-l-bp-factor-laptop: calc(var(--ks-spacing-l-bp-factor-tablet) * var(--ks-scale-spacing-l-bp-factor));
+  --ks-spacing-l-bp-factor-desktop: calc(var(--ks-spacing-l-bp-factor-laptop) * var(--ks-scale-spacing-l-bp-factor));
 
-  --ks-spacing-xl-bp-factor-phone: calc(1 * var(--spacing-xl-bp-factor));
-  --ks-spacing-xl-bp-factor-tablet: calc(var(--ks-spacing-xl-bp-factor-phone) * var(--spacing-xl-bp-factor));
-  --ks-spacing-xl-bp-factor-laptop: calc(var(--ks-spacing-xl-bp-factor-tablet) * var(--spacing-xl-bp-factor));
-  --ks-spacing-xl-bp-factor-desktop: calc(var(--ks-spacing-xl-bp-factor-laptop) * var(--spacing-xl-bp-factor));
+  --ks-spacing-xl-bp-factor-phone: calc(1 * var(--ks-scale-spacing-xl-bp-factor));
+  --ks-spacing-xl-bp-factor-tablet: calc(var(--ks-spacing-xl-bp-factor-phone) * var(--ks-scale-spacing-xl-bp-factor));
+  --ks-spacing-xl-bp-factor-laptop: calc(var(--ks-spacing-xl-bp-factor-tablet) * var(--ks-scale-spacing-xl-bp-factor));
+  --ks-spacing-xl-bp-factor-desktop: calc(var(--ks-spacing-xl-bp-factor-laptop) * var(--ks-scale-spacing-xl-bp-factor));
 
-  --ks-spacing-xxl-bp-factor-phone: calc(1 * var(--spacing-xxl-bp-factor));
-  --ks-spacing-xxl-bp-factor-tablet: calc(var(--ks-spacing-xxl-bp-factor-phone) * var(--spacing-xxl-bp-factor));
-  --ks-spacing-xxl-bp-factor-laptop: calc(var(--ks-spacing-xxl-bp-factor-tablet) * var(--spacing-xxl-bp-factor));
-  --ks-spacing-xxl-bp-factor-desktop: calc(var(--ks-spacing-xxl-bp-factor-laptop) * var(--spacing-xxl-bp-factor));
+  --ks-spacing-xxl-bp-factor-phone: calc(1 * var(--ks-scale-spacing-xxl-bp-factor));
+  --ks-spacing-xxl-bp-factor-tablet: calc(
+    var(--ks-spacing-xxl-bp-factor-phone) * var(--ks-scale-spacing-xxl-bp-factor)
+  );
+  --ks-spacing-xxl-bp-factor-laptop: calc(
+    var(--ks-spacing-xxl-bp-factor-tablet) * var(--ks-scale-spacing-xxl-bp-factor)
+  );
+  --ks-spacing-xxl-bp-factor-desktop: calc(
+    var(--ks-spacing-xxl-bp-factor-laptop) * var(--ks-scale-spacing-xxl-bp-factor)
+  );
 }
 
 :root,

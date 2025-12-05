@@ -94,10 +94,10 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 
 /// Spacing
 :root {
-  --spacing-base: 16px;
-  --spacing-shrink-factor-input: 1.5;
-  --spacing-grow-factor-input: 1.5;
-  --spacing-bp-factor-input: 1.5;
+  --ks-brand-spacing-base: 16px;
+  --ks-brand-spacing-shrink-factor: 1.5;
+  --ks-brand-spacing-grow-factor: 1.5;
+  --ks-brand-spacing-bp-factor: 1.5;
 }
 
 :root {

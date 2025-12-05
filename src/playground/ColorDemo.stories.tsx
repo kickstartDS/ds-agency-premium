@@ -29,6 +29,16 @@ const Page = () => (
       spaceBefore="small"
       spaceAfter="none"
     >
+      <TeaserCard
+        imageRatio="landscape"
+        headline="Empower Your Business"
+        text="Leverage our expertise in creating scalable and robust applications using modern technologies."
+        url={""}
+        button={{
+          label: "Get Started",
+          chevron: true,
+        }}
+      />
       <Features
         ctas={{
           style: "link",
@@ -49,16 +59,7 @@ const Page = () => (
         layout="smallTiles"
         style="stack"
       />
-      <TeaserCard
-        imageRatio="landscape"
-        headline="Empower Your Business"
-        text="Leverage our expertise in creating scalable and robust applications using modern technologies."
-        url={""}
-        button={{
-          label: "Get Started",
-          chevron: true,
-        }}
-      />
+
       <Stats
         stat={[
           {

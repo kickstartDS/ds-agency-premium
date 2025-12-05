@@ -15,59 +15,44 @@ import { Breadcrumb } from "../components/breadcrumb/BreadcrumbComponent";
 import { SearchResult } from "../components/search-result/SearchResultComponent";
 import { Features } from "../components/features/FeaturesComponent";
 import { Stats } from "../components/stats/StatsComponent";
+import { Cta } from "../components/cta/CtaComponent";
 
 const Page = () => (
   <div className="playground-preview-page">
     <Section width="wide">
-      <div>
-        <Headline
-          spaceAfter="large"
-          text="This is a H1 Headline probably wrapping onto multiple lines"
-          sub="This is a H1 Subheadline"
-          level="h1"
-          style="h1"
-        />
-        <Headline
-          spaceAfter="large"
-          text="This is a H2 Headline probably wrapping onto multiple lines"
-          sub="This is a H2 Subheadline"
-          level="h2"
-          style="h2"
-        />
-        <Headline
-          spaceAfter="large"
-          text="This is a H3 Headline probably wrapping onto multiple lines"
-          sub="This is a H3 Subheadline"
-          level="h3"
-          style="h3"
-        />
-        <Headline
-          spaceAfter="large"
-          text="This is a H4 Headline probably wrapping onto multiple lines"
-          sub="This is a H4 Subheadline"
-          level="h4"
-          style="h4"
-        />
-      </div>
-      <Text
-        text={`
- Our approach is simple: **empower teams** to build faster and more consistently. We believe in:
+      <Cta
+        highlightText
+        headline="This is a H1 Headline"
+        sub="Leverage our expertise in creating scalable and robust applications"
+        text="Our approach is simple: **empower teams** to build faster and more consistently. We believe in:
 
  - Code-first workflows for rapid prototyping
  - *Open collaboration* across disciplines
-
- > "Great products are built by great teams working together."
-
- \`\`\`js
- import { Button } from '@kickstartds/core';
- \`\`\`
-
- You can [read more in our docs](#) or get started right away.
-
- If something doesn't work, just ~~ignore it~~ and move on. The next iteration will be better!
-
- _Ready to experience a new level of productivity?_`}
+"
       />
+
+      <div>
+        <Headline text="This is a H2 Headline" level={"h2"} />
+        <Text
+          text={`
+Our approach is simple: **empower teams** to build faster and more consistently. We believe in:
+
+- Code-first workflows for rapid prototyping
+- *Open collaboration* across disciplines
+
+> "Great products are built by great teams working together."
+
+\`\`\`js
+import { Button } from '@kickstartds/core';
+\`\`\`
+
+You can [read more in our docs](#) or get started right away.
+
+If something doesn't work, just ~~ignore it~~ and move on. The next iteration will be better!
+
+_Ready to experience a new level of productivity?_`}
+        />
+      </div>
     </Section>
     <Section width="wide" spaceBefore="none" spaceAfter="small">
       <TeaserCard
@@ -127,7 +112,7 @@ const Page = () => (
     </Section>
     <Section
       content={{
-        tileWidth: "large",
+        tileWidth: "medium",
         gutter: "large",
       }}
       width="wide"
