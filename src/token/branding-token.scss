@@ -71,15 +71,15 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 
 /// Font Size
 :root {
-  --font-size-display-base: 20px;
-  --font-size-display-shrink-factor-input: 1.5;
-  --font-size-display-grow-factor-input: 1.5;
-  --font-size-display-bp-factor-input: 1.5;
+  --ks-brand-font-size-display-base: 20px;
+  --ks-brand-font-size-display-shrink-factor: 1.5;
+  --ks-brand-font-size-display-grow-factor: 1.5;
+  --ks-brand-font-size-display-bp-factor: 1.5;
 
   --font-size-copy-base: 16px;
-  --font-size-copy-shrink-factor-input: 1.5;
-  --font-size-copy-grow-factor-input: 1.5;
-  --font-size-copy-bp-factor-input: 1.5;
+  --ks-brand-font-size-copy-shrink-factor: 1.5;
+  --ks-brand-font-size-copy-grow-factor: 1.5;
+  --ks-brand-font-size-copy-bp-factor: 1.5;
 
   --font-size-interface-base: 16px;
   --font-size-interface-shrink-factor-input: 1.5;
