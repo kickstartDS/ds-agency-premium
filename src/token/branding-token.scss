@@ -40,23 +40,24 @@
 
 :root {
   // Font Families
-  --ks-font-family-display: Montserrat, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-  --ks-font-family-copy:
+  --ks-brand-font-family-display:
+    Montserrat, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  --ks-brand-font-family-copy:
     system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande",
     "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  --ks-font-family-interface:
+  --ks-brand-font-family-interface:
     system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande",
     "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  --ks-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --ks-brand-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
   // Font Weights
-  --ks-font-weight-light: 300;
-  --ks-font-weight-regular: 400;
-  --ks-font-weight-medium: 500;
-  --ks-font-weight-semi-bold: 600;
-  --ks-font-weight-bold: 700;
+  --ks-brand-font-weight-light: 300;
+  --ks-brand-font-weight-regular: 400;
+  --ks-brand-font-weight-medium: 500;
+  --ks-brand-font-weight-semi-bold: 600;
+  --ks-brand-font-weight-bold: 700;
 }
 
 // Normalized user input tokens (range: 1-2)
@@ -100,10 +101,10 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 }
 
 :root {
-  --ks-border-width-default: 1px;
-  --ks-border-width-emphasized: 2px;
+  --ks-brand-border-width-default: 1px;
+  --ks-brand-border-width-emphasized: 2px;
 
-  --ks-border-radius-control: var(--ks-spacing-xs);
-  --ks-border-radius-card: var(--ks-spacing-s);
-  --ks-border-radius-surface: var(--ks-spacing-m);
+  --ks-brand-border-radius-control: var(--ks-spacing-xs);
+  --ks-brand-border-radius-card: var(--ks-spacing-s);
+  --ks-brand-border-radius-surface: var(--ks-spacing-m);
 }

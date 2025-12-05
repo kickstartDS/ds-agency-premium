@@ -71,7 +71,7 @@ const Page = () => (
         ]}
       />
       <SearchResult
-        imageColSize="small"
+        imageColSize="none"
         initialMatch="Embracing a **sustainable** lifestyle."
         matches={[
           {
@@ -81,7 +81,6 @@ const Page = () => (
             url: "#",
           },
         ]}
-        previewImage="img/full-shot-different-people-working-together.png"
         showLink
         title="GreenTech Summit"
         url="https://www.example.com/greentech-summit-2023"

@@ -30,6 +30,10 @@
     --g-link--color-hover: var(--ks-color-fg-alpha-2);
     width: fit-content;
     font: var(--ks-font-interface-s);
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    box-sizing: border-box;
   }
 
   strong,

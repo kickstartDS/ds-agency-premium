@@ -35,7 +35,7 @@
     gap: var(--ks-spacing-stack-s);
     flex-basis: var(--dsa-tile--width_small);
     flex-grow: 10;
-    flex-shrink: 0;
+    flex-shrink: 1;
   }
 
   &__image {

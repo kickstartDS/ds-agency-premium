@@ -4,6 +4,18 @@
 [ks-theme] {
   // Line Height Calculations
 
+  --ks-font-family-display: var(--ks-brand-font-family-display);
+  --ks-font-family-copy: var(--ks-brand-font-family-copy);
+  --ks-font-family-interface: var(--ks-brand-font-family-interface);
+  --ks-font-family-mono: var(--ks-brand-font-family-mono);
+
+  // Font Weights
+  --ks-font-weight-light: var(--ks-brand-font-weight-light);
+  --ks-font-weight-regular: var(--ks-brand-font-weight-regular);
+  --ks-font-weight-medium: var(--ks-brand-font-weight-medium);
+  --ks-font-weight-semi-bold: var(--ks-brand-font-weight-semi-bold);
+  --ks-font-weight-bold: var(--ks-brand-font-weight-bold);
+
   /// Line Height Display
   --ks-line-height-display-base-factor: 1.15;
   --ks-line-height-display-shrink-factor: 1;

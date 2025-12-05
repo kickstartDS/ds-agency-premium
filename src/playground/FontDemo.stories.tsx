@@ -12,16 +12,43 @@ import { Headline } from "../components/headline/HeadlineComponent";
 import { Downloads } from "../components/downloads/DownloadsComponent";
 import { Pagination } from "../components/pagination/PaginationComponent";
 import { Breadcrumb } from "../components/breadcrumb/BreadcrumbComponent";
+import { SearchResult } from "../components/search-result/SearchResultComponent";
+import { Features } from "../components/features/FeaturesComponent";
+import { Stats } from "../components/stats/StatsComponent";
 
 const Page = () => (
   <div className="playground-preview-page">
-    <Section
-      headline={{
-        text: "This is a H1 Headline at the top of the page",
-        sub: "This is a H1 subheadline",
-        large: true,
-      }}
-    >
+    <Section width="wide">
+      <div>
+        <Headline
+          spaceAfter="large"
+          text="This is a H1 Headline probably wrapping onto multiple lines"
+          sub="This is a H1 Subheadline"
+          level="h1"
+          style="h1"
+        />
+        <Headline
+          spaceAfter="large"
+          text="This is a H2 Headline probably wrapping onto multiple lines"
+          sub="This is a H2 Subheadline"
+          level="h2"
+          style="h2"
+        />
+        <Headline
+          spaceAfter="large"
+          text="This is a H3 Headline probably wrapping onto multiple lines"
+          sub="This is a H3 Subheadline"
+          level="h3"
+          style="h3"
+        />
+        <Headline
+          spaceAfter="large"
+          text="This is a H4 Headline probably wrapping onto multiple lines"
+          sub="This is a H4 Subheadline"
+          level="h4"
+          style="h4"
+        />
+      </div>
       <Text
         text={`
  Our approach is simple: **empower teams** to build faster and more consistently. We believe in:
@@ -42,13 +69,69 @@ const Page = () => (
  _Ready to experience a new level of productivity?_`}
       />
     </Section>
+    <Section width="wide" spaceBefore="none" spaceAfter="small">
+      <TeaserCard
+        headline="Basic Agency Website Demo"
+        text="Compare what the free version, using Open Source components only, can already offer"
+        url={"https://basic.design-system.agency/"}
+        button={{
+          label: "Browse basic Demo",
+        }}
+      />
+      <Features
+        ctas={{
+          style: "link",
+          toggle: true,
+        }}
+        feature={[
+          {
+            cta: {
+              icon: "arrow-right",
+              label: "Learn more",
+              url: "#",
+            },
+            icon: "home",
+            text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
+            title: "Scalable Architecture",
+          },
+        ]}
+        layout="smallTiles"
+        style="stack"
+      />
+      <SearchResult
+        imageColSize="none"
+        initialMatch="Embracing a **sustainable** lifestyle."
+        matches={[
+          {
+            snippet:
+              "Learn how leading companies are integrating **sustainability**.",
+            title: "Embracing Sustainability",
+            url: "#",
+          },
+        ]}
+        showLink
+        title="GreenTech Summit"
+        url="https://www.example.com/greentech-summit-2023"
+      />
+      <Stats
+        stat={[
+          {
+            icon: "person",
+            number: "150",
+            title: "Users",
+            description:
+              "Active users on the platform taking advantage of the design system.",
+          },
+        ]}
+      />
+    </Section>
     <Section
-      headline={{
-        text: "This is a longer H2 Headline that will probably wrap onto multiple lines",
-        sub: "This is a subheadline being displayed as an eyebrow",
-        switchOrder: true,
+      content={{
+        tileWidth: "large",
+        gutter: "large",
       }}
-      spaceBefore="none"
+      width="wide"
+      spaceBefore="small"
       spaceAfter="small"
     >
       <TeaserCard
@@ -59,39 +142,51 @@ const Page = () => (
           label: "Browse basic Demo",
         }}
       />
-      <TeaserCard
-        headline="Premium Content Experience"
-        text="Which is enriched with more complex components, based on the kickstartDS Content Module."
-        url={"https://design-system.agency/"}
-        button={{
-          label: "Browse premium Demo",
+      <Features
+        ctas={{
+          style: "link",
+          toggle: true,
         }}
+        feature={[
+          {
+            cta: {
+              icon: "arrow-right",
+              label: "Learn more",
+              url: "#",
+            },
+            icon: "home",
+            text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
+            title: "Scalable Architecture",
+          },
+        ]}
+        layout="smallTiles"
+        style="stack"
       />
-      <TeaserCard
-        headline="65+ Examples build on top of 18 components"
-        text="Flick through our component collection, switching themes or toggling inverted styles"
-        url={"/components"}
-        button={{
-          label: "Browse all Components",
-        }}
+      <SearchResult
+        imageColSize="none"
+        initialMatch="Embracing a **sustainable** lifestyle."
+        matches={[
+          {
+            snippet:
+              "Learn how leading companies are integrating **sustainability**.",
+            title: "Embracing Sustainability",
+            url: "#",
+          },
+        ]}
+        showLink
+        title="GreenTech Summit"
+        url="https://www.example.com/greentech-summit-2023"
       />
-    </Section>
-    <Section spaceBefore="none" spaceAfter="small">
-      <TeaserCard
-        headline="Basic Agency Website Demo"
-        text="Compare what the free version, using Open Source components only, can already offer"
-        url={"https://basic.design-system.agency/"}
-        button={{
-          label: "Browse basic Demo",
-        }}
-      />
-      <TeaserCard
-        headline="Premium Content Experience"
-        text="Which is enriched with more complex components, based on the kickstartDS Content Module."
-        url={"https://design-system.agency/"}
-        button={{
-          label: "Browse premium Demo",
-        }}
+      <Stats
+        stat={[
+          {
+            icon: "person",
+            number: "150",
+            title: "Users",
+            description:
+              "Active users on the platform taking advantage of the design system.",
+          },
+        ]}
       />
     </Section>
     <Section
@@ -102,12 +197,6 @@ const Page = () => (
         mode: "list",
       }}
     >
-      <Headline
-        text={"This is a H3 Headline"}
-        sub="The subheadline size scales with the main headline size"
-        level={"h3"}
-        style="h3"
-      />
       <Faq
         questions={[
           {
@@ -119,6 +208,7 @@ const Page = () => (
       />
     </Section>
     <Section
+      width="wide"
       spaceBefore="none"
       spaceAfter="small"
       content={{
@@ -201,11 +291,6 @@ const Page = () => (
         mode: "list",
       }}
     >
-      <Headline
-        text={"This is a H4 Headline without a Subheadline"}
-        level={"h4"}
-        style="h4"
-      />
       <div
         style={{
           alignItems: "flex-start",
