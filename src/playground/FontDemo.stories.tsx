@@ -19,38 +19,35 @@ import { Cta } from "../components/cta/CtaComponent";
 
 const Page = () => (
   <div className="playground-preview-page">
-    <Section width="wide">
+    <Section
+      content={{
+        gutter: "large",
+      }}
+      spaceAfter="small"
+      width="wide"
+    >
       <Cta
         highlightText
         headline="This is a H1 Headline"
         sub="Leverage our expertise in creating scalable and robust applications"
-        text="Our approach is simple: **empower teams** to build faster and more consistently. We believe in:
+        text="Our approach is simple: **empower teams** to build faster and more consistently. Rely on code-first workflows for rapid prototyping and *open collaboration* across disciplines. We believe that great products are built by great teams working together.
 
- - Code-first workflows for rapid prototyping
- - *Open collaboration* across disciplines
-"
+We believe in:
+
+- Code-first workflows for rapid prototyping
+- *Open collaboration* across disciplines"
       />
 
       <div>
-        <Headline text="This is a H2 Headline" level={"h2"} />
-        <Text
-          text={`
-Our approach is simple: **empower teams** to build faster and more consistently. We believe in:
+        <Cta
+          headline="This is a H2 Headline"
+          sub="Leverage our expertise in creating scalable and robust applications"
+          text="Our approach is simple: **empower teams** to build faster and more consistently. Rely on code-first workflows for rapid prototyping and *open collaboration* across disciplines. We believe that great products are built by great teams working together.
+
+We believe in:
 
 - Code-first workflows for rapid prototyping
-- *Open collaboration* across disciplines
-
-> "Great products are built by great teams working together."
-
-\`\`\`js
-import { Button } from '@kickstartds/core';
-\`\`\`
-
-You can [read more in our docs](#) or get started right away.
-
-If something doesn't work, just ~~ignore it~~ and move on. The next iteration will be better!
-
-_Ready to experience a new level of productivity?_`}
+- *Open collaboration* across disciplines"
         />
       </div>
     </Section>
@@ -62,6 +59,32 @@ _Ready to experience a new level of productivity?_`}
         button={{
           label: "Browse basic Demo",
         }}
+      />
+      <Stats
+        stat={[
+          {
+            icon: "person",
+            number: "150",
+            title: "Users",
+            description:
+              "Active users on the platform taking advantage of the design system.",
+          },
+        ]}
+      />
+      <SearchResult
+        imageColSize="none"
+        initialMatch="Embracing a **sustainable** lifestyle."
+        matches={[
+          {
+            snippet:
+              "Learn how leading companies are integrating **sustainability**.",
+            title: "Embracing Sustainability",
+            url: "#",
+          },
+        ]}
+        showLink
+        title="GreenTech Summit"
+        url="https://www.example.com/greentech-summit-2023"
       />
       <Features
         ctas={{
@@ -82,32 +105,6 @@ _Ready to experience a new level of productivity?_`}
         ]}
         layout="smallTiles"
         style="stack"
-      />
-      <SearchResult
-        imageColSize="none"
-        initialMatch="Embracing a **sustainable** lifestyle."
-        matches={[
-          {
-            snippet:
-              "Learn how leading companies are integrating **sustainability**.",
-            title: "Embracing Sustainability",
-            url: "#",
-          },
-        ]}
-        showLink
-        title="GreenTech Summit"
-        url="https://www.example.com/greentech-summit-2023"
-      />
-      <Stats
-        stat={[
-          {
-            icon: "person",
-            number: "150",
-            title: "Users",
-            description:
-              "Active users on the platform taking advantage of the design system.",
-          },
-        ]}
       />
     </Section>
     <Section
@@ -127,6 +124,21 @@ _Ready to experience a new level of productivity?_`}
           label: "Browse basic Demo",
         }}
       />
+      <SearchResult
+        imageColSize="none"
+        initialMatch="Embracing a **sustainable** lifestyle."
+        matches={[
+          {
+            snippet:
+              "Learn how leading companies are integrating **sustainability**.",
+            title: "Embracing Sustainability",
+            url: "#",
+          },
+        ]}
+        showLink
+        title="GreenTech Summit"
+        url="https://www.example.com/greentech-summit-2023"
+      />
       <Features
         ctas={{
           style: "link",
@@ -147,54 +159,10 @@ _Ready to experience a new level of productivity?_`}
         layout="smallTiles"
         style="stack"
       />
-      <SearchResult
-        imageColSize="none"
-        initialMatch="Embracing a **sustainable** lifestyle."
-        matches={[
-          {
-            snippet:
-              "Learn how leading companies are integrating **sustainability**.",
-            title: "Embracing Sustainability",
-            url: "#",
-          },
-        ]}
-        showLink
-        title="GreenTech Summit"
-        url="https://www.example.com/greentech-summit-2023"
-      />
-      <Stats
-        stat={[
-          {
-            icon: "person",
-            number: "150",
-            title: "Users",
-            description:
-              "Active users on the platform taking advantage of the design system.",
-          },
-        ]}
-      />
-    </Section>
-    <Section
-      spaceBefore="small"
-      spaceAfter="small"
-      content={{
-        gutter: "small",
-        mode: "list",
-      }}
-    >
-      <Faq
-        questions={[
-          {
-            question: "What is a design system?",
-            answer:
-              "A design system is a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications. It helps maintain consistency and efficiency in design and development. Reusable components, guided by clear standards, that can be assembled to build any number of applications. It helps maintain consistency and efficiency in design and development.",
-          },
-        ]}
-      />
     </Section>
     <Section
       width="wide"
-      spaceBefore="none"
+      spaceBefore="small"
       spaceAfter="small"
       content={{
         gutter: "large",
@@ -207,22 +175,14 @@ _Ready to experience a new level of productivity?_`}
           gap: "var(--ks-spacing-stack-m)",
         }}
       >
-        <SelectField
-          icon="chevron-down"
-          label="Est dolore a debitis"
-          options={[
-            {
-              label: "Option 1",
-            },
-            {
-              label: "Option 2",
-            },
-            {
-              label: "Option 3",
-            },
-          ]}
+        <Headline
+          text="A H3 Headline"
+          sub="With a subheadline"
+          spaceAfter="minimum"
+          level="h3"
+          style="h3"
         />
-        <TextField label="Your name" />
+        <TextArea label="Your message" />
         <CheckboxGroup
           label={"Lorem Ipsum"}
           options={[
@@ -248,7 +208,29 @@ _Ready to experience a new level of productivity?_`}
           gap: "var(--ks-spacing-stack-m)",
         }}
       >
-        <TextArea label="Your message" />
+        <Headline
+          text="A H4 headline"
+          level="h4"
+          style="h4"
+          spaceAfter="minimum"
+        />
+        <SelectField
+          icon="chevron-down"
+          label="Est dolore a debitis"
+          options={[
+            {
+              label: "Option 1",
+            },
+            {
+              label: "Option 2",
+            },
+            {
+              label: "Option 3",
+            },
+          ]}
+        />
+        <TextField label="Your name" />
+
         <RadioGroup
           label={"Lorem Ipsum"}
           options={[
@@ -267,108 +249,54 @@ _Ready to experience a new level of productivity?_`}
           ]}
         />
       </div>
-    </Section>
-    <Section
-      className="dsa-section--component-preview"
-      spaceAfter="small"
-      spaceBefore="none"
-      content={{
-        mode: "list",
-      }}
-    >
-      <div
-        style={{
-          alignItems: "flex-start",
-          display: "flex",
-          gap: "var(--ks-spacing-inline-m)",
-        }}
-      >
-        <Button label="Button Large" size="large" />
-        <Button label="Button Medium" size="medium" />
-        <Button label="Button Small" size="small" />
-      </div>
       <div
         style={{
           display: "flex",
-          gap: "var(--ks-spacing-inline-m)",
-          width: "100%",
-          justifyContent: "space-between",
-          alignItems: "center",
+          flexDirection: "column",
+          gap: "var(--ks-spacing-stack-m)",
         }}
       >
-        <div style={{ flexGrow: "1" }}>
-          <Breadcrumb
-            pages={[
-              {
-                label: "Page 1",
-                url: "https://example.com/page1",
-              },
-              {
-                label: "Page 2",
-                url: "https://example.com/page2",
-              },
-              {
-                label: "Page 3",
-                url: "https://example.com/page3",
-              },
-              {
-                label: "Page 4",
-                url: "https://example.com/page4",
-              },
-            ]}
-          />
-        </div>
-
-        <div style={{ flexGrow: "3" }}>
-          <Downloads
-            downloads={[
-              {
-                format: "PDF",
-                name: "Product Brochure",
-                previewImage: "img/offset-image.png",
-                size: "2.5 MB",
-                url: "#",
-              },
-            ]}
-          />
-        </div>
-      </div>
-
-      <div style={{ flexGrow: "3" }}>
-        <Pagination
-          ariaLabels={{
-            goToPage: "Go to page",
-            nextPage: "Go to next page",
-            previousPage: "Go to previous page",
-            skipToFirstPage: "Skip to first page",
-            skipToLastPage: "Skip to last page",
-          }}
+        <Breadcrumb
           pages={[
             {
-              active: false,
+              label: "Page 1",
               url: "https://example.com/page1",
             },
             {
-              active: true,
+              label: "Page 2",
               url: "https://example.com/page2",
             },
             {
-              active: false,
+              label: "Page 3",
               url: "https://example.com/page3",
             },
+          ]}
+        />
+        <Downloads
+          downloads={[
             {
-              active: false,
-              url: "https://example.com/page4",
-            },
-            {
-              active: false,
-              url: "https://example.com/page4",
-            },
-            {
-              active: false,
-              url: "https://example.com/page4",
+              format: "PDF",
+              name: "Product Brochure",
+              previewImage: "img/offset-image.png",
+              size: "2.5 MB",
+              url: "#",
             },
           ]}
+        />
+        <Button
+          style={{ width: "fit-content" }}
+          label="Button Large"
+          size="large"
+        />
+        <Button
+          style={{ width: "fit-content" }}
+          label="Button Medium"
+          size="medium"
+        />
+        <Button
+          style={{ width: "fit-content" }}
+          label="Button Small"
+          size="small"
         />
       </div>
     </Section>
