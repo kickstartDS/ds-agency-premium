@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { SearchFilter } from "./SearchFilterComponent";
-import schema from "./search-filter.schema.dereffed.json" with { type: "json" };
+import schema from "./search-filter.schema.dereffed.json";
 
 const meta: Meta<typeof SearchFilter> = {
   title: "Corporate / Search Filter",

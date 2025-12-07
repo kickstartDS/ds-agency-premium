@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Button } from "./ButtonComponent";
-import schema from "./button.schema.dereffed.json" with { type: "json" };
-import customProperties from "./button-tokens.json" with { type: "json" };
+import schema from "./button.schema.dereffed.json";
+import customProperties from "./button-tokens.json";
 
 const meta: Meta = {
   title: "Components/Button",

@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { getArgsShared, pack } from "@kickstartds/core/lib/storybook";
 
 import { BlogPost as BlogPostComponent } from "./BlogPostComponent";
-import schema from "../blog-post.schema.dereffed.json" with { type: "json" };
+import schema from "../blog-post.schema.dereffed.json";
 
 const meta: Meta<typeof BlogPostComponent> = {
   component: BlogPostComponent,

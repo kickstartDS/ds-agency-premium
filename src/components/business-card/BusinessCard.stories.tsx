@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { BusinessCard } from "./BusinessCardComponent";
-import schema from "./business-card.schema.dereffed.json" with { type: "json" };
+import schema from "./business-card.schema.dereffed.json";
 
 const meta: Meta<typeof BusinessCard> = {
   title: "Corporate / Business Card",

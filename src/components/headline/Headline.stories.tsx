@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Headline } from "./HeadlineComponent";
-import schema from "./headline.schema.dereffed.json" with { type: "json" };
-import customProperties from "./headline-tokens.json" with { type: "json" };
+import schema from "./headline.schema.dereffed.json";
+import customProperties from "./headline-tokens.json";
 
 const meta: Meta = {
   title: "Components/Headline",

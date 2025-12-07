@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import { name, version } from "../../package.json" with { type: "json" };
+import { name, version } from "../../package.json";
 
 const filename = `${name}-${version.replace(/\./g, "-")}.tar.gz`;
 

@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { ContentNav } from "./ContentNavComponent";
-import schema from "./content-nav.schema.dereffed.json" with { type: "json" };
+import schema from "./content-nav.schema.dereffed.json";
 
 const meta: Meta<typeof ContentNav> = {
   title: "Corporate / Content Nav",

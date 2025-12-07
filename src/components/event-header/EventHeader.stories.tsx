@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { EventHeader } from "./EventHeaderComponent";
-import schema from "./event-header.schema.dereffed.json" with { type: "json" };
+import schema from "./event-header.schema.dereffed.json";
 
 const meta: Meta<typeof EventHeader> = {
   title: "Event/ Event Header",

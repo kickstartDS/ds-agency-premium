@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Html } from "./HtmlComponent";
-import schema from "./html.schema.dereffed.json" with { type: "json" };
+import schema from "./html.schema.dereffed.json";
 
 const meta: Meta = {
   title: "Components/HTML",

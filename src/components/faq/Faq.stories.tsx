@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Faq } from "./FaqComponent";
-import schema from "./faq.schema.dereffed.json" with { type: "json" };
-import customProperties from "./faq-tokens.json" with { type: "json" };
+import schema from "./faq.schema.dereffed.json";
+import customProperties from "./faq-tokens.json";
 
 const meta: Meta = {
   title: "Components/Faq",

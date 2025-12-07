@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { EventDetail as EventDetailComponent } from "./EventDetailComponent";
-import schema from "../event-detail.schema.dereffed.json" with { type: "json" };
+import schema from "../event-detail.schema.dereffed.json";
 
 const meta: Meta<typeof EventDetailComponent> = {
   component: EventDetailComponent,

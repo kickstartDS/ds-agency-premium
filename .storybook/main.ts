@@ -1,8 +1,9 @@
 import { StorybookConfig } from "@storybook/react-vite";
+import { mergeConfig } from "vite";
 
 const config: StorybookConfig = {
   stories: [
-    // "../src/**/*.mdx",
+    "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)",
     "../docs/**/*.mdx",
   ],
@@ -30,6 +31,30 @@ const config: StorybookConfig = {
 
   core: {
     disableTelemetry: true,
+  },
+
+  viteFinal: async (config) => {
+    return mergeConfig(config, {
+      optimizeDeps: {
+        include: ["@storybook/addon-docs"],
+      },
+      plugins: [
+        {
+          name: "fix-mdx-react-shim",
+          enforce: "pre",
+          resolveId(source) {
+            if (
+              source.startsWith("file://") &&
+              source.includes("mdx-react-shim.js")
+            ) {
+              // Convert file:///... path to normal filesystem path for Vite
+              return new URL(source).pathname;
+            }
+            return null;
+          },
+        },
+      ],
+    });
   },
 };
 export default config;

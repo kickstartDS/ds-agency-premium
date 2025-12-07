@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { EventFilter } from "./EventFilterComponent";
-import schema from "./event-filter.schema.dereffed.json" with { type: "json" };
+import schema from "./event-filter.schema.dereffed.json";
 
 const meta: Meta<typeof EventFilter> = {
   title: "Event/ Event Filter",

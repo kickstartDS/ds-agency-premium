@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Gallery } from "./GalleryComponent";
-import schema from "./gallery.schema.dereffed.json" with { type: "json" };
-import customProperties from "./gallery-tokens.json" with { type: "json" };
+import schema from "./gallery.schema.dereffed.json";
+import customProperties from "./gallery-tokens.json";
 
 const meta: Meta<typeof Gallery> = {
   title: "Components/Gallery",

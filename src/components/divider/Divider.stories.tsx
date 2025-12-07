@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { DividerContextDefault } from "./DividerComponent";
-import schema from "./divider.schema.dereffed.json" with { type: "json" };
-import customProperties from "./divider-tokens.json" with { type: "json" };
+import schema from "./divider.schema.dereffed.json";
+import customProperties from "./divider-tokens.json";
 
 const meta: Meta = {
   title: "Layout/Divider",

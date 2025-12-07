@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { TextField } from "@kickstartds/form/lib/text-field/";
-import schema from "@kickstartds/form/lib/text-field/text-field.schema.dereffed.json" with { type: "json" };
-import customProperties from "../form-tokens.json" with { type: "json" };
+import schema from "@kickstartds/form/lib/text-field/text-field.schema.dereffed.json";
+import customProperties from "../form-tokens.json";
 
 const meta: Meta = {
   title: "Form/ Text Field",

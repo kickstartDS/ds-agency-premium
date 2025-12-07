@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { getArgsShared } from "@kickstartds/core/lib/storybook";
 import { SearchForm } from "./SearchFormComponent";
-import schema from "./search-form.schema.dereffed.json" with { type: "json" };
+import schema from "./search-form.schema.dereffed.json";
 import "./SearchFormPagefind.client";
 
 const meta: Meta<typeof SearchForm> = {

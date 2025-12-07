@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Stats } from "./StatsComponent";
-import schema from "./stats.schema.json" with { type: "json" };
-import customProperties from "./stats-tokens.json" with { type: "json" };
+import schema from "./stats.schema.json";
+import customProperties from "./stats-tokens.json";
 
 const meta: Meta = {
   title: "Components/Stats",

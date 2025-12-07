@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Text } from "./TextComponent";
-import schema from "./text.schema.dereffed.json" with { type: "json" };
-import customProperties from "./text-tokens.json" with { type: "json" };
+import schema from "./text.schema.dereffed.json";
+import customProperties from "./text-tokens.json";
 
 const meta: Meta<typeof Text> = {
   title: "Components/Text",

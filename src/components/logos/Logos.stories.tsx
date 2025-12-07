@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Logos } from "./LogosComponent";
-import schema from "./logos.schema.dereffed.json" with { type: "json" };
-import customProperties from "./logos-tokens.json" with { type: "json" };
+import schema from "./logos.schema.dereffed.json";
+import customProperties from "./logos-tokens.json";
 
 const meta: Meta<typeof Logos> = {
   title: "Components/Logos",

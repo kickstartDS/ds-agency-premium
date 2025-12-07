@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { EventLatestTeaser } from "./EventLatestTeaserComponent";
-import schema from "./event-latest-teaser.schema.dereffed.json" with { type: "json" };
-import customProperties from "./event-latest-teaser-tokens.json" with { type: "json" };
+import schema from "./event-latest-teaser.schema.dereffed.json";
+import customProperties from "./event-latest-teaser-tokens.json";
 
 const meta: Meta<typeof EventLatestTeaser> = {
   title: "Event/ Event Latest Teaser",

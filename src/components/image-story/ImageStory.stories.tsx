@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { ImageStory } from "./ImageStoryComponent";
-import schema from "./image-story.schema.dereffed.json" with { type: "json" };
-import customProperties from "./image-story-tokens.json" with { type: "json" };
+import schema from "./image-story.schema.dereffed.json";
+import customProperties from "./image-story-tokens.json";
 
 const meta: Meta = {
   title: "Components/Image Story",

@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, unpack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Footer as FooterComponent } from "./FooterComponent";
-import schema from "./footer.schema.dereffed.json" with { type: "json" };
-import customProperties from "./footer-tokens.json" with { type: "json" };
+import schema from "./footer.schema.dereffed.json";
+import customProperties from "./footer-tokens.json";
 
 const { args, argTypes } = getArgsShared(schema as JSONSchema7);
 export const footerProps = {

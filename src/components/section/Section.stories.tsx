@@ -5,8 +5,8 @@ import sectionStories from "@kickstartds/base/lib/section/section.stories";
 
 import { TeaserCard } from "../teaser-card/TeaserCardComponent";
 import { Section } from "./SectionComponent";
-import schema from "./section.schema.dereffed.json" with { type: "json" };
-import customProperties from "./section-tokens.json" with { type: "json" };
+import schema from "./section.schema.dereffed.json";
+import customProperties from "./section-tokens.json";
 
 const meta: Meta = {
   ...sectionStories,

@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Features } from "./FeaturesComponent";
-import schema from "./features.schema.dereffed.json" with { type: "json" };
-import customProperties from "./features-tokens.json" with { type: "json" };
+import schema from "./features.schema.dereffed.json";
+import customProperties from "./features-tokens.json";
 
 const meta: Meta<typeof Features> = {
   title: "Components/Features",

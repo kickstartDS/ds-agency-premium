@@ -3,8 +3,8 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { SplitEven } from "./SplitEvenComponent";
-import schema from "./split-even.schema.dereffed.json" with { type: "json" };
-import customProperties from "./split-even-tokens.json" with { type: "json" };
+import schema from "./split-even.schema.dereffed.json";
+import customProperties from "./split-even-tokens.json";
 import { Logos } from "../logos/LogosComponent";
 import { Headline } from "../headline/HeadlineComponent";
 import { Faq } from "../faq/FaqComponent";
