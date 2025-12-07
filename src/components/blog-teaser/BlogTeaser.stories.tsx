@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { BlogTeaser } from "./BlogTeaserComponent";
-import schema from "./blog-teaser.schema.dereffed.json";
-import customProperties from "./blog-teaser-tokens.json";
+import schema from "./blog-teaser.schema.dereffed.json" with { type: "json" };
+import customProperties from "./blog-teaser-tokens.json" with { type: "json" };
 
 const meta: Meta<typeof BlogTeaser> = {
   title: "Blog/ Blog Teaser",

@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { BlogHead } from "./BlogHeadComponent";
-import schema from "./blog-head.schema.dereffed.json";
-import customProperties from "./blog-head-tokens.json";
+import schema from "./blog-head.schema.dereffed.json" with { type: "json" };
+import customProperties from "./blog-head-tokens.json" with { type: "json" };
 
 const meta: Meta<typeof BlogHead> = {
   title: "Blog/ Blog Head",

@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, unpack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Header as HeaderComponent } from "./HeaderComponent";
-import schema from "./header.schema.dereffed.json";
-import customProperties from "./header-tokens.json";
+import schema from "./header.schema.dereffed.json" with { type: "json" };
+import customProperties from "./header-tokens.json" with { type: "json" };
 import * as themes from "../../themes";
 
 const { args, argTypes } = getArgsShared(schema as JSONSchema7);

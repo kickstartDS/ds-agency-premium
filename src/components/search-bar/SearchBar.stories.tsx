@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { SearchBar } from "./SearchBarComponent";
-import schema from "./search-bar.schema.dereffed.json";
+import schema from "./search-bar.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta<typeof SearchBar> = {
   title: "Corporate / Search Bar",

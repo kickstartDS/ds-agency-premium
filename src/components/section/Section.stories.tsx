@@ -1,12 +1,12 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 import sectionStories from "@kickstartds/base/lib/section/section.stories";
 
 import { TeaserCard } from "../teaser-card/TeaserCardComponent";
 import { Section } from "./SectionComponent";
-import schema from "./section.schema.dereffed.json";
-import customProperties from "./section-tokens.json";
+import schema from "./section.schema.dereffed.json" with { type: "json" };
+import customProperties from "./section-tokens.json" with { type: "json" };
 
 const meta: Meta = {
   ...sectionStories,

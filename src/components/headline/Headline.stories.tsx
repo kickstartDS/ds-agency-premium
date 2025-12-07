@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Headline } from "./HeadlineComponent";
-import schema from "./headline.schema.dereffed.json";
-import customProperties from "./headline-tokens.json";
+import schema from "./headline.schema.dereffed.json" with { type: "json" };
+import customProperties from "./headline-tokens.json" with { type: "json" };
 
 const meta: Meta = {
   title: "Components/Headline",

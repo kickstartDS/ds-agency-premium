@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Pagination } from "./PaginationComponent";
-import customProperties from "./pagination-tokens.json";
-import schema from "./pagination.schema.dereffed.json";
+import customProperties from "./pagination-tokens.json" with { type: "json" };
+import schema from "./pagination.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta = {
   title: "Corporate/Pagination",

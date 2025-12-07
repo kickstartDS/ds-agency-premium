@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { getArgsShared, pack } from "@kickstartds/core/lib/storybook";
 
 import { BlogPost as BlogPostComponent } from "./BlogPostComponent";
-import schema from "../blog-post.schema.dereffed.json";
+import schema from "../blog-post.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta<typeof BlogPostComponent> = {
   component: BlogPostComponent,

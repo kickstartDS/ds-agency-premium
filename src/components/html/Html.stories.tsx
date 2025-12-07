@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Html } from "./HtmlComponent";
-import schema from "./html.schema.dereffed.json";
+import schema from "./html.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta = {
   title: "Components/HTML",

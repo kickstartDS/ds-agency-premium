@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { EventDetail as EventDetailComponent } from "./EventDetailComponent";
-import schema from "../event-detail.schema.dereffed.json";
+import schema from "../event-detail.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta<typeof EventDetailComponent> = {
   component: EventDetailComponent,

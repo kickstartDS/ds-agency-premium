@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { ImageText } from "./ImageTextComponent";
-import schema from "./image-text.schema.dereffed.json";
-import customProperties from "./image-text-tokens.json";
+import schema from "./image-text.schema.dereffed.json" with { type: "json" };
+import customProperties from "./image-text-tokens.json" with { type: "json" };
 
 const meta: Meta = {
   title: "Components/Image Text",

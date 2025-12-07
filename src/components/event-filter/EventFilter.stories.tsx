@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { EventFilter } from "./EventFilterComponent";
-import schema from "./event-filter.schema.dereffed.json";
+import schema from "./event-filter.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta<typeof EventFilter> = {
   title: "Event/ Event Filter",

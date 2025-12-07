@@ -1,11 +1,11 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { useEffect } from "react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { CookieConsent, CookieConsentProps } from "./CookieConsentComponent";
-import customProperties from "./cookie-consent-tokens.json";
-import schema from "./cookie-consent.schema.dereffed.json";
+import customProperties from "./cookie-consent-tokens.json" with { type: "json" };
+import schema from "./cookie-consent.schema.dereffed.json" with { type: "json" };
 
 import { define } from "@kickstartds/core/lib/component";
 import { configureConsentManager, createConsentManagerStore } from "c15t";

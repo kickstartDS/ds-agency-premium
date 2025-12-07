@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Contact } from "./ContactComponent";
-import schema from "./contact.schema.dereffed.json";
-import customProperties from "./contact-tokens.json";
+import schema from "./contact.schema.dereffed.json" with { type: "json" };
+import customProperties from "./contact-tokens.json" with { type: "json" };
 
 const meta: Meta = {
   title: "Components/Contact",

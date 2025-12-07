@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Cta } from "./CtaComponent";
-import customProperties from "./cta-tokens.json";
-import schema from "./cta.schema.dereffed.json";
+import customProperties from "./cta-tokens.json" with { type: "json" };
+import schema from "./cta.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta = {
   title: "Components/Cta",

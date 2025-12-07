@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Search as SearchComponent } from "./SearchComponent";
-import schema from "../event-list.schema.dereffed.json";
+import schema from "../event-list.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta<typeof SearchComponent> = {
   component: SearchComponent,

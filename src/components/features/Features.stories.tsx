@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Features } from "./FeaturesComponent";
-import schema from "./features.schema.dereffed.json";
-import customProperties from "./features-tokens.json";
+import schema from "./features.schema.dereffed.json" with { type: "json" };
+import customProperties from "./features-tokens.json" with { type: "json" };
 
 const meta: Meta<typeof Features> = {
   title: "Components/Features",

@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { EventLogin } from "./EventLoginComponent";
-import schema from "./event-login.schema.dereffed.json";
+import schema from "./event-login.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta<typeof EventLogin> = {
   title: "Event/ Event Login",

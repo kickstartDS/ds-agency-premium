@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Mosaic } from "./MosaicComponent";
-import schema from "./mosaic.schema.dereffed.json";
-import customProperties from "./mosaic-tokens.json";
+import schema from "./mosaic.schema.dereffed.json" with { type: "json" };
+import customProperties from "./mosaic-tokens.json" with { type: "json" };
 
 const meta: Meta = {
   title: "Components/Mosaic",

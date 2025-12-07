@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Testimonials } from "./TestimonialsComponent";
-import schema from "./testimonials.schema.dereffed.json";
-import customProperties from "./testimonials-tokens.json";
+import schema from "./testimonials.schema.dereffed.json" with { type: "json" };
+import customProperties from "./testimonials-tokens.json" with { type: "json" };
 
 const meta: Meta<typeof Testimonials> = {
   title: "Components/Testimonials",

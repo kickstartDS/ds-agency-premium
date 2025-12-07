@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Downloads } from "./DownloadsComponent";
-import customProperties from "./downloads-tokens.json";
-import schema from "./downloads.schema.dereffed.json";
+import customProperties from "./downloads-tokens.json" with { type: "json" };
+import schema from "./downloads.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta = {
   title: "Corporate/Downloads",

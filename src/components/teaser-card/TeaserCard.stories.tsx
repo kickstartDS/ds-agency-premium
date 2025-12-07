@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { TeaserCard } from "./TeaserCardComponent";
-import schema from "./teaser-card.schema.dereffed.json";
-import customProperties from "./teaser-card-tokens.json";
+import schema from "./teaser-card.schema.dereffed.json" with { type: "json" };
+import customProperties from "./teaser-card-tokens.json" with { type: "json" };
 
 const meta: Meta<typeof TeaserCard> = {
   title: "Components/Teaser Card",

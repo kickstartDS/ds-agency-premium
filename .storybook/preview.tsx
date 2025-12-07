@@ -1,5 +1,8 @@
-import { actions } from "@storybook/addon-actions";
-import { DocsContainer, DocsContainerProps } from "@storybook/addon-docs";
+import { actions } from "storybook/actions";
+import {
+  DocsContainer,
+  DocsContainerProps,
+} from "@storybook/addon-docs/blocks";
 import "lazysizes/plugins/attrchange/ls.attrchange";
 import { Preview } from "@storybook/react";
 import { unpackDecorator } from "@kickstartds/core/lib/storybook";
@@ -56,9 +59,6 @@ const preview: Preview = {
           </PageWrapper>
         </LinkProvider>
       ),
-    },
-    playroom: {
-      url: process.env.NODE_ENV === "production" ? "/playroom/" : undefined,
     },
     html: {
       decorators: [unpackDecorator, providerDecorator],

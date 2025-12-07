@@ -1,11 +1,11 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Slider } from "./SliderComponent";
 import { TeaserCard } from "../teaser-card/TeaserCardComponent";
-import schema from "./slider.schema.dereffed.json";
-import customProperties from "./slider-tokens.json";
+import schema from "./slider.schema.dereffed.json" with { type: "json" };
+import customProperties from "./slider-tokens.json" with { type: "json" };
 
 const meta: Meta = {
   title: "Layout/Slider",

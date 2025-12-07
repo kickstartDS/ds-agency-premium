@@ -1,11 +1,11 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { SplitWeighted } from "./SplitWeightedComponent";
 import { Text } from "../text/TextComponent";
-import schema from "./split-weighted.schema.dereffed.json";
-import customProperties from "./split-weighted-tokens.json";
+import schema from "./split-weighted.schema.dereffed.json" with { type: "json" };
+import customProperties from "./split-weighted-tokens.json" with { type: "json" };
 import { Headline } from "../headline/HeadlineComponent";
 import { Contact } from "../contact/ContactComponent";
 import { TeaserCard } from "../teaser-card/TeaserCardComponent";

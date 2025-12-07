@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { ContentNav } from "./ContentNavComponent";
-import schema from "./content-nav.schema.dereffed.json";
+import schema from "./content-nav.schema.dereffed.json" with { type: "json" };
 
 const meta: Meta<typeof ContentNav> = {
   title: "Corporate / Content Nav",
