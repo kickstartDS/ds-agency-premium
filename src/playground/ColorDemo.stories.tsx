@@ -16,9 +16,11 @@ import { EventLatestTeaser } from "../components/event-latest-teaser/EventLatest
 import { EventLocation } from "../components/event-location/EventLocationComponent";
 import { EventListTeaser } from "../components/event-list-teaser/EventListTeaserComponent";
 import { BlogAside } from "../components/blog-aside/BlogAsideComponent";
+import { BrandingSwitch } from "./BrandingSwitch";
 
 const Page = () => (
   <div className="playground-preview-page">
+    <BrandingSwitch />
     <Section
       className="dsa-section--component-preview"
       content={{

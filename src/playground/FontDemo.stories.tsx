@@ -13,9 +13,11 @@ import { SearchResult } from "../components/search-result/SearchResultComponent"
 import { Features } from "../components/features/FeaturesComponent";
 import { Stats } from "../components/stats/StatsComponent";
 import { Cta } from "../components/cta/CtaComponent";
+import { BrandingSwitch } from "./BrandingSwitch";
 
 const Page = () => (
   <div className="playground-preview-page">
+    <BrandingSwitch />
     <Section
       content={{
         gutter: "large",
@@ -27,22 +29,14 @@ const Page = () => (
         highlightText
         headline="Empowering Digital Transformation at Scale"
         sub="Unlocking Synergies for Next-Gen Business Impact"
-        text="Our mission is clear: **drive innovation** through seamless integration and agile methodologies. Harness future-ready solutions for *cross-functional alignment* and operational excellence. We champion collaborative ecosystems that accelerate value creation.
-
-We focus on:
-
-- Agile-driven, scalable innovation
-- *Synergistic* digital enablement"
+        text="Our mission is clear: **drive innovation** through seamless integration and agile methodologies. Harness future-ready solutions for *cross-functional alignment* and operational excellence. We champion collaborative ecosystems that accelerate value creation."
       />
 
       <div>
         <Cta
           headline="Accelerate Outcomes with Strategic Vision"
           sub="Elevate Experiences with Purposeful Design"
-          text="We deliver: **transformative solutions** for sustainable growth. Leverage data-driven insights for *holistic engagement* and measurable results. Our approach empowers organizations to thrive in a dynamic landscape.
-
-We deliver:
-
+          text="We deliver:
 - Data-driven, measurable results
 - *Holistic* stakeholder engagement
 
