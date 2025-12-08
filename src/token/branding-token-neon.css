@@ -1,5 +1,5 @@
 :root {
-  // Colors
+  /* Colors */
   --ks-brand-color-primary: #e21879;
   --ks-brand-color-primary-inverted: #4d25ef;
 
@@ -39,20 +39,23 @@
 }
 
 :root {
-  // Font Families
-  --ks-brand-font-family-display:
-    Montserrat, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-  --ks-brand-font-family-copy:
-    system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande",
-    "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  --ks-brand-font-family-interface:
-    system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande",
-    "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  --ks-brand-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  /* Font Families */
+  --ks-brand-font-family-display: Montserrat, Baskerville,
+    "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  --ks-brand-font-family-copy: system-ui, -apple-system, BlinkMacSystemFont,
+    "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue",
+    "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell",
+    "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic",
+    "Liberation Sans", sans-serif;
+  --ks-brand-font-family-interface: system-ui, -apple-system, BlinkMacSystemFont,
+    "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue",
+    "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell",
+    "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic",
+    "Liberation Sans", sans-serif;
+  --ks-brand-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, "Liberation Mono", monospace;
 
-  // Font Weights
+  /* Font Weights */
   --ks-brand-font-weight-light: 300;
   --ks-brand-font-weight-regular: 400;
   --ks-brand-font-weight-medium: 500;
@@ -60,7 +63,7 @@
   --ks-brand-font-weight-bold: 700;
 }
 
-// Normalized user input tokens (range: 1-2)
+/* Normalized user input tokens (range: 1-2) */
 
 /*
 Shrink Factor:      Determine scaling from m to xxs
@@ -69,35 +72,35 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
                     more at bigger screen sizes than small spacings
 */
 
-/// Font Size
+/* Font Size */
 :root {
   --ks-brand-font-size-display-base: 20px;
   --ks-brand-font-size-display-shrink-factor-input: 1.5;
   --ks-brand-font-size-display-grow-factor-input: 1.5;
   --ks-brand-font-size-display-bp-factor-input: 1.5;
 
-  --ks-brand-font-size-copy-base: 16px;
+  --ks-brand-font-size-copy-base: 18px;
   --ks-brand-font-size-copy-shrink-factor-input: 1.5;
   --ks-brand-font-size-copy-grow-factor-input: 1.5;
   --ks-brand-font-size-copy-bp-factor-input: 1.5;
 
-  --ks-brand-font-size-interface-base: 16px;
+  --ks-brand-font-size-interface-base: 18px;
   --ks-brand-font-size-interface-shrink-factor-input: 1.5;
   --ks-brand-font-size-interface-grow-factor-input: 1.5;
   --ks-brand-font-size-interface-bp-factor-input: 1.5;
 
-  --ks-brand-font-size-mono-base: 16px;
+  --ks-brand-font-size-mono-base: 18px;
   --ks-brand-font-size-mono-shrink-factor-input: 1.5;
   --ks-brand-font-size-mono-grow-factor-input: 1.5;
   --ks-brand-font-size-mono-bp-factor-input: 1.5;
 }
 
-/// Spacing
+/* Spacing */
 :root {
-  --ks-brand-spacing-base: 16px;
-  --ks-brand-spacing-shrink-factor-input: 1.5;
-  --ks-brand-spacing-grow-factor-input: 1.5;
-  --ks-brand-spacing-bp-factor-input: 1.5;
+  --ks-brand-spacing-base: 18px;
+  --ks-brand-spacing-shrink-factor: 1.5;
+  --ks-brand-spacing-grow-factor: 1.5;
+  --ks-brand-spacing-bp-factor: 1.5;
 }
 
 :root {
