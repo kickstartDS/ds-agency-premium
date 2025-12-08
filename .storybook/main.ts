@@ -9,22 +9,26 @@ const config: StorybookConfig = {
   ],
 
   addons: [
-    "@storybook/addon-links",
-    // {
+    "@storybook/addon-links", // {
     //   name: "storybook-design-token",
     //   options: { designTokenGlob: "src/token/storybook/*" },
     // },
     // "@kickstartds/storybook-addon-html",
     // "storybook-addon-playroom",
     // "@kickstartds/storybook-addon-component-tokens",
-    "@storybook/addon-a11y",
-    // "@kickstartds/storybook-addon-jsonschema",
+    "@storybook/addon-a11y", // "@kickstartds/storybook-addon-jsonschema",
     "@storybook/addon-docs",
+    "@storybook/addon-mcp",
   ],
 
   framework: {
     name: "@storybook/react-vite",
     options: {},
+  },
+
+  features: {
+    experimentalComponentsManifest: true,
+    experimentalCodeExamples: true,
   },
 
   staticDirs: ["../static"],
