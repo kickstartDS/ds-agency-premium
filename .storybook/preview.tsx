@@ -4,7 +4,7 @@ import {
   DocsContainerProps,
 } from "@storybook/addon-docs/blocks";
 import "lazysizes/plugins/attrchange/ls.attrchange";
-import { Preview } from "@storybook/react";
+import { Preview } from "@storybook/react-vite";
 import { unpackDecorator } from "@kickstartds/core/lib/storybook";
 import { CssPropsParameter } from "@kickstartds/storybook-addon-component-tokens";
 import { light } from "./themes";
