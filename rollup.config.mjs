@@ -22,6 +22,19 @@ const componentEntryPoints = Object.fromEntries(
     fileName,
   ])
 );
+const playgroundFiles = fg.sync(["src/playground/*Component.(t|j)sx"]);
+const playgroundEntryPoints = Object.fromEntries(
+  playgroundFiles.map((fileName) => [
+    path.join(
+      "playground",
+      paramCase(
+        path.basename(fileName, path.extname(fileName)).replace("Component", "")
+      ),
+      "index"
+    ),
+    fileName,
+  ])
+);
 const clientJsFiles = fg.sync(["src/**/*.client.(t|j)s"]);
 const clientJsEntryPoints = Object.fromEntries(
   clientJsFiles.map((fileName) => [
@@ -36,6 +49,7 @@ const clientJsEntryPoints = Object.fromEntries(
 export default {
   input: {
     ...componentEntryPoints,
+    ...playgroundEntryPoints,
     ...clientJsEntryPoints,
     "tokens/themes.css": "src/themes/themes.scss",
   },

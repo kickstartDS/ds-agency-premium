@@ -4,7 +4,7 @@ import { Logos } from "../components/logos/LogosComponent";
 import { Section } from "../components/section/SectionComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 
-const Page = () => (
+const SpacingDemo = () => (
   <div className="playground-preview-page">
     <Section
       headline={{
@@ -136,12 +136,4 @@ const Page = () => (
   </div>
 );
 
-export default {
-  title: "Token / Playground / Spacing",
-  render: Page,
-  parameters: {
-    layout: "fullscreen",
-  },
-};
-
-export const Spacing = {};
+export default SpacingDemo;

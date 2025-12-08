@@ -13,11 +13,9 @@ import { SearchResult } from "../components/search-result/SearchResultComponent"
 import { Features } from "../components/features/FeaturesComponent";
 import { Stats } from "../components/stats/StatsComponent";
 import { Cta } from "../components/cta/CtaComponent";
-import { BrandingSwitch } from "./BrandingSwitch";
 
-const Page = () => (
+const FontDemo = () => (
   <div className="playground-preview-page">
-    <BrandingSwitch />
     <Section
       content={{
         gutter: "large",
@@ -299,12 +297,6 @@ const Page = () => (
   </div>
 );
 
-export default {
-  title: "Token / Playground / Font",
-  render: Page,
-  parameters: {
-    layout: "fullscreen",
-  },
-};
+export default FontDemo;
 
 export const Font = {};

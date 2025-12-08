@@ -16,11 +16,9 @@ import { EventLatestTeaser } from "../components/event-latest-teaser/EventLatest
 import { EventLocation } from "../components/event-location/EventLocationComponent";
 import { EventListTeaser } from "../components/event-list-teaser/EventListTeaserComponent";
 import { BlogAside } from "../components/blog-aside/BlogAsideComponent";
-import { BrandingSwitch } from "./BrandingSwitch";
 
-const Page = () => (
+const ColorDemo = () => (
   <div className="playground-preview-page">
-    <BrandingSwitch />
     <Section
       className="dsa-section--component-preview"
       content={{
@@ -346,12 +344,4 @@ const Page = () => (
   </div>
 );
 
-export default {
-  title: "Token / Playground / Color",
-  render: Page,
-  parameters: {
-    layout: "fullscreen",
-  },
-};
-
-export const Color = {};
+export default ColorDemo;
