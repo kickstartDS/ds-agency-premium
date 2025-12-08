@@ -23,6 +23,10 @@
     "./static/*": "./dist/static/*",
     "./tokens/*": "./dist/tokens/*",
     "./icon-sprite": "./dist/tokens/IconSprite.js",
+    "./playground/*": {
+      "types": "./dist/playground/*/index.d.ts",
+      "default": "./dist/playground/*/index.js"
+    },
     "./*.css": "./dist/*.css",
     "./*.js": {
       "types": "./dist/*.d.ts",
