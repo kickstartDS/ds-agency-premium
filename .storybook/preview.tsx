@@ -1,8 +1,5 @@
 import { actions } from "storybook/actions";
-import {
-  DocsContainer,
-  DocsContainerProps,
-} from "@storybook/addon-docs/blocks";
+import { DocsContainer, DocsContainerProps } from "@storybook/blocks";
 import "lazysizes/plugins/attrchange/ls.attrchange";
 import { Preview } from "@storybook/react";
 import { unpackDecorator } from "@kickstartds/core/lib/storybook";
