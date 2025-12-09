@@ -27,6 +27,10 @@
       "types": "./dist/playground/*/index.d.ts",
       "default": "./dist/playground/*/index.js"
     },
+    "./pages/*": {
+      "types": "./dist/pages/*/index.d.ts",
+      "default": "./dist/pages/*/index.js"
+    },
     "./*.css": "./dist/*.css",
     "./*.js": {
       "types": "./dist/*.d.ts",
@@ -97,6 +101,7 @@
     "@kickstartds/storybook-addon-html": "^1.0.0",
     "@kickstartds/storybook-addon-jsonschema": "^4.0.0",
     "@kickstartds/style-dictionary": "^4.0.2",
+    "@rollup/plugin-json": "^6.1.0",
     "@storybook/addon-a11y": "^8.0.5",
     "@storybook/addon-actions": "^8.0.5",
     "@storybook/addon-essentials": "^8.0.5",

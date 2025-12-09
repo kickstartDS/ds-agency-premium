@@ -9,7 +9,7 @@ import { Text } from "../components/text/TextComponent";
 import { Logos } from "../components/logos/LogosComponent";
 import { Cta } from "../components/cta/CtaComponent";
 
-const Page = () => (
+const Overview = () => (
   <>
     <Header {...headerProps} inverted dropdownInverted flyoutInverted />
     <Section spaceBefore="none" width="full" inverted>
@@ -191,12 +191,4 @@ const Page = () => (
   </>
 );
 
-export default {
-  title: "Page Archetypes/Overview",
-  render: Page,
-  parameters: {
-    layout: "fullscreen",
-  },
-};
-
-export const Overview = {};
+export default Overview;

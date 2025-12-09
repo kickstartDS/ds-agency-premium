@@ -4,6 +4,7 @@ import copy from "rollup-plugin-copy";
 import fg from "fast-glob";
 import { paramCase } from "change-case";
 import { nodeExternals } from "rollup-plugin-node-externals";
+import json from "@rollup/plugin-json";
 import postcssUrl from "postcss-url";
 import scss from "./scripts/rollupPluginScss.js";
 
@@ -35,6 +36,19 @@ const playgroundEntryPoints = Object.fromEntries(
     fileName,
   ])
 );
+const pagesFiles = fg.sync(["src/pages/*Component.(t|j)sx"]);
+const pagesEntryPoints = Object.fromEntries(
+  pagesFiles.map((fileName) => [
+    path.join(
+      "pages",
+      paramCase(
+        path.basename(fileName, path.extname(fileName)).replace("Component", "")
+      ),
+      "index"
+    ),
+    fileName,
+  ])
+);
 const clientJsFiles = fg.sync(["src/**/*.client.(t|j)s"]);
 const clientJsEntryPoints = Object.fromEntries(
   clientJsFiles.map((fileName) => [
@@ -50,6 +64,7 @@ export default {
   input: {
     ...componentEntryPoints,
     ...playgroundEntryPoints,
+    ...pagesEntryPoints,
     ...clientJsEntryPoints,
     "tokens/themes.css": "src/themes/themes.scss",
   },
@@ -60,6 +75,7 @@ export default {
   plugins: [
     nodeExternals(),
     ts(),
+    json(),
     scss({
       postcssPlugins: [
         postcssUrl({

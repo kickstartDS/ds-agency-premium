@@ -9,7 +9,7 @@ import { Contact } from "../components/contact/ContactComponent";
 import { Features } from "../components/features/FeaturesComponent";
 import { Cta } from "../components/cta/CtaComponent";
 
-const Page = () => (
+const JobDetail = () => (
   <>
     <Header {...headerProps} />
     <Section width="full" spaceAfter="none" spaceBefore="none">
@@ -209,12 +209,4 @@ As a Frontend Developer, you will be responsible for creating user-friendly web 
   </>
 );
 
-export default {
-  title: "Page Archetypes/Job Detail",
-  render: Page,
-  parameters: {
-    layout: "fullscreen",
-  },
-};
-
-export const JobDetail = {};
+export default JobDetail;

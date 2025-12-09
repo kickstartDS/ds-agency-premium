@@ -10,7 +10,7 @@ import { Slider } from "../components/slider/SliderComponent";
 import { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 import { VideoCurtain } from "../components/video-curtain/VideoCurtainComponent";
 
-const Page = () => (
+const About = () => (
   <>
     <Header {...headerProps} floating />
     <Section
@@ -299,12 +299,4 @@ While we've strived to provide a comprehensive demonstration, please bear in min
   </>
 );
 
-export default {
-  title: "Page Archetypes/About",
-  render: Page,
-  parameters: {
-    layout: "fullscreen",
-  },
-};
-
-export const About = {};
+export default About
