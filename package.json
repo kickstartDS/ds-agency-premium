@@ -64,7 +64,7 @@
     "search": "rm -rf static/pagefind && vitest run scripts/generateSearchIndex.test.ts",
     "husky:precommit": "yarn schema && rollup -c",
     "prepare": "patch-package && husky install",
-    "prepublishOnly": "rm -rf dist && yarn build-tokens && yarn schema && rollup -c && yarn build-storybook",
+    "prepublishOnly": "rm -rf dist && yarn build-tokens && yarn schema && yarn token && rollup -c && yarn build-storybook",
     "schema": "run-p schema:*",
     "schema:dereference-schemas": "kickstartDS schema dereference",
     "schema:generate-props": "kickstartDS schema types",
