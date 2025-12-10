@@ -109,7 +109,6 @@ The implementation of the new **Design System** and migration to **Storyblok** t
     <Section width="wide" inverted>
       <Cta
         padding
-        inverted
         highlightText
         textAlign="center"
         headline="Ready to **power up your**  Digital Transformation with a tailored **Design System** and Headless **CMS**? "
@@ -172,6 +171,7 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
+  tags: ["!manifest"],
 };
 
 export const Showcase = {};
