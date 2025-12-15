@@ -1,5 +1,5 @@
 import path from "node:path";
-import ts from "rollup-plugin-ts";
+import ts from "@rollup/plugin-typescript";
 import copy from "rollup-plugin-copy";
 import fg from "fast-glob";
 import { paramCase } from "change-case";

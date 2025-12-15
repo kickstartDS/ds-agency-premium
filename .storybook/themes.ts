@@ -1,4 +1,4 @@
-import { create } from "@storybook/theming";
+import { create } from "storybook/theming";
 import * as tokens from "../src/token/tokens";
 
 const pxToNumber = (px: string) => Number(px.replace("px", ""));
