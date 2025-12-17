@@ -4,7 +4,7 @@
   "title": "Downloads",
   "type": "object",
   "properties": {
-    "downloads": {
+    "download": {
       "type": "array",
       "items": {
         "type": "object",

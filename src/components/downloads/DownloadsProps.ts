@@ -6,7 +6,7 @@
  */
 
 export interface DownloadsProps {
-  downloads?: {
+  download?: {
     /**
      * The name of the file
      */

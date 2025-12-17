@@ -17,7 +17,7 @@ export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
   description,
   intro,
   images,
-  downloads,
+  download,
 }) => (
   <>
     <Section width="narrow" spaceAfter="none">
@@ -49,7 +49,7 @@ export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
         lightbox
       />
     </Section>
-    {downloads && downloads.length > 0 && (
+    {download && download.length > 0 && (
       <Section
         width="narrow"
         spaceBefore="none"
@@ -60,7 +60,7 @@ export const EventDetail: FC<PropsWithChildren<EventDetailProps>> = ({
         spaceAfter="none"
       >
         <Headline text="Downloads" level="h3" style="h3" />
-        <Downloads downloads={downloads} />
+        <Downloads download={download} />
       </Section>
     )}
     {

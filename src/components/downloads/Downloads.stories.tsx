@@ -28,7 +28,7 @@ export const TechnicalDetailsOnly: Story = {
     },
   },
   args: pack({
-    downloads: [
+    download: [
       {
         name: "Product Brochure",
         format: "PDF",
@@ -67,7 +67,7 @@ export const DescriptionOnly: Story = {
     },
   },
   args: pack({
-    downloads: [
+    download: [
       {
         name: "Product Brochure",
         description:
@@ -102,7 +102,7 @@ export const Complete: Story = {
     },
   },
   args: pack({
-    downloads: [
+    download: [
       {
         name: "Product Brochure",
         format: "PDF",
@@ -143,7 +143,7 @@ export const Mixed: Story = {
     },
   },
   args: pack({
-    downloads: [
+    download: [
       {
         name: "Product Brochure",
         format: "PDF",

@@ -67,7 +67,7 @@
     "create-component-previews": "yarn test && rimraf static/img/screenshots && mkdir -p static/img/screenshots && cp __snapshots__/*.png static/img/screenshots",
     "test": "rimraf __snapshots__ && run-p -r test:*",
     "test:server": "npx http-server storybook-static --port 6006 --silent",
-    "test:suite": "npx wait-on http://127.0.0.1:6006 && test-storybook",
+    "test:suite": "npx wait-on http://127.0.0.1:6006 && test-storybook --maxWorkers=8",
     "token": "node scripts/customPropertyExtract.js",
     "watch:schema": "yarn schema && chokidar \"src/**/*.schema.json\" -c \"yarn schema\"",
     "watch:token": "yarn token && chokidar \"src/**/*-tokens.scss\" -c \"yarn token {path}\"",

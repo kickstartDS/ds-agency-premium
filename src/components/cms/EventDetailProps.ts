@@ -361,7 +361,7 @@ export interface EventDetailProps {
   categories?: Categories;
   intro?: Intro;
   locations?: Locations;
-  downloads?: {
+  download?: {
     /**
      * The name of the file
      */
