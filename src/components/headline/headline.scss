@@ -14,11 +14,12 @@
     --g-link--text-decoration: none;
     visibility: hidden;
     position: absolute;
-    margin: 0 var(--ks-spacing-inline-s);
+    margin-left: var(--dsa-headline__anchor--margin-left, var(--ks-spacing-inline-s));
+    transform: var(--dsa-headline__anchor--transform);
 
     .icon {
-      width: 0.875em;
-      height: 0.875em;
+      width: var(--dsa-headline__anchor--size, 1em);
+      height: var(--dsa-headline__anchor--size, 1em);
     }
   }
 
