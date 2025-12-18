@@ -1,19 +1,19 @@
 :root {
   /* Colors */
   --ks-brand-color-primary: #b70e87;
-  --ks-brand-color-primary-inverted: #0069ff;
+  --ks-brand-color-primary-inverted: #f1d2e8;
 
   --ks-brand-color-on-primary: #fff;
-  --ks-brand-color-on-primary-inverted: #06081f;
+  --ks-brand-color-on-primary-inverted: #460433;
 
   --ks-brand-color-bg: #fff2fb;
-  --ks-brand-color-bg-inverted: #0f203e;
+  --ks-brand-color-bg-inverted: #460433;
 
   --ks-brand-color-fg: #06081f;
-  --ks-brand-color-fg-inverted: #fff;
+  --ks-brand-color-fg-inverted: #f1d2e8;
 
   --ks-brand-color-link: #b70e87;
-  --ks-brand-color-link-inverted: #98b2e0;
+  --ks-brand-color-link-inverted: #fff2fb;
 
   --ks-brand-color-positive: #23831b;
   --ks-brand-color-positive-inverted: #6edb64;

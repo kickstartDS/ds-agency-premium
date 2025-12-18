@@ -1,15 +1,15 @@
 {
   "color": {
     "primary": "#ffa959",
-    "primary-inverted": "#d56700",
+    "primary-inverted": "#261b25",
     "on-primary": "#261b25",
-    "on-primary-inverted": "#06081f",
-    "bg": "#fff",
-    "bg-inverted": "#0f203e",
-    "fg": "#06081f",
-    "fg-inverted": "#fff",
-    "link": "#3065c0",
-    "link-inverted": "#98b2e0",
+    "on-primary-inverted": "#ffd7b1",
+    "bg": "#261b25",
+    "bg-inverted": "#ffcea0",
+    "fg": "#ffa959",
+    "fg-inverted": "#261b25",
+    "link": "#ffd7b1",
+    "link-inverted": "#261b25",
     "positive": "#23831b",
     "positive-inverted": "#6edb64",
     "negative": "#ff1a57",
@@ -52,19 +52,19 @@
         "bp-factor": 1.5
       },
       "copy": {
-        "base": 16,
+        "base": 14,
         "shrink-factor": 1.5,
         "grow-factor": 1.5,
         "bp-factor": 1.5
       },
       "interface": {
-        "base": 16,
+        "base": 14,
         "shrink-factor": 1.5,
         "grow-factor": 1.5,
         "bp-factor": 1.5
       },
       "mono": {
-        "base": 16,
+        "base": 14,
         "shrink-factor": 1.5,
         "grow-factor": 1.5,
         "bp-factor": 1.5
