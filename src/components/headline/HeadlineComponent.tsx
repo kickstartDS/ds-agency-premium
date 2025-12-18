@@ -7,6 +7,7 @@ import { defaultRenderFn } from "@kickstartds/core/lib/core";
 
 import { HeadlineProps } from "./HeadlineProps";
 import "./headline.scss";
+import { Icon } from "@kickstartds/base/lib/icon";
 
 export type { HeadlineProps };
 
@@ -66,7 +67,7 @@ export const Headline = forwardRef<
                 aria-label="Link to this section"
                 title="Link to this section"
               >
-                #
+                <Icon icon="link" />
               </a>
             )}
           </span>
