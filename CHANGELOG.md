@@ -1,3 +1,15 @@
+# v1.6.73 (Thu Dec 18 2025)
+
+#### ⚠️ Pushed to `main`
+
+- feat(headline): add token for headline anchor icon ([@fleven-kds](https://github.com/fleven-kds))
+
+#### Authors: 1
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+
+---
+
 # v1.6.72 (Thu Dec 18 2025)
 
 #### ⚠️ Pushed to `main`
