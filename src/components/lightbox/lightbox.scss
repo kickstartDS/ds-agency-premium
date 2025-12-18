@@ -21,7 +21,7 @@
   --c-lightbox--bg: var(--dsa-lightbox--background-color, var(--ks-background-color-default)) !important;
   --c-lightbox--placeholder-bg: var(--dsa-lightbox__placeholder--background, var(--ks-color-fg-to-bg-1)) !important;
   --c-lightbox--root-z-index: var(--dsa-lightbox--root-z-index, var(--ks-depth-modal)) !important;
-  --c-lightbox--icon-color: var(--dsa-lightbox__button--color, var(--dsa-text-color-on-primary)) !important;
+  --c-lightbox--icon-color: var(--dsa-lightbox__button--color, var(--ks-text-color-on-primary)) !important;
   --c-lightbox--icon-color-secondary: var(--dsa-lightbox__counter--shadow, var(--ks-color-fg-inverted)) !important;
   --c-lightbox--stroke-width: 0px !important;
   --c-lightbox--error-text-color: var(--ks-color-error) !important;

@@ -1,10 +1,10 @@
 :root {
   /* Colors */
   --ks-brand-color-primary: #3065c0;
-  --ks-brand-color-primary-inverted: #4e83e0;
+  --ks-brand-color-primary-inverted: #3065c0;
 
-  --ks-brand-color-on-primary: var(--ks-color-fg-inverted);
-  --ks-brand-color-on-primary-inverted: var(--ks-color-fg);
+  --ks-brand-color-on-primary: #fff;
+  --ks-brand-color-on-primary-inverted: #fff;
 
   --ks-brand-color-bg: #fff;
   --ks-brand-color-bg-inverted: #0f203e;
@@ -103,11 +103,19 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
   --ks-brand-spacing-bp-factor: 1.5;
 }
 
+/* Border */
 :root {
   --ks-brand-border-width-default: 1px;
   --ks-brand-border-width-emphasized: 2px;
 
-  --ks-brand-border-radius-control: var(--ks-spacing-xs);
-  --ks-brand-border-radius-card: var(--ks-spacing-s);
-  --ks-brand-border-radius-surface: var(--ks-spacing-m);
+  --ks-brand-border-radius-control: 8px;
+  --ks-brand-border-radius-card: 12px;
+  --ks-brand-border-radius-surface: 16px;
+}
+
+/* Shadow */
+:root {
+  --ks-brand-box-shadow-control-blur: 1px;
+  --ks-brand-box-shadow-card-blur: 2px;
+  --ks-brand-box-shadow-surface-blur: 6px;
 }

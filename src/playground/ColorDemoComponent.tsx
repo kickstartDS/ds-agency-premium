@@ -27,7 +27,7 @@ const ColorDemo = () => (
       }}
       width="wide"
       spaceBefore="small"
-      spaceAfter="none"
+      spaceAfter="small"
     >
       <TeaserCard
         imageRatio="landscape"
@@ -95,7 +95,7 @@ const ColorDemo = () => (
         mode: "tile",
       }}
       spaceAfter="small"
-      spaceBefore="small"
+      spaceBefore="none"
     >
       <EventListTeaser
         category="Buyers"

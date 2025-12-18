@@ -90,6 +90,9 @@
   --ks-text-color-primary-interactive-selected-base: var(--ks-color-primary-alpha-2);
   --ks-text-color-primary-inverted-interactive-selected-base: var(--ks-color-primary-inverted-alpha-2);
 
+  --ks-text-color-on-primary-base: var(--ks-color-on-primary);
+  --ks-text-color-on-primary-inverted-base: var(--ks-color-on-primary-inverted);
+
   --ks-text-color-positive-base: var(--ks-color-positive);
   --ks-text-color-positive-inverted-base: var(--ks-color-positive-inverted);
 
@@ -252,6 +255,9 @@
     --ks-text-color-primary-inverted-interactive-selected-base
   );
 
+  --ks-text-color-on-primary: var(--ks-text-color-on-primary-base);
+  --ks-text-color-on-primary-inverted: var(--ks-text-color-on-primary-inverted-base);
+
   --ks-text-color-positive: var(--ks-text-color-positive-base);
   --ks-text-color-positive-inverted: var(--ks-text-color-positive-inverted-base);
 
@@ -413,6 +419,9 @@
 
   --ks-text-color-primary-interactive-selected: var(--ks-text-color-primary-inverted-interactive-selected-base);
   --ks-text-color-primary-inverted-interactive-selected: var(--ks-text-color-primary-interactive-selected-base);
+
+  --ks-text-color-on-primary: var(--ks-text-color-on-primary-inverted-base);
+  --ks-text-color-on-primary-inverted: var(--ks-text-color-on-primary-base);
 
   --ks-text-color-positive: var(--ks-text-color-positive-inverted-base);
   --ks-text-color-positive-inverted: var(--ks-text-color-positive-base);

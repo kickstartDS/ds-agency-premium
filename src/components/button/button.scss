@@ -24,9 +24,9 @@
   }
 
   &.c-button--solid {
-    --c-button--color: var(--dsa-button_primary--color, var(--dsa-text-color-on-primary));
-    --c-button--color-hover: var(--dsa-button_primary--color_hover, var(--dsa-text-color-on-primary));
-    --c-button--color-active: var(--dsa-button_primary--color_active, var(--dsa-text-color-on-primary));
+    --c-button--color: var(--dsa-button_primary--color, var(--ks-text-color-on-primary));
+    --c-button--color-hover: var(--dsa-button_primary--color_hover, var(--ks-text-color-on-primary));
+    --c-button--color-active: var(--dsa-button_primary--color_active, var(--ks-text-color-on-primary));
 
     --c-button--border-color: var(--dsa-button_primary--border-color, none);
     --c-button--border-color-hover: var(--dsa-button_primary--border-color_hover, none);

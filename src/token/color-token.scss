@@ -4,6 +4,9 @@
   --ks-color-primary-base: var(--ks-brand-color-primary);
   --ks-color-primary-inverted-base: var(--ks-brand-color-primary-inverted);
 
+  --ks-color-on-primary-base: var(--ks-brand-color-on-primary);
+  --ks-color-on-primary-inverted-base: var(--ks-brand-color-on-primary-inverted);
+
   --ks-color-fg-base: var(--ks-brand-color-fg);
   --ks-color-fg-inverted-base: var(--ks-brand-color-fg-inverted);
 
@@ -26,11 +29,12 @@
   --ks-color-notice-inverted-base: var(--ks-brand-color-notice-inverted);
 }
 
-:root,
-[ks-theme],
-[ks-inverted="false"] {
+:root {
   --ks-color-primary: var(--ks-color-primary-base);
   --ks-color-primary-inverted: var(--ks-color-primary-inverted-base);
+
+  --ks-color-on-primary: var(--ks-color-on-primary-base);
+  --ks-color-on-primary-inverted: var(--ks-color-on-primary-inverted-base);
 
   --ks-color-fg: var(--ks-color-fg-base);
   --ks-color-fg-inverted: var(--ks-color-fg-inverted-base);
@@ -58,6 +62,9 @@
   --ks-color-primary: var(--ks-color-primary-inverted-base);
   --ks-color-primary-inverted: var(--ks-color-primary-base);
 
+  --ks-color-on-primary: var(--ks-color-on-primary-inverted-base);
+  --ks-color-on-primary-inverted: var(--ks-color-on-primary-base);
+
   --ks-color-fg: var(--ks-color-fg-inverted-base);
   --ks-color-fg-inverted: var(--ks-color-fg-base);
 
@@ -77,7 +84,7 @@
   --ks-color-notice-inverted: var(--ks-color-notice-base);
 }
 
-/// SCALES (now reduced to 2 declarations per scale)
+/// SCALES
 :root,
 [ks-inverted],
 [ks-inverted="true"],
