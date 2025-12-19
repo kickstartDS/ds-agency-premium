@@ -2,8 +2,8 @@
   "color": {
     "primary": "#b70e87",
     "primary-inverted": "#f1d2e8",
-    "on-primary": "#fff",
-    "on-primary-inverted": "#460433",
+    "onPrimary": "#fff",
+    "onPrimary-inverted": "#460433",
     "bg": "#fff2fb",
     "bg-inverted": "#460433",
     "fg": "#06081f",
