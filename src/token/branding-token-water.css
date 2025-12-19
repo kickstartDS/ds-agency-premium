@@ -3,7 +3,8 @@
   --ks-brand-color-primary: #5d88ec;
   --ks-brand-color-primary-inverted: #00123d;
 
-  --ks-brand-color-on-primary: #00123d;
+  /* temporary syntx change for playground application */
+  --ks-brand-color-onPrimary: #00123d;
   --ks-brand-color-on-primary-inverted: #fff;
 
   --ks-brand-color-bg: #001036;
