@@ -1,4 +1,5 @@
 import React from "react";
+import "./inverted-switch.scss";
 
 type InvertedSwitchProps = {
   inverted: boolean;
@@ -10,21 +11,14 @@ export const InvertedSwitch: React.FC<InvertedSwitchProps> = ({
   onToggle,
 }) => {
   return (
-    <label
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: 8,
-        cursor: "pointer",
-      }}
-    >
+    <label className="inverted-switch">
       <input
         type="checkbox"
         checked={inverted}
         onChange={(e) => onToggle(e.target.checked)}
         style={{ accentColor: "#333" }}
       />
-      <span>Inverted Mode</span>
+      <span>Inverted</span>
     </label>
   );
 };

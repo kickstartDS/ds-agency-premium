@@ -1,0 +1,12 @@
+.branding-switch {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 4px;
+  }
+
+  select {
+    cursor: pointer;
+  }
+}

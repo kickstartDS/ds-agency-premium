@@ -1,4 +1,4 @@
-import { BrandingSwitch } from "./BrandingSwitch";
+import DemoPageControls from "./demo-page-controls/DemoPageControls";
 import ColorDemo from "./ColorDemoComponent";
 import FontDemo from "./FontDemoComponent";
 import SpacingDemo from "./SpacingDemoComponent";
@@ -14,7 +14,7 @@ export const Color = {
   render() {
     return (
       <>
-        <BrandingSwitch />
+        <DemoPageControls />
         <ColorDemo />
       </>
     );
@@ -24,7 +24,7 @@ export const Font = {
   render() {
     return (
       <>
-        <BrandingSwitch />
+        <DemoPageControls />
         <FontDemo />
       </>
     );
@@ -34,7 +34,7 @@ export const Spacing = {
   render() {
     return (
       <>
-        <BrandingSwitch />
+        <DemoPageControls />
         <SpacingDemo />
       </>
     );
