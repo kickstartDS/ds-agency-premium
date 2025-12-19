@@ -4,12 +4,12 @@
   --ks-brand-color-primary-inverted: #67b6aa;
 
   --ks-brand-color-onPrimary: #fff;
-  --ks-brand-color-on-primary-inverted: #022b25;
+  --ks-brand-color-onPrimary-inverted: #022b25;
 
   --ks-brand-color-bg: #f8fdef;
   --ks-brand-color-bg-inverted: #022b25;
 
-  --ks-brand-color-fg: #06081f;
+  --ks-brand-color-fg: #03312a;
   --ks-brand-color-fg-inverted: #d6dec9;
 
   --ks-brand-color-link: #007e6c;
@@ -28,13 +28,13 @@
   --ks-brand-color-notice-inverted: #00718f;
 
   --ks-brand-color-scale-9: 5%;
-  --ks-brand-color-scale-8: 15%;
-  --ks-brand-color-scale-7: 27%;
-  --ks-brand-color-scale-6: 39%;
+  --ks-brand-color-scale-8: 10%;
+  --ks-brand-color-scale-7: 19%;
+  --ks-brand-color-scale-6: 32%;
   --ks-brand-color-scale-5: 50%;
-  --ks-brand-color-scale-4: 61%;
-  --ks-brand-color-scale-3: 73%;
-  --ks-brand-color-scale-2: 85%;
+  --ks-brand-color-scale-4: 68%;
+  --ks-brand-color-scale-3: 81%;
+  --ks-brand-color-scale-2: 90%;
   --ks-brand-color-scale-1: 95%;
 }
 

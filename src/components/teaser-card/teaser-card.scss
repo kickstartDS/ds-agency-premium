@@ -34,6 +34,7 @@
     transition: var(--ks-transition-hover);
     transition-property: border-color, background-color, box-shadow;
     box-shadow: var(--dsa-teaser-card--shadow, var(--ks-box-shadow-card));
+    cursor: pointer;
 
     > :first-child:not(.c-teaser__body) {
       overflow: hidden;
@@ -42,6 +43,11 @@
     &:hover {
       --c-teaser--border: var(--dsa-teaser-card--border-color_hover, var(--ks-background-color-card-interactive))
         var(--dsa-teaser-card--border-width) solid;
+
+      background-color: var(
+        --dsa-teaser-card--background_hover,
+        var(--ks-background-color-card-interactive-hover)
+      ) !important;
 
       .c-teaser__image {
         transform: var(--dsa-teaser-card__image--transform_hover, scale(1.05));

@@ -32,6 +32,11 @@ export const Font = {
 };
 export const Spacing = {
   render() {
-    return <SpacingDemo />;
+    return (
+      <>
+        <BrandingSwitch />
+        <SpacingDemo />
+      </>
+    );
   },
 };

@@ -42,17 +42,17 @@
   --ks-background-color-interface-interactive-selected-base: var(--ks-color-primary);
   --ks-background-color-interface-inverted-interactive-selected-base: var(--ks-color-primary-inverted);
 
-  --ks-background-color-card-base: var(--ks-color-fg-alpha-9);
-  --ks-background-color-card-inverted-base: var(--ks-color-fg-inverted-to-bg-9);
+  --ks-background-color-card-base: var(--ks-color-primary-alpha-8);
+  --ks-background-color-card-inverted-base: var(--ks-color-primary-inverted-alpha-8);
 
   --ks-background-color-card-interactive-base: var(--ks-color-bg);
-  --ks-background-color-card-inverted-interactive-base: var(--ks-color-fg-inverted-to-bg-9);
+  --ks-background-color-card-inverted-interactive-base: var(--ks-color-bg-inverted);
 
   --ks-background-color-card-interactive-disabled-base: var(--ks-color-bg-alpha-7);
   --ks-background-color-card-inverted-interactive-disabled-base: var(--ks-color-fg-inverted-alpha-7);
 
-  --ks-background-color-card-interactive-hover-base: var(--ks-color-bg-alpha-9);
-  --ks-background-color-card-inverted-interactive-hover-base: var(--ks-color-fg-inverted-alpha-9);
+  --ks-background-color-card-interactive-hover-base: var(--ks-color-bg);
+  --ks-background-color-card-inverted-interactive-hover-base: var(--ks-color-bg-inverted);
 
   --ks-background-color-card-interactive-active-base: var(--ks-color-bg-alpha-9);
   --ks-background-color-card-inverted-interactive-active-base: var(--ks-color-fg-inverted-alpha-9);

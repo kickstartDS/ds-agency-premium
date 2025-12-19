@@ -4,6 +4,8 @@
 
 .dsa-event-latest-teaser {
   --g-link--border-radius: var(--ks-border-radius-card);
+  --g-link--background: var(--ks-background-color-card-interactive);
+  --g-link--background-hover: var(--ks-background-color-card-interactive-hover);
 
   display: flex;
   gap: var(--ks-spacing-inline-s);
