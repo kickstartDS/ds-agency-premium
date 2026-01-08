@@ -321,7 +321,7 @@ const ColorDemo = () => (
           url="https://www.example.com/greentech-summit-2023"
         />
         <Downloads
-          downloads={[
+          download={[
             {
               format: "PDF",
               name: "Product Brochure",

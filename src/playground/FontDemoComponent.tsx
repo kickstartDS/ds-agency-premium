@@ -267,7 +267,7 @@ const FontDemo = () => (
           ]}
         />
         <Downloads
-          downloads={[
+          download={[
             {
               format: "PDF",
               name: "Visionary Solutions Overview",

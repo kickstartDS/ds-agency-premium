@@ -299,7 +299,7 @@ const ColorDemo = () => (
         </div>
         <div style={{ flexGrow: "3" }}>
           <Downloads
-            downloads={[
+            download={[
               {
                 format: "PDF",
                 name: "Product Brochure",
