@@ -11,7 +11,7 @@ import { ImageStory } from "../components/image-story/ImageStoryComponent";
 import { ImageText } from "../components/image-text/ImageTextComponent";
 import { Hero } from "../components/hero/HeroComponent";
 
-const Page = () => (
+const LandingPage = () => (
   <>
     <Header {...headerProps} floating />
 
@@ -318,13 +318,4 @@ We empower your digital teams with the knowledge and skills to manage and evolve
     <Footer {...footerProps} />
   </>
 );
-
-export default {
-  title: "Page Archetypes/Landingpage",
-  render: Page,
-  parameters: {
-    layout: "fullscreen",
-  },
-};
-
-export const Landingpage = {};
+export default LandingPage;

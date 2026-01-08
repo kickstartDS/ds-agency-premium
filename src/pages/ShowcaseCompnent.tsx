@@ -10,7 +10,7 @@ import { Hero } from "../components/hero/HeroComponent";
 import { Mosaic } from "../components/mosaic/MosaicComponent";
 import { Text } from "../components/text/TextComponent";
 
-const Page = () => (
+const Showcase = () => (
   <>
     <Header {...headerProps} floating />
     <Section width="full" spaceAfter="small" spaceBefore="none">
@@ -109,7 +109,6 @@ The implementation of the new **Design System** and migration to **Storyblok** t
     <Section width="wide" inverted>
       <Cta
         padding
-        inverted
         highlightText
         textAlign="center"
         headline="Ready to **power up your**  Digital Transformation with a tailored **Design System** and Headless **CMS**? "
@@ -166,12 +165,4 @@ The implementation of the new **Design System** and migration to **Storyblok** t
   </>
 );
 
-export default {
-  title: "Page Archetypes/Showcase",
-  render: Page,
-  parameters: {
-    layout: "fullscreen",
-  },
-};
-
-export const Showcase = {};
+export default Showcase;

@@ -4,6 +4,8 @@
 
 .dsa-event-latest-teaser {
   --g-link--border-radius: var(--ks-border-radius-card);
+  --g-link--background: var(--ks-background-color-card-interactive);
+  --g-link--background-hover: var(--ks-background-color-card-interactive-hover);
 
   display: flex;
   gap: var(--ks-spacing-inline-s);
@@ -37,7 +39,7 @@
     align-self: start;
     position: relative;
     background-color: var(--ks-background-color-primary);
-    color: var(--ks-color-fg-inverted);
+    color: var(--ks-text-color-on-primary);
     border-radius: var(--ks-border-radius-control);
     display: flex;
     align-items: flex-end;
@@ -121,7 +123,7 @@
   &__cta {
     font: var(--ks-font-interface-s);
     font-weight: var(--ks-font-weight-semi-bold);
-    color: var(--ks-text-color-primary);
+    color: var(--dsa-link--color);
     display: flex;
     align-items: center;
     text-wrap: nowrap;

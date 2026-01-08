@@ -23,6 +23,14 @@
     "./static/*": "./dist/static/*",
     "./tokens/*": "./dist/tokens/*",
     "./icon-sprite": "./dist/tokens/IconSprite.js",
+    "./playground/*": {
+      "types": "./dist/playground/*/index.d.ts",
+      "default": "./dist/playground/*/index.js"
+    },
+    "./pages/*": {
+      "types": "./dist/pages/*/index.d.ts",
+      "default": "./dist/pages/*/index.js"
+    },
     "./*.css": "./dist/*.css",
     "./*.js": {
       "types": "./dist/*.d.ts",
@@ -56,7 +64,7 @@
     "search": "rm -rf static/pagefind && vitest run scripts/generateSearchIndex.test.ts",
     "husky:precommit": "yarn schema && rollup -c",
     "prepare": "patch-package && husky install",
-    "prepublishOnly": "rm -rf dist && yarn build-tokens && yarn schema && rollup -c && yarn build-storybook",
+    "prepublishOnly": "rm -rf dist && yarn build-tokens && yarn schema && yarn token && rollup -c && yarn build-storybook",
     "schema": "run-p schema:*",
     "schema:dereference-schemas": "kickstartDS schema dereference",
     "schema:generate-props": "kickstartDS schema types",
@@ -93,6 +101,7 @@
     "@kickstartds/storybook-addon-html": "^1.0.0",
     "@kickstartds/storybook-addon-jsonschema": "^4.0.0",
     "@kickstartds/style-dictionary": "^4.0.2",
+    "@rollup/plugin-json": "^6.1.0",
     "@storybook/addon-a11y": "^8.0.5",
     "@storybook/addon-actions": "^8.0.5",
     "@storybook/addon-essentials": "^8.0.5",
@@ -126,13 +135,14 @@
     "playroom": "^0.34.1",
     "postcss": "^8.4.29",
     "postcss-url": "^10.1.3",
+    "puppeteer": "^24.30.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rollup": "^3.28.1",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-node-externals": "^6.1.1",
     "rollup-plugin-ts": "^3.4.4",
-    "sass": "^1.66.1",
+    "sass": "^1.94.2",
     "sass-loader": "^13.3.3",
     "storybook": "^8.0.5",
     "storybook-addon-playroom": "^5.0.0",

@@ -6,6 +6,8 @@
   --g-link--text-decoration: none;
   --g-link--text-decoration-hover: none;
   --g-link--border-radius: var(--ks-border-radius-card);
+  --g-link--background: var(--ks-background-color-card-interactive);
+  --g-link--background-hover: var(--ks-background-color-card-interactive-hover);
 
   display: block;
   border: var(--ks-border-width-default) solid var(--ks-border-color-card-interactive);
@@ -35,7 +37,7 @@
     gap: var(--ks-spacing-stack-s);
     flex-basis: var(--dsa-tile--width_small);
     flex-grow: 10;
-    flex-shrink: 0;
+    flex-shrink: 1;
   }
 
   &__image {
@@ -145,7 +147,7 @@
   &__cta {
     font: var(--ks-font-interface-s);
     font-weight: var(--ks-font-weight-semi-bold);
-    color: var(--ks-text-color-primary);
+    color: var(--dsa-link--color);
     display: flex;
     align-items: center;
     text-wrap: nowrap;

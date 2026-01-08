@@ -13,8 +13,8 @@
   flex-direction: row;
   justify-content: space-between;
   gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
-  background-color: var(--ks-background-color-accent);
-  padding: var(--ks-spacing-inset-m);
+  background-color: var(--ks-background-color-card);
+  padding: var(--ks-spacing-inset-l);
   border-radius: var(--ks-border-radius-surface);
 
   --dsa-event-location__info--flex-basis: 280px;
@@ -67,9 +67,9 @@
   &__appointments {
     display: grid;
     justify-content: flex-end;
-    gap: var(--ks-spacing-stack-s);
+    gap: var(--ks-spacing-s);
     flex-grow: 100;
-    flex-shrink: 0;
+    flex-shrink: 1;
     grid-template-columns: repeat(
       auto-fill,
       minmax(min(var(--dsa-event-location__appointments--min-width, 12em), 100%), 1fr)

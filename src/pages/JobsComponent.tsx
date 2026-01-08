@@ -12,7 +12,7 @@ import { Faq } from "../components/faq/FaqComponent";
 import { Contact } from "../components/contact/ContactComponent";
 import { Features } from "../components/features/FeaturesComponent";
 
-const Page = () => (
+const Jobs = () => (
   <>
     <Header {...headerProps} />
     <Section width="full" spaceAfter="none" spaceBefore="none">
@@ -357,12 +357,4 @@ At Systemics, we value creativity, collaboration, and a commitment to excellence
   </>
 );
 
-export default {
-  title: "Page Archetypes/Jobs",
-  render: Page,
-  parameters: {
-    layout: "fullscreen",
-  },
-};
-
-export const Jobs = {};
+export default Jobs

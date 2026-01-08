@@ -1,0 +1,11 @@
+.inverted-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+
+  label {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+}
