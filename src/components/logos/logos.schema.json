@@ -9,7 +9,7 @@
       "type": "string",
       "title": "Logo Tagline",
       "description": "A short tagline atop the logos",
-      "examples": ["Your Success, Our Commitment"]
+      "examples": ["Our Customers"]
     },
     "logo": {
       "type": "array",
@@ -91,7 +91,7 @@
           "type": "string",
           "title": "Link Label",
           "description": "The text label displayed on the link",
-          "examples": ["See all our partners"]
+          "examples": ["See all customers"]
         },
         "style": {
           "type": "string",

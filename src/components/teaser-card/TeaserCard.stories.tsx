@@ -28,12 +28,12 @@ export const ProductTiles: Story = {
     },
   },
   args: pack({
-    headline: "Castaway",
-    text: "Transforming Ideas into Code",
-    image: "img/logos/castaway.svg",
+    headline: "Explore This Topic",
+    text: "This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration.",
+    image: "img/placeholder/avatar-wide.svg",
     url: "#",
     button: {
-      label: "Go to page",
+      label: "Learn more",
       hidden: true,
     },
   }),
@@ -47,13 +47,13 @@ export const PageNavigation: Story = {
     },
   },
   args: pack({
-    headline: "Design System Services",
-    text: "Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture.",
-    image: "img/02.jpg",
+    headline: "Explore This Topic",
+    text: "This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration.",
+    image: "img/placeholder/avatar-wide.svg",
     imageRatio: "landscape",
     url: "#",
     button: {
-      label: "Read more",
+      label: "Learn more",
     },
   }),
 };
@@ -66,15 +66,15 @@ export const ShowcasePreview: Story = {
     },
   },
   args: pack({
-    label: "Tech",
+    label: "Category Label",
     layout: "row",
     imageRatio: "wide",
-    headline: "Transformation Love Story",
-    text: "See how we saved TechFusions a year's worth of development time",
-    image: "img/showcases/comp_tfe01.jpg",
+    headline: "Explore This Topic",
+    text: "This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration.",
+    image: "img/placeholder/avatar-wide.svg",
     url: "#",
     button: {
-      label: "View showcase",
+      label: "Learn more",
     },
   }),
 };

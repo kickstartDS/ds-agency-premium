@@ -28,20 +28,20 @@ export const Banner: Story = {
     },
   },
   args: pack({
-    headline: "Ready to Transform Your Development Process?",
-    sub: "Start your journey today.",
-    text: "Get started with our design system today and experience a new level of efficiency and consistency in your projects.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "This is placeholder text used to demonstrate layout, spacing, and typography within the component.",
     textAlign: "center",
     buttons: [
       {
-        label: "Contact Us",
+        label: "Explore",
         url: "#",
-        icon: "person",
+        icon: "chevron-right",
       },
       {
         label: "Learn More",
         url: "#",
-        icon: "date",
+        icon: "",
       },
     ],
   }),
@@ -55,16 +55,16 @@ export const Highlighted: Story = {
     },
   },
   args: pack({
-    headline: "Why Choose Our Design System?",
-    sub: "Built for consistency and speed.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
     highlightText: true,
     textAlign: "center",
-    text: "Our design system is built with scalability and efficiency in mind. It allows for consistent UI across different platforms, making your development process smoother and faster.",
+    text: "This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.",
     buttons: [
       {
-        label: "Get Started",
+        label: "Discover more",
         url: "#",
-        icon: "person",
+        icon: "chevron-right",
       },
     ],
   }),
@@ -78,14 +78,14 @@ export const LeftAligned: Story = {
     },
   },
   args: pack({
-    headline: "Experience Our Design System",
-    sub: "Efficient, scalable, seamless.",
-    text: "Our design system offers a seamless and efficient way to build scalable applications. Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.",
     buttons: [
       {
         label: "Learn More",
         url: "#",
-        icon: "person",
+        icon: "chevron-right",
       },
     ],
   }),
@@ -99,9 +99,9 @@ export const ProductAdvertisement: Story = {
     },
   },
   args: pack({
-    headline: "Experience Immersive Sound",
-    sub: "With Our Premium Over-Ear Headphones",
-    text: "Our over-ear headphones provide an immersive audio experience. With noise-cancellation technology and high-quality sound.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "This is placeholder text used to demonstrate layout, spacing, and typography within the component.",
     backgroundImage: "img/bg_dot-carpet-blue.svg",
     highlightText: true,
     padding: true,
@@ -110,18 +110,14 @@ export const ProductAdvertisement: Story = {
     },
     image: {
       padding: false,
-      src: "img/showcases/comp_audio04.png",
+      src: "img/placeholder/cta-product-shot.svg",
       alt: "Over-Ear Headphones",
     },
     buttons: [
       {
-        label: "Shop Now",
+        label: "Details",
         url: "/shop",
         icon: "chevron-right",
-      },
-      {
-        label: "Learn More",
-        url: "/product-info",
       },
     ],
   }),
@@ -135,12 +131,12 @@ export const ContactBanner: Story = {
     },
   },
   args: pack({
-    headline: "Get in touch",
-    sub: "Chat with us about getting your product or platform to market faster",
-    text: "Our modular design approach allows for flexibility and scalability in your application's architecture.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.",
     padding: true,
     image: {
-      src: "img/people/contact-person.png",
+      src: "img/placeholder/cta-contact-banner.svg",
       padding: false,
     },
     order: {
@@ -169,8 +165,9 @@ export const SplitBanner: Story = {
     },
   },
   args: pack({
-    headline: "Design System Services",
-    text: "Here at Systemics, we bring a range of design system services that can make a difference.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "Use this area to add a short description. It provides additional context and helps structure content within the component",
     colorNeutral: true,
     backgroundColor: "#d9e4ff",
     padding: true,
@@ -178,13 +175,13 @@ export const SplitBanner: Story = {
       desktopImageLast: false,
     },
     image: {
-      src: "img/colored-square.png",
+      src: "img/placeholder/cta-split-banner.svg",
       padding: false,
     },
     buttons: [
       {
-        label: "What can we do for you?",
-        icon: "person",
+        label: "Learn more",
+        icon: "",
         url: "#",
       },
     ],
@@ -199,13 +196,11 @@ export const AngledImage: Story = {
     },
   },
   args: pack({
-    headline: "Our **Approach** to Design Systems",
-    text: `We value efficiency without compromising quality. Our secret weapon? kickstartDS, a revolutionary code-first and open source framework for creating design systems.
-
-This tool accelerates our development, saving you valuable time and helping us deliver top-notch results faster.`,
+    headline: "Key **headline** for this section",
+    text: `This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.`,
     padding: true,
     image: {
-      src: "img/angled-image.png",
+      src: "img/placeholder/cta-angled-image.svg",
       padding: false,
     },
     order: {
@@ -213,13 +208,8 @@ This tool accelerates our development, saving you valuable time and helping us d
     },
     buttons: [
       {
-        label: "Contact us",
-        icon: "person",
-        url: "#",
-      },
-      {
-        label: "Book a meeting",
-        icon: "date",
+        label: "Learn more",
+        icon: "",
         url: "#",
       },
     ],
@@ -234,11 +224,11 @@ export const ColoredBanner: Story = {
     },
   },
   args: pack({
-    headline: "Expertise in Scalable Solutions",
-    text: "Leverage our expertise in creating scalable and robust applications using modern technologies.",
+    headline: "Key headline for this section",
+    text: "Use this area to add a short description. It provides additional context and helps structure content within the component.",
     highlightText: true,
     colorNeutral: true,
-    backgroundColor: "#ffd4ea",
+    backgroundColor: "#a1d5d6ff",
     padding: true,
     buttons: [
       {
@@ -246,7 +236,7 @@ export const ColoredBanner: Story = {
         url: "#",
       },
       {
-        label: "Contact Us",
+        label: "More Information",
         url: "#",
       },
     ],
@@ -261,25 +251,21 @@ export const AlignBottom: Story = {
     },
   },
   args: pack({
-    headline: "Custom Solutions",
-    text: `At Systemics, we believe in the power of technology to transform businesses. Our team of experienced professionals is dedicated to providing innovative solutions that meet the unique needs of your business.
-
-We understand that every business is different, and that's why we offer custom solutions tailored to your specific business needs and requirements.`,
-    backgroundImage: "img/grid-bg.svg",
+    headline: "Key headline for this section",
+    text: `This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.`,
+    backgroundImage: "img/grid-bg-light.svg",
     align: "bottom",
     image: {
-      src: "img/offset-image.png",
+      src: "img/placeholder/cta-align-bottom.svg",
     },
     order: {
       desktopImageLast: false,
     },
     buttons: [
       {
-        label: "Contact us",
-        icon: "person",
+        label: "Learn More",
         url: "#",
       },
-      { label: "Book a meeting", icon: "date", url: "#" },
     ],
   }),
 };
