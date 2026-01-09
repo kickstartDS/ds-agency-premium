@@ -35,7 +35,7 @@ body.sb-show-main.sb-main-padded {
 
 .preview {
   &--wrapper {
-    background-color: #1f213d;
+    background-color: var(--ks-color-primary-to-bg-8);
     padding: 2rem;
   }
 
@@ -66,42 +66,84 @@ hr.c-divider {
 }
 
 #{$selectors} {
-  --g-link--font-weight: var(--dsa-link--font-weight, var(--ks-font-weight-semi-bold));
+  --g-link--font-weight: var(
+    --dsa-link--font-weight,
+    var(--ks-font-weight-semi-bold)
+  );
   --g-link--text-decoration: var(--dsa-link--text-decoration, underline);
   --g-link--text-decoration-hover: var(--dsa-link--text-decoration_hover, none);
 
-  --g-link--color: var(--dsa-link--color, var(--ks-text-color-default-interactive));
-  --g-link--color-hover: var(--dsa-link--color_hover, var(--ks-text-color-default-interactive-hover));
+  --g-link--color: var(
+    --dsa-link--color,
+    var(--ks-text-color-default-interactive)
+  );
+  --g-link--color-hover: var(
+    --dsa-link--color_hover,
+    var(--ks-text-color-default-interactive-hover)
+  );
   --g-link--background: var(--dsa-link--background, transparent);
   --g-link--border-radius: var(--dsa-link--border-radius, 0);
 
   --g-topic--color: var(--dsa-topic--color, var(--ks-text-color-default));
   --g-topic--font: var(--dsa-topic--font, var(--ks-font-display-l));
-  --g-topic--font-weight: var(--dsa-topic--font-weight, var(--ks-font-weight-bold));
+  --g-topic--font-weight: var(
+    --dsa-topic--font-weight,
+    var(--ks-font-weight-bold)
+  );
 
   --c-rich-text--font: var(--dsa-rich-text--font, var(--ks-font-copy-m));
-  --c-rich-text--vertical-spacing: var(--dsa-rich-text--vertical-spacing, var(--ks-spacing-m));
-  --c-rich-text--horizontal-spacing: var(--dsa-rich-text--horizontal-spacing, 1em);
-  --c-rich-text--color: var(--dsa-rich-text--color, var(--ks-text-color-default));
-  --c-rich-text--font-weight: var(--dsa-rich-text--font-weight, var(--ks-font-weight-regular));
+  --c-rich-text--vertical-spacing: var(
+    --dsa-rich-text--vertical-spacing,
+    var(--ks-spacing-m)
+  );
+  --c-rich-text--horizontal-spacing: var(
+    --dsa-rich-text--horizontal-spacing,
+    1em
+  );
+  --c-rich-text--color: var(
+    --dsa-rich-text--color,
+    var(--ks-text-color-default)
+  );
+  --c-rich-text--font-weight: var(
+    --dsa-rich-text--font-weight,
+    var(--ks-font-weight-regular)
+  );
 
-  --c-rich-text_headline--color: var(--dsa-rich-text__headline--color, var(--ks-text-color-display));
-  --c-rich-text_headline--font: var(--dsa-rich-text__headline--font, var(--ks-font-display-m));
-  --c-rich-text_headline--font-weight: var(--dsa-rich-text__headline--font-weight, var(--ks-font-weight-medium));
-  --c-rich-text_headline--margin: var(--dsa-rich-text__headline--margin, 0.75em 0 0.5em);
+  --c-rich-text_headline--color: var(
+    --dsa-rich-text__headline--color,
+    var(--ks-text-color-display)
+  );
+  --c-rich-text_headline--font: var(
+    --dsa-rich-text__headline--font,
+    var(--ks-font-display-m)
+  );
+  --c-rich-text_headline--font-weight: var(
+    --dsa-rich-text__headline--font-weight,
+    var(--ks-font-weight-medium)
+  );
+  --c-rich-text_headline--margin: var(
+    --dsa-rich-text__headline--margin,
+    0.75em 0 0.5em
+  );
 }
 
 [ks-inverted="false"],
 :root,
 #root {
   --dsa-text-color-on-primary: var(--dsa-text-color-on-primary-base);
-  --dsa-text-color-on-primary-inverted: var(--dsa-text-color-on-primary-inverted-base);
+  --dsa-text-color-on-primary-inverted: var(
+    --dsa-text-color-on-primary-inverted-base
+  );
 
   --dsa-overlay-text--shadow: var(--dsa-overlay-text--shadow-base);
-  --dsa-overlay-text--shadow-inverted: var(--dsa-overlay-text--shadow-inverted-base);
+  --dsa-overlay-text--shadow-inverted: var(
+    --dsa-overlay-text--shadow-inverted-base
+  );
 
   --dsa-overlay-text--text-color: var(--dsa-overlay-text--text-color-base);
-  --dsa-overlay-text--text-color-inverted: var(--dsa-overlay-text--text-color-inverted-base);
+  --dsa-overlay-text--text-color-inverted: var(
+    --dsa-overlay-text--text-color-inverted-base
+  );
 }
 
 [ks-inverted="true"] {
@@ -111,6 +153,10 @@ hr.c-divider {
   --dsa-overlay-text--shadow: var(--dsa-overlay-text--shadow-inverted-base);
   --dsa-overlay-text--shadow-inverted: var(--dsa-overlay-text--shadow-base);
 
-  --dsa-overlay-text--text-color: var(--dsa-overlay-text--text-color-inverted-base);
-  --dsa-overlay-text--text-color-inverted: var(--dsa-overlay-text--text-color-base);
+  --dsa-overlay-text--text-color: var(
+    --dsa-overlay-text--text-color-inverted-base
+  );
+  --dsa-overlay-text--text-color-inverted: var(
+    --dsa-overlay-text--text-color-base
+  );
 }
