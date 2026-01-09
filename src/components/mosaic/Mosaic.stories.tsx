@@ -35,7 +35,7 @@ export const ColorfulTiles: Story = {
         headline: "Collaborative Environment",
         text: "Our team thrives in a collaborative environment, fostering creativity and innovation.",
         image: {
-          src: "img/mosaic-1.png",
+          src: "img/placeholder/avatar-square.svg",
         },
       },
       {
@@ -43,7 +43,7 @@ export const ColorfulTiles: Story = {
         headline: "Modern Infrastructure",
         text: "Our state-of-the-art office facilities inspire productivity and efficiency.",
         image: {
-          src: "img/mosaic-2.png",
+          src: "img/placeholder/avatar-square.svg",
         },
       },
       {
@@ -51,14 +51,14 @@ export const ColorfulTiles: Story = {
         headline: "Teamwork",
         text: "We believe in the power of teamwork. Together, we can achieve great things.",
         image: {
-          src: "img/mosaic-3.png",
+          src: "img/placeholder/avatar-square.svg",
         },
       },
     ],
   }),
 };
 
-export const ColorfulTextWithIllustrations: Story = {
+export const ColorfulTextWithImagesBeside: Story = {
   parameters: {
     viewport: {
       width: 1010,
@@ -69,36 +69,36 @@ export const ColorfulTextWithIllustrations: Story = {
     layout: "textLeft",
     tile: [
       {
-        textColor: "#FCFF7D",
+        textColor: "#086d10ff",
         button: {
           toggle: false,
         },
-        headline: "Effective Communication",
-        sub: "We believe in clear and effective communication. Our team members are always ready to share ideas and solutions.",
+        headline: "First Example",
+        text: "A representative example showing how individual items can be displayed and described.",
         image: {
-          src: "img/mosaic-2_1.svg",
+          src: "img/placeholder/product-shot-sqaure-spacing.svg",
         },
       },
       {
-        textColor: "#7DD0FF",
+        textColor: "#5717b0ff",
         button: {
           toggle: false,
         },
-        headline: "Data-Driven Decisions",
-        sub: "We make decisions based on data. Our strategies are always backed by solid facts and figures.",
+        headline: "Second Example",
+        text: "This example highlights consistency across items and supports visual comparison.",
         image: {
-          src: "img/mosaic-2_2.svg",
+          src: "img/placeholder/product-shot-sqaure-spacing.svg",
         },
       },
       {
-        textColor: "#FF7DC3",
+        textColor: "#007387ff",
         button: {
           toggle: false,
         },
-        headline: "Innovative Design",
-        sub: "We are committed to creating innovative designs. Our team is always exploring new ways to improve user experience.",
+        headline: "Third Example",
+        text: "A simple placeholder item intended to be adapted to real-world content.",
         image: {
-          src: "img/mosaic-2_3.svg",
+          src: "img/placeholder/product-shot-sqaure-spacing.svg",
         },
       },
     ],

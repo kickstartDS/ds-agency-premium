@@ -29,11 +29,11 @@ export const SingleColumn: Story = {
   },
   args: pack({
     layout: "singleColumn",
-    text: `We prioritize efficiency without sacrificing quality. Our secret? A groundbreaking, code-first, open-source framework for [building design systems](#).
+    text: `This is a simple text paragraph that demonstrates standard body copy. It can be used to explain a topic, provide background information, or introduce related content in a neutral and readable way.
 
-This tool expedites our **development process**, saving you precious time and enabling us to deliver superior results more quickly. With this framework, your design system aspirations can be realized faster than ever before.
+This paragraph highlights **information** and includes a text link for further reference. Additional details can be found by visiting **[this example link](#)** to explore related content or documentation.
 
-_Experience the power of streamlined development and see the difference it can make in your projects._`,
+*This paragraph is intended to demonstrate italic text formatting.*`,
   }),
 };
 
@@ -46,11 +46,11 @@ export const Centered: Story = {
   },
   args: pack({
     align: "center",
-    text: `We prioritize efficiency without sacrificing quality. Our secret? A groundbreaking, code-first, open-source framework for [building design systems](#).
+    text: `This is a simple text paragraph that demonstrates standard body copy. It can be used to explain a topic, provide background information, or introduce related content in a neutral and readable way.
 
-This tool expedites our **development process**, saving you precious time and enabling us to deliver superior results more quickly. With this framework, your design system aspirations can be realized faster than ever before.
+This paragraph highlights **information** and includes a text link for further reference. Additional details can be found by visiting **[this example link](#)** to explore related content or documentation.
 
-_Experience the power of streamlined development and see the difference it can make in your projects._`,
+*This paragraph is intended to demonstrate italic text formatting.*`,
   }),
 };
 
@@ -63,9 +63,11 @@ export const MultiColumn: Story = {
   },
   args: pack({
     layout: "multiColumn",
-    text: `We prioritize efficiency without sacrificing quality. Our secret? A groundbreaking, code-first, open-source framework for [building design systems](#).
-This tool expedites our **development process**, saving you precious time and enabling us to deliver superior results more quickly. With this framework, your design system aspirations can be realized faster than ever before.
-_Experience the power of streamlined development and see the difference it can make in your projects._`,
+    text: `This is a simple text paragraph that demonstrates standard body copy. It can be used to explain a topic, provide background information, or introduce related content in a neutral and readable way.
+
+This paragraph highlights **information** and includes a text link for further reference. Additional details can be found by visiting **[this example link](#)** to explore related content or documentation.
+
+*This paragraph is intended to demonstrate italic text formatting.*`,
   }),
 };
 
@@ -78,10 +80,10 @@ export const Highlight: Story = {
   },
   args: pack({
     highlightText: true,
-    text: `We prioritize efficiency without sacrificing quality. Our secret? A groundbreaking, code-first, open-source framework for [building design systems](#).
+    text: `This is a simple text paragraph that demonstrates standard body copy. It can be used to explain a topic, provide background information, or introduce related content in a neutral and readable way.
 
-This tool expedites our **development process**, saving you precious time and enabling us to deliver superior results more quickly. With this framework, your design system aspirations can be realized faster than ever before.
+This paragraph highlights **information** and includes a text link for further reference. Additional details can be found by visiting **[this example link](#)** to explore related content or documentation.
 
-_Experience the power of streamlined development and see the difference it can make in your projects._`,
+*This paragraph is intended to demonstrate italic text formatting.*`,
   }),
 };
