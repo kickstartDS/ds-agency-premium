@@ -19,6 +19,11 @@
       "type": "string",
       "title": "Icon Sprite",
       "description": "Content of the icon sprite for this project"
+    },
+    "token": {
+      "type": "string",
+      "title": "CSS custom property overrides",
+      "description": "CSS custom property overrides to be included in the global styles"
     }
   }
 }
