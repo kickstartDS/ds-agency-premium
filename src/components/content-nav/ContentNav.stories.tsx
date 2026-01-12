@@ -27,10 +27,10 @@ export const Default: Story = {
   },
   args: pack({
     image: {
-      src: "img/full-shot-different-people-working-together.png",
-      alt: "A group of people collaborating in an office setting",
+      src: "img/placeholder/avatar-wide.svg",
+      alt: "A placeholder Image",
     },
-    topic: "Industry Intelligence",
+    topic: "Descriptive Topic",
     links: [
       { label: "Market Insights", url: "#" },
       { label: "Industry Trends", url: "#" },

@@ -17,41 +17,38 @@ const meta: Meta = {
   ...getArgsShared(schema as JSONSchema7),
   render: (args) => (
     <Slider {...args}>
-      <TeaserCard
-        imageRatio="unset"
+       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        image="/img/showcases/comp_tfe01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
-          label: "View page",
+          label: "Go to Page",
           hidden: true,
         }}
-        text="See how we saved TechFusions a year's worth of development time"
       />
-      <TeaserCard
-        imageRatio="unset"
+       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        image="/img/showcases/comp_audio01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
-          label: "View page",
+          label: "Go to Page",
           hidden: true,
         }}
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
       />
-      <TeaserCard
-        imageRatio="unset"
+       <TeaserCard
         layout="row"
-        headline="Saving Time and Money"
-        image="/img/showcases/comp_eco01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
-          label: "View page",
+          label: "Go to Page",
           hidden: true,
         }}
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
       />
     </Slider>
   ),

@@ -29,7 +29,7 @@ export const Simple: Story = {
   },
   args: pack({
     testimonial: [
-     {
+      {
         quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
           src: "img/placeholder/avatar-round.svg",
@@ -75,7 +75,7 @@ export const ListLayout: Story = {
     layout: "list",
     testimonial: [
       {
-        quote: `Sample feedback text showing how a testimonial could appear in this component.`,
+        quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
           src: "img/placeholder/avatar-round.svg",
           alt: "Alt Text Testimonial Image",
@@ -117,8 +117,8 @@ export const SliderLayout: Story = {
   },
   args: pack({
     testimonial: [
-       {
-        quote: `Sample feedback text showing how a testimonial could appear in this component.`,
+      {
+        quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
           src: "img/placeholder/avatar-round.svg",
           alt: "Alt Text Testimonial Image",
@@ -157,8 +157,8 @@ export const WithRating: Story = {
   },
   args: pack({
     testimonial: [
-       {
-        quote: `Sample feedback text showing how a testimonial could appear in this component.`,
+      {
+        quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
           src: "img/placeholder/avatar-round.svg",
           alt: "Alt Text Testimonial Image",
@@ -201,8 +201,8 @@ export const AlternatingLayout: Story = {
   args: pack({
     layout: "alternating",
     testimonial: [
-       {
-        quote: `Sample feedback text showing how a testimonial could appear in this component.`,
+      {
+        quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
           src: "img/placeholder/avatar-round.svg",
           alt: "Alt Text Testimonial Image",

@@ -198,6 +198,7 @@ export const AngledImage: Story = {
   args: pack({
     headline: "Key **headline** for this section",
     text: `This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.`,
+    sub: "Subheading for additional context",
     padding: true,
     image: {
       src: "img/placeholder/cta-angled-image.svg",
@@ -226,6 +227,7 @@ export const ColoredBanner: Story = {
   args: pack({
     headline: "Key headline for this section",
     text: "Use this area to add a short description. It provides additional context and helps structure content within the component.",
+    sub: "Subheading for additional context",
     highlightText: true,
     colorNeutral: true,
     backgroundColor: "#a1d5d6ff",
@@ -253,6 +255,7 @@ export const AlignBottom: Story = {
   args: pack({
     headline: "Key headline for this section",
     text: `This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.`,
+    sub: "Subheading for additional context",
     backgroundImage: "img/grid-bg-light.svg",
     align: "bottom",
     image: {

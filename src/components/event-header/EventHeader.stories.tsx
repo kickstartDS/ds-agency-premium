@@ -26,9 +26,9 @@ export const Default: Story = {
     },
   },
   args: pack({
-    title: "Systemics Design Conference 2025",
-    categories: [{ label: "Conference" }, { label: "Design Systems" }],
+    title: "Title of the specific Event",
+    categories: [{ label: "First Category" }, { label: "Second Category" }],
     intro:
-      "A full-day event for design system professionals and enthusiasts. Join us to learn, share, and connect with like-minded individuals.",
+      "This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.",
   }),
 };

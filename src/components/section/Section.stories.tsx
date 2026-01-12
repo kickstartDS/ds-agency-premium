@@ -21,9 +21,9 @@ const meta: Meta = {
     <Section {...args}>
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -32,20 +32,20 @@ const meta: Meta = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
           hidden: true,
         }}
-        image="/img/showcases/comp_audio01.jpg"
       />
       <TeaserCard
         layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -72,8 +72,8 @@ export const DynamicLayout: Story = {
       mode: "flex",
     },
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
       align: "center",
     },
     buttons: [],
@@ -82,9 +82,9 @@ export const DynamicLayout: Story = {
     <Section {...args}>
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
+       headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -93,14 +93,14 @@ export const DynamicLayout: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
           hidden: true,
         }}
-        image="/img/showcases/comp_audio01.jpg"
       />
     </Section>
   ),
@@ -119,8 +119,8 @@ export const TileLayout: Story = {
       mode: "tile",
     },
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
       align: "center",
     },
     buttons: [],
@@ -129,9 +129,9 @@ export const TileLayout: Story = {
     <Section {...args}>
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -140,14 +140,25 @@ export const TileLayout: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
           hidden: true,
         }}
-        image="/img/showcases/comp_audio01.jpg"
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
       />
     </Section>
   ),
@@ -165,8 +176,8 @@ export const ListLayout: Story = {
       mode: "list",
     },
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
       align: "center",
     },
     buttons: [],
@@ -184,15 +195,20 @@ export const Slider: Story = {
     content: {
       mode: "slider",
     },
+     headline: {
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
+      align: "left",
+    },
     buttons: [],
   }),
   render: (args) => (
     <Section {...args}>
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -201,20 +217,9 @@ export const Slider: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        url="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-        image="/img/showcases/comp_audio01.jpg"
-      />
-      <TeaserCard
-        layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -223,9 +228,9 @@ export const Slider: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -234,20 +239,9 @@ export const Slider: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        url="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-        image="/img/showcases/comp_audio01.jpg"
-      />
-      <TeaserCard
-        layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -256,9 +250,9 @@ export const Slider: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -267,20 +261,9 @@ export const Slider: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        url="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-        image="/img/showcases/comp_audio01.jpg"
-      />
-      <TeaserCard
-        layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -289,9 +272,9 @@ export const Slider: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -300,20 +283,42 @@ export const Slider: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
           hidden: true,
         }}
-        image="/img/showcases/comp_audio01.jpg"
       />
       <TeaserCard
         layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
         url="#"
         button={{
           label: "Go to Page",
@@ -335,8 +340,8 @@ export const Inverted: Story = {
     inverted: true,
     content: { mode: "default" },
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
     },
     buttons: [],
   }),
@@ -352,8 +357,8 @@ export const AccentBackground: Story = {
   args: pack({
     backgroundColor: "accent",
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
       align: "center",
     },
     buttons: [],
@@ -370,8 +375,8 @@ export const BoldBackground: Story = {
   args: pack({
     backgroundColor: "bold",
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
       align: "center",
     },
     buttons: [],
@@ -387,8 +392,8 @@ export const Framed: Story = {
   },
   args: pack({
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
       align: "center",
     },
     style: "framed",
@@ -406,8 +411,8 @@ export const BackgroundImage: Story = {
   args: pack({
     backgroundImage: "/img/bg_dot-carpet-blue.svg",
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
     },
     content: {
       mode: "default",
@@ -425,22 +430,22 @@ export const WithButtons: Story = {
   },
   args: pack({
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
       align: "center",
     },
     buttons: [
       {
         disabled: false,
         icon: "arrow-right",
-        label: "All Showcases",
+        label: "Premium Topics",
         size: "medium",
         variant: "secondary",
       },
       {
         disabled: false,
-        icon: "date",
-        label: "Book a meeting",
+        icon: "",
+        label: "Topics Overview",
         size: "medium",
         variant: "secondary",
       },

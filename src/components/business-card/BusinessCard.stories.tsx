@@ -28,8 +28,8 @@ export const Default: Story = {
   args: pack({
     centered: false,
     image: {
-      src: "img/full-shot-different-people-working-together.png",
-      alt: "A group of people collaborating in an office setting",
+      src: "img/placeholder/avatar-square.svg",
+      alt: "A placeholder image",
     },
     logo: {
       src: "logo.svg",
@@ -39,7 +39,7 @@ export const Default: Story = {
     topic: "Industry Intelligence",
     address: `1234 Business Lane<br />Suite 567 <br />Business City, BC 12345`,
     avatar: {
-      src: "img/people/contact-person.png",
+      src: "img/placeholder/avatar-business-card-round.svg",
       alt: "Emily Johnson",
     },
     contact: [
@@ -55,7 +55,7 @@ export const Default: Story = {
         url: "#",
       },
     ],
-    buttons: [{ label: "Market Insights", url: "#" }],
+    buttons: [{ label: "Contact me", url: "#" }],
   }),
 };
 
@@ -69,8 +69,8 @@ export const Centered: Story = {
   args: pack({
     centered: true,
     image: {
-      src: "img/full-shot-different-people-working-together.png",
-      alt: "A group of people collaborating in an office setting",
+      src: "img/placeholder/avatar-square.svg",
+      alt: "A placeholder image",
     },
     logo: {
       src: "logo.svg",
@@ -80,7 +80,7 @@ export const Centered: Story = {
     topic: "Industry Intelligence",
     address: `1234 Business Lane<br />Suite 567 <br />Business City, BC 12345`,
     avatar: {
-      src: "img/people/contact-person.png",
+      src: "img/placeholder/avatar-business-card-round.svg",
       alt: "Emily Johnson",
     },
     contact: [
@@ -96,7 +96,7 @@ export const Centered: Story = {
         url: "#",
       },
     ],
-    buttons: [{ label: "Market Insights", url: "#" }],
+    buttons: [{ label: "Contact me", url: "#" }],
   }),
 };
 
@@ -117,7 +117,7 @@ export const WithoutImage: Story = {
     topic: "Industry Intelligence",
     address: `1234 Business Lane<br />Suite 567 <br />Business City, BC 12345`,
     avatar: {
-      src: "img/people/contact-person.png",
+      src: "img/placeholder/avatar-business-card-round.svg",
       alt: "Emily Johnson",
     },
     contact: [
@@ -133,6 +133,6 @@ export const WithoutImage: Story = {
         url: "#",
       },
     ],
-    buttons: [{ label: "Market Insights", url: "#" }],
+    buttons: [{ label: "Contact me", url: "#" }],
   }),
 };

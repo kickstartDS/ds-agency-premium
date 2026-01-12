@@ -28,12 +28,17 @@ export const Default: Story = {
     },
   },
   args: pack({
-    date: "12/30/2025",
-    location: "Berlin, Germany",
-    title: "The Future of AI",
-    link: {
+      date: "09/18/2025",
+      title: "Title of an Event",
+      location: "Example City",
       url: "#",
-      text: "Show event",
+      cta: "Go to event",
+      calendar: {
+        day: "18",
+        month: "Sep",
+      },
+      ariaLabel:
+        "Demo Event One on September 18, 2025 in Example City",
     },
-  }),
+  ),
 };
