@@ -26,7 +26,7 @@ export const SearchForm: FC<
     data-results-per-page={resultPerPage}
     {...props}
   >
-    <SearchBar alternativeText="" alternativeResult="" hint="" />
+    <SearchBar />
     <div hidden>
       <li data-template="result" className="lazyload">
         <SearchResult

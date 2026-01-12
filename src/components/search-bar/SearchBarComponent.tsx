@@ -19,7 +19,7 @@ export const SearchBarContextDefault = forwardRef<
       placeholder,
       hint = "Press <kbd>Enter</kbd> to search",
       alternativeText = "Did you mean",
-      alternativeResult = "AI Conference",
+      alternativeResult,
     },
     ref
   ) => (

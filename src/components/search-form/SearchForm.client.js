@@ -1,8 +1,8 @@
 import { Component, define } from "@kickstartds/core/lib/component";
-import { events as lazyEvents } from "@kickstartds/core/lib/core";
+import { events as lazyEvents, inBrowser } from "@kickstartds/core/lib/core";
 import { debounce } from "@kickstartds/core/lib/utils";
 
-const parser = new DOMParser();
+const parser = inBrowser && new DOMParser();
 
 const renderPagination = (
   $pagination,
@@ -11,6 +11,11 @@ const renderPagination = (
   currentPageIndex,
   hrefPrefix
 ) => {
+  if (totalPages < 2) {
+    $pagination.setAttribute("hidden", "hidden");
+    return;
+  }
+
   const [$first, $prev, $pages, $next, $last] = $pagination.children;
   $pages.textContent = "";
 
@@ -47,7 +52,12 @@ const renderPagination = (
   $pagination.removeAttribute("hidden");
 };
 
-const renderMoreButton = ($button, totalResults) => {
+const renderMoreButton = ($button, totalResults, totalPages) => {
+  if (totalPages < 2) {
+    $button.setAttribute("hidden", "hidden");
+    return;
+  }
+
   $button.removeAttribute("hidden");
   const $count = $button.children[0].children[0];
   $count.textContent = totalResults;
@@ -104,7 +114,6 @@ export default class SearchForm extends Component {
   static identifier = "dsa.search-form";
 
   lazyResults = new WeakMap();
-  resultsPerPage = 10;
   state = {
     term: undefined,
     page: undefined,
@@ -195,18 +204,25 @@ export default class SearchForm extends Component {
       });
       this.onRadio("dsa.search.loaded", () => {
         if (this.state.results.length) {
+          const totalPages = Math.ceil(
+            this.state.results.length / this.resultsPerPage
+          );
           const startIndex = this.state.page * this.resultsPerPage;
           const endIndex = startIndex + this.resultsPerPage;
           const results = this.state.results.slice(startIndex, endIndex);
           this.renderResults(results);
 
           if (this.element.hasAttribute("action")) {
-            renderMoreButton(this.$moreButton, this.state.results.length);
+            renderMoreButton(
+              this.$moreButton,
+              this.state.results.length,
+              totalPages
+            );
           } else {
             renderPagination(
               this.$pagination,
               this.$paginationLinkTemplate,
-              Math.ceil(this.state.results.length / this.resultsPerPage),
+              totalPages,
               this.state.page,
               `#q=${this.state.term}&page=`
             );
