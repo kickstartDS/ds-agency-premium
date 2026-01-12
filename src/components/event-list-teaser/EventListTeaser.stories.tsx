@@ -5,6 +5,7 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 import { EventListTeaser } from "./EventListTeaserComponent";
 import schema from "./event-list-teaser.schema.dereffed.json";
 import customProperties from "./event-list-teaser-tokens.json";
+import { TagLabel } from "@kickstartds/base/lib/tag-label";
 
 const meta: Meta<typeof EventListTeaser> = {
   title: "Event/ Event List Teaser",
@@ -28,19 +29,20 @@ export const Default: Story = {
     },
   },
   args: pack({
-    text: "The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence.",
+    text: "This paragraph represents generic body text. It can be used to describe products, services, or relevant information.The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence.",
     date: "30.12.2025",
     location: {
       name: "Tech Conference Center",
       address: `Alexanderplatz 1<br />
 10178 Berlin`,
     },
-    title: "The Future of AI",
+    title: "Title of an Event",
+    category: "Category",
     image: {
-      src: "img/close-up-young-business-team-working.png",
-      alt: "A futuristic AI concept image",
+      src: "img/placeholder/avatar-square.svg",
+      alt: "A placeholder Image",
     },
     url: "#",
-    ctaText: "Show event",
+    ctaText: "Go to event",
   }),
 };

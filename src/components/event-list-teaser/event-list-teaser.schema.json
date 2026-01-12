@@ -9,7 +9,7 @@
       "title": "Category",
       "description": "Category of the event teaser",
       "type": "string",
-      "examples": ["Buyers"]
+      "examples": ["Category"]
     },
     "title": {
       "title": "Headline",
@@ -67,7 +67,7 @@
         "type": "string",
         "examples": ["AI", "Technology", "Innovation"]
       },
-      "default": ["AI"]
+      "default": ["Topic 1", "Topic 2"]
     },
     "image": {
       "title": "Image",

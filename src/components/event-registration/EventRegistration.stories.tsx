@@ -31,14 +31,14 @@ export const Default: Story = {
       name: "Tech Conference Center",
       address: `Alexanderplatz 1<br/>10178 Berlin`,
     },
-    date: "18.09.2025",
+    date: "18.09.2026",
     time: "09:00 – 17:00",
     confirmationCheckboxLabel: `I read and agree to the terms and conditions*`,
     cta: {
       label: "Send Request",
       url: "#",
       ariaLabel:
-        "Register for the event on 18th September 2025 from 09:00 to 17:00",
+        "Register for the event on 18th September 2026 from 09:00 to 17:00",
     },
   }),
 };
