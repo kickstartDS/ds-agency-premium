@@ -1,4 +1,4 @@
-@import "../../selectors";
+@use "../../selectors" as *;
 
 #{$selectors} {
   --dsa-headline--color: var(--ks-text-color-display);

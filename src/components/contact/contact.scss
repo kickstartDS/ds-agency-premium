@@ -1,5 +1,5 @@
 @use "@kickstartds/core/source/core/container";
-@import "contact-tokens";
+@use "contact-tokens";
 @include container.wrapper("contact");
 
 .dsa-contact {

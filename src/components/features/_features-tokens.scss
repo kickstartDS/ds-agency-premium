@@ -19,11 +19,14 @@
   --dsa-feature__icon--color: var(--ks-text-color-primary);
 
   --dsa-feature_small__icon--size: calc(var(--ks-line-height-interface-m) * var(--ks-font-size-interface-m));
+  --dsa-feature_medium__icon--size-multiplier: 2;
   --dsa-feature_large__icon--size-multiplier: 2.5;
 
   --dsa-feature_small--gap: var(--ks-spacing-xs);
-  --dsa-feature_large--gap: var(--ks-spacing-s);
+  --dsa-feature_medium--gap: var(--ks-spacing-xs);
+  --dsa-feature_large--gap: var(--ks-spacing-xs);
 
-  --dsa-feature_small__icon--gap: var(--ks-spacing-xs);
+  --dsa-feature_small__icon--gap: var(--ks-spacing-xxs);
+  --dsa-feature_medium__icon--gap: var(--ks-spacing-s);
   --dsa-feature_large__icon--gap: var(--ks-spacing-s);
 }

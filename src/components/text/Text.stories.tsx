@@ -24,7 +24,7 @@ export const SingleColumn: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 407,
+      height: 316,
     },
   },
   args: pack({
@@ -41,7 +41,7 @@ export const Centered: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 407,
+      height: 314,
     },
   },
   args: pack({
@@ -58,7 +58,7 @@ export const MultiColumn: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 330,
+      height: 298,
     },
   },
   args: pack({
@@ -75,7 +75,7 @@ export const Highlight: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 482,
+      height: 380,
     },
   },
   args: pack({

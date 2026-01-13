@@ -1,4 +1,4 @@
-@import "content-nav-tokens.scss";
+@use "content-nav-tokens.scss";
 
 .dsa-content-nav {
   border-radius: var(--ks-border-radius-card);

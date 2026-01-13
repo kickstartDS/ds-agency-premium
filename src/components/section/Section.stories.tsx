@@ -64,7 +64,7 @@ export const DynamicLayout: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 928,
+      height: 846,
     },
   },
   args: pack({
@@ -82,7 +82,7 @@ export const DynamicLayout: Story = {
     <Section {...args}>
       <TeaserCard
         layout="row"
-       headline="Explore This Topic"
+        headline="Explore This Topic"
         text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
         image="img/placeholder/avatar-wide.svg"
         url="#"
@@ -110,7 +110,7 @@ export const TileLayout: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 445,
+      height: 744,
     },
   },
   args: pack({
@@ -168,7 +168,7 @@ export const ListLayout: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 1658,
+      height: 1416,
     },
   },
   args: pack({
@@ -188,14 +188,14 @@ export const Slider: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 938,
+      height: 816,
     },
   },
   args: pack({
     content: {
       mode: "slider",
     },
-     headline: {
+    headline: {
       text: "Key headline for this section",
       sub: "Short explanatory subheadline",
       align: "left",
@@ -333,7 +333,7 @@ export const Inverted: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 928,
+      height: 744,
     },
   },
   args: pack({
@@ -351,7 +351,7 @@ export const AccentBackground: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 928,
+      height: 744,
     },
   },
   args: pack({
@@ -369,7 +369,7 @@ export const BoldBackground: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 928,
+      height: 744,
     },
   },
   args: pack({
@@ -387,10 +387,11 @@ export const Framed: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 928,
+      height: 888,
     },
   },
   args: pack({
+    width: "wide",
     headline: {
       text: "Key headline for this section",
       sub: "Short explanatory subheadline",
@@ -405,7 +406,7 @@ export const BackgroundImage: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 928,
+      height: 744,
     },
   },
   args: pack({
@@ -425,7 +426,7 @@ export const WithButtons: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 1016,
+      height: 818,
     },
   },
   args: pack({

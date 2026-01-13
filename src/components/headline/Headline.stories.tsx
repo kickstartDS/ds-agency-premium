@@ -24,7 +24,7 @@ export const H1: Story = {
   parameters: {
     viewport: {
       width: 800,
-      height: 218,
+      height: 240,
     },
   },
   args: pack({
@@ -38,7 +38,7 @@ export const H2: Story = {
   parameters: {
     viewport: {
       width: 800,
-      height: 206,
+      height: 200,
     },
   },
   args: pack({
@@ -52,7 +52,7 @@ export const H3: Story = {
   parameters: {
     viewport: {
       width: 800,
-      height: 195,
+      height: 190,
     },
   },
   args: pack({
@@ -66,7 +66,7 @@ export const H4: Story = {
   parameters: {
     viewport: {
       width: 800,
-      height: 189,
+      height: 184,
     },
   },
   args: pack({
@@ -80,7 +80,7 @@ export const WithSubheadline: Story = {
   parameters: {
     viewport: {
       width: 800,
-      height: 252,
+      height: 228,
     },
   },
   args: pack({
@@ -93,7 +93,7 @@ export const OrderSwapped: Story = {
   parameters: {
     viewport: {
       width: 800,
-      height: 252,
+      height: 228,
     },
   },
   args: pack({
@@ -107,7 +107,7 @@ export const WithMarkdown: Story = {
   parameters: {
     viewport: {
       width: 800,
-      height: 252,
+      height: 228,
     },
   },
   args: pack({

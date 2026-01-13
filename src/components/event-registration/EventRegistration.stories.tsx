@@ -21,8 +21,8 @@ type Story = StoryObj<typeof EventRegistration>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 863,
+      width: 770,
+      height: 618,
     },
   },
   args: pack({

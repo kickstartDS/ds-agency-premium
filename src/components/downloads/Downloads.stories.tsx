@@ -23,8 +23,8 @@ type Story = StoryObj<typeof Downloads>;
 export const TechnicalDetailsOnly: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 472,
+      width: 770,
+      height: 416,
     },
   },
   args: pack({
@@ -62,8 +62,8 @@ export const TechnicalDetailsOnly: Story = {
 export const DescriptionOnly: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 472,
+      width: 770,
+      height: 460,
     },
   },
   args: pack({
@@ -97,8 +97,8 @@ export const DescriptionOnly: Story = {
 export const Complete: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 472,
+      width: 770,
+      height: 516,
     },
   },
   args: pack({
@@ -138,8 +138,8 @@ export const Complete: Story = {
 export const Mixed: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 472,
+      width: 770,
+      height: 460,
     },
   },
   args: pack({

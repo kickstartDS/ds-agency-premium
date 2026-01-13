@@ -24,7 +24,7 @@ export const ProductTiles: Story = {
   parameters: {
     viewport: {
       width: 650,
-      height: 653,
+      height: 678,
     },
   },
   args: pack({
@@ -43,7 +43,7 @@ export const PageNavigation: Story = {
   parameters: {
     viewport: {
       width: 650,
-      height: 678,
+      height: 640,
     },
   },
   args: pack({
@@ -62,7 +62,7 @@ export const ShowcasePreview: Story = {
   parameters: {
     viewport: {
       width: 650,
-      height: 750,
+      height: 738,
     },
   },
   args: pack({

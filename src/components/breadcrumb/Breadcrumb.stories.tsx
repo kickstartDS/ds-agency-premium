@@ -23,8 +23,8 @@ type Story = StoryObj<typeof Breadcrumb>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 472,
+      width: 770,
+      height: 170,
     },
   },
   args: pack({

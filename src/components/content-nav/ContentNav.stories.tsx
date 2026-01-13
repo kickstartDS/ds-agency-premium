@@ -21,8 +21,8 @@ type Story = StoryObj<typeof ContentNav>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 863,
+      width: 640,
+      height: 652,
     },
   },
   args: pack({

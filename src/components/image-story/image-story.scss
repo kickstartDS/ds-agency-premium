@@ -1,4 +1,4 @@
-@import "image-story-tokens.scss";
+@use "image-story-tokens.scss";
 
 .c-storytelling.dsa-image-story {
   gap: var(--c-storytelling--horizontal-padding);

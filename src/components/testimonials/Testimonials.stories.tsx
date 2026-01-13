@@ -23,7 +23,7 @@ type Story = StoryObj<typeof Testimonials>;
 export const Simple: Story = {
   parameters: {
     viewport: {
-      width: 1000,
+      width: 770,
       height: 409,
     },
   },
@@ -45,7 +45,7 @@ export const Simple: Story = {
 export const WithTitle: Story = {
   parameters: {
     viewport: {
-      width: 1000,
+      width: 770,
       height: 409,
     },
   },
@@ -67,8 +67,8 @@ export const WithTitle: Story = {
 export const ListLayout: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 1080,
+      width: 770,
+      height: 996,
     },
   },
   args: pack({
@@ -111,8 +111,8 @@ export const ListLayout: Story = {
 export const SliderLayout: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 1080,
+      width: 770,
+      height: 450,
     },
   },
   args: pack({
@@ -151,8 +151,8 @@ export const SliderLayout: Story = {
 export const WithRating: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 1080,
+      width: 770,
+      height: 450,
     },
   },
   args: pack({
@@ -194,8 +194,8 @@ export const WithRating: Story = {
 export const AlternatingLayout: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 1080,
+      width: 770,
+      height: 996,
     },
   },
   args: pack({

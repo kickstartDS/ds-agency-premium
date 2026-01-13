@@ -1,5 +1,5 @@
 @use "@kickstartds/core/source/core/container";
-@import "../../selectors";
+@use "../../selectors" as *;
 @include container.wrapper("section");
 
 .dsa-section {

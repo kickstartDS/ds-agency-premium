@@ -1,4 +1,4 @@
-@import "split-weighted-tokens.scss";
+@use "split-weighted-tokens.scss";
 
 .l-split-weighted {
   --dsa-split-weighted--v-gutter: var(--dsa-split-weighted--v-gutter_default, var(--ks-spacing-stack-m));

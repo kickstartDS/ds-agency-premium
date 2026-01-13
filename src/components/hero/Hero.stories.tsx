@@ -23,8 +23,8 @@ type Story = StoryObj<typeof Hero>;
 export const TextBelowImage: Story = {
   parameters: {
     viewport: {
-      width: 1165,
-      height: 780,
+      width: 1024,
+      height: 884,
     },
   },
   args: pack({
@@ -53,8 +53,8 @@ export const TextBelowImage: Story = {
 export const TextOnImageWithOverlay: Story = {
   parameters: {
     viewport: {
-      width: 1165,
-      height: 780,
+      width: 1024,
+      height: 738,
     },
   },
   args: pack({
@@ -83,8 +83,8 @@ export const TextOnImageWithOverlay: Story = {
 export const TextBoxOnFullScreen: Story = {
   parameters: {
     viewport: {
-      width: 1160,
-      height: 1080,
+      width: 1440,
+      height: 900,
     },
   },
   args: pack({

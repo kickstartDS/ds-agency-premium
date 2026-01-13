@@ -23,22 +23,20 @@ type Story = StoryObj<typeof EventLatestTeaser>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 504,
+      width: 790,
+      height: 248,
     },
   },
   args: pack({
-      date: "09/18/2025",
-      title: "Title of an Event",
-      location: "Example City",
-      url: "#",
-      cta: "Go to event",
-      calendar: {
-        day: "18",
-        month: "Sep",
-      },
-      ariaLabel:
-        "Demo Event One on September 18, 2025 in Example City",
+    date: "09/18/2025",
+    title: "Title of an Event",
+    location: "Example City",
+    url: "#",
+    cta: "Go to event",
+    calendar: {
+      day: "18",
+      month: "Sep",
     },
-  ),
+    ariaLabel: "Demo Event One on September 18, 2025 in Example City",
+  }),
 };

@@ -21,8 +21,8 @@ type Story = StoryObj<typeof BusinessCard>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 863,
+      width: 650,
+      height: 838,
     },
   },
   args: pack({
@@ -62,8 +62,8 @@ export const Default: Story = {
 export const Centered: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 863,
+      width: 650,
+      height: 838,
     },
   },
   args: pack({
@@ -103,8 +103,8 @@ export const Centered: Story = {
 export const WithoutImage: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 863,
+      width: 740,
+      height: 438,
     },
   },
   args: pack({

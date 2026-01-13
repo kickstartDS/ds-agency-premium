@@ -24,7 +24,7 @@ export const Accent: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 100,
+      height: 148,
     },
   },
   args: pack({
@@ -36,7 +36,7 @@ export const Default: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 100,
+      height: 148,
     },
   },
   args: pack({

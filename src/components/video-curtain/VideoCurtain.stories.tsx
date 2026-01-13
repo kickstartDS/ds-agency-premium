@@ -23,8 +23,8 @@ type Story = StoryObj<typeof VideoCurtain>;
 export const AtmosphericVideoWithOverlay: Story = {
   parameters: {
     viewport: {
-      width: 1559,
-      height: 720,
+      width: 1280,
+      height: 800,
     },
   },
   args: pack({
@@ -49,8 +49,8 @@ export const AtmosphericVideoWithOverlay: Story = {
 export const ColorNeutralText: Story = {
   parameters: {
     viewport: {
-      width: 1559,
-      height: 720,
+      width: 1280,
+      height: 800,
     },
   },
   args: pack({
@@ -77,8 +77,8 @@ export const ColorNeutralText: Story = {
 export const ColorNeutralVideo: Story = {
   parameters: {
     viewport: {
-      width: 1559,
-      height: 720,
+      width: 1280,
+      height: 800,
     },
   },
   args: pack({

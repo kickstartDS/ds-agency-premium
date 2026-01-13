@@ -24,7 +24,7 @@ export const CountUpWithIcons: Story = {
   parameters: {
     viewport: {
       width: 790,
-      height: 480,
+      height: 318,
     },
   },
   args: pack({
@@ -40,7 +40,7 @@ export const CountUpWithDescription: Story = {
   parameters: {
     viewport: {
       width: 700,
-      height: 480,
+      height: 278,
     },
   },
   args: pack({

@@ -23,8 +23,8 @@ type Story = StoryObj<typeof EventLatest>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 504,
+      width: 790,
+      height: 580,
     },
   },
   args: pack({
@@ -39,8 +39,7 @@ export const Default: Story = {
           day: "18",
           month: "Sep",
         },
-        ariaLabel:
-          "Demo Event One on September 18, 2025 in Example City",
+        ariaLabel: "Demo Event One on September 18, 2025 in Example City",
       },
       {
         date: "10/05/2025",
@@ -76,8 +75,7 @@ export const Default: Story = {
           day: "01",
           month: "Dec",
         },
-        ariaLabel:
-          "Sample Event Title on December 1, 2025 remote and online",
+        ariaLabel: "Sample Event Title on December 1, 2025 remote and online",
       },
     ],
   }),

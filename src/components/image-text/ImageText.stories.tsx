@@ -45,7 +45,7 @@ export const AboveLayout: Story = {
   parameters: {
     viewport: {
       width: 760,
-      height: 829,
+      height: 788,
     },
   },
   args: pack({

@@ -24,7 +24,7 @@ export const ColorfulTiles: Story = {
   parameters: {
     viewport: {
       width: 1010,
-      height: 1520,
+      height: 1480,
     },
   },
   args: pack({
@@ -62,7 +62,7 @@ export const ColorfulTextWithImagesBeside: Story = {
   parameters: {
     viewport: {
       width: 1010,
-      height: 1520,
+      height: 1480,
     },
   },
   args: pack({

@@ -10,6 +10,10 @@ const meta: Meta = {
   component: Html,
   parameters: {
     jsonschema: { schema },
+    viewport: {
+      width: 770,
+      height: 198,
+    },
   },
   ...getArgsShared(schema as JSONSchema7),
 };
@@ -21,6 +25,12 @@ type Story = StoryObj<typeof Html>;
 export const HTML: Story = {};
 
 export const WithConsent: Story = {
+  parameters: {
+    viewport: {
+      width: 770,
+      height: 512,
+    },
+  },
   args: pack({
     html: `<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oGGIkuGY-7U?si=Y5_JHflGsNwRCLu_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     consent: true,
@@ -31,6 +41,12 @@ export const WithConsent: Story = {
 };
 
 export const WithScript: Story = {
+  parameters: {
+    viewport: {
+      width: 770,
+      height: 512,
+    },
+  },
   args: pack({
     html: `<script>alert("Hello :)")</script><p style="color: var(--ks-text-color-default);">Nice to meet you!</p>`,
     consent: true,

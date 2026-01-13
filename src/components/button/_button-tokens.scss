@@ -1,4 +1,4 @@
-@import "../../selectors";
+@use "../../selectors" as *;
 
 .dsa-button {
   --dsa-button--padding: 0.75em 1.5em;

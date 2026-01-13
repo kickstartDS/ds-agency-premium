@@ -1,5 +1,5 @@
 @use "@kickstartds/core/source/core/container";
-@import "business-card-tokens.scss";
+@use "business-card-tokens.scss";
 @include container.wrapper("business-card");
 
 .dsa-business-card {

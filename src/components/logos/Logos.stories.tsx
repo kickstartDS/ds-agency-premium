@@ -24,7 +24,7 @@ export const CenteredWithButton: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 598,
+      height: 492,
     },
   },
   args: pack({
@@ -65,7 +65,7 @@ export const LeftAlignedWithTextLink: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 517,
+      height: 420,
     },
   },
   args: pack({
@@ -106,7 +106,7 @@ export const LogoWall: Story = {
   parameters: {
     viewport: {
       width: 1080,
-      height: 860,
+      height: 546,
     },
   },
   args: pack({
@@ -172,7 +172,7 @@ export const LogoRow: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 450,
+      height: 248,
     },
   },
   args: pack({
