@@ -1,4 +1,4 @@
-@import "../../selectors";
+@use "../../selectors" as *;
 
 #{$selectors} {
   --dsa-text--font: var(--dsa-rich-text--font);

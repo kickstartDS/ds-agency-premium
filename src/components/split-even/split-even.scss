@@ -1,4 +1,4 @@
-@import "split-even-tokens.scss";
+@use "split-even-tokens.scss";
 
 .l-split-even {
   --dsa-split-even--v-gutter: var(--dsa-split-even--v-gutter_default, var(--ks-spacing-stack-m));

@@ -23,8 +23,8 @@ type Story = StoryObj<typeof ImageStory>;
 export const StickyImageNextToScrollingText: Story = {
   parameters: {
     viewport: {
-      width: 1160,
-      height: 960,
+      width: 1440,
+      height: 1144,
     },
   },
   args: pack({

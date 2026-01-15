@@ -24,7 +24,7 @@ export const DropdownList: Story = {
   parameters: {
     viewport: {
       width: 820,
-      height: 455,
+      height: 348,
     },
   },
   args: pack({
@@ -52,7 +52,7 @@ export const SingleDropdown: Story = {
   parameters: {
     viewport: {
       width: 820,
-      height: 228,
+      height: 216,
     },
   },
   args: pack({

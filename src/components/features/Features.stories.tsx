@@ -24,7 +24,7 @@ export const IconCentered: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 666,
+      height: 636,
     },
   },
   args: pack({
@@ -146,8 +146,8 @@ export const StackWithButton: Story = {
 export const ListView: Story = {
   parameters: {
     viewport: {
-      width: 768,
-      height: 755,
+      width: 770,
+      height: 844,
     },
   },
   args: pack({
@@ -220,7 +220,7 @@ export const IconBesideWithLinkInText: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 506,
+      height: 476,
     },
   },
   args: pack({

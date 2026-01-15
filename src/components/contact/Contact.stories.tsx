@@ -24,7 +24,7 @@ export const WideImage: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 200,
+      height: 276,
     },
   },
   args: pack({
@@ -55,7 +55,7 @@ export const CircularAvatar: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 200,
+      height: 332,
     },
   },
   args: pack({
@@ -86,7 +86,7 @@ export const VerticalImageWithParagraph: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 200,
+      height: 376,
     },
   },
   args: pack({
@@ -118,7 +118,7 @@ export const FullImageWidth: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 200,
+      height: 360,
     },
   },
   args: pack({

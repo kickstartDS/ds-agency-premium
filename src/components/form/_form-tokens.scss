@@ -1,4 +1,4 @@
-@import "../../selectors";
+@use "../../selectors" as *;
 
 .c-form-check-group {
   --dsa-check-group__label--color: var(--ks-text-color-interface);

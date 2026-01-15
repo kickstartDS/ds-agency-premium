@@ -75,7 +75,7 @@ export const LargeLandscapeTiles: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 735,
+      height: 724,
     },
   },
   args: pack({
@@ -120,7 +120,7 @@ export const FreeAspectRatio: Story = {
   parameters: {
     viewport: {
       width: 1040,
-      height: 779,
+      height: 818,
     },
   },
   args: pack({

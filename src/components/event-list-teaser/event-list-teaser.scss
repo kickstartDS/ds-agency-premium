@@ -1,5 +1,5 @@
 @use "@kickstartds/core/source/core/container";
-@import "event-list-teaser-tokens.scss";
+@use "event-list-teaser-tokens.scss";
 @include container.wrapper("event-list-teaser");
 
 .dsa-event-list-teaser {

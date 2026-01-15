@@ -24,7 +24,7 @@ export const Banner: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 472,
+      height: 328,
     },
   },
   args: pack({
@@ -51,7 +51,7 @@ export const Highlighted: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 551,
+      height: 390,
     },
   },
   args: pack({
@@ -74,7 +74,7 @@ export const LeftAligned: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 443,
+      height: 354,
     },
   },
   args: pack({
@@ -95,7 +95,7 @@ export const ProductAdvertisement: Story = {
   parameters: {
     viewport: {
       width: 1400,
-      height: 660,
+      height: 690,
     },
   },
   args: pack({
@@ -127,7 +127,7 @@ export const ContactBanner: Story = {
   parameters: {
     viewport: {
       width: 1600,
-      height: 560,
+      height: 628,
     },
   },
   args: pack({
@@ -161,7 +161,7 @@ export const SplitBanner: Story = {
   parameters: {
     viewport: {
       width: 1680,
-      height: 850,
+      height: 788,
     },
   },
   args: pack({
@@ -192,7 +192,7 @@ export const AngledImage: Story = {
   parameters: {
     viewport: {
       width: 1670,
-      height: 910,
+      height: 788,
     },
   },
   args: pack({
@@ -221,7 +221,7 @@ export const ColoredBanner: Story = {
   parameters: {
     viewport: {
       width: 1350,
-      height: 500,
+      height: 484,
     },
   },
   args: pack({
@@ -249,7 +249,7 @@ export const AlignBottom: Story = {
   parameters: {
     viewport: {
       width: 1680,
-      height: 1040,
+      height: 905,
     },
   },
   args: pack({

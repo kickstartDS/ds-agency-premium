@@ -1,11 +1,11 @@
-@import "./border-color/border-color-preview.scss";
-@import "./background-color/background-color-preview.scss";
-@import "./color/color-preview.scss";
-@import "./font-size/font-size-preview.scss";
-@import "./spacing/spacing-preview.scss";
-@import "./shadow/shadow-preview.scss";
-@import "./border/border-preview.scss";
-@import "./transition/transition-preview.scss";
+@use "./border-color/border-color-preview.scss";
+@use "./background-color/background-color-preview.scss";
+@use "./color/color-preview.scss";
+@use "./font-size/font-size-preview.scss";
+@use "./spacing/spacing-preview.scss";
+@use "./shadow/shadow-preview.scss";
+@use "./border/border-preview.scss";
+@use "./transition/transition-preview.scss";
 
 .preview-page {
   max-width: 900px;

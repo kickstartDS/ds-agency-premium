@@ -11,6 +11,10 @@ const meta: Meta<typeof SearchModal> = {
   title: "Corporate / Search Modal",
   component: SearchModal,
   parameters: {
+    viewport: {
+      width: 770,
+      height: 216,
+    },
     jsonschema: { schema },
   },
   ...getArgsShared(schema as JSONSchema7),

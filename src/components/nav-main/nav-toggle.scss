@@ -1,6 +1,6 @@
 @use "sass:math";
 @use "bourbon/core/bourbon";
-@import "nav-toggle-tokens.scss";
+@use "nav-toggle-tokens.scss";
 
 html.overlay-open {
   overflow: hidden;

@@ -5,7 +5,6 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 import { EventListTeaser } from "./EventListTeaserComponent";
 import schema from "./event-list-teaser.schema.dereffed.json";
 import customProperties from "./event-list-teaser-tokens.json";
-import { TagLabel } from "@kickstartds/base/lib/tag-label";
 
 const meta: Meta<typeof EventListTeaser> = {
   title: "Event/ Event List Teaser",
@@ -24,8 +23,8 @@ type Story = StoryObj<typeof EventListTeaser>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 504,
+      width: 1024,
+      height: 524,
     },
   },
   args: pack({

@@ -1,5 +1,5 @@
 @use "@kickstartds/core/source/core/container";
-@import "blog-teaser-tokens.scss";
+@use "blog-teaser-tokens.scss";
 @include container.wrapper("post-teaser");
 
 .dsa-blog-teaser.c-post-teaser {
