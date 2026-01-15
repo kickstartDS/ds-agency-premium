@@ -46,6 +46,11 @@
         }
       }
     },
+    "token": {
+      "type": "string",
+      "title": "Local CSS custom property overrides",
+      "description": "CSS custom property overrides to be included in the global styles"
+    },
     "seo": {
       "$ref": "http://cms.mydesignsystem.com/seo.schema.json"
     }
