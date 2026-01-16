@@ -140,7 +140,7 @@ export const FAQWithForm: Story = {
   }),
 };
 
-export const Grid: Story = {
+export const TeaserTiles: Story = {
   parameters: {
     viewport: {
       width: 1440,
@@ -162,6 +162,10 @@ export const Grid: Story = {
           image="img/placeholder/avatar-wide.svg"
           text="Lorem Ispum dolor sit amet, consectetur adipiscing elit."
           imageRatio="landscape"
+          button={{
+            label: "Mehr erfahren",
+            chevron: true,
+          }}
         />
       </>
     ),

@@ -135,13 +135,17 @@ export const TeaserTiles: Story = {
   args: pack({
     horizontalGutter: "small",
     verticalAlign: "stretch",
+    order: {
+      desktop: "asideFirst",
+      mobile: "asideFirst",
+    },
     mainLayout: {
       gutter: "small",
       minWidth: "narrow",
       layout: "smallTiles",
     },
     asideLayout: {
-      minWidth: "wide",
+      minWidth: "default",
       gutter: "small",
     },
     aside: (
@@ -154,6 +158,7 @@ export const TeaserTiles: Story = {
           imageRatio="square"
           button={{
             label: "Mehr erfahren",
+            chevron: true,
           }}
         />
       </>
