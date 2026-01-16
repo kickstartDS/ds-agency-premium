@@ -41,7 +41,7 @@ export type HorizontalGutter = "large" | "default" | "small" | "none";
 /**
  * Aligns the content vertically within the sections
  */
-export type VerticalAlignment = "top" | "center" | "bottom" | "sticky";
+export type VerticalAlignment = "top" | "center" | "bottom" | "sticky" | "stretch";
 /**
  * Sets the space between the content of the split layout
  */
@@ -51,6 +51,10 @@ export type ContentGutter = "large" | "default" | "small" | "none";
  */
 export type MinimumWidth = "narrow" | "default" | "wide";
 /**
+ * Sets the layout of the main section
+ */
+export type Layout = "gutter" | "largeTiles" | "list";
+/**
  * Size of gutter to use
  */
 export type Gutter = "large" | "default" | "small" | "none";
@@ -58,6 +62,10 @@ export type Gutter = "large" | "default" | "small" | "none";
  * Sets the minimum width of the main section
  */
 export type MinimumWidth1 = "narrow" | "default" | "wide";
+/**
+ * Sets the layout of the main section
+ */
+export type Layout1 = "gutter" | "largeTiles" | "list";
 /**
  * Determines the order of sections on mobile devices
  */
@@ -138,6 +146,7 @@ export interface SplitWeightedProps {
 export interface MainLayout {
   gutter?: ContentGutter;
   minWidth?: MinimumWidth;
+  layout?: Layout;
 }
 /**
  * Layout settings for the aside section of the split layout
@@ -145,6 +154,7 @@ export interface MainLayout {
 export interface AsideLayout {
   gutter?: Gutter;
   minWidth?: MinimumWidth1;
+  layout?: Layout1;
 }
 /**
  * Sets the order of the main and aside sections in the split layout

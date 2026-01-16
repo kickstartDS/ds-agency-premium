@@ -22,7 +22,7 @@
       "title": "Vertical Alignment",
       "type": "string",
       "description": "Aligns the content vertically within the sections",
-      "enum": ["top", "center", "bottom", "sticky"],
+      "enum": ["top", "center", "bottom", "sticky", "stretch"],
       "default": "top"
     },
     "mainLayout": {
@@ -42,6 +42,13 @@
           "type": "string",
           "enum": ["narrow", "default", "wide"],
           "default": "wide"
+        },
+        "layout": {
+          "title": "Layout",
+          "description": "Sets the layout of the main section",
+          "type": "string",
+          "enum": ["gutter", "largeTiles", "list"],
+          "default": "list"
         }
       }
     },
@@ -63,6 +70,13 @@
           "type": "string",
           "enum": ["narrow", "default", "wide"],
           "default": "default"
+        },
+        "layout": {
+          "title": "Layout",
+          "description": "Sets the layout of the main section",
+          "type": "string",
+          "enum": ["gutter", "largeTiles", "list"],
+          "default": "list"
         }
       }
     },

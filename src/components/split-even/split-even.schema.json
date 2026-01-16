@@ -28,7 +28,7 @@
       "title": "Vertical Alignment",
       "type": "string",
       "description": "Aligns the content vertically within the sections",
-      "enum": ["top", "center", "bottom", "sticky"],
+      "enum": ["top", "center", "bottom", "sticky", "stretch"],
       "default": "top"
     },
     "verticalGutter": {
@@ -44,6 +44,26 @@
       "type": "string",
       "enum": ["large", "default", "small", "none"],
       "default": "default"
+    },
+    "firstLayout": {
+      "title": "First Layout",
+      "description": "Sets the layout of the first section",
+      "type": "string",
+      "enum": ["smallTiles", "largeTiles", "list"],
+      "default": "list"
+    },
+    "secondLayout": {
+      "title": "Second Layout",
+      "description": "Layout settings for the second section of the split layout",
+      "type": "string",
+      "enum": ["smallTiles", "largeTiles", "list"],
+      "default": "list"
+    },
+    "stretchContent": {
+      "title": "Stretch Content",
+      "description": "Stretches the content to fill the height of the split layout",
+      "type": "boolean",
+      "default": false
     },
     "firstComponents": {
       "type": "array",

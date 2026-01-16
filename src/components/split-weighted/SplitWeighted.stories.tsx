@@ -124,3 +124,79 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
     ),
   }),
 };
+
+export const TeaserTiles: Story = {
+  parameters: {
+    viewport: {
+      width: 1200,
+      height: 600,
+    },
+  },
+  args: pack({
+    horizontalGutter: "small",
+    verticalAlign: "stretch",
+    mainLayout: {
+      gutter: "small",
+      minWidth: "narrow",
+      layout: "smallTiles",
+    },
+    asideLayout: {
+      minWidth: "wide",
+      gutter: "small",
+    },
+    aside: (
+      <>
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+          text="Lorem Ispum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          imageRatio="square"
+          button={{
+            label: "Mehr erfahren",
+          }}
+        />
+      </>
+    ),
+    main: (
+      <>
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+        />
+      </>
+    ),
+  }),
+};

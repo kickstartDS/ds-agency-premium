@@ -53,7 +53,9 @@ export const SplitWeightedContextDefault = forwardRef<
           mainLayout?.gutter &&
             `l-split-weighted__main--gutter-${mainLayout.gutter}`,
           mainLayout?.minWidth &&
-            `l-split-weighted__main--width-${mainLayout.minWidth}`
+            `l-split-weighted__main--width-${mainLayout.minWidth}`,
+          mainLayout?.layout &&
+            `l-split-weighted__content--layout-${mainLayout.layout}`
         )}
       >
         <div
@@ -70,7 +72,9 @@ export const SplitWeightedContextDefault = forwardRef<
         className={classnames(
           "l-split-weighted__aside l-split-weighted__content",
           asideLayout?.minWidth &&
-            `l-split-weighted__aside--width-${asideLayout.minWidth}`
+            `l-split-weighted__aside--width-${asideLayout.minWidth}`,
+          asideLayout?.layout &&
+            `l-split-weighted__content--layout-${asideLayout.layout}`
         )}
       >
         <div

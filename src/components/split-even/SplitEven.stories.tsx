@@ -11,6 +11,7 @@ import { Faq } from "../faq/FaqComponent";
 import { TextArea } from "@kickstartds/form/lib/text-area";
 import { Button } from "../button/ButtonComponent";
 import { Cta } from "../cta/CtaComponent";
+import { TeaserCard } from "../teaser-card/TeaserCardComponent";
 
 const meta: Meta = {
   title: "Layout/Split Even",
@@ -134,6 +135,68 @@ export const FAQWithForm: Story = {
         />
         <TextArea label="Ask us directly!" />
         <Button label={"Submit"} />
+      </>
+    ),
+  }),
+};
+
+export const Grid: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 464,
+    },
+  },
+  args: pack({
+    contentGutter: "medium",
+    verticalAlign: "stretch",
+    sectionMinWidth: "narrow",
+    horizontalGutter: "small",
+    verticalGutter: "large",
+    secondLayout: "smallTiles",
+    firstComponents: (
+      <>
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+          text="Lorem Ispum dolor sit amet, consectetur adipiscing elit."
+          imageRatio="landscape"
+        />
+      </>
+    ),
+    secondComponents: (
+      <>
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+        />
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+        />
       </>
     ),
   }),

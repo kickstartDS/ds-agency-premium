@@ -45,7 +45,7 @@ export type MobileReverse = boolean;
 /**
  * Aligns the content vertically within the sections
  */
-export type VerticalAlignment = "top" | "center" | "bottom" | "sticky";
+export type VerticalAlignment = "top" | "center" | "bottom" | "sticky" | "stretch";
 /**
  * Sets the vertical space between the content of the split layout
  */
@@ -54,6 +54,18 @@ export type VerticalGutter = "large" | "default" | "small" | "none";
  * Sets the horizontal space between the content of the split layout
  */
 export type HorizontalGutter = "large" | "default" | "small" | "none";
+/**
+ * Sets the layout of the first section
+ */
+export type FirstLayout = "smallTiles" | "largeTiles" | "list";
+/**
+ * Layout settings for the second section of the split layout
+ */
+export type SecondLayout = "smallTiles" | "largeTiles" | "list";
+/**
+ * Stretches the content to fill the height of the split layout
+ */
+export type StretchContent = boolean;
 /**
  * Allowed components for the first half of the split layout
  */
@@ -120,6 +132,9 @@ export interface SplitEvenProps {
   verticalAlign?: VerticalAlignment;
   verticalGutter?: VerticalGutter;
   horizontalGutter?: HorizontalGutter;
+  firstLayout?: FirstLayout;
+  secondLayout?: SecondLayout;
+  stretchContent?: StretchContent;
   firstComponents?: First;
   secondComponents?: Second;
 }
