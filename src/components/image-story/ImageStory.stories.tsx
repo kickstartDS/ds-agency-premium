@@ -23,43 +23,41 @@ type Story = StoryObj<typeof ImageStory>;
 export const StickyImageNextToScrollingText: Story = {
   parameters: {
     viewport: {
-      width: 1160,
-      height: 960,
+      width: 1440,
+      height: 1144,
     },
   },
   args: pack({
-    headline: "The Sanity & Next.js Experts",
+    headline: "Key headline for this section",
+    sub: "Brief supporting description",
     text: `
-Here at Systemics, we bring a range of design system services that can make a difference:
+This section is intended to provide additional context and supporting information, while the accompanying image keeps sticky beside on larger screens.
 
-### 1. Design System Consulting
-Let's work side by side to shape a design system strategy that aligns perfectly with your goals. It's not just about tools; it's about guiding principles, stakeholder management und making the right decisions at the right time.
+### Clear Structure
+This section provides space for structured content that can be used to explain topics in more detail. Headings help break down information into manageable parts and guide readers through the content in a clear and logical way.
 
-### 2. Design System Creation & Development
-We'll bring your design system from concept to production, giving you consistent and engaging user experiences across different platforms. We will work together with your digital teams to transfer all complex Figma ideas into code using kickstartDS.
+### Flexible Usage
+The text area can be used in different contexts and on various pages. Content can be short or extended, depending on the communication goal and the needs of the audience.
 
-### 3. Headless CMS & Websites
-We leverage the power of headless CMSs to provide scalable, flexible, and versatile websites that drive your online presence.
+### Easy to Maintain
+All content can be updated or replaced without affecting other parts of the page. This makes it easier to keep information current and ensures long-term usability.
 
-### 4. Design System Training
-We empower your digital teams with the knowledge and skills to manage and evolve your design system effectively.
+### Consistent Presentation
+Using a standardized text section helps maintain a consistent look and feel across the platform. This supports readability and creates a coherent user experience.
 
-Ready to make your digital journey exceptional?
+Ready to make your journey exceptional?
     `,
     largeHeadline: true,
     image: {
-      src: "img/full-shot-different-people-working-together.png",
+      src: "img/placeholder/image-gallery-05.svg",
       aspectRatio: "unset",
       vAlign: "top",
     },
     buttons: [
       {
-        label: "Learn More",
+        label: "Follow up",
         url: "#",
-      },
-      {
-        label: "Contact Us",
-        url: "#",
+        icon: "arrow-right",
       },
     ],
   }),

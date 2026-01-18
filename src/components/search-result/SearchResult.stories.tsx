@@ -21,8 +21,8 @@ type Story = StoryObj<typeof SearchResult>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 863,
+      width: 780,
+      height: 636,
     },
   },
   args: pack({

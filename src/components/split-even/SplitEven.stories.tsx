@@ -29,8 +29,8 @@ type Story = StoryObj<typeof SplitEven>;
 export const TextWithLogos: Story = {
   parameters: {
     viewport: {
-      width: 1010,
-      height: 1520,
+      width: 1690,
+      height: 530,
     },
   },
   args: pack({
@@ -88,8 +88,8 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
 export const FAQWithForm: Story = {
   parameters: {
     viewport: {
-      width: 1010,
-      height: 1520,
+      width: 1440,
+      height: 464,
     },
   },
   args: pack({

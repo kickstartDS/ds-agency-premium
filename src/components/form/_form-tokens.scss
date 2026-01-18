@@ -1,4 +1,11 @@
-@import "../../selectors";
+@use "../../selectors" as *;
+
+.c-form-check-group {
+  --dsa-check-group__label--color: var(--ks-text-color-interface);
+  --dsa-check-group__label--font: var(--ks-font-interface-s);
+  --dsa-check-group__label--font-weight: var(--ks-font-weight-semi-bold);
+  --dsa-check-group__label--padding-bottom: 0.25em;
+}
 
 .c-form-check {
   --dsa-check--background: transparent;
@@ -20,7 +27,7 @@
   --dsa-check_radio--border-radius: var(--ks-border-radius-circle);
   --dsa-check_radio__checkmark--size: calc(var(--dsa-check--size) * 0.5);
 
-  --dsa-check__checkmark--color: var(--dsa-text-color-on-primary);
+  --dsa-check__checkmark--color: var(--ks-text-color-on-primary);
 
   --dsa-check__label--font: var(--ks-font-interface-s);
   --dsa-check__label--font-weight: var(--ks-font-weight-regular);

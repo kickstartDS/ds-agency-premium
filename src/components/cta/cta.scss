@@ -1,4 +1,4 @@
-@import "cta-tokens.scss";
+@use "cta-tokens.scss";
 
 .dsa-cta.c-storytelling {
   --c-storytelling--horizontal-padding: var(--dsa-cta__content--horizontal-padding);

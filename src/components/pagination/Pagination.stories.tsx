@@ -23,8 +23,8 @@ type Story = StoryObj<typeof Pagination>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 472,
+      width: 990,
+      height: 192,
     },
   },
   args: pack({

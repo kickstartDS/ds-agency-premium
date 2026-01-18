@@ -25,6 +25,10 @@ export type ToggleInverted = boolean;
  * Toggle default inverted footer behaviour set in global settings
  */
 export type ToggleInverted1 = boolean;
+/**
+ * CSS custom property overrides to be included in the global styles
+ */
+export type LocalCSSCustomPropertyOverrides = string;
 
 /**
  * Abstracts a page concept into JSON schema
@@ -33,6 +37,7 @@ export interface PageProps {
   section?: Sections;
   header?: Header;
   footer?: Footer;
+  token?: LocalCSSCustomPropertyOverrides;
   /**
    * Referenced component SeoProps
    */

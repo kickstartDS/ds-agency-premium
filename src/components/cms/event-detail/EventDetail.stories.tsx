@@ -135,7 +135,7 @@ Join us for a day of inspiring talks, hands-on workshops, and networking with de
         alt: "Alt text Image 4",
       },
     ],
-    downloads: [
+    download: [
       {
         name: "Product Brochure",
         format: "PDF",

@@ -32,7 +32,7 @@ export const Header: Story = {
   parameters: {
     viewport: {
       width: 1280,
-      height: 255,
+      height: 226,
     },
   },
   render: (args, { globals: { theme } }) => (

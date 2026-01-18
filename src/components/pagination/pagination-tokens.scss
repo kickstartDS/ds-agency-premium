@@ -12,8 +12,8 @@
   --dsa-pagination__icon--size: 1.25em;
   --dsa-pagination--background_active: var(--ks-background-color-primary-interactive);
   --dsa-pagination--background_active_hover: var(--ks-background-color-primary-interactive-hover);
-  --dsa-pagination--color_active: var(--dsa-text-color-on-primary);
-  --dsa-pagination--color_active_hover: var(--dsa-text-color-on-primary);
+  --dsa-pagination--color_active: var(--ks-text-color-on-primary);
+  --dsa-pagination--color_active_hover: var(--ks-text-color-on-primary);
 
   @media (min-width: 768px) {
     --dsa-pagination--border: none;

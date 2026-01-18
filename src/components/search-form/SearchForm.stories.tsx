@@ -9,6 +9,10 @@ const meta: Meta<typeof SearchForm> = {
   title: "Corporate / Search Form",
   component: SearchForm,
   parameters: {
+    viewport: {
+      width: 770,
+      height: 248,
+    },
     jsonschema: { schema },
   },
   ...getArgsShared(schema as JSONSchema7),

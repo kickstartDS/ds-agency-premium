@@ -23,20 +23,20 @@ type Story = StoryObj<typeof Testimonials>;
 export const Simple: Story = {
   parameters: {
     viewport: {
-      width: 1000,
+      width: 770,
       height: 409,
     },
   },
   args: pack({
     testimonial: [
       {
-        quote: `Working with Systemics technology has been a game-changer for our brand. Their design system expertise brought harmony to our user experiences, making our digital platforms not just functional, but truly captivating.`,
+        quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
-          src: "img/people/author-emily.png",
-          alt: "Alt Text Customer 1",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
-        name: "Emily Johnson",
-        title: undefined,
+        name: "Taylor Reed",
+        title: "Digital Platforms & Ecosystems",
       },
     ],
   }),
@@ -45,20 +45,20 @@ export const Simple: Story = {
 export const WithTitle: Story = {
   parameters: {
     viewport: {
-      width: 1000,
+      width: 770,
       height: 409,
     },
   },
   args: pack({
     testimonial: [
       {
-        quote: `Working with Systemics technology has been a game-changer for our brand. Their design system expertise brought harmony to our user experiences, making our digital platforms not just functional, but truly captivating.`,
+        quote: `Sample feedback text showing how a testimonial could appear in this component.`,
         image: {
-          src: "img/people/author-emily.png",
-          alt: "Alt Text Customer 1",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "Emily Johnson",
-        title: "Chief Marketing Officer at TechFusion Enterprises",
+        title: "Chief Marketing Officer",
       },
     ],
   }),
@@ -67,41 +67,41 @@ export const WithTitle: Story = {
 export const ListLayout: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 1080,
+      width: 770,
+      height: 996,
     },
   },
   args: pack({
     layout: "list",
     testimonial: [
       {
-        quote: `Working with Systemics technology has been a game-changer for our brand. Their design system expertise brought harmony to our user experiences, making our digital platforms not just functional, but truly captivating.`,
+        quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
-          src: "img/people/author-emily.png",
-          alt: "Alt Text Customer 1",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "Emily Johnson",
-        title: "Chief Marketing Officer at TechFusion Enterprises",
+        title: "Chief Marketing Officer",
         rating: 5,
       },
       {
-        quote: `Systemics's design system transformed our development process. The consistency it introduced across our platforms not only saved us time but also boosted our brand's credibility. It's a partnership that continues to pay dividends.`,
+        quote: `Sample feedback text showing how a testimonial could appear in this component.`,
         image: {
-          src: "img/people/author-john.png",
-          alt: "Alt Text Customer 2",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "John Smith",
-        title: "Director of Digital Strategy at EcoTech Solutions",
+        title: "Director of Digital Strategy",
         rating: 4,
       },
       {
-        quote: `As a startup, we needed to hit the ground running. Systemics's approach streamlined our dev and design process, allowing us to scale faster and focus on what truly matters - building a product that stands out in the market.`,
+        quote: `Placeholder quote intended to be replaced with real user feedback.`,
         image: {
-          src: "img/people/author-alex.png",
-          alt: "Alt Text Customer 3",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "Alex Chen",
-        title: "CEO of LaunchPad Innovations",
+        title: "CEO",
         rating: 5,
       },
     ],
@@ -111,38 +111,38 @@ export const ListLayout: Story = {
 export const SliderLayout: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 1080,
+      width: 770,
+      height: 450,
     },
   },
   args: pack({
     testimonial: [
       {
-        quote: `Working with Systemics technology has been a game-changer for our brand. Their design system expertise brought harmony to our user experiences, making our digital platforms not just functional, but truly captivating.`,
+        quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
-          src: "img/people/author-emily.png",
-          alt: "Alt Text Customer 1",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "Emily Johnson",
-        title: "Chief Marketing Officer at TechFusion Enterprises",
+        title: "Chief Marketing Officer",
       },
       {
-        quote: `Systemics's design system transformed our development process. The consistency it introduced across our platforms not only saved us time but also boosted our brand's credibility. It's a partnership that continues to pay dividends.`,
+        quote: `Sample feedback text showing how a testimonial could appear in this component.`,
         image: {
-          src: "img/people/author-john.png",
-          alt: "Alt Text Customer 2",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "John Smith",
-        title: "Director of Digital Strategy at EcoTech Solutions",
+        title: "Director of Digital Strategy",
       },
       {
-        quote: `As a startup, we needed to hit the ground running. Systemics's approach streamlined our dev and design process, allowing us to scale faster and focus on what truly matters - building a product that stands out in the market.`,
+        quote: `Placeholder quote intended to be replaced with real user feedback.`,
         image: {
-          src: "img/people/author-alex.png",
-          alt: "Alt Text Customer 3",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "Alex Chen",
-        title: "CEO of LaunchPad Innovations",
+        title: "CEO",
       },
     ],
   }),
@@ -151,40 +151,40 @@ export const SliderLayout: Story = {
 export const WithRating: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 1080,
+      width: 770,
+      height: 450,
     },
   },
   args: pack({
     testimonial: [
       {
-        quote: `Working with Systemics technology has been a game-changer for our brand. Their design system expertise brought harmony to our user experiences, making our digital platforms not just functional, but truly captivating.`,
+        quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
-          src: "img/people/author-emily.png",
-          alt: "Alt Text Customer 1",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "Emily Johnson",
-        title: "Chief Marketing Officer at TechFusion Enterprises",
+        title: "Chief Marketing Officer",
         rating: 5,
       },
       {
-        quote: `Systemics's design system transformed our development process. The consistency it introduced across our platforms not only saved us time but also boosted our brand's credibility. It's a partnership that continues to pay dividends.`,
+        quote: `Sample feedback text showing how a testimonial could appear in this component.`,
         image: {
-          src: "img/people/author-john.png",
-          alt: "Alt Text Customer 2",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "John Smith",
-        title: "Director of Digital Strategy at EcoTech Solutions",
+        title: "Director of Digital Strategy",
         rating: 4,
       },
       {
-        quote: `As a startup, we needed to hit the ground running. Systemics's approach streamlined our dev and design process, allowing us to scale faster and focus on what truly matters - building a product that stands out in the market.`,
+        quote: `Placeholder quote intended to be replaced with real user feedback.`,
         image: {
-          src: "img/people/author-alex.png",
-          alt: "Alt Text Customer 3",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "Alex Chen",
-        title: "CEO of LaunchPad Innovations",
+        title: "CEO",
         rating: 5,
       },
     ],
@@ -194,42 +194,39 @@ export const WithRating: Story = {
 export const AlternatingLayout: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 1080,
+      width: 770,
+      height: 996,
     },
   },
   args: pack({
     layout: "alternating",
     testimonial: [
       {
-        quote: `Working with Systemics technology has been a game-changer for our brand. Their design system expertise brought harmony to our user experiences, making our digital platforms not just functional, but truly captivating.`,
+        quote: `This is an example testimonial used to demonstrate layout and typography.`,
         image: {
-          src: "img/people/author-emily.png",
-          alt: "Alt Text Customer 1",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "Emily Johnson",
-        title: "Chief Marketing Officer at TechFusion Enterprises",
-        rating: 5,
+        title: "Chief Marketing Officer",
       },
       {
-        quote: `Systemics's design system transformed our development process. The consistency it introduced across our platforms not only saved us time but also boosted our brand's credibility. It's a partnership that continues to pay dividends.`,
+        quote: `Sample feedback text showing how a testimonial could appear in this component.`,
         image: {
-          src: "img/people/author-john.png",
-          alt: "Alt Text Customer 2",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "John Smith",
-        title: "Director of Digital Strategy at EcoTech Solutions",
-        rating: 4,
+        title: "Director of Digital Strategy",
       },
       {
-        quote: `As a startup, we needed to hit the ground running. Systemics's approach streamlined our dev and design process, allowing us to scale faster and focus on what truly matters - building a product that stands out in the market.`,
+        quote: `Placeholder quote intended to be replaced with real user feedback.`,
         image: {
-          src: "img/people/author-alex.png",
-          alt: "Alt Text Customer 3",
+          src: "img/placeholder/avatar-round.svg",
+          alt: "Alt Text Testimonial Image",
         },
         name: "Alex Chen",
-        title: "CEO of LaunchPad Innovations",
-        rating: 5,
+        title: "CEO",
       },
     ],
   }),

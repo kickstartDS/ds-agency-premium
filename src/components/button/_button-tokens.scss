@@ -1,4 +1,4 @@
-@import "../../selectors";
+@use "../../selectors" as *;
 
 .dsa-button {
   --dsa-button--padding: 0.75em 1.5em;
@@ -15,9 +15,9 @@
 
   //PRIMARY
 
-  --dsa-button_primary--color: var(--dsa-text-color-on-primary);
-  --dsa-button_primary--color_hover: var(--dsa-text-color-on-primary);
-  --dsa-button_primary--color_active: var(--dsa-text-color-on-primary);
+  --dsa-button_primary--color: var(--ks-text-color-on-primary);
+  --dsa-button_primary--color_hover: var(--ks-text-color-on-primary);
+  --dsa-button_primary--color_active: var(--ks-text-color-on-primary);
 
   --dsa-button_primary--background-color: var(--ks-background-color-primary-interactive);
   --dsa-button_primary--background-color_hover: var(--ks-background-color-primary-interactive-hover);

@@ -23,24 +23,25 @@ type Story = StoryObj<typeof EventListTeaser>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 504,
+      width: 1024,
+      height: 524,
     },
   },
   args: pack({
-    text: "The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence.",
+    text: "This paragraph represents generic body text. It can be used to describe products, services, or relevant information.The Future of AI is here and now - Join us to explore the latest advancements in artificial intelligence.",
     date: "30.12.2025",
     location: {
       name: "Tech Conference Center",
       address: `Alexanderplatz 1<br />
 10178 Berlin`,
     },
-    title: "The Future of AI",
+    title: "Title of an Event",
+    category: "Category",
     image: {
-      src: "img/close-up-young-business-team-working.png",
-      alt: "A futuristic AI concept image",
+      src: "img/placeholder/avatar-square.svg",
+      alt: "A placeholder Image",
     },
     url: "#",
-    ctaText: "Show event",
+    ctaText: "Go to event",
   }),
 };

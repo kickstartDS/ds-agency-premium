@@ -1,4 +1,4 @@
-@import "content-nav-tokens.scss";
+@use "content-nav-tokens.scss";
 
 .dsa-content-nav {
   border-radius: var(--ks-border-radius-card);
@@ -99,6 +99,7 @@
     color: var(--dsa-content-nav__toggle-more--color, var(--dsa-link--color));
     cursor: pointer;
     font: var(--dsa-content-nav__toggle-more--font, var(--ks-font-interface-m));
+    font-weight: var(--dsa-content-nav__toggle-more--font-weight, var(--dsa-link--font-weight));
     display: flex;
     align-items: center;
     gap: calc(var(--ks-spacing-xxs) * 0.25);

@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     viewport: {
       width: 390,
-      height: 646,
+      height: 436,
     },
   },
   args: pack({

@@ -4,7 +4,7 @@
   "title": "Downloads",
   "type": "object",
   "properties": {
-    "downloads": {
+    "download": {
       "type": "array",
       "items": {
         "type": "object",
@@ -19,7 +19,7 @@
           },
           "previewImage": {
             "type": "string",
-            "format": "uri",
+            "format": "image",
             "description": "A URL to an image that previews the file."
           },
           "url": {

@@ -1,4 +1,4 @@
-@import "text-tokens.scss";
+@use "text-tokens.scss";
 
 .c-rich-text.dsa-text {
   font: var(--dsa-text--font, var(--dsa-rich-text--font, var(--ks-font-copy-m)));

@@ -28,14 +28,14 @@ export const BesideRightLayout: Story = {
     },
   },
   args: pack({
-    text: `We prioritize efficiency without sacrificing quality. Our secret? A groundbreaking, code-first, open-source framework for [building design systems](#).
+    text: `This is a simple text paragraph that demonstrates standard body copy. It can be used to explain a topic, provide background information, or introduce related content in a neutral and readable way.
 
-This tool expedites our **development process**, saving you precious time and enabling us to deliver superior results more quickly. With this framework, your design system aspirations can be realized faster than ever before.
+This paragraph highlights **information** and includes a text link for further reference. Additional details can be found by visiting **[this example link](#)** to explore related content or documentation.
 
-_Experience the power of streamlined development and see the difference it can make in your projects._`,
+*This paragraph is intended to demonstrate italic text formatting.*`,
     image: {
-      src: "img/close-up-young-business-team-working.png",
-      alt: "Agency",
+      src: "img/placeholder/image-gallery-02.svg",
+      alt: "Placeholder Image",
     },
     layout: "beside-right",
   }),
@@ -45,18 +45,18 @@ export const AboveLayout: Story = {
   parameters: {
     viewport: {
       width: 760,
-      height: 829,
+      height: 788,
     },
   },
   args: pack({
-    text: `We prioritize efficiency without sacrificing quality. Our secret? A groundbreaking, code-first, open-source framework for [building design systems](#).
+    text: `This is a simple text paragraph that demonstrates standard body copy. It can be used to explain a topic, provide background information, or introduce related content in a neutral and readable way.
 
-This tool expedites our **development process**, saving you precious time and enabling us to deliver superior results more quickly. With this framework, your design system aspirations can be realized faster than ever before.
+This paragraph highlights **information** and includes a text link for further reference. Additional details can be found by visiting **[this example link](#)** to explore related content or documentation.
 
-_Experience the power of streamlined development and see the difference it can make in your projects._`,
+*This paragraph is intended to demonstrate italic text formatting.*`,
     image: {
-      src: "img/close-up-young-business-team-working.png",
-      alt: "Agency",
+      src: "img/placeholder/image-gallery-02.svg",
+      alt: "Placeholder Image",
     },
     layout: "above",
   }),

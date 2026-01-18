@@ -21,16 +21,16 @@ type Story = StoryObj<typeof ContentNav>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 863,
+      width: 640,
+      height: 652,
     },
   },
   args: pack({
     image: {
-      src: "img/full-shot-different-people-working-together.png",
-      alt: "A group of people collaborating in an office setting",
+      src: "img/placeholder/avatar-wide.svg",
+      alt: "A placeholder Image",
     },
-    topic: "Industry Intelligence",
+    topic: "Descriptive Topic",
     links: [
       { label: "Market Insights", url: "#" },
       { label: "Industry Trends", url: "#" },

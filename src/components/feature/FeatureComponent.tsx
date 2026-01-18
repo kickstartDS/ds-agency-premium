@@ -24,7 +24,7 @@ export const FeatureContextDefault = forwardRef<
           : style === `besideSmall`
           ? `beside dsa-feature--small`
           : style === `besideLarge`
-          ? `beside dsa-feature--large`
+          ? `beside dsa-feature--medium`
           : style === `intext`
           ? `intext dsa-feature--small`
           : style === `centered`

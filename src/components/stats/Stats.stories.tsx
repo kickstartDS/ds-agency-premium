@@ -24,14 +24,14 @@ export const CountUpWithIcons: Story = {
   parameters: {
     viewport: {
       width: 790,
-      height: 480,
+      height: 318,
     },
   },
   args: pack({
     stat: [
-      { number: "mind. 1500 davon", title: "Users", icon: "person" },
-      { number: "bis zu 350", title: "Subscribers", icon: "star" },
-      { number: "125%", title: "Growth", icon: "map" },
+      { number: "150K", title: "Count", icon: "person" },
+      { number: "99%", title: "Rate", icon: "star" },
+      { number: "50h", title: "Duration", icon: "time" },
     ],
   }),
 };
@@ -40,7 +40,7 @@ export const CountUpWithDescription: Story = {
   parameters: {
     viewport: {
       width: 700,
-      height: 480,
+      height: 278,
     },
   },
   args: pack({
@@ -49,13 +49,13 @@ export const CountUpWithDescription: Story = {
         number: "1500",
         title: "Users",
         description:
-          "Experience the power of our platform, embraced by a vast community of users. Our user base is diverse and dynamic, including both active and inactive members. Join us and become part of this ever-growing community.",
+          "An example count used to visualize quantity-based information.",
       },
       {
-        number: "350",
-        title: "Subscribers",
+        number: "99.9%",
+        title: "Success Rate",
         description:
-          "Stay ahead with our regular updates and newsletters. Our subscribers are always in the loop, receiving the latest news and features. Subscribe now and never miss an update from us.",
+          "A sample percentage value displayed for demonstration purposes.",
       },
     ],
   }),

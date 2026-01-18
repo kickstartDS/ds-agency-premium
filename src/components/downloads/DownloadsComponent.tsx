@@ -12,10 +12,10 @@ export type { DownloadsProps };
 export const DownloadsContextDefault = forwardRef<
   HTMLDivElement,
   DownloadsProps & HTMLAttributes<HTMLDivElement>
->(({ downloads }, ref) => {
+>(({ download }, ref) => {
   return (
     <div className="dsa-downloads" ref={ref}>
-      {downloads.map((item, index) => (
+      {download.map((item, index) => (
         <a
           href={item?.url}
           target="_blank"

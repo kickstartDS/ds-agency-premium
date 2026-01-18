@@ -29,7 +29,7 @@ export const BusinessCardContextDefault = forwardRef<
         )}
         ref={ref}
       >
-        {image && (
+        {image.src && (
           <div className="dsa-business-card__image">
             <Picture src={image.src} alt={image.alt} />
           </div>

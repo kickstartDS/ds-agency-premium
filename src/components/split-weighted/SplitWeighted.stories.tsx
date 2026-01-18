@@ -28,8 +28,8 @@ type Story = StoryObj<typeof SplitWeighted>;
 export const TextWithContact: Story = {
   parameters: {
     viewport: {
-      width: 1010,
-      height: 1520,
+      width: 1630,
+      height: 376,
     },
   },
   args: pack({
@@ -80,8 +80,8 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
 export const TextWithTeaser: Story = {
   parameters: {
     viewport: {
-      width: 1010,
-      height: 1520,
+      width: 1200,
+      height: 600,
     },
   },
   args: pack({

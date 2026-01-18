@@ -1,5 +1,5 @@
-@import "gallery-tokens.scss";
-@import "../../selectors";
+@use "gallery-tokens.scss";
+@use "../../selectors" as *;
 
 .dsa-gallery {
   &__grid {

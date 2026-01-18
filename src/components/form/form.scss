@@ -1,5 +1,5 @@
-@import "form-tokens.scss";
-@import "../../selectors";
+@use "form-tokens.scss";
+@use "../../selectors" as *;
 
 #{$selectors} {
   .c-form-check {
@@ -26,7 +26,7 @@
       var(--ks-background-color-interface-interactive-selected)
     );
 
-    --c-form-check_checkmark--color: var(--dsa-check__checkmark--color, var(--dsa-text-color-on-primary));
+    --c-form-check_checkmark--color: var(--dsa-check__checkmark--color, var(--ks-text-color-on-primary));
     --c-form-check_box--border-radius: var(--dsa-check--border-radius, 2px);
 
     --c-form-check_box-focus--shadow: var(--dsa-check--shadow_focus, 0 0 4px 0);
@@ -50,6 +50,15 @@
 
     &--radio {
       --c-form-check_box--border-radius: var(--dsa-check_radio--border-radius, var(--ks-border-radius-circle));
+    }
+  }
+
+  .c-form-check-group {
+    &__label {
+      color: var(--dsa-check-group__label--color, var(--ks-text-color-interface));
+      font: var(--dsa-check-group__label--font, var(--ks-font-interface-s));
+      font-weight: var(--dsa-check-group__label--font-weight, var(--ks-font-weight-semi-bold));
+      padding-bottom: var(--dsa-check-group__label--padding-bottom, 0.25em);
     }
   }
 

@@ -23,61 +23,59 @@ type Story = StoryObj<typeof EventLatest>;
 export const Default: Story = {
   parameters: {
     viewport: {
-      width: 1000,
-      height: 504,
+      width: 790,
+      height: 580,
     },
   },
   args: pack({
     events: [
       {
         date: "09/18/2025",
-        title: "Systemics Design Conference",
-        location: "Berlin Congress Center, Berlin",
-        url: "https://systemics.events/conference-berlin",
-        cta: "View event",
+        title: "Title of an Event",
+        location: "Example City",
+        url: "#",
+        cta: "Go to event",
         calendar: {
           day: "18",
           month: "Sep",
         },
-        ariaLabel:
-          "Systemics Design Conference on September 18, 2025 in Berlin",
+        ariaLabel: "Demo Event One on September 18, 2025 in Example City",
       },
       {
         date: "10/05/2025",
-        title: "UX Leadership Summit",
-        location: "Köln Messe, Cologne",
+        title: "Sample Event Title",
+        location: "Example City",
         url: "https://uxsummit.de/koeln-2025",
-        cta: "View event",
+        cta: "Go to event",
         calendar: {
           day: "05",
           month: "Oct",
         },
-        ariaLabel: "UX Leadership Summit on October 5, 2025 in Cologne",
+        ariaLabel: "UX Leadership Summit on October 5, 2025 in Example City",
       },
       {
         date: "11/12/2025",
-        title: "Frontend Future Days",
-        location: "Hamburg Digital Campus, Hamburg",
-        url: "https://frontendfuture.de/hamburg",
-        cta: "View event",
+        title: "Demo Event",
+        location: "Example Cityg",
+        url: "#",
+        cta: "Go to event",
         calendar: {
           day: "12",
           month: "Nov",
         },
-        ariaLabel: "Frontend Future Days on November 12, 2025 in Hamburg",
+        ariaLabel: "Demo Event One on November 12, 2025 in Example City",
       },
       {
         date: "12/01/2025",
-        title: "Accessibility in Practice Workshop",
+        title: "Sample Event Title",
         location: "Online",
-        url: "https://a11yworkshop.com/dec-2025",
-        cta: "View event",
+        url: "#5",
+        cta: "Go to event",
         calendar: {
           day: "01",
           month: "Dec",
         },
-        ariaLabel:
-          "Accessibility in Practice Workshop on December 1, 2025 online",
+        ariaLabel: "Sample Event Title on December 1, 2025 remote and online",
       },
     ],
   }),

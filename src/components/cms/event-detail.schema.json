@@ -38,8 +38,8 @@
         "$ref": "http://schema.mydesignsystem.com/event-location.schema.json"
       }
     },
-    "downloads": {
-      "$ref": "http://schema.mydesignsystem.com/downloads.schema.json#/properties/downloads"
+    "download": {
+      "$ref": "http://schema.mydesignsystem.com/downloads.schema.json#/properties/download"
     },
     "description": {
       "title": "Description",
