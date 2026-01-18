@@ -250,6 +250,12 @@
     },
     "buttons": {
       "$ref": "http://schema.mydesignsystem.com/button-group.schema.json#/properties/buttons"
+    },
+    "aiDraft": {
+      "title": "AI Draft?",
+      "description": "If true, the section is marked as an AI-generated draft",
+      "type": "boolean",
+      "default": false
     }
   },
   "additionalProperties": false,
