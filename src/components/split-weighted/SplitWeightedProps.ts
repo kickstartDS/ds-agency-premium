@@ -57,7 +57,7 @@ export type StretchVertically = boolean;
 /**
  * Sets the layout of the main section
  */
-export type Layout = "gutter" | "largeTiles" | "list";
+export type Layout = "smallTiles" | "largeTiles" | "list";
 /**
  * Size of gutter to use
  */
@@ -73,7 +73,7 @@ export type StretchVertically1 = boolean;
 /**
  * Sets the layout of the main section
  */
-export type Layout1 = "gutter" | "largeTiles" | "list";
+export type Layout1 = "smallTiles" | "largeTiles" | "list";
 /**
  * Determines the order of sections on mobile devices
  */

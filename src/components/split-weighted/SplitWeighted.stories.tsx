@@ -126,7 +126,7 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
   }),
 };
 
-export const TeaserTiles: Story = {
+export const TextWithTeaserTiles: Story = {
   parameters: {
     viewport: {
       width: 1200,

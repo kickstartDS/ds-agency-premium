@@ -53,7 +53,7 @@
           "title": "Layout",
           "description": "Sets the layout of the main section",
           "type": "string",
-          "enum": ["gutter", "largeTiles", "list"],
+          "enum": ["smallTiles", "largeTiles", "list"],
           "default": "list"
         }
       }
@@ -87,7 +87,7 @@
           "title": "Layout",
           "description": "Sets the layout of the main section",
           "type": "string",
-          "enum": ["gutter", "largeTiles", "list"],
+          "enum": ["smallTiles", "largeTiles", "list"],
           "default": "list"
         }
       }
