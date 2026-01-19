@@ -50,12 +50,12 @@ export const SplitWeightedContextDefault = forwardRef<
       <div
         className={classnames(
           "l-split-weighted__main l-split-weighted__content",
-          mainLayout?.gutter &&
-            `l-split-weighted__main--gutter-${mainLayout.gutter}`,
           mainLayout?.minWidth &&
             `l-split-weighted__main--width-${mainLayout.minWidth}`,
           mainLayout?.layout &&
-            `l-split-weighted__content--layout-${mainLayout.layout}`
+            `l-split-weighted__content--layout-${mainLayout.layout}`,
+          mainLayout?.stretchVertically &&
+            "l-split-weighted__content--stretch-vertically"
         )}
       >
         <div
@@ -74,7 +74,9 @@ export const SplitWeightedContextDefault = forwardRef<
           asideLayout?.minWidth &&
             `l-split-weighted__aside--width-${asideLayout.minWidth}`,
           asideLayout?.layout &&
-            `l-split-weighted__content--layout-${asideLayout.layout}`
+            `l-split-weighted__content--layout-${asideLayout.layout}`,
+          asideLayout?.stretchVertically &&
+            "l-split-weighted__content--stretch-vertically"
         )}
       >
         <div

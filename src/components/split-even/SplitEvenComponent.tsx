@@ -29,8 +29,8 @@ export const SplitEvenContextDefault = forwardRef<
       horizontalGutter = "default",
       verticalGutter = "default",
       contentGutter = "default",
-      firstLayout = "list",
-      secondLayout = "list",
+      firstLayout = { layout: "list" },
+      secondLayout = { layout: "list" },
       firstComponents,
       secondComponents,
     },
@@ -51,7 +51,9 @@ export const SplitEvenContextDefault = forwardRef<
         className={classnames(
           "l-split-even__content l-split-even__content--first",
           contentGutter && `l-split-even__content--gutter-${contentGutter}`,
-          `l-split-even__content--layout-${firstLayout || "list"}`
+          `l-split-even__content--layout-${firstLayout.layout || "list"}`,
+          firstLayout?.stretchVertically &&
+            "l-split-even__content--stretch-vertically"
         )}
       >
         {verticalAlign === "sticky" ? (
@@ -67,7 +69,9 @@ export const SplitEvenContextDefault = forwardRef<
         className={classnames(
           "l-split-even__content l-split-even__content--second",
           contentGutter && `l-split-even__content--gutter-${contentGutter}`,
-          `l-split-even__content--layout-${secondLayout || "list"}`
+          `l-split-even__content--layout-${secondLayout.layout || "list"}`,
+          secondLayout?.stretchVertically &&
+            "l-split-even__content--stretch-vertically"
         )}
       >
         {verticalAlign === "sticky" ? (

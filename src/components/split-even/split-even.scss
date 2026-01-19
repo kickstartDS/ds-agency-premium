@@ -82,18 +82,6 @@
         height: fit-content;
       }
     }
-
-    &-stretch {
-      .l-split-even__content {
-        align-self: stretch;
-        align-items: stretch;
-
-        > * {
-          height: 100%;
-          flex-grow: 1;
-        }
-      }
-    }
   }
 
   &--mobile-reverse {
@@ -125,6 +113,18 @@
 
       &-large {
         gap: var(--dsa-split-even__content--gutter_large, var(--ks-spacing-stack-xl));
+      }
+    }
+
+    &--stretch-vertically {
+      .l-split-even__content {
+        align-self: stretch;
+        align-items: stretch;
+
+        > * {
+          height: 100%;
+          flex-grow: 1;
+        }
       }
     }
 

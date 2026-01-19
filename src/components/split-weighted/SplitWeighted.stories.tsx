@@ -10,6 +10,7 @@ import { Headline } from "../headline/HeadlineComponent";
 import { Contact } from "../contact/ContactComponent";
 import { TeaserCard } from "../teaser-card/TeaserCardComponent";
 import { Cta } from "../cta/CtaComponent";
+import { ImageText } from "../image-text/ImageTextComponent";
 
 const meta: Meta = {
   title: "Layout/Split Weighted",
@@ -134,7 +135,6 @@ export const TeaserTiles: Story = {
   },
   args: pack({
     horizontalGutter: "small",
-    verticalAlign: "stretch",
     order: {
       desktop: "asideFirst",
       mobile: "asideFirst",
@@ -143,23 +143,24 @@ export const TeaserTiles: Story = {
       gutter: "small",
       minWidth: "narrow",
       layout: "smallTiles",
+      stretchVertically: true,
     },
     asideLayout: {
-      minWidth: "default",
+      stretchVertically: true,
+      minWidth: "wide",
       gutter: "small",
     },
     aside: (
       <>
-        <TeaserCard
-          url={""}
-          headline="Lorem Ipsum"
-          image="img/placeholder/avatar-wide.svg"
-          text="Lorem Ispum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          imageRatio="square"
-          button={{
-            label: "Mehr erfahren",
-            chevron: true,
+        <ImageText
+          text={`This paragraph highlights **information** and includes a text link for further reference. Additional details can be found by visiting **[this example link](#)** to explore related content or documentation.
+
+*This paragraph is intended to demonstrate italic text formatting.*"`}
+          image={{
+            src: "img/placeholder/avatar-wide.svg",
+            alt: "",
           }}
+          layout={"above"}
         />
       </>
     ),
@@ -170,36 +171,42 @@ export const TeaserTiles: Story = {
           headline="Lorem Ipsum"
           image="img/placeholder/avatar-wide.svg"
           imageRatio="square"
+          layout="compact"
         />
         <TeaserCard
           url={""}
-          headline="Lorem Ipsum"
+          headline="Dolor Sit Amet"
           image="img/placeholder/avatar-wide.svg"
           imageRatio="square"
+          layout="compact"
         />
         <TeaserCard
           url={""}
-          headline="Lorem Ipsum"
+          headline="Consectetur Adipiscing"
           image="img/placeholder/avatar-wide.svg"
           imageRatio="square"
+          layout="compact"
         />
         <TeaserCard
           url={""}
-          headline="Lorem Ipsum"
+          headline="Eiusmod Tempor"
           image="img/placeholder/avatar-wide.svg"
           imageRatio="square"
+          layout="compact"
         />
         <TeaserCard
           url={""}
-          headline="Lorem Ipsum"
+          headline="Incididunt Ut Labore"
           image="img/placeholder/avatar-wide.svg"
           imageRatio="square"
+          layout="compact"
         />
         <TeaserCard
           url={""}
-          headline="Lorem Ipsum"
+          headline="Et Dolore Magna"
           image="img/placeholder/avatar-wide.svg"
           imageRatio="square"
+          layout="compact"
         />
       </>
     ),

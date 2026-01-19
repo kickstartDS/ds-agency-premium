@@ -45,7 +45,7 @@ export type MobileReverse = boolean;
 /**
  * Aligns the content vertically within the sections
  */
-export type VerticalAlignment = "top" | "center" | "bottom" | "sticky" | "stretch";
+export type VerticalAlignment = "top" | "center" | "bottom" | "sticky";
 /**
  * Sets the vertical space between the content of the split layout
  */
@@ -57,11 +57,19 @@ export type HorizontalGutter = "large" | "default" | "small" | "none";
 /**
  * Sets the layout of the first section
  */
-export type FirstLayout = "smallTiles" | "largeTiles" | "list";
+export type Layout = "smallTiles" | "largeTiles" | "list";
 /**
- * Layout settings for the second section of the split layout
+ * Whether the first section should stretch vertically to match the height of the second section
  */
-export type SecondLayout = "smallTiles" | "largeTiles" | "list";
+export type StretchVertically = boolean;
+/**
+ * Sets the layout of the second section
+ */
+export type Layout1 = "smallTiles" | "largeTiles" | "list";
+/**
+ * Whether the second section should stretch vertically to match the height of the first section
+ */
+export type StretchVertically1 = boolean;
 /**
  * Stretches the content to fill the height of the split layout
  */
@@ -132,8 +140,14 @@ export interface SplitEvenProps {
   verticalAlign?: VerticalAlignment;
   verticalGutter?: VerticalGutter;
   horizontalGutter?: HorizontalGutter;
-  firstLayout?: FirstLayout;
-  secondLayout?: SecondLayout;
+  firstLayout?: {
+    layout?: Layout;
+    stretchVertically?: StretchVertically;
+  };
+  secondLayout?: {
+    layout?: Layout1;
+    stretchVertically?: StretchVertically1;
+  };
   stretchContent?: StretchContent;
   firstComponents?: First;
   secondComponents?: Second;

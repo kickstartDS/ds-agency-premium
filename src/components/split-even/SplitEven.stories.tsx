@@ -140,7 +140,7 @@ export const FAQWithForm: Story = {
   }),
 };
 
-export const TeaserTiles: Story = {
+export const MainTeaserWithGrid: Story = {
   parameters: {
     viewport: {
       width: 1440,
@@ -153,10 +153,14 @@ export const TeaserTiles: Story = {
     sectionMinWidth: "narrow",
     horizontalGutter: "small",
     verticalGutter: "large",
-    secondLayout: "smallTiles",
+    secondLayout: { layout: "smallTiles", stretchVertically: true },
+    firstLayout: {
+      stretchVertically: true,
+    },
     firstComponents: (
       <>
         <TeaserCard
+          layout="compact"
           url={""}
           headline="Lorem Ipsum"
           image="img/placeholder/avatar-wide.svg"
@@ -172,33 +176,39 @@ export const TeaserTiles: Story = {
     secondComponents: (
       <>
         <TeaserCard
+          layout="compact"
           url={""}
-          headline="Lorem Ipsum"
+          headline="Dolor Sit Amet"
           image="img/placeholder/avatar-wide.svg"
         />
         <TeaserCard
+          layout="compact"
           url={""}
-          headline="Lorem Ipsum"
+          headline="Consectetur Adipiscing"
           image="img/placeholder/avatar-wide.svg"
         />
         <TeaserCard
+          layout="compact"
           url={""}
-          headline="Lorem Ipsum"
+          headline="Eiusmod Tempor"
           image="img/placeholder/avatar-wide.svg"
         />
         <TeaserCard
+          layout="compact"
           url={""}
-          headline="Lorem Ipsum"
+          headline="Incididunt Ut Labore"
           image="img/placeholder/avatar-wide.svg"
         />
         <TeaserCard
+          layout="compact"
           url={""}
-          headline="Lorem Ipsum"
+          headline="Et Dolore Magna"
           image="img/placeholder/avatar-wide.svg"
         />
         <TeaserCard
+          layout="compact"
           url={""}
-          headline="Lorem Ipsum"
+          headline="Ut Enim Ad Minim"
           image="img/placeholder/avatar-wide.svg"
         />
       </>
