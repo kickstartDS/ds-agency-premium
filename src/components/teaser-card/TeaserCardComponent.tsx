@@ -41,21 +41,32 @@ export const TeaserCardContextDefault = forwardRef<
   ) => (
     <Container name="teaser-card">
       <div
+        ks-inverted={layout === "compact" && "true"}
         className={classnames(
           `dsa-teaser-card`,
           `dsa-teaser-card--${layout}`,
           `dsa-teaser-card--${imageRatio}`,
+          label && `dsa-teaser-card--with-label`,
           centered && `dsa-teaser-card--centered`,
           !image && "dsa-teaser-card--no-image"
         )}
       >
-        {label && <span className="dsa-teaser-card__label">{label}</span>}
+        {label && layout !== "compact" && (
+          <span className="dsa-teaser-card__label">{label}</span>
+        )}
         <TeaserBoxContextDefault
           {...rest}
           topic={headline}
           text={text}
           // @ts-expect-error
-          renderTopic={() => <>{compiler(headline)}</>}
+          renderTopic={() => (
+            <>
+              {label && layout === "compact" && (
+                <span className="dsa-teaser-card__label">{label}</span>
+              )}
+              {compiler(headline)}
+            </>
+          )}
           link={{
             hidden: button?.hidden,
             label: button.label,

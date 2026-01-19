@@ -29,6 +29,8 @@ export const SplitEvenContextDefault = forwardRef<
       horizontalGutter = "default",
       verticalGutter = "default",
       contentGutter = "default",
+      firstLayout = { layout: "list" },
+      secondLayout = { layout: "list" },
       firstComponents,
       secondComponents,
     },
@@ -48,21 +50,28 @@ export const SplitEvenContextDefault = forwardRef<
       <div
         className={classnames(
           "l-split-even__content l-split-even__content--first",
-          contentGutter && `l-split-even__content--gutter-${contentGutter}`
+          contentGutter && `l-split-even__content--gutter-${contentGutter}`,
+          `l-split-even__content--layout-${firstLayout.layout || "list"}`,
+          firstLayout?.stretchVertically &&
+            "l-split-even__content--stretch-vertically"
         )}
       >
         {verticalAlign === "sticky" ? (
-          <div className="l-split-even__sticky-container">
+          <div className={classnames("l-split-even__sticky-container")}>
             {firstComponents}
           </div>
         ) : (
           firstComponents
         )}
       </div>
+
       <div
         className={classnames(
           "l-split-even__content l-split-even__content--second",
-          contentGutter && `l-split-even__content--gutter-${contentGutter}`
+          contentGutter && `l-split-even__content--gutter-${contentGutter}`,
+          `l-split-even__content--layout-${secondLayout.layout || "list"}`,
+          secondLayout?.stretchVertically &&
+            "l-split-even__content--stretch-vertically"
         )}
       >
         {verticalAlign === "sticky" ? (

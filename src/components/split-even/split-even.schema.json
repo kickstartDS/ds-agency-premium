@@ -45,6 +45,48 @@
       "enum": ["large", "default", "small", "none"],
       "default": "default"
     },
+    "firstLayout": {
+      "type": "object",
+      "properties": {
+        "layout": {
+          "title": "Layout",
+          "description": "Sets the layout of the first section",
+          "type": "string",
+          "enum": ["smallTiles", "largeTiles", "list"],
+          "default": "list"
+        },
+        "stretchVertically": {
+          "title": "Stretch Vertically",
+          "description": "Whether the first section should stretch vertically to match the height of the second section",
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "secondLayout": {
+      "type": "object",
+      "properties": {
+        "layout": {
+          "title": "Layout",
+          "description": "Sets the layout of the second section",
+          "type": "string",
+          "enum": ["smallTiles", "largeTiles", "list"],
+          "default": "list"
+        },
+        "stretchVertically": {
+          "title": "Stretch Vertically",
+          "description": "Whether the second section should stretch vertically to match the height of the first section",
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "stretchContent": {
+      "title": "Stretch Content",
+      "description": "Stretches the content to fill the height of the split layout",
+      "type": "boolean",
+      "default": false
+    },
     "firstComponents": {
       "type": "array",
       "title": "First",

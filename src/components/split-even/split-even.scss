@@ -115,5 +115,37 @@
         gap: var(--dsa-split-even__content--gutter_large, var(--ks-spacing-stack-xl));
       }
     }
+
+    &--stretch-vertically {
+      .l-split-even__content {
+        align-self: stretch;
+        align-items: stretch;
+
+        > * {
+          height: 100%;
+          flex-grow: 1;
+        }
+      }
+    }
+
+    &--layout {
+      &-smallTiles {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        @media (max-width: 500px) {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      &-largeTiles {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        @media (max-width: 500px) {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+      }
+    }
   }
 }

@@ -52,7 +52,7 @@ export interface TeaserCardProps {
   /**
    * Layout for the Teaser Card
    */
-  layout?: "stack" | "row";
+  layout?: "stack" | "row" | "compact";
   centered?: Centered;
   url: Url;
   button?: {
