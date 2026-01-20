@@ -30,6 +30,12 @@
           "title": "Toggle Inverted",
           "description": "Toggle default inverted header behaviour set in global settings",
           "default": false
+        },
+        "logo": {
+          "title": "Logo",
+          "description": "Override for logo",
+          "type": "string",
+          "format": "image"
         }
       }
     },
@@ -43,6 +49,12 @@
           "title": "Toggle Inverted",
           "description": "Toggle default inverted footer behaviour set in global settings",
           "default": false
+        },
+        "logo": {
+          "title": "Logo",
+          "description": "Override for logo",
+          "type": "string",
+          "format": "image"
         }
       }
     },
