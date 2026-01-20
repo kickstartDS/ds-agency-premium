@@ -21,6 +21,10 @@ export type ToggleFloating = boolean;
  */
 export type ToggleInverted = boolean;
 /**
+ * Override for logo
+ */
+export type Logo = string;
+/**
  * Toggle default inverted footer behaviour set in global settings
  */
 export type ToggleInverted1 = boolean;
@@ -48,6 +52,7 @@ export interface PageProps {
 export interface Header {
   floating?: ToggleFloating;
   inverted?: ToggleInverted;
+  logo?: Logo;
 }
 /**
  * Footer settings for the page
