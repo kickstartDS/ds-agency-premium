@@ -35,10 +35,10 @@ const config: StorybookConfig = {
 
     const modifiedManifests = existingManifests;
 
-    for (const [storyId, story] of Object.entries(
+    for (const [manifestId, componentManifest] of Object.entries(
       modifiedManifests.components.components
     )) {
-      const componentName = storyId.split("-").slice(1).join("-");
+      const componentName = manifestId.split("-").slice(1).join("-");
       if (componentName.startsWith("archetypes-")) continue;
 
       const schemaPath = Object.keys(dereferencedSchemas).find((path) =>
@@ -46,8 +46,9 @@ const config: StorybookConfig = {
       );
       if (!schemaPath) continue;
 
-      story.description =
-        dereferencedSchemas[schemaPath].description || story.description;
+      componentManifest.description =
+        dereferencedSchemas[schemaPath].description ||
+        componentManifest.description;
     }
 
     return modifiedManifests;
