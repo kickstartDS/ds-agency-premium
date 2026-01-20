@@ -26,9 +26,8 @@ export const SplitEvenContextDefault = forwardRef<
       mobileReverse = false,
       contentMinWidth = "medium",
       verticalAlign = "top",
-      horizontalGutter = "default",
-      verticalGutter = "default",
-      contentGutter = "default",
+      horizontalGutter = "small",
+      verticalGutter = "small",
       firstLayout = { layout: "list" },
       secondLayout = { layout: "list" },
       firstComponents,
@@ -49,38 +48,42 @@ export const SplitEvenContextDefault = forwardRef<
     >
       <div
         className={classnames(
-          "l-split-even__content l-split-even__content--first",
-          contentGutter && `l-split-even__content--gutter-${contentGutter}`,
-          `l-split-even__content--layout-${firstLayout.layout || "list"}`,
-          firstLayout?.stretchVertically &&
-            "l-split-even__content--stretch-vertically"
+          "l-split-even__content l-split-even__content--first"
         )}
       >
-        {verticalAlign === "sticky" ? (
-          <div className={classnames("l-split-even__sticky-container")}>
-            {firstComponents}
-          </div>
-        ) : (
-          firstComponents
-        )}
+        <div
+          className={classnames(
+            "l-split-even__content-layout",
+            `l-split-even__content-layout--gutter-${
+              firstLayout.gutter || "small"
+            }`,
+            `l-split-even__content-layout--${firstLayout.layout || "list"}`,
+            firstLayout?.stretchVertically &&
+              "l-split-even__content-layout--stretch-vertically"
+          )}
+        >
+          {firstComponents}
+        </div>
       </div>
 
       <div
         className={classnames(
-          "l-split-even__content l-split-even__content--second",
-          contentGutter && `l-split-even__content--gutter-${contentGutter}`,
-          `l-split-even__content--layout-${secondLayout.layout || "list"}`,
-          secondLayout?.stretchVertically &&
-            "l-split-even__content--stretch-vertically"
+          "l-split-even__content l-split-even__content--second"
         )}
       >
-        {verticalAlign === "sticky" ? (
-          <div className="l-split-even__sticky-container">
-            {secondComponents}
-          </div>
-        ) : (
-          secondComponents
-        )}
+        <div
+          className={classnames(
+            "l-split-even__content-layout",
+            `l-split-even__content-layout--${secondLayout.layout || "list"}`,
+            `l-split-even__content-layout--gutter-${
+              secondLayout.gutter || "small"
+            }`,
+            secondLayout?.stretchVertically &&
+              "l-split-even__content-layout--stretch-vertically"
+          )}
+        >
+          {secondComponents}
+        </div>
       </div>
     </div>
   )

@@ -42,8 +42,10 @@ export const SplitWeightedContextDefault = forwardRef<
           "l-split-weighted--desktop-aside-first",
         order?.mobile === "asideFirst" &&
           "l-split-weighted--mobile-aside-first",
-        horizontalGutter && `l-split-weighted--h-gutter-${horizontalGutter}`,
-        verticalGutter && `l-split-weighted--v-gutter-${verticalGutter}`,
+        horizontalGutter &&
+          `l-split-weighted--h-gutter-${horizontalGutter || "default"}`,
+        verticalGutter &&
+          `l-split-weighted--v-gutter-${verticalGutter || "default"}`,
         verticalAlign && `l-split-weighted--align-${verticalAlign}`
       )}
     >
@@ -51,18 +53,18 @@ export const SplitWeightedContextDefault = forwardRef<
         className={classnames(
           "l-split-weighted__main l-split-weighted__content",
           mainLayout?.minWidth &&
-            `l-split-weighted__main--width-${mainLayout.minWidth}`,
-          mainLayout?.layout &&
-            `l-split-weighted__content--layout-${mainLayout.layout}`,
-          mainLayout?.stretchVertically &&
-            "l-split-weighted__content--stretch-vertically"
+            `l-split-weighted__main--width-${mainLayout.minWidth}`
         )}
       >
         <div
           className={classnames(
-            "l-split-weighted__content-container",
+            "l-split-weighted__content-layout",
             mainLayout?.gutter &&
-              `l-split-weighted__content-container--gutter-${mainLayout.gutter}`
+              `l-split-weighted__content-layout--gutter-${mainLayout.gutter}`,
+            mainLayout?.layout &&
+              `l-split-weighted__content-layout--${mainLayout.layout}`,
+            mainLayout?.stretchVertically &&
+              "l-split-weighted__content-layout--stretch-vertically"
           )}
         >
           {main}
@@ -72,18 +74,18 @@ export const SplitWeightedContextDefault = forwardRef<
         className={classnames(
           "l-split-weighted__aside l-split-weighted__content",
           asideLayout?.minWidth &&
-            `l-split-weighted__aside--width-${asideLayout.minWidth}`,
-          asideLayout?.layout &&
-            `l-split-weighted__content--layout-${asideLayout.layout}`,
-          asideLayout?.stretchVertically &&
-            "l-split-weighted__content--stretch-vertically"
+            `l-split-weighted__aside--width-${asideLayout.minWidth}`
         )}
       >
         <div
           className={classnames(
-            "l-split-weighted__content-container",
+            "l-split-weighted__content-layout",
             asideLayout?.gutter &&
-              `l-split-weighted__content-container--gutter-${asideLayout.gutter}`
+              `l-split-weighted__content-layout--gutter-${asideLayout.gutter}`,
+            asideLayout?.layout &&
+              `l-split-weighted__content-layout--${asideLayout.layout}`,
+            asideLayout?.stretchVertically &&
+              "l-split-weighted__content-layout--stretch-vertically"
           )}
         >
           {aside}

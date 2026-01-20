@@ -55,6 +55,13 @@
           "enum": ["smallTiles", "largeTiles", "list"],
           "default": "list"
         },
+        "gutter": {
+          "title": "Gutter",
+          "description": "Sets the gutter size for the first section",
+          "type": "string",
+          "enum": ["none", "small", "default", "large"],
+          "default": "default"
+        },
         "stretchVertically": {
           "title": "Stretch Vertically",
           "description": "Whether the first section should stretch vertically to match the height of the second section",
@@ -78,6 +85,13 @@
           "description": "Whether the second section should stretch vertically to match the height of the first section",
           "type": "boolean",
           "default": false
+        },
+        "gutter": {
+          "title": "Gutter",
+          "description": "Sets the gutter size for the first section",
+          "type": "string",
+          "enum": ["none", "small", "default", "large"],
+          "default": "default"
         }
       }
     },

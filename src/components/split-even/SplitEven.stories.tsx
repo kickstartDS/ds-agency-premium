@@ -152,10 +152,15 @@ export const MainTeaserWithGrid: Story = {
     verticalAlign: "stretch",
     sectionMinWidth: "narrow",
     horizontalGutter: "small",
-    verticalGutter: "large",
-    secondLayout: { layout: "smallTiles", stretchVertically: true },
+    verticalGutter: "small",
+    secondLayout: {
+      layout: "smallTiles",
+      stretchVertically: true,
+      gutter: "small",
+    },
     firstLayout: {
       stretchVertically: true,
+      gutter: "small",
     },
     firstComponents: (
       <>
