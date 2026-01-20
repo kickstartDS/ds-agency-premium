@@ -163,8 +163,8 @@
         grid-column: 1 / -1;
       }
 
-      // Make two items each fill half the row
-      &:has(> *:first-child:nth-last-child(2)) {
+      // For two children, add a utility class in React
+      &--two {
         > * {
           grid-column: span 3;
         }
@@ -175,8 +175,9 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
 
-      &:has(> *:first-child:last-child) {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+      // Make a single item fill all columns
+      > :only-child {
+        grid-column: 1 / -1;
       }
 
       @media (max-width: 500px) {

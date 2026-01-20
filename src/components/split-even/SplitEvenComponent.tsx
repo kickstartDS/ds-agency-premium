@@ -1,5 +1,10 @@
 import classnames from "classnames";
-import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
+import React, {
+  createContext,
+  forwardRef,
+  HTMLAttributes,
+  useContext,
+} from "react";
 import { SplitEvenProps as SplitEvenComponentProps } from "./SplitEvenProps";
 import "./split-even.scss";
 import { deepMergeDefaults } from "../helpers";
@@ -59,7 +64,12 @@ export const SplitEvenContextDefault = forwardRef<
             }`,
             `l-split-even__content-layout--${firstLayout.layout || "list"}`,
             firstLayout?.stretchVertically &&
-              "l-split-even__content-layout--stretch-vertically"
+              "l-split-even__content-layout--stretch-vertically",
+            // Add custom class for smallTiles with two children
+            firstLayout.layout === "smallTiles" &&
+              Array.isArray((firstComponents as any)?.props?.children) &&
+              (firstComponents as any)?.props?.children.length === 2 &&
+              "l-split-even__content-layout--smallTiles--two"
           )}
         >
           {firstComponents}
@@ -79,7 +89,12 @@ export const SplitEvenContextDefault = forwardRef<
               secondLayout.gutter || "small"
             }`,
             secondLayout?.stretchVertically &&
-              "l-split-even__content-layout--stretch-vertically"
+              "l-split-even__content-layout--stretch-vertically",
+            // Add custom class for smallTiles with two children
+            secondLayout.layout === "smallTiles" &&
+              Array.isArray((secondComponents as any)?.props?.children) &&
+              (secondComponents as any)?.props?.children.length === 2 &&
+              "l-split-even__content-layout--smallTiles--two"
           )}
         >
           {secondComponents}

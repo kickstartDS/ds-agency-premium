@@ -1,5 +1,10 @@
 import classnames from "classnames";
-import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
+import React, {
+  createContext,
+  forwardRef,
+  HTMLAttributes,
+  useContext,
+} from "react";
 import { SplitWeightedProps as SplitWeightedComponentProps } from "./SplitWeightedProps";
 import "./split-weighted.scss";
 import { deepMergeDefaults } from "../helpers";
@@ -64,7 +69,12 @@ export const SplitWeightedContextDefault = forwardRef<
             mainLayout?.layout &&
               `l-split-weighted__content-layout--${mainLayout.layout}`,
             mainLayout?.stretchVertically &&
-              "l-split-weighted__content-layout--stretch-vertically"
+              "l-split-weighted__content-layout--stretch-vertically",
+            // Add custom class for smallTiles with two children
+            mainLayout?.layout === "smallTiles" &&
+              Array.isArray((main as any)?.props?.children) &&
+              (main as any)?.props?.children.length === 2 &&
+              "l-split-weighted__content-layout--smallTiles--two"
           )}
         >
           {main}
@@ -85,7 +95,12 @@ export const SplitWeightedContextDefault = forwardRef<
             asideLayout?.layout &&
               `l-split-weighted__content-layout--${asideLayout.layout}`,
             asideLayout?.stretchVertically &&
-              "l-split-weighted__content-layout--stretch-vertically"
+              "l-split-weighted__content-layout--stretch-vertically",
+            // Add custom class for smallTiles with two children
+            asideLayout?.layout === "smallTiles" &&
+              Array.isArray((aside as any)?.props?.children) &&
+              (aside as any)?.props?.children.length === 2 &&
+              "l-split-weighted__content-layout--smallTiles--two"
           )}
         >
           {aside}
