@@ -41,7 +41,20 @@
           "description": "Sets the minimum width of the main section",
           "type": "string",
           "enum": ["narrow", "default", "wide"],
-          "default": "wide"
+          "default": "default"
+        },
+        "stretchVertically": {
+          "title": "Stretch Vertically",
+          "description": "Whether the main section should stretch vertically to match the height of the aside section",
+          "type": "boolean",
+          "default": false
+        },
+        "layout": {
+          "title": "Layout",
+          "description": "Sets the layout of the main section",
+          "type": "string",
+          "enum": ["smallTiles", "largeTiles", "list"],
+          "default": "list"
         }
       }
     },
@@ -63,6 +76,19 @@
           "type": "string",
           "enum": ["narrow", "default", "wide"],
           "default": "default"
+        },
+        "stretchVertically": {
+          "title": "Stretch Vertically",
+          "description": "Whether the aside section should stretch vertically to match the height of the main section",
+          "type": "boolean",
+          "default": false
+        },
+        "layout": {
+          "title": "Layout",
+          "description": "Sets the layout of the main section",
+          "type": "string",
+          "enum": ["smallTiles", "largeTiles", "list"],
+          "default": "list"
         }
       }
     },

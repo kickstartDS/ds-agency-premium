@@ -10,7 +10,11 @@
 
   &--v-gutter {
     &-small {
-      --dsa-split-even--v-gutter: var(--dsa-split-even--v-gutter_small, var(--ks-spacing-stack-l));
+      --dsa-split-even--v-gutter: var(--dsa-split-even--v-gutter_small, var(--ks-spacing-stack-s));
+    }
+
+    &-default {
+      --dsa-split-even--v-gutter: var(--dsa-split-even--v-gutter_default, var(--ks-spacing-stack-l));
     }
 
     &-large {
@@ -27,8 +31,12 @@
       --dsa-split-even--h-gutter: var(--dsa-split-even--h-gutter_small, var(--ks-spacing-inline-m));
     }
 
+    &-default {
+      --dsa-split-even--h-gutter: var(--dsa-split-even--h-gutter_default, var(--ks-spacing-inline-l));
+    }
+
     &-large {
-      --dsa-split-even--h-gutter: var(--dsa-split-even--h-gutter_large, var(--ks-spacing-xxl));
+      --dsa-split-even--h-gutter: var(--dsa-split-even--h-gutter_large, var(--ks-spacing-inline-xxl));
     }
 
     &-none {
@@ -100,19 +108,79 @@
     flex: 1 1 var(--dsa-split-even__content--flex-basis);
     display: flex;
     flex-direction: column;
-    gap: var(--dsa-split-even__content--gutter_default, var(--ks-spacing-stack-m));
+    align-self: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+  }
 
+  &__content-layout {
     &--gutter {
       &-none {
         gap: 0;
       }
 
       &-small {
-        gap: var(--dsa-split-even__content--gutter_small, var(--ks-spacing-stack-s));
+        gap: var(--dsa-split-even__content--gutter_small, var(--ks-spacing-s));
+      }
+
+      &-default {
+        gap: var(--dsa-split-even__content--gutter_default, var(--ks-spacing-m));
       }
 
       &-large {
-        gap: var(--dsa-split-even__content--gutter_large, var(--ks-spacing-stack-xl));
+        gap: var(--dsa-split-even__content--gutter_large, var(--ks-spacing-xl));
+      }
+    }
+
+    &--stretch-vertically {
+      flex-grow: 1;
+
+      > * {
+        height: 100%;
+        flex-grow: 1;
+      }
+    }
+
+    &--list {
+      display: grid;
+      grid-template-rows: auto;
+    }
+
+    &--smallTiles {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+
+      > * {
+        grid-column: span 2;
+      }
+
+      @media (max-width: 500px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      // Make a single item fill all columns
+      > :only-child {
+        grid-column: 1 / -1;
+      }
+
+      // Make two items each fill half the row
+      &:has(> *:first-child:nth-last-child(2)) {
+        > * {
+          grid-column: span 3;
+        }
+      }
+    }
+
+    &--largeTiles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      &:has(> *:first-child:last-child) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      @media (max-width: 500px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
       }
     }
   }

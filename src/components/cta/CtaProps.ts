@@ -26,6 +26,10 @@ export type HighlightText = boolean;
  */
 export type ColorNeutral = boolean;
 /**
+ * Invert the text and button colors for use on dark backgrounds
+ */
+export type Inverted = boolean;
+/**
  * Text content to display inside the button
  */
 export type Label = string;
@@ -88,6 +92,7 @@ export interface CtaProps {
   text?: ComponentText;
   highlightText?: HighlightText;
   colorNeutral?: ColorNeutral;
+  inverted?: Inverted;
   buttons?: Button[];
   backgroundColor?: BackgroundColor;
   backgroundImage?: BackgroundImage;

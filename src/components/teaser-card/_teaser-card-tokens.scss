@@ -9,6 +9,8 @@
   --dsa-teaser-card--border-color: var(--ks-border-color-card-interactive);
   --dsa-teaser-card--border-color_hover: var(--ks-border-color-card-interactive-hover);
   --dsa-teaser-card--border-radius: var(--ks-border-radius-card);
+  --dsa-teaser-card--overlay: linear-gradient(transparent, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85));
+  --dsa-teaser-card--overlay_with-label: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85));
 
   --dsa-teaser-card--shadow: none;
   --dsa-teaser-card--shadow_hover: none;
@@ -55,7 +57,7 @@
 
   @media (min-width: 48em) {
     //Scaling for Desktop Breakpoint Small Tiles
-    --dsa-teaser-card__topic--font: var(--ks-font-display-m);
+    --dsa-teaser-card__topic--font: var(--ks-font-display-s);
     --dsa-teaser-card__copy--font: var(--ks-font-copy-s);
 
     --dsa-teaser-card--padding: var(--ks-spacing-inset-m);
@@ -64,6 +66,7 @@
 
     // Scaling for Desktop Breakpoint Large Tiles
     @include container.size("≥", 400px, "teaser-card") {
+      --dsa-teaser-card__topic--font: var(--ks-font-display-m);
       --dsa-teaser-card__copy--font: var(--ks-font-copy-m);
 
       --dsa-teaser-card__button--font: var(--ks-font-interface-m);

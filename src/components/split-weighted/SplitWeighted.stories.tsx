@@ -10,6 +10,7 @@ import { Headline } from "../headline/HeadlineComponent";
 import { Contact } from "../contact/ContactComponent";
 import { TeaserCard } from "../teaser-card/TeaserCardComponent";
 import { Cta } from "../cta/CtaComponent";
+import { ImageText } from "../image-text/ImageTextComponent";
 
 const meta: Meta = {
   title: "Layout/Split Weighted",
@@ -121,6 +122,93 @@ Revolutionize your manufacturing with our tailored solutions designed to meet th
         image="img/logos/castaway.svg"
         url="#"
       />
+    ),
+  }),
+};
+
+export const TextWithTeaserTiles: Story = {
+  parameters: {
+    viewport: {
+      width: 1200,
+      height: 600,
+    },
+  },
+  args: pack({
+    horizontalGutter: "small",
+    order: {
+      desktop: "asideFirst",
+      mobile: "asideFirst",
+    },
+    mainLayout: {
+      gutter: "small",
+      minWidth: "narrow",
+      layout: "smallTiles",
+      stretchVertically: true,
+    },
+    asideLayout: {
+      stretchVertically: true,
+      minWidth: "wide",
+      gutter: "small",
+    },
+    aside: (
+      <>
+        <ImageText
+          text={`This paragraph highlights **information** and includes a text link for further reference. Additional details can be found by visiting **[this example link](#)** to explore related content or documentation.
+
+*This paragraph is intended to demonstrate italic text formatting.*"`}
+          image={{
+            src: "img/placeholder/avatar-wide.svg",
+            alt: "",
+          }}
+          layout={"above"}
+        />
+      </>
+    ),
+    main: (
+      <>
+        <TeaserCard
+          url={""}
+          headline="Lorem Ipsum"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+          layout="compact"
+        />
+        <TeaserCard
+          url={""}
+          headline="Dolor Sit Amet"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+          layout="compact"
+        />
+        <TeaserCard
+          url={""}
+          headline="Consectetur Adipiscing"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+          layout="compact"
+        />
+        <TeaserCard
+          url={""}
+          headline="Eiusmod Tempor"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+          layout="compact"
+        />
+        <TeaserCard
+          url={""}
+          headline="Incididunt Ut Labore"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+          layout="compact"
+        />
+        <TeaserCard
+          url={""}
+          headline="Et Dolore Magna"
+          image="img/placeholder/avatar-wide.svg"
+          imageRatio="square"
+          layout="compact"
+        />
+      </>
     ),
   }),
 };

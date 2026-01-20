@@ -24,7 +24,7 @@
     },
     "layout": {
       "type": "string",
-      "enum": ["stack", "row"],
+      "enum": ["stack", "row", "compact"],
       "description": "Layout for the Teaser Card",
       "default": "stack"
     },

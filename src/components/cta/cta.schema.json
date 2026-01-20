@@ -36,6 +36,12 @@
       "default": false,
       "type": "boolean"
     },
+    "inverted": {
+      "title": "Inverted",
+      "description": "Invert the text and button colors for use on dark backgrounds",
+      "default": false,
+      "type": "boolean"
+    },
     "buttons": {
       "type": "array",
       "items": {

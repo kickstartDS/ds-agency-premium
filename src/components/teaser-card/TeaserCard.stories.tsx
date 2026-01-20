@@ -39,6 +39,25 @@ export const ProductTiles: Story = {
   }),
 };
 
+export const Compact: Story = {
+  parameters: {
+    viewport: {
+      width: 650,
+      height: 678,
+    },
+  },
+  args: pack({
+    layout: "compact",
+    headline: "Explore This Topic",
+    text: "This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration.",
+    image: "img/placeholder/avatar-wide.svg",
+    url: "#",
+    button: {
+      label: "Learn more",
+    },
+  }),
+};
+
 export const PageNavigation: Story = {
   parameters: {
     viewport: {
