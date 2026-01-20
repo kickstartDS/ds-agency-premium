@@ -28,6 +28,7 @@ export const CtaContextDefault = forwardRef<
       colorNeutral,
       align,
       padding,
+      inverted = false,
       order,
       buttons = [],
       ...rest
@@ -79,6 +80,7 @@ export const CtaContextDefault = forwardRef<
                 align: textAlign,
               },
             }}
+            ks-inverted={inverted ? "true" : undefined}
           />
         </Container>
       </ButtonContext.Provider>
