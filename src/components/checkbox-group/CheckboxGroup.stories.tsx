@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { CheckboxGroup } from "@kickstartds/form/lib/checkbox-group";
+import { CheckboxGroupComponent } from "./CheckboxGroupComponent";
 import schema from "@kickstartds/form/lib/checkbox-group/checkbox-group.schema.dereffed.json";
 import customProperties from "./checkbox-group-tokens.json";
 
 const meta: Meta = {
   title: "Form / Checkbox Group",
-  component: CheckboxGroup,
+  component: CheckboxGroupComponent,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -19,7 +19,7 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof CheckboxGroup>;
+type Story = StoryObj<typeof CheckboxGroupComponent>;
 
 export const Default: Story = {
   parameters: {

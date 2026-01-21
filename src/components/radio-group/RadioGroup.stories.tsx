@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { RadioGroup } from "@kickstartds/form/lib/radio-group";
+import { RadioGroupComponent } from "./RadioGroupComponent";
 import schema from "@kickstartds/form/lib/radio-group/radio-group.schema.dereffed.json";
 import customProperties from "./radio-group-tokens.json";
 
 const meta: Meta = {
   title: "Form / Radio Group",
-  component: RadioGroup,
+  component: RadioGroupComponent,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -19,7 +19,7 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof RadioGroup>;
+type Story = StoryObj<typeof RadioGroupComponent>;
 
 export const Default: Story = {
   parameters: {

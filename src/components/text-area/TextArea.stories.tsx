@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { TextArea } from "@kickstartds/form/lib/text-area/";
+import { TextAreaComponent } from "./TextAreaComponent";
 import schema from "@kickstartds/form/lib/text-area/text-area.schema.dereffed.json";
 import customProperties from "./text-area-tokens.json";
 
 const meta: Meta = {
   title: "Form/ Text Area",
-  component: TextArea,
+  component: TextAreaComponent,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -19,7 +19,7 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof TextArea>;
+type Story = StoryObj<typeof TextAreaComponent>;
 
 export const Default: Story = {
   parameters: {
