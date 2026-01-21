@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { SelectFieldComponent } from "./SelectFieldComponent";
-import schema from "@kickstartds/form/lib/select-field/select-field.schema.dereffed.json";
+import schema from "./select-field.schema.dereffed.json";
 import customProperties from "./select-field-tokens.json";
 
 const meta: Meta = {

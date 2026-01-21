@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { RadioGroupComponent } from "./RadioGroupComponent";
-import schema from "@kickstartds/form/lib/radio-group/radio-group.schema.dereffed.json";
+import schema from "./radio-group.schema.dereffed.json";
 import customProperties from "./radio-group-tokens.json";
 
 const meta: Meta = {

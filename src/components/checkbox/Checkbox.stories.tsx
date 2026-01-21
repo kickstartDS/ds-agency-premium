@@ -3,7 +3,7 @@ import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { CheckboxComponent } from "./CheckboxComponent";
-import schema from "@kickstartds/form/lib/checkbox/checkbox.schema.dereffed.json";
+import schema from "./checkbox.schema.dereffed.json";
 import customProperties from "./checkbox-tokens.json";
 
 const meta: Meta = {
