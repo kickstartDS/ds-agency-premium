@@ -208,6 +208,9 @@ export type Tiles =
       TileProps
     ];
 
+/**
+ * Mosaic component for displaying a collection of tiles in various layouts.
+ */
 export interface MosaicProps {
   layout?: Layout;
   largeHeadlines?: LargeHeadlines;

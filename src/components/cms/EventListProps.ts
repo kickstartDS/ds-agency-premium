@@ -8,6 +8,9 @@
 import type {EventFilterProps} from "../event-filter/EventFilterProps";
 import type {EventListTeaserProps} from "../event-list-teaser/EventListTeaserProps";
 
+/**
+ * Event list component for displaying a list of events with filtering options.
+ */
 export interface EventListProps {
   /**
    * Referenced component EventFilterProps

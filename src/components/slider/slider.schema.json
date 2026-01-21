@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/slider.schema.json",
   "title": "Slider",
+  "description": "Slider component for displaying a carousel of content components.",
   "type": "object",
   "properties": {
     "autoplay": {

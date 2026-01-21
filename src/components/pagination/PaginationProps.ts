@@ -5,6 +5,9 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+/**
+ * Pagination component for navigating through pages of content.
+ */
 export interface PaginationProps {
   truncate?: boolean;
   ariaLabels?: {

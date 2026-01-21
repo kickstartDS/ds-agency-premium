@@ -141,6 +141,9 @@ export type Aside = (
   | VideoCurtainProps
 )[];
 
+/**
+ * Split weighted layout component for dividing content into two sections with customizable widths.
+ */
 export interface SplitWeightedProps {
   verticalGutter?: VerticalGutter;
   horizontalGutter?: HorizontalGutter;

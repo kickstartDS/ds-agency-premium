@@ -83,6 +83,9 @@ export type AltText = string;
  */
 export type ModuleAligment = "center" | "below" | "offset" | "left" | "right" | "corner" | "bottom";
 
+/**
+ * Hero component for displaying a prominent visual section with headline, subheadline, text, and call-to-action buttons.
+ */
 export interface HeroProps {
   headline?: Headline;
   sub?: ModuleSubheadline;

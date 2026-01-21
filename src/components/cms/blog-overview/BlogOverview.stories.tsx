@@ -12,6 +12,7 @@ const meta: Meta<typeof BlogOverviewComponent> = {
     jsonschema: { schema },
     layout: "fullscreen",
   },
+  tags: ["!manifest"],
   ...getArgsShared(schema as JSONSchema7),
 };
 

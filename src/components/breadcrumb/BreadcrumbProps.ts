@@ -5,6 +5,9 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+/**
+ * Breadcrumb navigation component used to indicate the current page's location within a navigational hierarchy.
+ */
 export interface BreadcrumbProps {
   /**
    * An array of breadcrumb pages. Each page should have a URL and a label.

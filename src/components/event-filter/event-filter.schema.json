@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/event-filter.schema.json",
   "title": "Event Filter",
+  "description": "Event filter component for filtering events based on date and categories.",
   "type": "object",
   "properties": {
     "datePicker": {
