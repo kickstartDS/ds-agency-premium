@@ -4,7 +4,7 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Radio } from "@kickstartds/form/lib/radio/";
 import schema from "@kickstartds/form/lib/radio/radio.schema.dereffed.json";
-import customProperties from "../form-tokens.json";
+import customProperties from "./radio-tokens.json";
 
 const meta: Meta = {
   title: "Form / Radio",

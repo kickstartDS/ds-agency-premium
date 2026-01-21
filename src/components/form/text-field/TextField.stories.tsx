@@ -4,7 +4,7 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { TextField } from "@kickstartds/form/lib/text-field/";
 import schema from "@kickstartds/form/lib/text-field/text-field.schema.dereffed.json";
-import customProperties from "../form-tokens.json";
+import customProperties from "./text-field-tokens.json";
 
 const meta: Meta = {
   title: "Form/ Text Field",

@@ -13,10 +13,12 @@
     }
   }
 
-  &__input.c-form-field__input {
-    padding: var(--ks-spacing-inset-xs);
-    font: var(--ks-font-interface-s);
-    padding-left: calc(var(--ks-spacing-inset-s) + 1em + var(--ks-spacing-xxs));
+  &__input {
+    .c-form-field__input {
+      padding: var(--ks-spacing-inset-xs);
+      font: var(--ks-font-interface-s);
+      padding-left: calc(var(--ks-spacing-inset-s) + 1em + var(--ks-spacing-xxs));
+    }
   }
 
   &__hint {

@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { SelectField } from "@kickstartds/form/lib/select-field/";
-import schema from "@kickstartds/form/lib/select-field/select-field.schema.dereffed.json";
-import customProperties from "./select-field-tokens.json";
+import { RadioGroup } from "@kickstartds/form/lib/radio-group";
+import schema from "@kickstartds/form/lib/radio-group/radio-group.schema.dereffed.json";
+import customProperties from "./radio-group-tokens.json";
 
 const meta: Meta = {
-  title: "Form/ Select Field",
-  component: SelectField,
+  title: "Form / Radio Group",
+  component: RadioGroup,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -19,13 +19,13 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof SelectField>;
+type Story = StoryObj<typeof RadioGroup>;
 
 export const Default: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 219,
+      height: 172,
     },
   },
   args: pack({}),

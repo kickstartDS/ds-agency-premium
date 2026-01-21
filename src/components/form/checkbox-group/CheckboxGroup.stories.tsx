@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { SelectField } from "@kickstartds/form/lib/select-field/";
-import schema from "@kickstartds/form/lib/select-field/select-field.schema.dereffed.json";
-import customProperties from "./select-field-tokens.json";
+import { CheckboxGroup } from "@kickstartds/form/lib/checkbox-group";
+import schema from "@kickstartds/form/lib/checkbox-group/checkbox-group.schema.dereffed.json";
+import customProperties from "./checkbox-group-tokens.json";
 
 const meta: Meta = {
-  title: "Form/ Select Field",
-  component: SelectField,
+  title: "Form / Checkbox Group",
+  component: CheckboxGroup,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -19,13 +19,13 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof SelectField>;
+type Story = StoryObj<typeof CheckboxGroup>;
 
 export const Default: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 219,
+      height: 172,
     },
   },
   args: pack({}),

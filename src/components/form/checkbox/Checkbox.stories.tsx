@@ -4,7 +4,7 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
 import { Checkbox } from "@kickstartds/form/lib/checkbox";
 import schema from "@kickstartds/form/lib/checkbox/checkbox.schema.dereffed.json";
-import customProperties from "../form-tokens.json";
+import customProperties from "./checkbox-tokens.json";
 
 const meta: Meta = {
   title: "Form / Checkbox",

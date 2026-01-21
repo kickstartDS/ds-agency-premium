@@ -32,16 +32,12 @@ export type Disabled = boolean;
 export type HintMessage = string;
 export type Options = RadioButton[];
 /**
- * Additional css classes attached to the wrapping element
+ * Additional css classes attached to the input element
  */
 export type Class = string;
-/**
- * Optional custom component identifier
- */
-export type KsComponentAttribute = string;
 
 /**
- * A Radio Group allows users to select one item from a list of choices.
+ * Radioes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
  */
 export interface RadioGroupProps {
   label: Label;
@@ -50,7 +46,6 @@ export interface RadioGroupProps {
   invalidMessage?: InvalidMessage;
   options?: Options;
   className?: Class;
-  component?: KsComponentAttribute;
 }
 /**
  * Radio buttons allow users to select a single option from a list of mutually exclusive options.
