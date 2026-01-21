@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { TextArea } from "@kickstartds/form/lib/text-area/";
-import schema from "@kickstartds/form/lib/text-area/text-area.schema.dereffed.json";
-import customProperties from "../form-tokens.json";
+import { Radio } from "@kickstartds/form/lib/radio/";
+import schema from "@kickstartds/form/lib/radio/radio.schema.dereffed.json";
+import customProperties from "./radio-tokens.json";
 
 const meta: Meta = {
-  title: "Form/ Text Area",
-  component: TextArea,
+  title: "Form / Radio",
+  component: Radio,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -16,16 +16,15 @@ const meta: Meta = {
   },
   ...getArgsShared(schema as JSONSchema7),
 };
+type Story = StoryObj<typeof Radio>;
 
 export default meta;
-
-type Story = StoryObj<typeof TextArea>;
 
 export const Default: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 246,
+      height: 172,
     },
   },
   args: pack({}),

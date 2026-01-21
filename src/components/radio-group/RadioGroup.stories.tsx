@@ -1,14 +1,14 @@
-import { Meta, StoryObj } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { Radio } from "@kickstartds/form/lib/radio/";
-import schema from "@kickstartds/form/lib/radio/radio.schema.dereffed.json";
-import customProperties from "../form-tokens.json";
+import { RadioGroup } from "@kickstartds/form/lib/radio-group";
+import schema from "@kickstartds/form/lib/radio-group/radio-group.schema.dereffed.json";
+import customProperties from "./radio-group-tokens.json";
 
 const meta: Meta = {
-  title: "Form / Radio",
-  component: Radio,
+  title: "Form / Radio Group",
+  component: RadioGroup,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -16,9 +16,10 @@ const meta: Meta = {
   },
   ...getArgsShared(schema as JSONSchema7),
 };
-type Story = StoryObj<typeof Radio>;
 
 export default meta;
+
+type Story = StoryObj<typeof RadioGroup>;
 
 export const Default: Story = {
   parameters: {

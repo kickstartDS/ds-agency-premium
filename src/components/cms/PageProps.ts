@@ -29,6 +29,10 @@ export type Logo = string;
  */
 export type ToggleInverted1 = boolean;
 /**
+ * Override for logo
+ */
+export type Logo1 = string;
+/**
  * CSS custom property overrides to be included in the global styles
  */
 export type LocalCSSCustomPropertyOverrides = string;
@@ -59,4 +63,5 @@ export interface Header {
  */
 export interface Footer {
   inverted?: ToggleInverted1;
+  logo?: Logo1;
 }

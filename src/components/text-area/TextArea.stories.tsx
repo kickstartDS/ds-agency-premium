@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { SelectField } from "@kickstartds/form/lib/select-field/";
-import schema from "@kickstartds/form/lib/select-field/select-field.schema.dereffed.json";
-import customProperties from "../form-tokens.json";
+import { TextArea } from "@kickstartds/form/lib/text-area/";
+import schema from "@kickstartds/form/lib/text-area/text-area.schema.dereffed.json";
+import customProperties from "./text-area-tokens.json";
 
 const meta: Meta = {
-  title: "Form/ Select Field",
-  component: SelectField,
+  title: "Form/ Text Area",
+  component: TextArea,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -19,13 +19,13 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof SelectField>;
+type Story = StoryObj<typeof TextArea>;
 
 export const Default: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 219,
+      height: 246,
     },
   },
   args: pack({}),

@@ -1,5 +1,10 @@
 import classnames from "classnames";
-import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
+import React, {
+  createContext,
+  forwardRef,
+  HTMLAttributes,
+  useContext,
+} from "react";
 import { SplitWeightedProps as SplitWeightedComponentProps } from "./SplitWeightedProps";
 import "./split-weighted.scss";
 import { deepMergeDefaults } from "../helpers";
@@ -42,25 +47,34 @@ export const SplitWeightedContextDefault = forwardRef<
           "l-split-weighted--desktop-aside-first",
         order?.mobile === "asideFirst" &&
           "l-split-weighted--mobile-aside-first",
-        horizontalGutter && `l-split-weighted--h-gutter-${horizontalGutter}`,
-        verticalGutter && `l-split-weighted--v-gutter-${verticalGutter}`,
+        horizontalGutter &&
+          `l-split-weighted--h-gutter-${horizontalGutter || "default"}`,
+        verticalGutter &&
+          `l-split-weighted--v-gutter-${verticalGutter || "default"}`,
         verticalAlign && `l-split-weighted--align-${verticalAlign}`
       )}
     >
       <div
         className={classnames(
           "l-split-weighted__main l-split-weighted__content",
-          mainLayout?.gutter &&
-            `l-split-weighted__main--gutter-${mainLayout.gutter}`,
           mainLayout?.minWidth &&
             `l-split-weighted__main--width-${mainLayout.minWidth}`
         )}
       >
         <div
           className={classnames(
-            "l-split-weighted__content-container",
+            "l-split-weighted__content-layout",
             mainLayout?.gutter &&
-              `l-split-weighted__content-container--gutter-${mainLayout.gutter}`
+              `l-split-weighted__content-layout--gutter-${mainLayout.gutter}`,
+            mainLayout?.layout &&
+              `l-split-weighted__content-layout--${mainLayout.layout}`,
+            mainLayout?.stretchVertically &&
+              "l-split-weighted__content-layout--stretch-vertically",
+            // Add custom class for smallTiles with two children
+            mainLayout?.layout === "smallTiles" &&
+              Array.isArray((main as any)?.props?.children) &&
+              (main as any)?.props?.children.length === 2 &&
+              "l-split-weighted__content-layout--smallTiles--two"
           )}
         >
           {main}
@@ -75,9 +89,18 @@ export const SplitWeightedContextDefault = forwardRef<
       >
         <div
           className={classnames(
-            "l-split-weighted__content-container",
+            "l-split-weighted__content-layout",
             asideLayout?.gutter &&
-              `l-split-weighted__content-container--gutter-${asideLayout.gutter}`
+              `l-split-weighted__content-layout--gutter-${asideLayout.gutter}`,
+            asideLayout?.layout &&
+              `l-split-weighted__content-layout--${asideLayout.layout}`,
+            asideLayout?.stretchVertically &&
+              "l-split-weighted__content-layout--stretch-vertically",
+            // Add custom class for smallTiles with two children
+            asideLayout?.layout === "smallTiles" &&
+              Array.isArray((aside as any)?.props?.children) &&
+              (aside as any)?.props?.children.length === 2 &&
+              "l-split-weighted__content-layout--smallTiles--two"
           )}
         >
           {aside}

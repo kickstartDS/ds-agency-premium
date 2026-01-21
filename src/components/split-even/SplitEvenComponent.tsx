@@ -1,5 +1,10 @@
 import classnames from "classnames";
-import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
+import React, {
+  createContext,
+  forwardRef,
+  HTMLAttributes,
+  useContext,
+} from "react";
 import { SplitEvenProps as SplitEvenComponentProps } from "./SplitEvenProps";
 import "./split-even.scss";
 import { deepMergeDefaults } from "../helpers";
@@ -26,9 +31,10 @@ export const SplitEvenContextDefault = forwardRef<
       mobileReverse = false,
       contentMinWidth = "medium",
       verticalAlign = "top",
-      horizontalGutter = "default",
-      verticalGutter = "default",
-      contentGutter = "default",
+      horizontalGutter = "small",
+      verticalGutter = "small",
+      firstLayout = { layout: "list" },
+      secondLayout = { layout: "list" },
       firstComponents,
       secondComponents,
     },
@@ -47,31 +53,52 @@ export const SplitEvenContextDefault = forwardRef<
     >
       <div
         className={classnames(
-          "l-split-even__content l-split-even__content--first",
-          contentGutter && `l-split-even__content--gutter-${contentGutter}`
+          "l-split-even__content l-split-even__content--first"
         )}
       >
-        {verticalAlign === "sticky" ? (
-          <div className="l-split-even__sticky-container">
-            {firstComponents}
-          </div>
-        ) : (
-          firstComponents
-        )}
+        <div
+          className={classnames(
+            "l-split-even__content-layout",
+            `l-split-even__content-layout--gutter-${
+              firstLayout.gutter || "small"
+            }`,
+            `l-split-even__content-layout--${firstLayout.layout || "list"}`,
+            firstLayout?.stretchVertically &&
+              "l-split-even__content-layout--stretch-vertically",
+            // Add custom class for smallTiles with two children
+            firstLayout.layout === "smallTiles" &&
+              Array.isArray((firstComponents as any)?.props?.children) &&
+              (firstComponents as any)?.props?.children.length === 2 &&
+              "l-split-even__content-layout--smallTiles--two"
+          )}
+        >
+          {firstComponents}
+        </div>
       </div>
+
       <div
         className={classnames(
-          "l-split-even__content l-split-even__content--second",
-          contentGutter && `l-split-even__content--gutter-${contentGutter}`
+          "l-split-even__content l-split-even__content--second"
         )}
       >
-        {verticalAlign === "sticky" ? (
-          <div className="l-split-even__sticky-container">
-            {secondComponents}
-          </div>
-        ) : (
-          secondComponents
-        )}
+        <div
+          className={classnames(
+            "l-split-even__content-layout",
+            `l-split-even__content-layout--${secondLayout.layout || "list"}`,
+            `l-split-even__content-layout--gutter-${
+              secondLayout.gutter || "small"
+            }`,
+            secondLayout?.stretchVertically &&
+              "l-split-even__content-layout--stretch-vertically",
+            // Add custom class for smallTiles with two children
+            secondLayout.layout === "smallTiles" &&
+              Array.isArray((secondComponents as any)?.props?.children) &&
+              (secondComponents as any)?.props?.children.length === 2 &&
+              "l-split-even__content-layout--smallTiles--two"
+          )}
+        >
+          {secondComponents}
+        </div>
       </div>
     </div>
   )

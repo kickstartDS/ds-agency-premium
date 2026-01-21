@@ -72,16 +72,12 @@ export type HintMessage = string;
  * Additional css classes attached to the input element
  */
 export type Class = string;
-/**
- * Optional custom component identifier
- */
-export type KsComponentAttribute = string;
 
 /**
- * TextFields are text inputs that allow users to input custom text entries with a keyboard.
+ * TextField buttons allow users to select a single option from a list of mutually exclusive options.
  */
 export interface TextFieldProps {
-  label?: Label;
+  label: Label;
   value?: Value;
   name?: Name;
   disabled?: Disabled;
@@ -94,7 +90,6 @@ export interface TextFieldProps {
   invalidMessage?: InvalidMessage;
   hint?: HintMessage;
   className?: Class;
-  component?: KsComponentAttribute;
 }
 
 }

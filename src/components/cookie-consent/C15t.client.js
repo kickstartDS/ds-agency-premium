@@ -1,5 +1,4 @@
 import { define } from "@kickstartds/core/lib/component";
-import { detectBrowserLanguage } from "c15t";
 import CookieConsent from "./CookieConsent.client.js";
 
 const customTranslations = {

@@ -171,6 +171,13 @@
     }
   }
 
+  .l-section__slider {
+    padding-top: var(--ks-spacing-xl);
+    margin-top: calc(var(--ks-spacing-xl) * -1);
+    padding-bottom: var(--ks-spacing-xl);
+    margin-bottom: calc(var(--ks-spacing-xl) * -1);
+  }
+
   .l-section__content {
     --l-section_tile-width--smallest: var(--dsa-section__col--min-width_smallest, var(--dsa-tile--width_smallest));
     --l-section_tile-width--default: var(--dsa-section__col--min-width_small, var(--dsa-tile--width_small));
@@ -184,8 +191,6 @@
     }
 
     &--slider {
-      padding: var(--ks-spacing-s) 0;
-
       &:after {
         min-width: calc(50vw - calc(var(--l-section_col--min-width) / 2) - calc(var(--l-section--gutter) * 1.25));
       }

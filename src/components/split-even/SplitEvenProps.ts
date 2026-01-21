@@ -55,6 +55,34 @@ export type VerticalGutter = "large" | "default" | "small" | "none";
  */
 export type HorizontalGutter = "large" | "default" | "small" | "none";
 /**
+ * Sets the layout of the first section
+ */
+export type Layout = "smallTiles" | "largeTiles" | "list";
+/**
+ * Sets the gutter size for the first section
+ */
+export type Gutter = "none" | "small" | "default" | "large";
+/**
+ * Whether the first section should stretch vertically to match the height of the second section
+ */
+export type StretchVertically = boolean;
+/**
+ * Sets the layout of the second section
+ */
+export type Layout1 = "smallTiles" | "largeTiles" | "list";
+/**
+ * Whether the second section should stretch vertically to match the height of the first section
+ */
+export type StretchVertically1 = boolean;
+/**
+ * Sets the gutter size for the first section
+ */
+export type Gutter1 = "none" | "small" | "default" | "large";
+/**
+ * Stretches the content to fill the height of the split layout
+ */
+export type StretchContent = boolean;
+/**
  * Allowed components for the first half of the split layout
  */
 export type First = (
@@ -120,6 +148,17 @@ export interface SplitEvenProps {
   verticalAlign?: VerticalAlignment;
   verticalGutter?: VerticalGutter;
   horizontalGutter?: HorizontalGutter;
+  firstLayout?: {
+    layout?: Layout;
+    gutter?: Gutter;
+    stretchVertically?: StretchVertically;
+  };
+  secondLayout?: {
+    layout?: Layout1;
+    stretchVertically?: StretchVertically1;
+    gutter?: Gutter1;
+  };
+  stretchContent?: StretchContent;
   firstComponents?: First;
   secondComponents?: Second;
 }

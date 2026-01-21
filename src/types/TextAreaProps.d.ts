@@ -47,19 +47,15 @@ export type InvalidMessage = string;
  */
 export type HintMessage = string;
 /**
- * Additional css classes attached to the textarea element
+ * Additional css classes attached to the input element
  */
 export type Class = string;
-/**
- * Optional custom component identifier
- */
-export type KsComponentAttribute = string;
 
 /**
- * Multiline text input, useful for cases where users have a sizable amount of text to enter.
+ * TextArea buttons allow users to select a single option from a list of mutually exclusive options.
  */
 export interface TextAreaProps {
-  label?: Label;
+  label: Label;
   value?: Value;
   name?: Name;
   disabled?: Disabled;
@@ -70,7 +66,6 @@ export interface TextAreaProps {
   invalidMessage?: InvalidMessage;
   hint?: HintMessage;
   className?: Class;
-  component?: KsComponentAttribute;
 }
 
 }
