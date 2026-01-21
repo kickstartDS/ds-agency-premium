@@ -6,7 +6,7 @@ import {
   TextFieldContext,
   TextFieldContextDefault,
 } from "@kickstartds/form/lib/text-field";
-import { deepMergeDefaults } from "../../helpers";
+import { deepMergeDefaults } from "../helpers";
 import defaults from "./TextFieldDefaults";
 
 import "./text-field.scss";

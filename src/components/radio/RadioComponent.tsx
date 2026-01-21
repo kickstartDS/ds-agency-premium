@@ -4,7 +4,7 @@ import { RadioProps } from "./RadioProps";
 import "./radio.scss";
 
 import { RadioContext, RadioContextDefault } from "@kickstartds/form/lib/radio";
-import { deepMergeDefaults } from "../../helpers";
+import { deepMergeDefaults } from "../helpers";
 import defaults from "./RadioDefaults";
 
 export type { RadioProps };

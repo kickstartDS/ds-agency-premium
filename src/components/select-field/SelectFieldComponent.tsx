@@ -6,7 +6,7 @@ import {
   SelectFieldContext,
   SelectFieldContextDefault,
 } from "@kickstartds/form/lib/select-field";
-import { deepMergeDefaults } from "../../helpers";
+import { deepMergeDefaults } from "../helpers";
 import defaults from "./SelectFieldDefaults";
 import "./select-field.scss";
 

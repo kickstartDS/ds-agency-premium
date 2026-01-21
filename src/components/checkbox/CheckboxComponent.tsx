@@ -6,7 +6,7 @@ import {
   CheckboxContext,
   CheckboxContextDefault,
 } from "@kickstartds/form/lib/checkbox";
-import { deepMergeDefaults } from "../../helpers";
+import { deepMergeDefaults } from "../helpers";
 import defaults from "./CheckboxDefaults";
 import "./checkbox.scss";
 

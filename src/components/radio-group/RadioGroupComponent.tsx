@@ -6,7 +6,7 @@ import {
   RadioGroupContext,
   RadioGroupContextDefault,
 } from "@kickstartds/form/lib/radio-group";
-import { deepMergeDefaults } from "../../helpers";
+import { deepMergeDefaults } from "../helpers";
 import defaults from "./RadioGroupDefaults";
 import "./radio-group.scss";
 

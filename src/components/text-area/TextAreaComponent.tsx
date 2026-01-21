@@ -11,7 +11,7 @@ import {
   TextAreaContext,
   TextAreaContextDefault,
 } from "@kickstartds/form/lib/text-area";
-import { deepMergeDefaults } from "../../helpers";
+import { deepMergeDefaults } from "../helpers";
 import defaults from "./TextAreaDefaults";
 import "./text-area.scss";
 
