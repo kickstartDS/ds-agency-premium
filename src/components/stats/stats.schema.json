@@ -5,6 +5,13 @@
   "description": "Component used to display stats with a number upcounter",
   "type": "object",
   "properties": {
+    "align": {
+      "title": "Align",
+      "description": "Alignment of the stats content",
+      "type": "string",
+      "enum": ["left", "center"],
+      "default": "center"
+    },
     "stat": {
       "title": "Stats",
       "type": "array",

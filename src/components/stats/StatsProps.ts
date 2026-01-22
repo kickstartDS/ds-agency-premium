@@ -8,6 +8,10 @@
 import type {StatProps} from "../stat/StatProps";
 
 /**
+ * Alignment of the stats content
+ */
+export type Align = "left" | "center";
+/**
  * The stats to display with a number upcounter
  *
  * @minItems 1
@@ -23,5 +27,6 @@ export type Stats =
  * Component used to display stats with a number upcounter
  */
 export interface StatsProps {
+  align?: Align;
   stat?: Stats;
 }

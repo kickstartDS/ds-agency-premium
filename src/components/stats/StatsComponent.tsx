@@ -4,15 +4,23 @@ import "./stats.scss";
 import { Stat } from "../stat/StatComponent";
 import { deepMergeDefaults } from "../helpers";
 import defaults from "./StatsDefaults";
+import classnames from "classnames";
 
 export type { StatsProps };
 
 export const StatsContextDefault = forwardRef<
   HTMLDivElement,
   StatsProps & HTMLAttributes<HTMLDivElement>
->(({ stat: stats = [], ...rest }, ref) => {
+>(({ stat: stats = [], align, ...rest }, ref) => {
   return (
-    <div {...rest} ref={ref} className="dsa-stats">
+    <div
+      {...rest}
+      ref={ref}
+      className={classnames(
+        "dsa-stats",
+        align === "left" && `dsa-stats--align-${align}`
+      )}
+    >
       {stats.map((item, index) => (
         <Stat {...item} key={index} />
       ))}

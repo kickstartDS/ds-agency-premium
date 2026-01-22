@@ -44,6 +44,7 @@ export const CountUpWithDescription: Story = {
     },
   },
   args: pack({
+    align: "left",
     stat: [
       {
         number: "1500",
