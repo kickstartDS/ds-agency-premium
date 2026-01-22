@@ -21,6 +21,23 @@
   &--compact {
     --overlay: var(--dsa-teaser-card--overlay, linear-gradient(transparent, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85)));
 
+    &.dsa-teaser-card--unset {
+      .c-teaser {
+        > *:first-child:not(.c-teaser__body) {
+          position: relative !important;
+        }
+
+        .c-teaser__body {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          top: 0;
+          right: 0;
+          padding: var(--dsa-teaser-card--padding, var(--ks-spacing-inset-l));
+        }
+      }
+    }
+
     &.dsa-teaser-card--with-label {
       --overlay: var(
         --dsa-teaser-card--overlay_with-label,
