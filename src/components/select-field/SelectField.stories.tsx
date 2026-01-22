@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { SelectField } from "@kickstartds/form/lib/select-field/";
-import schema from "@kickstartds/form/lib/select-field/select-field.schema.dereffed.json";
+import { SelectFieldComponent } from "./SelectFieldComponent";
+import schema from "./select-field.schema.dereffed.json";
 import customProperties from "./select-field-tokens.json";
 
 const meta: Meta = {
   title: "Form/ Select Field",
-  component: SelectField,
+  component: SelectFieldComponent,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -19,7 +19,7 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof SelectField>;
+type Story = StoryObj<typeof SelectFieldComponent>;
 
 export const Default: Story = {
   parameters: {

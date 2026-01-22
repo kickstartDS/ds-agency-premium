@@ -2,13 +2,13 @@ import { Meta, StoryObj } from "@storybook/react";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
-import { TextField } from "@kickstartds/form/lib/text-field/";
-import schema from "@kickstartds/form/lib/text-field/text-field.schema.dereffed.json";
+import { TextFieldComponent } from "./TextFieldComponent";
+import schema from "./text-field.schema.dereffed.json";
 import customProperties from "./text-field-tokens.json";
 
 const meta: Meta = {
   title: "Form/ Text Field",
-  component: TextField,
+  component: TextFieldComponent,
   parameters: {
     jsonschema: { schema },
     cssprops: { customProperties },
@@ -19,7 +19,7 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof TextField>;
+type Story = StoryObj<typeof TextFieldComponent>;
 
 export const Default: Story = {
   parameters: {
