@@ -31,6 +31,10 @@ export type Height = "small" | "default" | "fullImage" | "fullScreen";
  */
 export type Textbox = boolean;
 /**
+ * On mobile devices, display the text below the image
+ */
+export type MobileTextBelow = boolean;
+/**
  * Invert the text color for better contrast against the background
  */
 export type InvertText = boolean;
@@ -91,6 +95,7 @@ export interface HeroProps {
   colorNeutral?: ColorNeutral;
   height?: Height;
   textbox?: Textbox;
+  mobileTextBelow?: MobileTextBelow;
   invertText?: InvertText;
   buttons?: Button[];
   skipButton?: SkipButton;

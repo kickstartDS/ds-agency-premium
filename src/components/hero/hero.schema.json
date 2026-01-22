@@ -46,6 +46,12 @@
       "default": true,
       "description": "Toggle wether you want your text to be displayed within in box"
     },
+    "mobileTextBelow": {
+      "type": "boolean",
+      "title": "Mobile Text Below",
+      "description": "On mobile devices, display the text below the image",
+      "default": true
+    },
     "invertText": {
       "type": "boolean",
       "title": "Invert Text",

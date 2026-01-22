@@ -27,6 +27,7 @@ export const HeroContextDefault = forwardRef<
       image,
       overlay,
       textbox,
+      mobileTextBelow = true,
       invertText = false,
       className,
       buttons = [],
@@ -58,6 +59,7 @@ export const HeroContextDefault = forwardRef<
               height={height}
               overlay={overlay}
               skipButton={skipButton}
+              inbox={!mobileTextBelow ? true : false}
               box={{
                 background:
                   textPosition === "below"

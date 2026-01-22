@@ -7,11 +7,13 @@
   .dsa-hero {
     --dsa-hero--min-height: 18rem;
     --dsa-hero--min-height_small: 12rem;
+    --dsa-hero__textbox--background-color: var(--ks-background-color-default);
 
     @include container.size("≥", 640px, "hero") {
       --dsa-hero--min-height: 24rem;
       --dsa-hero--min-height_small: 14rem;
       --dsa-hero__textbox--max-width: 50vw;
+      --dsa-hero__textbox--background-color: var(--dsa-overlay-box_transparent--background-color);
     }
 
     @include container.size("≥", 960px, "hero") {
@@ -36,7 +38,6 @@
     --dsa-hero_highlight-text__copy--font: var(--ks-font-copy-l);
     --dsa-hero_color-neutral__copy--color: var(--ks-text-color-default);
 
-    --dsa-hero__textbox--background-color: var(--dsa-overlay-box_transparent--background-color);
     --dsa-hero__textbox--backdrop-filter: var(--dsa-overlay-box_transparent--backdrop-filter);
     --dsa-hero__textbox--box-shadow: none;
     --dsa-hero__textbox--border-radius: var(--ks-border-radius-card);
