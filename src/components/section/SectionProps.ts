@@ -17,6 +17,7 @@ import type {EventListTeaserProps} from "../event-list-teaser/EventListTeaserPro
 import type {FaqProps} from "../faq/FaqProps";
 import type {FeaturesProps} from "../features/FeaturesProps";
 import type {GalleryProps} from "../gallery/GalleryProps";
+import type {HeadlineProps} from "../headline/HeadlineProps";
 import type {HeroProps} from "../hero/HeroProps";
 import type {HtmlProps} from "../html/HtmlProps";
 import type {ImageStoryProps} from "../image-story/ImageStoryProps";
@@ -137,6 +138,7 @@ export type Content = (
   | FaqProps
   | FeaturesProps
   | GalleryProps
+  | HeadlineProps
   | HeroProps
   | HtmlProps
   | ImageStoryProps

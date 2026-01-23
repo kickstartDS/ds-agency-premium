@@ -29,6 +29,8 @@ import type {TeaserCardProps} from "../teaser-card/TeaserCardProps";
 import type {TestimonialsProps} from "../testimonials/TestimonialsProps";
 import type {TextProps} from "../text/TextProps";
 import type {VideoCurtainProps} from "../video-curtain/VideoCurtainProps";
+import type {ButtonProps} from "../button/ButtonProps";
+import type {HeadlineProps} from "../headline/HeadlineProps";
 
 /**
  * Sets the vertical space between the content of the split layout
@@ -117,6 +119,7 @@ export type Main = (
 export type Aside = (
   | BlogTeaserProps
   | BusinessCardProps
+  | ButtonProps
   | ContactProps
   | ContentNavProps
   | CtaProps
@@ -127,6 +130,7 @@ export type Aside = (
   | FaqProps
   | FeaturesProps
   | GalleryProps
+  | HeadlineProps
   | HeroProps
   | HtmlProps
   | ImageStoryProps

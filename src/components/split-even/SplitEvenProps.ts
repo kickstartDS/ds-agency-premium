@@ -7,6 +7,7 @@
 
 import type {BlogTeaserProps} from "../blog-teaser/BlogTeaserProps";
 import type {BusinessCardProps} from "../business-card/BusinessCardProps";
+import type {ButtonProps} from "../button/ButtonProps";
 import type {ContactProps} from "../contact/ContactProps";
 import type {ContentNavProps} from "../content-nav/ContentNavProps";
 import type {CtaProps} from "../cta/CtaProps";
@@ -17,6 +18,7 @@ import type {EventListTeaserProps} from "../event-list-teaser/EventListTeaserPro
 import type {FaqProps} from "../faq/FaqProps";
 import type {FeaturesProps} from "../features/FeaturesProps";
 import type {GalleryProps} from "../gallery/GalleryProps";
+import type {HeadlineProps} from "../headline/HeadlineProps";
 import type {HeroProps} from "../hero/HeroProps";
 import type {HtmlProps} from "../html/HtmlProps";
 import type {ImageStoryProps} from "../image-story/ImageStoryProps";
@@ -84,6 +86,7 @@ export type Gutter1 = "none" | "small" | "default" | "large";
 export type First = (
   | BlogTeaserProps
   | BusinessCardProps
+  | ButtonProps
   | ContactProps
   | ContentNavProps
   | CtaProps
@@ -94,6 +97,7 @@ export type First = (
   | FaqProps
   | FeaturesProps
   | GalleryProps
+  | HeadlineProps
   | HeroProps
   | HtmlProps
   | ImageStoryProps

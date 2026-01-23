@@ -207,6 +207,9 @@
             "$ref": "http://schema.mydesignsystem.com/business-card.schema.json"
           },
           {
+            "$ref": "http://schema.mydesignsystem.com/button.schema.json"
+          },
+          {
             "$ref": "http://schema.mydesignsystem.com/contact.schema.json"
           },
           {
@@ -235,6 +238,9 @@
           },
           {
             "$ref": "http://schema.mydesignsystem.com/gallery.schema.json"
+          },
+          {
+            "$ref": "http://schema.mydesignsystem.com/headline.schema.json"
           },
           {
             "$ref": "http://schema.mydesignsystem.com/hero.schema.json"

@@ -18,6 +18,7 @@ import type {EventListTeaserProps} from "@kickstartds/event-list-teaser.schema.j
 import type {FaqProps} from "@kickstartds/faq.schema.json/lib/faq/typing";
 import type {FeaturesProps} from "@kickstartds/features.schema.json/lib/features/typing";
 import type {GalleryProps} from "@kickstartds/gallery.schema.json/lib/gallery/typing";
+import type {HeadlineProps} from "@kickstartds/base/lib/headline/typing";
 import type {HeroProps} from "@kickstartds/hero.schema.json/lib/hero/typing";
 import type {HtmlProps} from "@kickstartds/base/lib/html/typing";
 import type {ImageStoryProps} from "@kickstartds/image-story.schema.json/lib/image-story/typing";
@@ -138,6 +139,7 @@ export type Content = (
   | FaqProps
   | FeaturesProps
   | GalleryProps
+  | HeadlineProps
   | HeroProps
   | HtmlProps
   | ImageStoryProps
