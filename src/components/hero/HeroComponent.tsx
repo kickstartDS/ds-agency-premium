@@ -53,6 +53,7 @@ export const HeroContextDefault = forwardRef<
                 highlightText && `dsa-hero--highlight-text`,
                 colorNeutral && `dsa-hero--color-neutral`,
                 overlay && `dsa-hero--overlay`,
+                !mobileTextBelow && `dsa-hero--mobile-text-overlay`,
                 className
               )}
               ks-inverted={invertText ? "true" : undefined}
