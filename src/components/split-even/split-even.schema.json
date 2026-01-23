@@ -95,12 +95,6 @@
         }
       }
     },
-    "stretchContent": {
-      "title": "Stretch Content",
-      "description": "Stretches the content to fill the height of the split layout",
-      "type": "boolean",
-      "default": false
-    },
     "firstComponents": {
       "type": "array",
       "title": "First",

@@ -58,7 +58,9 @@ export const SplitWeightedContextDefault = forwardRef<
         className={classnames(
           "l-split-weighted__main l-split-weighted__content",
           mainLayout?.minWidth &&
-            `l-split-weighted__main--width-${mainLayout.minWidth}`
+            `l-split-weighted__main--width-${mainLayout.minWidth}`,
+          mainLayout?.stretchVertically &&
+            "l-split-weighted__content--stretch-vertically"
         )}
       >
         <div
@@ -68,8 +70,7 @@ export const SplitWeightedContextDefault = forwardRef<
               `l-split-weighted__content-layout--gutter-${mainLayout.gutter}`,
             mainLayout?.layout &&
               `l-split-weighted__content-layout--${mainLayout.layout}`,
-            mainLayout?.stretchVertically &&
-              "l-split-weighted__content-layout--stretch-vertically",
+
             // Add custom class for smallTiles with two children
             mainLayout?.layout === "smallTiles" &&
               Array.isArray((main as any)?.props?.children) &&
@@ -84,7 +85,9 @@ export const SplitWeightedContextDefault = forwardRef<
         className={classnames(
           "l-split-weighted__aside l-split-weighted__content",
           asideLayout?.minWidth &&
-            `l-split-weighted__aside--width-${asideLayout.minWidth}`
+            `l-split-weighted__aside--width-${asideLayout.minWidth}`,
+          asideLayout?.stretchVertically &&
+            "l-split-weighted__content--stretch-vertically"
         )}
       >
         <div
@@ -94,8 +97,7 @@ export const SplitWeightedContextDefault = forwardRef<
               `l-split-weighted__content-layout--gutter-${asideLayout.gutter}`,
             asideLayout?.layout &&
               `l-split-weighted__content-layout--${asideLayout.layout}`,
-            asideLayout?.stretchVertically &&
-              "l-split-weighted__content-layout--stretch-vertically",
+
             // Add custom class for smallTiles with two children
             asideLayout?.layout === "smallTiles" &&
               Array.isArray((aside as any)?.props?.children) &&

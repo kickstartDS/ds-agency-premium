@@ -79,10 +79,6 @@ export type StretchVertically1 = boolean;
  */
 export type Gutter1 = "none" | "small" | "default" | "large";
 /**
- * Stretches the content to fill the height of the split layout
- */
-export type StretchContent = boolean;
-/**
  * Allowed components for the first half of the split layout
  */
 export type First = (
@@ -158,7 +154,6 @@ export interface SplitEvenProps {
     stretchVertically?: StretchVertically1;
     gutter?: Gutter1;
   };
-  stretchContent?: StretchContent;
   firstComponents?: First;
   secondComponents?: Second;
 }

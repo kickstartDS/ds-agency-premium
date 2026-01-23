@@ -53,7 +53,9 @@ export const SplitEvenContextDefault = forwardRef<
     >
       <div
         className={classnames(
-          "l-split-even__content l-split-even__content--first"
+          "l-split-even__content l-split-even__content--first",
+          firstLayout?.stretchVertically &&
+            "l-split-even__content--stretch-vertically"
         )}
       >
         <div
@@ -63,8 +65,7 @@ export const SplitEvenContextDefault = forwardRef<
               firstLayout.gutter || "small"
             }`,
             `l-split-even__content-layout--${firstLayout.layout || "list"}`,
-            firstLayout?.stretchVertically &&
-              "l-split-even__content-layout--stretch-vertically",
+
             // Add custom class for smallTiles with two children
             firstLayout.layout === "smallTiles" &&
               Array.isArray((firstComponents as any)?.props?.children) &&
@@ -78,7 +79,9 @@ export const SplitEvenContextDefault = forwardRef<
 
       <div
         className={classnames(
-          "l-split-even__content l-split-even__content--second"
+          "l-split-even__content l-split-even__content--second",
+          secondLayout?.stretchVertically &&
+            "l-split-even__content--stretch-vertically"
         )}
       >
         <div
@@ -88,8 +91,7 @@ export const SplitEvenContextDefault = forwardRef<
             `l-split-even__content-layout--gutter-${
               secondLayout.gutter || "small"
             }`,
-            secondLayout?.stretchVertically &&
-              "l-split-even__content-layout--stretch-vertically",
+
             // Add custom class for smallTiles with two children
             secondLayout.layout === "smallTiles" &&
               Array.isArray((secondComponents as any)?.props?.children) &&

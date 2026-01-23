@@ -176,6 +176,10 @@
     margin-top: calc(var(--ks-spacing-xl) * -1);
     padding-bottom: var(--ks-spacing-xl);
     margin-bottom: calc(var(--ks-spacing-xl) * -1);
+
+    &-nav {
+      margin-top: var(--dsa-section__slider-nav--margin-top, var(--ks-spacing-stack-m));
+    }
   }
 
   .l-section__content {

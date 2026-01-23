@@ -1,5 +1,4 @@
 @use "@kickstartds/core/source/core/container";
-@use "../../selectors" as *;
 @include container.wrapper("section");
 
 .dsa-section {
@@ -59,6 +58,9 @@
   --dsa-section__slider-arrow--opacity_hover: 1;
   --dsa-section__slider-arrow--opacity_disabled: 0.3;
   --dsa-section__slider-arrow--background: transparent;
+
+  //Slider Nav
+  --dsa-section__slider-nav--margin-top: var(--ks-spacing-stack-m);
 
   //Background Styles
 

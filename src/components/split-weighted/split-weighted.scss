@@ -87,9 +87,20 @@
   &__content {
     display: flex;
     flex-direction: column;
-    align-self: stretch;
-    align-items: stretch;
-    justify-content: stretch;
+
+    &--stretch-vertically {
+      align-self: stretch;
+      align-items: stretch;
+
+      .l-split-weighted__content-layout {
+        flex-grow: 1;
+
+        > * {
+          height: 100%;
+          flex-grow: 1;
+        }
+      }
+    }
   }
 
   &__content-layout {
@@ -104,15 +115,6 @@
 
       &-large {
         gap: var(--dsa-split-even__content--gutter_large, var(--ks-spacing-stack-xl));
-      }
-    }
-
-    &--stretch-vertically {
-      flex-grow: 1;
-
-      > * {
-        height: 100%;
-        flex-grow: 1;
       }
     }
 
