@@ -21,7 +21,7 @@ export type { ImageTextProps };
 export const ImageTextContextDefault = forwardRef<
   HTMLDivElement,
   ImageTextProps & HTMLAttributes<HTMLDivElement>
->(({ text, image, layout, highlightText, ...rest }, ref) => (
+>(({ text, image, layout = "above", highlightText, ...rest }, ref) => (
   <Container name="text-media" ref={ref}>
     <OriginalTextMediaContextDefault
       {...rest}
@@ -42,6 +42,8 @@ export const ImageTextContextDefault = forwardRef<
           ? "above-center"
           : layout === "below"
           ? "below-center"
+          : layout === undefined
+          ? "above-center"
           : layout
       }
     />

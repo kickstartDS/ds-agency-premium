@@ -41,7 +41,7 @@
       "enum": ["above", "below", "beside-right", "beside-left"],
       "title": "Layout",
       "description": "Position of the image relative to the text",
-      "examples": ["above"]
+      "default": "above"
     }
   },
   "required": ["text", "image", "layout"]
