@@ -2,6 +2,7 @@ import DemoPageControls from "./demo-page-controls/DemoPageControls";
 import ColorDemo from "./ColorDemoComponent";
 import FontDemo from "./FontDemoComponent";
 import SpacingDemo from "./SpacingDemoComponent";
+import ShadowDemo from "./ShadowDemoComponent";
 
 export default {
   title: "Token / Playground",
@@ -36,6 +37,16 @@ export const Spacing = {
       <>
         <DemoPageControls />
         <SpacingDemo />
+      </>
+    );
+  },
+};
+export const Shadow = {
+  render() {
+    return (
+      <>
+        <DemoPageControls />
+        <ShadowDemo />
       </>
     );
   },

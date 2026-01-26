@@ -6,10 +6,15 @@ import "./nav-dropdown.scss";
 
 export type { NavDropdownProps };
 
-export const NavDropdown: FC<NavDropdownProps> = ({ items, inverted }) => (
+export const NavDropdown: FC<NavDropdownProps> = ({
+  items,
+  inverted,
+  style,
+}) => (
   <ul
     className={classnames(`dsa-nav-dropdown`)}
     ks-inverted={inverted?.toString()}
+    style={style}
   >
     {items.map(({ label, active, url }) => {
       return (

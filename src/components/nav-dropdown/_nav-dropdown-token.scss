@@ -8,7 +8,7 @@
 
   --dsa-nav-dropdown--border-radius: var(--ks-border-radius-card);
   --dsa-nav-dropdown--box-shadow: var(--ks-box-shadow-card);
-  --dsa-nav-dropdown--border: 1px solid var(--ks-border-color-card);
+  --dsa-nav-dropdown--border: var(--ks-border-width-default) solid var(--ks-border-color-card);
   --dsa-nav-dropdown--min-width: 14em;
 
   --dsa-nav-dropdown__label--color: var(--ks-color-fg);

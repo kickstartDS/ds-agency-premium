@@ -12,8 +12,8 @@
   --dsa-teaser-card--overlay: linear-gradient(transparent, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85));
   --dsa-teaser-card--overlay_with-label: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85));
 
-  --dsa-teaser-card--shadow: none;
-  --dsa-teaser-card--shadow_hover: none;
+  --dsa-teaser-card--shadow: var(--ks-box-shadow-card);
+  --dsa-teaser-card--shadow_hover: var(--ks-box-shadow-card-hover);
 
   --dsa-teaser-card__image--transform_hover: scale(1.05);
   --dsa-teaser-card__image--transition: transform var(--ks-transition-hover);
@@ -28,7 +28,7 @@
   --dsa-teaser-card__label--background-color: var(--ks-background-color-bold);
   --dsa-teaser-card__label--padding: 0.5em 1em;
   --dsa-teaser-card__label--border-radius: var(--ks-border-radius-pill);
-  --dsa-teaser-card__label--border: 1px solid var(--ks-border-color-interface);
+  --dsa-teaser-card__label--border: var(--ks-border-width-default) solid var(--ks-border-color-interface);
 
   --dsa-teaser-card__button--font: var(--ks-font-interface-m);
 

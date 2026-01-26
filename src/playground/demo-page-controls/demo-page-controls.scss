@@ -36,7 +36,7 @@
   padding: 16px;
   overflow: hidden;
   position: sticky;
-  border: 1px solid var(--ks-color-fg-alpha-8);
+  border: var(--ks-border-width-default) solid var(--ks-color-fg-alpha-8);
   border-top: 0;
 
   top: 0;

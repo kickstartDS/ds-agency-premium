@@ -68,12 +68,14 @@
   --dsa-cookie-consent-dialogue__close--background-color_hover: var(--ks-color-fg-alpha-8);
 
   /// Description
-  --dsa-cookie-consent-dialogue__description--border-bottom: 1px solid var(--ks-border-color-interface);
+  --dsa-cookie-consent-dialogue__description--border-bottom: var(--ks-border-width-default) solid
+    var(--ks-border-color-interface);
   --dsa-cookie-consent-dialogue__description--font: var(--ks-font-interface-s);
   --dsa-cookie-consent-dialogue__description--color: var(--ks-text-color-interface);
 
   /// Options
-  --dsa-cookie-consent-dialogue__option--border-bottom: 1px solid var(--ks-border-color-interface);
+  --dsa-cookie-consent-dialogue__option--border-bottom: var(--ks-border-width-default) solid
+    var(--ks-border-color-interface);
   --dsa-cookie-consent-dialogue__option--padding-vertical: var(--ks-spacing-stack-m);
   --dsa-cookie-consent-dialogue__option--gap: var(--ks-spacing-stack-xs);
 

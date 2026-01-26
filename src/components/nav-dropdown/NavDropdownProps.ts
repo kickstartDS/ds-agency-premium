@@ -17,5 +17,9 @@ export interface NavDropdownProps {
     label?: string;
     active?: boolean;
   }[];
+  /**
+   * Inline styles to apply to the nav dropdown container.
+   */
+  style?: {};
   className?: string;
 }

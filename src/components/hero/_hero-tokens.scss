@@ -36,7 +36,7 @@
   --dsa-hero_color-neutral__copy--color: var(--ks-text-color-default);
 
   --dsa-hero__textbox--backdrop-filter: var(--dsa-overlay-box_transparent--backdrop-filter);
-  --dsa-hero__textbox--box-shadow: none;
+  --dsa-hero__textbox--box-shadow: var(--dsa-overlay-box_transparent--box-shadow);
   --dsa-hero__textbox--border-radius: var(--ks-border-radius-card);
   --dsa-hero__textbox--max-width: var(--dsa-content--width_narrow);
   --dsa-hero__textbox--padding: var(--ks-spacing-inset-l);

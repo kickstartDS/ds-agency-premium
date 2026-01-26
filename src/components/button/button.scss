@@ -108,7 +108,7 @@
     --c-button--background-color-selected: var(--dsa-button_terciary--background-color_selected, none);
   }
 
-  transition-property: box-shadow, transform, background-color, color, border;
+  transition-property: transform, background-color, color, border;
 
   &:disabled {
     pointer-events: none;

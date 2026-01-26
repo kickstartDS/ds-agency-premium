@@ -186,7 +186,7 @@
   &__description {
     border-bottom: var(
       --dsa-cookie-consent-dialogue__description--border-bottom,
-      1px solid var(--ks-border-color-interface)
+      var(--ks-border-width-default) solid var(--ks-border-color-interface)
     );
     padding-top: calc(var(--dsa-cookie-consent-dialogue__block--padding-vertical, var(--ks-spacing-stack-m)) * 0.65);
     padding-bottom: calc(var(--dsa-cookie-consent-dialogue__block--padding-vertical, var(--ks-spacing-stack-m)) * 0.65);
@@ -206,7 +206,7 @@
     gap: var(--dsa-cookie-consent-dialogue__option--gap, var(--ks-spacing-stack-xs));
     border-bottom: var(
       --dsa-cookie-consent-dialogue__option--border-bottom,
-      1px solid var(--ks-border-color-interface)
+      var(--ks-border-width-default) solid var(--ks-border-color-interface)
     );
     padding-top: var(--dsa-cookie-consent-dialogue__option--padding-vertical, var(--ks-spacing-inset-m));
     padding-bottom: var(--dsa-cookie-consent-dialogue__option--padding-vertical, var(--ks-spacing-inset-m));

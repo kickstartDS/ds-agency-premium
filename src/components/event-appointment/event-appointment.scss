@@ -15,6 +15,7 @@
   padding: var(--ks-spacing-inset-s);
   border: var(--ks-border-width-default) solid var(--ks-border-color-interface-interactive);
   height: fit-content;
+  box-shadow: var(--ks-box-shadow-control);
 
   // Inherit font size from parent to allow grid column sizing in em units
   font: inherit;

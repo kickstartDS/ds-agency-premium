@@ -19,11 +19,9 @@ export const SelectFieldComponent = forwardRef<
   const { className, ...rest } = deepMergeDefaults(defaults, props);
 
   return (
-    <SelectFieldContextDefault
-      {...rest}
-      className={classnames("dsa-select-field", className)}
-      ref={ref}
-    />
+    <div className={classnames("dsa-select-field", className)}>
+      <SelectFieldContextDefault {...rest} ref={ref} />
+    </div>
   );
 });
 SelectFieldComponent.displayName = "SelectFieldComponent";

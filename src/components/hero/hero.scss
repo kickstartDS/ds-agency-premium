@@ -66,9 +66,15 @@
   }
 
   &.dsa-hero--mobile-text-overlay {
+    --dsa-hero__textbox--background-color: var(--dsa-overlay-box_transparent--background-color);
     @include dsa-hero-overlay-backgrounds;
-    .c-visual__box.c-visual__box--transparent {
-      padding: 0;
+    .c-visual__box {
+      backdrop-filter: var(--dsa-hero__textbox--backdrop-filter, var(--dsa-overlay-box_transparent--backdrop-filter));
+      box-shadow: var(--dsa-hero__textbox--box-shadow, var(--dsa-overlay-box_transparent--box-shadow));
+
+      &.c-visual__box--transparent {
+        padding: 0;
+      }
     }
   }
 
@@ -76,9 +82,10 @@
     @include dsa-hero-overlay-backgrounds;
     .c-visual__box {
       --c-visual_box--max-width: var(--dsa-hero__textbox--max-width, var(--dsa-content--width_narrow));
+
       &:not(.c-visual__box--transparent) {
         backdrop-filter: var(--dsa-hero__textbox--backdrop-filter, var(--dsa-overlay-box_transparent--backdrop-filter));
-        box-shadow: var(--dsa-hero__textbox--box-shadow, var(--ks-box-shadow-card));
+        box-shadow: var(--dsa-hero__textbox--box-shadow, var(--dsa-overlay-box_transparent--box-shadow));
       }
     }
   }

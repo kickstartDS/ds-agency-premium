@@ -73,7 +73,10 @@
       padding-right: var(--dsa-downloads-item__infos--gap, var(--ks-spacing-xxs));
 
       &:not(:last-child) {
-        border-right: var(--dsa-downloads-item__infos--border, 1px solid var(--ks-border-color-default));
+        border-right: var(
+          --dsa-downloads-item__infos--border,
+          var(--ks-border-width-default) solid var(--ks-border-color-default)
+        );
       }
     }
 

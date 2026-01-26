@@ -38,7 +38,7 @@
 
   strong,
   mark {
-    border-bottom: 1px dashed var(--ks-color-fg);
+    border-bottom: var(--ks-border-width-default) dashed var(--ks-color-fg);
     font-weight: unset;
     color: var(--ks-color-fg);
     background-color: transparent;

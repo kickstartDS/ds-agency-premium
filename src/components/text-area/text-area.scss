@@ -35,9 +35,13 @@
 
   --c-form-field_label--color: var(--dsa-text-area__label--color, var(--ks-text-color-interface));
 
-  .c-select-field__input {
+  .c-form-field__input {
     font: var(--dsa-text-area--font, var(--ks-font-interface-m));
     padding: var(--dsa-text-area--padding, 0.4rem 0.75rem 0.35rem);
+
+    &:not(:focus-visible) {
+      box-shadow: var(--dsa-text-field--shadow, var(--ks-box-shadow-control));
+    }
 
     &::placeholder {
       color: var(--dsa-text-area__placeholder--color, var(--ks-color-fg-alpha-5));

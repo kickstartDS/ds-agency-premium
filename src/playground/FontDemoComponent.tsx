@@ -18,6 +18,7 @@ const FontDemo = () => (
   <div className="playground-preview-page">
     <Section
       content={{
+        mode: "default",
         gutter: "large",
       }}
       spaceAfter="small"
@@ -45,7 +46,14 @@ const FontDemo = () => (
         />
       </div>
     </Section>
-    <Section width="wide" spaceBefore="none" spaceAfter="small">
+    <Section
+      content={{
+        mode: "default",
+      }}
+      width="wide"
+      spaceBefore="none"
+      spaceAfter="small"
+    >
       <TeaserCard
         headline="Experience Seamless Digital Enablement"
         text="Discover how modular, open-source solutions unlock scalable opportunities for every enterprise."
@@ -105,6 +113,7 @@ const FontDemo = () => (
       content={{
         tileWidth: "medium",
         gutter: "large",
+        mode: "default",
       }}
       width="wide"
       spaceBefore="small"
@@ -160,6 +169,7 @@ const FontDemo = () => (
       spaceAfter="small"
       content={{
         gutter: "large",
+        mode: "default",
       }}
     >
       <div

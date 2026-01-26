@@ -107,7 +107,9 @@ const ColorDemo = () => (
     <Section
       className="dsa-section--component-preview"
       width="wide"
-      content={{}}
+      content={{
+        mode: "default",
+      }}
       spaceAfter="none"
       spaceBefore="small"
     >
@@ -283,7 +285,7 @@ const ColorDemo = () => (
         />
       </div>
     </Section>
-    <Section spaceBefore="small" width="wide">
+    <Section content={{ mode: "default" }} spaceBefore="small" width="wide">
       <EventListTeaser
         category="Buyers"
         ctaText="Show event"

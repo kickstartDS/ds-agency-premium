@@ -3,7 +3,7 @@
 
   font: var(--ks-font-interface-m);
   padding: var(--ks-spacing-stack-s) 0;
-  border-top: 1px solid var(--ks-border-color-default);
+  border-top: var(--ks-border-width-default) solid var(--ks-border-color-default);
   display: block;
   margin-left: 1.25em;
 
@@ -17,6 +17,6 @@
   }
 
   &:last-child {
-    border-bottom: 1px solid var(--ks-border-color-default);
+    border-bottom: var(--ks-border-width-default) solid var(--ks-border-color-default);
   }
 }

@@ -25,7 +25,7 @@
   --dsa-downloads-item__infos--gap: var(--ks-spacing-xxs);
   --dsa-downloads-item__infos--font: var(--ks-font-interface-s);
   --dsa-downloads-item__infos--color: var(--ks-text-color-interface);
-  --dsa-downloads-item__infos--border: 1px solid var(--ks-border-color-default);
+  --dsa-downloads-item__infos--border: var(--ks-border-width-default) solid var(--ks-border-color-default);
 
   --dsa-downloads-item__placeholder-icon--color: var(--ks-color-fg-inverted);
   --dsa-downloads-item__placeholder-icon--background-color: var(--ks-color-fg-to-bg-5);

@@ -24,11 +24,9 @@ export const TextAreaComponent = forwardRef<
   const { className, ...rest } = deepMergeDefaults(defaults, props);
 
   return (
-    <TextAreaContextDefault
-      {...rest}
-      className={classnames("dsa-text-area", className)}
-      ref={ref}
-    />
+    <div className={classnames("dsa-text-area", className)}>
+      <TextAreaContextDefault {...rest} ref={ref} />
+    </div>
   );
 });
 TextAreaComponent.displayName = "TextAreaComponent";
