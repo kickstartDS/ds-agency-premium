@@ -2,9 +2,15 @@
   --ks-border-width-default: var(--ks-brand-border-width-default);
   --ks-border-width-emphasized: var(--ks-brand-border-width-emphasized);
 
-  --ks-border-radius-control: var(--ks-brand-border-radius-control);
-  --ks-border-radius-card: var(--ks-brand-border-radius-card);
-  --ks-border-radius-surface: var(--ks-brand-border-radius-surface);
+  /*
+    Border-radius scaling:
+    If --ks-brand-border-radius-factor is 1, border-radius = 0 (no radius)
+    If --ks-brand-border-radius-factor is 2, border-radius = 2 × --ks-spacing-m
+    Formula: (factor - 1) * 2 * spacing-m
+  */
+  --ks-border-radius-control: calc((var(--ks-brand-border-radius-factor) - 1) * 3 * var(--ks-spacing-m) * 0.25);
+  --ks-border-radius-card: calc((var(--ks-brand-border-radius-factor) - 1) * 3 * var(--ks-spacing-m) * 0.5);
+  --ks-border-radius-surface: calc((var(--ks-brand-border-radius-factor) - 1) * 3 * var(--ks-spacing-m) * 0.75);
   --ks-border-radius-pill: 999px;
   --ks-border-radius-circle: 50%;
 }

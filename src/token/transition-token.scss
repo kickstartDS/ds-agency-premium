@@ -1,9 +1,11 @@
 :root {
   // Duration
-  --ks-duration-immediate: 50ms;
-  --ks-duration-fast: 100ms;
-  --ks-duration-medium: 150ms;
-  --ks-duration-slow: 300ms;
+  --ks-duration-base: calc(150ms * (var(--ks-brand-transition-duration-factor) - 0.5));
+
+  --ks-duration-immediate: calc(var(--ks-duration-base) / 4);
+  --ks-duration-fast: calc(var(--ks-duration-base) / 2);
+  --ks-duration-medium: var(--ks-duration-base);
+  --ks-duration-slow: calc(var(--ks-duration-base) * 2);
 
   // Timing Function
   --ks-timing-function-bounce: cubic-bezier(0.17, 1, 0.5, 1.5);

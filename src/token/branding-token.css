@@ -38,8 +38,17 @@
   --ks-brand-color-scale-1: 95%;
 }
 
+/*
+  NORMALIZED FACTOR TOKENS
+  All tokens ending in '-factor' are normalized to a range of 1–2. It is recommended to keep
+  values within this range for predictable scaling behavior.
+*/
+
 :root {
-  /* Font Families */
+  /*
+    FONT TOKENS
+    Controls font families and weights for headings, body, UI, and code. Adjust to match your brand typography.
+  */
   --ks-brand-font-family-display: Montserrat, Baskerville,
     "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   --ks-brand-font-family-copy: system-ui, -apple-system, BlinkMacSystemFont,
@@ -63,9 +72,8 @@
   --ks-brand-font-weight-bold: 700;
 }
 
-/* Normalized user input tokens (range: 1-2) */
-
 /*
+FONT SIZE TOKENS
 Shrink Factor:      Determine scaling from m to xxs
 Grow Factor:        Determine scaling from m to xxl
 Breakpoint Factor:  Higher bp factor means large spacings increase
@@ -95,27 +103,80 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
   --ks-brand-font-size-mono-bp-factor: 1.5;
 }
 
-/* Spacing */
+/*
+  SPACING TOKENS
+*/
 :root {
-  --ks-brand-spacing-base: 16px;
+  /*
+    spacing-factor controls the scaling of spacing-m relative to font-size-copy-m.
+    1 = smaller spacing, 1.5 = balanced spacing, 2 = larger spacing
+  */
+  --ks-brand-spacing-factor: 1.5;
+  /*
+    spacing-shrink-factor controls how much each smaller spacing step shrinks relative to the next larger step.
+    Higher values shrink more rapidly.
+    1.5 (default), 1 (minimal), 2 (aggressive)
+  */
   --ks-brand-spacing-shrink-factor: 1.5;
+
+  /*
+    spacing-grow-factor controls how much each larger spacing step grows relative to the next smaller step.
+    Higher values grow more rapidly.
+    1.5 (default), 1 (minimal), 2 (aggressive)
+  */
   --ks-brand-spacing-grow-factor: 1.5;
+
+  /*
+    spacing-bp-factor controls how much spacing increases at larger breakpoints (responsive scaling).
+    Higher values increase spacing more on large screens.
+    1.5 (default), 1 (minimal), 2 (aggressive)
+  */
   --ks-brand-spacing-bp-factor: 1.5;
 }
 
-/* Border */
+/*
+  BORDER TOKENS
+*/
 :root {
   --ks-brand-border-width-default: 1px;
   --ks-brand-border-width-emphasized: 2px;
 
-  --ks-brand-border-radius-control: 8px;
-  --ks-brand-border-radius-card: 12px;
-  --ks-brand-border-radius-surface: 16px;
+  /*
+    border-radius-factor controls how rounded corners are.
+    1 = no border radius, 2 = maximum border radius
+  */
+  --ks-brand-border-radius-factor: 1.5;
 }
 
-/* Shadow */
+/*
+  SHADOW TOKENS
+*/
 :root {
-  --ks-brand-box-shadow-control-blur: 1px;
-  --ks-brand-box-shadow-card-blur: 2px;
-  --ks-brand-box-shadow-surface-blur: 6px;
+  /*
+    box-shadow-blur-factor controls shadow softness.
+    1 = no blur, 2 = maximum blur
+
+  */
+  --ks-brand-box-shadow-blur-factor: 1.5;
+
+  /*
+    box-shadow-opacity-factor controls shadow transparency.
+    1 = fully transparent, 2 = fully opaque
+  */
+  --ks-brand-box-shadow-opacity-factor: 1.5;
+
+  /*
+    box-shadow-spread-factor controls shadow size.
+    1 = negative spread, 1.5 = no spread, 2 = maximum spread
+  */
+  --ks-brand-box-shadow-spread-factor: 1.5;
+}
+
+/*
+    TRANSITION TOKENS
+    Controls animation and transition timing. transition-duration-base sets base speed for all transitions.
+    1 = faster transitions, 2 = slower transitions
+  */
+:root {
+  --ks-brand-transition-duration-factor: 1.5;
 }
