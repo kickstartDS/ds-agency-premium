@@ -18,18 +18,27 @@
 
     &:hover {
       .c-rich-text {
-        color: var(--dsa-blog-teaser__copy--color_hover, var(--ks-text-color-copy-interface-interactive-hover));
+        color: var(--dsa-blog-teaser__copy--color_hover, var(--ks-text-color-interface-interactive-hover));
 
         > :not(.c-post-meta) {
           text-decoration: none;
+        }
+      }
+      .c-post-teaser__image {
+        img {
+          transform: var(--dsa-blog-teaser__image--transform, scale(1.05));
         }
       }
     }
   }
 
   .c-post-teaser__image {
+    overflow: hidden;
+    border-radius: var(--dsa-blog-teaser__image--border-radius, var(--ks-border-radius-card));
+
     img {
-      border-radius: var(--dsa-post-teaser__image--border-radius, var(--ks-border-radius-card));
+      transition: var(--dsa-blog-teaser__image--transition, var(--ks-transition-fade));
+      transition-property: transform;
     }
   }
 

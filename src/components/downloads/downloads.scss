@@ -23,12 +23,14 @@
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-end;
-    gap: var(--dsa-downloads-item__gap, var(--ks-spacing-inline-s));
+    gap: var(--dsa-downloads-item--gap, var(--ks-spacing-inline-s));
     border-radius: var(--dsa-downloads-item--border-radius, var(--ks-border-radius-control));
     padding: var(--dsa-downloads-item--padding, var(--ks-spacing-xxs));
     transition: var(--dsa-downloads-item--transition, var(--ks-transition-hover));
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       cursor: pointer;
 
       @media (min-width: 992px) {
@@ -36,6 +38,17 @@
           span {
             opacity: 1;
             transform: translateX(0%);
+          }
+        }
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      @media (min-width: 992px) {
+        .dsa-downloads-item__button {
+          span {
+            color: var(--dsa-downloads-item__button--color_hover, var(--ks-text-color-interface-interactive-hover));
           }
         }
       }
@@ -134,6 +147,7 @@
 
       @media (min-width: 992px) {
         span {
+          border-radius: var(--ks-border-radius-control);
           position: absolute;
           padding-left: 3em;
           display: block;

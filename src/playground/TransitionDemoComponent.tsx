@@ -11,9 +11,10 @@ import { EventLocation } from "../components/event-location/EventLocationCompone
 import { EventListTeaser } from "../components/event-list-teaser/EventListTeaserComponent";
 import { CookieConsent } from "../components/cookie-consent/CookieConsentComponent";
 import { NavDropdown } from "../components/nav-dropdown/NavDropdownComponent";
+import { ContentNav } from "../components/content-nav/ContentNavComponent";
+import { BlogTeaser } from "../components/blog-teaser/BlogTeaserComponent";
 import { SplitWeighted } from "../components/split-weighted/SplitWeightedComponent";
-import { Slider } from "../components/slider/SliderComponent";
-import { Hero } from "../components/hero/HeroComponent";
+import { Downloads } from "../components/downloads/DownloadsComponent";
 
 const TransitionDemo = () => (
   <div className="playground-preview-page">
@@ -27,58 +28,152 @@ const TransitionDemo = () => (
       spaceBefore="small"
       spaceAfter="small"
     >
-      <SplitWeighted
-        mainLayout={{
-          minWidth: "narrow",
+      <TeaserCard
+        button={{
+          chevron: true,
+          label: "Learn more",
         }}
-        asideLayout={{
-          stretchVertically: true,
-          minWidth: "wide",
+        image="img/placeholder/avatar-wide.svg"
+        imageRatio="landscape"
+        text="Use this area to add a short description. It provides additional context and helps structure content within the component."
+        title="Teaser card headline"
+        url="#"
+      />
+      <TeaserCard
+        button={{
+          chevron: true,
+          label: "Learn more",
+        }}
+        layout="compact"
+        image="img/placeholder/avatar-wide.svg"
+        imageRatio="landscape"
+        text="Use this area to add a short description. It provides additional context and helps structure content within the component."
+        title="Teaser card headline"
+        url="#"
+      />
+      <Downloads
+        download={[
+          {
+            format: "PDF",
+            name: "Product Brochure",
+            previewImage: "img/offset-image.png",
+            size: "2.5 MB",
+            url: "#",
+          },
+          {
+            format: "PDF",
+            name: "Company Brochure",
+            previewImage:
+              "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
+            size: "3.2 MB",
+            url: "#",
+          },
+          {
+            format: "DOC",
+            name: "User Guide",
+            size: "20 KB",
+            url: "#",
+          },
+          {
+            format: "TXT",
+            name: "Technical Specifications",
+            size: "12 KB",
+            url: "#",
+          },
+          {
+            format: "XLS",
+            name: "Price List",
+            size: "45 KB",
+            url: "#",
+          },
+          {
+            format: "PPT",
+            name: "Presentation",
+            size: "8 MB",
+            url: "#",
+          },
+        ]}
+      />
+    </Section>
+    <Section
+      className="dsa-section--component-preview"
+      content={{
+        mode: "default",
+        gutter: "large",
+      }}
+      width="wide"
+      spaceBefore="small"
+      spaceAfter="small"
+    >
+      <SplitWeighted
+        order={{
+          desktop: "asideFirst",
         }}
         main={
-          <Slider gap={10} arrows autoplay nav teaseNeighbours>
-            <Hero
-              image={{
-                indent: "none",
-                src: "https://picsum.photos/seed/kdsvisual/640/270",
-                srcDesktop: "img/placeholder/image-gallery-02.svg",
-                srcMobile: "img/placeholder/image-gallery-02.svg",
-                srcTablet: "img/placeholder/image-gallery-02.svg",
-              }}
-            />
-            <Hero
-              image={{
-                indent: "none",
-                src: "https://picsum.photos/seed/kdsvisual/640/270",
-                srcDesktop: "img/placeholder/image-gallery-02.svg",
-                srcMobile: "img/placeholder/image-gallery-02.svg",
-                srcTablet: "img/placeholder/image-gallery-02.svg",
-              }}
-            />
-            <Hero
-              image={{
-                indent: "none",
-                src: "https://picsum.photos/seed/kdsvisual/640/270",
-                srcDesktop: "img/placeholder/image-gallery-02.svg",
-                srcMobile: "img/placeholder/image-gallery-02.svg",
-                srcTablet: "img/placeholder/image-gallery-02.svg",
-              }}
-            />
-          </Slider>
+          <BlogTeaser
+            alt="Image of a business team working"
+            author={{
+              image: "img/people/author-emily.png",
+              name: "Jane Smith",
+              title: "Senior AI Researcher",
+            }}
+            date="12/30/2022"
+            headline="The Future of AI"
+            image="img/close-up-young-business-team-working.png"
+            link={{
+              text: "Read article",
+              url: "https://example.com",
+            }}
+            readingTime="5 min read"
+            tags={[
+              {
+                entry: "Technology",
+              },
+              {
+                entry: "AI",
+              },
+            ]}
+            teaserText="Dive into the future of AI in this detailed blog post. Discover how technology is rapidly evolving, the impact of AI on various industries, and what to expect in the coming years. Learn about the latest advancements, challenges, and the potential solutions that AI brings to the table."
+          />
         }
         aside={
-          <TeaserCard
-            button={{
-              chevron: false,
-              hidden: true,
-              label: "Learn more",
-            }}
-            headline="Explore This Topic"
-            image="img/placeholder/avatar-wide.svg"
-            imageRatio="wide"
-            layout="stack"
-            text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
-            url="#"
+          <ContentNav
+            initiallyShown={5}
+            links={[
+              {
+                label: "Market Insights",
+                url: "#",
+              },
+              {
+                label: "Industry Trends",
+                url: "#",
+              },
+              {
+                label: "Competitor Analysis",
+                url: "#",
+              },
+              {
+                label: "Customer Feedback",
+                url: "#",
+              },
+              {
+                label: "Sales Data",
+                url: "#",
+              },
+              {
+                label: "Product Development",
+                url: "#",
+              },
+              {
+                label: "Supply Chain Management",
+                url: "#",
+              },
+              {
+                label: "Financial Performance",
+                url: "#",
+              },
+            ]}
+            topic="Descriptive Topic"
           />
         }
       />
@@ -175,6 +270,7 @@ const TransitionDemo = () => (
         />
         <TextField label="Your name" />
         <CheckboxGroup
+          name="Checkboxes"
           label={"Lorem Ipsum"}
           options={[
             {
@@ -193,6 +289,7 @@ const TransitionDemo = () => (
         />
         <TextArea label="Your message" />
         <RadioGroup
+          name="Radio Buttons"
           label={"Lorem Ipsum"}
           options={[
             {

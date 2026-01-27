@@ -14,7 +14,7 @@
 
   --dsa-blog-teaser__copy--font: var(--ks-font-copy-s);
   --dsa-blog-teaser__copy--color: var(--ks-text-color-copy);
-  --dsa-blog-teaser__copy--color_hover: var(--ks-text-color-default);
+  --dsa-blog-teaser__copy--color_hover: var(--ks-color-fg);
   --dsa-blog-teaser__copy--margin-top: 0.5em;
 
   --dsa-blog-teaser__meta--font: var(--ks-spacing-stack-s);
@@ -24,6 +24,8 @@
   --dsa-blog-teaser__avatar--size: 2em;
 
   --dsa-blog-teaser__image--border-radius: var(--ks-border-radius-card);
+  --dsa-blog-teaser__image--transition: var(--ks-transition-fade);
+  --dsa-blog-teaser__image--transform: scale(1.05);
 
   @include container.size("≥", 640px, "blog-teaser") {
     --dsa-blog-teaser--gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-s);
