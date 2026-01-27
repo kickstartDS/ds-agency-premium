@@ -38,6 +38,7 @@
   .c-form-field__input {
     font: var(--dsa-select-field--font, var(--ks-font-interface-m));
     padding: var(--dsa-select-field--padding, 0.4rem 0.75rem 0.35rem);
+    transition: var(--dsa-select-field--transition, var(--ks-transition-hover));
 
     &:not(:focus-visible) {
       box-shadow: var(--dsa-select-field--shadow, var(--ks-box-shadow-control));
@@ -55,7 +56,7 @@
     }
   }
 
-  .c-select-field__label {
+  .c-form-field__label {
     font: var(--dsa-select-field__label--font, var(--ks-font-interface-s));
     font-weight: var(--dsa-select-field__label--font-weight, var(--ks-font-weight-regular));
   }

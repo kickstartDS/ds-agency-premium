@@ -45,6 +45,7 @@
     padding: var(--dsa-nav-dropdown__label--padding);
     text-align: left;
     border-radius: var(--dsa-nav-dropdown__label--border-radius);
+    transition: var(--ks-transition-hover);
 
     &:hover,
     &:focus,

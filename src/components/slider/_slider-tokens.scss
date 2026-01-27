@@ -1,4 +1,7 @@
 .dsa-slider {
+  --dsa-slider--animation-duration: 1s;
+  --dsa-slider--autoplay-duration: 4s;
+
   --dsa-slider__arrow--background-color: var(--ks-color-fg-alpha-4);
   --dsa-slider__arrow--background-color_hover: var(--ks-color-fg-alpha-3);
   --dsa-slider__arrow--background-color_active: var(--ks-color-fg-alpha-3);

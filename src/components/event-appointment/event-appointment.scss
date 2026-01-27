@@ -20,6 +20,12 @@
   // Inherit font size from parent to allow grid column sizing in em units
   font: inherit;
 
+  // overwrite global link styles from kickstartDS
+  :root &,
+  html & {
+    transition: var(--ks-transition-hover);
+  }
+
   &:hover {
     border-color: var(--ks-border-color-interface-interactive-hover);
   }

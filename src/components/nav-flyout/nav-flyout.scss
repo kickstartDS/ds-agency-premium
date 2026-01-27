@@ -14,7 +14,7 @@
   position: fixed;
   width: 100%;
   transition: all var(--ks-duration-slow);
-  transition-delay: 100ms;
+  transition-delay: var(--dsa-nav-flyout--transition-delay);
   padding: var(--dsa-nav-flyout--padding);
   right: 0;
   bottom: 0;

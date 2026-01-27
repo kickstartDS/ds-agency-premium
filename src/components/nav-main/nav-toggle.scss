@@ -8,13 +8,13 @@ html.overlay-open {
 
 button.dsa-nav-toggle {
   $ease: ease;
-  $duration: 300ms;
+  $duration: var(--ks-duration-slow);
 
   display: block;
   position: relative;
   right: 0;
   box-sizing: content-box;
-  transition: top 0.15s;
+  transition: top var(--ks-transition-collapse);
   z-index: 1;
   padding: 0 var(--dsa-header--spacing-horizontal);
   transform: translateX(var(--dsa-header--spacing-horizontal));

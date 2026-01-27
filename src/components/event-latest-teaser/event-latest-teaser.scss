@@ -14,6 +14,12 @@
   border: var(--ks-border-width-default) solid var(--ks-border-color-card-interactive);
   box-shadow: var(--ks-box-shadow-card);
 
+  // overwrite global link styles from kickstartDS
+  :root &,
+  html & {
+    transition: var(--ks-transition-hover);
+  }
+
   @include container.size("≥", 640px, "event-latest-teaser") {
     flex-direction: row;
     align-items: center;

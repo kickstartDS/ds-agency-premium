@@ -18,6 +18,12 @@
   gap: var(--ks-spacing-stack-m) var(--ks-spacing-inline-m);
   box-shadow: var(--ks-box-shadow-card);
 
+  // overwrite global link styles from kickstartDS
+  :root &,
+  html & {
+    transition: var(--ks-transition-hover);
+  }
+
   &:hover {
     border-color: var(--ks-border-color-card-interactive-hover);
     box-shadow: var(--ks-box-shadow-card-hover);

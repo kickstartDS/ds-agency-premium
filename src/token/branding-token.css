@@ -178,5 +178,5 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
     1 = faster transitions, 2 = slower transitions
   */
 :root {
-  --ks-brand-transition-duration-factor: 1.5;
+  --ks-brand-duration-factor: 1.5;
 }

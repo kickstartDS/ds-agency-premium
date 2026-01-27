@@ -22,7 +22,7 @@
     border-radius: 0.35em;
     width: fit-content;
     margin-right: 1em;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color var(--ks-transition-hover);
 
     &:hover {
       background-color: rgb(220, 220, 220);

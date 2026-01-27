@@ -1,0 +1,8 @@
+.l-section {
+  .l-section__content {
+    > * {
+      position: relative;
+      z-index: 100000;
+    }
+  }
+}

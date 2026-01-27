@@ -8,6 +8,7 @@
     var(--ks-background-color-default),
     var(--ks-color-primary-to-bg-6)
   );
+  --dsa-nav-flyout--transition-delay: var(--ks-duration-immediate);
 
   --dsa-nav-flyout__label--color: var(--ks-color-fg);
   --dsa-nav-flyout__label--color_hover: var(--ks-text-color-interface-interactive-hover);

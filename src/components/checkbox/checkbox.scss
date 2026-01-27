@@ -45,5 +45,9 @@
     .c-form-check__label {
       margin-left: var(--dsa-checkbox__label--margin-left, 0.5em);
     }
+
+    .c-form-check__box {
+      transition: var(--ks-transition-toggle);
+    }
   }
 }

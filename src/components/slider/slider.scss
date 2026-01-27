@@ -35,6 +35,9 @@
 
   --c-slider_arrow--color: var(--dsa-slider__arrow--color, var(--ks-text-color-interface-interactive));
 
+  --c-slider--animation-duration: var(--dsa-slider--animation-duration, var(--ks-transition-fade));
+  --c-slider--autoplay: var(--dsa-slider--autoplay-duration, 4s);
+
   position: relative;
 
   &__nav {
