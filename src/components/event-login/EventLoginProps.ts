@@ -38,6 +38,9 @@ export type Label1 = string;
  */
 export type URL = string;
 
+/**
+ * Event login component for user authentication to access event-related content.
+ */
 export interface EventLoginProps {
   headline?: Headline;
   text?: Text;

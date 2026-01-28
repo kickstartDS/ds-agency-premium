@@ -35,6 +35,9 @@ export type Links = {
   newTab?: boolean;
 }[];
 
+/**
+ * Event location component for displaying event dates, location details, and related links.
+ */
 export interface EventLocationProps {
   dates?: Dates;
   locationName?: LocationName;

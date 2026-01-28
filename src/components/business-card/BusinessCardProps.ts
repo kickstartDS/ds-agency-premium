@@ -48,6 +48,9 @@ export type Buttons = {
   url: string;
 }[];
 
+/**
+ * Business card component representing an individual's or company's contact information and branding.
+ */
 export interface BusinessCardProps {
   centered?: Centered;
   image?: BackgroundImage;

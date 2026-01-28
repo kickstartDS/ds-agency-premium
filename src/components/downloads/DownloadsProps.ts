@@ -5,6 +5,9 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+/**
+ * Downloads component for providing users with downloadable files and resources.
+ */
 export interface DownloadsProps {
   download?: {
     /**

@@ -5,6 +5,9 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+/**
+ * Search filter component for filtering search results by categories.
+ */
 export interface SearchFilterProps {
   /**
    * The title of the search filter.

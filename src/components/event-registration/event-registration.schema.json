@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/event-registration.schema.json",
   "title": "Event Registration",
+  "description": "Event registration component for users to register for events.",
   "type": "object",
   "properties": {
     "label": {

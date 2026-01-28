@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/business-card.schema.json",
   "title": "Business Card",
+  "description": "Business card component representing an individual's or company's contact information and branding.",
   "type": "object",
   "properties": {
     "centered": {

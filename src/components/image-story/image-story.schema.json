@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/image-story.schema.json",
   "title": "Image Story",
+  "description": "Image story component for displaying an image alongside text content with customizable layout and buttons.",
   "type": "object",
   "properties": {
     "headline": {

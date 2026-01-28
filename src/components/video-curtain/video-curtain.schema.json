@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/video-curtain.schema.json",
   "title": "Video Curtain",
+  "description": "Video curtain component for displaying a video background with overlay text and buttons.",
   "type": "object",
   "properties": {
     "headline": {

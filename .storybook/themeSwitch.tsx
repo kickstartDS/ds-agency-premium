@@ -1,5 +1,5 @@
 import { Args, GlobalTypes } from "@storybook/types";
-import { Decorator } from "@storybook/react";
+import { Decorator } from "@storybook/react-vite";
 import { useTheme } from "../src/themes/useTheme";
 import * as themes from "../src/themes";
 

@@ -7,6 +7,9 @@
 
 import type {SearchFormProps} from "../search-form/SearchFormProps";
 
+/**
+ * Search modal component for displaying a search interface in a modal dialog.
+ */
 export interface SearchModalProps {
   headline: string;
   closeAriaLabel: string;

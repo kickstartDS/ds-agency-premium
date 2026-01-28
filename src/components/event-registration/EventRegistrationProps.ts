@@ -54,6 +54,9 @@ export type ButtonLabel = string;
  */
 export type AriaLabel = string;
 
+/**
+ * Event registration component for users to register for events.
+ */
 export interface EventRegistrationProps {
   label?: Label;
   title?: Title;

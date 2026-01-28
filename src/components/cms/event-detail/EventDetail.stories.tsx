@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { JSONSchema7 } from "json-schema";
 import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
 
@@ -12,6 +12,7 @@ const meta: Meta<typeof EventDetailComponent> = {
     jsonschema: { schema },
     layout: "fullscreen",
   },
+  tags: ["!manifest"],
   ...getArgsShared(schema as JSONSchema7),
 };
 

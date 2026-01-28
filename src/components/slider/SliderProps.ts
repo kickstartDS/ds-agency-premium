@@ -58,6 +58,9 @@ export type Content = (
   | TextProps
 )[];
 
+/**
+ * Slider component for displaying a carousel of content components.
+ */
 export interface SliderProps {
   autoplay?: AutoPlay;
   nav?: ShowNavigation;

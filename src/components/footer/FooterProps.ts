@@ -34,6 +34,9 @@ export type Byline = string;
  */
 export type Inverted = boolean;
 
+/**
+ * Footer component for displaying site logo, byline, and navigation items at the bottom of the page.
+ */
 export interface FooterProps {
   logo: Logo;
   byline?: Byline;
