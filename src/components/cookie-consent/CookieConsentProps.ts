@@ -30,7 +30,7 @@ export type KsComponentAttribute = string;
 export interface CookieConsentProps {
   notice?: InitialCookieConsentNotice;
   revisitButton?: RevisitCookieConsentButton;
-  dialogue?: CookieConsentDialogue;
+  dialog?: CookieConsentDialogue;
   component?: KsComponentAttribute;
 }
 /**
@@ -80,25 +80,25 @@ export interface RevisitCookieConsentButton {
   label?: string;
 }
 /**
- * The dialogue displayed when users choose to customize their cookie preferences.
+ * The dialog displayed when users choose to customize their cookie preferences.
  */
 export interface CookieConsentDialogue {
   /**
-   * The title of the cookie consent dialogue
+   * The title of the cookie consent dialog
    */
   title?: string;
   /**
-   * The description of the cookie consent dialogue
+   * The description of the cookie consent dialog
    */
   description?: string;
   required?: RequiredCookies;
   buttons?: {
     /**
-     * The label for the accept button in the dialogue
+     * The label for the accept button in the dialog
      */
     acceptLabel?: string;
     /**
-     * The label for the reject button in the dialogue
+     * The label for the reject button in the dialog
      */
     rejectLabel?: string;
     /**
@@ -107,7 +107,7 @@ export interface CookieConsentDialogue {
     savePreferencesLabel?: string;
   };
   /**
-   * The variant of the decision buttons in the dialogue
+   * The variant of the decision buttons in the dialog
    */
   decisionButtonVariant?: "secondary" | "tertiary";
   options?: {

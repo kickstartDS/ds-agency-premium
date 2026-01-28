@@ -11,6 +11,7 @@
   flex-direction: column;
   background-color: var(--dsa-business-card--background-color, var(--ks-background-color-card));
   align-items: flex-start;
+  border: var(--dsa-business-card--border, var(--ks-border-card));
 
   @include container.size("≥", 640px, "business-card") {
     flex-direction: row;

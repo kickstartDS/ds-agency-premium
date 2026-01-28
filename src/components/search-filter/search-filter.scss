@@ -1,7 +1,8 @@
 .dsa-search-filter {
-  background-color: var(--ks-background-color-accent);
+  background-color: var(--ks-background-color-card);
   border-radius: var(--ks-border-radius-card);
   padding: var(--ks-spacing-inset-m);
+  border: var(--ks-border-card);
 
   &__title {
     font: var(--dsa-topic--font);

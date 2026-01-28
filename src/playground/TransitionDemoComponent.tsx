@@ -15,6 +15,7 @@ import { ContentNav } from "../components/content-nav/ContentNavComponent";
 import { BlogTeaser } from "../components/blog-teaser/BlogTeaserComponent";
 import { SplitWeighted } from "../components/split-weighted/SplitWeightedComponent";
 import { Downloads } from "../components/downloads/DownloadsComponent";
+import { Faq } from "../components/faq/FaqComponent";
 
 const TransitionDemo = () => (
   <div className="playground-preview-page">
@@ -36,7 +37,7 @@ const TransitionDemo = () => (
         image="img/placeholder/avatar-wide.svg"
         imageRatio="landscape"
         text="Use this area to add a short description. It provides additional context and helps structure content within the component."
-        title="Teaser card headline"
+        headline="Teaser card headline"
         url="#"
       />
       <TeaserCard
@@ -45,55 +46,65 @@ const TransitionDemo = () => (
           label: "Learn more",
         }}
         layout="compact"
-        image="img/placeholder/avatar-wide.svg"
+        image="img/people-brainstorming-work-meeting.png"
         imageRatio="landscape"
         text="Use this area to add a short description. It provides additional context and helps structure content within the component."
-        title="Teaser card headline"
+        headline="Teaser card headline"
         url="#"
       />
-      <Downloads
-        download={[
-          {
-            format: "PDF",
-            name: "Product Brochure",
-            previewImage: "img/offset-image.png",
-            size: "2.5 MB",
-            url: "#",
-          },
-          {
-            format: "PDF",
-            name: "Company Brochure",
-            previewImage:
-              "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
-            size: "3.2 MB",
-            url: "#",
-          },
-          {
-            format: "DOC",
-            name: "User Guide",
-            size: "20 KB",
-            url: "#",
-          },
-          {
-            format: "TXT",
-            name: "Technical Specifications",
-            size: "12 KB",
-            url: "#",
-          },
-          {
-            format: "XLS",
-            name: "Price List",
-            size: "45 KB",
-            url: "#",
-          },
-          {
-            format: "PPT",
-            name: "Presentation",
-            size: "8 MB",
-            url: "#",
-          },
-        ]}
-      />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "var(--ks-spacing-stack-s)",
+        }}
+      >
+        <Downloads
+          download={[
+            {
+              format: "PDF",
+              name: "Product Brochure",
+              previewImage: "img/offset-image.png",
+              size: "2.5 MB",
+              url: "#",
+            },
+            {
+              format: "PDF",
+              name: "Company Brochure",
+              previewImage:
+                "img/kickstartDS/CMS-Starter producthunt-slide-01.svg",
+              size: "3.2 MB",
+              url: "#",
+            },
+            {
+              format: "DOC",
+              name: "User Guide",
+              size: "20 KB",
+              url: "#",
+            },
+            {
+              format: "PPT",
+              name: "Presentation",
+              size: "5 MB",
+              url: "#",
+            },
+          ]}
+        />
+        <Faq
+          questions={[
+            {
+              question: "Is this component mobile-friendly?",
+              answer:
+                "Yes, this component is fully responsive and adapts to different screen sizes for optimal viewing on all devices.",
+            },
+            {
+              question: "What is this component used for?",
+              answer:
+                "A FAQ component is used to display frequently asked questions and their answers in a structured format.",
+            },
+          ]}
+        />
+      </div>
     </Section>
     <Section
       className="dsa-section--component-preview"
@@ -137,43 +148,29 @@ const TransitionDemo = () => (
           />
         }
         aside={
-          <ContentNav
-            initiallyShown={5}
-            links={[
+          <EventLocation
+            address="Alexanderplatz 1<br />
+  10178 Berlin"
+            dates={[
               {
-                label: "Market Insights",
-                url: "#",
-              },
-              {
-                label: "Industry Trends",
-                url: "#",
-              },
-              {
-                label: "Competitor Analysis",
-                url: "#",
-              },
-              {
-                label: "Customer Feedback",
-                url: "#",
-              },
-              {
-                label: "Sales Data",
-                url: "#",
-              },
-              {
-                label: "Product Development",
-                url: "#",
-              },
-              {
-                label: "Supply Chain Management",
-                url: "#",
-              },
-              {
-                label: "Financial Performance",
+                ariaLabel:
+                  "Register for the event on 18th September 2025 from 09:00 to 17:00",
+                date: "18.09.2025",
+                label: "Register",
+                newTab: true,
+                time: "09:00 – 17:00",
                 url: "#",
               },
             ]}
-            topic="Descriptive Topic"
+            displayMode="spacious"
+            links={[
+              {
+                label: "Open in Google Maps",
+                newTab: true,
+                url: "https://maps.google.com/?q=Berlin+Congress+Center",
+              },
+            ]}
+            locationName="Berlin Congress Center"
           />
         }
       />
@@ -209,30 +206,45 @@ const TransitionDemo = () => (
           flexDirection: "column",
         }}
       >
-        <EventLocation
-          address="Alexanderplatz 1<br />
-  10178 Berlin"
-          dates={[
+        <ContentNav
+          initiallyShown={4}
+          links={[
             {
-              ariaLabel:
-                "Register for the event on 18th September 2025 from 09:00 to 17:00",
-              date: "18.09.2025",
-              label: "Register",
-              newTab: true,
-              time: "09:00 – 17:00",
+              label: "Market Insights",
+              url: "#",
+            },
+            {
+              label: "Industry Trends",
+              url: "#",
+            },
+            {
+              label: "Competitor Analysis",
+              url: "#",
+            },
+            {
+              label: "Customer Feedback",
+              url: "#",
+            },
+            {
+              label: "Sales Data",
+              url: "#",
+            },
+            {
+              label: "Product Development",
+              url: "#",
+            },
+            {
+              label: "Supply Chain Management",
+              url: "#",
+            },
+            {
+              label: "Financial Performance",
               url: "#",
             },
           ]}
-          displayMode="spacious"
-          links={[
-            {
-              label: "Open in Google Maps",
-              newTab: true,
-              url: "https://maps.google.com/?q=Berlin+Congress+Center",
-            },
-          ]}
-          locationName="Berlin Congress Center"
+          topic="Descriptive Topic"
         />
+
         <EventLatestTeaser
           ariaLabel="Event teaser for "
           calendar={{
@@ -311,8 +323,7 @@ const TransitionDemo = () => (
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: "10px",
-          justifyContent: "space-between",
+          gap: "var(--ks-spacing-stack-m)",
         }}
       >
         <Button icon="arrow-right" variant="primary" label={"Learn more"} />
@@ -346,6 +357,10 @@ const TransitionDemo = () => (
               label: "Custom Solutions",
               url: "#",
             },
+            {
+              label: "Integration Services",
+              url: "#",
+            },
           ]}
         />
       </div>
@@ -373,7 +388,7 @@ const TransitionDemo = () => (
         revisitButton={{
           label: "Manage Cookies",
         }}
-        dialogue={{
+        dialog={{
           title: "Cookie Preferences",
           description: "Manage your cookie preferences below.",
           required: [

@@ -40,8 +40,7 @@
 
 :root {
   /* Font Families */
-  --ks-brand-font-family-display: Montserrat, Baskerville,
-    "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  --ks-brand-font-family-display: Oswald;
   --ks-brand-font-family-copy: system-ui, -apple-system, BlinkMacSystemFont,
     "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue",
     "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell",
@@ -97,7 +96,7 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 
 /* Spacing */
 :root {
-  --ks-brand-spacing-base: 16px;
+  --ks-brand-spacing-factor: 1.75;
   --ks-brand-spacing-shrink-factor: 1.5;
   --ks-brand-spacing-grow-factor: 1.5;
   --ks-brand-spacing-bp-factor: 1.5;
@@ -105,17 +104,20 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 
 /* Border */
 :root {
-  --ks-brand-border-width-default: 1px;
-  --ks-brand-border-width-emphasized: 2px;
-
-  --ks-brand-border-radius-control: 4px;
-  --ks-brand-border-radius-card: 8px;
-  --ks-brand-border-radius-surface: 12px;
+  --ks-brand-border-width-default: 2px;
+  --ks-brand-border-width-emphasized: 4px;
+  --ks-brand-border-radius-factor: 1;
 }
 
 /* Shadow */
+
 :root {
-  --ks-brand-box-shadow-control-blur: 1px;
-  --ks-brand-box-shadow-card-blur: 2px;
-  --ks-brand-box-shadow-surface-blur: 6px;
+  --ks-brand-box-shadow-blur-factor: 1;
+  --ks-brand-box-shadow-opacity-factor: 1;
+  --ks-brand-box-shadow-spread-factor: 1;
+}
+
+/* Duration */
+:root {
+  --ks-brand-duration-factor: 1.25;
 }

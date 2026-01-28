@@ -1,4 +1,11 @@
-:root {
+:root,
+[ks-inverted] {
+  --ks-border-divider: var(--ks-border-width-default) solid var(--ks-border-color-interface);
+  --ks-border-card: var(--ks-border-width-default) solid var(--ks-border-color-card);
+  --ks-border-card-interactive: var(--ks-border-width-default) solid var(--ks-border-color-card-interactive);
+  --ks-border-control: var(--ks-border-width-default) solid var(--ks-border-color-interface);
+  --ks-border-surface: var(--ks-border-width-default) solid var(--ks-border-color-surface);
+
   --ks-border-width-default: var(--ks-brand-border-width-default);
   --ks-border-width-emphasized: var(--ks-brand-border-width-emphasized);
 

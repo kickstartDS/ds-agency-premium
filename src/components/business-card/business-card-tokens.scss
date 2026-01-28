@@ -2,6 +2,7 @@
 @include container.wrapper("business-card");
 
 .dsa-business-card {
+  --dsa-business-card--border: var(--ks-border-card);
   --dsa-business-card--border-radius: var(--ks-border-radius-card);
   --dsa-business-card--padding: var(--ks-spacing-inset-m);
   --dsa-business-card--background-color: var(--ks-background-color-card);

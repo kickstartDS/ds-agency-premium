@@ -50,7 +50,7 @@ export const Compact: Story = {
     layout: "compact",
     headline: "Explore This Topic",
     text: "This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration.",
-    image: "img/placeholder/avatar-wide.svg",
+    image: "img/people-brainstorming-work-meeting.png",
     url: "#",
     button: {
       label: "Learn more",

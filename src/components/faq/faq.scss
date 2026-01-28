@@ -10,6 +10,9 @@
     --c-collapsible-box_content--padding: var(--dsa-faq_content--padding, 0em 0em 1em 0em);
     --c-collapsible-box--border-color: var(--dsa-faq--border-color, var(--ks-border-color-accent));
 
+    border-bottom: var(--dsa-faq--border, var(--ks-border-divider));
+    border-top: var(--dsa-faq--border, var(--ks-border-divider));
+
     &__header {
       &__text {
         color: var(--dsa-faq__summary--color, var(--dsa-topic--color));

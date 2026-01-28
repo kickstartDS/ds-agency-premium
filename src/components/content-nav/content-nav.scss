@@ -1,12 +1,13 @@
 @use "content-nav-tokens.scss";
 
 .dsa-content-nav {
-  border-radius: var(--ks-border-radius-card);
+  border-radius: var(--dsa-content-nav--border-radius, var(--ks-border-radius-card));
   padding: var(--dsa-content-nav--padding, var(--ks-spacing-inset-m));
   display: flex;
   flex-wrap: wrap;
   background-color: var(--dsa-content-nav--background-color, var(--ks-background-color-card));
   gap: var(--dsa-content-nav--gap, var(--ks-spacing-stack-m));
+  border: var(--dsa-content-nav--border, var(--ks-border-card));
 
   &__topic {
     font: var(--dsa-content-nav__topic--font, var(--dsa-topic--font));

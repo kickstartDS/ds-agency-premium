@@ -15,7 +15,8 @@
   gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
   background-color: var(--ks-background-color-card);
   padding: var(--ks-spacing-inset-l);
-  border-radius: var(--ks-border-radius-surface);
+  border-radius: var(--ks-border-radius-card);
+  border: var(--ks-border-card);
 
   --dsa-event-location__info--flex-basis: 280px;
   --dsa-event-location__appointments--min-width: 12em;

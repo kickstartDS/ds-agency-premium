@@ -62,7 +62,7 @@ export const Card: Story = {
         variant: "tertiary",
       },
     },
-    dialogue: {
+    dialog: {
       title: "Cookie Preferences",
       description: "Manage your cookie preferences below.",
       required: [
@@ -128,7 +128,7 @@ export const Banner: Story = {
         label: "Reject Non-Essential",
       },
     },
-    dialogue: {
+    dialog: {
       title: "Manage Your Cookie Preferences",
       description:
         "Here you can enable or disable different types of cookies. Essential cookies are always active as they are necessary for the website to function properly. You can change your preferences at any time. Please note that disabling certain cookies may affect your experience on our website.",
@@ -186,7 +186,7 @@ export const C15t: Story = {
       decisionButtonVariant: "primary",
       customizeButton: { variant: "tertiary" },
     },
-    dialogue: {
+    dialog: {
       required: [{ key: "necessary" }],
       options: [
         { key: "measurement" },

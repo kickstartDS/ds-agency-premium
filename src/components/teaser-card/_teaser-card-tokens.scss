@@ -5,12 +5,22 @@
   --dsa-teaser-card--background: var(--ks-background-color-card-interactive);
   --dsa-teaser-card--background_hover: var(--ks-background-color-card-interactive-hover);
 
-  --dsa-teaser-card--border-width: var(--ks-border-width-default);
-  --dsa-teaser-card--border-color: var(--ks-border-color-card-interactive);
-  --dsa-teaser-card--border-color_hover: var(--ks-border-color-card-interactive-hover);
   --dsa-teaser-card--border-radius: var(--ks-border-radius-card);
-  --dsa-teaser-card--overlay: linear-gradient(transparent, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85));
-  --dsa-teaser-card--overlay_with-label: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85));
+  --dsa-teaser-card--border: var(--ks-border-card-interactive);
+  --dsa-teaser-card--border-color_hover: var(--ks-border-color-card-interactive-hover);
+
+  --dsa-teaser-card_compact--border: 0;
+  --dsa-teaser-card_compact--border-color_hover: unset;
+  --dsa-teaser-card_compact--overlay: linear-gradient(
+    transparent,
+    var(--ks-color-bg-alpha-5),
+    var(--ks-color-bg-alpha-1)
+  );
+  --dsa-teaser-card_compact--overlay_with-label: linear-gradient(
+    var(--ks-color-bg-alpha-4),
+    var(--ks-color-bg-alpha-5),
+    var(--ks-color-bg-alpha-1)
+  );
 
   --dsa-teaser-card--shadow: var(--ks-box-shadow-card);
   --dsa-teaser-card--shadow_hover: var(--ks-box-shadow-card-hover);
@@ -25,10 +35,10 @@
   --dsa-teaser-card__label--font: var(--ks-font-interface-s);
   --dsa-teaser-card__label--font-weight: var(--ks-font-weight-semi-bold);
   --dsa-teaser-card__label--color: var(--ks-text-color-primary);
-  --dsa-teaser-card__label--background-color: var(--ks-background-color-bold);
+  --dsa-teaser-card__label--background-color: var(--ks-background-color-default);
   --dsa-teaser-card__label--padding: 0.5em 1em;
   --dsa-teaser-card__label--border-radius: var(--ks-border-radius-pill);
-  --dsa-teaser-card__label--border: var(--ks-border-width-default) solid var(--ks-border-color-interface);
+  --dsa-teaser-card__label--border: var(--ks-border-width-default) solid var(--ks-border-color-primary);
 
   --dsa-teaser-card__button--font: var(--ks-font-interface-m);
 

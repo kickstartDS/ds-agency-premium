@@ -40,7 +40,7 @@ const translate = (elements, translationConfig) => {
   elements.dialog.saveBtn.textContent = translations.common.save;
 
   for (const option of elements.dialog.form.querySelectorAll(
-    ".dsa-cookie-consent-dialogue__option"
+    ".dsa-cookie-consent-dialog__option"
   )) {
     const type = option.dataset.consentType;
     const translation = translations.consentTypes[type];
@@ -48,12 +48,12 @@ const translate = (elements, translationConfig) => {
       option.querySelector(".dsa-headline__inner").textContent =
         translation.title;
       option.querySelector(
-        ".dsa-cookie-consent-dialogue__option-description"
+        ".dsa-cookie-consent-dialog__option-description"
       ).textContent = translation.description;
     }
 
     const requiredLabel = option.querySelector(
-      ".dsa-cookie-consent-dialogue__label"
+      ".dsa-cookie-consent-dialog__label"
     );
     if (requiredLabel) requiredLabel.textContent = customTranslation.required;
   }

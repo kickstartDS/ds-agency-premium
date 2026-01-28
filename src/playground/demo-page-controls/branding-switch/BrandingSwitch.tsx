@@ -6,6 +6,7 @@ export const BRANDINGS = [
   { label: "Mint", file: "branding-token-mint.css" },
   { label: "Neon", file: "branding-token-neon.css" },
   { label: "Burgundy", file: "branding-token-burgundy.css" },
+  { label: "Blizzard", file: "branding-token-blizzard.css" },
   { label: "Coffee", file: "branding-token-coffee.css" },
   { label: "Water", file: "branding-token-water.css" },
 ];

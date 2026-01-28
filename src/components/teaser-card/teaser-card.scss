@@ -18,8 +18,11 @@
     }
   }
 
-  &--compact {
-    --overlay: var(--dsa-teaser-card--overlay, linear-gradient(transparent, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85)));
+  &.dsa-teaser-card--compact {
+    --overlay: var(
+      --dsa-teaser-card_compact--overlay,
+      linear-gradient(transparent, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85))
+    );
 
     &.dsa-teaser-card--unset {
       .c-teaser {
@@ -40,13 +43,17 @@
 
     &.dsa-teaser-card--with-label {
       --overlay: var(
-        --dsa-teaser-card--overlay_with-label,
+        --dsa-teaser-card_compact--overlay_with-label,
         linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85))
       );
     }
 
-    .c-teaser {
-      border: 0;
+    > .c-teaser {
+      border: var(--dsa-teaser-card_compact--border, var(--ks-border-card-interactive));
+
+      &:hover {
+        border-color: var(--dsa-teaser-card_compact--border-color_hover, var(--ks-border-color-card-interactive-hover));
+      }
 
       > *:first-child:not(.c-teaser__body) {
         display: flex;
@@ -128,10 +135,7 @@
     --c-teaser--padding: var(--dsa-teaser-card--padding, var(--ks-spacing-inset-l));
     --c-teaser--background: var(--dsa-teaser-card--background, var(--ks-background-color-card-interactive));
     --c-teaser--color: var(--dsa-teaser-card__copy--color, var(--ks-text-color-default));
-
-    --c-teaser--border: var(--dsa-teaser-card--border-color, var(--ks-background-color-card-interactive))
-      var(--dsa-teaser-card--border-width) solid;
-
+    --c-teaser--border: var(--dsa-teaser-card--border, var(--ks-border-card-interactive));
     --c-teaser--border-radius: var(--dsa-teaser-card--border-radius, var(--ks-border-radius-card));
     --c-teaser--shadow-hover: var(--dsa-teaser-card--shadow_hover, var(--ks-box-shadow-card-hover));
     --c-teaser_text--spacing: var(--dsa-teaser-card__copy--margin-top, 0.5em);
@@ -147,8 +151,7 @@
     }
 
     &:hover {
-      --c-teaser--border: var(--dsa-teaser-card--border-color_hover, var(--ks-background-color-card-interactive))
-        var(--dsa-teaser-card--border-width) solid;
+      border-color: var(--dsa-teaser-card--border-color_hover, var(--ks-border-color-card-interactive-hover));
 
       background-color: var(
         --dsa-teaser-card--background_hover,

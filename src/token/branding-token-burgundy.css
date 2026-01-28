@@ -40,18 +40,9 @@
 
 :root {
   /* Font Families */
-  --ks-brand-font-family-display: Montserrat, Baskerville,
-    "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-  --ks-brand-font-family-copy: system-ui, -apple-system, BlinkMacSystemFont,
-    "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue",
-    "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell",
-    "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic",
-    "Liberation Sans", sans-serif;
-  --ks-brand-font-family-interface: system-ui, -apple-system, BlinkMacSystemFont,
-    "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue",
-    "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell",
-    "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic",
-    "Liberation Sans", sans-serif;
+  --ks-brand-font-family-display: Enriqueta;
+  --ks-brand-font-family-copy: Lato;
+  --ks-brand-font-family-interface: Lato;
   --ks-brand-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo,
     Consolas, "Liberation Mono", monospace;
 
@@ -79,7 +70,7 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
   --ks-brand-font-size-display-grow-factor: 1.5;
   --ks-brand-font-size-display-bp-factor: 1.5;
 
-  --ks-brand-font-size-copy-base: 16px;
+  --ks-brand-font-size-copy-base: 14px;
   --ks-brand-font-size-copy-shrink-factor: 1.5;
   --ks-brand-font-size-copy-grow-factor: 1.5;
   --ks-brand-font-size-copy-bp-factor: 1.5;
@@ -97,7 +88,7 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 
 /* Spacing */
 :root {
-  --ks-brand-spacing-base: 16px;
+  --ks-brand-spacing-factor: 1.35;
   --ks-brand-spacing-shrink-factor: 1.5;
   --ks-brand-spacing-grow-factor: 1.5;
   --ks-brand-spacing-bp-factor: 1.5;
@@ -107,15 +98,12 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 :root {
   --ks-brand-border-width-default: 1px;
   --ks-brand-border-width-emphasized: 2px;
-
-  --ks-brand-border-radius-control: 0;
-  --ks-brand-border-radius-card: 0;
-  --ks-brand-border-radius-surface: 0;
+  --ks-brand-border-radius-factor: 1;
 }
 
 /* Shadow */
 :root {
-  --ks-brand-box-shadow-control-blur: 1px;
-  --ks-brand-box-shadow-card-blur: 2px;
-  --ks-brand-box-shadow-surface-blur: 6px;
+  --ks-brand-box-shadow-blur-factor: 1;
+  --ks-brand-box-shadow-opacity-factor: 1;
+  --ks-brand-box-shadow-spread-factor: 1;
 }

@@ -16,16 +16,16 @@ export default class CookieConsent extends Component {
         acceptAllBtn: $(".dsa-cookie-consent-notice__button--accept"),
       },
       dialog: {
-        wrapper: $(".dsa-cookie-consent-dialogue"),
-        title: $(".dsa-cookie-consent-dialogue__title .dsa-headline__inner"),
-        description: $(".dsa-cookie-consent-dialogue__description"),
-        closeBtn: $(".dsa-cookie-consent-dialogue__close"),
-        form: $(".dsa-cookie-consent-dialogue__form"),
-        activateAllBtn: $(".dsa-cookie-consent-dialogue__button--activate-all"),
+        wrapper: $(".dsa-cookie-consent-dialog"),
+        title: $(".dsa-cookie-consent-dialog__title .dsa-headline__inner"),
+        description: $(".dsa-cookie-consent-dialog__description"),
+        closeBtn: $(".dsa-cookie-consent-dialog__close"),
+        form: $(".dsa-cookie-consent-dialog__form"),
+        activateAllBtn: $(".dsa-cookie-consent-dialog__button--activate-all"),
         deactivateAllBtn: $(
-          ".dsa-cookie-consent-dialogue__button--deactivate-all"
+          ".dsa-cookie-consent-dialog__button--deactivate-all"
         ),
-        saveBtn: $(".dsa-cookie-consent-dialogue__button--save"),
+        saveBtn: $(".dsa-cookie-consent-dialog__button--save"),
       },
       settings: {
         button: $(".dsa-cookie-consent-revisit"),

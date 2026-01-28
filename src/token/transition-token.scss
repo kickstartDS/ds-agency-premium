@@ -1,6 +1,6 @@
 :root {
   // Duration
-  --ks-duration-base: calc(150ms * (var(--ks-brand-duration-factor) - 0));
+  --ks-duration-base: calc(150ms * (var(--ks-brand-duration-factor) - 0.5));
 
   --ks-duration-immediate: calc(var(--ks-duration-base) / 4);
   --ks-duration-fast: calc(var(--ks-duration-base) / 2);

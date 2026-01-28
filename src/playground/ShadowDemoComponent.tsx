@@ -30,6 +30,7 @@ const ShadowDemo = () => (
         asideLayout={{
           stretchVertically: true,
         }}
+        mainLayout={{ minWidth: "narrow" }}
         main={
           <Hero
             buttons={[
@@ -55,7 +56,6 @@ const ShadowDemo = () => (
             }}
             mobileTextBelow={false}
             skipButton
-            sub="This is the supporting subheadline"
             text="Use this area to add a short description. It provides additional context and helps structure content within the component."
             textPosition="left"
             textbox
@@ -209,8 +209,7 @@ const ShadowDemo = () => (
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: "10px",
-          justifyContent: "space-between",
+          gap: "var(--ks-spacing-stack-m)",
         }}
       >
         <Button icon="arrow-right" variant="primary" label={"Learn more"} />
@@ -271,7 +270,7 @@ const ShadowDemo = () => (
         revisitButton={{
           label: "Manage Cookies",
         }}
-        dialogue={{
+        dialog={{
           title: "Cookie Preferences",
           description: "Manage your cookie preferences below.",
           required: [

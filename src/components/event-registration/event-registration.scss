@@ -43,8 +43,9 @@
     display: flex;
     flex-direction: column;
     gap: var(--ks-spacing-stack-s);
-    background: var(--ks-background-color-accent);
+    background: var(--ks-background-color-card);
     border-radius: var(--ks-border-radius-card);
+    border: var(--ks-border-card);
     padding: var(--ks-spacing-inset-stretch-m);
   }
 

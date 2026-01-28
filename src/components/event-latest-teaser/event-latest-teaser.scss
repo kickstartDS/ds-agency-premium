@@ -11,7 +11,7 @@
   gap: var(--ks-spacing-inline-s);
   padding: var(--ks-spacing-inset-s);
   flex-direction: column;
-  border: var(--ks-border-width-default) solid var(--ks-border-color-card-interactive);
+  border: var(--ks-border-card-interactive);
   box-shadow: var(--ks-box-shadow-card);
 
   // overwrite global link styles from kickstartDS

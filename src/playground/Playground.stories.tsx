@@ -4,6 +4,7 @@ import FontDemo from "./FontDemoComponent";
 import SpacingDemo from "./SpacingDemoComponent";
 import ShadowDemo from "./ShadowDemoComponent";
 import TransitionDemo from "./TransitionDemoComponent";
+import BorderDemo from "./BorderDemoComponent";
 
 export default {
   title: "Token / Playground",
@@ -58,6 +59,16 @@ export const Transition = {
       <>
         <DemoPageControls />
         <TransitionDemo />
+      </>
+    );
+  },
+};
+export const Border = {
+  render() {
+    return (
+      <>
+        <DemoPageControls />
+        <BorderDemo />
       </>
     );
   },

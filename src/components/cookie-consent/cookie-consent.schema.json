@@ -11,19 +11,14 @@
       "properties": {
         "displayMode": {
           "type": "string",
-          "enum": [
-            "card",
-            "banner"
-          ],
+          "enum": ["card", "banner"],
           "description": "The display mode of the cookie consent component",
           "default": "card"
         },
         "title": {
           "type": "string",
           "description": "The title of the cookie consent section",
-          "examples": [
-            "We value your privacy"
-          ]
+          "examples": ["We value your privacy"]
         },
         "acceptButton": {
           "type": "object",
@@ -51,9 +46,7 @@
             "label": {
               "type": "string",
               "description": "The label for the customize button",
-              "examples": [
-                "Customize Cookies"
-              ]
+              "examples": ["Customize Cookies"]
             },
             "variant": {
               "$ref": "http://schema.mydesignsystem.com/button.schema.json#/properties/variant"
@@ -84,21 +77,19 @@
         }
       }
     },
-    "dialogue": {
+    "dialog": {
       "type": "object",
       "title": "Cookie Consent Dialogue",
-      "description": "The dialogue displayed when users choose to customize their cookie preferences.",
+      "description": "The dialog displayed when users choose to customize their cookie preferences.",
       "properties": {
         "title": {
           "type": "string",
-          "description": "The title of the cookie consent dialogue",
-          "examples": [
-            "Manage Cookie Preferences"
-          ]
+          "description": "The title of the cookie consent dialog",
+          "examples": ["Manage Cookie Preferences"]
         },
         "description": {
           "type": "string",
-          "description": "The description of the cookie consent dialogue",
+          "description": "The description of the cookie consent dialog",
           "examples": [
             "Customize your privacy settings here. You can choose which types of cookies and tracking technologies you allow."
           ]
@@ -112,16 +103,12 @@
               "key": {
                 "type": "string",
                 "title": "Internal Key",
-                "examples": [
-                  "necessary"
-                ]
+                "examples": ["necessary"]
               },
               "name": {
                 "type": "string",
                 "description": "The name of the required cookie",
-                "examples": [
-                  "Session Cookie"
-                ]
+                "examples": ["Session Cookie"]
               },
               "description": {
                 "type": "string",
@@ -138,12 +125,12 @@
           "properties": {
             "acceptLabel": {
               "type": "string",
-              "description": "The label for the accept button in the dialogue",
+              "description": "The label for the accept button in the dialog",
               "default": "Accept All"
             },
             "rejectLabel": {
               "type": "string",
-              "description": "The label for the reject button in the dialogue",
+              "description": "The label for the reject button in the dialog",
               "default": "Reject All"
             },
             "savePreferencesLabel": {
@@ -155,7 +142,7 @@
         },
         "decisionButtonVariant": {
           "type": "string",
-          "description": "The variant of the decision buttons in the dialogue",
+          "description": "The variant of the decision buttons in the dialog",
           "enum": ["secondary", "tertiary"]
         },
         "options": {
@@ -176,9 +163,7 @@
               "name": {
                 "type": "string",
                 "description": "The name of the cookie category",
-                "examples": [
-                  "Essential Cookies"
-                ]
+                "examples": ["Essential Cookies"]
               },
               "description": {
                 "type": "string",
