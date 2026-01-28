@@ -107,7 +107,6 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 :root {
   --ks-brand-border-width-default: 1px;
   --ks-brand-border-width-emphasized: 2px;
-
   --ks-brand-border-radius-factor: 1.5;
 }
 

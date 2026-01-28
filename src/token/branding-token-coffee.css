@@ -15,17 +15,17 @@
   --ks-brand-color-link: #ffd7b1;
   --ks-brand-color-link-inverted: #261b25;
 
-  --ks-brand-color-positive: #23831b;
-  --ks-brand-color-positive-inverted: #6edb64;
+  --ks-brand-color-positive: #6edb64;
+  --ks-brand-color-positive-inverted: #23831b;
 
-  --ks-brand-color-negative: #ff1a57;
-  --ks-brand-color-negative-inverted: #d21d48;
+  --ks-brand-color-negative: #d21d48;
+  --ks-brand-color-negative-inverted: #ff1a57;
 
-  --ks-brand-color-informative: #64c2db;
-  --ks-brand-color-informative-inverted: #00718f;
+  --ks-brand-color-informative: #00718f;
+  --ks-brand-color-informative-inverted: #64c2db;
 
-  --ks-brand-color-notice: #64c2db;
-  --ks-brand-color-notice-inverted: #00718f;
+  --ks-brand-color-notice: #00718f;
+  --ks-brand-color-notice-inverted: #64c2db;
 
   --ks-brand-color-scale-9: 5%;
   --ks-brand-color-scale-8: 10%;
@@ -40,7 +40,7 @@
 
 :root {
   /* Font Families */
-  --ks-brand-font-family-display: "Roboto Condensed";
+  --ks-brand-font-family-display: Roboto Condensed;
   --ks-brand-font-family-copy: system-ui, -apple-system, BlinkMacSystemFont,
     "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue",
     "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell",

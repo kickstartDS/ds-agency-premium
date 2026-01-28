@@ -43,12 +43,17 @@ const DemoPageControls: React.FC = () => {
 
     // Map font names to their available weights and official Google Fonts names
     const googleFonts = {
+      "Noto Sans JP": { name: "Noto Sans JP", weights: [400, 700] },
       "Roboto Condensed": { name: "Roboto Condensed", weights: [400, 700] },
       Enriqueta: { name: "Enriqueta", weights: [400, 700] },
+      Rubik: { name: "Rubik", weights: [300, 400, 500, 600, 700, 800, 900] },
       Inter: { name: "Inter", weights: [400, 500, 600, 700] },
       Merriweather: { name: "Merriweather", weights: [300, 400, 700, 900] },
       Oswald: { name: "Oswald", weights: [200, 300, 400, 500, 600, 700] },
       Lato: { name: "Lato", weights: [400, 700, 900] },
+      Lexend: { name: "Lexend", weights: [400, 500, 600, 700, 800, 900] },
+      Ramabhadra: { name: "Ramabhadra", weights: [400] },
+      "Open Sans": { name: "Open Sans", weights: [400, 700] },
       // Add more Google Fonts as needed
     };
     const selected = families.filter((f) =>

@@ -3,9 +3,9 @@
   --ks-brand-color-primary: #5d88ec;
   --ks-brand-color-primary-inverted: #00123d;
 
-  /* temporary syntx change for playground application */
+  /* temporary syntax change for playground application */
   --ks-brand-color-onPrimary: #00123d;
-  --ks-brand-color-on-primary-inverted: #fff;
+  --ks-brand-color-onPrimary-inverted: #fff;
 
   --ks-brand-color-bg: #001036;
   --ks-brand-color-bg-inverted: #d4e4ff;
@@ -16,17 +16,17 @@
   --ks-brand-color-link: #5d88ec;
   --ks-brand-color-link-inverted: #00123d;
 
-  --ks-brand-color-positive: #23831b;
-  --ks-brand-color-positive-inverted: #6edb64;
+  --ks-brand-color-positive: #6edb64;
+  --ks-brand-color-positive-inverted: #23831b;
 
-  --ks-brand-color-negative: #ff1a57;
-  --ks-brand-color-negative-inverted: #d21d48;
+  --ks-brand-color-negative: #d21d48;
+  --ks-brand-color-negative-inverted: #ff1a57;
 
-  --ks-brand-color-informative: #64c2db;
-  --ks-brand-color-informative-inverted: #00718f;
+  --ks-brand-color-informative: #00718f;
+  --ks-brand-color-informative-inverted: #64c2db;
 
-  --ks-brand-color-notice: #64c2db;
-  --ks-brand-color-notice-inverted: #00718f;
+  --ks-brand-color-notice: #00718f;
+  --ks-brand-color-notice-inverted: #64c2db;
 
   --ks-brand-color-scale-9: 5%;
   --ks-brand-color-scale-8: 10%;
@@ -41,13 +41,8 @@
 
 :root {
   /* Font Families */
-  --ks-brand-font-family-display: Montserrat, Baskerville,
-    "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-  --ks-brand-font-family-copy: system-ui, -apple-system, BlinkMacSystemFont,
-    "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue",
-    "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell",
-    "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic",
-    "Liberation Sans", sans-serif;
+  --ks-brand-font-family-display: Rubik;
+  --ks-brand-font-family-copy: Noto Sans JP;
   --ks-brand-font-family-interface: system-ui, -apple-system, BlinkMacSystemFont,
     "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue",
     "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell",
@@ -98,25 +93,22 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
 
 /* Spacing */
 :root {
-  --ks-brand-spacing-base: 18px;
-  --ks-brand-spacing-shrink-factor: 1.35;
-  --ks-brand-spacing-grow-factor: 1.35;
+  --ks-brand-spacing-factor: 1.25;
+  --ks-brand-spacing-shrink-factor: 1.125;
+  --ks-brand-spacing-grow-factor: 1.5;
   --ks-brand-spacing-bp-factor: 1.75;
 }
 
 /* Border */
 :root {
-  --ks-brand-border-width-default: 1px;
-  --ks-brand-border-width-emphasized: 2px;
-
-  --ks-brand-border-radius-control: 999px;
-  --ks-brand-border-radius-card: 24px;
-  --ks-brand-border-radius-surface: 24px;
+  --ks-brand-border-width-default: 2px;
+  --ks-brand-border-width-emphasized: 3px;
+  --ks-brand-border-radius-factor: 2;
 }
 
 /* Shadow */
 :root {
-  --ks-brand-box-shadow-control-blur: 1px;
-  --ks-brand-box-shadow-card-blur: 2px;
-  --ks-brand-box-shadow-surface-blur: 6px;
+  --ks-brand-box-shadow-blur-factor: 1.5;
+  --ks-brand-box-shadow-opacity-factor: 1;
+  --ks-brand-box-shadow-spread-factor: 1;
 }

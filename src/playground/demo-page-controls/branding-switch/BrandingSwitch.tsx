@@ -9,6 +9,8 @@ export const BRANDINGS = [
   { label: "Blizzard", file: "branding-token-blizzard.css" },
   { label: "Coffee", file: "branding-token-coffee.css" },
   { label: "Water", file: "branding-token-water.css" },
+  { label: "Ember", file: "branding-token-ember.css" },
+  { label: "Granit", file: "branding-token-granit.css" },
 ];
 
 const TOKEN_PATH = "/src/token/";

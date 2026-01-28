@@ -155,7 +155,6 @@ Breakpoint Factor:  Higher bp factor means large spacings increase
   /*
     box-shadow-blur-factor controls shadow softness.
     1 = no blur, 2 = maximum blur
-
   */
   --ks-brand-box-shadow-blur-factor: 1.5;
 
