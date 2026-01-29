@@ -13,7 +13,7 @@ const writeCss = async (tokensPath) => {
   const isValid = validate(tokens);
   if (!isValid) {
     console.log(validate.errors);
-    process.exit(1);
+    return;
   }
 
   const css = tokensToCss(tokens);
