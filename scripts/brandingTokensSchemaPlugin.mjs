@@ -4,6 +4,7 @@ import $RefParser from "@apidevtools/json-schema-ref-parser";
 import Ajv from "ajv/dist/2020.js";
 import standaloneCode from "ajv/dist/standalone/index.js";
 import fs from "fs-extra";
+import mergeAllOf from "json-schema-merge-allof";
 
 /**
  * @param {string} schemaPath
@@ -33,10 +34,11 @@ export default function brandingTokensSchemaPlugin(schemaPath, outPath = "") {
       });
 
       const dereffed = await $RefParser.dereference(schema);
+      const merged = mergeAllOf(dereffed);
       this.emitFile({
         type: "asset",
         fileName: path.join(outPath, name + ".dereffed" + ext),
-        source: JSON.stringify(dereffed, null, 2),
+        source: JSON.stringify(merged, null, 2),
       });
     },
   };
