@@ -29,7 +29,7 @@ export default function brandingTokensSchemaPlugin(schemaPath, outPath = "") {
       const moduleCode = standaloneCode(ajv, validate);
       this.emitFile({
         type: "asset",
-        fileName: path.join(outPath, name + ".validate.js"),
+        fileName: path.join(outPath, name + ".validate.mjs"),
         source: moduleCode,
       });
 
