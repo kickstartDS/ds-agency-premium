@@ -325,8 +325,7 @@
         "$value": {
           "type": "number",
           "minimum": 0,
-          "maximum": 1,
-          "multipleOf": 0.01
+          "maximum": 1
         }
       },
       "required": [
@@ -456,8 +455,7 @@
           "type": "number",
           "default": 1.5,
           "minimum": 1,
-          "maximum": 2,
-          "multipleOf": 0.01
+          "maximum": 2
         }
       },
       "required": [
