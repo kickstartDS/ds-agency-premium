@@ -7,6 +7,7 @@ import { nodeExternals } from "rollup-plugin-node-externals";
 import json from "@rollup/plugin-json";
 import postcssUrl from "postcss-url";
 import scss from "./scripts/rollupPluginScss.js";
+import brandingTokensSchema from "./scripts/brandingTokensSchemaPlugin.mjs";
 
 const componentFiles = fg.sync([
   "src/components/**/*Component.(t|j)sx",
@@ -84,6 +85,7 @@ export default {
         }),
       ],
     }),
+    brandingTokensSchema("src/token/branding-tokens.schema.json", "tokens"),
     copy({
       targets: [
         {
@@ -99,7 +101,7 @@ export default {
           dest: "dist/tokens",
         },
         {
-          src: "src/token/branding-tokens{,-*,.schema}.json",
+          src: "src/token/branding-tokens{,-*}.json",
           dest: "dist/tokens",
         },
         {
