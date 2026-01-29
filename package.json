@@ -64,7 +64,7 @@
     "search": "rm -rf static/pagefind && vitest run scripts/generateSearchIndex.test.ts",
     "husky:precommit": "yarn schema && rollup -c",
     "prepare": "patch-package && husky install",
-    "prepublishOnly": "rm -rf dist && yarn build-tokens && yarn schema && yarn token && rollup -c && yarn build-storybook",
+    "prepublishOnly": "rm -rf dist && yarn build-tokens && yarn schema && yarn token && yarn branding-tokens && rollup -c && yarn build-storybook",
     "schema": "run-p schema:*",
     "schema:dereference-schemas": "kickstartDS schema dereference",
     "schema:generate-props": "kickstartDS schema types",
@@ -77,8 +77,10 @@
     "test:server": "npx http-server storybook-static --port 6006 --silent",
     "test:suite": "npx wait-on http://127.0.0.1:6006 && test-storybook --maxWorkers=8",
     "token": "node scripts/customPropertyExtract.js",
+    "branding-tokens": "node scripts/buildBrandingTokens.mjs",
     "watch:schema": "yarn schema && chokidar \"src/**/*.schema.json\" -c \"yarn schema\"",
     "watch:token": "yarn token && chokidar \"src/**/*-tokens.scss\" -c \"yarn token {path}\"",
+    "watch:branding-tokens": "yarn branding-tokens && chokidar \"src/token/branding-tokens{,-*}.json\" -c \"yarn branding-tokens {path}\"",
     "watch:dictionary": "yarn build-tokens && chokidar \"src/token/dictionary/*.json\" -c \"yarn build-tokens\""
   },
   "dependencies": {
@@ -148,6 +150,7 @@
     "storybook-addon-playroom": "^5.0.0",
     "storybook-design-token": "^3.1.0",
     "style-loader": "^3.3.3",
+    "traverse": "^0.6.11",
     "typescript": "^5.2.2",
     "vitest": "^1.2.1"
   },
@@ -158,8 +161,10 @@
     "@kickstartds/core": "^4.0.2",
     "@kickstartds/form": "^4.0.2",
     "c15t": "^1.5.0",
-    "react": "^17 || ^18",
-    "react-dom": "^17 || ^18"
+    "react": "^17 || ^18 || ^19",
+    "react-dom": "^17 || ^18 || ^19",
+    "tinycolor2": "^1.6.0",
+    "traverse": "^0.6.11"
   },
   "peerDependenciesMeta": {
     "c15t": {

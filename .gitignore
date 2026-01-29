@@ -15,7 +15,7 @@ components.ts
 
 # kickstartDS
 *.dereffed.json
-*-tokens.json
+src/components/**/*-tokens.json
 src/token/tokens.css
 src/token/IconSprite.js
 src/token/tokens.js

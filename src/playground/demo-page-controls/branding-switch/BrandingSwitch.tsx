@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./branding-switch.scss";
 
 export const BRANDINGS = [
-  { label: "Default", file: "branding-token.css" },
+  { label: "Default", file: "branding-tokens.css" },
   { label: "Mint", file: "branding-token-mint.css" },
   { label: "Neon", file: "branding-token-neon.css" },
   { label: "Burgundy", file: "branding-token-burgundy.css" },

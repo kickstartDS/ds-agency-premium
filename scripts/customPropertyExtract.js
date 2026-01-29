@@ -32,7 +32,7 @@ const createTokens = (scssPath) => {
       return createTokens(scssPath);
     }
 
-    const schemaPaths = await fg("src/**/*-tokens.scss");
+    const schemaPaths = await fg("src/components/**/*-tokens.scss");
     return schemaPaths.map(createTokens);
   } catch (e) {
     process.exit(1);

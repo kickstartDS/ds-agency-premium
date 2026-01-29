@@ -99,6 +99,14 @@ export default {
           dest: "dist/tokens",
         },
         {
+          src: "src/token/branding-tokens{,-*,.schema}.json",
+          dest: "dist/tokens",
+        },
+        {
+          src: "scripts/tokensToCss.mjs",
+          dest: "dist/tokens",
+        },
+        {
           src: "static",
           dest: "dist",
         },
