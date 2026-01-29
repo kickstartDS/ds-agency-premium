@@ -4,6 +4,7 @@ import { RichText } from "@kickstartds/base/lib/rich-text";
 import Markdown from "markdown-to-jsx";
 import { Radio } from "@kickstartds/form/lib/radio";
 import { CookieConsentProps } from "./CookieConsentProps";
+import "./cookie-consent.scss";
 
 type CookieConsentDialogProps = {
   dialog: CookieConsentProps["dialog"];
