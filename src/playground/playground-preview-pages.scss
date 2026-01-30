@@ -1,8 +1,10 @@
-.l-section {
-  .l-section__content {
-    > * {
-      position: relative;
-      z-index: 100000;
+.playground-preview-page {
+  .l-section {
+    .l-section__content {
+      > * {
+        position: relative;
+        z-index: 100000;
+      }
     }
   }
 }
