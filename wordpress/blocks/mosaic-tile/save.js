@@ -1,7 +1,11 @@
 /**
  * WordPress dependencies
  */
-import { useBlockProps, useInnerBlocksProps, RichText } from '@wordpress/block-editor';
+import {
+  useBlockProps,
+  useInnerBlocksProps,
+  RichText,
+} from "@wordpress/block-editor";
 
 /**
  * Save component
@@ -10,11 +14,11 @@ export default function save({ attributes }) {
   const { headline, text, imageUrl, imageAlt } = attributes;
 
   const blockProps = useBlockProps.save({
-    className: 'dsa-mosaic-tile',
+    className: "dsa-mosaic-tile",
   });
 
   const innerBlocksProps = useInnerBlocksProps.save({
-    className: 'dsa-mosaic-tile__buttons',
+    className: "dsa-mosaic-tile__buttons",
   });
 
   return (

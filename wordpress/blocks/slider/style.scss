@@ -1,0 +1,165 @@
+/**
+ * Slider block styles (frontend + editor)
+ */
+
+.dsa-slider {
+  // Component tokens with fallbacks
+  --dsa-slider--gap: 16px;
+  --dsa-slider--arrow-size: 48px;
+  --dsa-slider--arrow-bg: var(--ks-background-color-default, #fff);
+  --dsa-slider--arrow-color: var(--ks-text-color-default, #333);
+  --dsa-slider--arrow-hover-bg: var(--ks-color-primary, #3366ff);
+  --dsa-slider--arrow-hover-color: #fff;
+  --dsa-slider--dot-size: 12px;
+  --dsa-slider--dot-color: var(--ks-border-color-default, #ddd);
+  --dsa-slider--dot-active-color: var(--ks-color-primary, #3366ff);
+
+  position: relative;
+  width: 100%;
+
+  &__container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__track {
+    display: flex;
+    gap: var(--dsa-slider--gap);
+    transition: transform 0.3s ease;
+
+    > * {
+      flex-shrink: 0;
+    }
+  }
+
+  // Navigation arrows
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--dsa-slider--arrow-size);
+    height: var(--dsa-slider--arrow-size);
+    padding: 0;
+    background-color: var(--dsa-slider--arrow-bg);
+    border: 1px solid var(--ks-border-color-default, #ddd);
+    border-radius: 50%;
+    color: var(--dsa-slider--arrow-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background-color: var(--dsa-slider--arrow-hover-bg);
+      border-color: var(--dsa-slider--arrow-hover-bg);
+      color: var(--dsa-slider--arrow-hover-color);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &--prev {
+      left: var(--ks-spacing-s, 0.75rem);
+    }
+
+    &--next {
+      right: var(--ks-spacing-s, 0.75rem);
+    }
+  }
+
+  // Navigation dots
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--ks-spacing-xs, 0.5rem);
+    margin-top: var(--ks-spacing-m, 1rem);
+  }
+
+  &__dot {
+    width: var(--dsa-slider--dot-size);
+    height: var(--dsa-slider--dot-size);
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--dsa-slider--dot-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &--active {
+      background-color: var(--dsa-slider--dot-active-color);
+    }
+  }
+
+  // Edge fades (optional)
+  &--fade-edges {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 40px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(
+        to right,
+        var(--ks-background-color-default, #fff),
+        transparent
+      );
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        var(--ks-background-color-default, #fff),
+        transparent
+      );
+    }
+  }
+}
+
+// Editor styles
+.wp-block-dsa-slider {
+  .dsa-slider__track {
+    // In editor, show all slides horizontally
+    > .block-editor-inner-blocks > .block-editor-block-list__layout {
+      display: flex;
+      gap: var(--dsa-slider--gap, 16px);
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: var(--ks-spacing-s, 0.75rem);
+
+      > * {
+        flex-shrink: 0;
+        min-width: 300px;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .dsa-slider__arrow {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

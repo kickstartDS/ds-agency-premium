@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/header",
+  "version": "1.0.0",
+  "title": "Header",
+  "category": "dsa-navigation",
+  "description": "Site header with logo, navigation, and mobile menu",
+  "textdomain": "ds-agency",
+  "keywords": ["header", "navigation", "menu", "logo"],
+  "attributes": {
+    "logoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "logoUrlInverted": {
+      "type": "string",
+      "default": ""
+    },
+    "logoAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "logoWidth": {
+      "type": "number",
+      "default": 150
+    },
+    "logoHeight": {
+      "type": "number",
+      "default": 50
+    },
+    "logoId": {
+      "type": "number"
+    },
+    "logoIdInverted": {
+      "type": "number"
+    },
+    "inverted": {
+      "type": "boolean",
+      "default": false
+    },
+    "floating": {
+      "type": "boolean",
+      "default": false
+    },
+    "flyoutInverted": {
+      "type": "boolean",
+      "default": false
+    },
+    "dropdownInverted": {
+      "type": "boolean",
+      "default": false
+    },
+    "menuLocation": {
+      "type": "string",
+      "default": "primary"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["full"],
+    "multiple": false
+  },
+  "viewScript": "file:../../build/header/view.js",
+  "editorScript": "file:../../build/header/index.js",
+  "editorStyle": "file:../../build/header/index.css",
+  "style": "file:../../build/header/style-index.css"
+}

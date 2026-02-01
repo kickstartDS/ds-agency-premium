@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/slider",
+  "version": "1.0.0",
+  "title": "Slider",
+  "category": "dsa-layout",
+  "description": "Content slider/carousel with navigation and autoplay",
+  "textdomain": "ds-agency",
+  "keywords": ["slider", "carousel", "slideshow", "gallery"],
+  "attributes": {
+    "autoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoplayInterval": {
+      "type": "number",
+      "default": 5000
+    },
+    "showArrows": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDots": {
+      "type": "boolean",
+      "default": true
+    },
+    "loop": {
+      "type": "boolean",
+      "default": true
+    },
+    "gap": {
+      "type": "number",
+      "default": 16
+    },
+    "slidesPerView": {
+      "type": "number",
+      "default": 1
+    },
+    "slidesPerViewTablet": {
+      "type": "number",
+      "default": 2
+    },
+    "slidesPerViewDesktop": {
+      "type": "number",
+      "default": 3
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "viewScript": "file:../../build/slider/view.js",
+  "editorScript": "file:../../build/slider/index.js",
+  "editorStyle": "file:../../build/slider/index.css",
+  "style": "file:../../build/slider/style-index.css"
+}

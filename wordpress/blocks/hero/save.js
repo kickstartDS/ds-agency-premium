@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies
  */
-import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, RichText, InnerBlocks } from "@wordpress/block-editor";
 
 /**
  * Save component
@@ -25,16 +25,18 @@ export default function save({ attributes }) {
 
   const blockProps = useBlockProps.save({
     className: [
-      'dsa-hero',
+      "dsa-hero",
       `dsa-hero--height-${height}`,
       `dsa-hero--position-${textPosition}`,
-      textbox ? 'dsa-hero--textbox' : '',
-      highlightText ? 'dsa-hero--highlight' : '',
-      colorNeutral ? 'dsa-hero--neutral' : '',
-      invertText ? 'dsa-hero--inverted' : '',
-      overlay ? 'dsa-hero--overlay' : '',
-      mobileTextBelow ? 'dsa-hero--mobile-below' : '',
-    ].filter(Boolean).join(' '),
+      textbox ? "dsa-hero--textbox" : "",
+      highlightText ? "dsa-hero--highlight" : "",
+      colorNeutral ? "dsa-hero--neutral" : "",
+      invertText ? "dsa-hero--inverted" : "",
+      overlay ? "dsa-hero--overlay" : "",
+      mobileTextBelow ? "dsa-hero--mobile-below" : "",
+    ]
+      .filter(Boolean)
+      .join(" "),
   });
 
   return (

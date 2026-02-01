@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies
  */
-import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, RichText, InnerBlocks } from "@wordpress/block-editor";
 
 /**
  * Save component
@@ -28,16 +28,18 @@ export default function save({ attributes }) {
 
   const blockProps = useBlockProps.save({
     className: [
-      'dsa-section',
+      "dsa-section",
       `dsa-section--width-${width}`,
       `dsa-section--style-${style}`,
       `dsa-section--bg-${backgroundColor}`,
       `dsa-section--space-before-${spaceBefore}`,
       `dsa-section--space-after-${spaceAfter}`,
-      inverted ? 'dsa-section--inverted' : '',
-      headerSpacing ? 'dsa-section--header-spacing' : '',
-      spotlight ? 'dsa-section--spotlight' : '',
-    ].filter(Boolean).join(' '),
+      inverted ? "dsa-section--inverted" : "",
+      headerSpacing ? "dsa-section--header-spacing" : "",
+      spotlight ? "dsa-section--spotlight" : "",
+    ]
+      .filter(Boolean)
+      .join(" "),
     style: {
       backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
     },
@@ -46,9 +48,9 @@ export default function save({ attributes }) {
   // Add Interactivity API directives for spotlight
   const interactiveProps = spotlight
     ? {
-        'data-wp-interactive': 'dsa/section',
-        'data-wp-on--mousemove': 'actions.updateSpotlight',
-        'data-wp-on--mouseleave': 'actions.hideSpotlight',
+        "data-wp-interactive": "dsa/section",
+        "data-wp-on--mousemove": "actions.updateSpotlight",
+        "data-wp-on--mouseleave": "actions.hideSpotlight",
       }
     : {};
 
@@ -76,8 +78,10 @@ export default function save({ attributes }) {
 
             {headline_text && (
               <RichText.Content
-                tagName={headline_large ? 'h1' : 'h2'}
-                className={`dsa-section__headline ${headline_large ? 'dsa-section__headline--large' : ''}`}
+                tagName={headline_large ? "h1" : "h2"}
+                className={`dsa-section__headline ${
+                  headline_large ? "dsa-section__headline--large" : ""
+                }`}
                 value={headline_text}
               />
             )}

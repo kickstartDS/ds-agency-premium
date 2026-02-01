@@ -1,0 +1,35 @@
+/**
+ * WordPress dependencies
+ */
+import { registerBlockType } from "@wordpress/blocks";
+
+/**
+ * Internal dependencies
+ */
+import Edit from "./edit";
+import metadata from "./block.json";
+
+/**
+ * Block icon
+ */
+const icon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+  >
+    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+  </svg>
+);
+
+/**
+ * Register the block
+ * Note: This is a dynamic block - save returns null
+ */
+registerBlockType(metadata.name, {
+  ...metadata,
+  icon,
+  edit: Edit,
+  save: () => null, // Dynamic block rendered by PHP
+});

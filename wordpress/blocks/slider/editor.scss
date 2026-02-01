@@ -1,0 +1,36 @@
+/**
+ * Slider block editor styles
+ */
+
+.wp-block-dsa-slider {
+  // Editor-specific overrides
+  .dsa-slider__container {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--ks-border-color-default, #ddd) transparent;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--ks-border-color-default, #ddd);
+      border-radius: 3px;
+    }
+  }
+
+  // Hint for horizontal scrolling
+  &::after {
+    content: "Scroll horizontally to see all slides →";
+    display: block;
+    text-align: center;
+    padding: var(--ks-spacing-xs, 0.5rem);
+    color: var(--ks-text-color-muted, #666);
+    font-size: var(--ks-font-size-xs, 0.75rem);
+    font-style: italic;
+  }
+}

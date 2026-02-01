@@ -1,0 +1,122 @@
+/**
+ * Form block styles (frontend + editor)
+ */
+
+.dsa-form {
+  // Component tokens with fallbacks
+  --dsa-form--gap: var(--ks-spacing-m, 1rem);
+  --dsa-form--input-padding: var(--ks-spacing-s, 0.75rem);
+  --dsa-form--input-bg: var(--ks-background-color-default, #fff);
+  --dsa-form--input-border: var(--ks-border-color-default, #ddd);
+  --dsa-form--input-radius: var(--ks-border-radius-s, 4px);
+  --dsa-form--input-focus: var(--ks-color-primary, #3366ff);
+  --dsa-form--label-color: var(--ks-text-color-default, #333);
+  --dsa-form--error-color: var(--ks-color-error, #dc3545);
+  --dsa-form--success-color: var(--ks-color-success, #28a745);
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dsa-form--gap);
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dsa-form--gap);
+  }
+
+  &__submit {
+    margin-top: var(--ks-spacing-s, 0.75rem);
+  }
+
+  &__success,
+  &__error {
+    display: none;
+    padding: var(--dsa-form--input-padding);
+    border-radius: var(--dsa-form--input-radius);
+    font-size: var(--ks-font-size-s, 0.875rem);
+  }
+
+  &__success {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--dsa-form--success-color);
+    border: 1px solid var(--dsa-form--success-color);
+  }
+
+  &__error {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--dsa-form--error-color);
+    border: 1px solid var(--dsa-form--error-color);
+  }
+}
+
+// Form field styling (for native fields)
+.dsa-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ks-spacing-xs, 0.5rem);
+
+  &__label {
+    font-size: var(--ks-font-size-s, 0.875rem);
+    font-weight: var(--ks-font-weight-semibold, 600);
+    color: var(--dsa-form--label-color);
+
+    .dsa-form-field--required & {
+      &::after {
+        content: " *";
+        color: var(--dsa-form--error-color);
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: var(--dsa-form--input-padding);
+    background-color: var(--dsa-form--input-bg);
+    border: 1px solid var(--dsa-form--input-border);
+    border-radius: var(--dsa-form--input-radius);
+    font-family: inherit;
+    font-size: var(--ks-font-size-m, 1rem);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--dsa-form--input-focus);
+      box-shadow: 0 0 0 3px rgba(51, 102, 255, 0.1);
+    }
+
+    &::placeholder {
+      color: var(--ks-text-color-muted, #999);
+    }
+  }
+
+  &__textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  &__error {
+    font-size: var(--ks-font-size-xs, 0.75rem);
+    color: var(--dsa-form--error-color);
+  }
+
+  // Invalid state
+  &--invalid &__input {
+    border-color: var(--dsa-form--error-color);
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+    }
+  }
+}
+
+// Select styling
+.dsa-form-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.5em;
+  padding-right: 2.5rem;
+}

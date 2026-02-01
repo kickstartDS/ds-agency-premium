@@ -1,0 +1,31 @@
+/**
+ * Header block editor styles
+ */
+
+.wp-block-dsa-header {
+  // Preview styling in editor
+  .dsa-header__preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--ks-spacing-m, 1rem);
+    background-color: var(--ks-background-color-interface, #f8f9fa);
+    border-radius: var(--ks-border-radius-m, 8px);
+
+    img {
+      max-height: 50px;
+      width: auto;
+    }
+
+    &-nav {
+      color: var(--ks-text-color-muted, #666);
+      font-style: italic;
+    }
+  }
+
+  // Placeholder adjustments
+  .components-placeholder {
+    min-height: 120px;
+  }
+}

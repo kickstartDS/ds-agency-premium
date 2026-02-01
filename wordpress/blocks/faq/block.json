@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/faq",
+  "version": "1.0.0",
+  "title": "FAQ",
+  "category": "dsa-content",
+  "description": "Frequently asked questions with expandable accordion items",
+  "textdomain": "ds-agency",
+  "keywords": ["faq", "questions", "accordion", "answers"],
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "default": ""
+    },
+    "subheadline": {
+      "type": "string",
+      "default": ""
+    },
+    "multipleOpen": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "viewScript": "file:../../build/faq/view.js",
+  "editorScript": "file:../../build/faq/index.js",
+  "editorStyle": "file:../../build/faq/index.css",
+  "style": "file:../../build/faq/style-index.css"
+}

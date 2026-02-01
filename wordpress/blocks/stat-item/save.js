@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies
  */
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from "@wordpress/block-editor";
 
 /**
  * Save component
@@ -11,8 +11,8 @@ export default function save({ attributes, context }) {
 
   // Parse number for animation data attributes
   const parseNumber = (str) => {
-    if (!str) return { target: '0', prefix: '', suffix: '' };
-    
+    if (!str) return { target: "0", prefix: "", suffix: "" };
+
     // Extract prefix (non-numeric at start), number, and suffix (non-numeric at end)
     const match = str.match(/^([^0-9]*)([0-9.]+)(.*)$/);
     if (match) {
@@ -22,17 +22,17 @@ export default function save({ attributes, context }) {
         suffix: match[3],
       };
     }
-    return { target: str, prefix: '', suffix: '' };
+    return { target: str, prefix: "", suffix: "" };
   };
 
   const { target, prefix, suffix } = parseNumber(number);
 
   const blockProps = useBlockProps.save({
-    className: 'dsa-stat-item',
-    'data-target': target,
-    'data-prefix': prefix,
-    'data-suffix': suffix,
-    'data-stat-id': Math.random().toString(36).substr(2, 9),
+    className: "dsa-stat-item",
+    "data-target": target,
+    "data-prefix": prefix,
+    "data-suffix": suffix,
+    "data-stat-id": Math.random().toString(36).substr(2, 9),
   });
 
   return (

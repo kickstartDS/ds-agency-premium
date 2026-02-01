@@ -1,0 +1,22 @@
+/**
+ * Form block editor styles
+ */
+
+.wp-block-dsa-form {
+  .dsa-form__form {
+    pointer-events: all;
+  }
+
+  .dsa-form__fields {
+    > .block-editor-inner-blocks > .block-editor-block-list__layout {
+      display: flex;
+      flex-direction: column;
+      gap: var(--dsa-form--gap, var(--ks-spacing-m, 1rem));
+    }
+  }
+
+  // Make submit button unclickable in editor
+  .dsa-form__submit button {
+    pointer-events: none;
+  }
+}

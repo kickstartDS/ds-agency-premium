@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/form-field",
+  "version": "1.0.0",
+  "title": "Form Field",
+  "category": "dsa-forms",
+  "description": "A form input field (text, email, textarea, select, etc.)",
+  "textdomain": "ds-agency",
+  "parent": ["dsa/form"],
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": ""
+    },
+    "name": {
+      "type": "string",
+      "default": ""
+    },
+    "type": {
+      "type": "string",
+      "enum": ["text", "email", "tel", "url", "number", "textarea", "select"],
+      "default": "text"
+    },
+    "placeholder": {
+      "type": "string",
+      "default": ""
+    },
+    "required": {
+      "type": "boolean",
+      "default": false
+    },
+    "options": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object"
+      }
+    },
+    "width": {
+      "type": "string",
+      "enum": ["full", "half", "third"],
+      "default": "full"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:../../build/form-field/index.js"
+}

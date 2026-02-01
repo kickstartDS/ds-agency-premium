@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from "@wordpress/block-editor";
 
 /**
  * Save component
@@ -15,17 +15,19 @@ export default function save({ attributes }) {
 
   const blockProps = useBlockProps.save({
     className: [
-      'dsa-gallery',
+      "dsa-gallery",
       `dsa-gallery--${layout}`,
       `dsa-gallery--ratio-${aspectRatio}`,
-      lightbox ? 'dsa-gallery--lightbox' : '',
-    ].filter(Boolean).join(' '),
+      lightbox ? "dsa-gallery--lightbox" : "",
+    ]
+      .filter(Boolean)
+      .join(" "),
   });
 
   // Add Interactivity API directives for lightbox
   const interactiveProps = lightbox
     ? {
-        'data-wp-interactive': 'dsa/gallery',
+        "data-wp-interactive": "dsa/gallery",
       }
     : {};
 
@@ -38,9 +40,9 @@ export default function save({ attributes }) {
             className="dsa-gallery__item"
             {...(lightbox
               ? {
-                  'data-wp-on--click': 'actions.openLightbox',
-                  'data-index': index,
-                  role: 'button',
+                  "data-wp-on--click": "actions.openLightbox",
+                  "data-index": index,
+                  role: "button",
                   tabIndex: 0,
                 }
               : {})}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/faq-item",
+  "version": "1.0.0",
+  "title": "FAQ Item",
+  "category": "dsa-content",
+  "description": "A single FAQ question and answer",
+  "textdomain": "ds-agency",
+  "parent": ["dsa/faq"],
+  "attributes": {
+    "question": {
+      "type": "string",
+      "default": ""
+    },
+    "answer": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:../../build/faq-item/index.js"
+}

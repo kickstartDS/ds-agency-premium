@@ -38,8 +38,14 @@
 
   &__content {
     padding: var(--dsa-mosaic--tile-padding, var(--ks-spacing-l, 2rem));
-    background-color: var(--dsa-mosaic--tile-bg, var(--ks-background-color-default, #fff));
-    border-radius: var(--dsa-mosaic--tile-radius, var(--ks-border-radius-l, 12px));
+    background-color: var(
+      --dsa-mosaic--tile-bg,
+      var(--ks-background-color-default, #fff)
+    );
+    border-radius: var(
+      --dsa-mosaic--tile-radius,
+      var(--ks-border-radius-l, 12px)
+    );
   }
 
   &__headline {
@@ -57,7 +63,10 @@
   &__image-wrapper {
     position: relative;
     overflow: hidden;
-    border-radius: var(--dsa-mosaic--tile-radius, var(--ks-border-radius-l, 12px));
+    border-radius: var(
+      --dsa-mosaic--tile-radius,
+      var(--ks-border-radius-l, 12px)
+    );
     aspect-ratio: var(--dsa-mosaic--image-ratio, 4 / 3);
   }
 
@@ -74,7 +83,10 @@
     justify-content: center;
     min-height: 200px;
     background-color: var(--ks-background-color-interface, #f8f9fa);
-    border-radius: var(--dsa-mosaic--tile-radius, var(--ks-border-radius-l, 12px));
+    border-radius: var(
+      --dsa-mosaic--tile-radius,
+      var(--ks-border-radius-l, 12px)
+    );
     color: var(--ks-text-color-muted, #666);
   }
 

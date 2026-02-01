@@ -1,0 +1,128 @@
+/**
+ * FAQ block styles (frontend + editor)
+ */
+
+.dsa-faq {
+  // Component tokens with fallbacks
+  --dsa-faq--gap: var(--ks-spacing-m, 1rem);
+  --dsa-faq--item-bg: var(--ks-background-color-default, #fff);
+  --dsa-faq--item-border: var(--ks-border-color-default, #e5e5e5);
+  --dsa-faq--item-radius: var(--ks-border-radius-m, 8px);
+  --dsa-faq--item-padding: var(--ks-spacing-m, 1rem);
+  --dsa-faq--question-color: var(--ks-text-color-default, #333);
+  --dsa-faq--answer-color: var(--ks-text-color-muted, #666);
+  --dsa-faq--icon-size: 24px;
+
+  &__header {
+    margin-bottom: var(--ks-spacing-l, 2rem);
+    text-align: center;
+  }
+
+  &__headline {
+    margin: 0 0 var(--ks-spacing-xs, 0.5rem);
+    font-size: var(--ks-font-size-xl, 2rem);
+    font-weight: var(--ks-font-weight-bold, 700);
+  }
+
+  &__subheadline {
+    margin: 0;
+    color: var(--dsa-faq--answer-color);
+    font-size: var(--ks-font-size-m, 1rem);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dsa-faq--gap);
+  }
+}
+
+// FAQ Item (inner block)
+.dsa-faq-item {
+  background-color: var(--dsa-faq--item-bg);
+  border: 1px solid var(--dsa-faq--item-border);
+  border-radius: var(--dsa-faq--item-radius);
+  overflow: hidden;
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--ks-spacing-m, 1rem);
+    width: 100%;
+    padding: var(--dsa-faq--item-padding);
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+
+    &:hover {
+      background-color: var(--ks-background-color-interface, #f8f9fa);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--ks-color-primary, #3366ff);
+      outline-offset: -2px;
+    }
+  }
+
+  &__question {
+    flex: 1;
+    margin: 0;
+    font-size: var(--ks-font-size-m, 1rem);
+    font-weight: var(--ks-font-weight-semibold, 600);
+    color: var(--dsa-faq--question-color);
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: var(--dsa-faq--icon-size);
+    height: var(--dsa-faq--icon-size);
+    transition: transform 0.3s ease;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+  }
+
+  &__content-inner {
+    overflow: hidden;
+  }
+
+  &__answer {
+    padding: 0 var(--dsa-faq--item-padding) var(--dsa-faq--item-padding);
+    margin: 0;
+    color: var(--dsa-faq--answer-color);
+    line-height: 1.6;
+  }
+
+  // Open state
+  &--open {
+    .dsa-faq-item__icon {
+      transform: rotate(180deg);
+    }
+
+    .dsa-faq-item__content {
+      grid-template-rows: 1fr;
+    }
+  }
+}
+
+// Editor styles for inner blocks
+.wp-block-dsa-faq {
+  .dsa-faq__items {
+    > .block-editor-inner-blocks > .block-editor-block-list__layout {
+      display: flex;
+      flex-direction: column;
+      gap: var(--dsa-faq--gap, var(--ks-spacing-m, 1rem));
+    }
+  }
+}

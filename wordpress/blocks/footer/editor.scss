@@ -1,0 +1,32 @@
+/**
+ * Footer block editor styles
+ */
+
+.wp-block-dsa-footer {
+  .dsa-footer__preview {
+    width: 100%;
+    padding: var(--ks-spacing-m, 1rem);
+    background-color: var(--ks-background-color-interface, #f8f9fa);
+    border-radius: var(--ks-border-radius-m, 8px);
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--ks-spacing-s, 0.75rem) 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--ks-border-color-default, #ddd);
+      }
+    }
+
+    span {
+      color: var(--ks-text-color-muted, #666);
+      font-size: var(--ks-font-size-s, 0.875rem);
+    }
+  }
+
+  .components-placeholder {
+    min-height: 150px;
+  }
+}

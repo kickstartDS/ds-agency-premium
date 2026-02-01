@@ -1,0 +1,199 @@
+/**
+ * Header block styles (frontend + editor)
+ */
+
+.dsa-header {
+  // Component tokens with fallbacks
+  --dsa-header--height: 80px;
+  --dsa-header--padding: var(--ks-spacing-m, 1rem);
+  --dsa-header--bg: var(--ks-background-color-default, #fff);
+  --dsa-header--color: var(--ks-text-color-default, #333);
+  --dsa-header--border: var(--ks-border-color-default, #e5e5e5);
+  --dsa-header--shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --dsa-header--z-index: 1000;
+
+  position: relative;
+  z-index: var(--dsa-header--z-index);
+  background-color: var(--dsa-header--bg);
+  color: var(--dsa-header--color);
+  border-bottom: 1px solid var(--dsa-header--border);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--ks-container-max-width, 1280px);
+    margin: 0 auto;
+    padding: var(--dsa-header--padding);
+    min-height: var(--dsa-header--height);
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+
+    img {
+      display: block;
+      max-height: calc(
+        var(--dsa-header--height) - var(--dsa-header--padding) * 2
+      );
+      width: auto;
+      height: auto;
+    }
+
+    &--text {
+      font-size: var(--ks-font-size-l, 1.25rem);
+      font-weight: var(--ks-font-weight-bold, 700);
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @media (min-width: 992px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__flyout {
+    position: fixed;
+    inset: 0;
+    z-index: calc(var(--dsa-header--z-index) + 1);
+    background-color: var(--dsa-header--bg);
+    padding: var(--dsa-header--padding);
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    &--open {
+      transform: translateX(0);
+    }
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__flyout-close {
+    position: absolute;
+    top: var(--dsa-header--padding);
+    right: var(--dsa-header--padding);
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  // Floating variant
+  &--floating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  // Inverted variant
+  &--inverted {
+    --dsa-header--bg: var(--ks-background-color-inverted, #1a1a1a);
+    --dsa-header--color: var(--ks-text-color-inverted, #fff);
+    --dsa-header--border: transparent;
+  }
+
+  // Scrolled state (sticky)
+  &--scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--dsa-header--bg);
+    box-shadow: var(--dsa-header--shadow);
+    animation: headerSlideDown 0.3s ease;
+  }
+}
+
+// Navigation menu styling
+.dsa-nav-main {
+  display: flex;
+  align-items: center;
+  gap: var(--ks-spacing-m, 1rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    padding: var(--ks-spacing-xs, 0.5rem) var(--ks-spacing-s, 0.75rem);
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  // Dropdown
+  .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    padding: var(--ks-spacing-s, 0.75rem) 0;
+    background-color: var(--dsa-header--bg);
+    border: 1px solid var(--dsa-header--border);
+    border-radius: var(--ks-border-radius-m, 8px);
+    box-shadow: var(--dsa-header--shadow);
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+
+  > li {
+    position: relative;
+
+    &:hover > .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+@keyframes headerSlideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

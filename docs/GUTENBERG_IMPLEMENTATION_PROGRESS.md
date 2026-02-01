@@ -83,13 +83,13 @@ Based on review discussion:
 
 ### Phase 7: Priority 4 Blocks (Dynamic/Complex)
 
-| Component | Status     | Date | Notes |
-| --------- | ---------- | ---- | ----- |
-| Header    | ⏳ Pending |      |       |
-| Footer    | ⏳ Pending |      |       |
-| Form      | ⏳ Pending |      |       |
-| FAQ       | ⏳ Pending |      |       |
-| Slider    | ⏳ Pending |      |       |
+| Component | Status      | Date     | Notes                               |
+| --------- | ----------- | -------- | ----------------------------------- |
+| Header    | ✅ Complete | Feb 2026 | Dynamic, mobile menu Interactivity  |
+| Footer    | ✅ Complete | Feb 2026 | Dynamic, social links, nav columns  |
+| Form      | ✅ Complete | Feb 2026 | Dynamic, AJAX submit, external APIs |
+| FAQ       | ✅ Complete | Feb 2026 | Accordion, schema.org structured    |
+| Slider    | ✅ Complete | Feb 2026 | Carousel, touch, autoplay           |
 
 ### Phase 8: Testing & Documentation
 
@@ -139,6 +139,13 @@ Based on review discussion:
 | `wordpress/blocks/mosaic-tile/*`                     | Mosaic Tile inner block     | Feb 2026    |
 | `wordpress/blocks/stats/*`                           | Stats block (7 files)       | Feb 2026    |
 | `wordpress/blocks/stat-item/*`                       | Stat Item inner block       | Feb 2026    |
+| `wordpress/blocks/header/*`                          | Header block (6 files)      | Feb 2026    |
+| `wordpress/blocks/footer/*`                          | Footer block (5 files)      | Feb 2026    |
+| `wordpress/blocks/faq/*`                             | FAQ block (7 files)         | Feb 2026    |
+| `wordpress/blocks/faq-item/*`                        | FAQ Item inner block        | Feb 2026    |
+| `wordpress/blocks/slider/*`                          | Slider block (7 files)      | Feb 2026    |
+| `wordpress/blocks/form/*`                            | Form block (6 files)        | Feb 2026    |
+| `wordpress/blocks/form-field/*`                      | Form Field inner block      | Feb 2026    |
 | `scripts/generateBlockJson.mjs`                      | Schema transformer          | Feb 2026    |
 
 ---
@@ -146,6 +153,15 @@ Based on review discussion:
 ## Changelog
 
 ### February 2026 (Continued)
+
+**Phase 7 Complete:**
+
+- ✅ Header block - Dynamic PHP rendering, Interactivity API mobile menu, sticky scroll
+- ✅ Footer block - Dynamic PHP rendering, social links, navigation columns
+- ✅ FAQ block - Accordion with Interactivity API, schema.org structured data, inner blocks
+- ✅ Slider block - Full carousel with Interactivity API, touch/swipe, autoplay, responsive
+- ✅ Form block - Dynamic PHP, AJAX submission, external form provider support (CF7, WPForms)
+- ✅ Inner blocks: FAQ Item, Form Field
 
 **Phase 6 Complete:**
 

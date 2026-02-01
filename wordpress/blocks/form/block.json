@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/form",
+  "version": "1.0.0",
+  "title": "Form",
+  "category": "dsa-forms",
+  "description": "Contact or lead generation form with customizable fields",
+  "textdomain": "ds-agency",
+  "keywords": ["form", "contact", "submit", "input"],
+  "attributes": {
+    "formId": {
+      "type": "string",
+      "default": ""
+    },
+    "submitLabel": {
+      "type": "string",
+      "default": "Submit"
+    },
+    "successMessage": {
+      "type": "string",
+      "default": "Thank you! Your submission has been received."
+    },
+    "errorMessage": {
+      "type": "string",
+      "default": "Something went wrong. Please try again."
+    },
+    "emailTo": {
+      "type": "string",
+      "default": ""
+    },
+    "emailSubject": {
+      "type": "string",
+      "default": "New Form Submission"
+    },
+    "formProvider": {
+      "type": "string",
+      "enum": ["native", "cf7", "wpforms", "gravityforms"],
+      "default": "native"
+    },
+    "externalFormId": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["wide"],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "viewScript": "file:../../build/form/view.js",
+  "editorScript": "file:../../build/form/index.js",
+  "editorStyle": "file:../../build/form/index.css",
+  "style": "file:../../build/form/style-index.css"
+}

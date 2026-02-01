@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/footer",
+  "version": "1.0.0",
+  "title": "Footer",
+  "category": "dsa-navigation",
+  "description": "Site footer with navigation columns, social links, and copyright",
+  "textdomain": "ds-agency",
+  "keywords": ["footer", "navigation", "copyright", "social"],
+  "attributes": {
+    "logoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "logoAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "logoId": {
+      "type": "number"
+    },
+    "inverted": {
+      "type": "boolean",
+      "default": true
+    },
+    "byline": {
+      "type": "string",
+      "default": ""
+    },
+    "copyrightText": {
+      "type": "string",
+      "default": ""
+    },
+    "socialLinks": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object"
+      }
+    },
+    "navColumns": {
+      "type": "number",
+      "default": 4
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["full"],
+    "multiple": false
+  },
+  "editorScript": "file:../../build/footer/index.js",
+  "editorStyle": "file:../../build/footer/index.css",
+  "style": "file:../../build/footer/style-index.css"
+}

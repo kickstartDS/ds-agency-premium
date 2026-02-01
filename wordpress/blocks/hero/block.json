@@ -60,7 +60,15 @@
     },
     "textPosition": {
       "type": "string",
-      "enum": ["center", "below", "offset", "left", "right", "corner", "bottom"],
+      "enum": [
+        "center",
+        "below",
+        "offset",
+        "left",
+        "right",
+        "corner",
+        "bottom"
+      ],
       "default": "left"
     }
   },
