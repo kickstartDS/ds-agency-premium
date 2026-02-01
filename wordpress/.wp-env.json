@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/HEAD/schemas/json/wp-env.json",
+  "core": "WordPress/WordPress#6.4",
+  "phpVersion": "8.1",
+  "plugins": ["./plugin"],
+  "themes": ["developer-starter-theme"],
+  "config": {
+    "WP_DEBUG": true,
+    "WP_DEBUG_LOG": true,
+    "SCRIPT_DEBUG": true
+  },
+  "mappings": {
+    "wp-content/plugins/ds-agency-blocks": "./plugin",
+    "wp-content/plugins/ds-agency-blocks/build": "./build"
+  },
+  "lifecycleScripts": {
+    "afterStart": "wp-env run cli wp rewrite structure '/%postname%/' --hard"
+  }
+}

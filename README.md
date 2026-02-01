@@ -80,6 +80,46 @@ To add your own component to this project, you can follow the guide ["Create a c
 
 4. **Add your component to the Playroom components:** This involves adding an export statement for your component in the `src/playroom/components.ts` file.
 
+## WordPress Gutenberg Blocks
+
+This Design System includes a complete WordPress Gutenberg blocks implementation that maintains full visual and behavioral parity with the React components.
+
+### Quick Start
+
+```bash
+# Build the WordPress blocks
+cd wordpress
+npm install
+npm run build
+
+# Start development environment
+npm run wp-env start
+```
+
+### Available Blocks
+
+25+ blocks organized by category:
+
+| Category       | Blocks                                       |
+| -------------- | -------------------------------------------- |
+| **Foundation** | Button, Headline, RichText, Divider, Image   |
+| **Content**    | CTA, Testimonial, Feature, TeaserCard, Split |
+| **Layout**     | Section, Hero, Gallery, Mosaic, Stats        |
+| **Dynamic**    | Header, Footer, FAQ, Slider, Form            |
+
+### Features
+
+- **API Version 3** - Modern block development standards
+- **Interactivity API** - Client-side behavior (spotlight effects, accordions, carousels)
+- **Design Token Integration** - Same token system as React components
+- **Server-Side Rendering** - Dynamic blocks for menus, forms, and site-wide components
+
+For detailed documentation, see:
+
+- [WordPress README](wordpress/README.md)
+- [Block Development Guide](wordpress/docs/BLOCK_DEVELOPMENT.md)
+- [Theme Integration Guide](wordpress/docs/THEME_INTEGRATION.md)
+
 ## Contributing
 
 Contributions are welcome. Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as below, without any additional terms or conditions.
