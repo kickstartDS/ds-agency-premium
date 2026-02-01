@@ -1,0 +1,204 @@
+/**
+ * Gallery block styles (frontend + editor)
+ */
+
+.dsa-gallery {
+  // Component tokens with fallbacks
+  --dsa-gallery--gap: var(--ks-spacing-s, 0.75rem);
+  --dsa-gallery--border-radius: var(--ks-border-radius-m, 8px);
+  --dsa-gallery--caption-bg: rgba(0, 0, 0, 0.7);
+  --dsa-gallery--caption-color: #fff;
+
+  // Grid container
+  &__grid {
+    display: grid;
+    gap: var(--dsa-gallery--gap);
+  }
+
+  // Gallery item
+  &__item {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--dsa-gallery--border-radius);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--ks-spacing-s, 0.75rem);
+    background-color: var(--dsa-gallery--caption-bg);
+    color: var(--dsa-gallery--caption-color);
+    font-size: var(--ks-font-size-s, 0.875rem);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  &__item:hover &__caption {
+    transform: translateY(0);
+  }
+
+  // Lightbox enabled - cursor hint
+  &--lightbox &__item {
+    cursor: zoom-in;
+
+    &:hover .dsa-gallery__image {
+      transform: scale(1.05);
+    }
+  }
+
+  // Layout: Stack
+  &--stack &__grid {
+    grid-template-columns: 1fr;
+  }
+
+  // Layout: Small Tiles
+  &--smallTiles &__grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  // Layout: Large Tiles
+  &--largeTiles &__grid {
+    grid-template-columns: 1fr;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  // Aspect ratios
+  &--ratio-square &__item {
+    aspect-ratio: 1 / 1;
+  }
+
+  &--ratio-wide &__item {
+    aspect-ratio: 16 / 9;
+  }
+
+  &--ratio-landscape &__item {
+    aspect-ratio: 4 / 3;
+  }
+
+  // Placeholder (editor only)
+  &__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--ks-spacing-s, 0.75rem);
+    min-height: 200px;
+    padding: var(--ks-spacing-l, 2rem);
+    border: 2px dashed var(--ks-border-color-default, #ddd);
+    border-radius: var(--dsa-gallery--border-radius);
+    text-align: center;
+    color: var(--ks-text-color-muted, #666);
+  }
+
+  // Toolbar (editor only)
+  &__toolbar {
+    margin-top: var(--ks-spacing-s, 0.75rem);
+    text-align: center;
+  }
+
+  // Lightbox overlay
+  &__lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__lightbox-close {
+    position: absolute;
+    top: var(--ks-spacing-m, 1rem);
+    right: var(--ks-spacing-m, 1rem);
+    padding: var(--ks-spacing-xs, 0.5rem);
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__lightbox-prev,
+  &__lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: var(--ks-spacing-m, 1rem);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__lightbox-prev {
+    left: var(--ks-spacing-m, 1rem);
+  }
+
+  &__lightbox-next {
+    right: var(--ks-spacing-m, 1rem);
+  }
+
+  &__lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    text-align: center;
+  }
+
+  &__lightbox-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+
+  &__lightbox-caption {
+    margin-top: var(--ks-spacing-s, 0.75rem);
+    color: #fff;
+    font-size: var(--ks-font-size-s, 0.875rem);
+  }
+}

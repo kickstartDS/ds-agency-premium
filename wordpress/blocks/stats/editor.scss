@@ -1,0 +1,10 @@
+/**
+ * Stats block editor styles
+ */
+
+.wp-block-dsa-stats {
+  // Ensure proper spacing in editor
+  .dsa-stat-item {
+    min-height: 100px;
+  }
+}

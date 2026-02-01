@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/hero",
+  "version": "1.0.0",
+  "title": "Hero",
+  "category": "dsa-layout",
+  "description": "Full-width hero section with headline, text, image, and call-to-action buttons",
+  "textdomain": "ds-agency",
+  "keywords": ["hero", "banner", "header", "visual"],
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "default": ""
+    },
+    "sub": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "highlightText": {
+      "type": "boolean",
+      "default": false
+    },
+    "colorNeutral": {
+      "type": "boolean",
+      "default": false
+    },
+    "height": {
+      "type": "string",
+      "enum": ["small", "default", "fullImage", "fullScreen"],
+      "default": "default"
+    },
+    "textbox": {
+      "type": "boolean",
+      "default": true
+    },
+    "mobileTextBelow": {
+      "type": "boolean",
+      "default": true
+    },
+    "invertText": {
+      "type": "boolean",
+      "default": false
+    },
+    "skipButton": {
+      "type": "boolean",
+      "default": false
+    },
+    "overlay": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "type": "string",
+      "default": ""
+    },
+    "textPosition": {
+      "type": "string",
+      "enum": ["center", "below", "offset", "left", "right", "corner", "bottom"],
+      "default": "left"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "editorScript": "file:../../build/hero/index.js",
+  "editorStyle": "file:../../build/hero/index.css",
+  "style": "file:../../build/hero/style-index.css"
+}

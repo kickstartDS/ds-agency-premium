@@ -1,0 +1,37 @@
+/**
+ * Section block editor styles
+ */
+
+.wp-block-dsa-section {
+  // Ensure inner blocks display properly
+  .block-editor-inner-blocks {
+    width: 100%;
+  }
+
+  // Visual hint for empty section
+  &:not(:has(.block-editor-block-list__block)) .dsa-section__content {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--ks-border-color-default, #ddd);
+    border-radius: var(--ks-border-radius-s, 4px);
+
+    &::after {
+      content: 'Add blocks here';
+      color: var(--ks-text-color-muted, #999);
+    }
+  }
+
+  // RichText placeholders
+  .block-editor-rich-text__editable {
+    &:focus {
+      outline: none;
+    }
+
+    &[data-rich-text-placeholder]::before {
+      color: var(--wp-admin-theme-color-darker-20, #666);
+      opacity: 0.6;
+    }
+  }
+}

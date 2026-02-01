@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/gallery",
+  "version": "1.0.0",
+  "title": "Gallery",
+  "category": "dsa-media",
+  "description": "Display a collection of images in a grid layout with optional lightbox",
+  "textdomain": "ds-agency",
+  "keywords": ["gallery", "images", "grid", "photos"],
+  "attributes": {
+    "images": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object"
+      }
+    },
+    "layout": {
+      "type": "string",
+      "enum": ["stack", "smallTiles", "largeTiles"],
+      "default": "smallTiles"
+    },
+    "aspectRatio": {
+      "type": "string",
+      "enum": ["unset", "square", "wide", "landscape"],
+      "default": "unset"
+    },
+    "lightbox": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "viewScript": "file:../../build/gallery/view.js",
+  "editorScript": "file:../../build/gallery/index.js",
+  "editorStyle": "file:../../build/gallery/index.css",
+  "style": "file:../../build/gallery/style-index.css"
+}

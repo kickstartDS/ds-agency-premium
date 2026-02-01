@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/mosaic-tile",
+  "version": "1.0.0",
+  "title": "Mosaic Tile",
+  "category": "dsa-layout",
+  "description": "A single tile within a mosaic layout",
+  "textdomain": "ds-agency",
+  "parent": ["dsa/mosaic"],
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number"
+    }
+  },
+  "usesContext": ["dsa/mosaic-layout", "dsa/mosaic-largeHeadlines"],
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:../../build/mosaic-tile/index.js"
+}

@@ -1,0 +1,121 @@
+/**
+ * Mosaic block styles (frontend + editor)
+ */
+
+.dsa-mosaic {
+  // Component tokens with fallbacks
+  --dsa-mosaic--gap: var(--ks-spacing-m, 1rem);
+  --dsa-mosaic--tile-padding: var(--ks-spacing-l, 2rem);
+  --dsa-mosaic--tile-radius: var(--ks-border-radius-l, 12px);
+  --dsa-mosaic--tile-bg: var(--ks-background-color-default, #fff);
+  --dsa-mosaic--headline-size: var(--ks-font-size-l, 1.5rem);
+  --dsa-mosaic--headline-size-large: var(--ks-font-size-display, 2.5rem);
+  --dsa-mosaic--image-ratio: 4 / 3;
+
+  // Tiles container
+  &__tiles {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dsa-mosaic--gap);
+  }
+
+  // Large headlines modifier
+  &--large-headlines {
+    --dsa-mosaic--headline-size: var(--dsa-mosaic--headline-size-large);
+  }
+}
+
+// Mosaic Tile (inner block)
+.dsa-mosaic-tile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--dsa-mosaic--gap, var(--ks-spacing-m, 1rem));
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__content {
+    padding: var(--dsa-mosaic--tile-padding, var(--ks-spacing-l, 2rem));
+    background-color: var(--dsa-mosaic--tile-bg, var(--ks-background-color-default, #fff));
+    border-radius: var(--dsa-mosaic--tile-radius, var(--ks-border-radius-l, 12px));
+  }
+
+  &__headline {
+    margin: 0 0 var(--ks-spacing-s, 0.75rem);
+    font-size: var(--dsa-mosaic--headline-size, var(--ks-font-size-l, 1.5rem));
+    font-weight: var(--ks-font-weight-bold, 700);
+    line-height: 1.2;
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--ks-text-color-muted, #666);
+  }
+
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--dsa-mosaic--tile-radius, var(--ks-border-radius-l, 12px));
+    aspect-ratio: var(--dsa-mosaic--image-ratio, 4 / 3);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // Placeholder for editor
+  &__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    background-color: var(--ks-background-color-interface, #f8f9fa);
+    border-radius: var(--dsa-mosaic--tile-radius, var(--ks-border-radius-l, 12px));
+    color: var(--ks-text-color-muted, #666);
+  }
+
+  // Buttons container
+  &__buttons {
+    margin-top: var(--ks-spacing-m, 1rem);
+  }
+}
+
+// Layout: Alternate - zigzag pattern
+.dsa-mosaic--alternate {
+  .dsa-mosaic-tile {
+    @media (min-width: 768px) {
+      // Even tiles: image on left
+      &:nth-child(even) {
+        .dsa-mosaic-tile__image-wrapper {
+          order: -1;
+        }
+      }
+    }
+  }
+}
+
+// Layout: Text Left
+.dsa-mosaic--textLeft {
+  .dsa-mosaic-tile {
+    @media (min-width: 768px) {
+      .dsa-mosaic-tile__image-wrapper {
+        order: 1;
+      }
+    }
+  }
+}
+
+// Layout: Text Right
+.dsa-mosaic--textRight {
+  .dsa-mosaic-tile {
+    @media (min-width: 768px) {
+      .dsa-mosaic-tile__image-wrapper {
+        order: -1;
+      }
+    }
+  }
+}

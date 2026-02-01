@@ -73,13 +73,13 @@ Based on review discussion:
 
 ### Phase 6: Priority 3 Blocks (Layout)
 
-| Component | Status     | Date | Notes |
-| --------- | ---------- | ---- | ----- |
-| Section   | ⏳ Pending |      |       |
-| Hero      | ⏳ Pending |      |       |
-| Gallery   | ⏳ Pending |      |       |
-| Mosaic    | ⏳ Pending |      |       |
-| Stats     | ⏳ Pending |      |       |
+| Component | Status      | Date     | Notes                           |
+| --------- | ----------- | -------- | ------------------------------- |
+| Section   | ✅ Complete | Feb 2026 | Spotlight Interactivity API     |
+| Hero      | ✅ Complete | Feb 2026 | 7 text positions, skip button   |
+| Gallery   | ✅ Complete | Feb 2026 | Lightbox with Interactivity API |
+| Mosaic    | ✅ Complete | Feb 2026 | Inner block pattern, 3 layouts  |
+| Stats     | ✅ Complete | Feb 2026 | Counter animation, inner blocks |
 
 ### Phase 7: Priority 4 Blocks (Dynamic/Complex)
 
@@ -127,6 +127,18 @@ Based on review discussion:
 | `wordpress/blocks/rich-text/*`                       | RichText block (6 files)    | Feb 2026    |
 | `wordpress/blocks/divider/*`                         | Divider block (6 files)     | Feb 2026    |
 | `wordpress/blocks/image/*`                           | Image block (6 files)       | Feb 2026    |
+| `wordpress/blocks/cta/*`                             | CTA block (6 files)         | Feb 2026    |
+| `wordpress/blocks/testimonial/*`                     | Testimonial block (6 files) | Feb 2026    |
+| `wordpress/blocks/feature/*`                         | Feature block (6 files)     | Feb 2026    |
+| `wordpress/blocks/teaser-card/*`                     | TeaserCard block (6 files)  | Feb 2026    |
+| `wordpress/blocks/split/*`                           | Split block (6 files)       | Feb 2026    |
+| `wordpress/blocks/section/*`                         | Section block (7 files)     | Feb 2026    |
+| `wordpress/blocks/hero/*`                            | Hero block (6 files)        | Feb 2026    |
+| `wordpress/blocks/gallery/*`                         | Gallery block (7 files)     | Feb 2026    |
+| `wordpress/blocks/mosaic/*`                          | Mosaic block (6 files)      | Feb 2026    |
+| `wordpress/blocks/mosaic-tile/*`                     | Mosaic Tile inner block     | Feb 2026    |
+| `wordpress/blocks/stats/*`                           | Stats block (7 files)       | Feb 2026    |
+| `wordpress/blocks/stat-item/*`                       | Stat Item inner block       | Feb 2026    |
 | `scripts/generateBlockJson.mjs`                      | Schema transformer          | Feb 2026    |
 
 ---
@@ -134,6 +146,22 @@ Based on review discussion:
 ## Changelog
 
 ### February 2026 (Continued)
+
+**Phase 6 Complete:**
+
+- ✅ Section block with Interactivity API spotlight cursor effect
+- ✅ Hero block with all 7 text positions, height variants, skip button
+- ✅ Gallery block with full lightbox using Interactivity API
+- ✅ Mosaic block with Mosaic Tile inner block, 3 layout patterns
+- ✅ Stats block with counter animation, Stat Item inner block
+
+**Phase 5 Complete:**
+
+- ✅ CTA block with InnerBlocks for buttons, background options
+- ✅ Testimonial block with rating stars, avatar, quote styles
+- ✅ Feature block with 5 layout styles and CTA options
+- ✅ TeaserCard block with 3 layouts, aspect ratios
+- ✅ Split block with sidebar left/right using InnerBlocks
 
 **Phase 1-4 Complete:**
 

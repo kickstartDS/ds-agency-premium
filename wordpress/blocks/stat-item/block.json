@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/stat-item",
+  "version": "1.0.0",
+  "title": "Stat Item",
+  "category": "dsa-content",
+  "description": "A single statistic with number and label",
+  "textdomain": "ds-agency",
+  "parent": ["dsa/stats"],
+  "attributes": {
+    "number": {
+      "type": "string",
+      "default": "0"
+    },
+    "label": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "icon": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:../../build/stat-item/index.js"
+}

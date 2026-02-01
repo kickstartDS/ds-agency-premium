@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/stats",
+  "version": "1.0.0",
+  "title": "Stats",
+  "category": "dsa-content",
+  "description": "Display statistics with numbers and labels in a grid",
+  "textdomain": "ds-agency",
+  "keywords": ["stats", "statistics", "numbers", "counter", "data"],
+  "attributes": {
+    "align": {
+      "type": "string",
+      "enum": ["left", "center"],
+      "default": "center"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "viewScript": "file:../../build/stats/view.js",
+  "editorScript": "file:../../build/stats/index.js",
+  "editorStyle": "file:../../build/stats/index.css",
+  "style": "file:../../build/stats/style-index.css"
+}

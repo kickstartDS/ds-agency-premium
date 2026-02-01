@@ -1,0 +1,191 @@
+/**
+ * Section block styles (frontend + editor)
+ */
+
+.dsa-section {
+  // Component tokens with fallbacks
+  --dsa-section--padding-block: var(--ks-spacing-xl, 4rem);
+  --dsa-section--padding-inline: var(--ks-spacing-m, 1rem);
+  --dsa-section--bg-default: var(--ks-background-color-default, #fff);
+  --dsa-section--bg-accent: var(--ks-background-color-interface, #f8f9fa);
+  --dsa-section--bg-bold: var(--ks-background-color-bold, #1a1a2e);
+  --dsa-section--max-width: var(--ks-max-width, 1200px);
+  --dsa-section--headline-spacing: var(--ks-spacing-l, 2rem);
+  --dsa-section--spotlight-color: rgba(78, 107, 220, 0.15);
+
+  position: relative;
+  padding-block: var(--dsa-section--padding-block);
+  padding-inline: var(--dsa-section--padding-inline);
+  background-color: var(--dsa-section--bg-default);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  // Spotlight overlay
+  &__spotlight {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  // Inner container
+  &__inner {
+    max-width: var(--dsa-section--max-width);
+    margin-inline: auto;
+  }
+
+  // Header/Headline area
+  &__header {
+    margin-block-end: var(--dsa-section--headline-spacing);
+  }
+
+  &__headline {
+    margin: 0;
+    font-size: var(--ks-font-size-display-s, 2rem);
+    font-weight: var(--ks-font-weight-bold, 700);
+    line-height: var(--ks-line-height-heading, 1.2);
+
+    &--large {
+      font-size: var(--ks-font-size-display-l, 3rem);
+    }
+  }
+
+  &__sub {
+    margin: 0;
+    margin-block-end: var(--ks-spacing-xs, 0.5rem);
+    font-size: var(--ks-font-size-s, 0.875rem);
+    font-weight: var(--ks-font-weight-semibold, 600);
+    color: var(--ks-color-primary, #4e6bdc);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  // Headline alignment
+  &__header--align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header--align-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__header--text-center {
+    text-align: center;
+  }
+
+  &__header--text-right {
+    text-align: right;
+  }
+
+  // Headline width
+  &__header--width-narrow {
+    max-width: 600px;
+  }
+
+  &__header--width-default {
+    max-width: 800px;
+  }
+
+  &__header--width-wide {
+    max-width: 1000px;
+  }
+
+  // Content widths
+  &--width-narrow &__inner {
+    max-width: 800px;
+  }
+
+  &--width-default &__inner {
+    max-width: var(--dsa-section--max-width);
+  }
+
+  &--width-wide &__inner {
+    max-width: 1400px;
+  }
+
+  &--width-max &__inner {
+    max-width: 100%;
+  }
+
+  &--width-full {
+    padding-inline: 0;
+
+    .dsa-section__inner {
+      max-width: 100%;
+    }
+  }
+
+  // Background colors
+  &--bg-accent {
+    background-color: var(--dsa-section--bg-accent);
+  }
+
+  &--bg-bold {
+    background-color: var(--dsa-section--bg-bold);
+    color: var(--ks-text-color-inverted, #fff);
+
+    .dsa-section__sub {
+      color: var(--ks-color-primary-light, #7b8eea);
+    }
+  }
+
+  // Inverted
+  &--inverted {
+    color: var(--ks-text-color-inverted, #fff);
+
+    .dsa-section__sub {
+      color: var(--ks-color-primary-light, #7b8eea);
+    }
+  }
+
+  // Spacing variants
+  &--space-before-small {
+    padding-block-start: var(--ks-spacing-l, 2rem);
+  }
+
+  &--space-before-none {
+    padding-block-start: 0;
+  }
+
+  &--space-after-small {
+    padding-block-end: var(--ks-spacing-l, 2rem);
+  }
+
+  &--space-after-none {
+    padding-block-end: 0;
+  }
+
+  // Header spacing
+  &--header-spacing {
+    padding-block-start: calc(var(--dsa-section--padding-block) + 80px);
+  }
+
+  // Style: Framed
+  &--style-framed {
+    margin-inline: var(--ks-spacing-m, 1rem);
+    border-radius: var(--ks-border-radius-l, 16px);
+  }
+
+  // Style: Deko
+  &--style-deko {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        var(--ks-color-primary-alpha-10, rgba(78, 107, 220, 0.1)) 0%,
+        transparent 60%
+      );
+      pointer-events: none;
+    }
+  }
+}

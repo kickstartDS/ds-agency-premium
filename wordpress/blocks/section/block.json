@@ -1,0 +1,95 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/section",
+  "version": "1.0.0",
+  "title": "Section",
+  "category": "dsa-layout",
+  "description": "Layout container for organizing page content with background options",
+  "textdomain": "ds-agency",
+  "keywords": ["section", "container", "layout", "wrapper"],
+  "attributes": {
+    "width": {
+      "type": "string",
+      "enum": ["full", "max", "wide", "default", "narrow"],
+      "default": "default"
+    },
+    "style": {
+      "type": "string",
+      "enum": ["default", "framed", "deko"],
+      "default": "default"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "enum": ["default", "accent", "bold"],
+      "default": "default"
+    },
+    "backgroundImage": {
+      "type": "string",
+      "default": ""
+    },
+    "spotlight": {
+      "type": "boolean",
+      "default": false
+    },
+    "spaceBefore": {
+      "type": "string",
+      "enum": ["default", "small", "none"],
+      "default": "default"
+    },
+    "spaceAfter": {
+      "type": "string",
+      "enum": ["default", "small", "none"],
+      "default": "default"
+    },
+    "inverted": {
+      "type": "boolean",
+      "default": false
+    },
+    "headerSpacing": {
+      "type": "boolean",
+      "default": false
+    },
+    "headline_text": {
+      "type": "string",
+      "default": ""
+    },
+    "headline_sub": {
+      "type": "string",
+      "default": ""
+    },
+    "headline_large": {
+      "type": "boolean",
+      "default": false
+    },
+    "headline_width": {
+      "type": "string",
+      "enum": ["unset", "narrow", "default", "wide"],
+      "default": "unset"
+    },
+    "headline_align": {
+      "type": "string",
+      "enum": ["left", "center", "right"],
+      "default": "left"
+    },
+    "headline_textAlign": {
+      "type": "string",
+      "enum": ["left", "center", "right"],
+      "default": "left"
+    },
+    "headline_switchOrder": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "viewScript": "file:../../build/section/view.js",
+  "editorScript": "file:../../build/section/index.js",
+  "editorStyle": "file:../../build/section/index.css",
+  "style": "file:../../build/section/style-index.css"
+}

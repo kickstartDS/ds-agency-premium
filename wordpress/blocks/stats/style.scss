@@ -1,0 +1,100 @@
+/**
+ * Stats block styles (frontend + editor)
+ */
+
+.dsa-stats {
+  // Component tokens with fallbacks
+  --dsa-stats--gap: var(--ks-spacing-l, 2rem);
+  --dsa-stats--number-size: var(--ks-font-size-display, 3rem);
+  --dsa-stats--number-color: var(--ks-color-primary, #3366ff);
+  --dsa-stats--label-size: var(--ks-font-size-l, 1.25rem);
+  --dsa-stats--description-size: var(--ks-font-size-s, 0.875rem);
+  --dsa-stats--description-color: var(--ks-text-color-muted, #666);
+
+  // Items container
+  &__items {
+    display: grid;
+    gap: var(--dsa-stats--gap);
+    grid-template-columns: 1fr;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  // Alignment: Center
+  &--center {
+    text-align: center;
+  }
+
+  // Alignment: Left
+  &--left {
+    text-align: left;
+  }
+}
+
+// Stat Item (inner block)
+.dsa-stat-item {
+  padding: var(--ks-spacing-m, 1rem);
+
+  &__number {
+    display: block;
+    margin-bottom: var(--ks-spacing-xs, 0.5rem);
+    font-size: var(--dsa-stats--number-size);
+    font-weight: var(--ks-font-weight-bold, 700);
+    color: var(--dsa-stats--number-color);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: var(--ks-spacing-xxs, 0.25rem);
+    font-size: var(--dsa-stats--label-size);
+    font-weight: var(--ks-font-weight-semibold, 600);
+    color: var(--ks-text-color-default, #333);
+  }
+
+  &__description {
+    font-size: var(--dsa-stats--description-size);
+    color: var(--dsa-stats--description-color);
+    margin: 0;
+  }
+
+  &__icon {
+    margin-bottom: var(--ks-spacing-s, 0.75rem);
+    
+    svg {
+      width: 48px;
+      height: 48px;
+      fill: var(--dsa-stats--number-color);
+    }
+  }
+}
+
+// Editor styles for inner blocks
+.wp-block-dsa-stats {
+  .dsa-stats__items {
+    > .block-editor-inner-blocks > .block-editor-block-list__layout {
+      display: grid;
+      gap: var(--dsa-stats--gap, var(--ks-spacing-l, 2rem));
+      grid-template-columns: 1fr;
+
+      @media (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

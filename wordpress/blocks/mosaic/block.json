@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/mosaic",
+  "version": "1.0.0",
+  "title": "Mosaic",
+  "category": "dsa-layout",
+  "description": "Display content tiles in alternating layouts with images and text",
+  "textdomain": "ds-agency",
+  "keywords": ["mosaic", "tiles", "layout", "grid"],
+  "attributes": {
+    "layout": {
+      "type": "string",
+      "enum": ["alternate", "textLeft", "textRight"],
+      "default": "alternate"
+    },
+    "largeHeadlines": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "providesContext": {
+    "dsa/mosaic-layout": "layout",
+    "dsa/mosaic-largeHeadlines": "largeHeadlines"
+  },
+  "editorScript": "file:../../build/mosaic/index.js",
+  "editorStyle": "file:../../build/mosaic/index.css",
+  "style": "file:../../build/mosaic/style-index.css"
+}
