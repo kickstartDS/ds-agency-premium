@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/teaser-card",
+  "version": "1.0.0",
+  "title": "Teaser Card",
+  "category": "dsa-content",
+  "description": "Card component for teasing content with image, headline, and link",
+  "textdomain": "ds-agency",
+  "keywords": ["card", "teaser", "link", "preview"],
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": ""
+    },
+    "layout": {
+      "type": "string",
+      "enum": ["stack", "row", "compact"],
+      "default": "stack"
+    },
+    "centered": {
+      "type": "boolean",
+      "default": false
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "button_label": {
+      "type": "string",
+      "default": "Read more"
+    },
+    "button_chevron": {
+      "type": "boolean",
+      "default": false
+    },
+    "button_hidden": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "type": "string",
+      "default": ""
+    },
+    "imageRatio": {
+      "type": "string",
+      "enum": ["wide", "landscape", "square", "unset"],
+      "default": "wide"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "spacing": {
+      "margin": true
+    }
+  },
+  "editorScript": "file:../../build/teaser-card/index.js",
+  "editorStyle": "file:../../build/teaser-card/index.css",
+  "style": "file:../../build/teaser-card/style-index.css"
+}

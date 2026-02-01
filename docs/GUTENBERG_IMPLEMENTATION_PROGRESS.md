@@ -63,13 +63,13 @@ Based on review discussion:
 
 ### Phase 5: Priority 2 Blocks (Content)
 
-| Component   | Status     | Date | Notes |
-| ----------- | ---------- | ---- | ----- |
-| CTA         | ⏳ Pending |      |       |
-| Testimonial | ⏳ Pending |      |       |
-| Feature     | ⏳ Pending |      |       |
-| TeaserCard  | ⏳ Pending |      |       |
-| Split       | ⏳ Pending |      |       |
+| Component   | Status      | Date     | Notes                    |
+| ----------- | ----------- | -------- | ------------------------ |
+| CTA         | ✅ Complete | Feb 2026 | InnerBlocks for buttons  |
+| Testimonial | ✅ Complete | Feb 2026 | Rating, avatar, quotes   |
+| Feature     | ✅ Complete | Feb 2026 | 5 layouts, CTA options   |
+| TeaserCard  | ✅ Complete | Feb 2026 | 3 layouts, aspect ratios |
+| Split       | ✅ Complete | Feb 2026 | Sidebar left/right       |
 
 ### Phase 6: Priority 3 Blocks (Layout)
 

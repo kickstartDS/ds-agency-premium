@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/testimonial",
+  "version": "1.0.0",
+  "title": "Testimonial",
+  "category": "dsa-content",
+  "description": "Display customer testimonials with quote, author, and optional rating",
+  "textdomain": "ds-agency",
+  "keywords": ["testimonial", "quote", "review", "feedback"],
+  "attributes": {
+    "quote": {
+      "type": "string",
+      "default": ""
+    },
+    "quoteSigns": {
+      "type": "string",
+      "enum": ["normal", "large", "none"],
+      "default": "normal"
+    },
+    "name": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "image_src": {
+      "type": "string",
+      "default": ""
+    },
+    "image_alt": {
+      "type": "string",
+      "default": ""
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "color": {
+      "background": true,
+      "text": true
+    }
+  },
+  "editorScript": "file:../../build/testimonial/index.js",
+  "editorStyle": "file:../../build/testimonial/index.css",
+  "style": "file:../../build/testimonial/style-index.css"
+}

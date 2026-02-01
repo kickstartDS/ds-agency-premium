@@ -1,0 +1,27 @@
+/**
+ * Testimonial block editor styles
+ */
+
+.wp-block-dsa-testimonial {
+  // Editable fields
+  .block-editor-rich-text__editable {
+    &:focus {
+      outline: none;
+    }
+
+    &[data-rich-text-placeholder]::before {
+      color: var(--wp-admin-theme-color-darker-20, #666);
+      opacity: 0.6;
+    }
+  }
+
+  // Star rating interactive
+  .dsa-testimonial__star {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

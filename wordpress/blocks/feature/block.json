@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/feature",
+  "version": "1.0.0",
+  "title": "Feature",
+  "category": "dsa-content",
+  "description": "Display a feature with icon, title, text, and optional CTA",
+  "textdomain": "ds-agency",
+  "keywords": ["feature", "benefit", "service", "icon"],
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "default": "star"
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "style": {
+      "type": "string",
+      "enum": ["intext", "stack", "centered", "besideLarge", "besideSmall"],
+      "default": "stack"
+    },
+    "cta_toggle": {
+      "type": "boolean",
+      "default": false
+    },
+    "cta_url": {
+      "type": "string",
+      "default": "#"
+    },
+    "cta_label": {
+      "type": "string",
+      "default": "Learn more"
+    },
+    "cta_icon": {
+      "type": "string",
+      "default": "arrow-right"
+    },
+    "cta_style": {
+      "type": "string",
+      "enum": ["button", "link", "intext"],
+      "default": "link"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "editorScript": "file:../../build/feature/index.js",
+  "editorStyle": "file:../../build/feature/index.css",
+  "style": "file:../../build/feature/style-index.css"
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/cta",
+  "version": "1.0.0",
+  "title": "Call to Action",
+  "category": "dsa-content",
+  "description": "Compelling call to action section with headline, text, and buttons",
+  "textdomain": "ds-agency",
+  "keywords": ["cta", "call to action", "banner", "promotion"],
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "default": ""
+    },
+    "sub": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "highlightText": {
+      "type": "boolean",
+      "default": false
+    },
+    "colorNeutral": {
+      "type": "boolean",
+      "default": false
+    },
+    "inverted": {
+      "type": "boolean",
+      "default": false
+    },
+    "textAlign": {
+      "type": "string",
+      "enum": ["left", "center"],
+      "default": "left"
+    },
+    "align": {
+      "type": "string",
+      "enum": ["center", "top", "bottom"],
+      "default": "center"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundImage": {
+      "type": "string",
+      "default": ""
+    },
+    "image_src": {
+      "type": "string",
+      "default": ""
+    },
+    "image_alt": {
+      "type": "string",
+      "default": ""
+    },
+    "image_padding": {
+      "type": "boolean",
+      "default": true
+    },
+    "image_align": {
+      "type": "string",
+      "enum": ["center", "top", "bottom"],
+      "default": "center"
+    },
+    "order_mobileImageLast": {
+      "type": "boolean",
+      "default": false
+    },
+    "order_desktopImageLast": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "editorScript": "file:../../build/cta/index.js",
+  "editorStyle": "file:../../build/cta/index.css",
+  "style": "file:../../build/cta/style-index.css"
+}
