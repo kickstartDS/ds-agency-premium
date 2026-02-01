@@ -1,0 +1,106 @@
+/**
+ * RichText block styles (frontend + editor)
+ */
+
+.dsa-rich-text {
+  // Component tokens with fallbacks
+  --dsa-rich-text--font-family: var(--ks-font-family-body, inherit);
+  --dsa-rich-text--font-size: var(--ks-font-size-body, 1rem);
+  --dsa-rich-text--line-height: var(--ks-line-height-body, 1.6);
+  --dsa-rich-text--color: var(--ks-text-color-default, currentColor);
+  --dsa-rich-text--link-color: var(--ks-color-primary, #4e6bdc);
+  --dsa-rich-text--link-hover-color: var(--ks-color-primary-dark, #3a4db8);
+
+  font-family: var(--dsa-rich-text--font-family);
+  font-size: var(--dsa-rich-text--font-size);
+  line-height: var(--dsa-rich-text--line-height);
+  color: var(--dsa-rich-text--color);
+
+  // Alignment variants
+  &--align-left {
+    text-align: left;
+  }
+
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+
+  // Content area
+  &__content {
+    // Prose styles
+    p {
+      margin-block: 0 1em;
+
+      &:last-child {
+        margin-block-end: 0;
+      }
+    }
+
+    // Links
+    a {
+      color: var(--dsa-rich-text--link-color);
+      text-decoration: underline;
+      transition: color 0.2s ease;
+
+      &:hover,
+      &:focus {
+        color: var(--dsa-rich-text--link-hover-color);
+      }
+    }
+
+    // Bold
+    strong,
+    b {
+      font-weight: var(--ks-font-weight-bold, 700);
+    }
+
+    // Italic
+    em,
+    i {
+      font-style: italic;
+    }
+
+    // Code
+    code {
+      font-family: var(--ks-font-family-mono, monospace);
+      font-size: 0.875em;
+      padding: 0.125em 0.25em;
+      background-color: var(--ks-background-color-interface, #f4f4f4);
+      border-radius: var(--ks-border-radius-s, 2px);
+    }
+
+    // Strikethrough
+    s,
+    del {
+      text-decoration: line-through;
+    }
+
+    // Lists
+    ul,
+    ol {
+      margin-block: 0 1em;
+      padding-inline-start: 1.5em;
+
+      &:last-child {
+        margin-block-end: 0;
+      }
+    }
+
+    li {
+      margin-block-end: 0.25em;
+    }
+
+    // Blockquote
+    blockquote {
+      margin-block: 1em;
+      margin-inline: 0;
+      padding-inline-start: 1em;
+      border-inline-start: 3px solid var(--ks-border-color-default, #ccc);
+      font-style: italic;
+    }
+  }
+}

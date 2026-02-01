@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "Design System Component Builder MCP": {
+      "command": "node",
+      "args": [
+        "/home/julrich/Projects/kickstartDS/code/ds-agency-premium-mcp-demo/component-implementation-mcp/src/index.js"
+      ]
+    }
+  },
+  "inputs": []
+}

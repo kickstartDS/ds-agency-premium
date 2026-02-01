@@ -1,0 +1,15 @@
+/**
+ * Divider block editor styles
+ */
+
+.wp-block-dsa-divider {
+  // Make the divider easily selectable in the editor
+  cursor: pointer;
+
+  &:hover,
+  &.is-selected {
+    .dsa-divider__line {
+      opacity: 0.8;
+    }
+  }
+}

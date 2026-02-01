@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/rich-text",
+  "version": "1.0.0",
+  "title": "Rich Text",
+  "category": "dsa-content",
+  "description": "Display formatted text content with markdown support",
+  "textdomain": "ds-agency",
+  "keywords": ["text", "content", "markdown", "prose"],
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "align": {
+      "type": "string",
+      "enum": ["left", "center", "right"],
+      "default": "left"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    }
+  },
+  "editorScript": "file:../../build/rich-text/index.js",
+  "editorStyle": "file:../../build/rich-text/index.css",
+  "style": "file:../../build/rich-text/style-index.css"
+}

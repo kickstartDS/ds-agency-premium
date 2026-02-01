@@ -62,7 +62,7 @@
     "playroom:build": "playroom build",
     "presets": "vitest run scripts/generatePresets.test.ts",
     "search": "rm -rf static/pagefind && vitest run scripts/generateSearchIndex.test.ts",
-    "husky:precommit": "yarn schema && rollup -c",
+    "husky:precommit": "yarn schema",
     "prepare": "patch-package && husky install",
     "prepublishOnly": "rm -rf dist && yarn build-tokens && yarn schema && yarn token && yarn branding-tokens && rollup -c && yarn build-storybook",
     "schema": "run-p schema:*",
@@ -81,7 +81,13 @@
     "watch:schema": "yarn schema && chokidar \"src/**/*.schema.json\" -c \"yarn schema\"",
     "watch:token": "yarn token && chokidar \"src/**/*-tokens.scss\" -c \"yarn token {path}\"",
     "watch:branding-tokens": "yarn branding-tokens && chokidar \"src/token/branding-tokens{,-*}.json\" -c \"yarn branding-tokens {path}\"",
-    "watch:dictionary": "yarn build-tokens && chokidar \"src/token/dictionary/*.json\" -c \"yarn build-tokens\""
+    "watch:dictionary": "yarn build-tokens && chokidar \"src/token/dictionary/*.json\" -c \"yarn build-tokens\"",
+    "gutenberg:generate": "node scripts/generateBlockJson.mjs",
+    "gutenberg:install": "cd wordpress && npm install",
+    "gutenberg:build": "cd wordpress && npm run build",
+    "gutenberg:start": "cd wordpress && npm run start",
+    "gutenberg": "run-s gutenberg:generate gutenberg:build",
+    "build:wordpress": "run-s schema gutenberg"
   },
   "dependencies": {
     "@bedrock-layout/primitives": "^3.0.23",

@@ -1,0 +1,35 @@
+/**
+ * Headline Block - Editor Styles
+ *
+ * @package DSAgencyBlocks
+ */
+
+.dsa-headline {
+  // Editor-specific adjustments
+
+  // Placeholder styling
+  .dsa-headline__text,
+  .dsa-headline__sub {
+    &[data-rich-text-placeholder]::before {
+      color: currentColor;
+      opacity: 0.4;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  // Hide empty subheadline unless focused
+  .dsa-headline__sub:empty:not(:focus) {
+    min-height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+
+  // Selection indicator
+  &.is-selected {
+    outline: 2px solid var(--wp-admin-theme-color, #007cba);
+    outline-offset: 4px;
+  }
+}

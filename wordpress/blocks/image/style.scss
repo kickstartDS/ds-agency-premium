@@ -1,0 +1,142 @@
+/**
+ * Image block styles (frontend + editor)
+ */
+
+.dsa-image {
+  // Component tokens with fallbacks
+  --dsa-image--border-radius: var(--ks-border-radius-m, 8px);
+  --dsa-image--border-radius-rounded: var(--ks-border-radius-l, 16px);
+  --dsa-image--caption-font-size: var(--ks-font-size-s, 0.875rem);
+  --dsa-image--caption-color: var(--ks-text-color-muted, #666);
+  --dsa-image--caption-spacing: var(--ks-spacing-xs, 0.5rem);
+
+  display: block;
+  margin: 0;
+  width: 100%;
+
+  // Image wrapper for aspect ratio control
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--dsa-image--border-radius);
+  }
+
+  // The image itself
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  // Caption
+  &__caption {
+    margin-block-start: var(--dsa-image--caption-spacing);
+    font-size: var(--dsa-image--caption-font-size);
+    color: var(--dsa-image--caption-color);
+    text-align: center;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  // Rounded variant
+  &--rounded &__wrapper {
+    border-radius: var(--dsa-image--border-radius-rounded);
+  }
+
+  // Object fit variants
+  &--fit-cover &__img {
+    object-fit: cover;
+  }
+
+  &--fit-contain &__img {
+    object-fit: contain;
+  }
+
+  &--fit-fill &__img {
+    object-fit: fill;
+  }
+
+  &--fit-none &__img {
+    object-fit: none;
+  }
+
+  // Aspect ratio variants - using modern aspect-ratio property
+  &--aspect-1-1 &__wrapper {
+    aspect-ratio: 1 / 1;
+
+    .dsa-image__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--aspect-4-3 &__wrapper {
+    aspect-ratio: 4 / 3;
+
+    .dsa-image__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--aspect-16-9 &__wrapper {
+    aspect-ratio: 16 / 9;
+
+    .dsa-image__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--aspect-21-9 &__wrapper {
+    aspect-ratio: 21 / 9;
+
+    .dsa-image__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // WordPress alignment support
+  &.alignleft {
+    float: left;
+    margin-inline-end: var(--ks-spacing-m, 1.5rem);
+    margin-block-end: var(--ks-spacing-m, 1.5rem);
+    max-width: 50%;
+  }
+
+  &.alignright {
+    float: right;
+    margin-inline-start: var(--ks-spacing-m, 1.5rem);
+    margin-block-end: var(--ks-spacing-m, 1.5rem);
+    max-width: 50%;
+  }
+
+  &.aligncenter {
+    margin-inline: auto;
+  }
+
+  &.alignwide {
+    width: calc(100% + 2 * var(--ks-spacing-l, 2rem));
+    max-width: none;
+    margin-inline: calc(-1 * var(--ks-spacing-l, 2rem));
+  }
+
+  &.alignfull {
+    width: 100vw;
+    max-width: none;
+    margin-inline: calc(50% - 50vw);
+  }
+}

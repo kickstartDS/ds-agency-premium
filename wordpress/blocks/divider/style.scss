@@ -1,0 +1,88 @@
+/**
+ * Divider block styles (frontend + editor)
+ */
+
+.dsa-divider {
+  // Component tokens with fallbacks
+  --dsa-divider--color: var(--ks-border-color-default, #e0e0e0);
+  --dsa-divider--height: 1px;
+  --dsa-divider--spacing: var(--ks-spacing-m, 1.5rem);
+  --dsa-divider--gradient-start: var(--ks-color-primary, #4e6bdc);
+  --dsa-divider--gradient-end: var(--ks-color-secondary, #9b59b6);
+
+  display: block;
+  width: 100%;
+  padding-block: var(--dsa-divider--spacing);
+
+  // The actual divider line
+  &__line {
+    border: none;
+    margin: 0;
+    height: var(--dsa-divider--height);
+    background-color: var(--dsa-divider--color);
+  }
+
+  // Variant: Solid (default)
+  &--solid &__line {
+    background-color: var(--dsa-divider--color);
+  }
+
+  // Variant: Dashed
+  &--dashed &__line {
+    background-color: transparent;
+    background-image: linear-gradient(
+      to right,
+      var(--dsa-divider--color) 50%,
+      transparent 50%
+    );
+    background-size: 8px var(--dsa-divider--height);
+    background-repeat: repeat-x;
+    height: var(--dsa-divider--height);
+  }
+
+  // Variant: Dotted
+  &--dotted &__line {
+    background-color: transparent;
+    background-image: radial-gradient(
+      circle,
+      var(--dsa-divider--color) 1px,
+      transparent 1px
+    );
+    background-size: 6px var(--dsa-divider--height);
+    background-repeat: repeat-x;
+    height: 3px;
+  }
+
+  // Variant: Gradient
+  &--gradient &__line {
+    background: linear-gradient(
+      to right,
+      var(--dsa-divider--gradient-start),
+      var(--dsa-divider--gradient-end)
+    );
+    height: 2px;
+  }
+
+  // Width: Full (default)
+  &--width-full &__line {
+    width: 100%;
+  }
+
+  // Width: Narrow
+  &--width-narrow {
+    display: flex;
+    justify-content: center;
+
+    .dsa-divider__line {
+      width: 60%;
+      max-width: 400px;
+    }
+  }
+
+  // Width: Wide
+  &--width-wide &__line {
+    width: 100%;
+    max-width: 800px;
+    margin-inline: auto;
+  }
+}

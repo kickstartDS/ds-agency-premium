@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/headline",
+  "version": "1.0.0",
+  "title": "Headline",
+  "category": "ds-agency",
+  "icon": "heading",
+  "description": "Component used for headlines with optional subheadline",
+  "keywords": ["headline", "heading", "title", "kickstartds", "dsa"],
+  "textdomain": "ds-agency-blocks",
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "sub": {
+      "type": "string",
+      "default": ""
+    },
+    "switchOrder": {
+      "type": "boolean",
+      "default": false
+    },
+    "align": {
+      "type": "string",
+      "enum": ["left", "center", "right"],
+      "default": "left"
+    },
+    "level": {
+      "type": "string",
+      "enum": ["h1", "h2", "h3", "h4", "p"],
+      "default": "h2"
+    },
+    "style": {
+      "type": "string",
+      "enum": ["h1", "h2", "h3", "h4", "p"],
+      "default": "h2"
+    },
+    "spaceAfter": {
+      "type": "string",
+      "enum": ["minimum", "small", "large"],
+      "default": "small"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": ["wide", "full"],
+    "color": {
+      "text": true,
+      "background": false
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": false
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "example": {
+    "attributes": {
+      "text": "This is a headline",
+      "sub": "With a subheadline",
+      "level": "h2",
+      "style": "h2"
+    }
+  }
+}

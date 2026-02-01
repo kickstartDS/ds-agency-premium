@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/button",
+  "version": "1.0.0",
+  "title": "Button",
+  "category": "ds-agency",
+  "icon": "button",
+  "description": "Component used for user interaction",
+  "keywords": ["button", "link", "cta", "kickstartds", "dsa"],
+  "textdomain": "ds-agency-blocks",
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Click me"
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "variant": {
+      "type": "string",
+      "enum": ["primary", "secondary", "tertiary"],
+      "default": "secondary"
+    },
+    "icon": {
+      "type": "string",
+      "default": ""
+    },
+    "size": {
+      "type": "string",
+      "enum": ["small", "medium", "large"],
+      "default": "medium"
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "type": {
+      "type": "string",
+      "enum": ["button", "submit", "reset"],
+      "default": "button"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "align": false,
+    "color": {
+      "background": false,
+      "text": false
+    },
+    "spacing": {
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "example": {
+    "attributes": {
+      "label": "Book a meeting",
+      "variant": "primary",
+      "size": "medium"
+    }
+  }
+}

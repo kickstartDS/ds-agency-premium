@@ -1,0 +1,101 @@
+/**
+ * Headline Block - Frontend Styles
+ *
+ * @package DSAgencyBlocks
+ */
+
+.wp-block-dsa-headline,
+.dsa-headline {
+  // Base styles
+  margin: 0;
+  padding: 0;
+
+  // Text element
+  &__text {
+    margin: 0;
+    font-family: var(
+      --dsa-headline--font-family,
+      var(--ks-font-family-display, inherit)
+    );
+    font-weight: var(--dsa-headline--font-weight, 700);
+    line-height: var(--dsa-headline--line-height, 1.2);
+    color: var(--dsa-headline--color, inherit);
+  }
+
+  // Subheadline
+  &__sub {
+    margin: 0;
+    font-family: var(--dsa-headline-sub--font-family, inherit);
+    font-size: var(--dsa-headline-sub--font-size, 1rem);
+    font-weight: var(--dsa-headline-sub--font-weight, 400);
+    line-height: var(--dsa-headline-sub--line-height, 1.5);
+    color: var(--dsa-headline-sub--color, var(--ks-text-color-muted, #666));
+  }
+
+  // Visual styles (independent of semantic level)
+  &--style-h1 .dsa-headline__text {
+    font-size: var(--dsa-headline-h1--font-size, clamp(2rem, 5vw, 3.5rem));
+  }
+
+  &--style-h2 .dsa-headline__text {
+    font-size: var(--dsa-headline-h2--font-size, clamp(1.75rem, 4vw, 2.5rem));
+  }
+
+  &--style-h3 .dsa-headline__text {
+    font-size: var(--dsa-headline-h3--font-size, clamp(1.5rem, 3vw, 2rem));
+  }
+
+  &--style-h4 .dsa-headline__text {
+    font-size: var(--dsa-headline-h4--font-size, clamp(1.25rem, 2.5vw, 1.5rem));
+  }
+
+  &--style-p .dsa-headline__text {
+    font-size: var(--dsa-headline-p--font-size, 1rem);
+    font-weight: var(--dsa-headline-p--font-weight, 600);
+  }
+
+  // Alignment
+  &--align-left {
+    text-align: left;
+  }
+
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+
+  // Space after
+  &--space-minimum {
+    margin-bottom: var(
+      --dsa-headline--space-minimum,
+      var(--ks-spacing-xs, 0.5rem)
+    );
+  }
+
+  &--space-small {
+    margin-bottom: var(--dsa-headline--space-small, var(--ks-spacing-m, 1rem));
+  }
+
+  &--space-large {
+    margin-bottom: var(--dsa-headline--space-large, var(--ks-spacing-xl, 2rem));
+  }
+
+  // Switch order - subheadline above headline
+  &--switch-order {
+    display: flex;
+    flex-direction: column;
+
+    .dsa-headline__sub {
+      order: -1;
+      margin-bottom: var(--dsa-headline-sub--margin, 0.5em);
+    }
+  }
+
+  // Default order spacing
+  &:not(&--switch-order) .dsa-headline__text {
+    margin-bottom: var(--dsa-headline-text--margin, 0.25em);
+  }
+}

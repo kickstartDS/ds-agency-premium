@@ -1,0 +1,40 @@
+/**
+ * Image block editor styles
+ */
+
+.wp-block-dsa-image {
+  // Controls overlay
+  .dsa-image__controls {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .dsa-image__wrapper:hover .dsa-image__controls,
+  &.is-selected .dsa-image__controls {
+    opacity: 1;
+  }
+
+  // Placeholder styling
+  .components-placeholder {
+    min-height: 200px;
+  }
+
+  // Caption in editor
+  .dsa-image__caption {
+    &:focus {
+      outline: none;
+    }
+
+    &[data-rich-text-placeholder]::before {
+      color: var(--wp-admin-theme-color-darker-20, #666);
+      opacity: 0.6;
+    }
+  }
+}

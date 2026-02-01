@@ -1,0 +1,53 @@
+/**
+ * Button Block - Editor Styles
+ *
+ * These styles are only loaded in the block editor.
+ *
+ * @package DSAgencyBlocks
+ */
+
+.dsa-button-block-editor {
+  // Editor wrapper
+  display: inline-block;
+
+  // Selection state
+  &.is-selected {
+    .dsa-button {
+      outline: 2px solid var(--wp-admin-theme-color, #007cba);
+      outline-offset: 2px;
+    }
+  }
+
+  // RichText input styling
+  .dsa-button__label {
+    // Ensure RichText is editable and visible
+    min-width: 2em;
+
+    &:focus {
+      outline: none;
+    }
+
+    // Placeholder styling
+    &[data-rich-text-placeholder]::before {
+      color: inherit;
+      opacity: 0.6;
+    }
+  }
+
+  // Preview mode adjustments
+  .dsa-button {
+    // Ensure button looks correct in editor context
+    pointer-events: none;
+
+    // Re-enable pointer events for editable label
+    .dsa-button__label {
+      pointer-events: auto;
+    }
+  }
+}
+
+// Block toolbar adjustments
+.wp-block-dsa-button {
+  // Prevent unwanted margin in editor
+  margin: 0;
+}

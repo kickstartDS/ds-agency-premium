@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/image",
+  "version": "1.0.0",
+  "title": "DS Image",
+  "category": "dsa-media",
+  "description": "Display images with Design System styling and responsive behavior",
+  "textdomain": "ds-agency",
+  "keywords": ["image", "picture", "photo", "media"],
+  "attributes": {
+    "src": {
+      "type": "string",
+      "default": ""
+    },
+    "alt": {
+      "type": "string",
+      "default": ""
+    },
+    "caption": {
+      "type": "string",
+      "default": ""
+    },
+    "aspectRatio": {
+      "type": "string",
+      "enum": ["auto", "1:1", "4:3", "16:9", "21:9"],
+      "default": "auto"
+    },
+    "objectFit": {
+      "type": "string",
+      "enum": ["cover", "contain", "fill", "none"],
+      "default": "cover"
+    },
+    "rounded": {
+      "type": "boolean",
+      "default": false
+    },
+    "mediaId": {
+      "type": "number"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "align": ["left", "center", "right", "wide", "full"],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "editorScript": "file:../../build/image/index.js",
+  "editorStyle": "file:../../build/image/index.css",
+  "style": "file:../../build/image/style-index.css"
+}

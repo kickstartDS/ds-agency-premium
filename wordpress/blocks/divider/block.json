@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dsa/divider",
+  "version": "1.0.0",
+  "title": "Divider",
+  "category": "dsa-content",
+  "description": "Visual separator between content sections",
+  "textdomain": "ds-agency",
+  "keywords": ["divider", "separator", "line", "hr"],
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "enum": ["solid", "dashed", "dotted", "gradient"],
+      "default": "solid"
+    },
+    "width": {
+      "type": "string",
+      "enum": ["full", "narrow", "wide"],
+      "default": "full"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "spacing": {
+      "margin": ["top", "bottom"]
+    },
+    "color": {
+      "background": false,
+      "text": true
+    }
+  },
+  "editorScript": "file:../../build/divider/index.js",
+  "editorStyle": "file:../../build/divider/index.css",
+  "style": "file:../../build/divider/style-index.css"
+}
