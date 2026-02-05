@@ -40,8 +40,8 @@
       "margin": true
     }
   },
-  "viewScript": "file:../../build/gallery/view.js",
-  "editorScript": "file:../../build/gallery/index.js",
-  "editorStyle": "file:../../build/gallery/index.css",
-  "style": "file:../../build/gallery/style-index.css"
+  "viewScript": "file:./view.js",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

@@ -31,8 +31,10 @@ module.exports = {
   entry: {
     ...blockEntries,
     ...viewEntries,
-    // Shared utilities entry
-    "shared/index": "./shared/index.js",
+    // Note: shared utilities are NOT a separate entry.
+    // They get inlined into each block that imports them.
+    // This ensures blocks are self-contained and don't require
+    // a separate shared chunk to be loaded first.
   },
 
   output: {
@@ -45,10 +47,24 @@ module.exports = {
     ...defaultConfig.resolve,
     alias: {
       ...(defaultConfig.resolve?.alias || {}),
-      // Alias to parent package components
+      // Alias to parent package components (for TRUE component reuse)
       "@ds-agency": path.resolve(__dirname, "../src/components"),
       "@ds-shared": path.resolve(__dirname, "shared"),
+      // kickstartDS base components (required when reusing DS components)
+      "@kickstartds/base": path.resolve(
+        __dirname,
+        "../node_modules/@kickstartds/base"
+      ),
+      "@kickstartds/content": path.resolve(
+        __dirname,
+        "../node_modules/@kickstartds/content"
+      ),
+      "@kickstartds/core": path.resolve(
+        __dirname,
+        "../node_modules/@kickstartds/core"
+      ),
     },
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".json"],
     // Add parent node_modules for Design System dependencies
     modules: ["node_modules", path.resolve(__dirname, "../node_modules")],
   },
@@ -66,7 +82,7 @@ module.exports = {
     ...defaultConfig.module,
     rules: [
       ...(defaultConfig.module?.rules || []),
-      // Handle CSS from Design System
+      // Handle CSS from Design System dist folder
       {
         test: /\.css$/,
         include: [
@@ -75,22 +91,55 @@ module.exports = {
         ],
         use: ["style-loader", "css-loader"],
       },
+      // Handle SCSS from DS components (for TRUE component reuse)
+      {
+        test: /\.scss$/,
+        include: [
+          path.resolve(__dirname, "../src/components"),
+          path.resolve(__dirname, "../node_modules/@kickstartds"),
+        ],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                includePaths: [
+                  path.resolve(__dirname, "../node_modules"),
+                  path.resolve(__dirname, "../src"),
+                ],
+              },
+            },
+          },
+        ],
+      },
+      // Handle TypeScript from DS components
+      {
+        test: /\.tsx?$/,
+        include: [
+          path.resolve(__dirname, "../src/components"),
+        ],
+        use: {
+          loader: "ts-loader",
+          options: {
+            transpileOnly: true,
+            compilerOptions: {
+              module: "ESNext",
+              moduleResolution: "node",
+              jsx: "react-jsx",
+            },
+          },
+        },
+      },
     ],
   },
 
-  // Optimization for shared code
+  // Disable splitChunks to ensure each block is self-contained.
+  // This is important because WordPress loads each block's script independently
+  // and doesn't know about shared chunks between our blocks.
   optimization: {
     ...defaultConfig.optimization,
-    splitChunks: {
-      cacheGroups: {
-        // Extract shared Design System code
-        dsShared: {
-          test: /[\\/]shared[\\/]/,
-          name: "shared",
-          chunks: "all",
-          minSize: 0,
-        },
-      },
-    },
+    splitChunks: false,
   },
 };

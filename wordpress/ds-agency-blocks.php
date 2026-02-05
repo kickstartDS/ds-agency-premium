@@ -26,11 +26,11 @@ define( 'DSA_BLOCKS_VERSION', '1.0.0' );
 define( 'DSA_BLOCKS_PLUGIN_FILE', __FILE__ );
 define( 'DSA_BLOCKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DSA_BLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'DSA_BLOCKS_BUILD_DIR', DSA_BLOCKS_PLUGIN_DIR . '../build/' );
-define( 'DSA_BLOCKS_BUILD_URL', DSA_BLOCKS_PLUGIN_URL . '../build/' );
+define( 'DSA_BLOCKS_BUILD_DIR', DSA_BLOCKS_PLUGIN_DIR . 'build/' );
+define( 'DSA_BLOCKS_BUILD_URL', DSA_BLOCKS_PLUGIN_URL . 'build/' );
 
 // Include the block registry.
-require_once DSA_BLOCKS_PLUGIN_DIR . 'includes/class-block-registry.php';
+require_once DSA_BLOCKS_PLUGIN_DIR . 'plugin/includes/class-block-registry.php';
 
 /**
  * Initialize the plugin.
@@ -66,38 +66,9 @@ function dsa_blocks_enqueue_shared_styles() {
 			DSA_BLOCKS_VERSION
 		);
 	}
-
-	// Also enqueue the compiled component styles.
-	$components_css = DSA_BLOCKS_BUILD_DIR . 'components.css';
-	if ( file_exists( $components_css ) ) {
-		wp_enqueue_style(
-			'dsa-components',
-			DSA_BLOCKS_BUILD_URL . 'components.css',
-			array( 'dsa-design-tokens' ),
-			DSA_BLOCKS_VERSION
-		);
-	}
 }
-add_action( 'enqueue_block_assets', 'dsa_blocks_enqueue_shared_styles' );
-
-/**
- * Enqueue editor-specific styles and scripts.
- *
- * @return void
- */
-function dsa_blocks_enqueue_editor_assets() {
-	$editor_css = DSA_BLOCKS_BUILD_DIR . 'editor.css';
-
-	if ( file_exists( $editor_css ) ) {
-		wp_enqueue_style(
-			'dsa-editor-styles',
-			DSA_BLOCKS_BUILD_URL . 'editor.css',
-			array( 'dsa-design-tokens', 'dsa-components' ),
-			DSA_BLOCKS_VERSION
-		);
-	}
-}
-add_action( 'enqueue_block_editor_assets', 'dsa_blocks_enqueue_editor_assets' );
+add_action( 'wp_enqueue_scripts', 'dsa_blocks_enqueue_shared_styles' );
+add_action( 'enqueue_block_editor_assets', 'dsa_blocks_enqueue_shared_styles' );
 
 /**
  * Register block category for DS Agency blocks.
@@ -111,17 +82,32 @@ function dsa_blocks_register_category( $categories ) {
 			array(
 				'slug'  => 'ds-agency',
 				'title' => __( 'DS Agency', 'ds-agency-blocks' ),
+				'icon'  => 'screenoptions',
+			),
+			array(
+				'slug'  => 'dsa-layout',
+				'title' => __( 'DS Agency - Layout', 'ds-agency-blocks' ),
 				'icon'  => 'layout',
 			),
 			array(
-				'slug'  => 'ds-agency-layout',
-				'title' => __( 'DS Agency - Layout', 'ds-agency-blocks' ),
-				'icon'  => 'columns',
+				'slug'  => 'dsa-content',
+				'title' => __( 'DS Agency - Content', 'ds-agency-blocks' ),
+				'icon'  => 'text-page',
 			),
 			array(
-				'slug'  => 'ds-agency-content',
-				'title' => __( 'DS Agency - Content', 'ds-agency-blocks' ),
-				'icon'  => 'text',
+				'slug'  => 'dsa-media',
+				'title' => __( 'DS Agency - Media', 'ds-agency-blocks' ),
+				'icon'  => 'format-image',
+			),
+			array(
+				'slug'  => 'dsa-navigation',
+				'title' => __( 'DS Agency - Navigation', 'ds-agency-blocks' ),
+				'icon'  => 'menu',
+			),
+			array(
+				'slug'  => 'dsa-forms',
+				'title' => __( 'DS Agency - Forms', 'ds-agency-blocks' ),
+				'icon'  => 'feedback',
 			),
 		),
 		$categories
@@ -130,39 +116,13 @@ function dsa_blocks_register_category( $categories ) {
 add_filter( 'block_categories_all', 'dsa_blocks_register_category', 10, 1 );
 
 /**
- * Check minimum requirements on activation.
+ * Log debug information in development mode.
  *
+ * @param string $message The message to log.
  * @return void
  */
-function dsa_blocks_activation_check() {
-	if ( version_compare( get_bloginfo( 'version' ), '6.3', '<' ) ) {
-		deactivate_plugins( plugin_basename( __FILE__ ) );
-		wp_die(
-			esc_html__(
-				'DS Agency Blocks requires WordPress 6.3 or higher.',
-				'ds-agency-blocks'
-			),
-			'Plugin Activation Error',
-			array(
-				'response'  => 200,
-				'back_link' => true,
-			)
-		);
-	}
-
-	if ( version_compare( PHP_VERSION, '8.0', '<' ) ) {
-		deactivate_plugins( plugin_basename( __FILE__ ) );
-		wp_die(
-			esc_html__(
-				'DS Agency Blocks requires PHP 8.0 or higher.',
-				'ds-agency-blocks'
-			),
-			'Plugin Activation Error',
-			array(
-				'response'  => 200,
-				'back_link' => true,
-			)
-		);
+function dsa_blocks_debug_log( $message ) {
+	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+		error_log( '[DS Agency Blocks] ' . $message ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 	}
 }
-register_activation_hook( __FILE__, 'dsa_blocks_activation_check' );

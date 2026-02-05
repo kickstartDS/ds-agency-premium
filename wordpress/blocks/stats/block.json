@@ -24,8 +24,8 @@
       "margin": true
     }
   },
-  "viewScript": "file:../../build/stats/view.js",
-  "editorScript": "file:../../build/stats/index.js",
-  "editorStyle": "file:../../build/stats/index.css",
-  "style": "file:../../build/stats/style-index.css"
+  "viewScript": "file:./view.js",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

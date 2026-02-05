@@ -10,6 +10,8 @@ import Edit from "./edit";
 import save from "./save";
 import metadata from "./block.json";
 
+console.log("[DSA] Loading CTA block module");
+
 /**
  * Block icon
  */
@@ -24,12 +26,19 @@ const icon = (
   </svg>
 );
 
+console.log("[DSA] Registering CTA block:", metadata.name);
+
 /**
  * Register the block
  */
-registerBlockType(metadata.name, {
-  ...metadata,
-  icon,
-  edit: Edit,
-  save,
-});
+try {
+  registerBlockType(metadata.name, {
+    ...metadata,
+    icon,
+    edit: Edit,
+    save,
+  });
+  console.log("[DSA] CTA block registered successfully");
+} catch (error) {
+  console.error("[DSA] CTA block registration failed:", error);
+}

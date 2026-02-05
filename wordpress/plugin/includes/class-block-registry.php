@@ -78,11 +78,8 @@ class Block_Registry {
 			return;
 		}
 
+		// Get all block directories.
 		$block_folders = glob( $blocks_dir . '*', GLOB_ONLYDIR );
-
-		if ( empty( $block_folders ) ) {
-			return;
-		}
 
 		foreach ( $block_folders as $block_folder ) {
 			$block_json = $block_folder . '/block.json';
@@ -92,18 +89,33 @@ class Block_Registry {
 			}
 
 			$block_name = basename( $block_folder );
-			$args       = array();
 
-			// Add render callback for dynamic blocks.
+			// Check if this is a dynamic block.
 			if ( isset( $this->dynamic_blocks[ $block_name ] ) ) {
-				$callback = $this->dynamic_blocks[ $block_name ];
-				if ( method_exists( $this, $callback ) ) {
-					$args['render_callback'] = array( $this, $callback );
-				}
+				$this->register_dynamic_block( $block_folder, $block_name );
+			} else {
+				// Static block - just register from block.json.
+				register_block_type( $block_folder );
 			}
-
-			register_block_type( $block_folder, $args );
 		}
+	}
+
+	/**
+	 * Register a dynamic block with render callback.
+	 *
+	 * @param string $block_folder Path to block folder.
+	 * @param string $block_name   Block name (without namespace).
+	 * @return void
+	 */
+	private function register_dynamic_block( $block_folder, $block_name ) {
+		$callback_method = $this->dynamic_blocks[ $block_name ];
+
+		register_block_type(
+			$block_folder,
+			array(
+				'render_callback' => array( $this, $callback_method ),
+			)
+		);
 	}
 
 	/**
@@ -112,12 +124,16 @@ class Block_Registry {
 	 * @return void
 	 */
 	private function load_render_callbacks() {
-		$callbacks_dir = DSA_BLOCKS_PLUGIN_DIR . 'includes/render-callbacks/';
+		$callbacks_dir = DSA_BLOCKS_PLUGIN_DIR . 'plugin/includes/render-callbacks/';
 
-		foreach ( array_keys( $this->dynamic_blocks ) as $block_name ) {
-			$callback_file = $callbacks_dir . $block_name . '.php';
-			if ( file_exists( $callback_file ) ) {
-				require_once $callback_file;
+		if ( ! file_exists( $callbacks_dir ) ) {
+			return;
+		}
+
+		foreach ( $this->dynamic_blocks as $block_name => $callback ) {
+			$file = $callbacks_dir . $block_name . '.php';
+			if ( file_exists( $file ) ) {
+				require_once $file;
 			}
 		}
 	}
@@ -125,112 +141,51 @@ class Block_Registry {
 	/**
 	 * Render callback for Header block.
 	 *
-	 * @param array     $attributes Block attributes.
-	 * @param string    $content    Block content.
-	 * @param \WP_Block $block      Block instance.
+	 * @param array $attributes Block attributes.
 	 * @return string Rendered HTML.
 	 */
-	public function render_header_block( $attributes, $content, $block ) {
-		if ( function_exists( 'dsa_render_header_block' ) ) {
-			return dsa_render_header_block( $attributes, $content, $block );
-		}
-		return $this->render_placeholder( 'Header', $attributes );
+	public function render_header_block( $attributes ) {
+		return dsa_render_header_block( $attributes );
 	}
 
 	/**
 	 * Render callback for Footer block.
 	 *
-	 * @param array     $attributes Block attributes.
-	 * @param string    $content    Block content.
-	 * @param \WP_Block $block      Block instance.
+	 * @param array $attributes Block attributes.
 	 * @return string Rendered HTML.
 	 */
-	public function render_footer_block( $attributes, $content, $block ) {
-		if ( function_exists( 'dsa_render_footer_block' ) ) {
-			return dsa_render_footer_block( $attributes, $content, $block );
-		}
-		return $this->render_placeholder( 'Footer', $attributes );
+	public function render_footer_block( $attributes ) {
+		return dsa_render_footer_block( $attributes );
 	}
 
 	/**
 	 * Render callback for Form block.
 	 *
-	 * @param array     $attributes Block attributes.
-	 * @param string    $content    Block content.
-	 * @param \WP_Block $block      Block instance.
+	 * @param array  $attributes Block attributes.
+	 * @param string $content    Inner blocks content.
 	 * @return string Rendered HTML.
 	 */
-	public function render_form_block( $attributes, $content, $block ) {
-		if ( function_exists( 'dsa_render_form_block' ) ) {
-			return dsa_render_form_block( $attributes, $content, $block );
-		}
-		return $this->render_placeholder( 'Form', $attributes );
+	public function render_form_block( $attributes, $content ) {
+		return dsa_render_form_block( $attributes, $content );
 	}
 
 	/**
 	 * Render callback for Search Modal block.
 	 *
-	 * @param array     $attributes Block attributes.
-	 * @param string    $content    Block content.
-	 * @param \WP_Block $block      Block instance.
+	 * @param array $attributes Block attributes.
 	 * @return string Rendered HTML.
 	 */
-	public function render_search_modal_block( $attributes, $content, $block ) {
-		if ( function_exists( 'dsa_render_search_modal_block' ) ) {
-			return dsa_render_search_modal_block( $attributes, $content, $block );
-		}
-		return $this->render_placeholder( 'Search Modal', $attributes );
+	public function render_search_modal_block( $attributes ) {
+		return dsa_render_search_modal_block( $attributes );
 	}
 
 	/**
 	 * Render callback for Cookie Consent block.
 	 *
-	 * @param array     $attributes Block attributes.
-	 * @param string    $content    Block content.
-	 * @param \WP_Block $block      Block instance.
+	 * @param array $attributes Block attributes.
 	 * @return string Rendered HTML.
 	 */
-	public function render_cookie_consent_block( $attributes, $content, $block ) {
-		if ( function_exists( 'dsa_render_cookie_consent_block' ) ) {
-			return dsa_render_cookie_consent_block( $attributes, $content, $block );
-		}
-		return $this->render_placeholder( 'Cookie Consent', $attributes );
-	}
-
-	/**
-	 * Render a placeholder for blocks without render callbacks.
-	 *
-	 * @param string $block_name  Block name.
-	 * @param array  $attributes  Block attributes.
-	 * @return string Placeholder HTML.
-	 */
-	private function render_placeholder( $block_name, $attributes ) {
-		return sprintf(
-			'<div class="dsa-block-placeholder">%s</div>',
-			sprintf(
-				/* translators: %s: Block name */
-				esc_html__( '%s block - Render callback not implemented.', 'ds-agency-blocks' ),
-				esc_html( $block_name )
-			)
-		);
-	}
-
-	/**
-	 * Get list of dynamic blocks.
-	 *
-	 * @return array
-	 */
-	public function get_dynamic_blocks() {
-		return array_keys( $this->dynamic_blocks );
-	}
-
-	/**
-	 * Check if a block is dynamic.
-	 *
-	 * @param string $block_name Block name.
-	 * @return bool
-	 */
-	public function is_dynamic_block( $block_name ) {
-		return isset( $this->dynamic_blocks[ $block_name ] );
+	public function render_cookie_consent_block( $attributes ) {
+		return dsa_render_cookie_consent_block( $attributes );
 	}
 }

@@ -51,7 +51,7 @@
     "align": ["full"],
     "multiple": false
   },
-  "editorScript": "file:../../build/footer/index.js",
-  "editorStyle": "file:../../build/footer/index.css",
-  "style": "file:../../build/footer/style-index.css"
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

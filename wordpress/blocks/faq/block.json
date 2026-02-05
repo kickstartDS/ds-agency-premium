@@ -31,8 +31,8 @@
       "margin": true
     }
   },
-  "viewScript": "file:../../build/faq/view.js",
-  "editorScript": "file:../../build/faq/index.js",
-  "editorStyle": "file:../../build/faq/index.css",
-  "style": "file:../../build/faq/style-index.css"
+  "viewScript": "file:./view.js",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

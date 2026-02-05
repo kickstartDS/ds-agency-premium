@@ -32,7 +32,7 @@
       "lineHeight": true
     }
   },
-  "editorScript": "file:../../build/rich-text/index.js",
-  "editorStyle": "file:../../build/rich-text/index.css",
-  "style": "file:../../build/rich-text/style-index.css"
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

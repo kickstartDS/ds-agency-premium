@@ -55,8 +55,8 @@
       "margin": true
     }
   },
-  "viewScript": "file:../../build/slider/view.js",
-  "editorScript": "file:../../build/slider/index.js",
-  "editorStyle": "file:../../build/slider/index.css",
-  "style": "file:../../build/slider/style-index.css"
+  "viewScript": "file:./view.js",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

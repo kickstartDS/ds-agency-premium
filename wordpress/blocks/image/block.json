@@ -48,7 +48,7 @@
       "margin": true
     }
   },
-  "editorScript": "file:../../build/image/index.js",
-  "editorStyle": "file:../../build/image/index.css",
-  "style": "file:../../build/image/style-index.css"
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

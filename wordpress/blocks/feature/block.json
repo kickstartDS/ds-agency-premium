@@ -57,7 +57,7 @@
       "padding": true
     }
   },
-  "editorScript": "file:../../build/feature/index.js",
-  "editorStyle": "file:../../build/feature/index.css",
-  "style": "file:../../build/feature/style-index.css"
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

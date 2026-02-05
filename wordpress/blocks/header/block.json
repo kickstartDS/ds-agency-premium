@@ -63,8 +63,8 @@
     "align": ["full"],
     "multiple": false
   },
-  "viewScript": "file:../../build/header/view.js",
-  "editorScript": "file:../../build/header/index.js",
-  "editorStyle": "file:../../build/header/index.css",
-  "style": "file:../../build/header/style-index.css"
+  "viewScript": "file:./view.js",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

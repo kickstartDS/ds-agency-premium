@@ -32,5 +32,5 @@
     "html": false,
     "reusable": false
   },
-  "editorScript": "file:../../build/stat-item/index.js"
+  "editorScript": "file:./index.js"
 }

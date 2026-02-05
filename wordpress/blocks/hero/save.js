@@ -79,7 +79,7 @@ export default function save({ attributes }) {
           className="dsa-hero__skip"
           type="button"
           aria-label="Scroll to content"
-          onClick="window.scrollBy({top: window.innerHeight, behavior: 'smooth'})"
+          data-scroll-down
         >
           <span aria-hidden="true">↓</span>
         </button>

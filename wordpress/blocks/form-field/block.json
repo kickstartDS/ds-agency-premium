@@ -49,5 +49,5 @@
     "html": false,
     "reusable": false
   },
-  "editorScript": "file:../../build/form-field/index.js"
+  "editorScript": "file:./index.js"
 }

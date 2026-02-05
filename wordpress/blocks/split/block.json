@@ -30,7 +30,7 @@
       "padding": true
     }
   },
-  "editorScript": "file:../../build/split/index.js",
-  "editorStyle": "file:../../build/split/index.css",
-  "style": "file:../../build/split/style-index.css"
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

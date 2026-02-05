@@ -64,7 +64,7 @@
       "margin": true
     }
   },
-  "editorScript": "file:../../build/teaser-card/index.js",
-  "editorStyle": "file:../../build/teaser-card/index.css",
-  "style": "file:../../build/teaser-card/style-index.css"
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

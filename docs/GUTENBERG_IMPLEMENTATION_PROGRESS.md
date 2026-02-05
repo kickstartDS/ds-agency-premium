@@ -93,12 +93,12 @@ Based on review discussion:
 
 ### Phase 8: Testing & Documentation
 
-| Task                     | Status     | Date | Notes |
-| ------------------------ | ---------- | ---- | ----- |
-| Unit tests for utilities | ⏳ Pending |      |       |
-| E2E tests setup          | ⏳ Pending |      |       |
-| Update README            | ⏳ Pending |      |       |
-| WordPress-specific docs  | ⏳ Pending |      |       |
+| Task                     | Status      | Date     | Notes                         |
+| ------------------------ | ----------- | -------- | ----------------------------- |
+| Unit tests for utilities | ✅ Complete | Feb 2026 | deep-merge, attribute-mapper  |
+| E2E tests setup          | ✅ Complete | Feb 2026 | Playwright, wp-env config     |
+| Update README            | ✅ Complete | Feb 2026 | Main + WordPress README       |
+| WordPress-specific docs  | ✅ Complete | Feb 2026 | Block dev + theme integration |
 
 ---
 
@@ -112,6 +112,9 @@ Based on review discussion:
 | `wordpress/webpack.config.js`                        | Extended @wordpress/scripts | Feb 2026    |
 | `wordpress/README.md`                                | Plugin documentation        | Feb 2026    |
 | `wordpress/.gitignore`                               | Git ignore for WP folder    | Feb 2026    |
+| `wordpress/.wp-env.json`                             | WordPress env config        | Feb 2026    |
+| `wordpress/jest.config.js`                           | Jest test configuration     | Feb 2026    |
+| `wordpress/playwright.config.js`                     | Playwright E2E config       | Feb 2026    |
 | `wordpress/plugin/ds-agency-blocks.php`              | Main plugin bootstrap       | Feb 2026    |
 | `wordpress/plugin/includes/class-block-registry.php` | Dynamic block registration  | Feb 2026    |
 | `wordpress/plugin/includes/render-callbacks/*.php`   | 5 dynamic block renderers   | Feb 2026    |
@@ -122,6 +125,14 @@ Based on review discussion:
 | `wordpress/shared/hooks/useSchemaControls.js`        | Auto controls from schema   | Feb 2026    |
 | `wordpress/shared/components/SchemaInspector.js`     | Auto-generated inspector    | Feb 2026    |
 | `wordpress/shared/components/BlockPreview.js`        | Preview wrapper             | Feb 2026    |
+| `wordpress/tests/setup.js`                           | Jest setup with WP mocks    | Feb 2026    |
+| `wordpress/tests/__tests__/utils/*.test.js`          | Utility unit tests          | Feb 2026    |
+| `wordpress/tests/__tests__/hooks/*.test.js`          | Hook unit tests             | Feb 2026    |
+| `wordpress/tests/__tests__/blocks/*.test.js`         | Block component tests       | Feb 2026    |
+| `wordpress/tests/e2e/utils.js`                       | E2E test utilities          | Feb 2026    |
+| `wordpress/tests/e2e/*.spec.js`                      | E2E test specs              | Feb 2026    |
+| `wordpress/docs/BLOCK_DEVELOPMENT.md`                | Block development guide     | Feb 2026    |
+| `wordpress/docs/THEME_INTEGRATION.md`                | Theme integration guide     | Feb 2026    |
 | `wordpress/blocks/button/*`                          | Button block (6 files)      | Feb 2026    |
 | `wordpress/blocks/headline/*`                        | Headline block (6 files)    | Feb 2026    |
 | `wordpress/blocks/rich-text/*`                       | RichText block (6 files)    | Feb 2026    |
@@ -153,6 +164,19 @@ Based on review discussion:
 ## Changelog
 
 ### February 2026 (Continued)
+
+**Phase 8 Complete:**
+
+- ✅ Unit tests for utilities (deep-merge.test.js, attribute-mapper.test.js)
+- ✅ Hook tests (useBlockDefaults.test.js)
+- ✅ Block component tests (button, section, faq)
+- ✅ E2E test setup with Playwright (button, section, faq, slider specs)
+- ✅ WordPress environment config (.wp-env.json)
+- ✅ Jest configuration with WordPress mocks
+- ✅ Updated main README with WordPress blocks section
+- ✅ Updated WordPress README with comprehensive documentation
+- ✅ Block Development Guide (docs/BLOCK_DEVELOPMENT.md)
+- ✅ Theme Integration Guide (docs/THEME_INTEGRATION.md)
 
 **Phase 7 Complete:**
 

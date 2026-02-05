@@ -32,7 +32,7 @@
       "text": true
     }
   },
-  "editorScript": "file:../../build/divider/index.js",
-  "editorStyle": "file:../../build/divider/index.css",
-  "style": "file:../../build/divider/style-index.css"
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }

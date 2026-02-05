@@ -1,7 +1,7 @@
 /**
  * Tests for useBlockDefaults hook
  */
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 // Mock the defaults
 jest.mock("@ds-shared/defaults", () => ({

@@ -88,8 +88,8 @@
     "html": false,
     "align": ["wide", "full"]
   },
-  "viewScript": "file:../../build/section/view.js",
-  "editorScript": "file:../../build/section/index.js",
-  "editorStyle": "file:../../build/section/index.css",
-  "style": "file:../../build/section/style-index.css"
+  "viewScript": "file:./view.js",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }
