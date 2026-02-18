@@ -40,7 +40,7 @@ export const NavFlyoutContextDefault = forwardRef<
                   {label}
                 </Link>
               )}
-              {subItems?.length && (
+              {subItems && subItems?.length && subItems?.length > 0 && (
                 <ul className="dsa-nav-flyout__sublist">
                   {subItems.map(({ label, url, active }) => {
                     return (
