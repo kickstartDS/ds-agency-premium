@@ -24,6 +24,12 @@
       "type": "string",
       "title": "CSS custom property overrides",
       "description": "CSS custom property overrides to be included in the global styles"
+    },
+    "hideBreadcrumbs": {
+      "type": "boolean",
+      "title": "Hide Breadcrumbs",
+      "description": "Whether to hide breadcrumbs across the site",
+      "default": false
     }
   }
 }

@@ -36,6 +36,10 @@ export type Logo1 = string;
  * CSS custom property overrides to be included in the global styles
  */
 export type LocalCSSCustomPropertyOverrides = string;
+/**
+ * Whether to hide breadcrumbs on this page
+ */
+export type HidePageBreadcrumbs = boolean;
 
 /**
  * Abstracts a page concept into JSON schema
@@ -45,6 +49,7 @@ export interface PageProps {
   header?: Header;
   footer?: Footer;
   token?: LocalCSSCustomPropertyOverrides;
+  hidePageBreadcrumbs?: HidePageBreadcrumbs;
   /**
    * Referenced component SeoProps
    */

@@ -17,6 +17,10 @@ export type IconSprite = string;
  * CSS custom property overrides to be included in the global styles
  */
 export type CSSCustomPropertyOverrides = string;
+/**
+ * Whether to hide breadcrumbs across the site
+ */
+export type HideBreadcrumbs = boolean;
 
 /**
  * Abstracts global settings made for a website into JSON Schema
@@ -36,4 +40,5 @@ export interface SettingsProps {
   seo: SeoProps;
   iconSprite?: IconSprite;
   token?: CSSCustomPropertyOverrides;
+  hideBreadcrumbs?: HideBreadcrumbs;
 }
