@@ -50,8 +50,6 @@ module.exports = {
             {
               loader: "sass-loader",
               options: {
-                // add silenceDeprecations: true to suppress deprecation warnings from sass-loader v13
-                silenceDeprecations: true,
                 sassOptions: {
                   includePaths: ["node_modules"],
                 },
