@@ -1,3 +1,69 @@
+# v1.6.74 (Tue Feb 24 2026)
+
+#### 🐛 Bug Fix
+
+- Merge branch 'feature/industry-extension' [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@julrich](https://github.com/julrich))
+- Feature/split layout enhancement [#58](https://github.com/kickstartDS/ds-agency-premium/pull/58) ([@fleven-kds](https://github.com/fleven-kds))
+- Design token overhaul [#43](https://github.com/kickstartDS/ds-agency-premium/pull/43) ([@fleven-kds](https://github.com/fleven-kds) [@lmestel](https://github.com/lmestel) [@julrich](https://github.com/julrich))
+- Search [#50](https://github.com/kickstartDS/ds-agency-premium/pull/50) ([@lmestel](https://github.com/lmestel) [@fleven-kds](https://github.com/fleven-kds))
+- feat(eventList): WIP: develop Component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(eventList): add WIP Component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(EventFilter): add component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(SplitLayouts): finetune components [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(SplitStories): adjust stories [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(splitEven): add sticky funcitonality [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(splitComponents): finetune Components [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(SplitWeighted): rename gap prop to gutter for consistency [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(splitWeighted): develop component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(splitEven): develop Component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(SplitEven): add SplitEven Component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- fix(form): correct typos in token [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(breadcrumb): add component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(Pagination): make ariaLabels properties optional [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(paginatino): develop component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(Pagination): develop Pagination component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(Pagination): add paginatino Component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(border): remove custom border-radius-card value and move it to teaser-card component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(EventLocation): add displayMode options to Component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(eventLatest): develop component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(components): rename event components [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(schema, components & stories): consolidate link/cta naming to "url" [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(EventTeaser): add component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- fix: remove urls in downloads [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@julrich](https://github.com/julrich))
+- feat(scss): adjust spacings [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(EventDetail): replace asset [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(DownloadsComponent): fix markup to match scss [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- Merge branch 'feature/industry-extension' of github.com:kickstartDS/ds-agency-premium into feature/industry-extension [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(events): develop event components [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- fix: add mdx docs page to downloads [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@julrich](https://github.com/julrich))
+- Merge branch 'feature/industry-extension' of github.com:kickstartDS/ds-agency-premium into feature/industry-extension [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@julrich](https://github.com/julrich))
+- feature: add event latest and event teaser scaffolding [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@julrich](https://github.com/julrich))
+- fix(downloads): enhance accessibility and structure of download items [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- fix: clean up event schemas [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@julrich](https://github.com/julrich))
+- feat(EventHeaderStory): add correct content for the story [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- fix(event-list-entry): add aria-label to address icon for accessibility [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(event): develop event template + components [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- fix: clean up template structure for events [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@julrich](https://github.com/julrich))
+- feat(event): develop Event Components [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- fix: docs theme [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@julrich](https://github.com/julrich))
+- feat(downloads): develop downloads component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(downloads): add downloads component [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- Merge branch 'feature/redesign-base-theme' into feature/industry-extension [#44](https://github.com/kickstartDS/ds-agency-premium/pull/44) ([@fleven-kds](https://github.com/fleven-kds))
+- feat(event): add event module [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
+- Merge branch '94-update-component-layout' into feature/redesign-base-theme [#40](https://github.com/kickstartDS/ds-agency-premium/pull/40) ([@fleven-kds](https://github.com/fleven-kds))
+
+#### ⚠️ Pushed to `main`
+
+- fix: add updated, generated props ([@julrich](https://github.com/julrich))
+
+#### Authors: 3
+
+- Franz ([@fleven-kds](https://github.com/fleven-kds))
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+- Lukas Mestel ([@lmestel](https://github.com/lmestel))
+
+---
+
 # v1.6.73 (Thu Dec 18 2025)
 
 #### ⚠️ Pushed to `main`
