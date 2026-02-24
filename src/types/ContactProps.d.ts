@@ -34,6 +34,10 @@ export type Subtitle = string;
  * Open link in new Tab
  */
 export type OpenLinkInNewTab = boolean;
+/**
+ * Aria label for the link
+ */
+export type AriaLabel = string;
 export type CopyText = string;
 /**
  * Additional css classes attached to the wrapping element
@@ -59,8 +63,9 @@ export interface ContactProps {
   links?: {
     icon?: string;
     label?: string;
-    href?: string;
+    url?: string;
     newTab?: OpenLinkInNewTab;
+    ariaLabel?: AriaLabel;
   }[];
   copy?: CopyText;
   className?: Class;

@@ -1,5 +1,5 @@
 @use "@kickstartds/core/source/core/container";
-@import "./blog-aside-tokens.scss";
+@use "blog-aside-tokens.scss";
 @include container.wrapper("blog-aside");
 
 .dsa-blog-aside {

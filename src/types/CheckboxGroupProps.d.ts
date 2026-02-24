@@ -32,16 +32,12 @@ export type Disabled = boolean;
 export type HintMessage = string;
 export type Options = Checkbox[];
 /**
- * Additional css classes attached to the wrapping element
+ * Additional css classes attached to the input element
  */
 export type Class = string;
-/**
- * Optional custom component identifier
- */
-export type KsComponentAttribute = string;
 
 /**
- * A CheckboxGroup allows users to select one or more items from a list of choices.
+ * Checkboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
  */
 export interface CheckboxGroupProps {
   label: Label;
@@ -50,7 +46,6 @@ export interface CheckboxGroupProps {
   invalidMessage?: InvalidMessage;
   options?: Options;
   className?: Class;
-  component?: KsComponentAttribute;
 }
 /**
  * Checkboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.

@@ -24,27 +24,28 @@ export const WideImage: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 200,
+      height: 276,
     },
   },
   args: pack({
-    title: "Isabella Doe",
-    subtitle: "Creative Director",
+    title: "Isabella Smith",
+    subtitle: "Sr. Brand Manager",
     image: {
-      src: "img/people/contact-isabella.png",
+      src: "img/placeholder/avatar-wide.svg",
       aspectRatio: "wide",
     },
     links: [
       {
-        icon: "twitter",
-        href: "#",
-        label: "@Isabella_Doe",
+        icon: "xing",
+        url: "#",
+        label: "Isa_Smith",
+        ariaLabel: "Isabella Smith on Xing",
       },
       {
-        href: "mailto:mail@example.com",
+        url: "#",
         icon: "linkedin",
-        label: "Isabella.Doe",
-        newTab: false,
+        label: "Isabella.Smith",
+        ariaLabel: "Isabella Smith on LinkedIn",
       },
     ],
   }),
@@ -54,27 +55,28 @@ export const CircularAvatar: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 200,
+      height: 332,
     },
   },
   args: pack({
-    title: "Jane Smith",
-    subtitle: "CEO at DS Agency",
+    title: "Isabella Smith",
+    subtitle: "Sr. Brand Manager",
     image: {
-      src: "img/people/author-emily.png",
+      src: "img/placeholder/avatar-round.svg",
     },
-    copy: "Leads with a vision for innovative, user-centric web designs",
+    copy: "Strong brand leader with a vision for innovative, customer-centric approach",
     links: [
       {
-        icon: "twitter",
-        href: "#",
-        label: "@jane_smith",
+        icon: "xing",
+        url: "#",
+        label: "Isa_Smith",
+        ariaLabel: "Isabella Smith on Xing",
       },
       {
-        href: "mailto:mail@example.com",
+        url: "#",
         icon: "linkedin",
-        label: "jane.smith",
-        newTab: false,
+        label: "Isabella.Smith",
+        ariaLabel: "Isabella Smith on LinkedIn",
       },
     ],
   }),
@@ -84,28 +86,29 @@ export const VerticalImageWithParagraph: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 200,
+      height: 376,
     },
   },
   args: pack({
-    title: "John Smith",
+    title: "Randolph M. Wagner",
     subtitle: "Sales Representative",
     image: {
-      src: "img/people/contact-john.png",
+      src: "img/placeholder/avatar-portrait.svg",
       aspectRatio: "vertical",
     },
-    copy: "Leads with a vision for innovative, user-centric web designs, ensuring each project merges creativity with functionality to deliver outstanding digital experiences.",
+    copy: "Building long-term growth by putting client success at the heart of every deal. Dedicated to turning high-value transactions into lasting strategic partnerships",
     links: [
       {
-        href: "mailto:mail@example.com",
         icon: "xing",
-        label: "john.smith",
-        newTab: false,
+        url: "#",
+        label: "R.M.Wagner",
+        ariaLabel: "Randolph Wagner on Xing",
       },
       {
-        icon: "twitter",
-        href: "#",
-        label: "@john_smith",
+        url: "#",
+        icon: "linkedin",
+        label: "Randolph.Wagner",
+        ariaLabel: "Randolph Wagner on LinkedIn",
       },
     ],
   }),
@@ -115,29 +118,25 @@ export const FullImageWidth: Story = {
   parameters: {
     viewport: {
       width: 770,
-      height: 200,
+      height: 360,
     },
   },
   args: pack({
-    title: "Jim Johnsson",
-    subtitle: "Lead Designer",
+    title: "James Johnsson",
+    subtitle: "Product Design Lead",
     image: {
-      src: "img/people/contact-jim.png",
+      src: "img/placeholder/avatar-square.svg",
       aspectRatio: "wide",
       fullWidth: true,
     },
-    copy: "Blends artistic flair with technical expertise, creating visually stunning and intuitive websites that captivate users and drive engagement.",
+    copy: "Transforming complex problems into intuitive experiences that drive both user delight and measurable growth.",
     links: [
       {
-        href: "mailto:mail@example.com",
+        url: "mailto:mail@example.com",
         icon: "email",
-        label: "jim.johnsson@mail.com",
+        label: "james.johnsson@mail.com",
         newTab: false,
-      },
-      {
-        icon: "facebook",
-        href: "#",
-        label: "@jim_johnsson",
+        ariaLabel: "Write an email to James Johnsson",
       },
     ],
   }),

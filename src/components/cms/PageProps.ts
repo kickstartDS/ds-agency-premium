@@ -21,9 +21,25 @@ export type ToggleFloating = boolean;
  */
 export type ToggleInverted = boolean;
 /**
+ * Override for logo
+ */
+export type Logo = string;
+/**
  * Toggle default inverted footer behaviour set in global settings
  */
 export type ToggleInverted1 = boolean;
+/**
+ * Override for logo
+ */
+export type Logo1 = string;
+/**
+ * CSS custom property overrides to be included in the global styles
+ */
+export type LocalCSSCustomPropertyOverrides = string;
+/**
+ * Whether to hide breadcrumbs on this page
+ */
+export type HidePageBreadcrumbs = boolean;
 
 /**
  * Abstracts a page concept into JSON schema
@@ -32,6 +48,8 @@ export interface PageProps {
   section?: Sections;
   header?: Header;
   footer?: Footer;
+  token?: LocalCSSCustomPropertyOverrides;
+  hidePageBreadcrumbs?: HidePageBreadcrumbs;
   /**
    * Referenced component SeoProps
    */
@@ -43,10 +61,12 @@ export interface PageProps {
 export interface Header {
   floating?: ToggleFloating;
   inverted?: ToggleInverted;
+  logo?: Logo;
 }
 /**
  * Footer settings for the page
  */
 export interface Footer {
   inverted?: ToggleInverted1;
+  logo?: Logo1;
 }

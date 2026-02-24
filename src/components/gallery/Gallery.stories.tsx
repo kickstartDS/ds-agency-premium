@@ -33,37 +33,37 @@ export const SmallSquaresWithLightbox: Story = {
     lightbox: true,
     images: [
       {
-        src: "img/close-up-young-business-team-working.png",
+        src: "img/placeholder/image-gallery-01.svg",
         caption: "Caption Image 1",
         alt: "Alt text Image 1",
       },
       {
-        src: "img/low-angle-tall-building-with-many-windows_23-2148230392.png",
+        src: "img/placeholder/image-gallery-02.svg",
         caption: "Caption Image 2",
         alt: "Alt text Image 2",
       },
       {
-        src: "img/full-shot-different-people-working-together.png",
+        src: "img/placeholder/image-gallery-03.svg",
         caption: "Caption Image 3",
         alt: "Alt text Image 3",
       },
       {
-        src: "img/top-view-desk-with-keyboard-drawing-pad.png",
+        src: "img/placeholder/image-gallery-04.svg",
         caption: "Caption Image 4",
         alt: "Alt text Image 4",
       },
       {
-        src: "img/people-brainstorming-work-meeting.png",
+        src: "img/placeholder/image-gallery-05.svg",
         caption: "Caption Image 5",
         alt: "Alt text Image 5",
       },
       {
-        src: "img/view-modern-office.jpg",
+        src: "img/placeholder/image-gallery-06.svg",
         caption: "Caption Image 6",
         alt: "Alt text Image 6",
       },
       {
-        src: "img/colleagues-work-office-using-computers-looking-aside.png",
+        src: "img/placeholder/image-gallery-01.svg",
         caption: "Caption Image 7",
         alt: "Alt text Image 7",
       },
@@ -75,7 +75,7 @@ export const LargeLandscapeTiles: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 735,
+      height: 724,
     },
   },
   args: pack({
@@ -83,32 +83,32 @@ export const LargeLandscapeTiles: Story = {
     aspectRatio: "landscape",
     images: [
       {
-        src: "img/close-up-young-business-team-working.png",
+        src: "img/placeholder/image-gallery-02.svg",
         caption: "Caption Image 1",
         alt: "Alt text Image 1",
       },
       {
-        src: "img/low-angle-tall-building-with-many-windows_23-2148230392.png",
+        src: "img/placeholder/image-gallery-04.svg",
         caption: "Caption Image 2",
         alt: "Alt text Image 2",
       },
       {
-        src: "img/full-shot-different-people-working-together.png",
+        src: "img/placeholder/image-gallery-04.svg",
         caption: "Caption Image 3",
         alt: "Alt text Image 3",
       },
       {
-        src: "img/top-view-desk-with-keyboard-drawing-pad.png",
+        src: "img/placeholder/image-gallery-02.svg",
         caption: "Caption Image 4",
         alt: "Alt text Image 4",
       },
       {
-        src: "img/people-brainstorming-work-meeting.png",
+        src: "img/placeholder/image-gallery-02.svg",
         caption: "Caption Image 5",
         alt: "Alt text Image 5",
       },
       {
-        src: "img/view-modern-office.jpg",
+        src: "img/placeholder/image-gallery-04.svg",
         caption: "Caption Image 6",
         alt: "Alt text Image 6",
       },
@@ -120,7 +120,7 @@ export const FreeAspectRatio: Story = {
   parameters: {
     viewport: {
       width: 1040,
-      height: 779,
+      height: 818,
     },
   },
   args: pack({
@@ -128,37 +128,37 @@ export const FreeAspectRatio: Story = {
     lightbox: true,
     images: [
       {
-        src: "img/close-up-young-business-team-working.png",
+        src: "img/placeholder/image-gallery-01.svg",
         caption: "Caption Image 1",
         alt: "Alt text Image 1",
       },
       {
-        src: "img/low-angle-tall-building-with-many-windows_23-2148230392.png",
+        src: "img/placeholder/image-gallery-02.svg",
         caption: "Caption Image 2",
         alt: "Alt text Image 2",
       },
       {
-        src: "img/full-shot-different-people-working-together.png",
+        src: "img/placeholder/image-gallery-03.svg",
         caption: "Caption Image 3",
         alt: "Alt text Image 3",
       },
       {
-        src: "img/top-view-desk-with-keyboard-drawing-pad.png",
+        src: "img/placeholder/image-gallery-04.svg",
         caption: "Caption Image 4",
         alt: "Alt text Image 4",
       },
       {
-        src: "img/people-brainstorming-work-meeting.png",
+        src: "img/placeholder/image-gallery-05.svg",
         caption: "Caption Image 5",
         alt: "Alt text Image 5",
       },
       {
-        src: "img/view-modern-office.jpg",
+        src: "img/placeholder/image-gallery-06.svg",
         caption: "Caption Image 6",
         alt: "Alt text Image 6",
       },
       {
-        src: "img/colleagues-work-office-using-computers-looking-aside.png",
+        src: "img/placeholder/image-gallery-01.svg",
         caption: "Caption Image 7",
         alt: "Alt text Image 7",
       },
@@ -177,18 +177,17 @@ export const StackLandscape: Story = {
     aspectRatio: "landscape",
     images: [
       {
-        src: "img/close-up-young-business-team-working.png",
+        src: "img/placeholder/image-gallery-02.svg",
         caption: "Caption Image 1",
         alt: "Alt text Image 1",
       },
-
       {
-        src: "img/top-view-desk-with-keyboard-drawing-pad.png",
+        src: "img/placeholder/image-gallery-04.svg",
         caption: "Caption Image 2",
         alt: "Alt text Image 2",
       },
       {
-        src: "img/people-brainstorming-work-meeting.png",
+        src: "img/placeholder/image-gallery-02.svg",
         caption: "Caption Image 3",
         alt: "Alt text Image 3",
       },

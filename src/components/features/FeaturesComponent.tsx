@@ -3,6 +3,8 @@ import classnames from "classnames";
 import { FeaturesProps } from "./FeaturesProps";
 import "./features.scss";
 import { Feature } from "../feature/FeatureComponent";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./FeaturesDefaults";
 
 export type { FeaturesProps };
 
@@ -49,9 +51,10 @@ export const FeaturesContextDefault = forwardRef<
             text={text}
             cta={{
               label: cta?.label,
-              target: cta?.target,
+              url: cta?.url,
               style: ctas.style,
               toggle: ctas.toggle,
+              icon: cta?.icon,
             }}
           />
         );
@@ -66,6 +69,6 @@ export const Features = forwardRef<
   FeaturesProps & Omit<HTMLAttributes<HTMLDivElement>, "style">
 >((props, ref) => {
   const Component = useContext(FeaturesContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Features.displayName = "Features";

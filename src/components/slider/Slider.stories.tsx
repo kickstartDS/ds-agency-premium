@@ -18,40 +18,37 @@ const meta: Meta = {
   render: (args) => (
     <Slider {...args}>
       <TeaserCard
-        imageRatio="unset"
         layout="row"
-        headline="Transformation Love Story"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
-          label: "View page",
+          label: "Go to Page",
           hidden: true,
         }}
-        text="See how we saved TechFusions a year's worth of development time"
       />
       <TeaserCard
-        imageRatio="unset"
         layout="row"
-        headline="Speed and Scale"
-        image="/img/showcases/comp_audio01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
-          label: "View page",
+          label: "Go to Page",
           hidden: true,
         }}
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
       />
       <TeaserCard
-        imageRatio="unset"
         layout="row"
-        headline="Saving Time and Money"
-        image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
-          label: "View page",
+          label: "Go to Page",
           hidden: true,
         }}
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
       />
     </Slider>
   ),
@@ -64,8 +61,8 @@ type Story = StoryObj<typeof Slider>;
 export const WithArrows: Story = {
   parameters: {
     viewport: {
-      width: 1110,
-      height: 400,
+      width: 1024,
+      height: 530,
     },
   },
   args: pack({
@@ -77,8 +74,8 @@ export const WithArrows: Story = {
 export const WithTeasedNeighbours: Story = {
   parameters: {
     viewport: {
-      width: 1110,
-      height: 400,
+      width: 1024,
+      height: 760,
     },
   },
   args: pack({
@@ -92,8 +89,8 @@ export const WithTeasedNeighbours: Story = {
 export const WithNav: Story = {
   parameters: {
     viewport: {
-      width: 1110,
-      height: 400,
+      width: 1024,
+      height: 530,
     },
   },
   args: pack({
@@ -106,8 +103,8 @@ export const WithNav: Story = {
 export const WithAutoplay: Story = {
   parameters: {
     viewport: {
-      width: 1110,
-      height: 400,
+      width: 1024,
+      height: 530,
     },
   },
   args: pack({

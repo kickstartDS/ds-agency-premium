@@ -1,0 +1,44 @@
+.demo-page-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Avenir Next",
+    "Avenir",
+    "Segoe UI",
+    "Lucida Grande",
+    "Helvetica Neue",
+    "Helvetica",
+    "Fira Sans",
+    "Roboto",
+    "Noto",
+    "Droid Sans",
+    "Cantarell",
+    "Oxygen",
+    "Ubuntu",
+    "Franklin Gothic Medium",
+    "Century Gothic",
+    "Liberation Sans",
+    sans-serif;
+  font-size: 14px;
+  color: black;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.6));
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 10px;
+  backdrop-filter: blur(100px);
+  width: fit-content;
+  margin: auto;
+  padding: 16px;
+  overflow: hidden;
+  position: sticky;
+  border: var(--ks-border-width-default) solid var(--ks-color-fg-alpha-8);
+  border-top: 0;
+
+  top: 0;
+  z-index: 9999999;
+}

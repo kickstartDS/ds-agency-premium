@@ -1,12 +1,30 @@
 @use "@kickstartds/base/lib/global/base.css";
 @use "./global-token";
+@use "./fonts-systemics";
+@use "./playground/playground-preview-pages";
+@use "./token/preview/preview-pages";
+@use "./token/branding-tokens";
+// @use "./token/branding-token-cool";
+// @use "./token/branding-token-mint";
+// @use "./token/branding-token-neon";
+// @use "./token/branding-token-coffee";
+@use "./token/scaling-token";
+@use "./token/color-token";
+@use "./token/font-token";
+@use "./token/font-size-token";
+@use "./token/spacing-token";
+@use "./token/border-token";
+@use "./token/box-shadow-token";
+@use "./token/transition-token";
+@use "./token/text-color-token";
+@use "./token/border-color-token";
+@use "./token/background-color-token";
+// @use "./fonts-dsa";
+// @use "./fonts-business";
+// @use "./fonts-telekom";
+// @use "./fonts-google";
 @use "./components/blog-teaser/blog-teaser";
-@use "./components/form/form";
 @use "./components/lightbox/lightbox";
-@use "./fonts-dsa";
-@use "./fonts-business";
-@use "./fonts-telekom";
-@use "./fonts-google";
 @use "./components/rich-text/rich-text";
 @use "./selectors" as *;
 
@@ -16,7 +34,7 @@ body.sb-show-main.sb-main-padded {
 
 .preview {
   &--wrapper {
-    background-color: #1f213d;
+    background-color: var(--ks-color-primary-to-bg-8);
     padding: 2rem;
   }
 
@@ -32,6 +50,18 @@ body {
 
 hr.c-divider {
   --c-divider--background: var(--ks-border-color-accent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 #{$selectors} {
@@ -65,9 +95,21 @@ hr.c-divider {
 #root {
   --dsa-text-color-on-primary: var(--dsa-text-color-on-primary-base);
   --dsa-text-color-on-primary-inverted: var(--dsa-text-color-on-primary-inverted-base);
+
+  --dsa-overlay-text--shadow: var(--dsa-overlay-text--shadow-base);
+  --dsa-overlay-text--shadow-inverted: var(--dsa-overlay-text--shadow-inverted-base);
+
+  --dsa-overlay-text--text-color: var(--dsa-overlay-text--text-color-base);
+  --dsa-overlay-text--text-color-inverted: var(--dsa-overlay-text--text-color-inverted-base);
 }
 
 [ks-inverted="true"] {
   --dsa-text-color-on-primary: var(--dsa-text-color-on-primary-inverted-base);
   --dsa-text-color-on-primary-inverted: var(--dsa-text-color-on-primary-base);
+
+  --dsa-overlay-text--shadow: var(--dsa-overlay-text--shadow-inverted-base);
+  --dsa-overlay-text--shadow-inverted: var(--dsa-overlay-text--shadow-base);
+
+  --dsa-overlay-text--text-color: var(--dsa-overlay-text--text-color-inverted-base);
+  --dsa-overlay-text--text-color-inverted: var(--dsa-overlay-text--text-color-base);
 }

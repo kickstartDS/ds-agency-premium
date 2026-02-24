@@ -1,4 +1,4 @@
-@import "./divider-tokens.scss";
+@use "divider-tokens.scss";
 
 hr.c-divider {
   --c-divider--background: var(--dsa-divider--background, var(--ks-border-color-default));

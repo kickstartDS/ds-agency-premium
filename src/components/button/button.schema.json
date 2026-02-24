@@ -11,10 +11,10 @@
       "description": "Text content to display inside the button",
       "examples": ["Book a meeting"]
     },
-    "target": {
+    "url": {
       "type": "string",
-      "title": "Target",
-      "description": "Target that should be linked, makes the button behave like a link semantically",
+      "title": "URL",
+      "description": "The URL to link to when the button is clicked",
       "format": "uri"
     },
     "variant": {
@@ -42,6 +42,11 @@
       "title": "Disabled?",
       "description": "Whether the button should be disabled",
       "default": false
+    },
+    "type": {
+      "type": "string",
+      "title": "Button Type",
+      "enum": ["button", "submit", "reset"]
     }
   },
   "additionalProperties": false,

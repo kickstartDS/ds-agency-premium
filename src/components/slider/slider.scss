@@ -1,4 +1,4 @@
-@import "slider-tokens.scss";
+@use "slider-tokens.scss";
 
 .dsa-slider.c-slider {
   --c-slider_bullet--outline-color: var(
@@ -35,8 +35,17 @@
 
   --c-slider_arrow--color: var(--dsa-slider__arrow--color, var(--ks-text-color-interface-interactive));
 
+  --c-slider--animation-duration: var(--dsa-slider--animation-duration, var(--ks-transition-fade));
+  --c-slider--autoplay: var(--dsa-slider--autoplay-duration, 4s);
+
+  position: relative;
+
   &__nav {
     margin-top: var(--ks-spacing-stack-m);
+  }
+
+  .c-slider__arrows {
+    top: 50%;
   }
 
   .c-slider__nav {
@@ -60,7 +69,8 @@
 
       .c-slider__bullet {
         display: block;
-        transition: border-color var(--ks-transition-hover);
+        transition: var(--ks-transition-hover);
+        transition-property: border-color, background-color;
       }
     }
   }

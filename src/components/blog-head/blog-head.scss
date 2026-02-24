@@ -1,4 +1,4 @@
-@import "./blog-head-tokens.scss";
+@use "blog-head-tokens.scss";
 
 .dsa-blog-head.c-post-head {
   --c-post-head_date--font: var(--dsa-blog-head__date--font, var(--ks-font-interface-xs));

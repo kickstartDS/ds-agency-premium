@@ -40,7 +40,7 @@ export const Footer: Story = {
   parameters: {
     viewport: {
       width: 1280,
-      height: 371,
+      height: 330,
     },
   },
 };

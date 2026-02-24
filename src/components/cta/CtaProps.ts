@@ -26,9 +26,9 @@ export type HighlightText = boolean;
  */
 export type ColorNeutral = boolean;
 /**
- * Set the width of the content to the full width of the element
+ * Invert the text and button colors for use on dark backgrounds
  */
-export type Width = boolean;
+export type Inverted = boolean;
 /**
  * Text content to display inside the button
  */
@@ -38,9 +38,9 @@ export type Label = string;
  */
 export type Icon = string;
 /**
- * Target that should be linked, makes the button behave like a link semantically
+ * The URL to link to when the button is clicked
  */
-export type Target = string;
+export type URL = string;
 /**
  * Background color for the whole element
  */
@@ -62,6 +62,10 @@ export type Padding = boolean;
  */
 export type AltText = string;
 /**
+ * Select a vertical alignment for the image
+ */
+export type VerticalAlignmentOfTheImage = "center" | "top" | "bottom";
+/**
  * Switch to displaying the image after the text on mobile
  */
 export type MobileImageAfterText = boolean;
@@ -74,9 +78,13 @@ export type DesktopImageAfterText = boolean;
  */
 export type TextAlignment = "left" | "center";
 /**
- * Select a vertical alignment for the image
+ * Select a vertical alignment for the content
  */
 export type VerticalAlignmentOfTheContent = "center" | "top" | "bottom";
+/**
+ * Toggle padding of the content
+ */
+export type Padding1 = boolean;
 
 export interface CtaProps {
   headline?: ComponentHeadline;
@@ -84,19 +92,20 @@ export interface CtaProps {
   text?: ComponentText;
   highlightText?: HighlightText;
   colorNeutral?: ColorNeutral;
-  fullWidth?: Width;
+  inverted?: Inverted;
   buttons?: Button[];
   backgroundColor?: BackgroundColor;
   backgroundImage?: BackgroundImage;
   image?: Image;
   order?: Order;
   textAlign?: TextAlignment;
-  contentAlign?: VerticalAlignmentOfTheContent;
+  align?: VerticalAlignmentOfTheContent;
+  padding?: Padding1;
 }
 export interface Button {
   label?: Label;
   icon?: Icon;
-  target?: Target;
+  url?: URL;
 }
 /**
  * Image displayed alongside the text content
@@ -105,6 +114,7 @@ export interface Image {
   src?: ImageSource;
   padding?: Padding;
   alt?: AltText;
+  align?: VerticalAlignmentOfTheImage;
 }
 /**
  * Choose what comes first on mobile and desktop: image or text

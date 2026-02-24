@@ -1,6 +1,8 @@
 import { forwardRef, createContext, useContext, HTMLAttributes } from "react";
 import { StatProps } from "./StatProps";
 import { CountUp } from "@kickstartds/content/lib/count-up";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./StatDefaults";
 
 export type { StatProps };
 
@@ -41,6 +43,6 @@ export const Stat = forwardRef<
   StatProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(StatContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Stat.displayName = "Stat";

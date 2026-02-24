@@ -24,7 +24,7 @@ export const IconCentered: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 666,
+      height: 636,
     },
   },
   args: pack({
@@ -32,57 +32,57 @@ export const IconCentered: Story = {
     layout: "largeTiles",
     feature: [
       {
-        icon: "home",
-        title: "Scalable Architecture",
-        text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
+        icon: "star",
+        title: "Consistent Experience",
+        text: "Ensures a consistent and recognizable experience across different pages and touchpoints. This helps users navigate content more easily and builds trust through visual continuity.",
         cta: {
-          target: "/feature1",
+          url: "#",
           label: "Learn more",
         },
       },
       {
-        icon: "map",
-        title: "Efficient Development",
-        text: "Experience efficient development like never before. Our design system streamlines the development process, saving you time and resources.",
+        icon: "time",
+        title: "Flexible Configuration",
+        text: "The component can be adapted to different requirements and contexts. Content, structure, and presentation can be adjusted without changing the underlying setup.",
         cta: {
-          target: "/feature2",
-          label: "Get started",
-        },
-      },
-      {
-        icon: "person",
-        title: "Consistent UI",
-        text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
-        cta: {
-          target: "/feature3",
-          label: "Explore",
-        },
-      },
-      {
-        icon: "star",
-        title: "Customizable Design",
-        text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
-        cta: {
-          target: "/feature4",
-          label: "Customize",
+          url: "#",
+          label: "View options",
         },
       },
       {
         icon: "upload",
-        title: "Cloud Ready",
-        text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
+        title: "Ready for Integration",
+        text: "Designed to work seamlessly within existing systems and workflows. It supports integration into various environments and can evolve alongside your platform.",
         cta: {
-          target: "/feature5",
-          label: "Deploy",
+          url: "#",
+          label: "See details",
         },
       },
       {
         icon: "login",
-        title: "Secure",
-        text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
+        title: "Built with Care",
+        text: "Developed with stability, reliability, and best practices in mind. The component supports long-term use and helps maintain a robust and dependable setup.",
         cta: {
-          target: "/feature6",
-          label: "Secure",
+          url: "#",
+          label: "Read more",
+        },
+      },
+      {
+        icon: "person",
+        title: "Easy to Maintain",
+        text: "Structured in a way that simplifies updates and ongoing maintenance. Changes can be applied efficiently without affecting unrelated parts of the system.",
+        cta: {
+          url: "#",
+          label: "Learn how",
+        },
+      },
+      {
+        icon: "map",
+        title: "Reusable by Design",
+        text: "Created to be reused across multiple pages and scenarios. This helps reduce duplication and supports a more efficient content and component workflow.",
+        cta: {
+          url: "#",
+          label: "Explore usage",
         },
       },
     ],
@@ -104,39 +104,39 @@ export const StackWithButton: Story = {
     },
     feature: [
       {
-        icon: "person",
-        title: "Consistent UI",
-        text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
+        icon: "star",
+        title: "Consistent Experience",
+        text: "Ensures a consistent and recognizable experience across different pages and touchpoints. This helps users navigate content more easily and builds trust through visual continuity.",
         cta: {
-          target: "/feature3",
-          label: "Explore",
+          url: "#",
+          label: "Learn more",
         },
       },
       {
-        icon: "star",
-        title: "Customizable Design",
-        text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
+        icon: "time",
+        title: "Flexible Configuration",
+        text: "The component can be adapted to different requirements and contexts. Content, structure, and presentation can be adjusted without changing the underlying setup.",
         cta: {
-          target: "/feature4",
-          label: "Customize",
+          url: "#",
+          label: "View options",
         },
       },
       {
         icon: "upload",
-        title: "Cloud Ready",
-        text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
+        title: "Ready for Integration",
+        text: "Designed to work seamlessly within existing systems and workflows. It supports integration into various environments and can evolve alongside your platform.",
         cta: {
-          target: "/feature5",
-          label: "Deploy",
+          url: "#",
+          label: "See details",
         },
       },
       {
         icon: "login",
-        title: "Secure",
-        text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
+        title: "Built with Care",
+        text: "Developed with stability, reliability, and best practices in mind. The component supports long-term use and helps maintain a robust and dependable setup.",
         cta: {
-          target: "/feature6",
-          label: "Secure",
+          url: "#",
+          label: "Read more",
         },
       },
     ],
@@ -146,8 +146,8 @@ export const StackWithButton: Story = {
 export const ListView: Story = {
   parameters: {
     viewport: {
-      width: 768,
-      height: 755,
+      width: 770,
+      height: 844,
     },
   },
   args: pack({
@@ -160,57 +160,56 @@ export const ListView: Story = {
     feature: [
       {
         icon: "star",
-        title: "Customizable Design",
-        text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
+        title: "Consistent Experience",
+        text: "Ensures a consistent and recognizable experience across different pages and touchpoints. This helps users navigate content more easily and builds trust through visual continuity.",
         cta: {
-          target: "/feature4",
-          label: "Customize",
-        },
-      },
-      {
-        icon: "map",
-        title: "Efficient Development",
-        text: "Experience efficient development like never before. Our design system streamlines the development process, saving you time and resources.",
-        cta: {
-          target: "/feature2",
-          label: "Get started",
-        },
-      },
-      {
-        icon: "person",
-        title: "Consistent UI",
-        text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
-        cta: {
-          target: "/feature3",
-          label: "Explore",
-        },
-      },
-
-      {
-        icon: "home",
-        title: "Scalable Architecture",
-        text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
-        cta: {
-          target: "/feature1",
+          url: "#",
           label: "Learn more",
         },
       },
       {
-        icon: "upload",
-        title: "Cloud Ready",
-        text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
+        icon: "time",
+        title: "Flexible Configuration",
+        text: "The component can be adapted to different requirements and contexts. Content, structure, and presentation can be adjusted without changing the underlying setup.",
         cta: {
-          target: "/feature5",
-          label: "Deploy",
+          url: "#",
+          label: "View options",
+        },
+      },
+      {
+        icon: "upload",
+        title: "Ready for Integration",
+        text: "Designed to work seamlessly within existing systems and workflows. It supports integration into various environments and can evolve alongside your platform.",
+        cta: {
+          url: "#",
+          label: "See details",
         },
       },
       {
         icon: "login",
-        title: "Secure",
-        text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
+        title: "Built with Care",
+        text: "Developed with stability, reliability, and best practices in mind. The component supports long-term use and helps maintain a robust and dependable setup.",
         cta: {
-          target: "/feature6",
-          label: "Secure",
+          url: "#",
+          label: "Read more",
+        },
+      },
+      {
+        icon: "person",
+        title: "Easy to Maintain",
+        text: "Structured in a way that simplifies updates and ongoing maintenance. Changes can be applied efficiently without affecting unrelated parts of the system.",
+        cta: {
+          url: "#",
+          label: "Learn how",
+        },
+      },
+      {
+        icon: "map",
+        title: "Reusable by Design",
+        text: "Created to be reused across multiple pages and scenarios. This helps reduce duplication and supports a more efficient content and component workflow.",
+        cta: {
+          url: "#",
+          label: "Explore usage",
         },
       },
     ],
@@ -221,7 +220,7 @@ export const IconBesideWithLinkInText: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 506,
+      height: 476,
     },
   },
   args: pack({
@@ -232,57 +231,57 @@ export const IconBesideWithLinkInText: Story = {
     },
     feature: [
       {
-        icon: "home",
-        title: "Scalable Architecture",
-        text: "Our design system allows for a scalable architecture, enabling you to build applications that can grow with your needs.",
+        icon: "star",
+        title: "Consistent Experience",
+        text: "Ensures a consistent and recognizable experience across different pages and touchpoints. This helps users navigate content more easily and builds trust through visual continuity.",
         cta: {
-          target: "/feature1",
+          url: "#",
           label: "Learn more",
         },
       },
       {
-        icon: "map",
-        title: "Efficient Development",
-        text: "Experience efficient development like never before. Our design system streamlines the development process, saving you time and resources.",
+        icon: "time",
+        title: "Flexible Configuration",
+        text: "The component can be adapted to different requirements and contexts. Content, structure, and presentation can be adjusted without changing the underlying setup.",
         cta: {
-          target: "/feature2",
-          label: "Get started",
-        },
-      },
-      {
-        icon: "person",
-        title: "Consistent UI",
-        text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
-        cta: {
-          target: "/feature3",
-          label: "Explore",
-        },
-      },
-      {
-        icon: "star",
-        title: "Customizable Design",
-        text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
-        cta: {
-          target: "/feature4",
-          label: "Customize",
+          url: "#",
+          label: "View options",
         },
       },
       {
         icon: "upload",
-        title: "Cloud Ready",
-        text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
+        title: "Ready for Integration",
+        text: "Designed to work seamlessly within existing systems and workflows. It supports integration into various environments and can evolve alongside your platform.",
         cta: {
-          target: "/feature5",
-          label: "Deploy",
+          url: "#",
+          label: "See details",
         },
       },
       {
         icon: "login",
-        title: "Secure",
-        text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
+        title: "Built with Care",
+        text: "Developed with stability, reliability, and best practices in mind. The component supports long-term use and helps maintain a robust and dependable setup.",
         cta: {
-          target: "/feature6",
-          label: "Secure",
+          url: "#",
+          label: "Read more",
+        },
+      },
+      {
+        icon: "person",
+        title: "Easy to Maintain",
+        text: "Structured in a way that simplifies updates and ongoing maintenance. Changes can be applied efficiently without affecting unrelated parts of the system.",
+        cta: {
+          url: "#",
+          label: "Learn how",
+        },
+      },
+      {
+        icon: "map",
+        title: "Reusable by Design",
+        text: "Created to be reused across multiple pages and scenarios. This helps reduce duplication and supports a more efficient content and component workflow.",
+        cta: {
+          url: "#",
+          label: "Explore usage",
         },
       },
     ],
@@ -304,48 +303,56 @@ export const IconIntextWithLink: Story = {
     feature: [
       {
         icon: "star",
-        title: "Customizable Design",
-        text: "Our design system is fully customizable, allowing you to tailor the look and feel of your application to match your brand identity.",
+        title: "Consistent Experience",
+        text: "Ensures a consistent and recognizable experience across different pages and touchpoints. This helps users navigate content more easily and builds trust through visual continuity.",
         cta: {
-          target: "/feature4",
-          label: "Customize",
+          url: "#",
+          label: "Learn more",
         },
       },
       {
-        icon: "map",
-        title: "Efficient Development",
-        text: "Experience efficient development like never before. Our design system streamlines the development process, saving you time and resources.",
+        icon: "time",
+        title: "Flexible Configuration",
+        text: "The component can be adapted to different requirements and contexts. Content, structure, and presentation can be adjusted without changing the underlying setup.",
         cta: {
-          target: "/feature2",
-          label: "Get started",
+          url: "#",
+          label: "View options",
         },
       },
-      {
-        icon: "person",
-        title: "Consistent UI",
-        text: "Achieve a consistent UI across different platforms. Our design system ensures your applications maintain a uniform look and feel.",
-        cta: {
-          target: "/feature3",
-          label: "Explore",
-        },
-      },
-
       {
         icon: "upload",
-        title: "Cloud Ready",
-        text: "Built with modern cloud architectures in mind, our design system is ready to be deployed on any cloud platform.",
+        title: "Ready for Integration",
+        text: "Designed to work seamlessly within existing systems and workflows. It supports integration into various environments and can evolve alongside your platform.",
         cta: {
-          target: "/feature5",
-          label: "Deploy",
+          url: "#",
+          label: "See details",
         },
       },
       {
         icon: "login",
-        title: "Secure",
-        text: "Security is our priority. Our design system is built with best security practices to keep your application safe.",
+        title: "Built with Care",
+        text: "Developed with stability, reliability, and best practices in mind. The component supports long-term use and helps maintain a robust and dependable setup.",
         cta: {
-          target: "/feature6",
-          label: "Secure",
+          url: "#",
+          label: "Read more",
+        },
+      },
+      {
+        icon: "person",
+        title: "Easy to Maintain",
+        text: "Structured in a way that simplifies updates and ongoing maintenance. Changes can be applied efficiently without affecting unrelated parts of the system.",
+        cta: {
+          url: "#",
+          label: "Learn how",
+        },
+      },
+      {
+        icon: "map",
+        title: "Reusable by Design",
+        text: "Created to be reused across multiple pages and scenarios. This helps reduce duplication and supports a more efficient content and component workflow.",
+        cta: {
+          url: "#",
+          label: "Explore usage",
         },
       },
     ],

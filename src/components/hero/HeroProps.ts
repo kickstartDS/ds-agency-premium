@@ -31,6 +31,14 @@ export type Height = "small" | "default" | "fullImage" | "fullScreen";
  */
 export type Textbox = boolean;
 /**
+ * On mobile devices, display the text below the image
+ */
+export type MobileTextBelow = boolean;
+/**
+ * Invert the text color for better contrast against the background
+ */
+export type InvertText = boolean;
+/**
  * Text content to display inside the button
  */
 export type Label = string;
@@ -39,9 +47,13 @@ export type Label = string;
  */
 export type Icon = string;
 /**
- * Target that should be linked, makes the button behave like a link semantically
+ * The URL to link to when the button is clicked
  */
-export type Target = string;
+export type URL = string;
+/**
+ * Add a skip button to the hero module
+ */
+export type SkipButton = boolean;
 /**
  * Enable grid layer
  */
@@ -73,7 +85,7 @@ export type AltText = string;
 /**
  * Choose the alginment of the module content
  */
-export type ModuleAligment = "center" | "below" | "left" | "right" | "corner";
+export type ModuleAligment = "center" | "below" | "offset" | "left" | "right" | "corner" | "bottom";
 
 export interface HeroProps {
   headline?: Headline;
@@ -83,7 +95,10 @@ export interface HeroProps {
   colorNeutral?: ColorNeutral;
   height?: Height;
   textbox?: Textbox;
+  mobileTextBelow?: MobileTextBelow;
+  invertText?: InvertText;
   buttons?: Button[];
+  skipButton?: SkipButton;
   overlay?: GridLayer;
   image?: BackgroundImage;
   textPosition?: ModuleAligment;
@@ -91,7 +106,7 @@ export interface HeroProps {
 export interface Button {
   label?: Label;
   icon?: Icon;
-  target?: Target;
+  url?: URL;
 }
 /**
  * Sources of background images for different screen sizes

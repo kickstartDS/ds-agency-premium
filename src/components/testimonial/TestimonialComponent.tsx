@@ -2,6 +2,8 @@ import { forwardRef, createContext, useContext, HTMLAttributes } from "react";
 import { TestimonialProps } from "./TestimonialProps";
 import { Quote } from "@kickstartds/content/lib/quote";
 import classNames from "classnames";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./TestimonialDefaults";
 
 export type { TestimonialProps };
 
@@ -51,6 +53,6 @@ export const Testimonial = forwardRef<
   { layout: string; index: number } & TestimonialProps
 >((props, ref) => {
   const Component = useContext(TestimonialContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Testimonial.displayName = "Testimonial";

@@ -45,19 +45,15 @@ export type InvalidMessage = string;
 export type HintMessage = string;
 export type IconIdentifier = string;
 /**
- * Additional css classes attached to the select element
+ * Additional css classes attached to the input element
  */
 export type Class = string;
-/**
- * Optional custom component identifier
- */
-export type KsComponentAttribute = string;
 
 /**
- * Input that allow users to select a single option from a list of mutually exclusive options.
+ * SelectField buttons allow users to select a single option from a list of mutually exclusive options.
  */
 export interface SelectFieldProps {
-  label?: Label;
+  label: Label;
   value?: Value;
   name?: Name;
   disabled?: Disabled;
@@ -68,7 +64,6 @@ export interface SelectFieldProps {
   hint?: HintMessage;
   icon?: IconIdentifier & string;
   className?: Class;
-  component?: KsComponentAttribute;
 }
 
 }

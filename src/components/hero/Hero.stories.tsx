@@ -23,29 +23,28 @@ type Story = StoryObj<typeof Hero>;
 export const TextBelowImage: Story = {
   parameters: {
     viewport: {
-      width: 1165,
-      height: 780,
+      width: 1024,
+      height: 884,
     },
   },
   args: pack({
-    headline: "Welcome to Our Dynamic Workplace",
+    headline: "Main message headline",
+    sub: "This is the supporting subheadline",
+    text: "Use this area to add a short description. It provides additional context and helps structure content within the component.",
     highlightText: true,
-    sub: "Where Creativity Meets Innovation",
-    text: "Experience the perfect blend of creativity, innovation, and productivity in our modern office environment.",
     textbox: false,
     overlay: true,
     textPosition: "below",
     image: {
-      srcMobile: "img/colleagues-work-office-using-computers-looking-aside.png",
-      srcTablet: "img/colleagues-work-office-using-computers-looking-aside.png",
-      srcDesktop:
-        "img/colleagues-work-office-using-computers-looking-aside.png",
+      srcMobile: "img/placeholder/image-gallery-02.svg",
+      srcTablet: "img/placeholder/image-gallery-02.svg",
+      srcDesktop: "img/placeholder/image-gallery-02.svg",
     },
     buttons: [
       {
-        label: "Explore further",
+        label: "Learn more",
         icon: "arrow-down",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -54,34 +53,28 @@ export const TextBelowImage: Story = {
 export const TextOnImageWithOverlay: Story = {
   parameters: {
     viewport: {
-      width: 1165,
-      height: 780,
+      width: 1024,
+      height: 738,
     },
   },
   args: pack({
-    headline: "Master Scalable Solutions",
-    text: "Harness our expertise in crafting scalable and robust applications using cutting-edge technologies.",
+    headline: "Main message headline",
+    text: "Use this area to add a short description. It provides additional context and helps structure content within the component.",
     textbox: false,
     colorNeutral: true,
     height: "fullImage",
     overlay: true,
-    textPosition: "center",
+    textPosition: "bottom",
     image: {
-      srcMobile: "img/top-view-desk-with-keyboard-drawing-pad.png",
-      srcTablet: "img/top-view-desk-with-keyboard-drawing-pad.png",
-      srcDesktop: "img/top-view-desk-with-keyboard-drawing-pad.png",
+      srcMobile: "img/placeholder/image-gallery-02.svg",
+      srcTablet: "img/placeholder/image-gallery-02.svg",
+      srcDesktop: "img/placeholder/image-gallery-02.svg",
     },
-
     buttons: [
       {
-        label: "Meet Us",
-        icon: "person",
-        target: "#",
-      },
-      {
-        label: "Schedule a Meeting",
-        icon: "date",
-        target: "#",
+        label: "Products & Services",
+        icon: "arrow-right",
+        url: "#",
       },
     ],
   }),
@@ -90,33 +83,34 @@ export const TextOnImageWithOverlay: Story = {
 export const TextBoxOnFullScreen: Story = {
   parameters: {
     viewport: {
-      width: 1160,
-      height: 1080,
+      width: 1440,
+      height: 900,
     },
   },
   args: pack({
-    headline: "Discover Our Design System",
-    sub: "Scalable. Efficient. Seamless.",
-    text: "Our design system provides a seamless and efficient framework for building scalable applications. Experience unprecedented speed and scalability with our Headless CMS powered websites, web apps & composable architecture.",
+    headline: "Main message headline",
+    sub: "This is the supporting subheadline",
+    text: "Use this area to add a short description. It provides additional context and helps structure content within the component.",
     textbox: true,
     height: "fullScreen",
     highlightText: false,
+    skipButton: true,
     textPosition: "left",
     image: {
-      srcMobile: "img/people-brainstorming-work-meeting.png",
-      srcTablet: "img/people-brainstorming-work-meeting.png",
-      srcDesktop: "img/people-brainstorming-work-meeting.png",
+      srcMobile: "img/placeholder/image-gallery-02.svg",
+      srcTablet: "img/placeholder/image-gallery-02.svg",
+      srcDesktop: "img/placeholder/image-gallery-02.svg",
     },
     buttons: [
       {
-        label: "Discover More",
-        icon: "arrow-right",
-        target: "#",
+        label: "Learn more",
+        icon: "",
+        url: "#",
       },
       {
-        label: "Reach Out",
-        icon: "phone",
-        target: "#",
+        label: "All our Services",
+        icon: "",
+        url: "#",
       },
     ],
   }),

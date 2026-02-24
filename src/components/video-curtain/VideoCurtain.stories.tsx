@@ -23,19 +23,19 @@ type Story = StoryObj<typeof VideoCurtain>;
 export const AtmosphericVideoWithOverlay: Story = {
   parameters: {
     viewport: {
-      width: 1559,
-      height: 720,
+      width: 1280,
+      height: 800,
     },
   },
   args: pack({
-    headline: "Step into Our Innovative Workspace",
-    sub: "Where Creativity Meets Technology",
-    text: "Experience the fusion of creativity and technology in our state-of-the-art office.",
+    headline: "This is the main headline",
+    sub: "Subheading for additional context",
+    text: "This is placeholder text used to demonstrate layout, spacing, and typography within the component.",
     overlay: true,
     textPosition: "center",
     buttons: [
       {
-        label: "Explore More",
+        label: "Start here",
       },
     ],
     video: {
@@ -49,21 +49,21 @@ export const AtmosphericVideoWithOverlay: Story = {
 export const ColorNeutralText: Story = {
   parameters: {
     viewport: {
-      width: 1559,
-      height: 720,
+      width: 1280,
+      height: 800,
     },
   },
   args: pack({
-    headline: "Join Our Creative Journey",
-    sub: "Where Every Idea Matters",
-    text: "Be part of a creative journey where every idea is valued and innovation is celebrated.",
-    textPosition: "left",
+    headline: "This is the main headline",
+    sub: "Subheading for additional context",
+    text: "This is placeholder text used to demonstrate layout, spacing, and typography within the component.",
+    textPosition: "corner",
     colorNeutral: true,
     highlightText: true,
     overlay: true,
     buttons: [
       {
-        label: "Join Us",
+        label: "Start here",
       },
     ],
     video: {
@@ -77,20 +77,20 @@ export const ColorNeutralText: Story = {
 export const ColorNeutralVideo: Story = {
   parameters: {
     viewport: {
-      width: 1559,
-      height: 720,
+      width: 1280,
+      height: 800,
     },
   },
   args: pack({
-    headline: "Welcome to Our Collaborative Space",
-    sub: "Where Ideas Come to Life",
-    text: "Experience the synergy of creativity and teamwork in our modern office environment.",
+    headline: "This is the main headline",
+    sub: "Subheading for additional context",
+    text: "This is placeholder text used to demonstrate layout, spacing, and typography within the component.",
     textPosition: "center",
     highlightText: true,
     overlay: true,
     buttons: [
       {
-        label: "Discover More",
+        label: "Start here",
       },
     ],
     video: {

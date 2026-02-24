@@ -13,13 +13,15 @@ import {
 import { ImageTextProps } from "./ImageTextProps";
 import { Container } from "@kickstartds/core/lib/container";
 import "./image-text.scss";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./ImageTextDefaults";
 
 export type { ImageTextProps };
 
 export const ImageTextContextDefault = forwardRef<
   HTMLDivElement,
   ImageTextProps & HTMLAttributes<HTMLDivElement>
->(({ text, image, layout, highlightText, ...rest }, ref) => (
+>(({ text, image, layout = "above", highlightText, ...rest }, ref) => (
   <Container name="text-media" ref={ref}>
     <OriginalTextMediaContextDefault
       {...rest}
@@ -40,6 +42,8 @@ export const ImageTextContextDefault = forwardRef<
           ? "above-center"
           : layout === "below"
           ? "below-center"
+          : layout === undefined
+          ? "above-center"
           : layout
       }
     />
@@ -52,7 +56,7 @@ export const ImageText = forwardRef<
   ImageTextProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(ImageTextContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 ImageText.displayName = "ImageText";
 

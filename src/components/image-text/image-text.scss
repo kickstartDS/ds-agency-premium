@@ -1,9 +1,9 @@
-@import "./image-text-tokens.scss";
+@use "image-text-tokens.scss";
 
 .dsa-image-text {
   .c-rich-text {
-    --c-rich-text--font: var(--dsa-image-text--font, var(--dsa-rich-text--font), var(--ks-font-copy-m));
-    --c-rich-text--color: var(--dsa-image-text--color, var(--dsa-rich-text--color), var(--ks-text-color-default));
+    --c-rich-text--font: var(--dsa-image-text--font, var(--ks-font-copy-m));
+    --c-rich-text--color: var(--dsa-image-text--color, var(--ks-text-color-default));
   }
 
   &--highlight.dsa-image-text {

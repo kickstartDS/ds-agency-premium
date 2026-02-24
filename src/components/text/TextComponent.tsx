@@ -3,6 +3,8 @@ import { HTMLAttributes, createContext, forwardRef, useContext } from "react";
 import { TextProps } from "./TextProps";
 import "./text.scss";
 import { RichText } from "@kickstartds/base/lib/rich-text";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./TextDefaults";
 
 export type { TextProps };
 
@@ -48,6 +50,6 @@ export const Text = forwardRef<
   TextProps & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const Component = useContext(TextContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 Text.displayName = "Text";

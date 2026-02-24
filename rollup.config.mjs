@@ -4,8 +4,10 @@ import copy from "rollup-plugin-copy";
 import fg from "fast-glob";
 import { paramCase } from "change-case";
 import { nodeExternals } from "rollup-plugin-node-externals";
+import json from "@rollup/plugin-json";
 import postcssUrl from "postcss-url";
 import scss from "./scripts/rollupPluginScss.js";
+import brandingTokensSchema from "./scripts/brandingTokensSchemaPlugin.mjs";
 
 const componentFiles = fg.sync([
   "src/components/**/*Component.(t|j)sx",
@@ -19,6 +21,32 @@ const componentEntryPoints = Object.fromEntries(
         path.basename(fileName, path.extname(fileName)).replace("Component", "")
       ) +
       "/index",
+    fileName,
+  ])
+);
+const playgroundFiles = fg.sync(["src/playground/*Component.(t|j)sx"]);
+const playgroundEntryPoints = Object.fromEntries(
+  playgroundFiles.map((fileName) => [
+    path.join(
+      "playground",
+      paramCase(
+        path.basename(fileName, path.extname(fileName)).replace("Component", "")
+      ),
+      "index"
+    ),
+    fileName,
+  ])
+);
+const pagesFiles = fg.sync(["src/pages/*Component.(t|j)sx"]);
+const pagesEntryPoints = Object.fromEntries(
+  pagesFiles.map((fileName) => [
+    path.join(
+      "pages",
+      paramCase(
+        path.basename(fileName, path.extname(fileName)).replace("Component", "")
+      ),
+      "index"
+    ),
     fileName,
   ])
 );
@@ -36,6 +64,8 @@ const clientJsEntryPoints = Object.fromEntries(
 export default {
   input: {
     ...componentEntryPoints,
+    ...playgroundEntryPoints,
+    ...pagesEntryPoints,
     ...clientJsEntryPoints,
     "tokens/themes.css": "src/themes/themes.scss",
   },
@@ -46,6 +76,7 @@ export default {
   plugins: [
     nodeExternals(),
     ts(),
+    json(),
     scss({
       postcssPlugins: [
         postcssUrl({
@@ -54,6 +85,7 @@ export default {
         }),
       ],
     }),
+    brandingTokensSchema("src/token/branding-tokens.schema.json", "tokens"),
     copy({
       targets: [
         {
@@ -66,6 +98,14 @@ export default {
         },
         {
           src: "src/token/*.{js,css,html}",
+          dest: "dist/tokens",
+        },
+        {
+          src: "src/token/branding-tokens{,-*}.json",
+          dest: "dist/tokens",
+        },
+        {
+          src: "scripts/tokensToCss.mjs",
           dest: "dist/tokens",
         },
         {

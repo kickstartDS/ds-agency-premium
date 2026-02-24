@@ -24,24 +24,24 @@ export const Banner: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 472,
+      height: 328,
     },
   },
   args: pack({
-    headline: "Ready to Transform Your Development Process?",
-    sub: "Start your journey today.",
-    text: "Get started with our design system today and experience a new level of efficiency and consistency in your projects.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "This is placeholder text used to demonstrate layout, spacing, and typography within the component.",
     textAlign: "center",
     buttons: [
       {
-        label: "Contact Us",
-        target: "#",
-        icon: "person",
+        label: "Explore",
+        url: "#",
+        icon: "chevron-right",
       },
       {
         label: "Learn More",
-        target: "#",
-        icon: "date",
+        url: "#",
+        icon: "",
       },
     ],
   }),
@@ -51,20 +51,20 @@ export const Highlighted: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 551,
+      height: 390,
     },
   },
   args: pack({
-    headline: "Why Choose Our Design System?",
-    sub: "Built for consistency and speed.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
     highlightText: true,
     textAlign: "center",
-    text: "Our design system is built with scalability and efficiency in mind. It allows for consistent UI across different platforms, making your development process smoother and faster.",
+    text: "This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.",
     buttons: [
       {
-        label: "Get Started",
-        target: "#",
-        icon: "person",
+        label: "Discover more",
+        url: "#",
+        icon: "chevron-right",
       },
     ],
   }),
@@ -74,18 +74,18 @@ export const LeftAligned: Story = {
   parameters: {
     viewport: {
       width: 1000,
-      height: 443,
+      height: 354,
     },
   },
   args: pack({
-    headline: "Experience Our Design System",
-    sub: "Efficient, scalable, seamless.",
-    text: "Our design system offers a seamless and efficient way to build scalable applications. Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.",
     buttons: [
       {
         label: "Learn More",
-        target: "#",
-        icon: "person",
+        url: "#",
+        icon: "chevron-right",
       },
     ],
   }),
@@ -95,35 +95,29 @@ export const ProductAdvertisement: Story = {
   parameters: {
     viewport: {
       width: 1400,
-      height: 660,
+      height: 690,
     },
   },
   args: pack({
-    headline: "Experience Immersive Sound",
-    sub: "With Our Premium Over-Ear Headphones",
-    text: "Our over-ear headphones provide an immersive audio experience. With noise-cancellation technology and high-quality sound.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "This is placeholder text used to demonstrate layout, spacing, and typography within the component.",
     backgroundImage: "img/bg_dot-carpet-blue.svg",
     highlightText: true,
-    width: "wide",
+    padding: true,
     order: {
       desktopImageLast: false,
     },
     image: {
       padding: false,
-      src: "img/showcases/comp_audio04.png",
+      src: "img/placeholder/cta-product-shot.svg",
       alt: "Over-Ear Headphones",
     },
     buttons: [
       {
-        label: "Shop Now",
-        target: "/shop",
-        variant: "primary",
+        label: "Details",
+        url: "/shop",
         icon: "chevron-right",
-      },
-      {
-        label: "Learn More",
-        target: "/product-info",
-        variant: "secondary",
       },
     ],
   }),
@@ -133,17 +127,16 @@ export const ContactBanner: Story = {
   parameters: {
     viewport: {
       width: 1600,
-      height: 560,
+      height: 628,
     },
   },
   args: pack({
-    headline: "Get in touch",
-    sub: "Chat with us about getting your product or platform to market faster",
-    text: "Our modular design approach allows for flexibility and scalability in your application's architecture.",
-    width: "wide",
-    fullWidth: true,
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.",
+    padding: true,
     image: {
-      src: "img/contact-person.png",
+      src: "img/placeholder/cta-contact-banner.svg",
       padding: false,
     },
     order: {
@@ -153,12 +146,12 @@ export const ContactBanner: Story = {
       {
         label: "Contact us",
         icon: "person",
-        target: "#",
+        url: "#",
       },
       {
         label: "Book a meeting",
         icon: "date",
-        target: "#",
+        url: "#",
       },
     ],
   }),
@@ -168,28 +161,28 @@ export const SplitBanner: Story = {
   parameters: {
     viewport: {
       width: 1680,
-      height: 850,
+      height: 788,
     },
   },
   args: pack({
-    headline: "Design System Services",
-    text: "Here at Systemics, we bring a range of design system services that can make a difference.",
+    headline: "Key headline for this section",
+    sub: "Subheading for additional context",
+    text: "Use this area to add a short description. It provides additional context and helps structure content within the component",
     colorNeutral: true,
-    backgroundColor: "#001856",
-    width: "wide",
-    fullWidth: true,
+    backgroundColor: "#d9e4ff",
+    padding: true,
     order: {
       desktopImageLast: false,
     },
     image: {
-      src: "img/colored-square.png",
+      src: "img/placeholder/cta-split-banner.svg",
       padding: false,
     },
     buttons: [
       {
-        label: "What can we do for you?",
-        icon: "person",
-        target: "#",
+        label: "Learn more",
+        icon: "",
+        url: "#",
       },
     ],
   }),
@@ -199,18 +192,16 @@ export const AngledImage: Story = {
   parameters: {
     viewport: {
       width: 1670,
-      height: 910,
+      height: 788,
     },
   },
   args: pack({
-    headline: "Our **Approach** to Design Systems",
-    text: `We value efficiency without compromising quality. Our secret weapon? kickstartDS, a revolutionary code-first and open source framework for creating design systems.
-
-This tool accelerates our development, saving you valuable time and helping us deliver top-notch results faster.`,
-    width: "wide",
-    fullWidth: true,
+    headline: "Key **headline** for this section",
+    text: `This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.`,
+    sub: "Subheading for additional context",
+    padding: true,
     image: {
-      src: "img/angled-image.png",
+      src: "img/placeholder/cta-angled-image.svg",
       padding: false,
     },
     order: {
@@ -218,14 +209,9 @@ This tool accelerates our development, saving you valuable time and helping us d
     },
     buttons: [
       {
-        label: "Contact us",
-        icon: "person",
-        target: "#",
-      },
-      {
-        label: "Book a meeting",
-        icon: "date",
-        target: "#",
+        label: "Learn more",
+        icon: "",
+        url: "#",
       },
     ],
   }),
@@ -235,23 +221,25 @@ export const ColoredBanner: Story = {
   parameters: {
     viewport: {
       width: 1350,
-      height: 500,
+      height: 484,
     },
   },
   args: pack({
-    headline: "Expertise in Scalable Solutions",
-    text: "Leverage our expertise in creating scalable and robust applications using modern technologies.",
+    headline: "Key headline for this section",
+    text: "Use this area to add a short description. It provides additional context and helps structure content within the component.",
+    sub: "Subheading for additional context",
     highlightText: true,
     colorNeutral: true,
-    backgroundColor: "#a30051",
+    backgroundColor: "#a1d5d6ff",
+    padding: true,
     buttons: [
       {
         label: "Learn More",
-        target: "#",
+        url: "#",
       },
       {
-        label: "Contact Us",
-        target: "#",
+        label: "More Information",
+        url: "#",
       },
     ],
   }),
@@ -261,31 +249,26 @@ export const AlignBottom: Story = {
   parameters: {
     viewport: {
       width: 1680,
-      height: 1040,
+      height: 905,
     },
   },
   args: pack({
-    headline: "Custom Solutions",
-    text: `At Systemics, we believe in the power of technology to transform businesses. Our team of experienced professionals is dedicated to providing innovative solutions that meet the unique needs of your business.
-
-We understand that every business is different, and that's why we offer custom solutions tailored to your specific business needs and requirements.`,
-    backgroundImage: "img/grid-bg.svg",
-    width: "wide",
-    fullWidth: true,
-    contentAlign: "bottom",
+    headline: "Key headline for this section",
+    text: `This text serves as a placeholder for descriptive content. It can be replaced with real copy to explain features, concepts, or key messages in more detail.`,
+    sub: "Subheading for additional context",
+    backgroundImage: "img/grid-bg-light.svg",
+    align: "bottom",
     image: {
-      src: "img/offset-image.png",
+      src: "img/placeholder/cta-align-bottom.svg",
     },
     order: {
       desktopImageLast: false,
     },
     buttons: [
       {
-        label: "Contact us",
-        icon: "person",
-        target: "#",
+        label: "Learn More",
+        url: "#",
       },
-      { label: "Book a meeting", icon: "date", target: "#" },
     ],
   }),
 };

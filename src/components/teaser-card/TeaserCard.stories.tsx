@@ -24,17 +24,36 @@ export const ProductTiles: Story = {
   parameters: {
     viewport: {
       width: 650,
-      height: 653,
+      height: 678,
     },
   },
   args: pack({
-    headline: "Castaway",
-    text: "Transforming Ideas into Code",
-    image: "img/logos/castaway.svg",
-    target: "#",
+    headline: "Explore This Topic",
+    text: "This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration.",
+    image: "img/placeholder/avatar-wide.svg",
+    url: "#",
     button: {
-      label: "Go to page",
+      label: "Learn more",
       hidden: true,
+    },
+  }),
+};
+
+export const Compact: Story = {
+  parameters: {
+    viewport: {
+      width: 650,
+      height: 678,
+    },
+  },
+  args: pack({
+    layout: "compact",
+    headline: "Explore This Topic",
+    text: "This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration.",
+    image: "img/people-brainstorming-work-meeting.png",
+    url: "#",
+    button: {
+      label: "Learn more",
     },
   }),
 };
@@ -43,17 +62,17 @@ export const PageNavigation: Story = {
   parameters: {
     viewport: {
       width: 650,
-      height: 678,
+      height: 640,
     },
   },
   args: pack({
-    headline: "Design System Services",
-    text: "Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture.",
-    image: "img/02.jpg",
+    headline: "Explore This Topic",
+    text: "This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration.",
+    image: "img/placeholder/avatar-wide.svg",
     imageRatio: "landscape",
-    target: "#",
+    url: "#",
     button: {
-      label: "Read more",
+      label: "Learn more",
     },
   }),
 };
@@ -62,19 +81,19 @@ export const ShowcasePreview: Story = {
   parameters: {
     viewport: {
       width: 650,
-      height: 750,
+      height: 738,
     },
   },
   args: pack({
-    label: "Tech",
+    label: "Category Label",
     layout: "row",
     imageRatio: "wide",
-    headline: "Transformation Love Story",
-    text: "See how we saved TechFusions a year's worth of development time",
-    image: "img/showcases/comp_tfe01.jpg",
-    target: "#",
+    headline: "Explore This Topic",
+    text: "This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration.",
+    image: "img/placeholder/avatar-wide.svg",
+    url: "#",
     button: {
-      label: "View showcase",
+      label: "Learn more",
     },
   }),
 };

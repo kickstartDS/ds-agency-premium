@@ -21,10 +21,10 @@ const meta: Meta = {
     <Section {...args}>
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -32,22 +32,21 @@ const meta: Meta = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        label="Freshest Fruit"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
         }}
-        image="/img/showcases/comp_audio01.jpg"
       />
       <TeaserCard
         layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -61,35 +60,21 @@ export default meta;
 
 type Story = StoryObj<typeof Section>;
 
-export const Cards: Story = {
+export const DynamicLayout: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 928,
+      height: 846,
     },
   },
   args: pack({
     content: {
-      mode: "tile",
+      mode: "flex",
     },
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-    },
-    buttons: [],
-  }),
-};
-
-export const Slider: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 938,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "slider",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
+      align: "center",
     },
     buttons: [],
   }),
@@ -97,10 +82,10 @@ export const Slider: Story = {
     <Section {...args}>
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -108,124 +93,10 @@ export const Slider: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        label="Freshest Fruit"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-        image="/img/showcases/comp_audio01.jpg"
-      />
-      <TeaserCard
-        layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-      <TeaserCard
-        layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-      <TeaserCard
-        layout="row"
-        headline="Speed and Scale"
-        label="Freshest Fruit"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-        image="/img/showcases/comp_audio01.jpg"
-      />
-      <TeaserCard
-        layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-      <TeaserCard
-        layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-      <TeaserCard
-        layout="row"
-        headline="Speed and Scale"
-        label="Freshest Fruit"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-        image="/img/showcases/comp_audio01.jpg"
-      />
-      <TeaserCard
-        layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-      <TeaserCard
-        layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-      <TeaserCard
-        layout="row"
-        headline="Speed and Scale"
-        label="Freshest Fruit"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-        image="/img/showcases/comp_audio01.jpg"
-      />
-      <TeaserCard
-        layout="row"
-        headline="Saving Time and Money"
-        text="Navigating the Headless Frontier for EcoTech's 'Brand Consistency"
-        image="/img/showcases/comp_eco01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -233,202 +104,23 @@ export const Slider: Story = {
       />
     </Section>
   ),
-};
-
-export const Inverted: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    inverted: true,
-    content: {
-      mode: "list",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-    },
-    buttons: [],
-  }),
-};
-
-export const BackgroundImage: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    backgroundImage: "/img/bg_dot-carpet-blue.svg",
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-    },
-    content: {
-      mode: "default",
-    },
-    buttons: [],
-  }),
-};
-
-export const Spotlight: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "list",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-    },
-    spotlight: true,
-    buttons: [],
-  }),
-};
-
-export const Stagelights: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "list",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    style: "stagelights",
-    buttons: [],
-  }),
-};
-
-export const AccentBackground: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "list",
-    },
-    backgroundColor: "accent",
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    buttons: [],
-  }),
-};
-
-export const BoldBackground: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "list",
-    },
-    backgroundColor: "bold",
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    buttons: [],
-  }),
-};
-
-export const ColorfulGradient: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "list",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    style: "horizontalGradient",
-    buttons: [],
-  }),
-};
-
-export const WithButtons: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 1016,
-    },
-  },
-  args: pack({
-    content: {
-      mode: "list",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    buttons: [
-      {
-        disabled: false,
-        icon: "arrow-right",
-        label: "All Showcases",
-        size: "medium",
-        variant: "secondary",
-      },
-      {
-        disabled: false,
-        icon: "date",
-        label: "Book a meeting",
-        size: "medium",
-        variant: "secondary",
-      },
-    ],
-  }),
 };
 
 export const TileLayout: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 445,
+      height: 744,
     },
   },
   args: pack({
-    width: "max",
+    width: "default",
     content: {
       mode: "tile",
     },
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
       align: "center",
     },
     buttons: [],
@@ -437,10 +129,10 @@ export const TileLayout: Story = {
     <Section {...args}>
       <TeaserCard
         layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -448,46 +140,10 @@ export const TileLayout: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        image="/img/showcases/comp_audio01.jpg"
-        target="#"
-        button={{
-          label: "Go to Page",
-          hidden: true,
-        }}
-      />
-    </Section>
-  ),
-};
-
-export const FlexLayout: Story = {
-  parameters: {
-    viewport: {
-      width: 1440,
-      height: 928,
-    },
-  },
-  args: pack({
-    width: "max",
-    content: {
-      align: "center",
-    },
-    headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
-      align: "center",
-    },
-    buttons: [],
-  }),
-  render: (args) => (
-    <Section {...args}>
-      <TeaserCard
-        layout="row"
-        headline="Transformation Love Story"
-        text="See how we saved TechFusions a year's worth of development time"
-        image="/img/showcases/comp_tfe01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -495,10 +151,10 @@ export const FlexLayout: Story = {
       />
       <TeaserCard
         layout="row"
-        headline="Speed and Scale"
-        text="Thanks to rapid landing page creation for LaunchPad Audio Innovations"
-        image="/img/showcases/comp_audio01.jpg"
-        target="#"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
         button={{
           label: "Go to Page",
           hidden: true,
@@ -512,7 +168,7 @@ export const ListLayout: Story = {
   parameters: {
     viewport: {
       width: 1440,
-      height: 1658,
+      height: 1416,
     },
   },
   args: pack({
@@ -520,10 +176,280 @@ export const ListLayout: Story = {
       mode: "list",
     },
     headline: {
-      text: "Happy Customers Showcases",
-      sub: "We can create something shining for you too!",
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
       align: "center",
     },
     buttons: [],
+  }),
+};
+
+export const Slider: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 816,
+    },
+  },
+  args: pack({
+    content: {
+      mode: "slider",
+    },
+    headline: {
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
+      align: "left",
+    },
+    buttons: [],
+  }),
+  render: (args) => (
+    <Section {...args}>
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+      <TeaserCard
+        layout="row"
+        headline="Explore This Topic"
+        text="This teaser introduces a topic or piece of content and provides a short summary to encourage further exploration."
+        image="img/placeholder/avatar-wide.svg"
+        url="#"
+        button={{
+          label: "Go to Page",
+          hidden: true,
+        }}
+      />
+    </Section>
+  ),
+};
+
+export const Inverted: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 744,
+    },
+  },
+  args: pack({
+    inverted: true,
+    content: { mode: "default" },
+    headline: {
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
+    },
+    buttons: [],
+  }),
+};
+
+export const AccentBackground: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 744,
+    },
+  },
+  args: pack({
+    backgroundColor: "accent",
+    headline: {
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
+      align: "center",
+    },
+    buttons: [],
+  }),
+};
+
+export const BoldBackground: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 744,
+    },
+  },
+  args: pack({
+    backgroundColor: "bold",
+    headline: {
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
+      align: "center",
+    },
+    buttons: [],
+  }),
+};
+
+export const Framed: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 888,
+    },
+  },
+  args: pack({
+    width: "wide",
+    headline: {
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
+      align: "center",
+    },
+    style: "framed",
+    buttons: [],
+  }),
+};
+
+export const BackgroundImage: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 744,
+    },
+  },
+  args: pack({
+    backgroundImage: "/img/bg_dot-carpet-blue.svg",
+    headline: {
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
+    },
+    content: {
+      mode: "default",
+    },
+    buttons: [],
+  }),
+};
+
+export const WithButtons: Story = {
+  parameters: {
+    viewport: {
+      width: 1440,
+      height: 818,
+    },
+  },
+  args: pack({
+    headline: {
+      text: "Key headline for this section",
+      sub: "Short explanatory subheadline",
+      align: "center",
+    },
+    buttons: [
+      {
+        disabled: false,
+        icon: "arrow-right",
+        label: "Premium Topics",
+        size: "medium",
+        variant: "secondary",
+      },
+      {
+        disabled: false,
+        icon: "",
+        label: "Topics Overview",
+        size: "medium",
+        variant: "secondary",
+      },
+    ],
   }),
 };

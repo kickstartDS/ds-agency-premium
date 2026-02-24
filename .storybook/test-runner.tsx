@@ -12,6 +12,7 @@ const config: TestRunnerConfig = {
   setup() {
     expect.extend({ toMatchImageSnapshot });
   },
+
   async postVisit(page, story) {
     const context = await getStoryContext(page, story);
     await waitForPageReady(page);

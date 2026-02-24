@@ -5,14 +5,20 @@ import {
   ButtonGroupContextDefault,
 } from "@kickstartds/base/lib/button-group";
 import { ButtonGroupProps } from "./ButtonGroupProps";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./ButtonGroupDefaults";
 
 export type { ButtonGroupProps };
 
 export const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>(
-  ({ buttons, colorNeutral, size, ...props }, ref) => {
+  (props, ref) => {
+    const { buttons, colorNeutral, size, ...rest } = deepMergeDefaults(
+      defaults,
+      props
+    );
     return buttons && buttons.length > 0 ? (
       <ButtonGroupContextDefault
-        {...props}
+        {...rest}
         items={buttons
           .filter((button) => button.label)
           .map((button, index) => ({

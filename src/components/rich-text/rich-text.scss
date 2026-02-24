@@ -1,5 +1,5 @@
-@import "./rich-text-tokens.scss";
-@import "../../selectors";
+@use "rich-text-tokens.scss";
+@use "../../selectors" as *;
 
 #{$selectors} {
   --c-rich-text--font: var(--dsa-rich-text--font, var(--ks-font-copy-m));

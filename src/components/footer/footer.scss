@@ -1,4 +1,4 @@
-@import "./footer-tokens.scss";
+@use "footer-tokens.scss";
 
 .dsa-footer {
   position: relative;
@@ -8,8 +8,8 @@
   background-color: var(--dsa-footer--background-color, var(--ks-background-color-default));
 
   &__content {
-    padding: var(--l-section--space-small) var(--dsa-content--spacing);
-    border-top: var(--dsa-footer--border-top, 1px solid var(--ks-border-color-default));
+    padding: var(--l-section--space-small) var(--dsa-content--horizontal-spacing);
+    border-top: var(--dsa-footer--border-top, var(--ks-border-width-default) solid var(--ks-border-color-default));
     max-width: var(--dsa-footer--max-width, var(--dsa-content--width_wide));
     width: 100%;
     margin: auto;
@@ -39,10 +39,10 @@
     font: var(--dsa-footer__link--font, var(--ks-font-interface-s));
     font-weight: var(--dsa-footer__link--font-weight, var(--ks-font-interface-s));
     color: var(--dsa-footer__link--color, var(--dsa-link--color));
-    text-decoration: var(--dsa-footer__link--text-tecoration, none);
+    text-decoration: var(--dsa-footer__link--text-decoration, none);
 
     &:hover {
-      text-decoration: var(--dsa-footer__link--text-tecoration_hover, underline);
+      text-decoration: var(--dsa-footer__link--text-decoration_hover, underline);
       color: var(--dsa-footer__link--color_hover, var(--dsa-link--color_hover));
     }
   }

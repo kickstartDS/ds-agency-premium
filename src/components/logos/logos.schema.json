@@ -9,7 +9,7 @@
       "type": "string",
       "title": "Logo Tagline",
       "description": "A short tagline atop the logos",
-      "examples": ["Your Success, Our Commitment"]
+      "examples": ["Our Customers"]
     },
     "logo": {
       "type": "array",
@@ -26,12 +26,12 @@
             "title": "URL",
             "description": "The URL of the logo image",
             "examples": [
-              "img/logos/logoipsum-212.svg",
-              "img/logos/logoipsum-217.svg",
-              "img/logos/logoipsum-239.svg",
-              "img/logos/logoipsum-244.svg",
-              "img/logos/logoipsum-250.svg",
-              "img/logos/logoipsum-286.svg"
+              "img/logos/logoipsum-344.svg",
+              "img/logos/logoipsum-347.svg",
+              "img/logos/logoipsum-352.svg",
+              "img/logos/logoipsum-356.svg",
+              "img/logos/logoipsum-358.svg",
+              "img/logos/logoipsum-369.svg"
             ]
           },
           "alt": {
@@ -44,8 +44,7 @@
         "additionalProperties": false,
         "required": ["src"]
       },
-      "minItems": 1,
-      "maxItems": 20
+      "minItems": 1
     },
     "align": {
       "type": "string",
@@ -92,7 +91,7 @@
           "type": "string",
           "title": "Link Label",
           "description": "The text label displayed on the link",
-          "examples": ["See all our partners"]
+          "examples": ["See all customers"]
         },
         "style": {
           "type": "string",

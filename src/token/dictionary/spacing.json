@@ -10,7 +10,7 @@
           }
         },
         "base": {
-          "value": "0.3024",
+          "value": "0.3366",
           "attributes": {
             "category": "size"
           }
@@ -28,11 +28,8 @@
           "desktop": {
             "value": "2.2519"
           },
-          "widescreen": {
-            "value": "2.5"
-          },
           "tv": {
-            "value": "3"
+            "value": "2.7585"
           }
         }
       },
@@ -45,7 +42,7 @@
           }
         },
         "base": {
-          "value": "0.4309",
+          "value": "0.4628",
           "attributes": {
             "category": "size"
           }
@@ -63,11 +60,8 @@
           "desktop": {
             "value": "2.2519"
           },
-          "widescreen": {
-            "value": "2.5"
-          },
           "tv": {
-            "value": "3"
+            "value": "2.7585"
           }
         }
       },
@@ -80,7 +74,7 @@
           }
         },
         "base": {
-          "value": "0.614",
+          "value": "0.6364",
           "attributes": {
             "category": "size"
           }
@@ -98,11 +92,8 @@
           "desktop": {
             "value": "2.2519"
           },
-          "widescreen": {
-            "value": "2.5"
-          },
           "tv": {
-            "value": "3"
+            "value": "2.7585"
           }
         }
       },
@@ -133,11 +124,8 @@
           "desktop": {
             "value": "2.2519"
           },
-          "widescreen": {
-            "value": "2.5"
-          },
           "tv": {
-            "value": "3"
+            "value": "2.7585"
           }
         }
       },
@@ -150,7 +138,7 @@
           }
         },
         "base": {
-          "value": "1.2469",
+          "value": "1.2031",
           "attributes": {
             "category": "size"
           }
@@ -168,11 +156,8 @@
           "desktop": {
             "value": "2.2519"
           },
-          "widescreen": {
-            "value": "2.5"
-          },
           "tv": {
-            "value": "3"
+            "value": "2.7585"
           }
         }
       },
@@ -185,7 +170,7 @@
           }
         },
         "base": {
-          "value": "1.7768",
+          "value": "1.6543",
           "attributes": {
             "category": "size"
           }
@@ -204,7 +189,7 @@
             "value": "2.2519"
           },
           "tv": {
-            "value": "2.7"
+            "value": "2.7585"
           }
         }
       },
@@ -217,7 +202,7 @@
           }
         },
         "base": {
-          "value": "2.5319",
+          "value": "2.2747",
           "attributes": {
             "category": "size"
           }
@@ -235,11 +220,8 @@
           "desktop": {
             "value": "2.2519"
           },
-          "widescreen": {
-            "value": "2.5"
-          },
           "tv": {
-            "value": "3"
+            "value": "2.7585"
           }
         }
       },

@@ -24,25 +24,25 @@ export const DropdownList: Story = {
   parameters: {
     viewport: {
       width: 820,
-      height: 455,
+      height: 348,
     },
   },
   args: pack({
     questions: [
       {
-        question: "What are the benefits of investing in a Design System?",
+        question: "Can the content be customized?",
         answer:
-          "Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture.",
+          "Yes. All content within this component can be fully customized. Text length, wording, and structure can be adapted to match different audiences, communication styles, or content strategies. The component supports both short, concise answers and more detailed explanations, depending on editorial needs.",
       },
       {
-        question: "What is a Design System?",
+        question: "What is this component used for?",
         answer:
-          "Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture.",
+          "This component can be used across different pages and contexts, such as product pages, service descriptions, or informational sections.",
       },
       {
-        question: "What is the role of a Headless CMS in a Design System?",
+        question: "How many items are supported?",
         answer:
-          "A Headless CMS plays a crucial role in a Design System by providing a content-first approach. It separates the back-end content from the front-end presentation layer, allowing for seamless integration with any design system. This results in a flexible, scalable, and platform-agnostic system that ensures content consistency across all platforms and devices.",
+          "The number of questions and answers can be configured based on the component settings.",
       },
     ],
   }),
@@ -52,15 +52,15 @@ export const SingleDropdown: Story = {
   parameters: {
     viewport: {
       width: 820,
-      height: 228,
+      height: 216,
     },
   },
   args: pack({
     questions: [
       {
-        question: "What is a Design System?",
+        question: "Can the content be customized?",
         answer:
-          "Experience the speed & scalability unlike anything seen before with our Headless CMS powered websites, web apps & composable architecture.",
+          "Yes. All content within this component can be fully customized. Text length, wording, and structure can be adapted to match different audiences, communication styles, or content strategies. The component supports both short, concise answers and more detailed explanations, depending on editorial needs.",
       },
     ],
   }),

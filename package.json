@@ -23,12 +23,21 @@
     "./static/*": "./dist/static/*",
     "./tokens/*": "./dist/tokens/*",
     "./icon-sprite": "./dist/tokens/IconSprite.js",
+    "./playground/*": {
+      "types": "./dist/playground/*/index.d.ts",
+      "default": "./dist/playground/*/index.js"
+    },
+    "./pages/*": {
+      "types": "./dist/pages/*/index.d.ts",
+      "default": "./dist/pages/*/index.js"
+    },
     "./*.css": "./dist/*.css",
     "./*.js": {
       "types": "./dist/*.d.ts",
       "import": "./dist/*.js"
     },
     "./*.json": "./dist/components/*.json",
+    "./cms/*.schema.json": "./dist/cms/*.schema.json",
     "./*": {
       "types": "./dist/components/*/index.d.ts",
       "default": "./dist/components/*/index.js"
@@ -38,7 +47,7 @@
     "dist"
   ],
   "scripts": {
-    "build-storybook": "yarn build-tokens && yarn schema && yarn token && storybook build",
+    "build-storybook": "yarn build-tokens && yarn schema && yarn token && yarn search && storybook build",
     "postbuild-storybook": "yarn presets && yarn playroom:build && mkdir -p dist/components && cp snippets.json dist/components/presets.json",
     "build-tokens-ds-agency": "kickstartDS tokens compile",
     "build-tokens-business": "kickstartDS tokens compile --token-dictionary-path src/token-business/dictionary --sd-config-path sd.config-business.cjs",
@@ -52,22 +61,26 @@
     "playroom:start": "playroom start",
     "playroom:build": "playroom build",
     "presets": "vitest run scripts/generatePresets.test.ts",
+    "search": "rm -rf static/pagefind && vitest run scripts/generateSearchIndex.test.ts",
     "husky:precommit": "yarn schema && rollup -c",
     "prepare": "patch-package && husky install",
-    "prepublishOnly": "rm -rf dist && yarn build-tokens && yarn schema && rollup -c && yarn build-storybook",
+    "prepublishOnly": "rm -rf dist && yarn build-tokens && yarn schema && yarn token && yarn branding-tokens && rollup -c && yarn build-storybook",
     "schema": "run-p schema:*",
     "schema:dereference-schemas": "kickstartDS schema dereference",
     "schema:generate-props": "kickstartDS schema types",
     "schema:layer-types": "kickstartDS schema layer",
+    "schema:create-defaults": "kickstartDS schema defaults",
     "start": "run-p watch:* storybook",
     "storybook": "storybook dev -p 6006",
     "create-component-previews": "yarn test && rimraf static/img/screenshots && mkdir -p static/img/screenshots && cp __snapshots__/*.png static/img/screenshots",
     "test": "rimraf __snapshots__ && run-p -r test:*",
     "test:server": "npx http-server storybook-static --port 6006 --silent",
-    "test:suite": "npx wait-on http://127.0.0.1:6006 && test-storybook",
+    "test:suite": "npx wait-on http://127.0.0.1:6006 && test-storybook --maxWorkers=8",
     "token": "node scripts/customPropertyExtract.js",
+    "branding-tokens": "node scripts/buildBrandingTokens.mjs",
     "watch:schema": "yarn schema && chokidar \"src/**/*.schema.json\" -c \"yarn schema\"",
     "watch:token": "yarn token && chokidar \"src/**/*-tokens.scss\" -c \"yarn token {path}\"",
+    "watch:branding-tokens": "yarn branding-tokens && chokidar \"src/token/branding-tokens{,-*}.json\" -c \"yarn branding-tokens {path}\"",
     "watch:dictionary": "yarn build-tokens && chokidar \"src/token/dictionary/*.json\" -c \"yarn build-tokens\""
   },
   "dependencies": {
@@ -84,12 +97,13 @@
     "@kickstartds/content": "^4.1.1",
     "@kickstartds/core": "^4.1.0",
     "@kickstartds/form": "^4.1.0",
-    "@kickstartds/jsonschema-utils": "^3.4.2",
-    "@kickstartds/jsonschema2types": "^1.1.51",
+    "@kickstartds/jsonschema-utils": "^3.8.1",
+    "@kickstartds/jsonschema2types": "^1.2.7",
     "@kickstartds/storybook-addon-component-tokens": "^3.0.0",
     "@kickstartds/storybook-addon-html": "^1.0.0",
     "@kickstartds/storybook-addon-jsonschema": "^4.0.0",
     "@kickstartds/style-dictionary": "^4.0.2",
+    "@rollup/plugin-json": "^6.1.0",
     "@storybook/addon-a11y": "^8.0.5",
     "@storybook/addon-actions": "^8.0.5",
     "@storybook/addon-essentials": "^8.0.5",
@@ -103,6 +117,7 @@
     "@types/react": "^18.2.21",
     "@vitejs/plugin-react": "^4.2.1",
     "auto": "^11.0.1",
+    "c15t": "^1.5.0",
     "change-case": "^4.1.2",
     "chokidar-cli": "^3.0.0",
     "chromatic": "^6.24.1",
@@ -114,25 +129,28 @@
     "happy-dom": "^13.3.1",
     "husky": "^8.0.3",
     "jest-image-snapshot": "^6.4.0",
-    "kickstartds": "^3.0.0",
+    "kickstartds": "3.5.0--canary.62.324.0",
     "lazysizes": "^5.3.2",
     "npm-run-all": "^4.1.5",
+    "pagefind": "^1.4.0",
     "patch-package": "^8.0.0",
     "playroom": "^0.34.1",
     "postcss": "^8.4.29",
     "postcss-url": "^10.1.3",
+    "puppeteer": "^24.30.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rollup": "^3.28.1",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-node-externals": "^6.1.1",
     "rollup-plugin-ts": "^3.4.4",
-    "sass": "^1.66.1",
+    "sass": "^1.94.2",
     "sass-loader": "^13.3.3",
     "storybook": "^8.0.5",
     "storybook-addon-playroom": "^5.0.0",
     "storybook-design-token": "^3.1.0",
     "style-loader": "^3.3.3",
+    "traverse": "^0.6.11",
     "typescript": "^5.2.2",
     "vitest": "^1.2.1"
   },
@@ -142,8 +160,16 @@
     "@kickstartds/content": "^4.1.1",
     "@kickstartds/core": "^4.0.2",
     "@kickstartds/form": "^4.0.2",
-    "react": "^17 || ^18",
-    "react-dom": "^17 || ^18"
+    "c15t": "^1.5.0",
+    "react": "^17 || ^18 || ^19",
+    "react-dom": "^17 || ^18 || ^19",
+    "tinycolor2": "^1.6.0",
+    "traverse": "^0.6.11"
+  },
+  "peerDependenciesMeta": {
+    "c15t": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "access": "public",
