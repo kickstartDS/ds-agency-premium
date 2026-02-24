@@ -4,7 +4,7 @@ import { EventDetailProps } from "./EventDetailProps";
 const defaults: DeepPartial<EventDetailProps> = {
   "categories": [],
   "locations": [],
-  "downloads": [],
+  "download": [],
   "images": [],
   "button": {}
 };

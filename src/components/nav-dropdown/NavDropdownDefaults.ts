@@ -3,7 +3,8 @@ import { NavDropdownProps } from "./NavDropdownProps";
 
 const defaults: DeepPartial<NavDropdownProps> = {
   "inverted": false,
-  "items": []
+  "items": [],
+  "style": {}
 };
 
 export default defaults;

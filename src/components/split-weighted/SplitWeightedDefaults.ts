@@ -7,11 +7,15 @@ const defaults: DeepPartial<SplitWeightedProps> = {
   "verticalAlign": "top",
   "mainLayout": {
     "gutter": "default",
-    "minWidth": "wide"
+    "minWidth": "default",
+    "stretchVertically": false,
+    "layout": "list"
   },
   "asideLayout": {
     "gutter": "default",
-    "minWidth": "default"
+    "minWidth": "default",
+    "stretchVertically": false,
+    "layout": "list"
   },
   "order": {
     "mobile": "mainFirst",

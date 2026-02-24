@@ -14,7 +14,7 @@ const defaults: DeepPartial<CookieConsentProps> = {
   "revisitButton": {
     "label": "Manage Cookies"
   },
-  "dialogue": {
+  "dialog": {
     "required": [],
     "buttons": {
       "acceptLabel": "Accept All",

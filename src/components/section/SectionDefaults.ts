@@ -19,11 +19,12 @@ const defaults: DeepPartial<SectionProps> = {
     "width": "unset",
     "align": "center",
     "gutter": "default",
-    "mode": "default",
+    "mode": "list",
     "tileWidth": "default"
   },
   "components": [],
-  "buttons": []
+  "buttons": [],
+  "aiDraft": false
 };
 
 export default defaults;

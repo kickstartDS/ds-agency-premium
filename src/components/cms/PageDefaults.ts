@@ -9,7 +9,8 @@ const defaults: DeepPartial<PageProps> = {
   },
   "footer": {
     "inverted": false
-  }
+  },
+  "hidePageBreadcrumbs": false
 };
 
 export default defaults;

@@ -3,7 +3,8 @@ import { ImageTextProps } from "./ImageTextProps";
 
 const defaults: DeepPartial<ImageTextProps> = {
   "highlightText": false,
-  "image": {}
+  "image": {},
+  "layout": "above"
 };
 
 export default defaults;

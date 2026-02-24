@@ -6,6 +6,7 @@ const defaults: DeepPartial<HeroProps> = {
   "colorNeutral": false,
   "height": "default",
   "textbox": true,
+  "mobileTextBelow": true,
   "invertText": false,
   "buttons": [],
   "skipButton": false,

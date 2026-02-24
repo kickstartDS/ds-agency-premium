@@ -8,6 +8,16 @@ const defaults: DeepPartial<SplitEvenProps> = {
   "verticalAlign": "top",
   "verticalGutter": "default",
   "horizontalGutter": "default",
+  "firstLayout": {
+    "layout": "list",
+    "gutter": "default",
+    "stretchVertically": false
+  },
+  "secondLayout": {
+    "layout": "list",
+    "stretchVertically": false,
+    "gutter": "default"
+  },
   "firstComponents": [],
   "secondComponents": []
 };

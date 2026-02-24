@@ -4,6 +4,7 @@ import { CtaProps } from "./CtaProps";
 const defaults: DeepPartial<CtaProps> = {
   "highlightText": false,
   "colorNeutral": false,
+  "inverted": false,
   "buttons": [],
   "image": {
     "padding": true,
