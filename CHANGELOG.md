@@ -3,17 +3,6 @@
 #### 💥 Breaking Change
 
 - Fix Hero swallowing alt texts [#61](https://github.com/kickstartDS/ds-agency-premium/pull/61) ([@julrich](https://github.com/julrich))
-
-#### Authors: 1
-
-- Jonas Ulrich ([@julrich](https://github.com/julrich))
-
----
-
-# v1.6.74 (Tue Feb 24 2026)
-
-#### 🐛 Bug Fix
-
 - Merge branch 'feature/industry-extension' [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@julrich](https://github.com/julrich))
 - Feature/split layout enhancement [#58](https://github.com/kickstartDS/ds-agency-premium/pull/58) ([@fleven-kds](https://github.com/fleven-kds))
 - Design token overhaul [#43](https://github.com/kickstartDS/ds-agency-premium/pull/43) ([@fleven-kds](https://github.com/fleven-kds) [@lmestel](https://github.com/lmestel) [@julrich](https://github.com/julrich))
@@ -63,9 +52,6 @@
 - Merge branch 'feature/redesign-base-theme' into feature/industry-extension [#44](https://github.com/kickstartDS/ds-agency-premium/pull/44) ([@fleven-kds](https://github.com/fleven-kds))
 - feat(event): add event module [#45](https://github.com/kickstartDS/ds-agency-premium/pull/45) ([@fleven-kds](https://github.com/fleven-kds))
 - Merge branch '94-update-component-layout' into feature/redesign-base-theme [#40](https://github.com/kickstartDS/ds-agency-premium/pull/40) ([@fleven-kds](https://github.com/fleven-kds))
-
-#### ⚠️ Pushed to `main`
-
 - fix: add updated, generated props ([@julrich](https://github.com/julrich))
 
 #### Authors: 3
@@ -73,6 +59,18 @@
 - Franz ([@fleven-kds](https://github.com/fleven-kds))
 - Jonas Ulrich ([@julrich](https://github.com/julrich))
 - Lukas Mestel ([@lmestel](https://github.com/lmestel))
+
+---
+
+# v1.6.74 (Tue Feb 24 2026)
+
+#### 🐛 Bug Fix
+
+- Fix Hero swallowing alt texts [#61](https://github.com/kickstartDS/ds-agency-premium/pull/61) ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
 
 ---
 
@@ -2784,13 +2782,9 @@
 
 # v0.0.3 (Mon Jan 15 2024)
 
-
-
 ---
 
 # v0.0.3 (Mon Jan 15 2024)
-
-
 
 ---
 
