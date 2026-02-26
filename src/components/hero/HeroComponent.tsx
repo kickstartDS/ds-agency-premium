@@ -110,6 +110,7 @@ export const HeroContextDefault = forwardRef<
               media={{
                 mode: "image",
                 image: {
+                  alt: image.alt,
                   srcMobile: image.srcMobile,
                   srcTablet: image.srcTablet,
                   srcDesktop: image.srcDesktop,
