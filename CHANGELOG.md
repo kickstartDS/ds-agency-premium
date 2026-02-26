@@ -1,3 +1,15 @@
+# v2.0.1 (Thu Feb 26 2026)
+
+#### ⚠️ Pushed to `main`
+
+- chore: update README and fix CHANGELOG ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
 # v2.0.0 (Thu Feb 26 2026)
 
 #### 💥 Breaking Change
