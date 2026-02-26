@@ -1,3 +1,15 @@
+# v2.0.2 (Thu Feb 26 2026)
+
+#### 🐛 Bug Fix
+
+- Add missing alt text to teaser cards [#62](https://github.com/kickstartDS/ds-agency-premium/pull/62) ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
 # v2.0.1 (Thu Feb 26 2026)
 
 #### ⚠️ Pushed to `main`
