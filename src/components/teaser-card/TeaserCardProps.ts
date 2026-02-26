@@ -41,6 +41,10 @@ export type DisplayButton = boolean;
  * Image to display as cover
  */
 export type Image = string;
+/**
+ * Alternative text for the image, used for accessibility
+ */
+export type ImageAlt = string;
 
 /**
  * Component used to tease content
@@ -61,6 +65,7 @@ export interface TeaserCardProps {
     hidden?: DisplayButton;
   };
   image?: Image;
+  imageAlt?: ImageAlt;
   /**
    * Aspect ratio of the image
    */

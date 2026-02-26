@@ -69,6 +69,11 @@
       "description": "Image to display as cover",
       "format": "image"
     },
+    "imageAlt": {
+      "type": "string",
+      "title": "Image Alt",
+      "description": "Alternative text for the image, used for accessibility"
+    },
     "imageRatio": {
       "type": "string",
       "enum": ["wide", "landscape", "square", "unset"],
