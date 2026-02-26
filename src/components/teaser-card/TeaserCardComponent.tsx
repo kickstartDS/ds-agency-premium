@@ -32,6 +32,7 @@ export const TeaserCardContextDefault = forwardRef<
       url,
       image,
       imageRatio = "wide",
+      imageAlt,
       label,
       layout = "stack",
       centered = false,
@@ -75,6 +76,7 @@ export const TeaserCardContextDefault = forwardRef<
             icon: button?.chevron ? "chevron-right" : undefined,
           }}
           image={image}
+          alt={imageAlt}
           ref={ref}
         />
       </div>
