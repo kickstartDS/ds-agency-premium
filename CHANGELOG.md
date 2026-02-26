@@ -1,3 +1,15 @@
+# v2.0.0 (Thu Feb 26 2026)
+
+#### 💥 Breaking Change
+
+- Fix Hero swallowing alt texts [#61](https://github.com/kickstartDS/ds-agency-premium/pull/61) ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
 # v1.6.74 (Tue Feb 24 2026)
 
 #### 🐛 Bug Fix
