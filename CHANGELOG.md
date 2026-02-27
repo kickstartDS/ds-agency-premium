@@ -1,3 +1,19 @@
+# v2.1.0 (Fri Feb 27 2026)
+
+#### 🚀 Enhancement
+
+- Add token picker to Storybook stories [#63](https://github.com/kickstartDS/ds-agency-premium/pull/63) ([@julrich](https://github.com/julrich))
+
+#### ⚠️ Pushed to `main`
+
+- chore: update README ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
 # v2.0.2 (Thu Feb 26 2026)
 
 #### 🐛 Bug Fix
