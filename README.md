@@ -22,6 +22,7 @@ This premium starter extends the open-source [kickstartDS Content module](https:
 - **Release Automation:** Semantic release handling via [auto](https://intuit.github.io/auto/).
 - **Page Archetypes:** Pre-composed page examples (Landing, About, Overview, Showcase, Jobs, Job Detail) demonstrating real-world usage.
 - **Token Playground:** Interactive Storybook demos for visualizing color, typography, spacing, shadow, border, and transition tokens.
+- **Token Picker**: Interactive picker to choose Design Tokens
 
 ## Installation
 
