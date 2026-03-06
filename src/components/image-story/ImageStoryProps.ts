@@ -56,6 +56,9 @@ export type ImageVerticalAlignment = "center" | "top" | "bottom";
  */
 export type TextAlignment = "left" | "center";
 
+/**
+ * Image story component for displaying an image alongside text content with customizable layout and buttons.
+ */
 export interface ImageStoryProps {
   headline?: ModuleHeadline;
   largeHeadline?: LargeHeadline;

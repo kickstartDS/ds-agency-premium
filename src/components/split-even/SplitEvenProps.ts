@@ -141,6 +141,9 @@ export type Second = (
   | VideoCurtainProps
 )[];
 
+/**
+ * Split even layout component for dividing content into two equal sections.
+ */
 export interface SplitEvenProps {
   contentMinWidth?: ContentMinimumWidth;
   contentGutter?: ContentGutter;

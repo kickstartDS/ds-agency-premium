@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/event-login.schema.json",
   "title": "Event Login",
+  "description": "Event login component for user authentication to access event-related content.",
   "type": "object",
   "properties": {
     "headline": {

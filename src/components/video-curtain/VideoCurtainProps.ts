@@ -58,6 +58,9 @@ export type DesktopVideoSource = string;
  */
 export type ModuleAligment = "center" | "bottom" | "left" | "right" | "corner";
 
+/**
+ * Video curtain component for displaying a video background with overlay text and buttons.
+ */
 export interface VideoCurtainProps {
   headline?: Headline;
   sub?: ModuleSubheadline;

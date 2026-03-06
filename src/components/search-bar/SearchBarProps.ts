@@ -10,6 +10,9 @@
  */
 export type Placeholder = string;
 
+/**
+ * Search bar component for user input and search functionality.
+ */
 export interface SearchBarProps {
   placeholder?: Placeholder;
   /**

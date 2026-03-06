@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/search-form.schema.json",
   "title": "Search Form",
+  "description": "Search form component for submitting search queries and displaying search results.",
   "type": "object",
   "properties": {
     "component": {

@@ -36,6 +36,9 @@ export type Matches = SearchResultMatchProps[];
  */
 export type ShowLink = boolean;
 
+/**
+ * Search result component for displaying individual search results.
+ */
 export interface SearchResultProps {
   url?: URL;
   title?: Title;

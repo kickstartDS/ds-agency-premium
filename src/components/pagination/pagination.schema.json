@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/pagination.schema.json",
   "title": "Pagination",
+  "description": "Pagination component for navigating through pages of content.",
   "type": "object",
   "properties": {
     "truncate": {

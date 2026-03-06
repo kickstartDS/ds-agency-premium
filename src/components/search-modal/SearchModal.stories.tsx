@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { getArgsShared, pack } from "@kickstartds/core/lib/storybook";
 import { JSONSchema7 } from "json-schema";
 import { Button } from "../button/ButtonComponent";

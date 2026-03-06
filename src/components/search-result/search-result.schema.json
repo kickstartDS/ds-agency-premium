@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/search-result.schema.json",
   "title": "Search Result",
+  "description": "Search result component for displaying individual search results.",
   "type": "object",
   "properties": {
     "url": {

@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/cta.schema.json",
   "title": "Cta",
+  "description": "Call to Action (CTA) component for prompting users to take specific actions on a website.",
   "type": "object",
   "properties": {
     "headline": {

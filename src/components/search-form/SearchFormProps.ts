@@ -14,6 +14,9 @@ export type ShowLink = boolean;
  */
 export type ImageRowSize = "none" | "small" | "large";
 
+/**
+ * Search form component for submitting search queries and displaying search results.
+ */
 export interface SearchFormProps {
   /**
    * ks-component attribute

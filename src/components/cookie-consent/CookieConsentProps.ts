@@ -27,6 +27,9 @@ export type InternalKey1 = string;
  */
 export type KsComponentAttribute = string;
 
+/**
+ * Cookie consent component for managing user consent regarding cookies and tracking technologies on a website.
+ */
 export interface CookieConsentProps {
   notice?: InitialCookieConsentNotice;
   revisitButton?: RevisitCookieConsentButton;

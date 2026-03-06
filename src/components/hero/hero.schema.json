@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/hero.schema.json",
   "title": "Hero",
+  "description": "Hero component for displaying a prominent visual section with headline, subheadline, text, and call-to-action buttons.",
   "type": "object",
   "properties": {
     "headline": {

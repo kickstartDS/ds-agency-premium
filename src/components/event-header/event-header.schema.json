@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/event-header.schema.json",
   "title": "Event Header",
+  "description": "Event header component for displaying event title, categories, and introductory text.",
   "type": "object",
   "properties": {
     "title": {

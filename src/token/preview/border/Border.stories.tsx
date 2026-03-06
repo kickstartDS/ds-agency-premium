@@ -47,6 +47,7 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
+  tags: ["!manifest"],
 };
 
 export const Border = {};

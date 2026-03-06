@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/split-weighted.schema.json",
   "title": "Split Weighted",
+  "description": "Split weighted layout component for dividing content into two sections with customizable widths.",
   "type": "object",
   "properties": {
     "verticalGutter": {

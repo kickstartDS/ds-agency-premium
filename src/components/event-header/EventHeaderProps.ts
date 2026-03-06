@@ -24,6 +24,9 @@ export type Categories = {
  */
 export type Intro = string;
 
+/**
+ * Event header component for displaying event title, categories, and introductory text.
+ */
 export interface EventHeaderProps {
   title?: Title;
   categories?: Categories;

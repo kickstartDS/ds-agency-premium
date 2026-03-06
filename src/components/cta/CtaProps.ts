@@ -86,6 +86,9 @@ export type VerticalAlignmentOfTheContent = "center" | "top" | "bottom";
  */
 export type Padding1 = boolean;
 
+/**
+ * Call to Action (CTA) component for prompting users to take specific actions on a website.
+ */
 export interface CtaProps {
   headline?: ComponentHeadline;
   sub?: ComponentSubheadline;

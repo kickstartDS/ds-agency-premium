@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/content-nav.schema.json",
   "title": "Content Nav",
+  "description": "Content navigation component for navigating related topics or sections within content.",
   "type": "object",
   "properties": {
     "image": {

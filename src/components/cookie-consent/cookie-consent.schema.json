@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/cookie-consent.schema.json",
   "title": "Cookie Consent",
+  "description": "Cookie consent component for managing user consent regarding cookies and tracking technologies on a website.",
   "type": "object",
   "properties": {
     "notice": {
@@ -84,12 +85,12 @@
       "properties": {
         "title": {
           "type": "string",
-          "description": "The title of the cookie consent dialog",
+          "description": "The title of the cookie consent dialogue",
           "examples": ["Manage Cookie Preferences"]
         },
         "description": {
           "type": "string",
-          "description": "The description of the cookie consent dialog",
+          "description": "The description of the cookie consent dialogue",
           "examples": [
             "Customize your privacy settings here. You can choose which types of cookies and tracking technologies you allow."
           ]

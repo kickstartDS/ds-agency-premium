@@ -5,6 +5,9 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+/**
+ * Content navigation component for navigating related topics or sections within content.
+ */
 export interface ContentNavProps {
   image?: {
     /**

@@ -10,6 +10,9 @@
  */
 export type Label = string[];
 
+/**
+ * Event filter component for filtering events based on date and categories.
+ */
 export interface EventFilterProps {
   datePicker?: {
     /**

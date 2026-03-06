@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.mydesignsystem.com/breadcrumb.schema.json",
   "title": "Breadcrumb",
+  "description": "Breadcrumb navigation component used to indicate the current page's location within a navigational hierarchy.",
   "type": "object",
   "properties": {
     "pages": {
