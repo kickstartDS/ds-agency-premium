@@ -87,11 +87,11 @@ export interface RevisitCookieConsentButton {
  */
 export interface CookieConsentDialogue {
   /**
-   * The title of the cookie consent dialog
+   * The title of the cookie consent dialogue
    */
   title?: string;
   /**
-   * The description of the cookie consent dialog
+   * The description of the cookie consent dialogue
    */
   description?: string;
   required?: RequiredCookies;
