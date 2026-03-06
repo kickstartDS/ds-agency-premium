@@ -1,3 +1,20 @@
+# v2.2.1 (Fri Mar 06 2026)
+
+#### 🐛 Bug Fix
+
+- Merge branch 'feature/storybook-10' [#64](https://github.com/kickstartDS/ds-agency-premium/pull/64) ([@julrich](https://github.com/julrich))
+
+#### ⚠️ Pushed to `main`
+
+- fix: fix branding token script ([@julrich](https://github.com/julrich))
+- chore: updated, generated props ([@julrich](https://github.com/julrich))
+
+#### Authors: 1
+
+- Jonas Ulrich ([@julrich](https://github.com/julrich))
+
+---
+
 # v2.1.0 (Fri Feb 27 2026)
 
 #### 🚀 Enhancement
