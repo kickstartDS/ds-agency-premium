@@ -13,6 +13,7 @@ import type {TeaserProps} from "@kickstartds/base/lib/teaser/typing";
  */
 export type TeaserBoxProps = TeaserProps & {
   image?: ImageSource;
+  alt?: ImageAltText;
   ratio?: ImageRatio;
   imageSpacing?: ImageSpacing;
 };
@@ -20,6 +21,10 @@ export type TeaserBoxProps = TeaserProps & {
  * Select an image to display inside the teaser box, at the top
  */
 export type ImageSource = string;
+/**
+ * Alternative text for the image, used for accessibility
+ */
+export type ImageAltText = string;
 /**
  * Choose the ratio used to crop and display the image
  */
