@@ -2,7 +2,7 @@ import fs from "fs-extra";
 import fg from "fast-glob";
 import Ajv from "ajv/dist/2020.js";
 import { tokensToCss } from "./tokensToCss.mjs";
-import schema from "../src/token/branding-tokens.schema.json" assert { type: "json" };
+import schema from "../src/token/branding-tokens.schema.json" with { type: "json" };
 
 const ajv = new Ajv();
 const validate = ajv.compile(schema);
